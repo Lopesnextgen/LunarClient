@@ -1,0 +1,46 @@
+package	old	new	evidence
+com.moonsworth.lunar.client.framework.feature.keystrokes	Data4	KeystrokeKeyElement	nested Framework7Extension2$Data4: HUD element (MixinCore9) that draws one keystroke key box - box size/border/animation, key label, CPS, spacebar bar; renders via method6	com/moonsworth/lunar/client/framework/feature/keystrokes/Framework7Extension2.java
+com.moonsworth.lunar.client.framework.feature.keystrokes	Framework7Extension2	KeystrokeKey	abstract base for one Keystrokes key: options boxSize/borderThickness/keyFadeDelay/animationType/timerType/animation/timingFunction; concrete subclass per key W/A/S/D/SPACE/LMB/RMB
+com.moonsworth.lunar.client.framework.feature.keystrokes	Gui2Extension2	EasingFunction	option timingFunction: cubic-bezier EASE/LINEAR/EASE_IN/EASE_OUT/EASE_IN_OUT with compute(t)
+com.moonsworth.lunar.client.framework.feature.keystrokes	Gui2Extension3	KeystrokeAnimationStyle	option animation: FILL/RIPPLE/SAND/SPIRAL/TRIANGULATE/COLLAPSE/... -> factory of KeystrokeRenderer
+com.moonsworth.lunar.client.framework.feature.keystrokes	Gui2Extension_2	KeystrokeTimerType	option timerType: HALF/FULL factories for KeystrokeTimer (Keystrokes2Handler2 / Keystrokes2Handler)
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes10	CrossGrowKeystrokeRenderer	enum CROSS_GROW animation: cross grows out from the centre
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes11	SpiralKeystrokeRenderer	enum SPIRAL animation: spiral fill of the key box
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes12	TriangulateKeystrokeRenderer	enum TRIANGULATE animation: rotating triangular wipe
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes13	VerticalGrowKeystrokeRenderer	enum VERTICAL_GROW animation: grows vertically from the middle
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes14	MultiSquareFillKeystrokeRenderer	enum MULTI_SQUARE_FILL animation: four quadrants fill
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes15	DiagonalGrowKeystrokeRenderer	enum DIAGONAL_GROW animation: grows diagonally
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes16	RippleKeystrokeRenderer	enum RIPPLE animation: rounded-rect ripple (Bridge7Iterator.method117)
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes17	FillKeystrokeRenderer	enum FILL animation: simple inset fill
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes18	HeadFillKeystrokeRenderer	enum HEAD_FILL animation: fills with the player's skin head
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes19	DiagonalCollapseKeystrokeRenderer	enum DIAGONAL_COLLAPSE animation: collapses diagonally
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes2	KeystrokeTimer	timer interface: progress()/rawProgress() 0..2, press()/release(), isDone() when progress==2
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes3	KeystrokeRenderer	renderer interface: render(ctx, progress, color, helper) + fill/roundedFill defaults; implemented by every animation
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes4	HorizontalGrowKeystrokeRenderer	enum HORIZONTAL_GROW animation: grows horizontally from the middle
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes5	CollapseKeystrokeRenderer	enum COLLAPSE animation: four edges collapse inward
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes6	SandKeystrokeRenderer	enum SAND animation: falling-sand cellular automaton on an 8x8 BitSet
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes7	CircularFillKeystrokeRenderer	enum CIRCULAR_FILL animation: expanding circle
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes8	CrossCollapseKeystrokeRenderer	enum CROSS_COLLAPSE animation: cross collapses inward
+com.moonsworth.lunar.client.framework.feature.keystrokes	Keystrokes9	HorizontalCollapseKeystrokeRenderer	enum HORIZONTAL_COLLAPSE animation: collapses horizontally
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Data2	ItemIdPair	nested Gui4$Data2: material-key + item-id pair, encode() -> "KEY=id", itemId()	com/moonsworth/lunar/client/framework/feature/mod/fishing/gui/Gui4.java
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui2	SkyblockItemRegistry	static registry of SkyBlock items: ItemsResponse + id->Item / name maps, id/name -> ItemStack
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui2_2	ItemShopPrices	root model of item-shop-prices.json: 7 category maps (bits, farmingEssentials, farmingTools, barnSkins, greenhouseSkins, pests, chocolate)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui3	SkyblockItemUtil	static SkyBlock item helpers: read skyblock id from NBT, base64 NBT decode, ItemStack from NBT, dye-color item builder
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui3_2	ShopItem	shop entry: id/skyblockId/cost/type/displayName/itemModern/skin/requiredItems
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui4	ItemIdCodec	parses "MATERIAL=item_id" bindings (resource-location + material-key validation), list<->map helpers
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui4_2	ShopPriceLine	rendered shop price row: name + price TextComponents + item icon (SkyblockChocolateShopHelper)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui5	RequiredItem	required item for a shop entry: id + amount (requiredItems)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler10	PotionItemValueParser	regex "(?<potion>[\\w ]+) (?<tier>[IVX]+) Potion" -> POTION;NAME;tier
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler11	StarredItemValueParser	leading star glyph U+E068 / STARRED_ prefix -> starred item id
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler2	EnchantedBookItemValueParser	regex "Enchanted Book (name tier)" -> ENCHANTMENT_name_tier
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler3	StarCountItemValueParser	regex "(?<item>.+) (?<stars>star{1,5})" trailing dungeon stars -> delegate to GuiHandler8
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler4	DyeItemValueParser	regex "(?<dyeName>\\w+) Dye" -> DYE_name
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler5	ApiItemValueParser	direct API lookup by display name (api.method2(name).getValue())
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler6	EssenceItemValueParser	regex "(?<essenceType>\\w+) Essence" -> ESSENCE_name
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler7	ShardItemValueParser	regex "(?<shard>.+) Shard" -> SHARD_name
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler8	NamedItemValueParser	exact display-name -> id lookup via SkyblockItemRegistry name map
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	GuiHandler9	ShinyItemValueParser	regex "Shiny (Necron's Handle|Wither ...)" -> id lookup
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui_2	ItemValueParser	parser interface: match(displayName, api) / parse(api) -> ItemValueResponse / cleanup
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Gui_3	ItemSkin	item skin: id + texture value + signature
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	JsonDeserializerIterator_2	ItemShopPricesDeserializer	Gson JsonDeserializer<ItemShopPrices> for item-shop-prices.json
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui	Type2	DyeColor	nested Gui3$Type2: 16 dye colors WHITE..BLACK with fromIndex	com/moonsworth/lunar/client/framework/feature/mod/fishing/gui/Gui3.java

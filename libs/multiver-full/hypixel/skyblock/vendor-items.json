@@ -1,0 +1,62 @@
+{
+  "Basic": {
+    "coins": 160000,
+    "barbarian": {
+      "ENCHANTED_RED_SAND": 2
+    },
+    "mage": {
+      "ENCHANTED_MYCELIUM": 2
+    },
+    "common": {
+      "CORRUPTED_NETHER_STAR": 2
+    }
+  },
+  "Hot": {
+    "coins": 320000,
+    "barbarian": {
+      "ENCHANTED_RED_SAND": 4
+    },
+    "mage": {
+      "ENCHANTED_MYCELIUM": 4
+    },
+    "common": {
+      "CORRUPTED_NETHER_STAR": 2
+    }
+  },
+  "Burning": {
+    "coins": 600000,
+    "barbarian": {
+      "ENCHANTED_RED_SAND": 16
+    },
+    "mage": {
+      "ENCHANTED_MYCELIUM": 16
+    },
+    "common": {
+      "CORRUPTED_NETHER_STAR": 2
+    }
+  },
+  "Fiery": {
+    "coins": 1200000,
+    "barbarian": {
+      "ENCHANTED_RED_SAND": 40
+    },
+    "mage": {
+      "ENCHANTED_MYCELIUM": 40
+    },
+    "common": {
+      "CORRUPTED_NETHER_STAR": 2
+    }
+  },
+  "Infernal": {
+    "coins": 2500000,
+    "barbarian": {
+      "ENCHANTED_RED_SAND": 80
+    },
+    "mage": {
+      "ENCHANTED_MYCELIUM": 80
+    },
+    "common": {
+      "CORRUPTED_NETHER_STAR": 2
+    }
+  }
+}

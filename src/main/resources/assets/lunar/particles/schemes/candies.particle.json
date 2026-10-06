@@ -1,0 +1,113 @@
+{
+    "format_version": "1.10.0",
+    "particle_effect": {
+        "description": {
+            "identifier": "lunar:candies",
+            "basic_render_parameters": {
+                "material": "particles_alpha",
+                "texture": "lunar:particles/textures/candies.webp"
+            }
+        },
+        "curves": {
+            "variable.size": {
+                "type": "catmull_rom",
+                "nodes": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.89,
+                    0.12,
+                    0.0,
+                    0.0
+                ],
+                "input": "variable.particle_age",
+                "horizontal_range": "variable.particle_lifetime"
+            }
+        },
+        "components": {
+            "minecraft:emitter_rate_steady": {
+                "spawn_rate": 100.0,
+                "max_particles": 500.0
+            },
+            "minecraft:emitter_lifetime_looping": {
+                "active_time": 1.0
+            },
+            "minecraft:emitter_shape_point": {
+                "offset": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "direction": [
+                    "variable.particle_random_1 - 0.5",
+                    4.0,
+                    "variable.particle_random_2 - 0.5"
+                ]
+            },
+            "minecraft:particle_lifetime_expression": {
+                "max_lifetime": 2.0
+            },
+            "minecraft:particle_initial_spin": {
+                "rotation": "variable.particle_random_1 * 360.0",
+                "rotation_rate": 40.0
+            },
+            "minecraft:particle_initial_speed": 4.0,
+            "minecraft:particle_motion_dynamic": {
+                "linear_acceleration": [
+                    0.0,
+                    -8.0,
+                    0.0
+                ],
+                "rotation_acceleration": 10.0
+            },
+            "minecraft:particle_appearance_billboard": {
+                "size": [
+                    "0.15 * variable.size",
+                    "0.15 * variable.size"
+                ],
+                "facing_camera_mode": "rotate_xyz",
+                "uv": {
+                    "texture_width": 64,
+                    "texture_height": 16,
+                    "uv": [
+                        "math.floor(variable.particle_random_3 * 4.0) * 16.0",
+                        0.0
+                    ],
+                    "uv_size": [
+                        16.0,
+                        16.0
+                    ]
+                }
+            },
+            "blockbuster:particle_collision_appearance": {
+                "enabled": 0.0,
+                "lit": false,
+                "material": "particles_opaque",
+                "size": [
+                    0.0,
+                    0.0
+                ],
+                "facing_camera_mode": "lookat_xyz",
+                "uv": {
+                    "texture_width": 128,
+                    "texture_height": 128
+                }
+            },
+            "blockbuster:particle_collision_tinting": {
+                "enabled": 0.0
+            },
+            "blockbuster:particle_morph": {
+                "enabled": false,
+                "render_texture": false
+            },
+            "minecraft:particle_motion_collision": {
+                "coefficient_of_restitution": 0.1,
+                "collision_radius": 0.1
+            }
+        }
+    }
+}

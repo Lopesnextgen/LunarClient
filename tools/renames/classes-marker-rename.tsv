@@ -1,0 +1,2 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.bridge	BridgeExtension	MovementInputMarker	empty marker extending Bridge_21 (movement input); it must NOT squat the bridge.BridgeExtension FQN, which the stale jar uses for the entity interface consumed by 200+ sources	com/moonsworth/lunar/bridge/BridgeExtension.java

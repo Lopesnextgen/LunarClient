@@ -1,0 +1,10 @@
+com/moonsworth/lunar/legacy/mixin/StatFileWriter2.java	StatFileWriter2
+com/moonsworth/lunar/legacy/mixin/StatFileWriter3.java	StatFileWriter3
+com/moonsworth/lunar/legacy/mixin/TextureMapMixin2.java	TextureMapMixin2
+com/moonsworth/lunar/legacy/mixin/TextureMapMixin3.java	TextureMapMixin3
+com/moonsworth/lunar/legacy/mixin/ThreadDownloadImageDataMixin2.java	ThreadDownloadImageDataMixin2
+com/moonsworth/lunar/legacy/mixin/TileEntitySkullRendererMixin2.java	TileEntitySkullRendererMixin2
+com/moonsworth/lunar/legacy/mixin/TimerMixin2.java	TimerMixin2
+com/moonsworth/lunar/legacy/mixin/WorldMixin2.java	WorldMixin2
+com/moonsworth/lunar/legacy/mixin/WorldMixin3.java	WorldMixin3
+com/moonsworth/lunar/legacy/mixin/WorldMixin4.java	WorldMixin4

@@ -1,0 +1,22 @@
+{
+    "5995": {
+        "morph": "easter_petals",
+        "cycleTimeTicks": 60
+    },
+    "5857": {
+        "morph": "heart_aura",
+        "cycleTimeTicks": 60
+    },
+    "5856": {
+        "morph": "sparkleaura",
+        "cycleTimeTicks": 60
+    },
+    "2658": {
+        "morph": "jetpack_fire",
+        "cycleTimeTicks": 60
+    },
+    "2518": {
+        "morph": "jetpack_fire",
+        "cycleTimeTicks": 60
+    }
+}

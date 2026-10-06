@@ -1,0 +1,43 @@
+package com.moonsworth.lunar.bridge;
+
+public enum TextureUnit {
+   GL_TEXTURE_0,
+   GL_TEXTURE_1,
+   GL_TEXTURE_2,
+   GL_TEXTURE_3,
+   GL_TEXTURE_4,
+   GL_TEXTURE_5,
+   GL_TEXTURE_6,
+   GL_TEXTURE_7,
+   GL_TEXTURE8,
+   GL_TEXTURE9,
+   GL_TEXTURE10,
+   GL_TEXTURE11,
+   GL_TEXTURE12,
+   GL_TEXTURE13,
+   GL_TEXTURE14,
+   GL_TEXTURE15,
+   GL_TEXTURE16,
+   GL_TEXTURE17,
+   GL_TEXTURE18,
+   GL_TEXTURE19,
+   GL_TEXTURE20,
+   GL_TEXTURE21,
+   GL_TEXTURE22,
+   GL_TEXTURE23,
+   GL_TEXTURE24,
+   GL_TEXTURE25,
+   GL_TEXTURE26,
+   GL_TEXTURE27,
+   GL_TEXTURE28,
+   GL_TEXTURE29,
+   GL_TEXTURE30,
+   GL_TEXTURE31;
+
+   TextureUnit() {
+   }
+
+   public int getId() {
+      return 33984 + this.ordinal();
+   }
+}

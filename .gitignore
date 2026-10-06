@@ -1,0 +1,46 @@
+# build output
+/target/
+
+# pipeline intermediates (staging jars, decompile trees, logs, snapshots)
+/tools/work/
+
+# javac crash dumps
+*.args
+javac.*.args
+
+# IDE
+/.idea/
+*.iml
+
+# Gradle
+/.gradle/
+
+# python
+__pycache__/
+*.pyc
+
+# original MCP runtime directory
+/test_run/
+
+# runtime state produced by launches
+/.ichor/
+/run/
+/config/
+
+# launcher state written into the working directory (ichor cookie db etc.)
+/default/
+
+# jvm crash dumps
+hs_err_pid*.log
+
+# machine-local links into the installed Lunar Client (created by
+# tools/setup_libs.py; paths differ per OS/user)
+/libs/multiver-full/cache
+/libs/multiver-full/natives
+
+# runtime logs under tools/ (never commit)
+/tools/run/
+
+# skin textures downloaded into the vendored asset cache while playing
+# (the pre-vendored subset stays tracked; new ones are machine/local state)
+/libs/vanilla/assets/skins/

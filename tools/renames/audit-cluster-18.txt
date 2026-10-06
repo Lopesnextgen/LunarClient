@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.fog.holograms.gui
+com.moonsworth.lunar.client.fog.holograms.highlight
+com.moonsworth.lunar.client.fog.holograms.highlight.mixin
+com.moonsworth.lunar.client.fog.holograms.holograms
+com.moonsworth.lunar.client.fog.holograms.mixin
+com.moonsworth.lunar.client.fog.holograms.nameplate
+com.moonsworth.lunar.client.fog.holograms.nameplate.mixin
+com.moonsworth.lunar.client.fog.holograms.rewindhandlers

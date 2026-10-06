@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.moonsworth</groupId>
+    <artifactId>lunar-client-deobf</artifactId>
+    <version>1.8.9</version>
+    <name>Lunar Client 1.8.9 (deobfuscated)</name>
+    <description>Deobfuscated Lunar Client 1.8.9 sources merged into an MCP 1.8.9 workspace</description>
+
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <release>17</release>
+                    <proc>none</proc>
+                    <debug>false</debug>
+                    <fork>true</fork>
+                    <meminitial>512m</meminitial>
+                    <maxmem>2048m</maxmem>
+                    <compilerArgs>
+                        <arg>-g:none</arg>
+                        <arg>-Xmaxerrs</arg>
+                        <arg>100000</arg>
+                    </compilerArgs>
+                </configuration>
+                <executions>
+                    <!-- Phase 1 (runs first as the lifecycle default): the MCP
+                         1.8.9 game sources compile on their own. A single
+                         combined javac run overflows the constant pool of
+                         several large vanilla classes and aborts codegen.
+                         They are compiled at Java 8 level on purpose: Lunar's
+                         Ichor transformer reads game classes with a bundled
+                         ASM 5 that rejects anything newer than class file 52
+                         (Java 8). Mixin classes are loaded by the JVM, not
+                         read through that ASM, so only game classes need it. -->
+                    <execution>
+                        <id>default-compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <release>8</release>
+                            <includes>
+                                <include>net/minecraft/**</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                    <!-- Phase 2: the deobfuscated Lunar client sources. -->
+                    <execution>
+                        <id>compile-lunar</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                        <configuration>
+                            <includes>
+                                <include>com/moonsworth/**</include>
+                            </includes>
+                            <excludes>
+                                <exclude>com/moonsworth/lunar/forge/lib/**</exclude>
+                                <exclude>com/moonsworth/lunar/OHOOORICRHIIIIRHCICICOCHROICRC/HRICOROOOCCOCOROCRHHCRRIRCOICO$1.java</exclude>
+                                <exclude>com/moonsworth/lunar/OHOOORICRHIIIIRHCICICOCHROICRC/HRICOROOOCCOCOROCRHHCRRIRCOICO$2.java</exclude>
+                            </excludes>
+                            <compilerArgs>
+                                <arg>-g:none</arg>
+                                <arg>-Xmaxerrs</arg>
+                                <arg>100000</arg>
+                                <arg>-XDshould-stop.ifError=GENERATE</arg>
+                            </compilerArgs>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>create-my-bundle</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>tools/assembly-jar-with-dependencies.xml</descriptor>
+                            </descriptors>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>marcloud-development-repository</id>
+            <name>marCloud-Repository</name>
+            <url>https://repo.marcloud.net/</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.0.23.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>patchy</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.jopt-simple</groupId>
+            <artifactId>jopt-simple</artifactId>
+            <version>4.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl</artifactId>
+            <version>2.9.4-nightly</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>util</artifactId>
+            <version>2.9.4-nightly</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.java.jinput</groupId>
+            <artifactId>jinput</artifactId>
+            <version>2.0.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>icu4j-core-mojang</artifactId>
+            <version>51.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.3.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>oshi</groupId>
+            <artifactId>oshi-core</artifactId>
+            <version>1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.java.dev.jna</groupId>
+            <artifactId>platform</artifactId>
+            <version>3.4.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.java.jutils</groupId>
+            <artifactId>jutils</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <version>1.8.1</version>
+        </dependency>
+
+        <!-- TODO: Make sure to update this, because of the RCE exploit! -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.0-beta9</version>
+        </dependency>
+
+        <!-- TODO: Make sure to update this, because of the RCE exploit! -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.0-beta9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>tv.twitch</groupId>
+            <artifactId>twitch</artifactId>
+            <version>6.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.9</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.2.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.15.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.paulscode.sound</groupId>
+            <artifactId>libraryjavasound</artifactId>
+            <version>20101123</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.paulscode.sound</groupId>
+            <artifactId>codecwav</artifactId>
+            <version>20101023</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.paulscode.sound</groupId>
+            <artifactId>soundsystem</artifactId>
+            <version>20120107</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.paulscode.sound</groupId>
+            <artifactId>codecjorbis</artifactId>
+            <version>20101023</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.paulscode.sound</groupId>
+            <artifactId>librarylwjglopenal</artifactId>
+            <version>20100824</version>
+        </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>com.mojang</groupId>-->
+<!--            <artifactId>realmsclient</artifactId>-->
+<!--            <version>1.7.59</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>com.mojang</groupId>
+            <artifactId>authlib</artifactId>
+            <version>1.5.21</version>
+        </dependency>
+
+        <!-- The bundled Lunar reference jars (lunar-libraries.jar /
+             lunar-renamed-classes.jar) are no longer on the build classpath:
+             every Lunar class now resolves from src/main/java (2026-09-16).
+             The jars stay in libs/ as the reference for
+             tools/fix_dangling_members.py and other tooling, but a normal
+             build does not need them. -->
+
+        <dependency>
+            <groupId>org.joml</groupId>
+            <artifactId>joml</artifactId>
+            <version>1.10.5</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.34</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>it.unimi.dsi</groupId>
+            <artifactId>fastutil</artifactId>
+            <version>8.5.15</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jspecify</groupId>
+            <artifactId>jspecify</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.brotli</groupId>
+            <artifactId>dec</artifactId>
+            <version>0.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>lunar</groupId>
+            <artifactId>replaymod</artifactId>
+            <version>1.8.9</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/multiver-full/ReplayMod-v1_8-2.6.24.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>lunar</groupId>
+            <artifactId>forge-compile</artifactId>
+            <version>1.8.9</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/forge-1.8.9-compile.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>lunar</groupId>
+            <artifactId>optifine-compile</artifactId>
+            <version>1.8.9</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/optifine-1.8.9-compile.jar</systemPath>
+        </dependency>
+
+        <!-- Lunar's bundled protocol API (generated protobuf messages + Apollo
+             mod interfaces). Kept as a compiled library per the repo's own
+             convention (STATUS.md: "com/lunarclient/* is bundled compiled");
+             the deobfuscated client code lives in src/main/java. -->
+        <dependency>
+            <groupId>lunar</groupId>
+            <artifactId>lunarclient-protocol</artifactId>
+            <version>1.8.9</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/lunarclient-protocol.jar</systemPath>
+        </dependency>
+
+        <!-- Third-party libraries that Lunar's reference jar bundles (Mixin,
+             kyori adventure, protobuf, kotlin, jctools, ...). Extracted from
+             libs/lunar-renamed-classes.jar by tools/extract_bundled_deps.py
+             so the build no longer needs the Lunar classes jar itself; each
+             package can be replaced by its Maven coordinate over time.
+             Listed last so Maven-managed versions win for shared packages. -->
+        <dependency>
+            <groupId>lunar</groupId>
+            <artifactId>bundled-libs</artifactId>
+            <version>1.8.9</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/lunar-bundled-libs.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+
+</project>

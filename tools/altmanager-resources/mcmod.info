@@ -1,0 +1,10 @@
+[
+  {
+    "modid": "lunaraltmanager",
+    "name": "Lunar Alt Manager",
+    "description": "Built-in cracked alt manager: RSHIFT opens the account list and switches the live session.",
+    "version": "1.0",
+    "mcversion": "1.8.9",
+    "authorList": ["MavenMCP"]
+  }
+]

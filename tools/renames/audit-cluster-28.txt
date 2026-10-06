@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.mod
+com.moonsworth.lunar.client.framework.feature.mod.debug
+com.moonsworth.lunar.client.framework.feature.mod.debug.override
+com.moonsworth.lunar.client.framework.feature.mod.debug.testcustomguioverlay
+com.moonsworth.lunar.client.framework.feature.mod.fishing
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation

@@ -1,0 +1,907 @@
+{
+  "version": 12,
+  "ONE_SEVEN_VISUALS": {
+    "enabled": false,
+    "panelIndex": 6
+  },
+  "FPS": {
+    "enabled": true,
+    "options": {
+      "background": false
+    },
+    "x": 7.0,
+    "y": 7.000001,
+    "position": "topLeft",
+    "seen": true,
+    "lastModified": 1754457102892,
+    "panelIndex": 75
+  },
+  "CPS": {
+    "options": {
+      "background": false,
+      "rightClick": true
+    },
+    "x": -235.0,
+    "y": -74.0,
+    "position": "bottomRight",
+    "seen": true,
+    "lastModified": 1754457092743,
+    "panelIndex": 3
+  },
+  "TOGGLE_SNEAK": {
+    "options": {
+      "flyBoostAmount": "8"
+    },
+    "seen": true,
+    "lastModified": 1754463469153,
+    "panelIndex": 4,
+    "TOGGLE_SNEAK_HUD_CHILD": {
+      "options": {
+        "iconMode": true
+      },
+      "x": -130.5,
+      "y": -4.0,
+      "position": "bottomCenterLeft"
+    }
+  },
+  "ZOOM": {
+    "options": {
+      "zoomKeybind": "KEY_Z"
+    },
+    "panelIndex": 5
+  },
+  "HYPIXEL_MOD": {
+    "seen": true,
+    "lastModified": 1754457185991,
+    "panelIndex": 2,
+    "HYPIXEL_TPS": {
+      "enabled": true,
+      "options": {
+        "background": false
+      },
+      "x": 7.0,
+      "y": 32.0,
+      "position": "topLeft"
+    }
+  },
+  "HYPIXEL_BEDWARS": {
+    "panelIndex": 7,
+    "HYPIXEL_BEDWARS_HEIGHT_LIMIT_CHILD": {
+      "y": 140.0,
+      "position": "topRight"
+    },
+    "HYPIXEL_BEDWARS_RESOURCE_COUNTER_CHILD": {
+      "x": -115.0,
+      "position": "topRight"
+    },
+    "HYPIXEL_BEDWARS_UPGRADE_DISPLAY_CHILD": {
+      "excludedItems": []
+    }
+  },
+  "QUICKPLAY": {
+    "enabled": true,
+    "options": {
+      "quickplayUIKeybind": "KEY_J",
+      "quickplayUIKeybindShift": false,
+      "quickplayUIKeybindControl": false,
+      "quickplayUIKeybindAlt": false
+    },
+    "seen": true,
+    "lastModified": 1755013993796,
+    "panelIndex": 8,
+    "qpKeyBinds": {},
+    "qpFavorites": []
+  },
+  "ARMORSTATUS": {
+    "options": {
+      "durabilityPosition": "left",
+      "itemDamage": false,
+      "armorDamage": false
+    },
+    "seen": true,
+    "lastModified": 1754659885789,
+    "panelIndex": 9,
+    "ARMORSTATUS_PROTECTION_CHILD": {
+      "y": -90.0,
+      "position": "bottomRight"
+    },
+    "ARMORSTATUS_HELD_ITEM_CHILD": {
+      "options": {
+        "durabilityPosition": "left"
+      }
+    },
+    "ARMORSTATUS_HELMET_CHILD": {
+      "options": {
+        "durabilityPosition": "left"
+      },
+      "y": -60.0,
+      "position": "bottomRight"
+    },
+    "ARMORSTATUS_CHESTPLATE_CHILD": {
+      "options": {
+        "durabilityPosition": "left"
+      },
+      "y": -45.0,
+      "position": "bottomRight"
+    },
+    "ARMORSTATUS_LEGGINGS_CHILD": {
+      "options": {
+        "durabilityPosition": "left"
+      },
+      "y": -30.0,
+      "position": "bottomRight"
+    },
+    "ARMORSTATUS_BOOTS_CHILD": {
+      "options": {
+        "durabilityPosition": "left"
+      },
+      "y": -15.0,
+      "position": "bottomRight"
+    },
+    "ARMORSTATUS_OFF_HAND_HELD_ITEM_CHILD": {
+      "options": {
+        "durabilityPosition": "left"
+      }
+    }
+  },
+  "KEYSTROKES": {
+    "x": 169.0,
+    "y": -4.0,
+    "position": "bottomCenterRight",
+    "panelIndex": 10,
+    "KEYSTROKE_KEY_A": {
+      "x": 10.0,
+      "y": 47.0,
+      "position": "topLeft"
+    },
+    "KEYSTROKE_KEY_SPACE": {
+      "x": 10.0,
+      "y": 48.0,
+      "position": "topLeft"
+    },
+    "KEYSTROKE_KEY_D": {
+      "x": 48.0,
+      "y": 47.0,
+      "position": "topLeft"
+    },
+    "KEYSTROKE_KEY_MOUSE2": {
+      "x": 38.5,
+      "y": 49.0,
+      "position": "topLeft"
+    },
+    "KEYSTROKE_KEY_MOUSE1": {
+      "x": 10.0,
+      "y": 49.0,
+      "position": "topLeft"
+    },
+    "KEYSTROKE_KEY_W": {
+      "x": 29.0,
+      "y": 46.0,
+      "position": "topLeft"
+    },
+    "KEYSTROKE_KEY_S": {
+      "x": 29.0,
+      "y": 47.0,
+      "position": "topLeft"
+    }
+  },
+  "COORDINATES": {
+    "enabled": false,
+    "x": 160.0,
+    "y": 6.0,
+    "position": "topLeft",
+    "panelIndex": 11
+  },
+  "DAY_COUNTER": {
+    "panelIndex": 12
+  },
+  "CROSSHAIR": {
+    "options": {
+      "help_box_open": true
+    },
+    "panelIndex": 13,
+    "custom_crosshair": "LCCH-1-AA"
+  },
+  "POTION_EFFECTS": {
+    "options": {
+      "background": false,
+      "excludePerm": true
+    },
+    "x": 7.0,
+    "y": -193.0,
+    "position": "middleLeft",
+    "seen": true,
+    "lastModified": 1754662609548,
+    "panelIndex": 14
+  },
+  "DIRECTION_HUD": {
+    "enabled": false,
+    "y": 17.0,
+    "position": "topCenter",
+    "panelIndex": 15
+  },
+  "WAYPOINTS": {
+    "panelIndex": 16
+  },
+  "HIT_COLOR": {
+    "panelIndex": 17
+  },
+  "SCOREBOARD": {
+    "panelIndex": 18
+  },
+  "TITLES": {
+    "panelIndex": 19
+  },
+  "ITEM_COUNTER": {
+    "panelIndex": 20
+  },
+  "PING": {
+    "enabled": true,
+    "seen": true,
+    "lastModified": 1754457109940,
+    "panelIndex": 21,
+    "PING_HUD": {
+      "options": {
+        "background": false
+      },
+      "x": 7.0,
+      "y": 19.0,
+      "position": "topLeft"
+    }
+  },
+  "MOTION_BLUR": {
+    "panelIndex": 22
+  },
+  "PACK_ORGANIZER": {
+    "panelIndex": 23
+  },
+  "CHAT": {
+    "options": {
+      "stackMessages": true,
+      "timeBasedStackMessagesTimeframe": "60",
+      "copyChat": true
+    },
+    "seen": true,
+    "lastModified": 1754483832443,
+    "panelIndex": 24
+  },
+  "TAB": {
+    "panelIndex": 25
+  },
+  "NAMETAG": {
+    "panelIndex": 26
+  },
+  "SCROLLABLE_TOOLTIPS": {
+    "enabled": true,
+    "seen": true,
+    "lastModified": 1754659929006,
+    "panelIndex": 27
+  },
+  "UHC_OVERLAY": {
+    "panelIndex": 28
+  },
+  "PARTICLE_CHANGER": {
+    "enabled": true,
+    "seen": true,
+    "lastModified": 1754659793294,
+    "panelIndex": 29,
+    "PARTICLE_CHANGER_BLOCK_CHILD": {
+      "enabled": true,
+      "options": {
+        "hideParticle": true
+      }
+    },
+    "PARTICLE_CHANGER_EXPLOSION_CHILD": {
+      "enabled": true,
+      "options": {
+        "scale": "0.5",
+        "hideParticle": true
+      }
+    }
+  },
+  "NICK_HIDER": {
+    "panelIndex": 30
+  },
+  "COOLDOWNS": {
+    "enabled": false,
+    "x": -124.0,
+    "position": "bottomCenterLeft",
+    "panelIndex": 31
+  },
+  "WORLDEDIT_CUI": {
+    "panelIndex": 32
+  },
+  "CLOCK": {
+    "x": -52.0,
+    "y": -4.0,
+    "position": "bottomRight",
+    "seen": true,
+    "lastModified": 1748635812722,
+    "panelIndex": 33
+  },
+  "STOPWATCH": {
+    "x": -10.0,
+    "y": 30.0,
+    "position": "topRight",
+    "panelIndex": 34
+  },
+  "PLAYTIME": {
+    "x": 90.0,
+    "y": 46.0,
+    "position": "topLeft",
+    "panelIndex": 35
+  },
+  "MEMORY": {
+    "x": -10.0,
+    "y": 50.0,
+    "position": "topRight",
+    "panelIndex": 36
+  },
+  "COMBO": {
+    "x": -10.0,
+    "y": 90.0,
+    "position": "topRight",
+    "panelIndex": 37
+  },
+  "REACH_DISPLAY": {
+    "x": 70.0,
+    "y": 106.0,
+    "position": "topLeft",
+    "panelIndex": 38
+  },
+  "TIME_CHANGER": {
+    "panelIndex": 39
+  },
+  "SERVER_ADDRESS": {
+    "x": 70.0,
+    "y": 66.0,
+    "position": "topLeft",
+    "panelIndex": 40
+  },
+  "SATURATION": {
+    "enabled": false,
+    "panelIndex": 41,
+    "SATURATION_HUD_CHILD": {
+      "x": -10.0,
+      "y": 70.0,
+      "position": "topRight"
+    }
+  },
+  "COLOR_SATURATION": {
+    "panelIndex": 42
+  },
+  "ITEM_PHYSICS": {
+    "panelIndex": 43
+  },
+  "TNT_COUNTDOWN": {
+    "panelIndex": 44
+  },
+  "ITEM_TRACKER": {
+    "x": 10.0,
+    "y": 75.0,
+    "position": "middleLeft",
+    "panelIndex": 45
+  },
+  "SHINY_POTS": {
+    "panelIndex": 46
+  },
+  "3D_SKINS": {
+    "enabled": true,
+    "seen": true,
+    "lastModified": 1754659847815,
+    "panelIndex": 47
+  },
+  "GLINT_COLORIZER": {
+    "panelIndex": 48
+  },
+  "MOMENTUM": {
+    "x": 70.0,
+    "y": 46.0,
+    "position": "topLeft",
+    "panelIndex": 49
+  },
+  "BLOCK_OUTLINE": {
+    "enabled": true,
+    "options": {
+      "blockOutlineWidth": "6.0",
+      "blockOutlineMode": "outlineModeRainbow",
+      "blockOutlineColor": {
+        "chroma": true
+      }
+    },
+    "seen": true,
+    "lastModified": 1754660407898,
+    "panelIndex": 50
+  },
+  "SCREENSHOT": {
+    "panelIndex": 51
+  },
+  "FOV": {
+    "panelIndex": 52
+  },
+  "FOG": {
+    "enabled": true,
+    "options": {
+      "waterFogDensity": "0.0",
+      "renderDistanceFogDensity": "0.0",
+      "renderDistanceFogColorToggle": true
+    },
+    "seen": true,
+    "lastModified": 1755014061762,
+    "panelIndex": 53
+  },
+  "AUTO_TEXT_HOTKEY": {
+    "panelIndex": 54
+  },
+  "AUTO_TEXT_ACTIONS": {
+    "enabled": true,
+    "seen": true,
+    "lastModified": 1747034027106,
+    "panelIndex": 55,
+    "actions": [
+      {
+        "active": false,
+        "playSound": true
+      }
+    ]
+  },
+  "MUMBLE_LINK": {
+    "panelIndex": 56
+  },
+  "2D_ITEMS": {
+    "panelIndex": 57
+  },
+  "BOSSBAR": {
+    "y": 1.0,
+    "position": "topCenter",
+    "panelIndex": 58
+  },
+  "FREELOOK": {
+    "panelIndex": 59
+  },
+  "PVP_INFO": {
+    "panelIndex": 60,
+    "PVP_INFO_MELEE_CHILD": {
+      "x": 50.0,
+      "y": 50.0,
+      "position": "topRight"
+    },
+    "PVP_INFO_HEALTH_CHILD": {
+      "x": 50.0,
+      "y": 50.0,
+      "position": "topRight"
+    },
+    "PVP_INFO_PROJECTILE_CHILD": {
+      "x": 50.0,
+      "y": 50.0,
+      "position": "topRight"
+    }
+  },
+  "SNAPLOOK": {
+    "panelIndex": 61
+  },
+  "TEAM_VIEW": {
+    "panelIndex": 62
+  },
+  "PACK_DISPLAY": {
+    "panelIndex": 64
+  },
+  "MENU_BLUR": {
+    "panelIndex": 65
+  },
+  "MINIMAP": {
+    "seen": true,
+    "lastModified": 1748712144585,
+    "panelIndex": 66
+  },
+  "HITBOX": {
+    "panelIndex": 67
+  },
+  "LIGHTING": {
+    "panelIndex": 68
+  },
+  "WEATHER_CHANGER": {
+    "panelIndex": 69
+  },
+  "CHUNK_BORDERS": {
+    "panelIndex": 70
+  },
+  "SOUND_CHANGER": {
+    "seen": true,
+    "lastModified": 1754463153259,
+    "panelIndex": 71
+  },
+  "WAILA": {
+    "panelIndex": 72
+  },
+  "HURT_CAM": {
+    "enabled": true,
+    "options": {
+      "disableHurtCam": true
+    },
+    "seen": true,
+    "lastModified": 1754659859010,
+    "panelIndex": 73
+  },
+  "DAMAGE_TINT": {
+    "panelIndex": 74
+  },
+  "SKYBLOCK": {
+    "enabled": true,
+    "options": {
+      "skyBlockOpenCommandsUI": "KEY_Y",
+      "skyBlockOpenCommandsUIShift": false,
+      "skyBlockOpenCommandsUIControl": false,
+      "skyBlockOpenCommandsUIAlt": false,
+      "skyBlockTabWidgetHuds": [
+        "Visitors",
+        "Pests"
+      ],
+      "hideMidasStaff": true,
+      "autoCopyRareDrops": true,
+      "onlyMoversOnSkyblock": true,
+      "griffinBurrowEstimates": true,
+      "skyBlockMiddleClickItems": true,
+      "skyBlockCreationDate": true,
+      "highlightEndNodes": true,
+      "highlightGlowingMushrooms": true,
+      "showGiantHPAtFeet": true,
+      "skyBlockWishingCompass": true,
+      "skyBlockMetalDetector": true,
+      "skyBlockFinishedCommissions": true,
+      "fixLavaBobber": true,
+      "skyblockFishingHidePlayers": true,
+      "skyblockFishingHotspotLocator": true,
+      "slayerBossTimer": true,
+      "slayerMiniBossAlert": true,
+      "inactiveEffigyWaypoints": true,
+      "vampireSteakDisplay": true,
+      "vampireIchorDisplay": true,
+      "gravityWellWaypoints": true,
+      "showKuudraHealth": true
+    },
+    "seen": true,
+    "lastModified": 1754662671754,
+    "panelIndex": 1,
+    "SKYBLOCK_HEALTH_HUD": {
+      "enabled": false,
+      "x": -29.0,
+      "y": -112.899994,
+      "position": "bottomCenterLeft"
+    },
+    "SKYBLOCK_MANA_HUD": {
+      "enabled": false,
+      "x": 31.0,
+      "y": -112.79999,
+      "position": "bottomCenterRight"
+    },
+    "SKYBLOCK_KUUDRA_ARMOR_STACKS_HUD": {
+      "enabled": false,
+      "x": 31.0,
+      "y": -97.79999,
+      "position": "bottomCenterRight"
+    },
+    "SKYBLOCK_DEF_HUD": {
+      "enabled": false,
+      "x": -29.0,
+      "y": -97.79999,
+      "position": "bottomCenterLeft"
+    },
+    "SKYBLOCK_SPEED_HUD": {
+      "x": 129.0,
+      "y": -4.0,
+      "position": "bottomCenterRight"
+    },
+    "SKYBLOCK_VISITOR_HUD": {
+      "enabled": false,
+      "x": 5.0,
+      "y": -30.0,
+      "position": "middleLeft"
+    },
+    "SKYBLOCK_NETHER_BOSS_HUD": {
+      "enabled": true,
+      "y": -21.0,
+      "position": "middleLeft"
+    },
+    "SKYBLOCK_DAMAGE_SPLASH": {
+      "enabled": true
+    },
+    "SPIRIT_LEAP_OVERLAY": {
+      "enabled": true,
+      "options": {
+        "spiritLeapMenuDefaultView": "wheel"
+      }
+    },
+    "SKYBLOCK_DUNGEON_SCORE_ALERT": {
+      "enabled": true
+    },
+    "TIERS_AS_STACK_SIZE": {
+      "enabled": true,
+      "options": {
+        "potionLevelAsStack": false,
+        "minionLevelAsStack": false,
+        "itemStarsAsStack": false
+      }
+    },
+    "BETTERMAP_PRIMARY": {
+      "options": {
+        "scale": "1.42",
+        "primaryBetterMapCurrentRoomInfoScale": "0.55"
+      },
+      "x": 79.159996,
+      "y": 6.160001,
+      "position": "topLeft"
+    },
+    "SKYBLOCK_CRITICAL_DUNGEON_TEAMMATE": {
+      "options": {
+        "skyBlockHealthAlertClassList": [
+          "Archer",
+          "Mage",
+          "Berserk",
+          "Healer",
+          "Tank"
+        ]
+      }
+    },
+    "SKYBLOCK_DUNGEON_BAT_HELPER": {
+      "enabled": true,
+      "options": {
+        "batHitbox": true,
+        "batHitboxColor": {
+          "value": -16711681
+        }
+      }
+    },
+    "SKYBLOCK_LIVID_SOLVER_HUD": {
+      "enabled": true
+    },
+    "SKYBLOCK_TERMINAL_SOLVERS": {
+      "enabled": true,
+      "options": {
+        "blockWrongTerminalClicks": true
+      }
+    },
+    "SKYBLOCK_HIGHLIGHT_SPIRIT_BOW": {
+      "enabled": true
+    },
+    "SKYBLOCK_ENDERMAN_SLAYER": {
+      "enabled": true,
+      "options": {
+        "scale": "1.08"
+      },
+      "x": 27.0,
+      "y": -148.84,
+      "position": "bottomCenterLeft"
+    },
+    "SKYBLOCK_BLAZE_SLAYER": {
+      "enabled": true,
+      "x": 37.0,
+      "y": -132.0,
+      "position": "bottomCenterLeft"
+    },
+    "DUNGEON_SECRET_WAYPOINTS": {
+      "enabled": true,
+      "options": {
+        "secretLeverColor": {
+          "value": 872412672
+        },
+        "secretRedstoneKeyPlacementColor": {
+          "value": 872349696
+        },
+        "batSecretColor": {
+          "value": 855701247
+        },
+        "chestSecretColor": {
+          "value": 872195328
+        },
+        "itemDropSecretColor": {
+          "value": 865403135
+        },
+        "essenceSecretColor": {
+          "value": 872349925
+        }
+      }
+    },
+    "DUNGEON_WAYPOINTS": {
+      "dungeonWaypoints": {}
+    },
+    "SKYBLOCK_LOCK_MOUSE": {
+      "options": {
+        "lockMouseKeybind": "KEY_F10",
+        "lockMouseKeybindShift": false,
+        "lockMouseKeybindControl": false,
+        "lockMouseKeybindAlt": false
+      },
+      "x": 7.0,
+      "y": -4.0,
+      "position": "bottomLeft"
+    },
+    "STARRED_MOB_HIGHLIGHT": {
+      "enabled": true
+    },
+    "SKYBLOCK_DUNGEON_PUZZLES": {
+      "enabled": true
+    },
+    "SKYBLOCK_DUNGEON_HIGHLIGHT_DOORS": {
+      "enabled": true
+    },
+    "SKYBLOCK_HOPPITY_EGG_HUD": {
+      "enabled": true,
+      "options": {
+        "skyBlockHoppityEggHudIslands": [
+          "Garden",
+          "Galatea",
+          "Dungeon Hub",
+          "Backwater Bayou",
+          "The Farming Islands",
+          "Deep Caverns",
+          "Crimson Isle",
+          "Kuudra",
+          "Dwarven Mines",
+          "The End",
+          "Crystal Hollows",
+          "Private Island",
+          "Jerry\u0027s Workshop",
+          "Spider\u0027s Den",
+          "Hub",
+          "The Park",
+          "Unknown",
+          "Dungeon",
+          "Gold Mine",
+          "The Rift",
+          "Mineshaft",
+          "None"
+        ]
+      }
+    },
+    "SKYBLOCK_CHOCOLATE_FACTORY": {
+      "enabled": true
+    },
+    "SKYBLOCK_EXPERIMENT_SOLVERS": {
+      "enabled": true
+    },
+    "SKYBLOCK_DRAGON_FEATURES": {
+      "enabled": true,
+      "y": -21.75,
+      "position": "middleLeft"
+    },
+    "SKYBLOCK_CROESUS_CHESTS": {
+      "enabled": true
+    },
+    "SKYBLOCK_DUNGEON_TIMER": {
+      "enabled": true,
+      "y": -57.5,
+      "position": "middleLeft"
+    },
+    "SKYBLOCK_POWDER_TRACKER_HUD": {
+      "enabled": true
+    },
+    "SKYBLOCK_WHISPER_TRACKER_HUD": {
+      "enabled": true
+    },
+    "SKYBLOCK_GLACITE_COMMISSIONS": {
+      "enabled": true,
+      "options": {
+        "skipPositionKeyBind": "KEY_NONE"
+      }
+    },
+    "SKYBLOCK_CRYSTAL_HOLLOWS_MAP": {
+      "enabled": true,
+      "options": {
+        "scale": "1.11"
+      },
+      "x": 80.0,
+      "y": 7.000001,
+      "position": "topLeft"
+    },
+    "SKYBLOCK_DUNGEON_BLOOD_CAMP_HELPER": {
+      "enabled": true
+    },
+    "SKYBLOCK_KUUDRA": {
+      "enabled": true,
+      "options": {
+        "kuudraAlerts": true
+      }
+    },
+    "SKYBLOCK_FARMING_HUD": {
+      "enabled": true,
+      "y": 30.5,
+      "position": "middleLeft"
+    },
+    "SKYBLOCK_VISITOR_TRACKER_HUD": {
+      "enabled": true,
+      "options": {
+        "skyblockShowBits": false,
+        "skyblockShowFloweringBouquet": false,
+        "skyblockShowGreenBandana": false,
+        "skyblockShowOvergrownGrass": false,
+        "skyblockShowDedicationFour": false,
+        "skyblockShowMusicRune": false,
+        "skyblockShowCopperDye": false,
+        "skyblockShowSpaceHelmet": false
+      },
+      "x": -115.5,
+      "position": "topRight"
+    },
+    "SKYBLOCK_GARDEN_PESTS": {
+      "enabled": true,
+      "y": 66.5,
+      "position": "middleLeft"
+    },
+    "SKYBLOCK_SEA_CREATURE_ALERT": {
+      "options": {
+        "skyBlockSeaCreatureAlerts": [
+          "Great White Shark",
+          "Thunder",
+          "Lord Jawbus",
+          "Grim Reaper",
+          "The Loch Emperor",
+          "Yeti",
+          "Reindrake",
+          "Wiki Tiki",
+          "Water Hydra",
+          "Phantom Fisher",
+          "Alligator",
+          "Abyssal Miner",
+          "Fiery Scuttler",
+          "Blue Ringed Octopus",
+          "Ragnarok",
+          "Plhlegblast",
+          "Titanoboa"
+        ]
+      }
+    },
+    "SKYBLOCK_FISHING_MARKER": {
+      "enabled": true
+    }
+  },
+  "HORSE_STATS": {
+    "panelIndex": 77
+  },
+  "INVENTORY_MOD": {
+    "enabled": true,
+    "seen": true,
+    "lastModified": 1754662111177,
+    "panelIndex": 79,
+    "options": {
+      "dontResetCursorInventory": true
+    },
+    "SLOT_LOCKING": {
+      "lockedSlots": []
+    },
+    "SLOT_BINDING": {
+      "options": {
+        "slotBindingKeybind": "KEY_K",
+        "slotBindingKeybindShift": false,
+        "slotBindingKeybindControl": false,
+        "slotBindingKeybindAlt": false,
+        "slotBindingLockBound": false
+      },
+      "bindings": {}
+    }
+  },
+  "RADIO": {
+    "enabled": false,
+    "panelIndex": 80
+  },
+  "TIER_TAGGER": {
+    "options": {
+      "gameMode": "vanilla"
+    },
+    "panelIndex": 81
+  },
+  "KILL_SOUNDS": {
+    "panelIndex": 82
+  },
+  "TOTEM_COUNTER": {
+    "panelIndex": 83
+  },
+  "PANORAMA_MAKER": {
+    "panelIndex": 84
+  },
+  "SHULKER_PREVIEW": {
+    "seen": true,
+    "lastModified": 1754659921369,
+    "panelIndex": 85
+  }
+}

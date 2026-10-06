@@ -1,0 +1,8 @@
+com.moonsworth.lunar.forge.lib.guava.net
+com.moonsworth.lunar.forge.lib.guava.primitives
+com.moonsworth.lunar.forge.lib.guava.reflect
+com.moonsworth.lunar.forge.lib.guava.util.concurrent
+com.moonsworth.lunar.forge.lib.guava.util.concurrent.internal
+com.moonsworth.lunar.forge.lib.guava.xml
+com.moonsworth.lunar.forge.lib.mixin
+com.moonsworth.lunar.forge.mixin

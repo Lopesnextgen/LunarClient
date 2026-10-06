@@ -1,0 +1,21 @@
+package com.moonsworth.lunar.client.render.particle;
+
+public class Clamp extends NNFunction {
+   public Clamp(IValue[] items1, String text) {
+      super(items1, text);
+   }
+
+   @Override
+   public int getRequiredArguments() {
+      return 3;
+   }
+
+   @Override
+   public double doubleValue() {
+      return ClampUtils.clamp(
+         this.method2(0).doubleValue(),
+         this.method2(1).doubleValue(),
+         this.method2(2).doubleValue()
+      );
+   }
+}

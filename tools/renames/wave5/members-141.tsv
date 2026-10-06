@@ -1,0 +1,279 @@
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.GuiIterator	F	field6	scanExecutor	single-thread ExecutorService (DefaultThreadFactory "lunar-rewind-list-provider-thread") that scans for .rewind files
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.GuiIterator	F	field7	fileFilter	IOFileFilter accepting *.rewind and non-backup project.json (multi-line initializer, missing from members-lazy)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.GuiIterator	M	method2	refresh	entry point: submits the scan of the rewind dirs and pushes the sorted "entries" array to the web UI; called by RewindFileCallbacks.delete and the rewind list bridge
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.GuiIterator	M	method3	addEntry	private: builds one JSON entry (minecraftVersion/duration/compatible/type/mods/thumbnails/locations/date/name/file) for a .rewind or project.json file
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.GuiIterator	M	method1	refresh	abstract provider entry point overridden by every panel (InputTimelinePanel/ExportSettingsPanel/EffectsPanel/Chest/Click/Colorsaturation); called from RewindHandlers.method27 loop and the JS bridges - base owner kept in sync so the @Override family stays consistent
+com.moonsworth.lunar.client.markers.mixin.gui.GuiIterator	M	method15	getProvider	Extension.method15(): the base contract implemented by InputTimelineJsApi/EffectsJsApi/ExportSettingsJsApi/RewindFileCallbacks/Click2/Colorsaturation2/Chest2 (returns the JSON provider) - included so the family rename stays consistent
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field1	MILLIS_PER_TICK	50 ms per tick; the per-tick step budget (stepMsPerTick) is reset to it and getPartialTick() divides by it
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field10	skipDurationMs	total ms of the pending skip; getSkipProgress() = 1 - remaining/skipDurationMs
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field11	stepMsPerTick	per-tick step allowance, initialized and reset to 50 ms in skip()/tick()
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field12	skipFinished	set when a pending skip completes; isBusy() = isSkipping()||skipFinished; RewindHandlers sets it false before ticking
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field13	rewindDirection	true while playback runs backwards; ReplayContext.method1(clock.isReversing()) advances the tick by -1
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field14	tickStepped	set by tick() once a step is consumed; RewindHandlers: `if (clock.isSkipping() && !clock.isTickStepped()) clock.tick(this)`
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field15	forwardDirection	direction of the last skip(ms) (non-negative = forward); skip() compares it to detect direction changes
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field16	timeAdvanced	set by update() when the clock advanced; commitPendingTime() then re-bases originTime
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field2	originTime	clock origin: reset() seeds it with bridge$getRealSystemTime(), getPlaybackTime() subtracts it, shiftOriginTime() re-bases it
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field3	lastRealTime	last real-system-time sample; update() advances `time` by the delta (RewindHandlers.java field20.update())
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field4	rewindOffset	backwards correction accumulated while rewinding: tick() adds it, getPlaybackTime()/getProjectedTime() subtract it
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field5	speedOption	DoubleOption "speed" (1.0, 0.1..10, showAsSlider) = the replay speed control; multi-line initializer (missing from members-lazy)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field6	freezeOption	ToggleOption "freeze"; RewindHandlers.java reads it as `(Boolean) clock.getFreezeOption().get()` to freeze playback
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field7	tickStartTime	set by markTickStart(); getPartialTick() interpolates (time - tickStartTime)/50
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field8	remainingForwardMs	remaining fast-forward budget (ms); update()/tick() decrement it and isSkipping() tests it
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	F	field9	remainingRewindMs	remaining rewind budget (ms); hasPendingRewind() tests it > 0
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method1	commitPendingTime	if update() advanced the clock, re-base originTime; RewindHandlers.java calls it while the replay is not ticking
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method10	markTickStart	stores the current time for getPartialTick()
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method11	shiftOriginTime	originTime -= ms; RewindHandlers.java line 207 after a recording is re-based
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method12	hasPendingRewind	remainingRewindMs > 0 (the value compared by isReversing)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method13	getSkipProgress	0..1 progress of the pending skip; PlaybackStateProvider JSON "progress"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method14	setSpeedOption	@Generated setter of the "speed" option
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method15	getSpeedOption	@Generated getter of the "speed" option
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method16	setFreezeOption	@Generated setter of the "freeze" option
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method17	getFreezeOption	@Generated getter of the "freeze" option
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method18	getRemainingForwardMs	@Generated getter of field8 (RewindHandlers.java line 275 compares it to the timeline frame time)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method19	getSkipDurationMs	@Generated getter of field10 (PlaybackStateProvider: skip > 20000 ms shows the progress bar)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method2	isPlayable	areResourcesLoaded() && !hasOverlay(); !isPlayable pauses the timeline (RewindHandlers.java line 284)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method20	setSkipFinished	@Generated setter of field12
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method21	setRewindDirection	@Generated setter of field13
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method22	isTickStepped	@Generated getter of field14
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method3	skip	skip(ms): positive fast-forwards, negative rewinds; seeds remainingForwardMs/remainingRewindMs, stepMsPerTick=50 and refires the tick event
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method4	tick	tick(RewindHandlers): consumes one 50 ms step of the pending skip; on completion moves the timer and restarts the timeline (ReplayTimeline.method6)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method5	isSkipping	remainingForwardMs>0 || remainingRewindMs>0; PlaybackStateProvider pushes "progress" only while true
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method6	isBusy	isSkipping() || skipFinished
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method7	isReversing	hasPendingRewind() || rewindDirection; ReplayContext.method1(tick += -1) when true (JSON playhead moves back)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method8	getPlaybackTime	raw clock minus originTime/rewindOffset; RewindHandlers.java compares it to 250 ms
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers	M	method9	getProjectedTime	getPlaybackTime() including the pending skip (time + remainingForwardMs - remainingRewindMs)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field1	BUFFER_COUNT	constant 4: size of the int[] AL buffer ring (alGenBuffers/alSourceUnqueueBuffers loops)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field10	playbackRate	rate applied through AL_PITCH (alSourcef 4099) in setPlaybackRate; getPlaybackRate() powers the waveform zoom
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field11	decodeBuffer	ByteBuffer of one frame (frameSize*channels*bytesPerSample) created by BufferUtils
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field12	sampleBuffer	ShortBuffer the subclass decodes into (alBufferData source)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field13	scaledBuffer	scratch ShortBuffer used when volume > 1.0 to clip samples
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field14	waveformSamples	peak-per-chunk values; loaded by loadWaveform() and read by AudioWaveformRenderer
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field15	waveformRenderer	the mixin.Rewindhandlers2 waveform cache (moved tree: AudioWaveformRenderer)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field16	alive	keep-alive flag: tick() sets it, the audio registry (mod.misc.RewindHandlers2.method13) reads isAlive() and cleans up dead streams
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field2	sourceId	OpenAL source handle from alGenSources(); 0 = not yet created; every AL call targets it
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field3	bufferIds	the 4 OpenAL buffer names
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field4	uri	"media://<uuid>" / "<uuid>" source string; serialized back by the Gson AudioStreamAdapter (Rewindhandlers2$Data4) and used for the cache hash
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field5	mediaId	uri.split("://")[1] - the media uuid / audio track name used for audio/<id>.json|.dat paths
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field6	rootDirectory	constructor File: the rewind project directory (ReplayProjectManager.method32() from the Gson adapter and Chest2.addLayer); already applied as rootDirectory
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field7	input	current input stream; opened by openInput(), closed/reopened by play() and stop()
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field8	sampleFormat	AudioSampleFormat (channels/bytesPerSample/alFormat) used for alBufferData and buffer sizing
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	F	field9	timeAnchor	real-system time anchor re-set on play/pause; advanceTime() adds delta*playbackRate
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method1	loadWaveform	protected: waveformSamples = waveformRenderer.method1(hash, this); overridden by the Opus stream to build/destroy its decoder
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method10	getFramesPerSecond	frequency/frameSize; AudioWaveformRenderer converts frames to ms with it
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method11	setVolume	volume + alSourcef(AL_GAIN 4106, min(1, volume))
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method12	setPlaybackRate	alSourcef(AL_PITCH 4099, rate)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method13	updatePlayback	per-tick: pause/resume from the replay state (timeline paused / frozen / zooming), queue buffers, advance time
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method14	advanceTime	time += ms; re-anchor timeAnchor
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method15	skipInput	abstract: read and discard one frame while seeking (skip(ms))
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method16	queueBuffer	private: decode into the ring, apply volume, alBufferData + alSourceQueueBuffers
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method17	decodeFrame	abstract: decode one frame into the ByteBuffer/ShortBuffer, EOFException at end of stream
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method18	copy	abstract: clone for playback (AudioSegment starts a copy: field8.method18()); Ctors re-use root/media file
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method19	getPlaybackRate	@Generated getter of playbackRate (AudioWaveformRenderer.method10()*method19())
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method2	computeWaveform	List<Float> peak values computed straight from the file (AudioWaveformRenderer uses it on cache miss)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method20	getWaveformSamples	@Generated getter of waveformSamples
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method22	setAlive	@Generated setter of the keep-alive flag (registry resets it after isAlive())
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method23	isAlive	@Generated getter; mod.misc.RewindHandlers2.method13 removes + cleans up streams whose isAlive() is false
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method3	checkAlError	static: reads AL10.alGetError() and throws with alGetString
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method4	openInput	abstract: opens the input stream T (rewindhandlers2Impl/Impl2 provide the real implementations)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method5	readSampleFormat	abstract: AudioSampleFormat of the decoded data
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method6	readSampleRate	abstract: sample rate (Hz) reported by the decoded format
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method7	readFrameSize	abstract: frames per buffer (1024 for media files, the metadata frameSize for Opus)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2	M	method8	computeHash	abstract: content hash used as the waveform/cache key (uri or media-file md5)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	F	field17	mediaPool	the media pool (rewindhandlers.highlight.Highlight_4 = replay.highlight.MediaPool) resolving media ids to files
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	F	field18	musicTrackManager	the bundled music-track manager: twin type is replay.rewindhandlers.highlight.MusicTrackManager; field18.method5() is the name Set and field18.method3() the music directory used when the media is a bundled track
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	F	field19	audioFormat	javax.sound.sampled.AudioFormat of the opened media (normalised to PCM_SIGNED 16-bit little-endian)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	F	field20	mediaFile	resolved media file in the project; getName()/isValid() and the audio_cache directory hang off it
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	F	fileCache	musicTrackManager	correction: already applied as fileCache; the field holds the bundled music-track manager (twin type replay.rewindhandlers.highlight.MusicTrackManager: name Set + music directory used for bundled tracks)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	M	method18	copy	override: new MediaAudioStream(mediaFile, uri, waveformRenderer, mediaPool, musicTrackManager)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	M	method2	readDuration	private: caches the duration in audio_cache/<hash>.json or computes it from the frame length/remaining bytes
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	M	method5	readSampleFormat	override: AudioSampleFormat.getFormat(channels, bytesPerSample)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	M	method6	readSampleRate	override: (int) audioFormat.getSampleRate()
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl	M	method7	readFrameSize	override: 1024
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	F	field17	fileReader	the recording file reader (rewindhandlers.mixin.Rewind3 = replay.mixin.RewindFileReader) that opens audio/<id>.json|.dat
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	F	field18	audioMetadata	RewindAudioMetadata deserialized from audio/<id>.json (frequency/channels/bytesPerSample/frameSize/duration)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	F	field19	decoderHandle	Opus decoder handle from opus_decoder_create (destroyed in cleanup/reload)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	M	method1	loadWaveform	override: create the decoder, load the waveform, destroy the decoder
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	M	method10	decodeFrame	override: opus_decode into the ShortBuffer (per-channel length-prefixed Opus packets)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	M	method11	openInput	override: fileReader.method10("audio/<id>.dat")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	M	method18	copy	override: new Rewindhandlers2Impl2(rootDirectory, uri, waveformRenderer, fileReader)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	M	method5	readSampleFormat	override: AudioSampleFormat.getFormat(metadata channels, metadata bytesPerSample)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	M	method6	readSampleRate	override: metadata frequency
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	M	method7	readFrameSize	override: metadata frameSize
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2Impl2	M	method8	computeHash	override: md5 of the uri string
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_2	M	method15	getProvider	implements markers.mixin.gui.GuiIterator$Extension.method15(): returns the active rewind property provider (Rewindhandlers_2/InputTimelinePanel)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_2	M	method2	goToTick	@CallbackJS("goToTick"): seeks the timeline by the tick delta (jumps the playhead)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_3	M	method15	getProvider	implements GuiIterator$Extension.method15(): returns the effects provider (Rewindhandlers_5/EffectsPanel)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_3	M	method2	updateBoundingBoxes	@CallbackJS("updateBoundingBoxes"): forwards the model bounding boxes to RewindHandlers.method49() (selection highlight)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method15	getProvider	implements GuiIterator$Extension.method15(): returns the export settings provider (Rewindhandlers_3/ExportSettingsPanel)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method2	updatePropertyValue	@CallbackJS("updatePropertyValue"): sets an export option value then refreshes the export + timeline panels
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method20	addToRenderQueue	@CallbackJS("addToRenderQueue"): enqueues the current timeline for rendering
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method21	startRenderQueue	@CallbackJS("startRenderQueue"): starts the render queue
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method22	exportProject	@CallbackJS("exportProject"): saves the project as a .zip and opens its folder
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method23	exportScreenshot	@CallbackJS("exportScreenshot"): captures the framebuffer to screenshot.png
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method24	downloadFfmpeg	@CallbackJS("downloadFfmpeg"): starts the FFmpeg downloader thread
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method25	stopRendering	@CallbackJS("stopRendering"): cancels the running render
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method3	resetPropertyValue	@CallbackJS("resetPropertyValue"): resets an export option (renderIn/renderOut handled by the panel)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method4	setRenderRegion	@CallbackJS("setRenderRegion"): sets the render region in/out frames on the timeline
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method5	export	@CallbackJS("export"): starts the single-timeline renderer
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method8	renderTimeline	@CallbackJS("renderTimeline"): renders one timeline from the queue (id lookup, error toast "Timeline not found")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_4	M	method9	removeTimeline	@CallbackJS("removeTimeline"): removes a queued timeline
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_5	F	field1	option	the option being overridden (getOption() is already named)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_5	F	field2	entity	the entity bridge the override is applied to
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_5	M	method1	applyToEntity	private @Annotation2(min=8): pushes the changed value to the entity renderer via Highlight3Iterator23.method13(entity,false)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers2_5	M	method2	setEntity	@Generated setter of entity (called by EntityOptionOverrides.apply)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_2	F	field6	segmentId	id of the Rewind3 segment the cached packet list was built from
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_2	F	field7	inputTicks	cached tick -> packet snapshots pushed as JSON "inputTicks"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_2	M	method1	refresh	provider entry (RewindHandlers.method27 loop): pushes enabled/tick/inputTicks/inputMetadata
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_2	M	method2	buildInputTicks	rebuilds the tick/packet list from the recording when the segment changed, else reuses the cache
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_2	M	method3	pushTickWindow	pushes the +/-20 tick window around the current tick as "inputTicks"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_2	M	method4	pushInputMetadata	pushes "inputMetadata" from the segment metadata (toJson)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field10	fileFormatOption	EnumOption "fileFormat" (MP4..), renderSettings section
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field11	codecOption	EnumOption "codec" (H264..), renderSettings section
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field12	encoderOption	EnumOption "encoder" (LIBX264..), renderSettings section
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field13	renderSettingsSection	Coordinates2 for JSON type "renderSettings" (fileFormat/codec/encoder)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field14	videoResolutionOption	MultiNumberOption "videoResolution" W/H (default 1920x1080)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field15	videoFramerateOption	IntegerOption "videoFramerate" (default 60, 30..60)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field16	bitrateOption	EnumOption "bitrate" (BitrateMode AUTO_QUALITY/AUTO_SIZE/CUSTOM)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field17	customBitrateOption	IntegerOption "customBitrate" (1000..100000), shown only for CUSTOM
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field18	videoSettingsSection	Coordinates2 for JSON type "videoSettings"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field19	exportAudioOption	ToggleOption "exportAudio" (default true)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field20	audioChannelsOption	EnumOption "channels" (MONO/STEREO)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field21	audioFrequencyOption	EnumOption "frequency" (AudioSampleRate hz*)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field22	audioSettingsSection	Coordinates2 for JSON type "audioSettings"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field23	renderRangeOption	EnumOption "renderRange" (RenderRange ENTIRE/REGION)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field24	renderInOption	TextOption "renderIn" (mm:ss), disabled unless REGION
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field25	renderOutOption	TextOption "renderOut" (mm:ss), disabled unless REGION
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field26	exportSettingsSection	Coordinates2 for JSON type "exportSettings"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field27	sections	protected List<Coordinates2> of the 4 sections; read by ExportSettingsJsApi.method2 and pushed as "properties"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field6	progressListener	anonymous ProgressListener (Gui3) that re-pushes the panel on start/progress/complete/error/message (multi-line initializer)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field7	downloading	JSON "downloading"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field8	downloadProgress	JSON "downloadProgress" (0..1)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	F	field9	downloadMessage	JSON "downloadMessage"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	M	method5	formatTime	frames -> "mm:ss" / "h:mm:ss" using fps
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	M	method6	parseTime	"mm:ss" -> frames (-1 on parse failure); renderIn/renderOut callbacks
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	M	method7	getTimelineDuration	last frame of the current recording (RewindhandlersNameplate.method3())
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	M	method8	getRenderSettings	current RewindhandlersNameplate render settings, null when no recording
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_3	M	method9	getProgressListener	@Generated getter of the ProgressListener; passed to the FFmpeg downloader (RewindhandlersNameplate2)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_4	F	field1	overrides	Map<entityKey, Map<optionId, HighlightOptionWatcher>>
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_4	M	method1	add	register/replace an option override for an entity (called by the entity renderers)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_4	M	method2	remove	remove an override and drop the entity entry when it becomes empty
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_4	M	method3	apply	resolve the entity key (UUID for players, entity id otherwise), hand the stored option to the consumer and tick the watcher
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_5	M	method1	refresh	provider entry: pushes the enabled highlight "effects" (type/id/source/ms + per-option values)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_6	M	method15	getProvider	implements GuiIterator$Extension.method15(): returns the rewind list provider (GuiIterator/RewindListProvider)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_6	M	method2	create	@CallbackJS("create"): new project from the create-project bridge defaults
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_6	M	method3	open	@CallbackJS("open"): open a .rewind file/folder (optional name parameter)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_6	M	method4	openLocation	@CallbackJS("openLocation"): reveal the file/folder in the OS file browser
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_6	M	method5	getMissingMods	@CallbackJS("getMissingMods"): compare the recording's mods against the loaded pipeline, JSON of missing ids/versions
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.Rewindhandlers_6	M	method6	openReplay	static helper used by create/open: show the loading screen, then RewindHandlers.method13(file, name, settings, quickView)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest	M	method3	addPropertyJson	recursive property walker: type/name/keyframes/childProperties plus the mod name for dynamic properties
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	isLinkedWithSelection	canPropagateEdit	correction: already applied as isLinkedWithSelection; align with the moved tree RewindTimelineBridge.canPropagateEdit(UUID) (used by cut/applyLayerMove/trimLayer)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method10	applyLayerMove	private core of moveLayer/moveLayers (new tree: RewindTimelineBridge.applyLayerMove): re-ranges the layer and recurses for linked layers
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method11	moveLayers	@CallbackJS("moveLayers"): batch move from TimelineBridgePayloads$Data3 entries
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method12	trimLayer	@CallbackJS("trimLayer"): trim the selected layer range and shift its keyframes
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method13	setShowKeyframes	@CallbackJS("setShowKeyframes")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method14	setTrackEnabled	@CallbackJS("setTrackEnabled")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method16	selectKeyframe	@CallbackJS("selectKeyframe"): select one keyframe of a property path
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method17	selectKeyframes	@CallbackJS("selectKeyframes"): batch keyframe selection (TimelineBridgePayloads$Data)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method19	moveKeyframe	@CallbackJS("moveKeyframe"): move the selected keyframe to another frame
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method2	canPropagateEdit	layer participating in a linked edit (new tree: RewindTimelineBridge.canPropagateEdit(UUID)); selected layer uses the link toggle, others require !alt
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method22	startLayersSelection	@CallbackJS("startLayersSelection"): begin linking layers
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method23	stopLayersSelection	@CallbackJS("stopLayersSelection"): finish linking layers
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method3	cut	@CallbackJS("cut"): delete the selected layer(s)/keyframe(s)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method4	addTrack	@CallbackJS("addTrack"): append an effect/gameplay/audio track
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method5	addLayer	@CallbackJS("addLayer"): create a text/image/audio/gameplay layer (file picker + media pool)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method7	selectLayer	@CallbackJS("selectLayer") (+ the plural UUID[] overload "selectLayers")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	method9	moveLayer	@CallbackJS("moveLayer"): move a layer to another track/frame
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.chest.Chest2	M	moveLayerInternal	applyLayerMove	correction: already applied as moveLayerInternal; align with the moved tree RewindTimelineBridge.applyLayerMove
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.click.Click	M	method1	refresh	provider entry: pushes the "timelines" array (id+name) from the project
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.click.Click2	M	method15	getProvider	implements GuiIterator$Extension.method15(): returns the timelines-list provider (Click/RewindTimelinesListPanel)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.click.Click2	M	method2	selectTimeline	@CallbackJS("selectTimeline"): switch the active timeline (error toast "Switched timeline to <name>")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.click.Click2	M	method20	newTimeline	@CallbackJS("newTimeline"): create a blank timeline from the create-project defaults
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.click.Click2	M	method3	editTimelineName	@CallbackJS("editTimelineName"): rename the timeline + save the project (same name in the new tree: RewindTimelinesListBridge.editTimelineName)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.click.Click2	M	method4	duplicateTimeline	@CallbackJS("duplicateTimeline"): copy a timeline (name + " (Copy)")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.click.Click2	M	method5	deleteTimeline	@CallbackJS("deleteTimeline"): remove a timeline and refresh the panels
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.click.Click2	M	renameTimeline	editTimelineName	correction: already applied as renameTimeline; align with the moved tree RewindTimelinesListBridge.editTimelineName and the @CallbackJS("editTimelineName") contract
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation	F	field6	interpolationOption	EnumOption "interpolation" (NumberInterpolator), multi-line initializer
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation	F	field7	easeInOption	ToggleOption "easeIn"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation	F	field8	easeOutOption	ToggleOption "easeOut"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation	M	method1	refresh	provider entry: pushes availableProperties/showMods/properties/hideKeyframeControls/canUndo/canRedo
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation	M	method2	buildPropertyJson	recursive property JSON: value/keyframes/values/canDelete/canDisable/dynamicEntries/childProperties
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation	M	method3	buildKeyframeJson	pseudo-property JSON "keyframe" holding the interpolation/easeIn/easeOut options
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	beginBatch	beginUndoBatch	correction: already applied as beginBatch; align with the moved tree RewindPropertiesBridge.beginUndoBatch
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	endBatch	endUndoBatch	correction: already applied as endBatch; align with the moved tree RewindPropertiesBridge.endUndoBatch (endBatch is the UndoRedoManager call this method makes)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method10	deletePropertyValue	@CallbackJS("deletePropertyValue")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method11	previousKeyframe	@CallbackJS("previousKeyframe"): jump to the previous keyframe of a property
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method12	nextKeyframe	@CallbackJS("nextKeyframe"): jump to the next keyframe of a property
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method13	keyframe	@CallbackJS("keyframe"): insert a keyframe at the playhead
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method14	setShowKeyframesInTimeline	@CallbackJS("setShowKeyframesInTimeline")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method15	getProvider	implements GuiIterator$Extension.method15(): returns the properties provider (Colorsaturation)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method2	removeProperty	@CallbackJS("removeProperty")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method20	endPropertyUpdate	@CallbackJS("endPropertyUpdate"): finish the batched edit
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method21	beginUndoBatch	starts the undo/redo batch on the timeline (Nameplate2.method1()); new tree: RewindPropertiesBridge.beginUndoBatch
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method22	endUndoBatch	re-applies the keyframes to every track and ends the undo batch; new tree: RewindPropertiesBridge.endUndoBatch
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method3	setPropertyExtended	@CallbackJS("setPropertyExtended")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method4	setPropertyEnabled	@CallbackJS("setPropertyEnabled")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method5	startPropertyUpdate	@CallbackJS("startPropertyUpdate"): begin the batched edit
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method6	updatePropertyValue	@CallbackJS("updatePropertyValue"): set the keyframe option value (keyframe or property path)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method8	handlePropertyButton	@CallbackJS("handlePropertyButton"): run the ButtonOption action
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.colorsaturation.Colorsaturation2	M	method9	resetPropertyValue	@CallbackJS("resetPropertyValue")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field1	selectedLayer	JSON "selectedLayer" (Chest) - the layer the editor acts on
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field10	zoom	replay zoom used by the camera (0.., default 20; getZoom() already named)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field11	dragging	JSON "dragging" - true while the playhead is dragged in the web UI
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field12	scrubFrame	JSON "playhead": manual drag frame (-1 = use the timeline playhead)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field2	additionalSelectedLayers	JSON "additionalSelectedLayers" - extra layers in a multi-selection
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field3	linkSelectionEnabled	JSON "links" is emitted only when true; set to !shift by selectLayer, toggled by @CallbackJS("linkLayers")
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field4	multiSelectEnabled	alt multi-select switch read by selectLayer (shift OR this flag toggles the layer set)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field5	copiedLayer	layer staged by the duplicate action (Rewind4.method9) and inserted at the playhead by Rewind4.method10
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field6	copiedRange	frame Range of the staged layer (Rewind4: Range.between(playhead, playhead + max-min))
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field7	copiedTrack	track the staged layer belongs to (target of the insert)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field8	selectedKeyframe	the SelectedKeyframe (property+frame) under edit
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	F	field9	additionalSelectedKeyframes	extra SelectedKeyframe entries of a batch selection
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method1	setSelectedLayer	select one layer and clear the additional selection
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method10	refreshMediaExporter	refreshes the MediaExporter panel (field11)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method11	refreshTimelinesList	refreshes the RewindTimelinesListPanel (field12) after create/duplicate/delete
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method12	refreshExportSettings	refreshes the ExportSettingsPanel (field14)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method13	refreshEffects	refreshes the EffectsPanel (field15)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method14	refreshEntityContextMenu	refreshes the entity context menu (field16)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method15	findTimeline	look up a timeline by id in the project (Click2.selectTimeline)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method16	getRewind	the Rewind mod (Client.method40().method85())
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method17	getRewindHandlers	the RewindHandlers mod / replay session, null when not replaying
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method18	getProject	ReplayProjectManager of the active session (null when idle)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method19	getTimeline	the active Timeline (project.method37())
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method2	setSelectedKeyframe	set/replace the SelectedKeyframe and clear the batch selection
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method20	getLayerRange	frame Range of a layer id inside the active timeline
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method21	findPropertyByPath	recursive property-group lookup by type path ("a/b/c", Rewind4/Chest2)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method22	findProperty	property lookup by layer + path + option id
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method23	resolveProperty	findProperty plus (when requested) seeding the option with the selected keyframe frame + range
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method24	resolvePropertyInGroup	same as resolveProperty but from a known property group
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method25	findTrackOfLayer	track containing a layer id (Chest scrolls/targets it)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method26	findTrack	track by id inside the active timeline
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method27	getTrackByReversedIndex	track by the reversed index the web UI uses (Chest2 setShowKeyframes/setTrackEnabled/deleteTrack)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method28	containsLayer	is the layer still present in the active timeline (rewind4 validates the selection after undo)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method29	getSelectedLayer	JSON "selectedLayer"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method3	isKeyframeSelected	true when the option+frame is the selected or an additional selected keyframe
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method30	getAdditionalSelectedLayers	JSON "additionalSelectedLayers"
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method31	setLinkSelectionEnabled	called by selectLayer with !shift
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method32	isLinkSelectionEnabled	gates the "links" JSON array and collectLinkedLayers
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method33	setMultiSelectEnabled	@Generated setter
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method34	isMultiSelectEnabled	@Generated getter (Chest2.selectLayer)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method35	setCopiedLayer	stages the layer to duplicate
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method36	getCopiedLayer	Rewind4.method10 inserts it at the playhead
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method37	setCopiedRange	stages the frame Range to duplicate
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method38	getCopiedRange	Rewind4.method10: Range.between(playhead, playhead + max-min)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method39	setCopiedTrack	stages the target track
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method4	applyFrameRemap	re-anchor the selected keyframe(s) after a keyframe move (Map<option, Map<oldFrame,newFrame>>)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method40	getCopiedTrack	Rewind4.method10: track whose layer receives the copy
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method41	getSelectedKeyframe	JSON/JS selected keyframe (Chest2.moveKeyframe/updatePropertyValue)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method42	getAdditionalSelectedKeyframes	batch selected keyframes (Chest2.moveKeyframes, Rewind4 delete)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method43	setZoom	@Generated setter of zoom (getZoom() already named)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method44	setDragging	@Generated setter of dragging
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method45	isDragging	@Generated getter; JSON "dragging" and RewindHandlers gate the audio/playback on it
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method46	setScrubFrame	@Generated setter of scrubFrame
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method47	getScrubFrame	@Generated getter; JSON "playhead" fallback (Holograms2/PlaybackStateProvider)
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method5	lookupRemappedFrame	private helper of applyFrameRemap
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method6	collectLinkedLayers	Set<UUID> of the layer plus its linked layers (null = the selected ones); used by "links" and cut/delete
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method7	refreshPlaybackState	refreshes the PlaybackStateProvider (RewindHandlers.field9); called after every seek/pause change
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method8	refreshTimeline	refreshes the RewindTimelinePanel (field10) - the timeline JSON bridge
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates	M	method9	refreshProperties	refreshes the RewindPropertiesPanel (field13) after keyframe/property edits
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates2	F	field1	type	section type string ("renderSettings"/"videoSettings"/"audioSettings"/"exportSettings"); type() already named
+com.moonsworth.lunar.client.framework.feature.rewind.rewindhandlers.coordinates.Coordinates2	F	field2	options	options of the section; options() already named

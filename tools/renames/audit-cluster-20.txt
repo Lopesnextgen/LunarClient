@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.fov.nameplate
+com.moonsworth.lunar.client.fps
+com.moonsworth.lunar.client.fps.mixin
+com.moonsworth.lunar.client.framework
+com.moonsworth.lunar.client.framework.build
+com.moonsworth.lunar.client.framework.combat
+com.moonsworth.lunar.client.framework.crash
+com.moonsworth.lunar.client.framework.feature

@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "lunar:blow_kiss_hearts",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "lunar:particles/textures/heart.webp"
+			}
+		},
+		"curves": {
+			"variable.psize": {
+				"type": "catmull_rom",
+				"input": "variable.particle_age",
+				"horizontal_range": "variable.particle_lifetime",
+				"nodes": [0, 0, 0.84, 1, 0.67, 0, 0]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 10,
+				"max_particles": 100
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {
+				"direction": ["variable.particle_random_2 - 0.5", "variable.particle_random_3 - 0.5", 3]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "(variable.particle_random_1 - 0.5) * 45",
+				"rotation_rate": "(variable.particle_random_1 - 0.5) * -40"
+			},
+			"minecraft:particle_initial_speed": 1,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": ["math.random(-1, 1)", "math.random(-1, 2)", "math.random(0, 1)"]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["0.1 * (variable.psize + 0.5 * variable.particle_random_1)", "0.1 * (variable.psize + 0.5 * variable.particle_random_1)"],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 9,
+					"texture_height": 9,
+					"uv": [0, 0],
+					"uv_size": [9, 9]
+				}
+			}
+		}
+	}
+}

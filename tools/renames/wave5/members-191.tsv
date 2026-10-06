@@ -1,0 +1,423 @@
+# owner.fqn	M|F	oldName	newName	evidence
+com.moonsworth.lunar.client.mod.hud.SkyblockSkeletonHelmetHud	F	field8	hideSkeletonHatBones	OptionFactory.method7("hideSkeletonHatBones") L37; gates skeleton-hat bone suppression in method3 L79
+com.moonsworth.lunar.client.mod.hud.SkyblockSkeletonHelmetHud	F	field9	hasSkeletonHelmet	HEAD item equals "SKELETON_HELMET" L58; reset in onDisable L95 and method4 L100
+com.moonsworth.lunar.client.mod.hud.SkyblockSkeletonHelmetHud	F	field10	boneShieldCount	++ on "Your Bone Shield gained an extra bone!" L69, -- on "Bone Shield Health: " L71, 0 on destroy L73; rendered number1 + "/3" L135
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillGlobeHud	F	field8	skillXpListener	SkillXpListener obtained via this.method63(SkillXpListener.class) L29; field8.method16() queried L91
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillGlobeHud	F	field9	displayTime	IntegerOption "displayTime" L30-34 (1..10); window check lastUpdateTime + displayTime*1000 L93
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillGlobeHud	F	field10	skillGlobeCircleColor	ColorOption "skillGlobeCircleColor" L36-40; drawn as inner 20px circle L107
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillGlobeHud	F	field11	skillGlobeBorderColor	ColorOption "skillGlobeBorderColor" L41-45; drawn as outer 22px circle L105
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillGlobeHud	F	field12	skillGlobeProgressColor	ColorOption "skillGlobeProgressColor" L46-50; drawn as numeric progress arc L106
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillGlobeHud	F	field13	skillProgress	event.method6()/100.0 at L65; passed to arc renderer as value5 L95/L106
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillGlobeHud	F	field14	lastUpdateTime	Ref.method3().bridge$getSystemTime() L66; compared against displayTime window L93
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressBarHud	F	field8	BAR_WIDTH	private static final 100.0F L26; bar background width (folded literal 100.0F L79)
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressBarHud	F	field9	BAR_HEIGHT	private static final 8.0F L27; bar background height (folded literal 8.0F L79)
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressBarHud	F	field10	BAR_BORDER_OFFSET	private static final 1.5F L28; inner bar offset (folded value2+1.5F L80-81)
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressBarHud	F	field11	INNER_BAR_WIDTH	private static final 97.0F L29; inner bar width (folded 97.0F L82-83)
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressBarHud	F	field12	INNER_BAR_HEIGHT	private static final 5.0F L30; inner bar height (folded 5.0F L82-83)
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressBarHud	F	field13	skillXpListener	SkillXpListener via this.method63(SkillXpListener.class) L31; field13.method16() feeds progress L71
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressBarHud	F	field14	skillBarColor	ColorOption "skillBarColor" L32-37; field14.method14(0.0F) colours the fill L83
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressBarHud	F	field15	skillProgress	event.method6()/100.0 L50; fill fraction passed to renderer L73
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field8	showSkillXpGained	ToggleOption "showSkillXpGained" L38; adds "+<xp>" segment L83-85
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field9	showSkillProgress	ToggleOption "showSkillProgress" L40; toggles current/total segment L87
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field10	showSkillPercentage	ToggleOption "showSkillPercentage" L42; switches to "(x%)" L89
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field11	showActionsUntilNextLevel	ToggleOption "showActionsUntilNextLevel" L44; adds actions-left segment L100-107
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field12	textColor	ColorOption "textColor" L47-51; applied to joined line L110
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field13	displayTime	IntegerOption "displayTime" L52-57; expiry window vs lastUpdateTime L155
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field14	xpFormat	DecimalFormat "###,###,###.#" L58; formats xp numbers L84/L91/L107
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field15	percentFormat	DecimalFormat "###.##" L59; formats the percentage L89
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field16	currentLine	HudLine built in onSkillXpUpdate L77; returned by Data while displayTime window open L158
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	F	field17	lastUpdateTime	Ref.method3().bridge$getSystemTime() L76; compared to displayTime*1000 L155
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field8	skillXpListener	SkillXpListener via this.method6(SkillXpListener.class) L45; current skill field8.method17() L182
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field9	showSkillXpGained	ToggleOption "showSkillXpGained" L46; session xp line L201
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field10	showSkillXpPerHour	ToggleOption "showSkillXpPerHour" L48; per-hour line L216
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field11	showTimeUntilNextLevel	ToggleOption "showTimeUntilNextLevel" L50; untilNext line L231
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field12	showTimeUntilMaxLevel	ToggleOption "showTimeUntilMaxLevel" L52; untilMax line L249
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field13	skillXpTrackerResetTimeout	ToggleOption "skillXpTrackerResetTimeout" L54; enables timeout reset L117
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field14	skillXpTrackerTimeoutLength	IntegerOption "skillXpTrackerTimeoutLength" L57-63; inactivity seconds L117
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field15	skillTextColor	ColorOption "skillTextColor" L64-68; label colour L208/L223/L241/L259
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field16	xpTextColor	ColorOption "xpTextColor" L69-73; value colour L209/L224/L242/L260
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field17	sessionXp	Map<CoordinatesType,Double> accumulated this session L74; += event.method4() L99; cleared in startSession L137
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field18	xpPerHour	Map<CoordinatesType,Double> recomputed each second L110-113; read for per-hour line L187
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field19	xpToNextLevel	Map<CoordinatesType,Double> event.method7()-event.method5() L101; drives untilNext estimate L188
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field20	sessionActive	set true in startSession L134, false on reset L127; gates tracking L95/L106/L191
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field21	sessionStartTime	timestamp set in startSession L135; elapsed-hours base L107
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	F	field22	lastXpTime	timestamp on every xp update L100; inactivity check L116
+com.moonsworth.lunar.client.mod.hud.SkyblockSpeedHud	F	field8	showIcon	ToggleOption "showIcon" default true L28-29; prefixes speed with '✦' L59
+com.moonsworth.lunar.client.mod.hud.SkyblockSpeedHud	F	field9	speedText	TextComponent cache set from formatSpeed(number5) L54; returned by Data L78
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field8	TOXIC_RAIN_SLIME_TEXTURE	public static final ResourceLocationBridge "lunar:skyblock/entity/toxicrainslime.png" L37
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field9	CLOUD_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/cloud.png" L38; status row icon L159
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field10	RAIN_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/rain.png" L39; nextRain row icon L185
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field11	THUNDER_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/thunder.png" L40; nextThunder row icon L196
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field12	showRainHud	ToggleOption "showRainHud" L41; gates the whole HUD L211/L215
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field13	showNextRain	ToggleOption "showNextRain" L43; gates nextRain/nextThunder rows L182
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field14	highlightToxicRainSlime	ToggleOption "highlightToxicRainSlime" L45; exposed via @Generated method16 L124
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field15	textColor	ColorOption "textColor" L46-50; getTextColor() L105
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field16	timerColor	ColorOption "timerColor" L51-55; getTimerColor() L109
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field17	rainType	SkyblockSpiderDenRainHud.Type NONE default L56; set to THUNDER/RAIN/NONE L76-89; isThundering() L100
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field18	currentRainTimeLeft	1200L - SkyblockCalendar.method4() L77/L82; rendered as "timeLeft" L174
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field19	nextRainTime	6000L - method5(3) L78/L83; rendered as "nextRain" L188
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	F	field20	nextThunderTime	13200L/2400L - method5(9) L79/L84; rendered as "nextThunder" L199
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field8	STORM_TIMER_DURATION_MS	private static final 31250L L40; purple-pad countdown length L121/L152/L242
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field9	STORM_START_MESSAGE	private static final "[BOSS] Storm: Pathetic Maxor, just like expected." L41; starts stormTimer L107
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field10	STORM_DEATH_MESSAGE	private static final "[BOSS] Storm: I should have known that I stood no chance." L42; resets L111
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field11	STORM_ENRAGED_MESSAGE	private static final "⚠ Storm is enraged! ⚠" L43; triggers method13 L113
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field12	STORM_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/storm.png" L44; timer row icon L214
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field13	dungeonFloorListener	DungeonFloorListener L45; floor 7 gate L98
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field14	showHud	ToggleOption "showHud" L46; gates Data render L261
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field15	textColor	ColorOption "textColor" L48-52; label colour L217/L232/L245
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field16	timerColor	ColorOption "timerColor" L53-57; value colour L219/L234/L251
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field17	skyblockInvincibilityDecimals	IntegerOption "skyblockInvincibilityDecimals" L58-63; used in "%." + field17 + "f" L143
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field18	stormPurplePadDynamicColor	ToggleOption "stormPurplePadDynamicColor" L64-66; dynamic pad colour L248-249
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field19	showStormTimer	ToggleOption "showStormTimer" L67; timer row gate L211
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field20	showStormEnragedTime	ToggleOption "showStormEnragedTime" L69; enraged row gate L226
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field21	stormEnragedTimeToShow	IntegerOption "stormEnragedTimeToShow" L71-76; enraged window seconds L226
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field22	stormEnragedTimeChat	ToggleOption "stormEnragedTimeChat" L77; chat announcement L132
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field23	stormPurplePadTime	ToggleOption "stormPurplePadTime" L79; purple-pad row gate L241
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field24	announceStepOnPad	ToggleOption "announceStepOnPad" L81; party-chat call L119
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field25	purplePadCountdown	IntegerOption "purplePadCountdown" L83-88; warning window seconds L152/L249
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field26	stormTimer	HudTimer started on STORM_START_MESSAGE L108, captured on enrage L131; null when inactive L147/L155
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field27	enragedTime	field26.get() captured by method13 L131, -1 default L90; enragedIn row L226-233
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	F	field28	announcedStepOnPad	boolean latch set after "/pc Step on purple pad!" L123; reset() L158
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field8	dungeonTerminalListener	DungeonTerminalListener via this.method6 L48; counts terminals/levers L179-190
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field9	dungeonFloorListener	DungeonFloorListener L49; floor 7 gate L335
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field10	dungeonScoreListener	DungeonScoreListener L50; field10.method10() gate L340
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field11	alertDisplayListener	AlertDisplayListener L51; stage-complete alert L123
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field12	showHud	ToggleOption "showHud" L52; gates Data render L333
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field13	skyBlockHideTerminalMessages	ToggleOption "skyBlockHideTerminalMessages" L54; cancels TerminalActivateEvent L114
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field14	skyBlockHideTerminalTitles	ToggleOption "skyBlockHideTerminalTitles" L57; cancels terminal titles L134
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field15	skyblockTerminalHudFormat	EnumOption "skyblockTerminalHudFormat" default SHOW_MISSING L60-63; switch in Data L195
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field16	stageCompleteAlert	ToggleOption "stageCompleteAlert" L64; alert gate L120
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field17	alertText	TextOption "alertText" default "STAGE COMPLETE" L65-69
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field18	alertColor	ColorOption "alertColor" L70-75
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field19	timeToShow	IntegerOption "timeToShow" L76-81; alert duration *1000 L124
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field20	playChime	ToggleOption "playChime" L82; chime L126
+com.moonsworth.lunar.client.mod.hud.SkyblockTerminalStatus	F	field31	titleComponent	private final Component "Terminal Status" bold AQUA L155; first DETAILED/SHOW_MISSING line L198/L255
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	F	field8	dungeonFloorListener	DungeonFloorListener L43; M6 check L77
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	F	field9	dungeonScoreListener	DungeonScoreListener L44; field9.method10() gate L63
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	F	field10	skyblockTerracottaTimerColor	EnumOption "skyblockTerracottaTimerColor" L45-48; timer text colour L103
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	F	field11	skyblockTerracottaTimerDecimals	IntegerOption "skyblockTerracottaTimerDecimals" L49-54; "%." + field11 + "f" L102
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	F	field12	activeTerracottas	ObjectOpenHashSet<Data> L55; add/remove on block change L83-85; clear L73/L120
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	F	field1	position	private final Vector3i L138; getter method1(), equals/hashCode L173-190
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	F	field2	timer	private final transient HudTimer L139, 12s/15s countdown L146; removeIf expired L91
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field8	dungeonFloorListener	DungeonFloorListener L39; floor 7 check L93
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field9	dungeonMapListener	DungeonMapListener L40
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field10	skyblockTickTimerMode	EnumOption "skyblockTickTimerMode" default SECONDS L41-44; TICKS/SECONDS switch L173
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field11	skyblockTickTimerDecimals	IntegerOption "skyblockTickTimerDecimals" L45-50; "%." + field11 + "f" L177
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field12	secretTimer	ToggleOption "secretTimer" L51; Type.SECRET gate L209
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field13	skyblockStormTickTimer	ToggleOption "skyblockStormTickTimer" L52-53; Type.STORM gate L211
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field14	skyblockGoldorTerminalTickTimer	ToggleOption "skyblockGoldorTerminalTickTimer" L54-56; Type.GOLDOR_TERMINALS gate L213
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field15	skyblockGoldorDeathTickTimer	ToggleOption "skyblockGoldorDeathTickTimer" L57-59; Type.GOLDOR_DEATH gate L215
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field16	skyblockNecronDropTickTimer	ToggleOption "skyblockNecronDropTickTimer" L60-62; Type.NECRON gate L218
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field17	skyblockTickTimerPrefixColor	EnumOption "skyblockTickTimerPrefixColor" L63-66; label colour L188
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field18	skyblockTickTimerColor	EnumOption "skyblockTickTimerColor" L67-70; static value colour L182
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field19	skyblockTickTimerDynamicColor	ToggleOption "skyblockTickTimerDynamicColor" L71-73; dynamic colour L180
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field20	currentType	active Type set by startTimer L132, cleared L105/L127; Data render L168
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	F	field21	remainingTicks	decremented each server tick L115; set to getInterval() L116/L133; gate L220
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorHud	F	field8	tabListListener	TabListListener via this.method63(TabListListener.class) L35; tab lines iterated L55
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorHud	F	field9	VISITORS_PATTERN	private static final Pattern "^Visitors: \\((\\d)\\)$" L36; matcher L59
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorHud	F	field10	NEXT_VISITOR_PATTERN	private static final Pattern "^ Next Visitor: (.+)" L37; matcher L64
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorHud	F	field11	JERRY_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/jerry.png" L38; Visitors row icon L109
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorHud	F	field12	visitorCount	int, parsed group(1) L61, -1 when absent L73; rendered L100
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorHud	F	field13	nextVisitor	String parsed group(1) L66, "Unknown" fallback L77; rendered L100
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	F	field8	screenTitleListener	ScreenTitleListener via this.method63 L39; field8.method5() title read L68/L113
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	F	field9	OFFER_ACCEPTED_PATTERN	private static final Pattern "^OFFER ACCEPTED with (?<name>[\\w ]+) \\([A-Z]+\\)$" L40; chat matcher L101
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	F	field10	SHOPPING_ITEM_PATTERN	private static final Pattern "^ (?<item>[\\w' ]+?)( x(?<amount>[\\d,]+))?$" L41; item matcher L78
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	F	field11	DEFAULT_SHOPPING_LIST	private static final Map preview "Enchanted Wheat"->476 etc. L42-49; Data preview L159
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	F	field12	offersByVisitor	HashMap<String,List<ShoppingListItem>> L50; keyed by visitor name L89; cleared L123
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	F	field13	requiredItems	HashMap<String,Integer> aggregated item->amount L51; recompute L128-135; gates render L165
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	F	field1	itemName	private final String item name of ShoppingListItem L200; item() accessor L208
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	F	field2	requiredAmount	private final int required amount L201; amount() accessor L212
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field14	FANCY_CROSS_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/dungeon/map_icon/fancy_cross.png" L69; denied row icon L615
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field15	FANCY_GREEN_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/dungeon/map_icon/fancy_green.png" L70; accepted row icon L603
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field16	FLOWERING_BOUQUET_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/flowering_bouquet.png" L71; row icon L695
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field17	GREEN_BANDANA_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/green_bandana.png" L72; row icon L711
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field18	OVERGROWN_GRASS_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/overgrown_grass.png" L73; row icon L727
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field19	MUSIC_RUNE_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/music_rune.png" L74; row icon L759
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field20	COPPER_DYE_TEXTURE	private static final ResourceLocationBridge "lunar:skyblock/hud/copper_dye.png" L75; row icon L775
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field21	skyblockShowVisitorStats	ToggleOption "skyblockShowVisitorStats" L76-80; totals block gate L577
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field22	skyblockShowGardenXP	ToggleOption "skyblockShowGardenXP" L81-85; Garden XP row gate L627
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field23	skyblockShowFarmingXP	ToggleOption "skyblockShowFarmingXP" L86-90; Farming XP row gate L643
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field24	skyblockShowCopper	ToggleOption "skyblockShowCopper" L91-95; Copper row gate L659
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field25	skyblockShowBits	ToggleOption "skyblockShowBits" L96-100; Bits row gate L675
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field26	skyblockShowFloweringBouquet	ToggleOption "skyblockShowFloweringBouquet" L101-105; row gate L691
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field27	skyblockShowGreenBandana	ToggleOption "skyblockShowGreenBandana" L106-110; row gate L707
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field28	skyblockShowOvergrownGrass	ToggleOption "skyblockShowOvergrownGrass" L111-115; row gate L723
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field29	skyblockShowDedicationFour	ToggleOption "skyblockShowDedicationFour" L116-120; row gate L739
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field30	skyblockShowMusicRune	ToggleOption "skyblockShowMusicRune" L121-125; row gate L755
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field31	skyblockShowCopperDye	ToggleOption "skyblockShowCopperDye" L126-130; row gate L771
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field32	skyblockShowSpaceHelmet	ToggleOption "skyblockShowSpaceHelmet" L131-135; row gate L787
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field33	spaceHelmetIcon	ItemStackBridge from Bridge.method28().method94() L136/L150; Space Helmet row icon L791
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field34	visitorData	Data accumulator L137, replaced on profile change L204, preview L574
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field35	resetConfirmPending	true on "reset" button L287, false on confirm L291; gates confirm option L287-292
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field1	rarities	@SerializedName("rarities") HashMap<String,Integer> L329-330; rarity counts L367-368
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field2	acceptedCount	@SerializedName("accepted") int L331-332; ++ L370; getter method5 L428
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field3	deniedCount	@SerializedName("denied") int L333-334; ++ L372; getter method6 L433
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field4	gardenXp	@SerializedName("gardenXP") long L335-336; += "Garden Experience" L379
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field5	farmingXp	@SerializedName("farmingXP") long L337-338; += "Farming XP" L382
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field6	copper	@SerializedName("copper") int L339-340; += "Copper" L385
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorTrackerHud	F	field7	floweringBouquet	@SerializedName("floweringBouquet") int L343-344; += "Flowering Bouquet" L391
+com.moonsworth.lunar.client.mod.hud.SkyblockVitalityHud	F	field17	alwaysShow	ToggleOption "alwaysShow" L16; when false HUD only shows with active values L41
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field8	highlightTypeListener	HighlightTypeListener via this.method63 L50; field8.method7() menu check L103
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field9	tabListListener	TabListListener via this.method63 L51; lines iterated L117
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field10	whisperTrackerResetTimeout	ToggleOption "whisperTrackerResetTimeout" L52-54; enables timeout reset L97
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field11	whisperTrackerTimeoutLength	IntegerOption "whisperTrackerTimeoutLength" L55-60; inactivity seconds L97
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field12	sessionWhispers	EnumMap<BeeheemothType,Integer> accumulated counts L61; += delta L177; cleared L163
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field13	whispersPerHour	EnumMap<BeeheemothType,String> per-hour strings L62; recomputed L92; rendered L267
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field14	lastWidgetCounts	EnumMap<BeeheemothType,Integer> previous tab values L63; delta base L140/L148
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field15	foundInTabList	true when any BeeheemothType matched L131; gates render L200
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field16	sessionActive	set true in startSession L160, false L153; gates tracking L87/L173
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field17	sessionStartTime	timestamp set in startSession L161; elapsed base L89
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field18	lastWhisperTime	timestamp on each delta L178; timeout check L96
+com.moonsworth.lunar.client.mod.hud.SkyblockWhisperTrackerHud	F	field19	lastResetHeartTime	time of "Reset Heart of the Forest" click L108; 5s guard L137
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field8	WITHER_STUCK_MESSAGES	private static final Set "[BOSS] Maxor/Storm ..." L50-52; contains check L140
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field9	dungeonFloorListener	DungeonFloorListener L53; M7 health selection L121/L189
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field10	dungeonScoreListener	DungeonScoreListener L54; field10.method10() gate L100
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field11	alertDisplayListener	AlertDisplayListener L55; WITHER STUCK alert L142
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field12	witherHealth	ToggleOption "witherHealth" L56; gates Data render L224
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field13	witherHealthInBossBar	ToggleOption "witherHealthInBossBar" L58; appends to boss bar L116
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field14	witherHealthAsPercentage	ToggleOption "witherHealthAsPercentage" L60; percentage vs absolute L118/L186
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field15	witherHealthNameColor	ColorOption "witherHealthNameColor" L61-65; name colour L200
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field16	witherHealthColor	ColorOption "witherHealthColor" L66-70; value colour L126/L202
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field17	witherStuckAlert	ToggleOption "witherStuckAlert" L71; alert group L156
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field18	alertText	TextOption "alertText" default "WITHER STUCK!" L73-77
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field19	alertColor	ColorOption "alertColor" L78-83
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field20	timeToShow	IntegerOption "timeToShow" L84-89; alert duration *1000 L142
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field21	playChime	ToggleOption "playChime" L90; chime L144
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field22	currentType	matched Type (MAXOR/STORM/GOLDOR/NECRON) L114; cleared L136
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	F	field23	healthFraction	bridge2_113.method2() L115; percentage/absolute rendering L119-123/L187-193
+com.moonsworth.lunar.client.mod.hud.Stopwatch	F	field8	timers	protected Map<String,TimerChildMod> L43; accessed by TimerChildMod L83 and Highlight3Iterator24
+com.moonsworth.lunar.client.mod.hud.Stopwatch	F	field9	stopwatches	protected Map<String,StopwatchChildMod> L44; add/remove L123/L159
+com.moonsworth.lunar.client.mod.hud.Stopwatch	F	field10	pendingTitles	LinkedHashSet<String> of title texts L45; next() L72; cleared L126
+com.moonsworth.lunar.client.mod.hud.Stopwatch	F	field11	migrated	set true by StopwatchMigration/Killsounds_2 L15; isMigrated() method16
+com.moonsworth.lunar.client.mod.hud.Stopwatch	F	field12	titleTicks	countdown >=0, decremented each tick L59; duration 10+40+10 L74
+com.moonsworth.lunar.client.mod.hud.Stopwatch	F	field13	currentTitle	Title built L75; rendered by renderTitle L204-215; cleared L127
+com.moonsworth.lunar.client.mod.hud.Stopwatch	F	field14	onResetCallback	Runnable invoked at end of clear() L130-132; setter method18
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	F	field8	stopwatchName	TextOption "stopwatchName" default "New Stopwatch" L38-40
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	F	field9	useCustomFormat	ToggleOption "useCustomFormat" L41; custom vs TimeFormat L147
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	F	field10	timeDisplayOption	EnumOption "timeDisplayOption" default DEFAULT L42-43; TimeFormat L156
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	F	field11	customFormat	TextOption "customFormat" default "HH:mm:ss" L44-46; DurationFormatUtils L151
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	F	field12	stopwatchKeybind	ModifierKeybindOption "stopwatchKeybind" L47-51; keybind listener L80
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	F	field13	resetEveryStart	ToggleOption "resetEveryStart" default true L52-53; zeroes elapsed L208-210
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	F	field14	userCreated	constructor flag L62; adds "remove" button L108 and saves config L127; Apollo creates with false (Highlight3Iterator24 L157)
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	F	field15	elapsedTime	accumulated ms L57; running adds now-startTime L171; stopped uses field15 L173; += on stop L215
+com.moonsworth.lunar.client.mod.hud.Tab	F	field8	hypixelLocationListener	HypixelLocationListener via this.method50 L33; location used L89
+com.moonsworth.lunar.client.mod.hud.Tab	F	field9	pingRow	ToggleOption "pingRow" L34; row colour gate L110
+com.moonsworth.lunar.client.mod.hud.Tab	F	field10	headerColor	ColorOption "headerColor" L35-37
+com.moonsworth.lunar.client.mod.hud.Tab	F	field11	footerColor	ColorOption "footerColor" L38-40
+com.moonsworth.lunar.client.mod.hud.Tab	F	field12	backgroundColor	ColorOption "backgroundColor" L41-43
+com.moonsworth.lunar.client.mod.hud.Tab	F	field13	rowsColor	ColorOption "rowsColor" L44-45
+com.moonsworth.lunar.client.mod.hud.Tab	F	field14	highlightOwnName	ToggleOption "highlightOwnName" L46; name options group L113
+com.moonsworth.lunar.client.mod.hud.Tab	F	field15	nameColor	ColorOption "nameColor" L47-48
+com.moonsworth.lunar.client.mod.hud.Tab	F	field16	disableHeader	ToggleOption "disableHeader" L49
+com.moonsworth.lunar.client.mod.hud.Tab	F	field17	disableFooter	ToggleOption "disableFooter" L50
+com.moonsworth.lunar.client.mod.hud.Tab	F	field18	hideNpc	ToggleOption "hideNPC" L51; isNpcHidden() L267
+com.moonsworth.lunar.client.mod.hud.Tab	F	field19	nameShadow	ToggleOption "nameShadow" default true L52-53
+com.moonsworth.lunar.client.mod.hud.Tab	F	field20	pingNumberShadow	ToggleOption "pingNumberShadow" L54; renderPingNumber shadow L231
+com.moonsworth.lunar.client.mod.hud.Tab	F	field21	hidePing	ToggleOption "hidePing" L55; shouldHidePing L250
+com.moonsworth.lunar.client.mod.hud.Tab	F	field22	hidePingIfOver500	ToggleOption "hidePingIfOver500" L56; shouldHidePing L250
+com.moonsworth.lunar.client.mod.hud.Tab	F	field23	dynamicPingColor	ToggleOption "dynamicPingColor" L58; getPingColor switch L225
+com.moonsworth.lunar.client.mod.hud.Tab	F	field24	displayPingAsNumber	ToggleOption "displayPingAsNumber" L59; render gate L221/L122
+com.moonsworth.lunar.client.mod.hud.Tab	F	field25	pingNumberColor	ColorOption "pingNumberColor" L60-61; fallback colour L226/L256
+com.moonsworth.lunar.client.mod.hud.Tab	F	field26	lowPingNumberColor	ColorOption "lowPingNumberColor" L62-63; <65ms L258
+com.moonsworth.lunar.client.mod.hud.Tab	F	field27	mediumPingNumberColor	ColorOption "mediumPingNumberColor" L64-65; <120ms L260
+com.moonsworth.lunar.client.mod.hud.Tab	F	field28	highPingNumberColor	ColorOption "highPingNumberColor" L66-67; <250ms L262
+com.moonsworth.lunar.client.mod.hud.Tab	F	field29	extremePingNumberColor	ColorOption "extremePingNumberColor" L68-70; >=250ms L262
+com.moonsworth.lunar.client.mod.hud.Tab	F	field30	showLunarIconsOnRight	ToggleOption "showLunarIconsOnRight" L71; isLunarIconsOnRight() L274; external width use GuiPlayerTabOverlayTabMixin L87
+com.moonsworth.lunar.client.mod.hud.Tab	F	field31	moveSelfToTop	ToggleOption "moveSelfToTop" L72; isMoveSelfToTop() L270
+com.moonsworth.lunar.client.mod.hud.Tab	F	field32	displayPlayerHead	ToggleOption "displayPlayerHead" default true L73-74; external use GuiPlayerTabOverlayTabMixin L120
+com.moonsworth.lunar.client.mod.hud.Tab	F	field33	tabKeybind	SimpleKeybindOption "tabKeybind" default KEY_TAB L75-82; keybind listener L134-146
+com.moonsworth.lunar.client.mod.hud.Tab	F	field34	toggleKeyTab	ToggleOption "toggleKeyTab" L83; drives active L143
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field8	timerName	TextOption "timerName" default "New Timer" L38-39
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field9	startStopTimerKey	ModifierKeybindOption "startStopTimerKey" L40; listener L103-112
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field10	pauseTimerKey	ModifierKeybindOption "pauseTimerKey" L41; listener L113-120
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field11	hours	IntegerOption "hours" 0..23 L42-47; duration calc L336
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field12	minutes	IntegerOption "minutes" 0..59 L48-53; duration calc L336
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field13	seconds	IntegerOption "seconds" 0..59 L54-59; duration calc L336
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field14	loopOnEnd	ToggleOption "loopOnEnd" L60
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field15	useCustomFormat	ToggleOption "useCustomFormat" L61; custom vs TimeFormat L184
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field16	timeDisplayOption	EnumOption "timeDisplayOption" default DEFAULT L62-63; TimeFormat L193
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field17	customFormat	TextOption "customFormat" default "HH:mm:ss" L64-65; DurationFormatUtils L188
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field18	showTitleAction	ToggleOption "showTitleAction" L66; title group L156
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field19	titleText	TextOption "titleText" L67; shown when done
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field20	desktopNotification	ToggleOption "desktopNotification" L68; gate L158
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field21	ingameNotification	ToggleOption "ingameNotification" L69; applied remotely L237
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field22	playSound	ToggleOption "playSound" default false L70-72; Stopwatch tick sound L173
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field23	userCreated	constructor flag L82; adds "remove" button L136 and saves config L165; Apollo creates with false (Highlight3Iterator24 L191)
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field24	endTime	absolute end timestamp ms, 0 = inactive L74; set now+duration L251/L263; isRunning() method24
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field25	pauseStartTime	timestamp when paused L75; set in pause() L295; cleared L275/L282/L302
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	F	field26	pausedRemaining	remaining ms preserved on stop L270; consumed on start/resume L251/L262
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field8	SPRINTING_ICON	private static final ResourceLocationBridge "lunar:icons/sprinting.png" L29; used when not sneaking L70
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field9	SNEAKING_ICON	private static final ResourceLocationBridge "lunar:icons/sneaking.png" L30; used when sneaking L70
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field10	speedFormat	DecimalFormat "#.00" L31; flying boost speed L110
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field11	iconMode	ToggleOption "iconMode" L32; icon vs text mode L67/L80/L159
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field12	sprintingText	TextOption "sprintingText" L33; read by ToggleActionType L40-42
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field13	sneakingText	TextOption "sneakingText" L34; read by ToggleActionType L42-44
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field14	flyingText	TextOption "flyingText" L35; read by ToggleActionType L45-46
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field15	showRidingText	ToggleOption "showRidingText" default true L36-37; riding branch L117
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	F	field16	descendingText	ToggleOption "descendingText" default true L38-39; descending gate L175
+com.moonsworth.lunar.client.mod.hud.TurboGroupRebuildsChildHudMod	F	field8	rebuildSamples	IntArrayList of TurboEngineManager.method25() L26; add/pop L50-54; averaged L55
+com.moonsworth.lunar.client.mod.hud.TurboGroupRebuildsChildHudMod	F	field9	rebuildsPerFrame	ToggleOption "rebuildsPerFrame" L27; selects per-frame vs average L41
+com.moonsworth.lunar.client.mod.hud.TurboGroupRebuildsChildHudMod	F	field10	avgInSeconds	IntegerOption "avgInSeconds" 1..3600 L28-30; sample period L42
+com.moonsworth.lunar.client.mod.hud.TurboGroupRebuildsChildHudMod	F	field11	sampleAmt	IntegerOption "sampleAmt" 1..120 L31-33; max samples L50
+com.moonsworth.lunar.client.mod.hud.TurboGroupRebuildsChildHudMod	F	field12	displayValue	formatted "%%d" or "%.2f" L48/L55; used in "Group Rebuilds: " L77
+com.moonsworth.lunar.client.mod.hud.Waila	F	field8	MAX_ENTITY_HOVER_TICKS	private static final 10 L76; hover counter clamp in method1 L298-300
+com.moonsworth.lunar.client.mod.hud.Waila	F	field9	showBlockCoords	ToggleOption "showBlockCoords" L77; coord line L196/L211
+com.moonsworth.lunar.client.mod.hud.Waila	F	field10	blockCoordsColor	ColorOption "blockCoordsColor" L80-82; coord line colour field10 L211
+com.moonsworth.lunar.client.mod.hud.Waila	F	field11	showCorrectTool	ToggleOption "showCorrectTool" L83; tool line L202
+com.moonsworth.lunar.client.mod.hud.Waila	F	field12	correctToolColor	ColorOption "correctToolColor" L86-88; tool colour field12 L212
+com.moonsworth.lunar.client.mod.hud.Waila	F	field13	showBreakTime	ToggleOption "showBreakTime" L89; break-time line L203
+com.moonsworth.lunar.client.mod.hud.Waila	F	field14	breakTimeColor	ColorOption "breakTimeColor" L90-92; break colour field14 L213
+com.moonsworth.lunar.client.mod.hud.Waila	F	field15	showLightLevel	ToggleOption "showLightLevel" L93; light line L204
+com.moonsworth.lunar.client.mod.hud.Waila	F	field16	lightLevelColor	ColorOption "lightLevelColor" L94-96; light colour field16 L214
+com.moonsworth.lunar.client.mod.hud.Waila	F	field17	alwaysShow	ToggleOption "alwaysShow" L97; no-target block L479
+com.moonsworth.lunar.client.mod.hud.Waila	F	field18	showEntities	ToggleOption "showEntities" L98; entity branch L286
+com.moonsworth.lunar.client.mod.hud.Waila	F	field19	showCosmetics	ToggleOption "showCosmetics" L101; cosmetic branch L292
+com.moonsworth.lunar.client.mod.hud.Waila	F	field20	showSprays	ToggleOption "showSprays" L104; spray branch L235
+com.moonsworth.lunar.client.mod.hud.Waila	F	field21	showCompanions	ToggleOption "showCompanions" L107; companion branch L431
+com.moonsworth.lunar.client.mod.hud.Waila	F	field22	background	ToggleOption "background" L110; Data render L647
+com.moonsworth.lunar.client.mod.hud.Waila	F	field23	backgroundColor	ColorOption "backgroundColor" L113-115; Data render L648
+com.moonsworth.lunar.client.mod.hud.Waila	F	field24	textColor	ColorOption "textColor" L116-118; getter getTextColor (was method16), consumed by WailaHandler L51
+com.moonsworth.lunar.client.mod.hud.Waila	F	field25	textShadow	ToggleOption "textShadow" L119; getter getTextShadow (was method17)
+com.moonsworth.lunar.client.mod.hud.Waila	F	field26	border	ToggleOption "border" L122; Data render L651
+com.moonsworth.lunar.client.mod.hud.Waila	F	field27	borderColor	ColorOption "borderColor" L123-125; Data render L652
+com.moonsworth.lunar.client.mod.hud.Waila	F	field28	borderThickness	FloatOption "borderThickness" L126-131; Data render L652
+com.moonsworth.lunar.client.mod.hud.Waila	F	field29	verticalSpacing	IntegerOption "verticalSpacing" L132-137; getVerticalSpacing (was method15) L621
+com.moonsworth.lunar.client.mod.hud.Waila	F	field30	horizontalSpacing	IntegerOption "horizontalSpacing" L138-143; spacer widths L167/L171
+com.moonsworth.lunar.client.mod.hud.Waila	F	field31	entityHoverTicks	hover counter L144; see-saw -20..10 L293-299
+com.moonsworth.lunar.client.mod.hud.Waila	F	field32	cachedEntityData	Waila.Data2 L145; set by method8 L555/L568; cleared L309/L527
+com.moonsworth.lunar.client.mod.hud.Waila	F	field33	currentComponents	Waila2 rendered tree L146; set by setComponents L617; Data render L657/L662
+com.moonsworth.lunar.client.mod.hud.Waila	F	field1	components	private final mixin.Waila tree L667; getter method1 L677
+com.moonsworth.lunar.client.mod.hud.Waila	F	field2	cosmetic	private final Gui2Handler L668; getter method2 L681
+com.moonsworth.lunar.client.mod.hud.Waila	F	field3	bounds	private final AxisAlignedBBBridge L669; getter method3 L685
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field8	MAX_ENTITY_HOVER_TICKS	private static final 10 L76; hover counter clamp in method1 L357-359
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field9	showBlockCoords	ToggleOption "showBlockCoords" L77-81; coord line L233/L250
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field10	blockCoordsColor	ColorOption "blockCoordsColor" L82-86; coord line colour L250
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field11	showCorrectTool	ToggleOption "showCorrectTool" L87-91; tool line L239
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field12	correctToolColor	ColorOption "correctToolColor" L92-96; tool colour L251
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field13	showBreakTime	ToggleOption "showBreakTime" L97; break-time line L240
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field14	breakTimeColor	ColorOption "breakTimeColor" L98-102; break colour L252
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field15	showLightLevel	ToggleOption "showLightLevel" L103; light line L241
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field16	lightLevelColor	ColorOption "lightLevelColor" L104-108; light colour L253
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field17	alwaysShow	ToggleOption "alwaysShow" L109; no-target block L568
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field18	showEntities	ToggleOption "showEntities" L110-114; entity branch L345
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field19	showCosmetics	ToggleOption "showCosmetics" L115-119; cosmetic branch L351
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field20	showSprays	ToggleOption "showSprays" L120-124; spray branch L280
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field21	showCompanions	ToggleOption "showCompanions" L125-129; companion branch L514
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field22	background	ToggleOption "background" L130-134; Data render L742
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field23	backgroundColor	ColorOption "backgroundColor" L135-139; Data render L743
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field24	textColor	ColorOption "textColor" L140-144; getter getTextColor (was method16), consumed by WailaHandler L51/StringWailaComponent L39
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field25	textShadow	ToggleOption "textShadow" L145-149; getter getTextShadow (was method17)
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field26	border	ToggleOption "border" L150; Data render L746
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field27	borderColor	ColorOption "borderColor" L151-155; Data render L747
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field28	borderThickness	FloatOption "borderThickness" L156-161; Data render L747
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field29	verticalSpacing	IntegerOption "verticalSpacing" L162-167; getVerticalSpacing (was method15) L718
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field30	horizontalSpacing	IntegerOption "horizontalSpacing" L168-173; spacer widths L198/L202
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field31	entityHoverTicks	hover counter L174; see-saw -20..10 L352-358
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field32	cachedRenderContext	WailaHud.WailaRenderContext L175; set by method8 L648/L663; cleared L368/L527
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field33	currentLayout	WailaLayout L176; set by setLayout L713; Data render L752/L756
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field1	row	private final mixin.WailaRow L761; getter method1 L771
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field2	cosmetic	private final Gui2Handler L762; getter method2 L775
+com.moonsworth.lunar.client.mod.hud.WailaHud	F	field3	bounds	private final AxisAlignedBBBridge L763; getter method3 L779
+com.moonsworth.lunar.client.mod.hud.SkyblockSkeletonHelmetHud	M	method1	onTick	handle(EventTick.class, this::method1) L48; reads HEAD equipment into hasSkeletonHelmet L54-61
+com.moonsworth.lunar.client.mod.hud.SkyblockSkeletonHelmetHud	M	method4	onWorldChange	handle(EventWorldChange.class, this::method4) L51; resets hasSkeletonHelmet/boneShieldCount L100-101
+com.moonsworth.lunar.client.mod.hud.SkyblockSpeedHud	M	method3	formatSpeed	private; builds Component.text((showIcon?'✦':"")+speed) L58-60; called from onSecond L54 and Data L78
+com.moonsworth.lunar.client.mod.hud.SkyblockVitalityHud	M	method5	createVitalityLine	private; builds one Nameplate3.Data(value,max,DARK_RED,'♨') L51-54; called by both vitality suppliers L43/L48
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillProgressHud	M	method1	onSkillXpUpdate	handle(SkillXpUpdateEvent.class, this::method1) L69; rebuilds currentLine for ACTION_BAR source L73-78
+com.moonsworth.lunar.client.mod.hud.SkyblockTickTimerHud	M	method1	onChatMessage	handle(TypedChatMessage.class, this::method1) L84; maps boss lines to Type.SECRET/STORM/GOLDOR_TERMINALS/GOLDOR_DEATH/NECRON L90-109
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	M	method3	onChatMessage	handle(TypedChatMessage.class, this::method3) L67; "[BOSS] Sadan: ENOUGH!" clears tracked timers L113
+com.moonsworth.lunar.client.mod.hud.SkyblockTerracottaTimer	M	method4	onWorldChange	handle(EventWorldChange.class, this::method4) L68; clears activeTerracottas L120
+com.moonsworth.lunar.client.mod.hud.SkyblockSkillXpTrackerHud	M	method4	resetSession	private; deactivates session and optionally zeroes sessionStartTime L126-131; timeout L118, profile change L123, reset button L151
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	M	method13	isThundering	public; returns rainType == Type.THUNDER L100-101 (no tree call sites; API for other features)
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	M	method14	getTextColor	private; TextColor.color(field15.method14(0.0F)) L104-105; status/timeLeft/nextRain/nextThunder labels L163/L175/L189/L200
+com.moonsworth.lunar.client.mod.hud.SkyblockSpiderDenRainHud	M	method3	buildLines	private Data; builds status + timer rows from Type and three timestamps L149-208; called from Data.method2 L140/L141
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	M	method1	onChatMessage	handle(TypedChatMessage.class, this::method1) L99; starts/resets stormTimer and triggers enrage L104-115
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	M	method5	formatSeconds	private; String.format("%."+decimals+"f", seconds)+"s" L142-143; used by formatDuration L139 and Data L246
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	M	method13	onStormEnraged	captures stormTimer.get() into enragedTime L131; optional party chat L132-134; called on STORM_ENRAGED_MESSAGE L113
+com.moonsworth.lunar.client.mod.hud.SkyblockStormHud	M	method14	isPurplePadWarning	private; true when 31250 - remaining <= purplePadCountdown*1000 L146-153; gates purplePadIn row L204/L241
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorHud	M	method3	buildLines	private Data; builds Visitors + Next rows from count/name L104-141; called from Data.method2 L98/L100
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	M	method1	onSlotUpdate	handle(EventSlotUpdate.class, this::method1) L59; parses "Accept Offer" slot 29 items L65-95
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	M	method6	removeOffer	private; removes visitor offer and recomputes requiredItems L138-141; called on offer accepted L104 and slot 33 L115
+com.moonsworth.lunar.client.mod.hud.SkyblockVisitorShoppingListHud	M	method13	recomputeRequiredItems	private; sums ShoppingListItem amounts into requiredItems L127-136; called after add/remove L90/L140
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	M	method1	onRenderBossBar	handle(EventRenderBossBar.class, this::method1) L101; matches boss bar name to Type and appends health L106-133
+com.moonsworth.lunar.client.mod.hud.SkyblockWitherHealthHud	M	method3	onChatMessage	handle(TypedChatMessage.class, this::method3) L103; WITHER_STUCK_MESSAGES triggers alert L139-147
+com.moonsworth.lunar.client.mod.hud.Stopwatch	M	method6	removeTimer	removes timer from timers and ModChildren L141-150; called by TimerChildMod L139 and Highlight3Iterator24 L192
+com.moonsworth.lunar.client.mod.hud.Stopwatch	M	method7	addStopwatch	adds stopwatch to stopwatches + ModChildren L152-156; called by addStopwatch option L109 and Highlight3Iterator24 L157
+com.moonsworth.lunar.client.mod.hud.Stopwatch	M	method10	renderTitle	handle(Focused.class, this::method10) L53; draws currentTitle for titleTicks L203-222
+com.moonsworth.lunar.client.mod.hud.Stopwatch	M	method15	setMigrated	@Generated setter used by StopwatchMigration/Killsounds_2 L15/L35
+com.moonsworth.lunar.client.mod.hud.Stopwatch	M	method16	isMigrated	@Generated getter guards legacy-config migration (StopwatchMigration L15, Killsounds_2 L12)
+com.moonsworth.lunar.client.mod.hud.Stopwatch	M	method18	setOnReset	@Generated setter for onResetCallback L280-282; invoked at end of clear() L130-132
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	M	method6	getDisplayLines	private; formats elapsed (or preview) and appends stopwatchName L164-178; used by anonymous TypedHudRenderer L73
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	M	method8	applyRemoteSettings	applies Apollo config (name, resetEveryStart, custom format, override, hideWhenStopped) L185-203; called by Highlight3Iterator24 L158
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	M	method16	stop	sets running=false and accumulates elapsedTime L213-216; Apollo StopStopwatchMessage handler (Highlight3Iterator24 L188)
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	M	method17	reset	running=false, startTime=-1, elapsedTime=0 L218-222; Apollo ResetStopwatchMessage handler (Highlight3Iterator24 L192)
+com.moonsworth.lunar.client.mod.hud.StopwatchChildMod	M	method19	getStopwatchKeybind	@Generated getter for stopwatchKeybind L246-248
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method6	getDisplayLines	private; formats remaining/end time and appends timerName L201-217; used by anonymous TypedHudRenderer L96
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method7	applyRemoteSettings	applies Apollo timer config (name, h/m/s, loop, formats, notifications, hideWhenStopped) L219-248; called by Highlight3Iterator24 L191
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method14	start	sets endTime = now + configured duration, clears paused state L250-254; start/stop keybind L107
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method16	startOrResume	uses pausedRemaining when present else full duration L261-266; Apollo StartTimerMessage handler (Highlight3Iterator24 L277)
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method17	stop	preserves remaining into pausedRemaining and clears endTime L268-276; Apollo StopTimerMessage handler (Highlight3Iterator24 L278)
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method19	reset	zeroes endTime/pausedRemaining/paused/pauseStartTime L278-283; Apollo ResetTimerMessage handler (Highlight3Iterator24 L279)
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method23	getRemainingMillis	remaining = endTime - now (or pause-adjusted) clamped to 0 L305-318
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method24	isRunning	endTime != 0 L320-322; start/stop keybind L106 and pause toggle L286
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method25	isFinished	running && !paused && endTime <= now L324-326; notification trigger in Stopwatch L171
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method26	dispose	removes both keybind options and unregisters listeners L328-333; remove button L138 and Stopwatch clear L124
+com.moonsworth.lunar.client.mod.hud.TimerChildMod	M	method27	getConfiguredDurationMillis	hours*3600 + minutes*60 + seconds (min 1s) * 1000 L335-338
+com.moonsworth.lunar.client.mod.hud.Tab	M	method3	renderLeftIcon	renders TabLogoManager icon for uuid L153-155; external GuiPlayerTabOverlayTabMixin L100
+com.moonsworth.lunar.client.mod.hud.Tab	M	method4	renderRightIcon	renders badge icon for uuid L157-159; external callers tab overlay mixins
+com.moonsworth.lunar.client.mod.hud.Tab	M	method6	renderBadge	static; draws BadgeManager badge L195-218
+com.moonsworth.lunar.client.mod.hud.Tab	M	method7	renderPingNumber	draws ping number with dynamic/static colour L220-242; external GuiPlayerTabOverlayTabMixin L108
+com.moonsworth.lunar.client.mod.hud.Tab	M	method8	shouldHidePing	negative/1s/skyblock/hidePing/hidePingIfOver500 rules L244-252; external GuiPlayerTabOverlayTabMixin L94
+com.moonsworth.lunar.client.mod.hud.Tab	M	method9	getPingColor	ping colour by thresholds 65/120/250 L254-264; used by renderPingNumber L228
+com.moonsworth.lunar.client.mod.hud.Tab	M	method13	isNpcHidden	enabled && hideNpc && HypixelLocationListener.field7.method7().method1() L266-268
+com.moonsworth.lunar.client.mod.hud.Tab	M	method14	isMoveSelfToTop	enabled && moveSelfToTop L270-272
+com.moonsworth.lunar.client.mod.hud.Tab	M	method15	isLunarIconsOnRight	enabled && showLunarIconsOnRight L274-276; external GuiPlayerTabOverlayTabMixin L87/L96
+com.moonsworth.lunar.client.mod.hud.Tab	M	method16	getHypixelLocationListener	@Generated getter field8 L279-281
+com.moonsworth.lunar.client.mod.hud.Tab	M	method17	getPingRow	@Generated getter field9 L284-286
+com.moonsworth.lunar.client.mod.hud.Tab	M	method19	getHeaderColor	@Generated getter field10 L289-291
+com.moonsworth.lunar.client.mod.hud.Tab	M	method21	getFooterColor	@Generated getter field11 L294-296
+com.moonsworth.lunar.client.mod.hud.Tab	M	method22	getBackgroundColor	@Generated getter field12 L299-301
+com.moonsworth.lunar.client.mod.hud.Tab	M	method23	getRowsColor	@Generated getter field13 L304-306
+com.moonsworth.lunar.client.mod.hud.Tab	M	method24	getHighlightOwnName	@Generated getter field14 L309-311
+com.moonsworth.lunar.client.mod.hud.Tab	M	method25	getNameColor	@Generated getter field15 L314-316
+com.moonsworth.lunar.client.mod.hud.Tab	M	method26	getDisableHeader	@Generated getter field16 L319-321
+com.moonsworth.lunar.client.mod.hud.Tab	M	method27	getDisableFooter	@Generated getter field17 L324-326
+com.moonsworth.lunar.client.mod.hud.Tab	M	method28	getHideNpc	@Generated getter field18 L329-331
+com.moonsworth.lunar.client.mod.hud.Tab	M	method29	getNameShadow	@Generated getter field19 L334-336
+com.moonsworth.lunar.client.mod.hud.Tab	M	method30	getPingNumberShadow	@Generated getter field20 L339-341
+com.moonsworth.lunar.client.mod.hud.Tab	M	method34	getHidePing	@Generated getter field21 L344-346; external GuiPlayerTabOverlayTabMixin L98
+com.moonsworth.lunar.client.mod.hud.Tab	M	method35	getHidePingIfOver500	@Generated getter field22 L349-351
+com.moonsworth.lunar.client.mod.hud.Tab	M	method36	getDynamicPingColor	@Generated getter field23 L354-356
+com.moonsworth.lunar.client.mod.hud.Tab	M	method37	getDisplayPingAsNumber	@Generated getter field24 L359-361
+com.moonsworth.lunar.client.mod.hud.Tab	M	method38	getPingNumberColor	@Generated getter field25 L364-366
+com.moonsworth.lunar.client.mod.hud.Tab	M	method39	getLowPingNumberColor	@Generated getter field26 L369-371
+com.moonsworth.lunar.client.mod.hud.Tab	M	method40	getMediumPingNumberColor	@Generated getter field27 L374-376
+com.moonsworth.lunar.client.mod.hud.Tab	M	method41	getHighPingNumberColor	@Generated getter field28 L379-381
+com.moonsworth.lunar.client.mod.hud.Tab	M	method42	getExtremePingNumberColor	@Generated getter field29 L384-386
+com.moonsworth.lunar.client.mod.hud.Tab	M	method43	getShowLunarIconsOnRight	@Generated getter field30 L389-391
+com.moonsworth.lunar.client.mod.hud.Tab	M	method44	getMoveSelfToTop	@Generated getter field31 L394-396
+com.moonsworth.lunar.client.mod.hud.Tab	M	method45	getDisplayPlayerHead	@Generated getter field32 L399-401; external GuiPlayerTabOverlayTabMixin L120
+com.moonsworth.lunar.client.mod.hud.Tab	M	method46	getTabKeybind	@Generated getter field33 L404-406
+com.moonsworth.lunar.client.mod.hud.Tab	M	method47	getToggleKeyTab	@Generated getter field34 L409-411
+com.moonsworth.lunar.client.mod.hud.ToggleSneakHudChild	M	method4	formatActionText	private Data; main text without partition L154-156; called throughout getText L110-148
+com.moonsworth.lunar.client.mod.hud.Waila	M	method5	getCorrectToolName	tool name (hoe/shears/axe/shovel/pickaxe/hand/none) L504-519; tool line L202
+com.moonsworth.lunar.client.mod.hud.Waila	M	method6	getLightLevelAt	world.getLightLevel(above,true,true) L521-523; light line L204
+com.moonsworth.lunar.client.mod.hud.Waila	M	method8	updateEntityRenderContext	builds cachedEntityData for cosmetic/badge/cape entities L535-581; cosmetic raycast callback L308
+com.moonsworth.lunar.client.mod.hud.Waila	M	method9	getEntityDisplayName	static; baby translation fallback L583-591; entity rows L352/L360
+com.moonsworth.lunar.client.mod.hud.Waila	M	method11	setComponents	stores currentComponents and resizes HUD L616-619; called after every rebuild L164-417
+com.moonsworth.lunar.client.mod.hud.Waila	M	method13	buildCosmeticWaila	companions/lunar-entity WAILA tree L430-476; called for block/none paths L181/L414
+com.moonsworth.lunar.client.mod.hud.Waila	M	method14	decayEntityHover	hover counter decay/reset L525-533; called before rebuilds L180/L343/L369...
+com.moonsworth.lunar.client.mod.hud.Waila	M	method15	getVerticalSpacing	@Generated getter for field29 L621-623
+com.moonsworth.lunar.client.mod.hud.Waila	M	method16	getTextColor	@Generated getter for field24 L626-628; consumed by WailaHandler/WailaHandler3
+com.moonsworth.lunar.client.mod.hud.Waila	M	method17	getTextShadow	@Generated getter for field25 L631-633; consumed by WailaHandler/WailaHandler3
+com.moonsworth.lunar.client.mod.hud.Waila	M	method19	getCurrentComponents	@Generated getter for field33 L636-638
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method5	getCorrectToolName	tool name (hoe/shears/axe/shovel/pickaxe/hand/none) L597-612; tool line L239
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method6	getLightLevelAt	world.getLightLevel(above,true,true) L614-616; light line L241
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method8	updateEntityRenderContext	builds cachedRenderContext for cosmetic/badge/cape entities L628-678; cosmetic raycast callback L367
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method9	getEntityDisplayName	static; baby translation fallback L680-688; entity rows L420/L430
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method11	setLayout	stores currentLayout and resizes HUD L712-715; called after every rebuild L193-496
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method13	buildCosmeticComponent	companions/lunar-entity WAILA component L513-565; called for block/none paths L214/L493
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method14	decayEntityHover	hover counter decay/reset L618-626; called before rebuilds L213/L410/L443...
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method15	getVerticalSpacing	@Generated getter for field29 L717-719
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method16	getTextColor	@Generated getter for field24 L721-724; consumed by WailaHandler/StringWailaComponent
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method17	getTextShadow	@Generated getter for field25 L726-729; consumed by WailaHandler/StringWailaComponent
+com.moonsworth.lunar.client.mod.hud.WailaHud	M	method19	getCurrentLayout	@Generated getter for field33 L731-734

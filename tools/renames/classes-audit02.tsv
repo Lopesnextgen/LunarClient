@@ -1,0 +1,51 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client	Highlight3Iterator	TntCountdownApolloHandler	Apollo module handler super("tnt_countdown","TNT Countdown") handling ApolloOptionUpdateEvent + SetTntCountdownMessage	com/moonsworth/lunar/client/Highlight3Iterator.java
+com.moonsworth.lunar.client	Highlight3Iterator3	ServerRuleApolloHandler	Apollo module handler super("server_rule","Server Rule")	com/moonsworth/lunar/client/Highlight3Iterator3.java
+com.moonsworth.lunar.client	Highlight3Iterator5	SaturationApolloHandler	Apollo module handler super("saturation","Saturation")	com/moonsworth/lunar/client/Highlight3Iterator5.java
+com.moonsworth.lunar.client	Highlight3Iterator6	BeamApolloHandler	Apollo module handler super("beam","Beam")	com/moonsworth/lunar/client/Highlight3Iterator6.java
+com.moonsworth.lunar.client	Highlight3Iterator7	RichPresenceApolloHandler	Apollo module handler super("rich_presence","RichPresence")	com/moonsworth/lunar/client/Highlight3Iterator7.java
+com.moonsworth.lunar.client	Highlight3Iterator9	TebexApolloHandler	Apollo module handler super("tebex","Tebex")	com/moonsworth/lunar/client/Highlight3Iterator9.java
+com.moonsworth.lunar.client	Highlight3Iterator10	AutoTextHotkeyApolloHandler	Apollo module handler super("auto_text_hotkey","Auto Text Hotkey")	com/moonsworth/lunar/client/Highlight3Iterator10.java
+com.moonsworth.lunar.client	Highlight3Iterator12	EntityApolloHandler	Apollo module handler super("entity","Entity")	com/moonsworth/lunar/client/Highlight3Iterator12.java
+com.moonsworth.lunar.client	Highlight3Iterator13	PayNowApolloHandler	Apollo module handler super("pay_now","PayNow")	com/moonsworth/lunar/client/Highlight3Iterator13.java
+com.moonsworth.lunar.client	Highlight3Iterator14	TitleApolloHandler	Apollo module handler super("title","Title")	com/moonsworth/lunar/client/Highlight3Iterator14.java
+com.moonsworth.lunar.client	Highlight3Iterator18	NotificationApolloHandler	Apollo module handler super("notification","Notification")	com/moonsworth/lunar/client/Highlight3Iterator18.java
+com.moonsworth.lunar.client	Highlight3Iterator20	GlowApolloHandler	Apollo module handler super("glow","Glow")	com/moonsworth/lunar/client/Highlight3Iterator20.java
+com.moonsworth.lunar.client	Highlight3Iterator21	CombatApolloHandler	Apollo module handler super("combat","Combat")	com/moonsworth/lunar/client/Highlight3Iterator21.java
+com.moonsworth.lunar.client	Highlight3Iterator23	HeightLimitApolloHandler	Apollo module handler super("height_limit","Height Limit")	com/moonsworth/lunar/client/Highlight3Iterator23.java
+com.moonsworth.lunar.client	Highlight3Iterator25	CooldownApolloHandler	Apollo module handler super("cooldown","Cooldown")	com/moonsworth/lunar/client/Highlight3Iterator25.java
+com.moonsworth.lunar.client	Highlight3Iterator27	ColoredFireApolloHandler	Apollo module handler super("colored_fire","Colored Fire")	com/moonsworth/lunar/client/Highlight3Iterator27.java
+com.moonsworth.lunar.client	Highlight3Iterator29	VignetteApolloHandler	Apollo module handler super("vignette","Vignette")	com/moonsworth/lunar/client/Highlight3Iterator29.java
+com.moonsworth.lunar.client	Highlight3Iterator30	NickHiderApolloHandler	Apollo module handler super("nick_hider","NickHider")	com/moonsworth/lunar/client/Highlight3Iterator30.java
+com.moonsworth.lunar.client	Highlight3Iterator31	PacketEnrichmentApolloHandler	Apollo module handler super("packet_enrichment","PacketEnrichment")	com/moonsworth/lunar/client/Highlight3Iterator31.java
+com.moonsworth.lunar.client	MixinExtra	ApolloApprovedServer	toString() literally "ApolloApprovedServer(scopes=..., associatedCosmeticIds=...)"; approved-server model with render scopes	com/moonsworth/lunar/client/MixinExtra.java
+com.moonsworth.lunar.client	MixinExtraType	RenderScope	render scopes RENDER_COSMETICS/EMOTES/SPRAYS (+:all/:equipped) with SCOPES_BY_KEY lookup	com/moonsworth/lunar/client/MixinExtraType.java
+com.moonsworth.lunar.client	MixinRewindhandlers	ApolloTypeRegistry	builds the protobuf TypeRegistry of all Apollo message descriptors	com/moonsworth/lunar/client/MixinRewindhandlers.java
+com.moonsworth.lunar.client	Slayer	LunarLogger	Log4j "Lunar Client" logger ([LC]/[LC <tag>] debug/info/error); the client's central log facade	com/moonsworth/lunar/client/Slayer.java
+com.moonsworth.lunar.client	MixinHelper$Data23	ApolloButtonContent	button content record (Component/item/texture/Icon/alpha); paired with ApolloButtonShape	com/moonsworth/lunar/client/MixinHelper$Data23.java
+com.moonsworth.lunar.client	MixinHelper$Type3	ApolloButtonShape	button shapes ROUNDED_SQUARE/CIRCLE	com/moonsworth/lunar/client/MixinHelper$Type3.java
+com.moonsworth.lunar.client	Highlight3Iterator$Data2	EventHandlerEntry	generic event-subscription record (Class<T> + Consumer<T> + int); orphan, no live consumers	com/moonsworth/lunar/client/Highlight3Iterator$Data2.java
+com.moonsworth.lunar.client	Highlight3Iterator19$Data	NotificationLink	notification link entry (id + Component + URI); outer handler quarantined, orphan	com/moonsworth/lunar/client/Highlight3Iterator19$Data.java
+com.moonsworth.lunar.client	Highlight3Iterator28$Type	HorizontalAlignment	alignment LEFT/RIGHT; outer handler quarantined, orphan	com/moonsworth/lunar/client/Highlight3Iterator28$Type.java
+com.moonsworth.lunar.bridge.lighting	Lighting	ScoreboardObjectiveBridge	bridge$getScoreboard + display-name get/set = scoreboard objective; sibling ScoreboardBridge/ScoreBridge/ScorePlayerTeamBridge	com/moonsworth/lunar/bridge/lighting/Lighting.java
+com.moonsworth.lunar.bridge.slayer	Slayer	ConnectedProperties	matchTiles/parseMatchBlocks/getTiles/getMethod over connected-texture properties; sibling of ConnectedTexturesBridge/CustomColorsBridge	com/moonsworth/lunar/bridge/slayer/Slayer.java
+com.moonsworth.lunar.bridge.slayer	SlayerType	ConnectedTextureMethod	CTM methods NONE/CTM/HORIZONTAL/RANDOM/REPEAT/OVERLAY/...	com/moonsworth/lunar/bridge/slayer/SlayerType.java
+com.moonsworth.lunar.bridge.horsestats.mixin	Horsestats	ParticleData	particle data-provider interface (getName/getId); ParticleType.dataProvider registry	com/moonsworth/lunar/bridge/horsestats/mixin/Horsestats.java
+com.moonsworth.lunar.bridge.horsestats.mixin	HorsestatsHandler	SimpleParticleData	simple name+id impl of ParticleData	com/moonsworth/lunar/bridge/horsestats/mixin/HorsestatsHandler.java
+com.moonsworth.lunar.bridge.horsestats.mixin	HorsestatsType	LegacyParticleType	1.8 particle enum (explode/fireworksSpark/bubble/...) with getParticleFromName/getParticleFromId + asModernParticle()	com/moonsworth/lunar/bridge/horsestats/mixin/HorsestatsType.java
+com.moonsworth.lunar.bridge.horsestats	Horsestats20Extension2	BlockPosBridge	extends Vec3iBridge; bridge$add/offset/above/below/asLong; implemented by BlockPosMixin/MutableBlockPosMixin	com/moonsworth/lunar/bridge/horsestats/Horsestats20Extension2.java
+com.moonsworth.lunar.bridge.horsestats	Horsestats$Type	RaytraceType	custom raytrace hit categories MISS/BLOCK/LIGHT/BIOME/ENTITY/CHUNK/COSMETIC/SPRAY/CLIENT_ENTITY	com/moonsworth/lunar/bridge/horsestats/Horsestats$Type.java
+com.moonsworth.lunar.bridge.horsestats	HorsestatsType$Type	DirectionAxis	X/Y/Z axis enum (Predicate<Direction>) with HORIZONTAL/VERTICAL type	com/moonsworth/lunar/bridge/horsestats/HorsestatsType$Type.java
+com.moonsworth.lunar.bridge.horsestats	HorsestatsType$Type2	DirectionAxisDirection	POSITIVE/NEGATIVE with offset()/getOpposite()	com/moonsworth/lunar/bridge/horsestats/HorsestatsType$Type2.java
+com.moonsworth.lunar.bridge.horsestats	HorsestatsType$Type3	AxisPlane	HORIZONTAL/VERTICAL Iterable<Direction>	com/moonsworth/lunar/bridge/horsestats/HorsestatsType$Type3.java
+com.moonsworth.lunar.bridge.horsestats	HorsestatsType$Extension	AxisCoordinateChooser	@FunctionalInterface choose(x,y,z) selecting a coordinate by axis	com/moonsworth/lunar/bridge/horsestats/HorsestatsType$Extension.java
+com.moonsworth.lunar.bridge.itemcounter	ItemcounterType	DifficultyBridge	PEACEFUL/EASY/NORMAL/HARD with id+key = net.minecraft.world.EnumDifficulty; used as Glintcolorizer.bridge$getDifficulty()	com/moonsworth/lunar/bridge/itemcounter/ItemcounterType.java
+com.moonsworth.lunar.bridge.itemcounter	ItemcounterType2_2	BiomeCategory	biome categories TAIGA/JUNGLE/MESA/PLAINS/... used as Biome.category	com/moonsworth/lunar/bridge/itemcounter/ItemcounterType2_2.java
+com.moonsworth.lunar.bridge.itemcounter	ItemcounterType2_3	PathNodeType	path weights BLOCKED/OPEN/WALKABLE/LAVA/WATER/... with malus float	com/moonsworth/lunar/bridge/itemcounter/ItemcounterType2_3.java
+com.moonsworth.lunar.bridge.itemcounter	Itemcounter2_3	MapDataBridge	map decorations/colors/packet (getMapDecorations/getColors/getMapPacket)	com/moonsworth/lunar/bridge/itemcounter/Itemcounter2_3.java
+com.moonsworth.lunar.bridge.itemcounter	Itemcounter5_2	WorldInfoBridge	WorldInfoMixin implements: spawn XYZ, gameTime, isRaining	com/moonsworth/lunar/bridge/itemcounter/Itemcounter5_2.java
+com.moonsworth.lunar.bridge.itemcounter	Itemcounter3_3	WorldChunkManagerBridge	empty marker implemented by WorldChunkManagerMixin + WorldChunkManagerHellMixin	com/moonsworth/lunar/bridge/itemcounter/Itemcounter3_3.java
+com.moonsworth.lunar.bridge.itemcounter	Itemcounter4_3	WorldBorderBridge	min/max X/Z doubles implemented by LegacyServerBorder (extends LegacyWorldBorder)	com/moonsworth/lunar/bridge/itemcounter/Itemcounter4_3.java
+com.moonsworth.lunar.bridge.itemcounter	Itemcounter$Type	MapDecorationType	GREEN(1)/BLUE(3) legacy ids returned by MapDecorationBridge.bridge$getDecorationType	com/moonsworth/lunar/bridge/itemcounter/Itemcounter$Type.java
+com.moonsworth.lunar.bridge.itemcounter	Itemcounter$Extension	BoxEdgeConsumer	@FunctionalInterface consume(6 doubles) = box-edge coordinates (VoxelShape edge walk)	com/moonsworth/lunar/bridge/itemcounter/Itemcounter$Extension.java
+com.moonsworth.lunar.bridge.mixin	MixinHelper	HoverEventBridge	sole method bridge$getValue():IChatComponent = net.minecraft.event.HoverEvent.getValue(); pair of the correct ClickEventBridge	com/moonsworth/lunar/bridge/mixin/MixinHelper.java

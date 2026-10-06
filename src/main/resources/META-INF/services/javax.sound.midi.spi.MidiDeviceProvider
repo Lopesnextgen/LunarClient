@@ -1,0 +1,8 @@
+#
+# Copyright (c) 2003 by Naohide Sano, All rights reserved/
+# MidiDeviceProvider
+# 0/00 030817 nsano initial version
+
+vavi.sound.midi.VaviMidiDeviceProvider
+# configuration file for the tritonus library
+# end

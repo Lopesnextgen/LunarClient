@@ -1,0 +1,1096 @@
+{
+    "chatTriggers": [
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "Second Wind Activated! Your Spirit Mask saved your life!"
+            },
+            "ability": {
+                "name": "Second Wind",
+                "cooldown": 30,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "Your Phoenix Pet saved you from certain death!"
+            },
+            "ability": {
+                "name": "Rekindle",
+                "cooldown": 60,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "Creeper Veil De-activated!"
+            },
+            "ability": {
+                "name": "Creeper Veil",
+                "cooldown": 5,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "Creeper Veil De-activated! (Expired)"
+            },
+            "ability": {
+                "name": "Creeper Veil",
+                "cooldown": 10,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "Not enough mana! Creeper Veil De-activated!"
+            },
+            "ability": {
+                "name": "Creeper Veil",
+                "cooldown": 10,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS",
+                "starts": "Used Jingle Bells!"
+            },
+            "matchMode": "STARTS",
+            "matchStartString": "Used Jingle Bells!",
+            "ability": {
+                "name": "Jingle Bells",
+                "cooldown": 1
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS",
+                "starts": "Used Extreme Focus!"
+            },
+            "ability": {
+                "name": "Extreme Focus",
+                "cooldown": 5,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS_ENDS",
+                "starts": "You buffed yourself for ",
+                "ends": " Strength"
+            },
+            "ability": {
+                "name": "Bad Health",
+                "cooldown": 5
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS_ENDS",
+                "starts": "You buffed ",
+                "ends": " players!"
+            },
+            "ability": {
+                "name": "Life Blood",
+                "cooldown": 1
+            }
+        },
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "You aligned yourself!"
+            },
+            "ability": {
+                "name": "Cells Alignment",
+                "cooldown": 4
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS_CONTAINS",
+                "starts": "You aligned ",
+                "contains": "other player"
+            },
+            "ability": {
+                "name": "Cells Alignment",
+                "cooldown": 4
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS",
+                "starts": "You have teleported to "
+            },
+            "ability": {
+                "name": "Spirit Leap",
+                "cooldown": 5,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "Your Guardian Chestplate nullified the damage you just took!"
+            },
+            "ability": {
+                "name": "Block Damage",
+                "cooldown": 60,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "You laid an egg!"
+            },
+            "ability": {
+                "name": "Chicken Head",
+                "cooldown": 5
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS",
+                "starts": "SPRAYONATOR! You sprayed "
+            },
+            "ability": {
+                "name": "Spray",
+                "cooldown": 3
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS",
+                "starts": "There's a secret "
+            },
+            "ability": {
+                "name": "Echolocation",
+                "cooldown": 5
+            }
+        },
+        {
+            "match": {
+                "mode": "EQUALS",
+                "equals": "You launched a Bat Firework! It's dropping candies for everyone!"
+            },
+            "ability": {
+                "name": "Bat Firework",
+                "cooldown": 30
+            }
+        },
+        {
+            "match": {
+                "mode": "STARTS",
+                "starts": "The target is around "
+            },
+            "ability": {
+                "name": "Track",
+                "cooldown": 10
+            }
+        }
+    ],
+    "soundTriggers": [
+        {
+            "sound": {
+                "legacy": "mob.zombie.remedy",
+                "modern": "entity.zombie_villager.cure"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.6984127
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Wither Shield",
+                "cooldown": 5,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.bat.idle",
+                "modern": "entity.bat.ambient"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.4920635
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Seek the King",
+                "cooldown": 5
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.anvil_land",
+                "modern": "block.anvil.land"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.4920635
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Giant's Slam",
+                "cooldown": 30
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.enderdragon.growl",
+                "v1_12": "entity.enderdragon.growl",
+                "modern": "entity.ender_dragon.growl"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Ice Spray",
+                "cooldown": 5
+            }
+        },
+        {
+            "sound": {
+                "legacy": "liquid.lavapop",
+                "modern": "block.lava.pop"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 2
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.4
+            },
+            "ability": {
+                "name": "Speed Boost",
+                "cooldown": 5
+            }
+        },
+        {
+            "sound": {
+                "legacy": "entity.enderman.teleport",
+                "modern": "mob.endermen.portal"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "heldItem": "SILENT_DEATH",
+            "ability": {
+                "name": "Shadowstep",
+                "cooldown": 60
+            }
+        },
+        {
+            "sound": {
+                "legacy": "entity.enderman.teleport",
+                "modern": "mob.endermen.portal"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "heldItem": "SHADOW_FURY",
+            "ability": {
+                "name": "Shadow Fury",
+                "cooldown": 15
+            }
+        },
+        {
+            "sound": {
+                "legacy": "entity.enderman.teleport",
+                "modern": "mob.endermen.portal"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "heldItem": "STARRED_SHADOW_FURY",
+            "ability": {
+                "name": "Shadow Fury",
+                "cooldown": 15
+            }
+        },
+        {
+            "sound": {
+                "legacy": "tile.piston.out",
+                "modern": "block.piston.extend"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1.7460318
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.7
+            },
+            "ability": {
+                "name": "Big Pull",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.ghast.affectionate_scream",
+                "modern": "entity.ghast.ambient"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.4920635
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.15
+            },
+            "ability": {
+                "name": "Soulcry",
+                "cooldown": 4,
+                "ignoreMageReduction": true
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.guardian.elder.idle",
+                "v1_12": "mob.guardian.elder.idle",
+                "modern": "entity.elder_guardian.ambient"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 2
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.2
+            },
+            "ability": {
+                "name": "Fire Freeze",
+                "cooldown": 10
+            }
+        },
+        {
+            "sound": {
+                "legacy": "liquid.lavapop",
+                "modern": "block.lava.pop"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.7619048
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.15
+            },
+            "heldItem": "WAND_OF_HEALING",
+            "ability": {
+                "name": "Small Heal",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "liquid.lavapop",
+                "modern": "block.lava.pop"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.7619048
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.15
+            },
+            "heldItem": "WAND_OF_MENDING",
+            "ability": {
+                "name": "Medium Heal",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "liquid.lavapop",
+                "modern": "block.lava.pop"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.7619048
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.15
+            },
+            "heldItem": "WAND_OF_RESTORATION",
+            "ability": {
+                "name": "Big Heal",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.wood_click",
+                "v1_12": "block.wood_pressureplate.click_on",
+                "modern": "block.wooden_pressure_plate.click_on"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.6507937
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.24
+            },
+            "ability": {
+                "name": "Huge Heal",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.horse.skeleton.death",
+                "modern": "entity.skeleton_horse.death"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Raise Souls",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.click",
+                "modern": "block.lever.click"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 2
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.55
+            },
+            "heldItem": "RAGNAROCK_AXE",
+            "ability": {
+                "name": "Ragnarock",
+                "cooldown": 20
+            }
+        },
+        {
+            "sound": {
+                "legacy": "liquid.lavapop",
+                "modern": "block.lava.pop"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Firestorm",
+                "cooldown": 20
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.explode",
+                "modern": "entity.generic.explode"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.4920635
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.5
+            },
+            "ability": {
+                "name": "Explode",
+                "cooldown": 30
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.irongolem.hit",
+                "v1_12": "entity.irongolem.hurt",
+                "modern": "entity.iron_golem.hurt"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.5873016
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Terrain Toss",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.guardian.curse",
+                "modern": "entity.elder_guardian.curse"
+            },
+            "pitch": {
+                "mode": "BETWEEN",
+                "pitchLow": 1.8,
+                "pitchHigh": 1.9
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.2
+            },
+            "ability": {
+                "name": "Acupuncture",
+                "cooldown": 5
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.successful_hit",
+                "modern": "entity.arrow.hit_player"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.7936508
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Acupuncture",
+                "cooldown": 3
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.zombie.remedy",
+                "modern": "entity.zombie_villager.cure"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.5
+            },
+            "ability": {
+                "name": "Enrage",
+                "cooldown": 25
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.ghast.fireball",
+                "modern": "entity.ghast.shoot"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.3
+            },
+            "ability": {
+                "name": "Fire Blast",
+                "cooldown": 30
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.eat",
+                "modern": "entity.generic.eat"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.6984127
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "heldItem": "FLOWER_OF_TRUTH",
+            "ability": {
+                "name": "Heat-Seeking Rose",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.eat",
+                "modern": "entity.generic.eat"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.6984127
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Petal Barrage",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "game.player.swim.splash",
+                "modern": "entity.player.splash"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Ink Bomb",
+                "cooldown": 30
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.wolf.howl",
+                "modern": "entity.wolf.howl"
+            },
+            "pitch": {
+                "mode": "BETWEEN",
+                "pitchLow": 1.5,
+                "pitchHigh": 2
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.5
+            },
+            "ability": {
+                "name": "Howl",
+                "cooldown": 20
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.spider.say",
+                "modern": "entity.spider.ambient"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.8888889
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Leap",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.guardian.curse",
+                "modern": "entity.elder_guardian.curse"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.74603176
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.5
+            },
+            "ability": {
+                "name": "Life Tap",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.chicken.plop",
+                "modern": "entity.chicken.egg"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.5
+            },
+            "ability": {
+                "name": "Spook",
+                "cooldown": 15
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.explode",
+                "modern": "entity.generic.explode"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 4.047619
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.2
+            },
+            "ability": {
+                "name": "Iron Punch",
+                "cooldown": 3
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.villager.idle",
+                "modern": "entity.villager.ambient"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "heldItem": "ASPECT_OF_THE_JERRY",
+            "ability": {
+                "name": "Parley",
+                "cooldown": 5
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.villager.idle",
+                "modern": "entity.villager.ambient"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "heldItem": "ASPECT_OF_THE_JERRY_SIGNATURE",
+            "ability": {
+                "name": "Parley",
+                "cooldown": 5
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.guardian.elder.death",
+                "v1_12": "mob.guardian.elder.death",
+                "modern": "entity.elder_guardian.death"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 2
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "location": "GARDEN",
+            "ability": {
+                "name": "Pest Tracker",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "game.neutral.swim.splash",
+                "modern": "entity.generic.splash"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 4
+            },
+            "ability": {
+                "name": "Splash",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.anvil_land",
+                "modern": "block.anvil.land"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 3
+            },
+            "ability": {
+                "name": "Golem Hat",
+                "cooldown": 5
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.anvil_land",
+                "modern": "block.anvil.land"
+            },
+            "pitch": {
+                "mode": "BETWEEN",
+                "pitchLow": 1.9,
+                "pitchHigh": 2
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.5
+            },
+            "location": "RIFT",
+            "ability": {
+                "name": "Splash Yo Face",
+                "cooldown": 4
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.silverfish.hit",
+                "modern": "entity.silverfish.hurt"
+            },
+            "pitch": {
+                "mode": "BETWEEN",
+                "pitchLow": 0.6,
+                "pitchHigh": 0.65
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "location": "RIFT",
+            "ability": {
+                "name": "Detect!",
+                "cooldown": 4
+            }
+        },
+        {
+            "sound": {
+                "legacy": "liquid.lavapop",
+                "modern": "block.lava.pop"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.4920635
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "location": "RIFT",
+            "ability": {
+                "name": "Lazer",
+                "cooldown": 1
+            }
+        },
+        {
+            "sound": {
+                "legacy": "random.wood_click",
+                "v1_12": "block.wood_pressureplate.click_on",
+                "modern": "block.wooden_pressure_plate.click_on"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1.2857143
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "location": "RIFT",
+            "ability": {
+                "name": "Meownar",
+                "cooldown": 9
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.wither.shoot",
+                "modern": "entity.wither.shoot"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1.4920635
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.5
+            },
+            "location": "DUNGEON",
+            "ability": {
+                "name": "Spirit Bomb",
+                "cooldown": 10
+            }
+        },
+        {
+            "sound": {
+                "legacy": "mob.wolf.panting",
+                "v1_12": "entity.wolf.pant",
+                "modern": "entity.wolf.ambient"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 1.3968254
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 0.4
+            },
+            "ability": {
+                "name": "Soulward",
+                "cooldown": 20
+            }
+        },
+        {
+            "sound": {
+                "legacy": "fire.ignite",
+                "modern": "item.flintandsteel.use"
+            },
+            "pitch": {
+                "mode": "EQUALS",
+                "pitch": 0.74603176
+            },
+            "volume": {
+                "mode": "EQUALS",
+                "volume": 1
+            },
+            "ability": {
+                "name": "Gorilla Tactics",
+                "cooldown": 20
+            }
+        }
+    ],
+    "exceptions": {
+        "Wither Impact": {
+            "type": "RIGHT_CLICK",
+            "ability": {
+                "name": "Wither Shield",
+                "cooldown": 5,
+                "ignoreMageReduction": true
+            }
+        }
+    },
+    "handledItems": {
+        "byChat": [
+            "BONZO_MASK", "STARRED_BONZO_MASK",
+            "SPIRIT_MASK", "STARRED_SPIRIT_MASK",
+            "WITHER_CLOAK",
+            "JINGLE_BELLS",
+            "END_STONE_SWORD",
+            "SWORD_OF_BAD_HEALTH",
+            "WAND_OF_STRENGTH",
+            "SPIRIT_LEAP", "ASPIRING_LEAP", "INFINITE_SPIRIT_LEAP",
+            "GUARDIAN_CHESTPLATE",
+            "SPRAYONATOR",
+            "CHICKEN_HEAD",
+            "SECRET_TRACKER",
+            "BAT_FIREWORK",
+            "TALBOTS_THEODOLITE"
+        ],
+        "bySound": [
+            "HYPERION", "ASTRAEA", "SCYLLA", "VALKYRIE", "NECRON_BLADE",
+            "ROYAL_PIGEON",
+            "GIANTS_SWORD",
+            "ICE_SPRAY_WAND",
+            "SILENT_DEATH",
+            "ATOMSPLIT_KATANA", "VORPAL_KATANA", "VOIDEDGE_KATANA",
+            "MOODY_GRAPPLESHOT",
+            "REAPER_SCYTHE", "SUMMONING_RING", "NECROMANCER_SWORD",
+            "WAND_OF_HEALING", "WAND_OF_MENDING", "WAND_OF_RESTORATION", "WAND_OF_ATONEMENT",
+            "FIRE_FREEZE_STAFF",
+            "FIRE_FURY_STAFF",
+            "STAFF_OF_THE_VOLCANO",
+            "ROGUE_SWORD",
+            "SHADOW_FURY", "STARRED_SHADOW_FURY",
+            "YETI_SWORD", "STARRED_YETI_SWORD",
+            "VOODOO_DOLL", "VOODOO_DOLL_WILTED",
+            "REAPER_CHESTPLATE", "REAPER_LEGGINGS", "REAPER_BOOTS",
+            "EMBER_ROD",
+            "RAGNAROCK_AXE",
+            "FLOWER_OF_TRUTH",
+            "BOUQUET_OF_LIES",
+            "INK_WAND",
+            "WEIRD_TUBA", "WEIRDER_TUBA",
+            "LEAPING_SWORD", "SILK_EDGE_SWORD",
+            "GLOOMLOCK_GRIMOIRE",
+            "GREAT_SPOOK_STAFF",
+            "GOLEM_SWORD",
+            "ASPECT_OF_THE_JERRY", "ASPECT_OF_THE_JERRY_SIGNATURE",
+            "SKYMART_VACUUM", "SKYMART_TURBO_VACUUM", "SKYMART_HYPER_VACUUM", "INFINI_VACUUM", "INFINI_VACUUM_HOOVERIUS",
+            "GOLEM_HAT",
+            "FISH_HAT", "MAGMA_FISH_HAT",
+            "HOLY_ICE",
+            "DETECTIVE_SCANNER",
+            "EMMETT_POINTER",
+            "DEAD_CAT_DETECTOR",
+            "SPIRIT_SWORD",
+            "SOUL_ESOWARD",
+            "TACTICAL_INSERTION"
+        ]
+    },
+    "miningAbilities": [
+        "Mining Speed Boost",
+        "Pickobulus",
+        "Vein Seeker",
+        "Maniac Miner",
+        "Gemstone Infusion",
+        "Hazardous Miner"
+    ]
+}

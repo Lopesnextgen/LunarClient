@@ -1,0 +1,8 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client.mod.misc.chat	ChatCommandAliasesChild	ChatCommandAliases	command-alias child feature of Chat, id CHAT_COMMAND_ALIASES_CHILD	src/main/java/com/moonsworth/lunar/client/mod/misc/chat/ChatCommandAliasesChild.java
+com.moonsworth.lunar.client.mod.misc.debug	DirectMemoryDebugChildMod	DirectMemoryDebug	direct-memory debug HUD child, id DIRECT_MEMORY_DEBUG_CHILD_MOD	src/main/java/com/moonsworth/lunar/client/mod/misc/debug/DirectMemoryDebugChildMod.java
+com.moonsworth.lunar.client.mod.misc.debug	FragmentDebugChildMod	FragmentDebug	shader-fragment debug child (no feature id)	src/main/java/com/moonsworth/lunar/client/mod/misc/debug/FragmentDebugChildMod.java
+com.moonsworth.lunar.client.mod.misc.debug	MemoryDebugChildMod	MemoryDebug	memory debug child, id MEMORY_DEBUG_CHILD_MOD	src/main/java/com/moonsworth/lunar/client/mod/misc/debug/MemoryDebugChildMod.java
+com.moonsworth.lunar.client.mod.misc.debug	OffHeapMemoryDebugChildMod	OffHeapMemoryDebug	off-heap memory debug child, id OFF_HEAP_MEMORY_DEBUG_CHILD_MOD	src/main/java/com/moonsworth/lunar/client/mod/misc/debug/OffHeapMemoryDebugChildMod.java
+com.moonsworth.lunar.client.mod.misc.debug	TurboGroupRebuildsChildHudMod	TurboGroupRebuilds	turbo group-rebuild debug HUD, id TURBO_GROUP_REBUILDS_CHILD_HUD_MOD	src/main/java/com/moonsworth/lunar/client/mod/misc/debug/TurboGroupRebuildsChildHudMod.java
+com.moonsworth.lunar.client.mod.render	WaypointManager	WaypointStore	persistent waypoint store (JsonFileConfig + GuiIterator extension), not a manager	src/main/java/com/moonsworth/lunar/client/mod/render/WaypointManager.java

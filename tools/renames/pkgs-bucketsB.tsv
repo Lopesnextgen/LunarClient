@@ -1,0 +1,28 @@
+# Bucket batch B: subsystem packages into top-level buckets
+# evidence column: why the package belongs there (verified per class)
+com.moonsworth.lunar.client.alert	com.moonsworth.lunar.client.config.override	SettingOverride/SettingIntercept/OverrideSource: settings override+intercept, not alerts
+com.moonsworth.lunar.client.option	com.moonsworth.lunar.client.config.option	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...)
+com.moonsworth.lunar.client.emote	com.moonsworth.lunar.client.cosmetics.emote	cosmetic emote/outfit engine
+com.moonsworth.lunar.client.inactive	com.moonsworth.lunar.client.cosmetics.inactive	GeckoLib cosmetic engine (Inactive3 models, AnimationState)
+com.moonsworth.lunar.client.holograms	com.moonsworth.lunar.client.cosmetics.holograms	GeckoLib/Bedrock hologram + morph models
+com.moonsworth.lunar.client.molang	com.moonsworth.lunar.client.cosmetics.molang	Molang expression JIT used by cosmetic animations
+com.moonsworth.lunar.client.texture	com.moonsworth.lunar.client.render.texture	texture processor/cache
+com.moonsworth.lunar.client.shader	com.moonsworth.lunar.client.render.shader	shader pack/pass/uniform helpers
+com.moonsworth.lunar.client.font	com.moonsworth.lunar.client.render.font	text mesh/render caches
+com.moonsworth.lunar.client.glintcolorizer	com.moonsworth.lunar.client.render.particle	vendored McLib + Blockbuster Bedrock particle engine
+com.moonsworth.lunar.client.memory	com.moonsworth.lunar.client.util.memory	memory monitor
+com.moonsworth.lunar.client.performance	com.moonsworth.lunar.client.util.performance	GC/perf snapshot recorder
+com.moonsworth.lunar.client.server	com.moonsworth.lunar.client.network.server	server addressing/blocklist/plugin channels
+com.moonsworth.lunar.client.waypoints	com.moonsworth.lunar.client.network.ipc	game-IPC websocket client (RpcChannelImpl/WebSocketClientIterator)
+com.moonsworth.lunar.client.mumble	com.moonsworth.lunar.client.network.mumble	Mumble positional-voice link
+com.moonsworth.lunar.client.hostedworld	com.moonsworth.lunar.client.network.hostedworld	hosted-world relay/host/player models
+com.moonsworth.lunar.client.music	com.moonsworth.lunar.client.audio.music	Styngr song model
+com.moonsworth.lunar.client.blog	com.moonsworth.lunar.client.gui.blog	blog post models/download task
+com.moonsworth.lunar.client.external	com.moonsworth.lunar.client.gui.external	external-link registry + compat screens
+com.moonsworth.lunar.client.prompt	com.moonsworth.lunar.client.gui.prompt	security/URL prompts
+com.moonsworth.lunar.client.notification	com.moonsworth.lunar.client.gui.notification	player/hosted-world notifications
+com.moonsworth.lunar.client.loading	com.moonsworth.lunar.client.framework.loading	loading stages/resources
+com.moonsworth.lunar.client.conversation	com.moonsworth.lunar.client.chat	chat messages/embeds/system events
+com.moonsworth.lunar.client.skin	com.moonsworth.lunar.client.account.skin	saved skins + skin types
+com.moonsworth.lunar.client.transform	com.moonsworth.lunar.client.framework.transform	Lunar bytecode transforms (LwjglRelocation, PreMixin...)
+com.moonsworth.lunar.client.framework.feature.rewind	com.moonsworth.lunar.client.replay	the Replay (Rewind) engine: project/timeline/export/GUI

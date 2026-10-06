@@ -1,0 +1,95 @@
+{
+    "format_version": "1.10.0",
+    "particle_effect": {
+        "description": {
+            "identifier": "lunar:around",
+            "basic_render_parameters": {
+                "material": "particles_blend",
+                "texture": "lunar:particles/textures/around.webp"
+            }
+        },
+        "curves": {
+            "variable.bang": {
+                "type": "catmull_rom",
+                "nodes": [
+                    0.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "input": "variable.particle_age",
+                "horizontal_range": "variable.particle_lifetime"
+            }
+        },
+        "components": {
+            "minecraft:emitter_initialization": {
+                "creation_expression": "variable.flash \u003d 0.1"
+            },
+            "minecraft:emitter_rate_steady": {
+                "spawn_rate": "(variable.emitter_age \u003c variable.flash) ? 15.0 : (variable.emitter_age \u003c 0.3 ? 2000.0 : 0.0)",
+                "max_particles": 100.0
+            },
+            "minecraft:emitter_lifetime_looping": {
+                "active_time": 2.0
+            },
+            "minecraft:emitter_shape_point": {
+                "offset": [
+                    "math.cos(variable.emitter_random_2 * 360.0)",
+                    "variable.emitter_random_3 + 0.5",
+                    "math.sin(variable.emitter_random_2 * 360.0)"
+                ]
+            },
+            "minecraft:particle_lifetime_expression": {
+                "max_lifetime": "variable.emitter_age \u003c variable.flash ? 0.1 : 2.0 - variable.emitter_age"
+            },
+            "minecraft:particle_initial_spin": {
+                "rotation": "variable.particle_random_4 * 360.0",
+                "rotation_rate": 50.0
+            },
+            "minecraft:particle_initial_speed": "variable.emitter_age \u003c variable.flash ? 0.0 : 2.0",
+            "minecraft:particle_motion_dynamic": {
+                "linear_acceleration": [
+                    0.0,
+                    "variable.emitter_age \u003c 0.25 ? 0.0 : -5.0",
+                    0.0
+                ],
+                "linear_drag_coefficient": 3.0,
+                "rotation_acceleration": 20.0
+            },
+            "minecraft:particle_appearance_billboard": {
+                "size": [
+                    "variable.emitter_age \u003c variable.flash ? variable.bang * 1.5 : 0.1 * (1.0 - variable.particle_age / variable.particle_lifetime) * (variable.particle_random_1 + 0.5)",
+                    "variable.emitter_age \u003c variable.flash ? variable.bang * 1.5 : 0.1 * (1.0 - variable.particle_age / variable.particle_lifetime) * (variable.particle_random_1 + 0.5)"
+                ],
+                "facing_camera_mode": "rotate_xyz",
+                "uv": {
+                    "texture_width": 128,
+                    "texture_height": 128,
+                    "uv": [
+                        "variable.emitter_age \u003c variable.flash ? 0.0 : 96.0 + math.floor(variable.particle_random_1 * 4.0) * 8.0",
+                        "variable.emitter_age \u003c variable.flash ? 0.0 : math.floor(variable.particle_random_2 * 4.0) * 8.0"
+                    ],
+                    "uv_size": [
+                        "variable.emitter_age \u003c variable.flash ? 96.0 : 8.0",
+                        "variable.emitter_age \u003c variable.flash ? 96.0 : 8.0"
+                    ]
+                }
+            },
+            "minecraft:particle_appearance_tinting": {
+                "color": {
+                    "gradient": {
+                        "0.0": "#FFFFFF",
+                        "0.2": "#00FFA6",
+                        "0.4": "#5153D4",
+                        "0.6": "#BE2E94",
+                        "0.8": "#63DAFF",
+                        "1.0": "#4A07B0"
+                    },
+                    "interpolant": "variable.emitter_age \u003c variable.flash ? 0.0 : (math.round(variable.particle_random_3 * 5.0) + 1.0) / 5.0"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,246 @@
+[
+  {
+    "name": "Armor Sets$",
+    "slots": ["36-53"]
+  },
+  {
+    "name": "Equipment Sets$",
+    "slots": ["36-53"]
+  },
+  {
+    "name": "Loadouts$",
+    "slots": ["0-13", "17-22", "26-31", "35-40", "44-53"]
+  },
+  {
+    "name": "Loadout",
+    "slots": ["0-9", "45-53"]
+  },
+  {
+    "name": "*Abiphone*",
+    "slots": ["45-53"]
+  },
+  {
+    "name": "Change all to same color!",
+    "slots": ["45-53"]
+  },
+  {
+    "name": "Sack$",
+    "slots": ["45-53"]
+  },
+  {
+    "name": "Relay$",
+    "slots": ["45-53"]
+  },
+  {
+    "name": "^Storage",
+    "slots": ["0-8", "18-26", "45-49", "51-53"]
+  },
+  {
+    "name": "Salvage Item",
+    "slots": ["0-9", "17-18", "26-39", "41-53"]
+  },
+  {
+    "name": "Auctions Browser",
+    "slots": ["0-10", "17-19", "26-28", "35-37", "44-45", "47-51"]
+  },
+  {
+    "name": "^Auctions:",
+    "slots": ["0-10", "17-19", "26-28", "35-37", "44-45", "47-51"]
+  },
+  {
+    "name": "The Hex",
+    "slots": ["0-14", "18-21", "23", "27-32", "36-53"]
+  },
+  {
+    "name": "The Hex ➜ Enchant Item",
+    "slots": ["0-11", "18", "20", "26-29", "36-47", "49", "52-53"]
+  },
+  {
+    "name": "Enchant Item",
+    "slots": ["0-11", "18", "20", "26-27", "29", "36-47", "49", "52-53"]
+  },
+  {
+    "name": "^Enchant Item ➜",
+    "slots": ["0-11", "17-18", "20", "26-29", "35-49", "51-53"]
+  },
+  {
+    "name": "The Hex ➜ Books",
+    "slots": ["0-11", "18", "20", "26-27", "29", "36-47", "49", "52-53"]
+  },
+  {
+    "name": "The Hex ➜ Modifiers",
+    "slots": ["0-11", "18", "20", "26-27", "29", "36-47", "49", "52-53"]
+  },
+  {
+    "name": "The Hex ➜ Reforges",
+    "slots": ["0-11", "18", "20", "26-27", "29", "36-47", "49", "52-53"]
+  },
+  {
+    "name": "The Hex ➜ Gemstones",
+    "slots": ["0-11", "17-18", "20", "26-27", "29", "35-47", "49", "51-53"]
+  },
+  {
+    "name": "The Hex ➜ Item Upgrades",
+    "slots": ["0-11", "18", "20", "26-27", "29", "36-47", "49", "52-53"]
+  },
+  {
+    "name": "Drill Anvil",
+    "slots": ["0-8", "10-12", "14-17", "19-21", "23-26", "28", "30-32", "34-53"]
+  },
+  {
+    "name": "Anvil",
+    "slots": ["0-12", "14-21", "23-28", "30-32", "34-53"]
+  },
+  {
+    "name": "Reforge Anvil",
+    "slots": ["0-12", "14-21", "23-28", "30-32", "34-53"]
+  },
+  {
+    "name": "Attribute Fusion",
+    "slots": ["0-12", "14-21", "23-28", "30-32", "34-53"]
+  },
+  {
+    "name": "Stats Tuning",
+    "slots": ["0-14", "17-18", "23", "26-27", "32", "35-41", "44-53"]
+  },
+  {
+    "name": "Salvage Items",
+    "slots": ["0-9", "17-18", "26-39", "41-49", "53"]
+  },
+  {
+    "name": "Pet Sitter",
+    "slots": ["0-12", "14-21", "23-44"]
+  },
+  {
+    "name": "Offer Pets",
+    "slots": ["0-12", "14-21", "23-44"]
+  },
+  {
+    "name": "Reforge Item",
+    "slots": ["0-12", "14-21", "23-44"]
+  },
+  {
+    "name": "Rune Removal",
+    "slots": ["0-12", "14-21", "23-44"]
+  },
+  {
+    "name": "Upgrade Item",
+    "slots": ["0-12", "14-21", "23-30", "32-44"]
+  },
+  {
+    "name": "Convert to Dungeon Item",
+    "slots": ["0-12", "14-21", "23-30", "32-44"]
+  },
+  {
+    "name": "Pets$",
+    "slots": ["0-9", "17-18", "26-27", "35-36", "44"]
+  },
+  {
+    "name": "Runic Pedestal",
+    "slots": ["0-12", "14-18", "20-24", "26-30", "32-53"]
+  },
+  {
+    "name": "Gemstone Grinder",
+    "slots": ["0-12", "14-18", "26-27", "35-36", "44-53"]
+  },
+  {
+    "name": "Tablist Widgets",
+    "slots": ["0-51", "53"]
+  },
+  {
+    "name": "*Widgets in*",
+    "slots": ["0-3", "5-9", "17-18", "26-27", "35-36", "44-51", "53"]
+  },
+  {
+    "name": "*Widgets on*",
+    "slots": ["0-3", "5-9", "17-18", "26-27", "35-36", "44-51", "53"]
+  },
+  {
+    "name": "Exp Sharing",
+    "slots": ["0-29", "33-53"]
+  },
+  {
+    "name": "Chest",
+    "slots": []
+  },
+  {
+    "name": "Large Chest",
+    "slots": []
+  },
+  {
+    "name": "Personal Vault",
+    "slots": []
+  },
+  {
+    "name": "^Ender Chest",
+    "slots": ["0-8"]
+  },
+  {
+    "name": "*Backpack*",
+    "slots": ["0-8"]
+  },
+  {
+    "name": "Item Frame",
+    "slots": ["0-12", "14-35"]
+  },
+  {
+    "name": "Chocolate Factory",
+    "slots": ["0-12", "14-53"]
+  },
+  {
+    "name": "Beacon",
+    "slots": ["0-21", "23-44"]
+  },
+  {
+    "name": "*Minion*",
+    "slots": ["0-9", "11-18", "20-27", "29-36", "38-45", "47-53"]
+  },
+  {
+    "name": "Pest Trap",
+    "slots": ["0-10", "12-35"]
+  },
+  {
+    "name": "Mouse Trap",
+    "slots": ["0-10", "12-35"]
+  },
+  {
+    "name": "Vermin Trap",
+    "slots": ["0-9", "11-35"]
+  },
+  {
+    "name": "Hunting Box$",
+    "slots": ["0-9", "17-18", "26-27", "35-36", "44-53"]
+  },
+  {
+    "name": "Attribute Transfer",
+    "slots": ["0-12", "14-21", "23-30", "32-53"]
+  },
+  {
+    "name": "AⒷiphone",
+    "slots": ["45-53"]
+  },
+  {
+    "name": "Transfer to Profile",
+    "slots": ["0-12", "14-21", "23-30", "32-53"]
+  },
+  {
+    "name": "Heart of the Mountain",
+    "slots": ["0-7", "9-52"]
+  },
+  {
+    "name": "Heart of the Forest",
+    "slots": ["0-7", "9-52"]
+  },
+  {
+    "name": "Heart of the Mountain Slot",
+    "slots": ["0-10", "16-35"]
+  },
+  {
+    "name": "Heart of the Forest Slot",
+    "slots": ["0-10", "16-35"]
+  },
+  {
+    "name": "Composter",
+    "slots": ["0-38", "40", "42-53"]
+  }
+]

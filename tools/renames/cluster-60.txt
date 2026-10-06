@@ -1,0 +1,2 @@
+com/moonsworth/lunar/client/framework/MixinHelper3.java	MixinHelper3
+com/moonsworth/lunar/client/framework/MixinNameplate2.java	MixinNameplate2

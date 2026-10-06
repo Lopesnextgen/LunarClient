@@ -1,0 +1,65 @@
+package com.moonsworth.lunar.bridge;
+
+import com.moonsworth.lunar.bridge.horsestats.ResourceLocationBridge;
+import com.moonsworth.lunar.bridge.itemcounter.Itemcounter_5;
+
+public class ItemDataComponentTypes {
+   public static MixinHelper_9<CompoundTagDataComponent> field1;
+   public static MixinHelper_9<Integer> field2;
+   public static MixinHelper_9<Integer> field3;
+   public static MixinHelper_9<Integer> field4;
+   public static MixinHelper_9<?> field5;
+   public static MixinHelper_9<Bridge3_25> field6;
+   public static MixinHelper_9<Bridge3_25> field7;
+   public static MixinHelper_9<ItemLoreComponent> field8;
+   public static MixinHelper_9<?> field9;
+   public static MixinHelper_9<?> field10;
+   public static MixinHelper_9<?> field11;
+   public static MixinHelper_9<?> field12;
+   public static MixinHelper_9<?> field13;
+   public static MixinHelper_9<?> field14;
+   public static MixinHelper_9<?> field15;
+   public static MixinHelper_9<?> field16;
+   public static MixinHelper_9<Integer> field17;
+   public static MixinHelper_9<?> field18;
+   public static MixinHelper_9<Boolean> field19;
+   public static MixinHelper_9<?> field20;
+   public static MixinHelper_9<Bridge_9> field21;
+   @com.moonsworth.lunar.ichor.Annotation2(min = 26)
+   public static MixinHelper_9<MixinHelper2_13> field22;
+   public static MixinHelper_9<?> field23;
+   public static MixinHelper_9<?> field24;
+   public static MixinHelper_9<?> field25;
+   public static MixinHelper_9<ArmorDyeColorComponent> field26;
+   public static MixinHelper_9<?> field27;
+   public static MixinHelper_9<?> field28;
+   public static MixinHelper_9<?> field29;
+   public static MixinHelper_9<?> field30;
+   public static MixinHelper_9<?> field31;
+   public static MixinHelper_9<ContainerItemsComponent> field32;
+   public static MixinHelper_9<?> field33;
+   public static MixinHelper_9<?> field34;
+   public static MixinHelper_9<?> field35;
+   public static MixinHelper_9<?> field36;
+   public static MixinHelper_9<Itemcounter_5> field37;
+   public static MixinHelper_9<?> field38;
+   public static MixinHelper_9<CompoundTagDataComponent> field39;
+   public static MixinHelper_9<CompoundTagDataComponent> field40;
+   public static MixinHelper_9<CompoundTagDataComponent> field41;
+   public static MixinHelper_9<?> field42;
+   public static MixinHelper_9<Object> field43;
+   public static MixinHelper_9<Object> field44;
+   public static MixinHelper_9<?> field45;
+   public static MixinHelper_9<?> field46;
+   public static MixinHelper_9<?> field47;
+   public static MixinHelper_9<PropertyMapDataComponent> field48;
+   public static MixinHelper_9<ResourceLocationBridge> field49;
+   public static MixinHelper_9<?> field50;
+   public static MixinHelper_9<?> field51;
+   public static MixinHelper_9<?> field52;
+   public static MixinHelper_9<ContainerItemsComponent> field53;
+   public static MixinHelper_9<?> field54;
+   public static MixinHelper_9<?> field55;
+   public static MixinHelper_9<?> field56;
+   public static MixinHelper_9<?> field57;
+}

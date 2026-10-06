@@ -1,0 +1,2 @@
+old.package	Old	new.package	New	evidence
+com.moonsworth.lunar	IEntitySelectorImpl	com.moonsworth.lunar.client.util	PredicateEntitySelector	wraps a java.util.function.Predicate into a vanilla net.minecraft.command.IEntitySelector (used by the chunk/world mixins)

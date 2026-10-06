@@ -1,0 +1,16 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client.click.fishing	Fishing	LoadingStage	loading-stage interface (getCategory + loadable resources); FogHandler registers itself when instanceof, loading screen iterates stages	com/moonsworth/lunar/client/click/fishing/Fishing.java
+com.moonsworth.lunar.client.click.mixin	Bridge7Iterator	CompetitiveDisconnectScreen	confirm dialog super("gui.apollo.competitiveDisconnect"); extends the quarantined generic confirm screen	com/moonsworth/lunar/client/click/mixin/Bridge7Iterator.java
+com.moonsworth.lunar.client.click.rewindhandlers	Rewindhandlers	CachedTextMesh	cached string-render result (render passes + width + tick); values of the TextRenderCache map consumed by FontRendererMixin3	com/moonsworth/lunar/client/click/rewindhandlers/Rewindhandlers.java
+com.moonsworth.lunar.client.click.rewindhandlers	GlyphTexture	TextRenderPass	GL display-list id + texture pair (bind + call list, delete list)	com/moonsworth/lunar/client/click/rewindhandlers/GlyphTexture.java
+com.moonsworth.lunar.client.click.rewindhandlers	Object2ObjectOpenHashMapImpl	TextRenderCache	map keyed by (string,color,shadow) to CachedTextMesh entries	com/moonsworth/lunar/client/click/rewindhandlers/Object2ObjectOpenHashMapImpl.java
+com.moonsworth.lunar.client.coordinates	Coordinates	HostedWorldHost	host identity record (uuid + username); built from UuidAndUsername hosts	com/moonsworth/lunar/client/coordinates/Coordinates.java
+com.moonsworth.lunar.client.coordinates	Gui2Handler	HostedWorldPlayer	hosted-world player entry (username/uuid/lastOnline/isOnline/colors, JsonProvider); consumed by PlayerStatTracker + HostedWorldBridge	com/moonsworth/lunar/client/coordinates/Gui2Handler.java
+com.moonsworth.lunar.client.coordinates.mixin	Coordinates	HostedWorldEntryRenderer	server-list entry renderer (join/highlighted icons, per-UUID icon cache)	com/moonsworth/lunar/client/coordinates/mixin/Coordinates.java
+com.moonsworth.lunar.client.coordinates.mixin	CoordinatesThread	HostedWorldRefreshThread	refresh loop while the hosted-world screen is open	com/moonsworth/lunar/client/coordinates/mixin/CoordinatesThread.java
+com.moonsworth.lunar.client.feature	Module	Cosmetic	cosmetic base interface (isDynamic/getName/icons); siblings already CosmeticCategory/CosmeticSettings	com/moonsworth/lunar/client/feature/Module.java
+com.moonsworth.lunar.client.feature	ModuleType	CosmeticSlot	cosmetic equipment slots HEAD/BODY/ARMS/LEGS with model transforms	com/moonsworth/lunar/client/feature/ModuleType.java
+com.moonsworth.lunar.client.feature	ModuleType3_2	BodywearCosmetic	concrete BODY/BODYWEAR cosmetic (super BODY + CosmeticCategory.BODYWEAR)	com/moonsworth/lunar/client/feature/ModuleType3_2.java
+com.moonsworth.lunar.client.fishing	Fishing	ExternalLinkRegistry	"[Ichor/External Link]" registry mapping ExternalLink interfaces to implementations	com/moonsworth/lunar/client/fishing/Fishing.java
+com.moonsworth.lunar.client.fishing	Nameplate	ModMenuCompat	ModMenu compat (com.terraformersmc.modmenu.gui.ModsScreen reflection)	com/moonsworth/lunar/client/fishing/Nameplate.java
+com.moonsworth.lunar.client.fishing.gui.mixin	Fishing2Extension	GuiExternalLink	version-gated ExternalLink GUI hook (int method1); not a mixin despite the path segment	com/moonsworth/lunar/client/fishing/gui/mixin/Fishing2Extension.java

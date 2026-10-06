@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.gui
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.gui.mixin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight.mixin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.holograms
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.holograms.mixin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.nameplate
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.rewindhandlers.mixin

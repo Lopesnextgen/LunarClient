@@ -1,0 +1,10 @@
+# Package audit 10 — wrong / misplaced packages
+# Format: old.package<TAB>new.package[<TAB>evidence]
+# Prefix semantics: `old` and every `old.*` subtree move under `new`.
+# Apply with: tools/apply_package_renames.py --map tools/renames/packages-audit10.tsv
+#
+# Apply the class rename map (classes-audit10.tsv) FIRST: both packages contain
+# classes whose names collide across the move boundary otherwise.
+
+com.moonsworth.lunar.client.framework.feature.gui	com.moonsworth.lunar.client.framework.feature.overlay	every class is OverlayMod plumbing (TextureAnimationCache driven by OverlayMod.method63, OverlayTextureProcessor base + Glass/OreTextureProcessor, HudColorOverride); the obf package held the readable OverlayMod/OverlayMod$Type classes
+com.moonsworth.lunar.client.framework.feature.f3display.mixin	com.moonsworth.lunar.client.framework.feature.f3display.chart	six chart renderers (F3Chart + Bandwidth/Fps/Gpu/Ram/PingChart), zero @Mixin classes; `mixin` is a decompiler package-scrambling artifact

@@ -1,0 +1,64 @@
+{
+	"presets": [
+		{
+			"name": "allow_all",
+			"compatible": [
+				"type:suits",
+				"type:pet",
+				"type:companion",
+				"type:shoes",
+				"type:hat",
+				"type:backpack",
+				"type:dragon_wings",
+				"type:cloak",
+				"type:neckwear",
+				"type:bandanna",
+				"type:glasses",
+				"type:mask",
+				"type:bodywear",
+				"type:belts"
+			]
+		},
+		{
+			"name": "disallow_headwear",
+			"parent": "allow_all",
+			"incompatible": ["type:hat", "type:glasses", "type:mask", "type:bandanna"]
+		},
+		{
+			"name": "disallow_backwear",
+			"parent": "allow_all",
+			"incompatible": ["type:backpack", "type:cloak", "type:dragon_wings", "type:bodywear"]
+		},
+		{
+			"name": "suits_full_coverage",
+			"parent": "allow_all",
+			"incompatible": ["type:hat", "type:bodywear", "type:bandanna", "type:mask", "type:shoes"]
+		},
+		{
+			"name": "suits_use_other",
+			"parent": "allow_all",
+			"incompatible": []
+		},
+		{
+			"name": "suits_upper_coverage",
+			"parent": "allow_all",
+			"incompatible": ["type:hat", "type:bodywear", "type:bandanna", "type:mask"]
+		},
+		{
+			"name": "headwear_only",
+			"parent": "allow_all",
+			"incompatible": [
+				"type:suits",
+				"type:pet",
+				"type:companion",
+				"type:shoes",
+				"type:backpack",
+				"type:dragon_wings",
+				"type:cloak",
+				"type:neckwear",
+				"type:bodywear",
+				"type:belts"
+			]
+		}
+	]
+}

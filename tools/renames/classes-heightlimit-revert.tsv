@@ -1,0 +1,2 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client.framework.feature.heightlimit	HeightLimitOverride	Heightlimit	jar-coupled: Apollo manager method14 expects the jar twin (records cannot extend their old twin) — deferred until the jar is rebuilt from source	com/moonsworth/lunar/client/framework/feature/heightlimit/HeightLimitOverride.java

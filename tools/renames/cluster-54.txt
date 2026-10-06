@@ -1,0 +1,15 @@
+com/moonsworth/lunar/ichor/MixinHelper6.java	MixinHelper6
+com/moonsworth/lunar/ichor/MixinHelper7.java	MixinHelper7
+com/moonsworth/lunar/ichor/MixinHelper8.java	MixinHelper8
+com/moonsworth/lunar/ichor/MixinHelper_2.java	MixinHelper_2
+com/moonsworth/lunar/ichor/MixinHelper_3.java	MixinHelper_3
+com/moonsworth/lunar/ichor/MixinInternal2.java	MixinInternal2
+com/moonsworth/lunar/ichor/MixinInternal3.java	MixinInternal3
+com/moonsworth/lunar/ichor/MixinLegacy2.java	MixinLegacy2
+com/moonsworth/lunar/ichor/MixinMisc2.java	MixinMisc2
+com/moonsworth/lunar/ichor/MixinMisc3.java	MixinMisc3
+com/moonsworth/lunar/ichor/MixinMisc4.java	MixinMisc4
+com/moonsworth/lunar/ichor/MixinMisc5.java	MixinMisc5
+com/moonsworth/lunar/ichor/RemapperIterator2.java	RemapperIterator2
+com/moonsworth/lunar/ichor/MixinCore.java	Type2
+com/moonsworth/lunar/ichor/MixinMisc.java	Type2

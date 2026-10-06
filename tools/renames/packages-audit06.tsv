@@ -1,0 +1,9 @@
+# Package audit 06 — wrong / misplaced packages
+# Format: old.package<TAB>new.package[<TAB>evidence]
+# Prefix semantics: `old` and every `old.*` subtree move under `new`.
+# Apply with: tools/apply_package_renames.py --map tools/renames/packages-audit06.tsv
+#
+# Apply the class rename map (classes-audit06.tsv) FIRST.
+
+com.moonsworth.lunar.client.fps	com.moonsworth.lunar.client.molang	the package is the Molang JIT compiler (MolangBuiltinFunctions/VariablesMap/MolangJitSignature/MolangScope); the real FPS mod is client.mod.hud.Fps; audit07 already moved fps.mixin to molang.ast
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers	com.moonsworth.lunar.client.fov.mixin	outfit equip-condition predicates (EquipConditionPredicate + ConditionalOutfitTree); the rewindhandlers segment is scrambler noise

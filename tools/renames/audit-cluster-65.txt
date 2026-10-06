@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin
+com.moonsworth.lunar.client.rewindhandlers
+com.moonsworth.lunar.client.tps
+com.moonsworth.lunar.client.translation
+com.moonsworth.lunar.client.util
+com.moonsworth.lunar.client.util.alert
+com.moonsworth.lunar.client.util.chest
+com.moonsworth.lunar.client.util.chest.mixin

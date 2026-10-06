@@ -1,0 +1,52 @@
+package com.moonsworth.lunar.bridge;
+
+import java.util.Locale;
+import lombok.Generated;
+
+public enum BridgeType2_4 {
+   EMPTY,
+   SKULL,
+   ELYTRA,
+   SHIELD,
+   SWORD,
+   PICKAXE,
+   AXE,
+   SHOVEL,
+   HOE,
+   BLOCK,
+   ARMOR,
+   POTION,
+   SPLASH_POTION,
+   LINGERING_POTION,
+   TIPPED_ARROW,
+   SPAWN_EGG,
+   FIREWORK_STAR,
+   UNKNOWN;
+
+   public static BridgeType2_4[] VALUES = values();
+   private final String id = this.name().toLowerCase(Locale.ENGLISH);
+
+   public boolean isAnyPotion() {
+      return this == POTION || this == SPLASH_POTION || this == LINGERING_POTION;
+   }
+
+   public static BridgeType2_4 fromPath(String text) {
+      if (text.contains("sword")) {
+         return SWORD;
+      } else if (text.contains("boots") || text.contains("leggings") || text.contains("chestplate") || text.contains("helmet")) {
+         return ARMOR;
+      } else {
+         return text.contains("firework_star") ? FIREWORK_STAR : UNKNOWN;
+      }
+   }
+
+   @Override
+   public String toString() {
+      return this.id;
+   }
+
+   @Generated
+   public String getId() {
+      return this.id;
+   }
+}

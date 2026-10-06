@@ -1,0 +1,795 @@
+{
+  "modern": {
+    "name_mappings": {
+      "minecraft:random.burp": "Burp1",
+      "minecraft:records.cat": "Cat",
+      "minecraft:mob.horse.armor": "Horse Armor",
+      "minecraft:item.axe.scrape": "Damage",
+      "minecraft:item.bottle.fill_dragonbreath": "Fill Dragon's breath",
+      "minecraft:item.bottle.fill": "Fill normally",
+      "minecraft:item.bucket.fill": "Fill Water",
+      "minecraft:item.bucket.empty": "Empty Water",
+      "minecraft:item.bundle.insert": "Add One",
+      "minecraft:ui.cartography_table.take_result": "Take Item",
+      "minecraft:ui.stonecutter.take_result": "Take Item",
+      "minecraft:ui.loom.take_result": "Take Item",
+      "minecraft:ui.toast.in": "Enter",
+      "minecraft:ui.toast.out": "Leave",
+      "minecraft:weather.rain.above": "Under Blocks",
+      "minecraft:block.composter.fill_success": "Fully Fill",
+      "minecraft:block.dispenser.fail": "Empty",
+      "minecraft:block.pointed_dripstone.drip_lava_into_cauldron": "Drip Lava Cauldron",
+      "minecraft:block.pointed_dripstone.drip_water_into_cauldron": "Drip Water Cauldron",
+      "minecraft:block.stone_button.click_off": "Deactivated",
+      "minecraft:block.stone_pressure_plate.click_off": "Deactivated",
+      "minecraft:block.wooden_pressure_plate.click_off": "Deactivated",
+      "minecraft:block.wooden_button.click_off": "Deactivated",
+      "minecraft:block.tripwire.click_off": "Deactivated",
+      "minecraft:block.metal_pressure_plate.click_off": "Deactivated",
+      "minecraft:block.metal_pressure_plate.click_on": "Activated",
+      "minecraft:block.tripwire.click_on": "Activated",
+      "minecraft:block.wooden_button.click_on": "Activated",
+      "minecraft:block.wooden_pressure_plate.click_on": "Activated",
+      "minecraft:block.stone_pressure_plate.click_on": "Activated",
+      "minecraft:block.stone_button.click_on": "Activated",
+      "minecraft:entity.hoglin.converted_to_zombified": "Zombified",
+      "minecraft:entity.piglin.converted_to_zombified": "Zombified",
+      "minecraft:entity.piglin_brute.converted_to_zombified": "Zombified",
+      "minecraft:entity.player.attack.nodamage": "No Damage",
+      "minecraft:block.amethyst_block.step": "Foot Steps",
+      "minecraft:block.amethyst_cluster.step": "Foot Steps",
+      "minecraft:block.ancient_debris.step": "Foot Steps",
+      "minecraft:block.anvil.step": "Foot Steps",
+      "minecraft:block.azalea.step": "Foot Steps",
+      "minecraft:block.azalea_leaves.step": "Foot Steps",
+      "minecraft:block.bamboo.step": "Foot Steps",
+      "minecraft:block.basalt.step": "Foot Steps",
+      "minecraft:block.big_dripleaf.step": "Foot Steps",
+      "minecraft:block.bone_block.step": "Foot Steps",
+      "minecraft:block.calcite.step": "Foot Steps",
+      "minecraft:block.candle.step": "Foot Steps",
+      "minecraft:block.cave_vines.step": "Foot Steps",
+      "minecraft:block.chain.step": "Foot Steps",
+      "minecraft:entity.chicken.step": "Walk",
+      "minecraft:block.copper.step": "Foot Steps",
+      "minecraft:block.coral_block.step": "Foot Steps",
+      "minecraft:entity.cow.step": "Walk",
+      "minecraft:block.deepslate_bricks.step": "Foot Steps",
+      "minecraft:block.deepslate.step": "Foot Steps",
+      "minecraft:block.deepslate_tiles.step": "Foot Steps",
+      "minecraft:block.dripstone_block.step": "Foot Steps",
+      "minecraft:block.pointed_dripstone.step": "Foot Steps",
+      "minecraft:entity.drowned.step": "Walk",
+      "minecraft:entity.endermite.step": "Walk",
+      "minecraft:block.flowering_azalea.step": "Foot Steps",
+      "minecraft:block.roots.step": "Foot Steps",
+      "minecraft:block.gilded_blackstone.step": "Foot Steps",
+      "minecraft:block.glass.step": "Foot Steps",
+      "minecraft:entity.goat.step": "Walk",
+      "minecraft:block.grass.step": "Foot Steps",
+      "minecraft:block.gravel.step": "Foot Steps",
+      "minecraft:block.hanging_roots.step": "Foot Steps",
+      "minecraft:entity.hoglin.step": "Walk",
+      "minecraft:block.honey_block.step": "Foot Steps",
+      "minecraft:entity.horse.step": "Walk",
+      "minecraft:entity.husk.step": "Walk",
+      "minecraft:entity.iron_golem.step": "Walk",
+      "minecraft:block.ladder.step": "Foot Steps",
+      "minecraft:block.lantern.step": "Foot Steps",
+      "minecraft:entity.llama.step": "Walk",
+      "minecraft:block.lodestone.step": "Foot Steps",
+      "minecraft:block.metal.step": "Foot Steps",
+      "minecraft:block.moss_carpet.step": "Foot Steps",
+      "minecraft:block.moss.step": "Foot Steps",
+      "minecraft:music_disc.pigstep": "Pigstep",
+      "minecraft:block.nether_bricks.step": "Foot Steps",
+      "minecraft:block.stem.step": "Foot Steps",
+      "minecraft:block.nylium.step": "Foot Steps",
+      "minecraft:block.nether_sprouts.step": "Foot Steps",
+      "minecraft:block.fungus.step": "Foot Steps",
+      "minecraft:block.weeping_vines.step": "Foot Steps",
+      "minecraft:block.wart_block.step": "Foot Steps",
+      "minecraft:block.netherite_block.step": "Foot Steps",
+      "minecraft:block.netherrack.step": "Foot Steps",
+      "minecraft:entity.panda.step": "Walk",
+      "minecraft:entity.parrot.step": "Walk",
+      "minecraft:entity.pig.step": "Walk",
+      "minecraft:entity.piglin.step": "Walk",
+      "minecraft:entity.piglin_brute.step": "Walk",
+      "minecraft:entity.polar_bear.step": "Walk",
+      "minecraft:block.polished_deepslate.step": "Foot Steps",
+      "minecraft:block.powder_snow.step": "Foot Steps",
+      "minecraft:entity.ravager.step": "Walk",
+      "minecraft:block.nether_gold_ore.step": "Foot Steps",
+      "minecraft:block.nether_ore.step": "Foot Steps",
+      "minecraft:block.rooted_dirt.step": "Foot Steps",
+      "minecraft:block.sand.step": "Foot Steps",
+      "minecraft:block.scaffolding.step": "Foot Steps",
+      "minecraft:block.sculk_sensor.step": "Foot Steps",
+      "minecraft:entity.sheep.step": "Walk",
+      "minecraft:block.shroomlight.step": "Foot Steps",
+      "minecraft:entity.silverfish.step": "Walk",
+      "minecraft:entity.skeleton.step": "Walk",
+      "minecraft:block.slime_block.step": "Foot Steps",
+      "minecraft:block.small_dripleaf.step": "Foot Steps",
+      "minecraft:block.soul_sand.step": "Foot Steps",
+      "minecraft:block.soul_soil.step": "Foot Steps",
+      "minecraft:block.spore_blossom.step": "Foot Steps",
+      "minecraft:entity.strider.step": "Walk",
+      "minecraft:block.snow.step": "Foot Steps",
+      "minecraft:entity.spider.step": "Walk",
+      "minecraft:block.stone.step": "Foot Steps",
+      "minecraft:entity.stray.step": "Walk",
+      "minecraft:block.tuff.step": "Foot Steps",
+      "minecraft:block.vine.step": "Foot Steps",
+      "minecraft:block.wet_grass.step": "Foot Steps",
+      "minecraft:entity.wither_skeleton.step": "Walk",
+      "minecraft:entity.wolf.step": "Walk",
+      "minecraft:block.wood.step": "Foot Steps",
+      "minecraft:block.wool.step": "Foot Steps",
+      "minecraft:entity.zoglin.step": "Walk",
+      "minecraft:entity.zombie.step": "Walk",
+      "minecraft:entity.zombie_villager.step": "Walk",
+      "minecraft:entity.axolotl.hurt": "Damage",
+      "minecraft:entity.bat.hurt": "Damage",
+      "minecraft:entity.bee.hurt": "Damage",
+      "minecraft:entity.blaze.hurt": "Damage",
+      "minecraft:entity.cat.hurt": "Damage",
+      "minecraft:entity.chicken.hurt": "Damage",
+      "minecraft:entity.cod.hurt": "Damage",
+      "minecraft:entity.cow.hurt": "Damage",
+      "minecraft:entity.creeper.hurt": "Damage",
+      "minecraft:entity.dolphin.hurt": "Damage",
+      "minecraft:entity.donkey.hurt": "Damage",
+      "minecraft:entity.drowned.hurt": "Damage",
+      "minecraft:entity.elder_guardian.hurt": "Damage",
+      "minecraft:entity.ender_dragon.hurt": "Damage",
+      "minecraft:entity.enderman.hurt": "Damage",
+      "minecraft:entity.endermite.hurt": "Damage",
+      "minecraft:entity.evoker.hurt": "Damage",
+      "minecraft:entity.fox.hurt": "Damage",
+      "minecraft:entity.generic.hurt": "Damage",
+      "minecraft:entity.ghast.hurt": "Damage",
+      "minecraft:entity.glow_squid.hurt": "Damage",
+      "minecraft:entity.goat.hurt": "Damage",
+      "minecraft:entity.goat.screaming.hurt": "Damage",
+      "minecraft:entity.guardian.hurt": "Damage",
+      "minecraft:entity.hoglin.hurt": "Damage",
+      "minecraft:entity.horse.hurt": "Damage",
+      "minecraft:entity.hostile.hurt": "Damage",
+      "minecraft:entity.husk.hurt": "Damage",
+      "minecraft:entity.illusioner.hurt": "Damage",
+      "minecraft:entity.iron_golem.hurt": "Damage",
+      "minecraft:entity.llama.hurt": "Damage",
+      "minecraft:entity.magma_cube.hurt": "Damage",
+      "minecraft:entity.mule.hurt": "Damage",
+      "minecraft:entity.ocelot.hurt": "Damage",
+      "minecraft:entity.panda.hurt": "Damage",
+      "minecraft:entity.parrot.hurt": "Damage",
+      "minecraft:entity.phantom.hurt": "Damage",
+      "minecraft:entity.pig.hurt": "Damage",
+      "minecraft:entity.piglin.hurt": "Damage",
+      "minecraft:entity.piglin_brute.hurt": "Damage",
+      "minecraft:entity.pillager.hurt": "Damage",
+      "minecraft:entity.player.hurt": "Damage",
+      "minecraft:entity.polar_bear.hurt": "Damage",
+      "minecraft:entity.puffer_fish.hurt": "Damage",
+      "minecraft:entity.rabbit.hurt": "Damage",
+      "minecraft:entity.ravager.hurt": "Damage",
+      "minecraft:entity.salmon.hurt": "Damage",
+      "minecraft:entity.sheep.hurt": "Damage",
+      "minecraft:entity.shulker_bullet.hurt": "Damage",
+      "minecraft:entity.shulker.hurt": "Damage",
+      "minecraft:entity.silverfish.hurt": "Damage",
+      "minecraft:entity.skeleton_horse.hurt": "Damage",
+      "minecraft:entity.skeleton.hurt": "Damage",
+      "minecraft:entity.slime.hurt": "Damage",
+      "minecraft:entity.strider.hurt": "Damage",
+      "minecraft:entity.snow_golem.hurt": "Damage",
+      "minecraft:entity.spider.hurt": "Damage",
+      "minecraft:entity.squid.hurt": "Damage",
+      "minecraft:entity.stray.hurt": "Damage",
+      "minecraft:entity.tropical_fish.hurt": "Damage",
+      "minecraft:entity.turtle.hurt": "Damage",
+      "minecraft:entity.vex.hurt": "Damage",
+      "minecraft:entity.villager.hurt": "Damage",
+      "minecraft:entity.vindicator.hurt": "Damage",
+      "minecraft:entity.wandering_trader.hurt": "Damage",
+      "minecraft:entity.witch.hurt": "Damage",
+      "minecraft:entity.wither.hurt": "Damage",
+      "minecraft:entity.wither_skeleton.hurt": "Damage",
+      "minecraft:entity.wolf.hurt": "Damage",
+      "minecraft:entity.zoglin.hurt": "Damage",
+      "minecraft:entity.zombie_horse.hurt": "Damage",
+      "minecraft:entity.zombie.hurt": "Damage",
+      "minecraft:entity.zombified_piglin.hurt": "Damage",
+      "minecraft:entity.zombie_villager.hurt": "Damage",
+      "minecraft:block.amethyst_block.hit": "Damage",
+      "minecraft:block.amethyst_cluster.hit": "Damage",
+      "minecraft:block.ancient_debris.hit": "Damage",
+      "minecraft:block.anvil.hit": "Damage",
+      "minecraft:entity.armor_stand.hit": "Damage",
+      "minecraft:entity.arrow.hit": "Damage",
+      "minecraft:block.azalea.hit": "Damage",
+      "minecraft:block.azalea_leaves.hit": "Damage",
+      "minecraft:block.bamboo.hit": "Damage",
+      "minecraft:block.bamboo_sapling.hit": "Damage",
+      "minecraft:block.basalt.hit": "Damage",
+      "minecraft:block.big_dripleaf.hit": "Damage",
+      "minecraft:block.bone_block.hit": "Damage",
+      "minecraft:block.calcite.hit": "Damage",
+      "minecraft:block.candle.hit": "Damage",
+      "minecraft:block.cave_vines.hit": "Damage",
+      "minecraft:block.chain.hit": "Damage",
+      "minecraft:block.copper.hit": "Damage",
+      "minecraft:block.coral_block.hit": "Damage",
+      "minecraft:item.crossbow.hit": "Damage",
+      "minecraft:block.deepslate_bricks.hit": "Damage",
+      "minecraft:block.deepslate.hit": "Damage",
+      "minecraft:block.deepslate_tiles.hit": "Damage",
+      "minecraft:block.dripstone_block.hit": "Damage",
+      "minecraft:block.pointed_dripstone.hit": "Damage",
+      "minecraft:block.flowering_azalea.hit": "Damage",
+      "minecraft:block.roots.hit": "Damage",
+      "minecraft:block.gilded_blackstone.hit": "Damage",
+      "minecraft:block.glass.hit": "Damage",
+      "minecraft:block.grass.hit": "Damage",
+      "minecraft:block.gravel.hit": "Damage",
+      "minecraft:block.hanging_roots.hit": "Damage",
+      "minecraft:block.honey_block.hit": "Damage",
+      "minecraft:block.ladder.hit": "Damage",
+      "minecraft:block.lantern.hit": "Damage",
+      "minecraft:block.lodestone.hit": "Damage",
+      "minecraft:block.metal.hit": "Damage",
+      "minecraft:block.moss_carpet.hit": "Damage",
+      "minecraft:block.moss.hit": "Damage",
+      "minecraft:block.nether_bricks.hit": "Damage",
+      "minecraft:block.stem.hit": "Damage",
+      "minecraft:block.nylium.hit": "Damage",
+      "minecraft:block.nether_sprouts.hit": "Damage",
+      "minecraft:block.fungus.hit": "Damage",
+      "minecraft:block.weeping_vines.hit": "Damage",
+      "minecraft:block.wart_block.hit": "Damage",
+      "minecraft:block.netherite_block.hit": "Damage",
+      "minecraft:block.netherrack.hit": "Damage",
+      "minecraft:block.polished_deepslate.hit": "Damage",
+      "minecraft:block.powder_snow.hit": "Damage",
+      "minecraft:block.nether_gold_ore.hit": "Damage",
+      "minecraft:block.nether_ore.hit": "Damage",
+      "minecraft:block.rooted_dirt.hit": "Damage",
+      "minecraft:block.sand.hit": "Damage",
+      "minecraft:block.scaffolding.hit": "Damage",
+      "minecraft:block.sculk_sensor.hit": "Damage",
+      "minecraft:block.shroomlight.hit": "Damage",
+      "minecraft:entity.shulker_bullet.hit": "Damage",
+      "minecraft:block.slime_block.hit": "Damage",
+      "minecraft:block.small_dripleaf.hit": "Damage",
+      "minecraft:block.soul_sand.hit": "Damage",
+      "minecraft:block.soul_soil.hit": "Damage",
+      "minecraft:block.spore_blossom.hit": "Damage",
+      "minecraft:block.snow.hit": "Damage",
+      "minecraft:block.stone.hit": "Damage",
+      "minecraft:enchant.thorns.hit": "Damage",
+      "minecraft:item.trident.hit": "Damage",
+      "minecraft:block.tuff.hit": "Damage",
+      "minecraft:block.vine.hit": "Damage",
+      "minecraft:block.wet_grass.hit": "Damage",
+      "minecraft:block.wood.hit": "Damage",
+      "minecraft:block.wool.hit": "Damage",
+      "minecraft:entity.arrow.hit_player": "Damage Player"
+    },
+    "category_mappings": {
+      "music_disc": {
+        "pretty_name": "Music Disc"
+      },
+      "item": {
+        "pretty_name": "Item",
+        "sub_mappings": {
+          "bone_meal": {
+            "pretty_name": "Bone Meal"
+          },
+          "chorus_fruit": {
+            "pretty_name": "Chorus Fruit"
+          },
+          "glow_ink_sac": {
+            "pretty_name": "Glow Ink Sac"
+          },
+          "honey_bottle": {
+            "pretty_name": "Honey Bottle"
+          },
+          "lodestone_compass": {
+            "pretty_name": "Lodestone Compass"
+          },
+          "sweet_berries": {
+            "pretty_name": "Sweet Berries"
+          },
+          "ink_sac": {
+            "pretty_name": "Ink Sac"
+          },
+          "firecharge": {
+            "pretty_name": "Fire Charge"
+          }
+        }
+      },
+      "ui": {
+        "pretty_name": "UI",
+        "sub_mappings": {
+          "cartography_table": {
+            "pretty_name": "Cartography Table"
+          }
+        }
+      },
+      "ambient": {
+        "pretty_name": "Ambient",
+        "sub_mappings": {
+          "basalt_deltas": {
+            "pretty_name": "Basalt Deltas"
+          },
+          "crimson_forest": {
+            "pretty_name": "Crimson Forest"
+          },
+          "nether_wastes": {
+            "pretty_name": "Nether Wastes"
+          },
+          "soul_sand_valley": {
+            "pretty_name": "Soul Sand Valley"
+          },
+          "warped_forest": {
+            "pretty_name": "Warped Forest"
+          }
+        }
+      },
+      "block": {
+        "pretty_name": "Block",
+        "sub_mappings": {
+          "amethyst_block": {
+            "pretty_name": "Amethyst Block"
+          },
+          "amethyst_cluster": {
+            "pretty_name": "Amethyst Cluster"
+          },
+          "azalea_leaves": {
+            "pretty_name": "Azalea Leaves"
+          },
+          "bamboo_sapling": {
+            "pretty_name": "Bamboo Sapling"
+          },
+          "big_dripleaf": {
+            "pretty_name": "Big Dripleaf"
+          },
+          "bone_block": {
+            "pretty_name": "Bone Block"
+          },
+          "brewing_stand": {
+            "pretty_name": "Brewing Stand"
+          },
+          "bubble_column": {
+            "pretty_name": "Bubble Column"
+          },
+          "cave_vines": {
+            "pretty_name": "Cave Vines"
+          },
+          "chorus_flower": {
+            "pretty_name": "Chorus Flower"
+          },
+          "coral_block": {
+            "pretty_name": "Coral Block"
+          },
+          "deepslate_bricks": {
+            "pretty_name": "Deepslate Bricks"
+          },
+          "deepslate_tiles": {
+            "pretty_name": "Deepslate Tiles"
+          },
+          "dripstone_block": {
+            "pretty_name": "Dripstone Block"
+          },
+          "enchantment_table": {
+            "pretty_name": "Enchantment Table"
+          },
+          "end_gateway": {
+            "pretty_name": "End Gateway"
+          },
+          "end_portal": {
+            "pretty_name": "End Portal"
+          },
+          "end_portal_frame": {
+            "pretty_name": "End Portal Frame"
+          },
+          "ender_chest": {
+            "pretty_name": "Ender Chest"
+          },
+          "fence_gate": {
+            "pretty_name": "Fence Gate"
+          },
+          "flowering_azalea": {
+            "pretty_name": "Flowering Azalea"
+          },
+          "gilded_blackstone": {
+            "pretty_name": "Gilded Blackstone"
+          },
+          "growing_plant": {
+            "pretty_name": "Growing Plant"
+          },
+          "hanging_roots": {
+            "pretty_name": "Hanging Roots"
+          },
+          "honey_block": {
+            "pretty_name": "Honey Block"
+          },
+          "iron_door": {
+            "pretty_name": "Iron Door"
+          },
+          "iron_trapdoor": {
+            "pretty_name": "Iron Trapdoor"
+          },
+          "large_amethyst_bud": {
+            "pretty_name": "Large Amethyst Bud"
+          },
+          "lily_pad": {
+            "pretty_name": "Lily Pad"
+          },
+          "medium_amethyst_bud": {
+            "pretty_name": "Medium Amethyst Bud"
+          },
+          "metal_pressure_plate": {
+            "pretty_name": "Metal Pressure Plate"
+          },
+          "moss_carpet": {
+            "pretty_name": "Modd Carpet"
+          },
+          "nether_bricks": {
+            "pretty_name": "Nether Bricks"
+          },
+          "nether_gold_ore": {
+            "pretty_name": "Nether Gold Ore"
+          },
+          "nether_ore": {
+            "pretty_name": "Nether Ore"
+          },
+          "nether_sprouts": {
+            "pretty_name": "Nether Sprouts"
+          },
+          "nether_wart": {
+            "pretty_name": "Nether Wart"
+          },
+          "netherite_block": {
+            "pretty_name": "Netherite Block"
+          },
+          "note_block": {
+            "pretty_name": "Note Block"
+          },
+          "pointed_dripstone": {
+            "pretty_name": "Pointed Dripstone"
+          },
+          "polished_deepslate": {
+            "pretty_name": "Polished Deepslate"
+          },
+          "powder_snow": {
+            "pretty_name": "Powder Snow"
+          },
+          "redstone_torch": {
+            "pretty_name": "Redstone Torch"
+          },
+          "respawn_anchor": {
+            "pretty_name": "Respawn Anchor"
+          },
+          "rooted_dirt": {
+            "pretty_name": "Rooted Dirt"
+          },
+          "sculk_sensor": {
+            "pretty_name": "Sculk Sensor"
+          },
+          "shulker_box": {
+            "pretty_name": "Shulker Box"
+          },
+          "slime_block": {
+            "pretty_name": "Slime Block"
+          },
+          "small_amethyst_bud": {
+            "pretty_name": "Small Amethyst Bud"
+          },
+          "small_dripleaf": {
+            "pretty_name": "Small Dripleaf"
+          },
+          "smithing_table": {
+            "pretty_name": "Smithing Table"
+          },
+          "soul_sand": {
+            "pretty_name": "Soul Sand"
+          },
+          "soul_soil": {
+            "pretty_name": "Soul Soil"
+          },
+          "spore_blossom": {
+            "pretty_name": "Spore Blossom"
+          },
+          "stone_button": {
+            "pretty_name": "Stone Button"
+          },
+          "stone_pressure_plate": {
+            "pretty_name": "Stone Pressure Plate"
+          },
+          "sweet_berry_bush": {
+            "pretty_name": "Sweet Berry Bush"
+          },
+          "wart_block": {
+            "pretty_name": "Wart Block"
+          },
+          "weeping_vines": {
+            "pretty_name": "Weeping Vines"
+          },
+          "wet_grass": {
+            "pretty_name": "Wet Grass"
+          },
+          "wooden_button": {
+            "pretty_name": "Wooden Button"
+          },
+          "wooden_door": {
+            "pretty_name": "Wooden Door"
+          },
+          "wooden_pressure_plate": {
+            "pretty_name": "Wooden Pressure Plate"
+          },
+          "wooden_trapdoor": {
+            "pretty_name": "Wooden Trapdoor"
+          },
+          "metal_pressureplate": {
+            "pretty_name": "Metal Pressure Plate"
+          },
+          "stone_pressureplate": {
+            "pretty_name": "Stone Pressure Plate"
+          },
+          "wood_button": {
+            "pretty_name": "Wooden Button"
+          },
+          "wood_pressureplate": {
+            "pretty_name": "Wooden Pressure Plate"
+          },
+          "ancient_debris": {
+            "pretty_name": "Ancient Debris"
+          }
+        }
+      },
+      "entity": {
+        "pretty_name": "Entity",
+        "sub_mappings": {
+          "armor_stand": {
+            "pretty_name": "Armor Stand"
+          },
+          "dragon_fireball": {
+            "pretty_name": "Dragon Fireball"
+          },
+          "enderdragon_fireball": {
+            "pretty_name": "Dragon Fireball"
+          },
+          "elder_guardian": {
+            "pretty_name": "Elder Guardian"
+          },
+          "ender_dragon": {
+            "pretty_name": "Ender Dragon"
+          },
+          "ender_eye": {
+            "pretty_name": "Ender Eye"
+          },
+          "ender_pearl": {
+            "pretty_name": "Ender Pearl"
+          },
+          "evoker_fangs": {
+            "pretty_name": "Evoker Fangs"
+          },
+          "experience_bottle": {
+            "pretty_name": "Experience Bottle"
+          },
+          "experience_orb": {
+            "pretty_name": "Experience Orb"
+          },
+          "firework_rocket": {
+            "pretty_name": "Firework Rocket"
+          },
+          "fishing_bobber": {
+            "pretty_name": "Fishing Bobber"
+          },
+          "glow_item_frame": {
+            "pretty_name": "Glowing Item Frame"
+          },
+          "glow_squid": {
+            "pretty_name": "Glow Squid"
+          },
+          "iron_golem": {
+            "pretty_name": "Iron Golem"
+          },
+          "item_frame": {
+            "pretty_name": "Item Frame"
+          },
+          "leash_knot": {
+            "pretty_name": "Leash Knot"
+          },
+          "lightning_bolt": {
+            "pretty_name": "Lightning Bolt"
+          },
+          "lingering_potion": {
+            "pretty_name": "Lingering Potion"
+          },
+          "magma_cube": {
+            "pretty_name": "Magma Cube"
+          },
+          "piglin_brute": {
+            "pretty_name": "Piglin Brute"
+          },
+          "polar_bear": {
+            "pretty_name": "Polar Bear"
+          },
+          "puffer_fish": {
+            "pretty_name": "Puffer Fish"
+          },
+          "shulker_bullet": {
+            "pretty_name": "Shulker Bullet"
+          },
+          "skeleton_horse": {
+            "pretty_name": "Skeleton Horse"
+          },
+          "snow_golem": {
+            "pretty_name": "Snow Golem"
+          },
+          "splash_potion": {
+            "pretty_name": "Splash Potion"
+          },
+          "tropical_fish": {
+            "pretty_name": "Tropical Fish"
+          },
+          "wandering_trader": {
+            "pretty_name": "Wandering Trader"
+          },
+          "wither_skeleton": {
+            "pretty_name": "Wither Skeleton"
+          },
+          "zombie_horse": {
+            "pretty_name": "Zombie Horse"
+          },
+          "zombie_villager": {
+            "pretty_name": "Zombie Villager"
+          },
+          "zombified_piglin": {
+            "pretty_name": "Zombified Piglin"
+          },
+          "evocation_fangs": {
+            "pretty_name": "Evoker Fangs"
+          },
+          "evocation_illager": {
+            "pretty_name": "Evoker"
+          },
+          "illusion_illager": {
+            "pretty_name": "Illusioner"
+          },
+          "small_magmacube": {
+            "pretty_name": "Small Magmacube"
+          },
+          "small_slime": {
+            "pretty_name": "Small Slime"
+          },
+          "vindication_illager": {
+            "pretty_name": "vindicator"
+          },
+          "zombie_pig": {
+            "pretty_name": "Zombie Pigman"
+          }
+        }
+      }
+    }
+  },
+  "legacy": {
+    "name_mappings": {
+      "minecraft:mob.bat.hurt": "Damage",
+      "minecraft:mob.blaze.hit": "Damage",
+      "minecraft:mob.cat.hitt": "Damage",
+      "minecraft:mob.cow.hurt": "Damage",
+      "minecraft:mob.cow.say": "Idle",
+      "minecraft:mob.cow.step": "Walk",
+      "minecraft:mob.creeper.say": "Death",
+      "minecraft:mob.enderdragon.end": "Death",
+      "minecraft:mob.enderdragon.hit": "Damage",
+      "minecraft:mob.endermen.hit": "Damage",
+      "minecraft:mob.guardian.elder.hit": "Damage",
+      "minecraft:mob.guardian.land.hit": "Damage",
+      "minecraft:mob.guardian.hit": "Damage",
+      "minecraft:mob.horse.donkey.hit": "Damage",
+      "minecraft:mob.horse.skeleton.hit": "Damage",
+      "minecraft:mob.horse.zombie.hit": "Damage",
+      "minecraft:mob.horse.hit": "Damage",
+      "minecraft:mob.horse.leather": "Saddle Equip",
+      "minecraft:mob.irongolem.hit": "Damage",
+      "minecraft:mob.pig.say": "Idle",
+      "minecraft:mob.pig.step": "Walk",
+      "minecraft:mob.rabbit.hurt": "Damage",
+      "minecraft:mob.sheep.say": "Idle",
+      "minecraft:mob.sheep.step": "Walk",
+      "minecraft:mob.silverfish.hit": "Damage",
+      "minecraft:mob.silverfish.kill": "Death",
+      "minecraft:mob.silverfish.say": "Idle",
+      "minecraft:mob.silverfish.step": "Walk",
+      "minecraft:mob.skeleton.hurt": "Damage",
+      "minecraft:mob.skeleton.say": "Idle",
+      "minecraft:mob.skeleton.step": "Walk",
+      "minecraft:mob.spider.say": "Idle",
+      "minecraft:mob.spider.step": "Walk",
+      "minecraft:mob.villager.hit": "Damage",
+      "minecraft:mob.wither.hurt": "Damage",
+      "minecraft:mob.wolf.hurt": "Damage",
+      "minecraft:mob.wolf.step": "Walk",
+      "minecraft:mob.zombie.hurt": "Damage",
+      "minecraft:mob.zombie.say": "Idle",
+      "minecraft:mob.zombie.unfect": "Cure",
+      "minecraft:mob.zombie.remedy": "Cure",
+      "minecraft:mob.zombie.woodbreak": "Door Break",
+      "minecraft:mob.zombiepig.zpigangry": "Angry",
+      "minecraft:mob.zombiepig.zpigdeath": "Death",
+      "minecraft:mob.zombiepig.zpighurt": "Damage",
+      "minecraft:mob.zombiepig.zpig": "Idle",
+      "minecraft:game.hostile.die": "Death",
+      "minecraft:game.hostile.hurt": "Damage",
+      "minecraft:game.neutral.die": "Death",
+      "minecraft:game.neutral.hurt": "Damage",
+      "minecraft:game.player.die": "Death",
+      "minecraft:game.player.hurt": "Damage",
+      "minecraft:game.potion.smash": "Splash",
+      "minecraft:game.tnt.primed": "Charge",
+      "minecraft:dig.cloth": "Wool",
+      "minecraft:random.bowhit": "Bow Hit",
+      "minecraft:random.break": "Item Break",
+      "minecraft:random.burp": "Burp",
+      "minecraft:random.chestclosed": "Chest Close",
+      "minecraft:random.chestopen": "Chest Open",
+      "minecraft:random.levelup": "Level Up",
+      "minecraft:liquid.lavapop": "Lava Pop",
+      "minecraft:tile.piston.in": "Contract",
+      "minecraft:tile.piston.out": "Extend",
+      "minecraft:fire.fire": "Sound",
+      "minecraft:step.cloth": "Wool",
+      "minecraft:creeper.primed": "Charge",
+      "minecraft:fireworks.blast_far": "Far Blast",
+      "minecraft:fireworks.largeBlast": "Large Blast",
+      "minecraft:fireworks.largeBlast_far": "Far Large Blast",
+      "minecraft:note.bass": "Bass",
+      "minecraft:note.bassattack": "Bass Attack",
+      "minecraft:note.bd": "BD",
+      "minecraft:fireworks.twinkle_far": "Far Twinkle"
+    },
+    "category_mappings": {
+      "mob": {
+        "pretty_name": "Mob",
+        "sub_mappings": {
+          "irongolem": {
+            "pretty_name": "Iron Golem"
+          },
+          "magmacube": {
+            "pretty_name": "Magma Cube"
+          },
+          "zombiepig": {
+            "pretty_name": "Zombie Piglin"
+          },
+          "enderdragon": {
+            "pretty_name": "Ender Dragon"
+          }
+        }
+      },
+      "item": {
+        "pretty_name": "Item",
+        "sub_mappings": {
+          "firecharge": {
+            "pretty_name": "Fire Charge"
+          }
+        }
+      },
+      "note": {
+        "pretty_name": "Music Notes"
+      },
+      "step": {
+        "pretty_name": "Foot Steps"
+      },
+      "dig": {
+        "pretty_name": "Digging"
+      }
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+    "format_version": "1.10.0",
+    "particle_effect": {
+        "description": {
+            "identifier": "lunar:make_it_rain",
+            "basic_render_parameters": {
+                "bone": "low_left_arm.end",
+                "material": "particles_alpha",
+                "texture": "lunar:emotes/textures/dollar.webp"
+            }
+        },
+        "curves": {
+            "variable.size": {
+                "type": "linear",
+                "nodes": [
+                    0.0,
+                    0.69,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.84,
+                    0.65,
+                    0.45,
+                    0.19,
+                    0.0
+                ],
+                "input": "variable.particle_age / variable.particle_lifetime",
+                "horizontal_range": 1.0
+            },
+            "variable.angle": {
+                "type": "linear",
+                "nodes": [
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "input": "variable.particle_age / variable.particle_lifetime",
+                "horizontal_range": 1.0
+            }
+        },
+        "components": {
+            "minecraft:emitter_rate_steady": {
+                "spawn_rate": 3.0,
+                "max_particles": 100.0
+            },
+            "minecraft:emitter_lifetime_looping": {
+                "active_time": 2
+            },
+            "minecraft:emitter_shape_point": {
+                "offset": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "direction": [
+                    "(variable.particle_random_1 - 0.5) * 0.15",
+                    1.0,
+                    "(variable.particle_random_2 - 0.5) * 0.15"
+                ]
+            },
+            "minecraft:particle_lifetime_expression": {
+                "max_lifetime": 1.5
+            },
+            "minecraft:particle_initial_speed": 4.0,
+            "minecraft:particle_motion_dynamic": {
+                "linear_acceleration": [
+                    "(variable.particle_random_1 - 0.5) * 5.0",
+                    -10.0,
+                    "(variable.particle_random_2 - 0.5) * 5.0"
+                ],
+                "linear_drag_coefficient": 4.0,
+                "rotation_acceleration": "(variable.particle_random_1 - 0.5 < 0.0 ? -1.0 : 1.0) * -250.0"
+            },
+            "minecraft:particle_appearance_billboard": {
+                "size": [
+                    "0.1 * (variable.particle_random_4 * 0.7 + 0.3) * variable.size",
+                    "0.2 * (variable.particle_random_4 * 0.7 + 0.3) * variable.size"
+                ],
+                "facing_camera_mode": "rotate_xyz",
+                "uv": {
+                    "texture_width": 32,
+                    "texture_height": 64,
+                    "uv_size": [
+                        32.0,
+                        64.0
+                    ]
+                }
+            },
+            "blockbuster:particle_collision_appearance": {
+                "enabled": 0.0,
+                "lit": false,
+                "material": "particles_opaque",
+                "size": [
+                    0.0,
+                    0.0
+                ],
+                "facing_camera_mode": "lookat_xyz",
+                "uv": {
+                    "texture_width": 32,
+                    "texture_height": 64
+                }
+            },
+            "blockbuster:particle_appearance_tinting": {
+                "enabled": 0.0
+            },
+            "minecraft:emitter_local_space": {
+                "direction": true
+            },
+            "minecraft:particle_initial_spin": {
+                "rotation": "variable.particle_random_1 - 0.5 < 0.0 ? -40.0 : 40.0",
+                "rotation_rate": "(variable.particle_random_1 - 0.5 < 0.0 ? -1.0 : 1.0) * 500.0"
+            },
+            "minecraft:particle_motion_collision": {
+                "coefficient_of_restitution": 0.25,
+                "collision_radius": 0.1
+            }
+        }
+    }
+}

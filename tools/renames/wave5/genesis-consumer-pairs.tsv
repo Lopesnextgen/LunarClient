@@ -1,0 +1,11 @@
+src	src_class	ref_fqn	score	margin	strings	members	sample
+src/main/java/com/moonsworth/lunar/genesis/AbstractCollectionIterator3.java	AbstractCollectionIterator3	com.google.common.collect.ImmutableList	174.33	73.69	1	82	Use SerializedForm; Arrays; CanIgnoreReturnValue; Collection
+src/main/java/com/moonsworth/lunar/genesis/CIterator23.java	CIterator23	com.google.common.collect.HashBasedTable	44.93	12.74	0	26	CanIgnoreReturnValue; LinkedHashMap; Map
+src/main/java/com/moonsworth/lunar/genesis/Cache.java	Cache	com.google.common.cache.Cache	73.83	23.44	0	35	Cache; CacheBuilder; CacheStats
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper13_5.java	MixinHelper13_5	com.google.common.io.ByteStreams	247.89	193.60	3	86	 bytes expected; Invalid size: %s; ArrayDeque; Arrays; Buffer
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper22.java	MixinHelper22	com.google.common.collect.Lists	187.60	102.10	0	75	ArrayList; Arrays; CharSequence
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper24_4.java	MixinHelper24_4	com.google.common.cache.LoadingCache	21.77	7.25	0	12	ConcurrentMap; Deprecated; Iterable
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper4_10.java	MixinHelper4_10	com.google.common.cache.Cache	60.54	16.48	0	32	CacheBuilder; Callable; CompatibleWith
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper5_5.java	MixinHelper5_5	com.google.common.cache.CacheBuilder	283.41	93.72	2	99	maximumWeight requires weigher; weigher requires maximumWeight; ArithmeticException; CheckReturnValue; Duration
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper_15.java	MixinHelper_15	com.google.common.base.Strings	172.11	86.32	2	67	Required array size too large: ; invalid count: %s; ArrayIndexOutOfBoundsException; CharSequence; Character
+src/main/java/com/moonsworth/lunar/genesis/Strings.java	Strings	com.google.common.base.Strings	180.72	88.28	2	69	Required array size too large: ; invalid count: %s; ArrayIndexOutOfBoundsException; CharSequence; Character

@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.mod.gui
+com.moonsworth.lunar.client.framework.feature.mod.gui.mixin
+com.moonsworth.lunar.client.framework.feature.mod.gui.nameplate
+com.moonsworth.lunar.client.framework.feature.mod.highlight
+com.moonsworth.lunar.client.framework.feature.mod.holograms
+com.moonsworth.lunar.client.framework.feature.mod.holograms.fishing
+com.moonsworth.lunar.client.framework.feature.mod.holograms.fishing.mixin
+com.moonsworth.lunar.client.framework.feature.mod.holograms.gui

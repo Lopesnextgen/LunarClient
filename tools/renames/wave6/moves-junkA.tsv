@@ -1,0 +1,755 @@
+# wave6 junk-package A moves: client/{fog,fov,click,fps,killsounds,lightoverlay,lotusfish,horsestats,holograms,nameplate,glintcolorizer}
+# rows whose New already exists elsewhere are MERGE rows (apply_class_moves skips them): delete the source file and re-point its users at the canonical class
+old.package	Old	new.package	New	evidence
+com.moonsworth.lunar.client.click	Alert	com.moonsworth.lunar.client.render.texture	FramebufferCapture	owning a "lunar/framebuffer/<ts>-<rand>" texture: creates/clears a framebuffer (Bridge3_24) and captures it; framebuffer capture utility
+com.moonsworth.lunar.client.click	AlertTask	com.moonsworth.lunar.client.render.texture	FramebufferCaptureTask	FramebufferCapture singleton (field8 = new AlertTask()) driven per client tick/screenshot
+com.moonsworth.lunar.client.click	Bridge7Iterator	com.moonsworth.lunar.client.gui	EmptyScreen	misc GUI model; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.click	Bridge7Iterator$Type2	com.moonsworth.lunar.client.gui	BugReportCategory	misc GUI model; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.click	Bridge7Iterator_2	com.moonsworth.lunar.client.gui	ConfirmScreen	dialog screen with title/lineOne/two + "cancel"/"understood" buttons and a Consumer/Supplier pair
+com.moonsworth.lunar.client.click	Bridge7Iterator_3	com.moonsworth.lunar.client.gui	BugReportScreen	bug report screen (shortDescription/section/description/submit, Bridge7Iterator$Type2 categories, "The bug report has been submitted. Thank you!")
+com.moonsworth.lunar.client.click	FogIterator	com.moonsworth.lunar.client.ui	ScreenStack	Set<Bridge7_8> of open LCUI screens with tick/resolution handling and render dispatch (Fishing2Extension hook)
+com.moonsworth.lunar.client.click	Nameplate	com.moonsworth.lunar.client.framework	ReducedDebugInfoNotifier	ServerJoinEvent -> warns via notification when the server forces reducedDebugInfo (ThreadModuleDump63.method3().bridge$isReducedDebugInfo); "not a nameplate"
+com.moonsworth.lunar.client.click.chest	Chest	com.moonsworth.lunar.client.gui.notification	AnchorFunction	player/hosted-world notifications [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.chest	ChestType	com.moonsworth.lunar.client.gui.notification	NotificationType	player/hosted-world notifications [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.chest	FogImpl	com.moonsworth.lunar.client.gui.notification	NotificationManager	FogHandler<Gui2Iterator> queueing notification toasts (sound/friend_message.ogg); the notification toast manager
+com.moonsworth.lunar.client.click.chest	Gui2Extension	com.moonsworth.lunar.client.gui.notification	NotificationAnchor	player/hosted-world notifications [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.chest	Gui2Iterator	com.moonsworth.lunar.client.gui.notification	Notification	player/hosted-world notifications [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.chest	Gui2Iterator2	com.moonsworth.lunar.client.gui.notification	FormattedNotification	abstract Notification with a formatted body (field17) drawn under a divider
+com.moonsworth.lunar.client.click.chest	Gui2Iterator22	com.moonsworth.lunar.client.gui.notification	FriendNotification	player/hosted-world notifications [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.chest	Gui2Iterator222	com.moonsworth.lunar.client.gui.notification	FriendNotificationLong	player/hosted-world notifications [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.chest	Gui2Iterator23	com.moonsworth.lunar.client.gui.notification	HostedWorldNotification	player/hosted-world notifications [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.colorsaturation	Bridge7Iterator	com.moonsworth.lunar.client.ui	MinimapScreen	minimap settings screen (gui.minimap, addWaypoint, mapCenter, %.2f coords, minimize/maximize icons)
+com.moonsworth.lunar.client.click.colorsaturation	Calculator2Iterator	com.moonsworth.lunar.client.ui	MinimapOptionWidget	minimap option panel driving the Minimap settings widget
+com.moonsworth.lunar.client.click.coordinates	Bridge7Iterator	com.moonsworth.lunar.client.ui	ProfileEditorScreen	profile editor screen (profileName/icon/lblServer/save/reset/delete/updateDefaults)
+com.moonsworth.lunar.client.click.fishing	Fishing	com.moonsworth.lunar.client.framework.loading	LoadingStage	loading stages/resources [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.fishing	Fishing2	com.moonsworth.lunar.client.framework.loading	LoadableResource	loading stages/resources [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.fishing	Fishing3	com.moonsworth.lunar.client.gui	LoadingScreen	loading screen rendering logo/background (lunar_background, logo/logo-128x117.png, missingno, AbstractRenderContext)
+com.moonsworth.lunar.client.click.gui	Bridge7Iterator	com.moonsworth.lunar.client.gui	ConfirmDialog	dialog with cancel/title/lineOne + Consumer and Coordinates context
+com.moonsworth.lunar.client.click.gui	Bridge7Iterator2	com.moonsworth.lunar.client.gui	PlayerConfirmDialog	ConfirmDialog variant carrying a UUID (player-targeted confirm)
+com.moonsworth.lunar.client.click.gui	Bridge7Iterator22	com.moonsworth.lunar.client.gui	HostWorldScreen	host world screen (hostWorld/closeWorld/worldOptions/allowCheats/gameMode/difficulty/maxSlots/privacySettings/autoHostOnJoin/customPort)
+com.moonsworth.lunar.client.click.highlight	Bridge7Iterator	com.moonsworth.lunar.client.ui	CosmeticsScreen	cosmetics menu screen (extends the LCUI screen, owns Calculator2Iterator + Bridge5Extension6)
+com.moonsworth.lunar.client.click.highlight	Calculator2Iterator	com.moonsworth.lunar.client.ui	CosmeticsBrowserWidget	cosmetics browser (btnReturn/btnAddSkin/searchPlaceholder + tagged entries)
+com.moonsworth.lunar.client.click.holograms	Bridge7Iterator	com.moonsworth.lunar.client.ui	LcuiScreen	LCUI base screen implementing Bridge7_8 (reset star icons, "LCUI: Mouse Clicked", 1.20 graphics version gate)
+com.moonsworth.lunar.client.click.holograms	Bridge7Iterator2	com.moonsworth.lunar.client.ui	LcuiPopupScreen	LcuiScreen subclass adding a secondary list (popup screen base)
+com.moonsworth.lunar.client.click.holograms	Calculator2Base	com.moonsworth.lunar.client.ui.widget	WidgetContainer	container widget extending GuiWidget with a child list and current child
+com.moonsworth.lunar.client.click.holograms	Calculator2Handler	com.moonsworth.lunar.client.ui.widget	GuiWidget	base LCUI widget: position/size/update/close/getLanguagePath + draw
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator	com.moonsworth.lunar.client.ui.widget	WidgetPanel	panel widget (children, current child, editing state) — base of the option editors
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator3	com.moonsworth.lunar.client.ui.widget	ClientOptionWidget	option-bound widget (extends ClientOption with getHeight/editing)
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator32	com.moonsworth.lunar.client.ui.widget	CrosshairEditorWidget	custom_crosshair_preset editor (add-12x12, pattern function/consumer)
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator32$Data	com.moonsworth.lunar.client.ui.widget	CrosshairPattern	crosshair pattern entry (index + enabled/toggle)
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator32$Type	com.moonsworth.lunar.client.ui.widget	CrosshairPatternType	enum none/horizontal/vertical/quadrant
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator32_2	com.moonsworth.lunar.client.ui.widget	CrosshairPreviewWidget	crosshair preview/editor (share/reset/load icons, clickToSet/clickToErase, guides, pattern type)
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator33	com.moonsworth.lunar.client.ui.widget	BiomePreviewWidget	biome preview selector (previews/biome_0-3.png)
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator33_2	com.moonsworth.lunar.client.ui.widget	ResourcePackListWidget	resource-pack list (btnAddPack/resourcepacks, "Component draw outdated")
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator34	com.moonsworth.lunar.client.ui.widget	ScrollListWidget	generic scrollable list widget over a child list
+com.moonsworth.lunar.client.click.holograms	Calculator2Iterator3_2	com.moonsworth.lunar.client.ui.widget	MultiSelectWidget	list widget with an add-12x12 "add" button and child rows
+com.moonsworth.lunar.client.click.holograms	Calculator2Task	com.moonsworth.lunar.client.ui.widget	TextButtonWidget	button with text/up/down arrows and two Runnables
+com.moonsworth.lunar.client.click.holograms	Calculator2Task2	com.moonsworth.lunar.client.ui.widget	ConfirmButtonWidget	accept/deny button with boolean state
+com.moonsworth.lunar.client.click.holograms	Fishing2Handler	com.moonsworth.lunar.client.render.font	CachedFont	font resource loader ("-cfont_default-", "Couldn't find the CFont resource file", Arial, markRendered/getHeight)
+com.moonsworth.lunar.client.click.holograms	Fishing2Impl	com.moonsworth.lunar.client.render.font	CachedFontImpl	CachedFont impl with per-char widths, §-code handling, bold/italic variants
+com.moonsworth.lunar.client.click.holograms	Holograms	com.moonsworth.lunar.client.render.texture	ChromaTexture	lunar_chroma_tex texture generator ("Unexpected sector:")
+com.moonsworth.lunar.client.click.holograms	Holograms2	com.moonsworth.lunar.client.ui.widget	EditState	widget editing state interface (isEditing)
+com.moonsworth.lunar.client.click.holograms	Holograms2Iterator	com.moonsworth.lunar.client.ui.widget	LegacyRenderStateScope	GuiRenderState impl over an AbstractRenderContext
+com.moonsworth.lunar.client.click.holograms	Holograms2Iterator2	com.moonsworth.lunar.client.ui.widget	ModernRenderStateScope	GuiRenderState impl over MixinHelper_4
+com.moonsworth.lunar.client.click.holograms	Holograms2_2	com.moonsworth.lunar.client.ui.widget	GuiRenderState	gui render-state scope interface (push/pop + markers) implemented by the legacy/modern scopes
+com.moonsworth.lunar.client.click.holograms	Holograms3	com.moonsworth.lunar.client.ui.widget	ScreenLifecycle	widget/screen close contract (onClose, method19)
+com.moonsworth.lunar.client.click.holograms	HologramsImpl	com.moonsworth.lunar.client.ui	Animation	base animation (progress float + long timing)
+com.moonsworth.lunar.client.click.holograms	HologramsImpl2	com.moonsworth.lunar.client.ui	HudElementAnimation	Animation used for movable HUD element transitions
+com.moonsworth.lunar.client.click.holograms	HologramsImpl3	com.moonsworth.lunar.client.ui	HoverAnimation	Animation used for hover/"Default" transitions in buttons
+com.moonsworth.lunar.client.click.holograms	HologramsImpl4	com.moonsworth.lunar.client.ui	EaseAnimation	Animation variant with progress only (no timing)
+com.moonsworth.lunar.client.click.holograms	HologramsImpl5	com.moonsworth.lunar.client.ui	PulseAnimation	Animation variant with progress only
+com.moonsworth.lunar.client.click.holograms	HologramsImpl6	com.moonsworth.lunar.client.ui	ColorAnimation	Animation over colour transitions
+com.moonsworth.lunar.client.click.holograms	HologramsImpl7	com.moonsworth.lunar.client.ui	FadeAnimation	Animation with a void callback
+com.moonsworth.lunar.client.click.holograms	HologramsImpl8	com.moonsworth.lunar.client.ui	AnimatedValue	most-used Animation (int index + draw/update hooks) for widget values
+com.moonsworth.lunar.client.click.holograms	HologramsImpl9	com.moonsworth.lunar.client.ui	ColorTransition	Animation interpolating two ColorOptions
+com.moonsworth.lunar.client.click.holograms	Holograms_2	com.moonsworth.lunar.client.ui	AnimationTimer	animation clock: start/stop/pause, startTime/durationMs/isActive, current progress float
+com.moonsworth.lunar.client.click.holograms	Holograms_3	com.moonsworth.lunar.client.render.texture	AsyncRasterLoader	asynchronous image/raster loader (ColorModel/WritableRaster/Semaphore/queue, "Failed to load font" caller)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Base	com.moonsworth.lunar.client.ui.widget	SelectionContainer	widget container with a selection snapshot + AtomicBoolean (ThreadModuleDump60)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl	com.moonsworth.lunar.client.ui.widget	TextFieldWidget	text field widget (String text + CachedFont + animation)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl2	com.moonsworth.lunar.client.ui.widget	NumberSliderWidget	slider over a number range (implements Number, AnimationTimer + ClientOption + Label)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl3	com.moonsworth.lunar.client.ui.widget	IconWidget	icon widget with animation
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl4	com.moonsworth.lunar.client.ui.widget	TextLabelWidget	label widget with text colour and active state
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl42	com.moonsworth.lunar.client.ui.widget	CommandFieldWidget	text field for chat commands ("/Command") with boolean/consumer hooks
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl43	com.moonsworth.lunar.client.ui.widget	TextAreaWidget	multi-line text field variant
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl5	com.moonsworth.lunar.client.ui.widget	DropdownWidget	dropdown/select widget with animation
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl6	com.moonsworth.lunar.client.ui.widget	TextShadowWidget	shadowed text element
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl7	com.moonsworth.lunar.client.ui.widget	ProgressBarWidget	progress/range bar with four animated values
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl8	com.moonsworth.lunar.client.ui.widget	ColorPickerWidget	colour picker bound to ColorOption
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Impl9	com.moonsworth.lunar.client.ui.widget	ToggleButtonWidget	toggle button with resource + Supplier state
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator	com.moonsworth.lunar.client.ui.widget	TitledWidget	widget panel with a title
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator2	com.moonsworth.lunar.client.ui.widget	AttachedPanel	widget panel carrying an attachment object
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3	com.moonsworth.lunar.client.ui.widget	OptionWidget	abstract option-bound widget (extends ClientOption; option + title + description)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator310	com.moonsworth.lunar.client.ui.widget	ResetDefaultsWidget	"Default" reset row with an animation
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator311	com.moonsworth.lunar.client.ui.widget	NavigationButtonWidget	left/right arrows + resetToDefaults
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator312	com.moonsworth.lunar.client.ui.widget	EnumDropdownWidget	dropdown over an enum (extends Enum)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator313	com.moonsworth.lunar.client.ui.widget	CommandOptionWidget	option widget editing a command field
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator314	com.moonsworth.lunar.client.ui.widget	ToggleGroupWidget	row of DefaultedBoolean toggles
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator315	com.moonsworth.lunar.client.ui.widget	CycleOptionWidget	left/right cycling option (icons arrow-left/right)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator316	com.moonsworth.lunar.client.ui.widget	ArmorHudOptionWidget	armor/HUD slot option row (helmet/chestplate/leggings/boots/inv/hotbar/offhand)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator317	com.moonsworth.lunar.client.ui.widget	NumberOptionWidget	number option row (resetToDefaults, Number, sliders/fields)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3172	com.moonsworth.lunar.client.ui.widget	ApplyToAllNumberWidget	number row with "applyToAll"
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator318	com.moonsworth.lunar.client.ui.widget	SoundListOptionWidget	sound list option (searchSounds/preview/openFolder/refresh)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator319	com.moonsworth.lunar.client.ui.widget	MultiNumberOptionWidget	multi-value number option row
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator32	com.moonsworth.lunar.client.ui.widget	TextOptionWidget	text option row
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator320	com.moonsworth.lunar.client.ui.widget	SpacerWidget	empty spacer row
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator321	com.moonsworth.lunar.client.ui.widget	DayNightOptionWidget	sun/moon icon option row
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator322	com.moonsworth.lunar.client.ui.widget	ListOptionWidget	list option row (list of children + description)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3222	com.moonsworth.lunar.client.ui.widget	ExpandableListOptionWidget	expandable list option (arrow-right icon + animation)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3223	com.moonsworth.lunar.client.ui.widget	ListOptionRowWidget	list option child row
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3224	com.moonsworth.lunar.client.ui.widget	AdvancedOptionWidget	advanced row with cog icon + description + feature
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3225	com.moonsworth.lunar.client.ui.widget	CollapsibleListOptionWidget	collapsible list option (down/right arrows)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator323	com.moonsworth.lunar.client.ui.widget	KeybindOptionWidget	keybind option base (NONE/clashesWith)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3232	com.moonsworth.lunar.client.ui.widget	KeybindResetWidget	keybind reset row (resetToDefaults, KEY_MOUSE)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3233	com.moonsworth.lunar.client.ui.widget	KeybindCaptureWidget	keybind capture row (CTRL/ALT/SHIFT, hotkeyBtnLocked, padlock, /Command)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator3234	com.moonsworth.lunar.client.ui.widget	KeybindToggleWidget	keybind toggle (resetToDefaults + KeyCode name)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator33	com.moonsworth.lunar.client.ui.widget	SliderOptionWidget	slider option row with arrows
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator34	com.moonsworth.lunar.client.ui.widget	CheckboxWidget	checkbox row (checked-14x14) with Runnable
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator35	com.moonsworth.lunar.client.ui.widget	CheckboxToggleWidget	checkbox row (checked-14x14)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator36	com.moonsworth.lunar.client.ui.widget	CyclingEnumOptionWidget	enum cycling row with resetToDefaults
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator362	com.moonsworth.lunar.client.ui.widget	ApplyToAllEnumWidget	enum row with "applyToAll"
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator37	com.moonsworth.lunar.client.ui.widget	HoverInfoOptionWidget	option row with hover animation + tooltip Consumer
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator372	com.moonsworth.lunar.client.ui.widget	ApplyToAllInfoWidget	hover-info row with "applyToAll"
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator38	com.moonsworth.lunar.client.ui.widget	DeviceSelectOptionWidget	device selector row ("No Device Selected")
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator39	com.moonsworth.lunar.client.ui.widget	ColorPickerOptionWidget	colour option row with hue/alpha selectors + recent colours
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Iterator392	com.moonsworth.lunar.client.ui.widget	ApplyToAllColorWidget	colour row with "applyToAll"
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Task	com.moonsworth.lunar.client.ui.widget	MenuButtonWidget	menu button with text + Function/three Runnables
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Task2	com.moonsworth.lunar.client.ui.widget	CheckboxButton	checked-14x14 button with Runnable
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Task3	com.moonsworth.lunar.client.ui.widget	SubMenuButton	MenuButtonWidget variant (submenu entry)
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Task4	com.moonsworth.lunar.client.ui.widget	IconTextButton	MenuButtonWidget with icon
+com.moonsworth.lunar.client.click.holograms.mixin	Calculator2Task5	com.moonsworth.lunar.client.ui.widget	KeybindClearButton	deny-icon button (clears a keybind)
+com.moonsworth.lunar.client.click.holograms.mixin	Holograms	com.moonsworth.lunar.client.ui.widget	WidgetHooks	widget hook/listener contract (low confidence; interface with two void hooks)
+com.moonsworth.lunar.client.click.holograms.nameplate	Bridge7Iterator	com.moonsworth.lunar.client.ui.mainmenu	MainMenuScreen	".mainmenu" LCUI screen (base of the main menu)
+com.moonsworth.lunar.client.click.holograms.nameplate	Bridge7Iterator2	com.moonsworth.lunar.client.ui.mainmenu	MainMenuHomeScreen	main menu home with memeLogo/blog/trailer/wrapped/liveExperience/advent/discordCta entries
+com.moonsworth.lunar.client.click.holograms.nameplate	Bridge7Task	com.moonsworth.lunar.client.ui.mainmenu	MainMenuButton	menu button (Bridge7Handler base + Bridge5Extension6)
+com.moonsworth.lunar.client.click.holograms.nameplate	Calculator2Impl	com.moonsworth.lunar.client.ui.mainmenu	AnimatedLogoWidget	animated Lunar logo widget (animatedlogo/128/* star frames)
+com.moonsworth.lunar.client.click.holograms.nameplate	Highlight3Handler	com.moonsworth.lunar.client.ui.mainmenu	PollingRateDetector	detects the client polling rate ("PollingRateDetectionThread", polling_rate, event:lunar.polling_rate)
+com.moonsworth.lunar.client.click.holograms.nameplate	Nameplate	com.moonsworth.lunar.client.ui.mainmenu	MainMenuBackground	main menu background image ("background" + ResourceLocation)
+com.moonsworth.lunar.client.click.holograms.nameplate	Nameplate$Data8	com.moonsworth.lunar.client.ui.mainmenu	ThemeCondition	theme predicate (BiPredicate) nested in MainMenuBackground
+com.moonsworth.lunar.client.click.holograms.nameplate	Nameplate_2	com.moonsworth.lunar.client.ui.mainmenu	MainMenuThemeId	theme id wrapper (String)
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension	com.moonsworth.lunar.client.ui.mainmenu	MainMenuTheme	theme contract (EventRegistrar) implemented per season/holiday
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension10	com.moonsworth.lunar.client.ui.mainmenu	NewYearTheme	new year theme (fireworks/countdown, new_year assets; note the halloween asset list is a likely asset bug)
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension11	com.moonsworth.lunar.client.ui.mainmenu	SpringTheme	spring theme
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension12	com.moonsworth.lunar.client.ui.mainmenu	HalloweenTheme	halloween theme (uses new_year assets — asset bug)
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension13	com.moonsworth.lunar.client.ui.mainmenu	BedrockTheme	bedrock theme
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension2	com.moonsworth.lunar.client.ui.mainmenu	AnniversaryTheme	spring/anniversary theme (anniversary, backgrounds/spring/*)
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension3	com.moonsworth.lunar.client.ui.mainmenu	VanillaTheme	vanilla panorama (textures/gui/title/background/panorama)
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension4	com.moonsworth.lunar.client.ui.mainmenu	LunarTheme	default Lunar theme (backgrounds/splash.png + panorama)
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension5	com.moonsworth.lunar.client.ui.mainmenu	ChristmasTheme	christmas theme (santaHat/snow/radio)
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension6	com.moonsworth.lunar.client.ui.mainmenu	SummerTheme	spring/summer theme
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension7	com.moonsworth.lunar.client.ui.mainmenu	ClassicTheme	classic theme
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension8	com.moonsworth.lunar.client.ui.mainmenu	JapanTheme	japan/cherry-blossom theme
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Highlight3Extension9	com.moonsworth.lunar.client.ui.mainmenu	TournamentTheme	tournament theme
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Lighting3Extension	com.moonsworth.lunar.client.ui.mainmenu	MainMenuThemeManager	main_menu_theme_manager.json: selected/automatic theme + balloonHighscore
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	Nameplate	com.moonsworth.lunar.client.ui.mainmenu	SeasonalTheme	theme base with month/day conditions
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin	NameplateHandler	com.moonsworth.lunar.client.ui.mainmenu	SeasonalThemeHandler	theme with month/date ranges + Nameplate (title/splash) selection
+com.moonsworth.lunar.client.click.lotusfish	Bridge7Iterator	com.moonsworth.lunar.client.ui.menu	FeatureSettingsScreen	".settings" screen: per-feature settings (Calculator2Iterator6 + animations)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Base	com.moonsworth.lunar.client.ui.menu	SelectionWidget	generic value selection widget (T getValue)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Base2	com.moonsworth.lunar.client.ui.menu	ModConflictAlertWidget	mod allowed/disallowed description + AlertType (modpack variants)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Base3	com.moonsworth.lunar.client.ui.menu	EditorToolbarWidget	toolbar of image/text/icon children
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl	com.moonsworth.lunar.client.ui.menu	CogButtonWidget	cog-20x20 icon button
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl2	com.moonsworth.lunar.client.ui.menu	EditableLabelWidget	label with setText/setOffset (text + font)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl22	com.moonsworth.lunar.client.ui.menu	TypeLabelWidget	label carrying a Calculator2Type
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl23	com.moonsworth.lunar.client.ui.menu	ChildLabelWidget	label wrapping a child GuiWidget
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl3	com.moonsworth.lunar.client.ui.menu	FavoriteStarWidget	star/star-filled toggle for a feature (Framework7Extension)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl4	com.moonsworth.lunar.client.ui.menu	OptionsButtonWidget	cog + "options" button
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl5	com.moonsworth.lunar.client.ui.menu	LayoutToggleWidget	large/compact menu layout toggle
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl6	com.moonsworth.lunar.client.ui.menu	SubLabelWidget	secondary text label with active state
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Impl7	com.moonsworth.lunar.client.ui.menu	ModStateWidget	mod state indicator (allowed/disallowed/enabled/disabled/locked + AlertType)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Iterator	com.moonsworth.lunar.client.ui.menu	KeybindToggleRow	row toggling a keybind (toggleKeybind/done)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Iterator2	com.moonsworth.lunar.client.ui.menu	ModSearchWidget	search box (magnifying-glass, searchPlaceholder)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Iterator3	com.moonsworth.lunar.client.ui.menu	FeatureSettingsWidget	per-feature settings panel (toggleKeybind/resetPosition/originalAuthors)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Iterator4	com.moonsworth.lunar.client.ui.menu	ModListWidget	mod list with search + map of entries
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Iterator5	com.moonsworth.lunar.client.ui.menu	SearchResultsWidget	search results list
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Iterator6	com.moonsworth.lunar.client.ui.menu	ModMenuWidget	main mod menu (mods/settings/waypoints/staff, editHudLayout/saveNewProfile/importProfile)
+com.moonsworth.lunar.client.click.lotusfish	Calculator2Iterator7	com.moonsworth.lunar.client.ui.menu	SortModeWidget	sort-mode button (sort_icons, .sortModes)
+com.moonsworth.lunar.client.click.lotusfish	Lotusfish	com.moonsworth.lunar.client.ui.hud	HudEditor	HUD layout editor state (editHudLayout/saveNewProfile/importProfile, drag/handle-grabbed, layout snapshot)
+com.moonsworth.lunar.client.click.lotusfish	Lotusfish2Handler	com.moonsworth.lunar.client.ui.hud	MovableHudElementImpl	MovableHudElement wrapping a Framework7Extension (id/scale/anchor, enabled)
+com.moonsworth.lunar.client.click.lotusfish	Lotusfish4Iterator	com.moonsworth.lunar.client.ui.hud	HudEditorStateMachine	HudEditorState dispatcher over registered states
+com.moonsworth.lunar.client.click.lotusfish	Lotusfish5Iterator	com.moonsworth.lunar.client.ui.hud	HudElementRegistryImpl	HudElementRegistry implementation (map id -> element)
+com.moonsworth.lunar.client.click.lotusfish.mixin	Bridge7Iterator	com.moonsworth.lunar.client.ui.hud	HudEditorScreen	HUD layout editor screen (MovementUI, drag/select mods, resetToClosest, reportABug)
+com.moonsworth.lunar.client.click.lotusfish.mixin	Calculator2Extension	com.moonsworth.lunar.client.ui.hud	HudEditorWidget	editor widget contract (x/y/active/children)
+com.moonsworth.lunar.client.click.lotusfish.mixin	Lotusfish	com.moonsworth.lunar.client.ui.hud	HudEditorOverlay	editor overlay (help/shortcuts, layout snapshot, step list, exit/cog buttons)
+com.moonsworth.lunar.client.click.lotusfish.mixin	Lotusfish2	com.moonsworth.lunar.client.ui.hud	MovableHudElement	movable HUD element contract (id/scale/HudAnchor/width/height/enabled/toggle)
+com.moonsworth.lunar.client.click.lotusfish.mixin	Lotusfish3	com.moonsworth.lunar.client.ui.hud	EditorShortcut	HUD editor keyboard shortcut (keys list + label/description)
+com.moonsworth.lunar.client.click.lotusfish.mixin	Lotusfish4	com.moonsworth.lunar.client.ui.hud	HudEditorState	HUD editor state contract (enter/leave/update/active)
+com.moonsworth.lunar.client.click.lotusfish.mixin	Lotusfish5	com.moonsworth.lunar.client.ui.hud	HudElementRegistry	movable HUD element registry contract (all elements / by id)
+com.moonsworth.lunar.client.click.mixin	Bridge7Iterator	com.moonsworth.lunar.client.gui	CompetitiveDisconnectScreen	confirm/disconnect screen; zero @Mixin classes [via packages-audit04.tsv]
+com.moonsworth.lunar.client.click.rewindhandlers	Object2ObjectOpenHashMapImpl	com.moonsworth.lunar.client.render.font	TextRenderCache	text mesh/render caches [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.rewindhandlers	Rewindhandlers	com.moonsworth.lunar.client.render.font	CachedTextMesh	text mesh/render caches [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.click.rewindhandlers	Rewindhandlers2	com.moonsworth.lunar.client.render.font	TextRenderPass	text mesh/render caches [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog	Fog	com.moonsworth.lunar.client.framework	LoadableHandler	init()/close() lifecycle; implemented by hitcolor/horsestats/inactive handlers + RenderSubmissionManager; not fog code [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog	Fog2	com.moonsworth.lunar.client.framework.crash	IgnoredExceptionPatterns	regex list of ignorable exception messages [via moves-bucketsC1.tsv]
+com.moonsworth.lunar.client.fog	FogHandler	com.moonsworth.lunar.client.framework	ItemSetHandler	Set<T> loading handler ("Loading X.../loaded N items"); old name collides with hitcolor.FogHandler [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog	FogHandler2	com.moonsworth.lunar.client.framework	ItemMapHandler	Map<T,V> loading handler; extended by nameplate/PingServerCache [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog	FogLoader	com.moonsworth.lunar.client.config	FavoriteColorsConfig	loads favorite_colors.json (colors/version/favColor) via the JsonFileConfig base
+com.moonsworth.lunar.client.fog	FogLoader2	com.moonsworth.lunar.client.config	SettingsContainer	abstract option container (extends ItemSetHandler<ClientOption>, implements JsonFileConfig) extended by General/Controls/Internal/Mods settings
+com.moonsworth.lunar.client.fog	FogType	com.moonsworth.lunar.client.account	AccountType	MOJANG/Xbox account enum over handshake MinecraftIdentity.Type; not fog code [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog	Fog_2	com.moonsworth.lunar.client.util.performance	GcMonitor	GC/perf snapshot recorder [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog	Highlight3Iterator	com.moonsworth.lunar.client.util.performance	PerfSnapshotRecorder	GC/perf snapshot recorder [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog	Lighting3Extension	com.moonsworth.lunar.client.framework	JsonFileConfig	file-backed JSON load/save with sentry CrashReporter "Savable" attachment; no in-tree implementers [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog	Lighting3Loader	com.moonsworth.lunar.client.account	AccountProfile	profile flags: avatar/eligibleForMigration/hasMultipleProfiles/legacy/persistent/userProperites [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog	Lighting3Loader2	com.moonsworth.lunar.client.account	AccountSession	abstract session: accessToken/username/AccountType/expiry + skin via SavedSkin/DummyPlayer; used by AccountBridge [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog	Lighting3Loader22	com.moonsworth.lunar.client.account	XboxAccountSession	AccountSession subclass (FogType.XBOX) validating an Xbox JWT (exp/iat via AuthUtil, refresh)
+com.moonsworth.lunar.client.fog	Lighting3Loader3	com.moonsworth.lunar.client.account	MinecraftProfile	minecraftProfile {id,name} holder [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog.chest	Chest	com.moonsworth.lunar.client.audio.music	StyngrSong	Styngr song model [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.chest	Chest2	com.moonsworth.lunar.client.audio.music	JamManager	OwnedJam websocket manager (lunar jam service) implementing Fog/Lighting3Extension + GuiIterator provider
+com.moonsworth.lunar.client.fog.click	Click	com.moonsworth.lunar.client.render.texture	TextureProcessor	texture processor/cache [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.click	ClickImpl	com.moonsworth.lunar.client.render.texture	ClickImpl	texture processor/cache [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.click	GuiRewindhandlersHandler2	com.moonsworth.lunar.client.render.texture	TexturePathResolver	resolves optifine/sodium block/item texture paths (minecraft:block/, blocks/, items/); extends guiRewindhandlers handler
+com.moonsworth.lunar.client.fog.click.mixin	Click	com.moonsworth.lunar.client.render.texture	ModelTextureUpdater	"[TextureUpdater] Error while updating %s": updates blockstate/model/sprite/particle JSONs from a resource pack
+com.moonsworth.lunar.client.fog.colorsaturation	Colorsaturation	com.moonsworth.lunar.client.account	SocialLinksManager	twitter/discord/twitch/youtube link state ("socials", "connected") with GuiIterator
+com.moonsworth.lunar.client.fog.colorsaturation	Gui2Handler	com.moonsworth.lunar.client.account	LinkedAccount	linked social account (platform/name/avatar/username/isMember/joinedAt/hasFlair/cosmeticRewards)
+com.moonsworth.lunar.client.fog.fishing	Fishing	com.moonsworth.lunar.client.account.skin	SkinUploadService	uploads/changes the account skin over HTTP with the account access token (Gui2Handler skin + Gui2Type model)
+com.moonsworth.lunar.client.fog.fishing	FishingException	com.moonsworth.lunar.client.account.skin	SkinLoadException	saved skins + skin types [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.fishing	Gui2Handler	com.moonsworth.lunar.client.account.skin	SavedSkin	saved skins + skin types [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.fishing	Gui2Type	com.moonsworth.lunar.client.account.skin	SkinType	saved skins + skin types [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.fishing	ProfileLookupCallbackHandler	com.moonsworth.lunar.client.account	GameProfileLookupCallback	authlib ProfileLookupCallback collecting a GameProfile or a ProfileNotFoundException
+com.moonsworth.lunar.client.fog.gui	FogHandler2	com.moonsworth.lunar.client.framework.metadata	ModMetadataFetcher	fetches mod metadata from /game/metadata/mod (.details, mod_metadata.json, X-Installation-Id)
+com.moonsworth.lunar.client.fog.gui	Gui	com.moonsworth.lunar.client.framework	ApolloModGenerator	emits Apollo mod source stubs (Apollo license header, ./apollo/api/src/.../mods/impl/, %release_version%)
+com.moonsworth.lunar.client.fog.gui	Gui2	com.moonsworth.lunar.client.config.option	OptionGroup	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.gui	Gui3	com.moonsworth.lunar.client.framework	ModMetadata	ModCategory sets + features.<id> language path; move-only [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fog.gui	Lighting3Extension	com.moonsworth.lunar.client.config.override	OptionOverrideLoader	loads lunar_option_overrides.json into mod/option overrides
+com.moonsworth.lunar.client.fog.highlight	ConsumerBase	com.moonsworth.lunar.client.framework.metadata	MetadataConsumer	named Consumer<JsonElement> metadata consumer (implements LoadableResource)
+com.moonsworth.lunar.client.fog.highlight	FogHandler2	com.moonsworth.lunar.client.framework.metadata	RemoteMetadataManager	loads metadata_fallback.json + HTTP metadata and dispatches blogPosts/alert/modSettings/clientSettings/pinnedServers/featureFlag/links/... consumers
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase	com.moonsworth.lunar.client.framework.metadata	AlertConsumer	consumes the "alert" metadata (name/text/color/icon/link/dismissable)
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase10	com.moonsworth.lunar.client.framework.metadata	SentryFilterConsumer	consumes "sentryFilteredExceptions" identifier/regex into IgnoredExceptionPatterns
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase2	com.moonsworth.lunar.client.framework.metadata	ClientSettingsConsumer	consumes "clientSettings" overrides into ClientOption alerts
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase3	com.moonsworth.lunar.client.framework.metadata	PinnedServerConsumer	consumes "pinnedServers" array into the pinned server list
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase4	com.moonsworth.lunar.client.framework.metadata	FeatureFlagConsumer	consumes "featureFlag" identifiers into RewindhandlersType2 values
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase5	com.moonsworth.lunar.client.framework.metadata	StarServerConsumer	consumes "starServers" resource/pattern list
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase6	com.moonsworth.lunar.client.framework.metadata	LanguageOverrideConsumer	consumes "langOverride" JSON via the translation manager
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase7	com.moonsworth.lunar.client.framework.metadata	StoreBadgeConsumer	consumes "storeBadge" string
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase8	com.moonsworth.lunar.client.framework.metadata	LinkOverrideConsumer	consumes "links" name→url into the client link map
+com.moonsworth.lunar.client.fog.highlight.mixin	ConsumerBase9	com.moonsworth.lunar.client.framework.metadata	ModSettingsConsumer	consumes "modSettings" defaults (also used by MultiFeatureMigration)
+com.moonsworth.lunar.client.fog.highlight.mixin	Highlight	com.moonsworth.lunar.client.framework.metadata	ServerIntegrationConsumer	consumes "serverIntegration" entries (brand/ip + modSettings/clientSettings predicates)
+com.moonsworth.lunar.client.fog.highlight.mixin	Highlight2	com.moonsworth.lunar.client.framework.metadata	BlogPostConsumer	consumes "blogPosts" (title/image/link) into the blog manager
+com.moonsworth.lunar.client.fog.holograms	AccountManager	com.moonsworth.lunar.client.account	AccountManager	rescued account service: refreshes account access tokens, reads accounts.json/launcher_accounts.json, strips non-XBOX/duplicate accounts (strings "The launcher refreshed the access token for the current account %s", "Removing %s because it is not an XBOX account."); account subsystem
+com.moonsworth.lunar.client.fog.holograms	AnalyticsCounters	com.moonsworth.lunar.client.network.websocket	AnalyticsCounters	accumulates stats (minecraft.custom:minecraft.deaths) and sends CounterUpdate/RecordCountersRequest over the websocket; websocket analytics
+com.moonsworth.lunar.client.fog.holograms	BadgeManager	com.moonsworth.lunar.client.account	BadgeManager	badges.json + badge textures (.webp/.gif), registers badge providers/locations for profiles (getProvider/getAnimation); badge data belongs with accounts/profiles
+com.moonsworth.lunar.client.fog.holograms	BlogPostManager	com.moonsworth.lunar.client.gui.blog	BlogPostManager	loads blog posts + images ("Blog Posts", "Removed cached blog post image", blogPosts) for the blog UI; client/gui/blog owns BlogPost
+com.moonsworth.lunar.client.fog.holograms	BorderManager	com.moonsworth.lunar.client.mod.render	ServerBorderManager	FogHandler2<String, Itemcounter4Extension> cleared on ServerChangeEvent = per-server world-border cache (Itemcounter4Extension is WorldBorderExtensionBridge); sibling mod/render/ServerBorders
+com.moonsworth.lunar.client.fog.holograms	ControlsSettings	com.moonsworth.lunar.client.config	ControlsSettings	keybind options (emoteWheelKeybind, sprayWheelKeybind, modMenu, emote1-8Keybind); settings container
+com.moonsworth.lunar.client.fog.holograms	ConversationManager	com.moonsworth.lunar.client.chat	ConversationManager	drives conversation websocket ops (conversation.upsert/remove/message/pinned/participants) over Fov6Impl conversations; conversation subsystem is client/chat
+com.moonsworth.lunar.client.fog.holograms	CosmeticCompatibility	com.moonsworth.lunar.client.cosmetics	CosmeticCompatibility	loads cosmetics/compat.json into a jgrapht DefaultDirectedGraph of compatibility presets with parenting-cycle detection; cosmetic compatibility engine
+com.moonsworth.lunar.client.fog.holograms	CosmeticManager	com.moonsworth.lunar.client.cosmetics	CosmeticManager	cosmetic index/registry: parses category/index_type/animated, logo+icon resources, builds Gui2Handler cosmetic entries, provider for stores; the cosmetics subsystem's registry
+com.moonsworth.lunar.client.fog.holograms	CosmeticPreviewManager	com.moonsworth.lunar.client.cosmetics	CosmeticPreviewManager	store cosmetic preview world/session ("Cosmetic Preview World", store.lunarclient.com/checkout/instant?package=); cosmetic store preview feature
+com.moonsworth.lunar.client.fog.holograms	DefaultEdgeImpl	com.moonsworth.lunar.client.cosmetics	JsonGraphEdge	jgrapht DefaultEdge whose source/target are JsonObjects; edge type of the cosmetic compatibility graph
+com.moonsworth.lunar.client.fog.holograms	EmoteManager	com.moonsworth.lunar.client.cosmetics.emote	EmoteManager	owned/equipped emotes, emote failure popups, FovHandler emote resolution; emote subsystem
+com.moonsworth.lunar.client.fog.holograms	EnumMapImpl	com.moonsworth.lunar.client.render.turbo	TransparencyLayerMap	EnumMap<TransparencyMode, Object2IntMap<Pair<RenderLayer,RenderLayer>>> used as the per-batch render-layer key
+com.moonsworth.lunar.client.fog.holograms	EventChestRegistry	com.moonsworth.lunar.client.mod.misc	EventChestRegistry	registry of seasonal event chests (Chest2) iterated for spawning; grouped with the event-chest feature
+com.moonsworth.lunar.client.fog.holograms	FogImpl	com.moonsworth.lunar.client.framework	ItemSetRegistry	concrete ItemSetHandler<T> registry (extends the resolved ItemSetHandler); low confidence — thin set-backed registry
+com.moonsworth.lunar.client.fog.holograms	FogIterator	com.moonsworth.lunar.client.network.friend	FriendRequestManager	friends/friendRequests/inboundRequest queue + Memory user lookup; friend request service
+com.moonsworth.lunar.client.fog.holograms	FogLoader	com.moonsworth.lunar.client.config	FavoriteColorsConfigRescued	loads favorite_colors.json (colors/version/favColor) via JsonFileConfig; favourite-colour config (rescued twin; merge into FavoriteColorsConfig)
+com.moonsworth.lunar.client.fog.holograms	FontRegistry	com.moonsworth.lunar.client.render.font	FontRegistry	registers fonts/roboto-{bold,medium,light}.ttf + raleway as loadable resources; font subsystem
+com.moonsworth.lunar.client.fog.holograms	GeneralSettings	com.moonsworth.lunar.client.config	GeneralSettings	client toggles (advancedMode, borderlessFullscreen, useMinecraftScale, fastReloadScreen); settings container
+com.moonsworth.lunar.client.fog.holograms	GlobalOptionsSettings	com.moonsworth.lunar.client.config	GlobalOptionsSettings	global_options.json: cycleModProfiles/seenOverlayMigration/seenImportClient/switchedProfile; settings container
+com.moonsworth.lunar.client.fog.holograms	Gui2Extension	com.moonsworth.lunar.client.config.option	NamedColorOption	enum of the 16 chat colours implementing OptionEnumValue (toString capitalises name); colour option value
+com.moonsworth.lunar.client.fog.holograms	Highlight3Handler	com.moonsworth.lunar.client.render.turbo	TurboBatchRecorder	abstract recorder that links TurboEngineManager to a FragDataFactory and records batches (isRecording/handle)
+com.moonsworth.lunar.client.fog.holograms	Highlight3Iterator	com.moonsworth.lunar.client.render.turbo	TurboBatchCollector	TurboBatchRecorder with per-RenderLayer Bridge2_5 matrix buffers + FragData (generic context)
+com.moonsworth.lunar.client.fog.holograms	Highlight3Iterator2	com.moonsworth.lunar.client.render.turbo	TurboGroupCollector	collects batched objects into IterableExtension groups, sorts via a Sorter
+com.moonsworth.lunar.client.fog.holograms	Highlight3Iterator22	com.moonsworth.lunar.client.render.turbo	TurboEntityGroupCollector	TurboGroupCollector producing IterableExtension2 entity groups
+com.moonsworth.lunar.client.fog.holograms	Highlight3Iterator23	com.moonsworth.lunar.client.render.turbo	TurboSectionCollector	TurboGroupCollector producing IterableExtension3 groups (base of the entity/block-entity recorders)
+com.moonsworth.lunar.client.fog.holograms	HologramEntityManager	com.moonsworth.lunar.client.render.turbo	TurboEntityManager	manages per-entity batch state (Map entity→frag data + is_state_/is_or_was_state_ keys) feeding the Turbo engine
+com.moonsworth.lunar.client.fog.holograms	Holograms	com.moonsworth.lunar.client.framework	UnfocusedFpsLimiter	saves the current frame-rate limit and applies menuFpsLimit while the window is unfocused (ThreadModuleDump63/bridge$isWindowFocused); performance service — not holograms
+com.moonsworth.lunar.client.fog.holograms	Holograms2Handler	com.moonsworth.lunar.client.render.turbo	SimpleFragDataFactory	FragDataFactory<T> delegating to a fixed FragData
+com.moonsworth.lunar.client.fog.holograms	Holograms2Handler2	com.moonsworth.lunar.client.render.turbo	FunctionFragDataFactory	FragDataFactory<T> with a Function<T, FragData> hook
+com.moonsworth.lunar.client.fog.holograms	Holograms2Impl	com.moonsworth.lunar.client.render.turbo	PathFollower	TurboPathFollower used for pathing mobs ("Geckolib unknown pathfinder", target/waypoint state)
+com.moonsworth.lunar.client.fog.holograms	Holograms2Updater	com.moonsworth.lunar.client.render.turbo	TickPathFollower	TurboPathFollower variant driven by tick() (recomputes paths)
+com.moonsworth.lunar.client.fog.holograms	Holograms2_2	com.moonsworth.lunar.client.render.turbo	FragDataFactory	@FunctionalInterface createFragData(List<T>, EnumMapImpl) building render batch data for a group of entities
+com.moonsworth.lunar.client.fog.holograms	Holograms2_3	com.moonsworth.lunar.client.cosmetics	CompiledCompatibilityPreset	flattened preset (name, Set<Long> cosmetic ids) after parent add/remove resolution
+com.moonsworth.lunar.client.fog.holograms	Holograms2_4	com.moonsworth.lunar.client.render.turbo	TurboPathFollower	abstract follower that ticks an entity along a TurboPath (speed, jump, water handling, stop/isDone)
+com.moonsworth.lunar.client.fog.holograms	Holograms3$Data	com.moonsworth.lunar.client.cosmetics	RegexCosmeticMatcher	Holograms3_2 impl matching cosmetics by name Pattern
+com.moonsworth.lunar.client.fog.holograms	Holograms3$Data2	com.moonsworth.lunar.client.cosmetics	IdCosmeticMatcher	Holograms3_2 impl matching a cosmetic id
+com.moonsworth.lunar.client.fog.holograms	Holograms3$Data3	com.moonsworth.lunar.client.cosmetics	TypeCosmeticMatcher	Holograms3_2 impl matching a Gui2Type cosmetic type
+com.moonsworth.lunar.client.fog.holograms	Holograms3Handler	com.moonsworth.lunar.client.render.turbo	PathFilter	TurboEntityFilter<Inactive3> choosing pathfinding-driven entities (Fov10 options)
+com.moonsworth.lunar.client.fog.holograms	Holograms3Handler2	com.moonsworth.lunar.client.render.turbo	CreeperJumpscareFilter	TurboEntityFilter for primed creepers (creeper.primed + event:lunar.jumpscare)
+com.moonsworth.lunar.client.fog.holograms	Holograms3Handler3	com.moonsworth.lunar.client.render.turbo	FarEntityRelocator	TurboEntityFilter that repositions far entities (+2000) out of view when their chunk is unavailable
+com.moonsworth.lunar.client.fog.holograms	Holograms3_2	com.moonsworth.lunar.client.cosmetics	CosmeticMatcher	matcher over cosmetic entries (type:/cosmetic:/regex: parse) with nested matcher impls
+com.moonsworth.lunar.client.fog.holograms	Holograms3_3	com.moonsworth.lunar.client.render.turbo	TurboEntityFilter	per-entity predicate (manager, world, renderer, entity) deciding whether an entity is batched
+com.moonsworth.lunar.client.fog.holograms	Holograms3_4	com.moonsworth.lunar.client.render.turbo	EntityFragDataFactory	FragDataFactory<BridgeExtension> computing the union AABB/culling bounds of a group of entities
+com.moonsworth.lunar.client.fog.holograms	Holograms7	com.moonsworth.lunar.client.account	LunarPlusManager	Lunar+ state service: isLunarPlus/plusColor/logoColor/availableColors + gui.lunarPlus/originalLunarPlus/monthLunarPlus
+com.moonsworth.lunar.client.fog.holograms	Holograms8	com.moonsworth.lunar.client.alert	DismissedAlertStore	alert_manager.json dismissed alert ids ("dismissed"/"alerts"); alert subsystem
+com.moonsworth.lunar.client.fog.holograms	Holograms9	com.moonsworth.lunar.client.mod.misc	StaffModsManager	loads staff_mods.json into a StaffXray store; staff moderation mod config
+com.moonsworth.lunar.client.fog.holograms	HologramsHandler	com.moonsworth.lunar.client.render.turbo	DelegatingFragData	FragData wrapper delegating to an inner FragData plus a timestamp
+com.moonsworth.lunar.client.fog.holograms	HologramsHandler2	com.moonsworth.lunar.client.render.turbo	SimpleFragData	simple FragData impl (count, AABB, boolean, EnumMapImpl)
+com.moonsworth.lunar.client.fog.holograms	HologramsIterator	com.moonsworth.lunar.client.render.turbo	GroundPathFinder	PathFinder for land entities (AABB + direction sweep, ItemcounterType2_3 states)
+com.moonsworth.lunar.client.fog.holograms	HologramsIterator2	com.moonsworth.lunar.client.render.turbo	SwimmingPathFinder	PathFinder variant that swims/water-walks (isInWater branch, water surface level)
+com.moonsworth.lunar.client.fog.holograms	HologramsType	com.moonsworth.lunar.client.render.turbo	BatchEntityType	enum Entity/BlockEntity with lang key, selecting the turbo batch path
+com.moonsworth.lunar.client.fog.holograms	Holograms_2	com.moonsworth.lunar.client.cosmetics	CosmeticCompatibilityPreset	preset of incompatible/compatible cosmetics with a parent (Fov ids), resolves to a CompiledCompatibilityPreset; used by CosmeticCompatibility
+com.moonsworth.lunar.client.fog.holograms	Holograms_3	com.moonsworth.lunar.client.render.turbo	FragData	render batch data contract: getCount(), AABB, flag, TransparencyLayerMap; produced by FragDataFactory
+com.moonsworth.lunar.client.fog.holograms	Holograms_4	com.moonsworth.lunar.client.render.turbo	MatrixBuffer	Bridge2_5 implementation holding a ByteBuffer + Matrix4f[] (per-batch matrix buffer)
+com.moonsworth.lunar.client.fog.holograms	Holograms_5	com.moonsworth.lunar.client.render.turbo	TurboPath	computed path: List<Vector3iBridge> + target ("Path(length="), advance/isDone
+com.moonsworth.lunar.client.fog.holograms	Holograms_6	com.moonsworth.lunar.client.render.turbo	PathSearchContext	path search context (world, entity, chunk-relative origin) exposing block lookups
+com.moonsworth.lunar.client.fog.holograms	Holograms_7	com.moonsworth.lunar.client.render.turbo	PathFinder	abstract per-entity path finder: init(world, entity), node map, width/height, method6() next node
+com.moonsworth.lunar.client.fog.holograms	InternalSettings	com.moonsworth.lunar.client.config	InternalSettings	internal.json: knownEmotes/knownSprays/knownCosmetics/lunarPlusColor; settings container
+com.moonsworth.lunar.client.fog.holograms	LinkRegistry	com.moonsworth.lunar.client.util.collection	LinkRegistry	trivial FogHandler2<String,String> map registry of links; low confidence — generic map store
+com.moonsworth.lunar.client.fog.holograms	LiveExperienceManager	com.moonsworth.lunar.client.framework	LiveExperienceManager	init/close lifecycle service around LiveExperience (live event broadcasting)
+com.moonsworth.lunar.client.fog.holograms	ModsSettings	com.moonsworth.lunar.client.config	ModsSettings	mods.json details/features: instantiates/registers every feature mod (Fps, Cps, Scoreboard, Fov, Fog, Keystrokes, …)
+com.moonsworth.lunar.client.fog.holograms	MorphManager	com.moonsworth.lunar.client.cosmetics.holograms	MorphManager	particles/configuration.json morph schemes, emoteEffect registration, per-entity matrix/vector for morphs; cosmetics/holograms owns morph classes
+com.moonsworth.lunar.client.fog.holograms	NametagOverrideStore	com.moonsworth.lunar.client.mod.render	NametagOverrideStore	per-entity nametag override map; sibling mod/render/Nametag
+com.moonsworth.lunar.client.fog.holograms	OutfitManager	com.moonsworth.lunar.client.cosmetics	OutfitManager	outfits/defaultOutfitId, create/apply/delete outfit, Gui2Iterator outfits; cosmetics outfit store
+com.moonsworth.lunar.client.fog.holograms	PerformanceReporter	com.moonsworth.lunar.client.util.performance	PerformanceReporter	collects BufferPoolMXBean + rendered geckolib/cosmetic counts into RecordPerfSnapshotRequest; performance subsystem (sibling PerfSnapshotRecorder)
+com.moonsworth.lunar.client.fog.holograms	PerformanceSettings	com.moonsworth.lunar.client.config	PerformanceSettings	performance options (turboEntityMode/Rate, turboBlockEntityMode, lazyChunkLoading, hudCaching, limitFps, menuFpsLimit, memorySavings)
+com.moonsworth.lunar.client.fog.holograms	PinnedServerManager	com.moonsworth.lunar.client.network.server	PinnedServerManager	pinned_manager.json of pinned servers + packChoices; server list subsystem
+com.moonsworth.lunar.client.fog.holograms	ProfanityFilter	com.moonsworth.lunar.client.chat	ProfanityFilter	lunar:profanity/profanity_filter.json + word regexes for chat filtering
+com.moonsworth.lunar.client.fog.holograms	SavedSkinManager	com.moonsworth.lunar.client.account.skin	SavedSkinManager	saved_skins.json, GameProfile texture lookup via MinecraftSessionService, slim/classic model; account/skin subsystem
+com.moonsworth.lunar.client.fog.holograms	ServerDiscoveryManager	com.moonsworth.lunar.client.network.server	ServerDiscoveryManager	serverDiscovery:sectionCards decoder, saved-server announcements (Nameplate3), server list cards; server list subsystem
+com.moonsworth.lunar.client.fog.holograms	ServerFeaturesSettings	com.moonsworth.lunar.client.config	ServerFeaturesSettings	features.json: per-server feature toggles incl. ServerCustomNameplate/ServerCommandConfig
+com.moonsworth.lunar.client.fog.holograms	ServerHologramStore	com.moonsworth.lunar.client.mod.render	ServerHologramStore	FogHandler2 per-server store of server-integration holograms; sibling mod/render/ServerHolograms
+com.moonsworth.lunar.client.fog.holograms	ServerIconManager	com.moonsworth.lunar.client.network.server	ServerIconManager	per-server icon map with clear/lookup; server list subsystem
+com.moonsworth.lunar.client.fog.holograms	ServerPinger	com.moonsworth.lunar.client.network.server	ServerPinger	pings servers on lunar-server-ping-%d threads, parses MOTD §-codes + playersOnline/playersMax + SRV; network/server
+com.moonsworth.lunar.client.fog.holograms	SettingsManager	com.moonsworth.lunar.client.config	SettingsManager	owns GeneralSettings/PerformanceSettings/ControlsSettings/InternalSettings and exposes them by name; settings subsystem
+com.moonsworth.lunar.client.fog.holograms	SprayManager	com.moonsworth.lunar.client.cosmetics	SprayManager	sprays.json + spraySound1-4.ogg + spray textures (width/height/offsetX/glowing), places sprays via click.ClickHandler; cosmetics sprays
+com.moonsworth.lunar.client.fog.holograms	StreamerMode	com.moonsworth.lunar.client.framework	StreamerMode	detects OBS/xsplit/Twitch Studio processes on lunar-streamer-mode-thread; AUTOMATIC/ALWAYS_ON feature = framework service
+com.moonsworth.lunar.client.fog.holograms	TabLogoManager	com.moonsworth.lunar.client.account	TabLogoManager	lunar-tab-logo-thread + logo cache rendered next to player names (Gui2Handler2); profile branding = account
+com.moonsworth.lunar.client.fog.holograms	TeamMemberManager	com.moonsworth.lunar.client.account	TeamMemberManager	per-server team member map with join/leave events; account/social data
+com.moonsworth.lunar.client.fog.holograms	TranslationManager	com.moonsworth.lunar.client.translation	TranslationManager	lang/lunar/*.json language loading, Component translation, active/default lang + forceUnicode; client/translation already owns this
+com.moonsworth.lunar.client.fog.holograms	TurboEngineManager	com.moonsworth.lunar.client.render.turbo	TurboEngineManager	manager of the entity/block-entity render batching ("Turbo") engine; referenced by TurboRenderingDebugMod + TurboGroupRebuildsChildHudMod
+com.moonsworth.lunar.client.fog.holograms	UiStateStore	com.moonsworth.lunar.client.gui	UiStateStore	ui-state.json of window positions/sizes/fullscreen/sorts/quickNavigation; GUI state persistence
+com.moonsworth.lunar.client.fog.holograms	VanillaCapeManager	com.moonsworth.lunar.client.cosmetics	VanillaCapeManager	vanilla_capes.json hash/name/rarity + cape Component; cosmetics cape data
+com.moonsworth.lunar.client.fog.holograms	WaypointManager	com.moonsworth.lunar.client.mod.render	WaypointManager	waypoint-patterns.json + /lc_waypoint_chat decoders importing JourneyMap/VoxelMap/Xaero/Skytils/Badlion waypoints; sibling mod/render/Waypoints
+com.moonsworth.lunar.client.fog.holograms.chest	Chest	com.moonsworth.lunar.client.mod.misc	EventChest	marker class of the seasonal event-chest feature (empty body)
+com.moonsworth.lunar.client.fog.holograms.chest	Chest2	com.moonsworth.lunar.client.mod.misc	EventChestDefinition	interface id()/isEnabled()/setup() of a spawnable event chest
+com.moonsworth.lunar.client.fog.holograms.chest	Chest2Handler	com.moonsworth.lunar.client.mod.misc	AprilFoolsChest	EventChestDefinition "AprilFools" spawning a chest with a HologramsHandler
+com.moonsworth.lunar.client.fog.holograms.chest	Chest2Iterator	com.moonsworth.lunar.client.mod.misc	EventChestSpawner	Map of EventChestDefinition + EventRegistrar spawning/removing chests
+com.moonsworth.lunar.client.fog.holograms.chest	Chest2Iterator2	com.moonsworth.lunar.client.mod.misc	AnniversaryChest	EventChestDefinition "Anniversary" with particle positions
+com.moonsworth.lunar.client.fog.holograms.chest.mixin	HologramsHandler	com.moonsworth.lunar.client.mod.misc	EventChestEntityHook	PathFinderHooks impl driven by HologramEntityManager for the event chest
+com.moonsworth.lunar.client.fog.holograms.click	Click	com.moonsworth.lunar.client.cosmetics	SprayPlacement	placed spray instance (SprayEntry + position/direction + affected entities, getRotation)
+com.moonsworth.lunar.client.fog.holograms.click	ClickHandler	com.moonsworth.lunar.client.cosmetics	SprayPlacementImpl	SprayPlacement impl with validity check
+com.moonsworth.lunar.client.fog.holograms.click	ClickHandler2	com.moonsworth.lunar.client.cosmetics	SprayPlacementTracker	SprayPlacement impl carrying a long id/lifetime
+com.moonsworth.lunar.client.fog.holograms.click	Gui2Handler	com.moonsworth.lunar.client.cosmetics	SprayEntry	spray definition ("SprayEntry{id=, name=", texture/width/height/offsetX/particleColor/duration/isFreeLunarPlus) implementing Gui2
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	Colorsaturation	com.moonsworth.lunar.client.render.shader	ShaderCatalog	registry of shader definitions keyed as simple/positioned/positioned_proj/debug/template
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	Colorsaturation2	com.moonsworth.lunar.client.render.shader	ShaderKey	cloak/JIT shader key ("CloakShaderKey(", jit_/dev_/static_ types)
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	Colorsaturation2_2	com.moonsworth.lunar.client.render.shader	ShaderProgramDefinition	shader program JSON: name/type/count/values/vertex/fragment/samplers/uniforms/attributes
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	Colorsaturation3	com.moonsworth.lunar.client.render.shader	ShaderSource	vertex/fragment source pair (LUNAR-SHADER-DEFINITION-MARKER template)
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	Colorsaturation3_2	com.moonsworth.lunar.client.render.shader	ShaderInjectedPipeline	shader-inject pipeline (lunar/shader-inject/vsh/fsh) over a ShaderPipeline
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	Colorsaturation4	com.moonsworth.lunar.client.render.shader	ShaderUniform	uniform/attribute definition (Position/Normal/worldPos, GlslUniformType)
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	Colorsaturation5	com.moonsworth.lunar.client.render.shader	ShaderResource	shader resource (name + ResourceLocation)
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	ColorsaturationType	com.moonsworth.lunar.client.render.shader	ShaderKeyFactory	key factory (BiFunction keyFunction, dev_cosmetics)
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	ColorsaturationType2	com.moonsworth.lunar.client.render.shader	GlslBuiltin	uniform enum OutSize/TimeSeconds/GameTime/Velocity/LunarPlusColor/CameraRot/BiomeColor
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	ColorsaturationType3	com.moonsworth.lunar.client.render.shader	HudShaderTarget	enum BOSSBAR/ACTIONBAR/SCOREBOARD with feature+suffix for HUD shader injection
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	Colorsaturation_2	com.moonsworth.lunar.client.render.shader	ShaderPipeline	base pipeline marker for the shader system
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	FogIterator	com.moonsworth.lunar.client.render.shader	DevShaderEditor	dev shader editor service ("Shader Editor", dev shader vsh/fsh loading, renderOnTick)
+com.moonsworth.lunar.client.fog.holograms.colorsaturation	FogIterator2	com.moonsworth.lunar.client.render.shader	ShaderInjectRegistry	registers post-effect/shader injects (lunar/shader-inject, LUNAR_HUD_SHADER_COMPAT, MH_VERSION)
+com.moonsworth.lunar.client.fog.holograms.colorsaturation.mixin	Colorsaturation	com.moonsworth.lunar.client.render.shader	LunarPostEffect	post-effect (lunar_post_effect, DiffuseSampler) blitting a framebuffer with a shader
+com.moonsworth.lunar.client.fog.holograms.colorsaturation.mixin	ColorsaturationExtension	com.moonsworth.lunar.client.render.shader	BundledShaderLoader	loads bundled shaders/post/*.glsl into a ShaderPipeline
+com.moonsworth.lunar.client.fog.holograms.colorsaturation.mixin	ColorsaturationExtension2	com.moonsworth.lunar.client.render.shader	BlitPostEffect	ShaderPipeline variant performing a "blit"
+com.moonsworth.lunar.client.fog.holograms.coordinates	Coordinates	com.moonsworth.lunar.client.network.server	ServerAddressBook	per-server coordinate/address registry (PingEntry) fed by events
+com.moonsworth.lunar.client.fog.holograms.coordinates	Coordinates2	com.moonsworth.lunar.client.network.server	PingEntry	server address + ping metadata with serialization
+com.moonsworth.lunar.client.fog.holograms.coordinates	Coordinates2Handler	com.moonsworth.lunar.client.network.server	PingEntryRegistry	registry/map of PingEntry keyed per server
+com.moonsworth.lunar.client.fog.holograms.coordinates	Coordinates2Handler2	com.moonsworth.lunar.client.network.server	PingEntryStore	persistent PingEntry store (load/save)
+com.moonsworth.lunar.client.fog.holograms.coordinates	Coordinates2Handler3	com.moonsworth.lunar.client.network.server	PingHistory	ping history list
+com.moonsworth.lunar.client.fog.holograms.coordinates	Coordinates2Handler4	com.moonsworth.lunar.client.network.server	PingStatistics	ping statistics aggregation
+com.moonsworth.lunar.client.fog.holograms.coordinates	CoordinatesImpl	com.moonsworth.lunar.client.network.server	ServerAddressBookImpl	ServerAddressBook implementation
+com.moonsworth.lunar.client.fog.holograms.coordinates	FogLoader	com.moonsworth.lunar.client.network.server	PingEntryConfig	config loader (FogLoader base) for the ping entries
+com.moonsworth.lunar.client.fog.holograms.fishing	Fishing	com.moonsworth.lunar.client.framework.loading	LoadingStage	loading-stage interface (getCategory + loadable resources), registered by loading screen
+com.moonsworth.lunar.client.fog.holograms.fishing	Fishing2	com.moonsworth.lunar.client.framework.loading	LoadableResource	loadable resource entry (isLoaded/name/register)
+com.moonsworth.lunar.client.fog.holograms.fishing	FogLoader2	com.moonsworth.lunar.client.framework.loading	LoadingStageImpl	concrete LoadingStage implementation base
+com.moonsworth.lunar.client.fog.holograms.gui	Gui	com.moonsworth.lunar.client.render.turbo	BoneTransformTable	bone name→transform table (head/arms/legs/item anchors) used by the cosmetic renderer, with boneName helpers
+com.moonsworth.lunar.client.fog.holograms.gui	IterableExtension	com.moonsworth.lunar.client.render.turbo	BatchGroup	iterable group of batched IDs (add/remove/clear/contains)
+com.moonsworth.lunar.client.fog.holograms.gui	IterableExtension2	com.moonsworth.lunar.client.render.turbo	EntityBatchGroup	BatchGroup<ID> of entities (bounds/pos/center vector) used by the turbo recorders
+com.moonsworth.lunar.client.fog.holograms.gui	IterableExtension22	com.moonsworth.lunar.client.render.turbo	SortedEntityBatchGroup	EntityBatchGroup with an extra Set (sorted iteration)
+com.moonsworth.lunar.client.fog.holograms.gui	IterableExtension222	com.moonsworth.lunar.client.render.turbo	SingleEntityBatchGroup	EntityBatchGroup carrying one ID
+com.moonsworth.lunar.client.fog.holograms.gui	IterableExtension23	com.moonsworth.lunar.client.render.turbo	ConsumerEntityBatchGroup	EntityBatchGroup that notifies a Consumer per member
+com.moonsworth.lunar.client.fog.holograms.gui	IterableExtension3	com.moonsworth.lunar.client.render.turbo	SectionBatchGroup	BatchGroup<ID> keyed by section (used by TurboSectionCollector)
+com.moonsworth.lunar.client.fog.holograms.highlight	FogIterator	com.moonsworth.lunar.client.render.texture	VanillaTextureIndex	index of vanilla item/block texture paths (textures/item, textures/blocks/*.png) with lookup cache
+com.moonsworth.lunar.client.fog.holograms.highlight	Highlight	com.moonsworth.lunar.client.render.texture	AnimatedSprite	animated sprite frame set (images, 30-tick frame switch, destroy)
+com.moonsworth.lunar.client.fog.holograms.highlight	Highlight2	com.moonsworth.lunar.client.render.texture	SpriteFrameList	frame list built from images (method1 Optional, build())
+com.moonsworth.lunar.client.fog.holograms.highlight	HighlightHandler	com.moonsworth.lunar.client.render.texture	SpriteHandler	SpriteSource implementation rendering via RenderGroup
+com.moonsworth.lunar.client.fog.holograms.highlight	HighlightIterator	com.moonsworth.lunar.client.render.texture	SpriteGroupBuilder	SpriteSource building sprite groups in a rebuild loop
+com.moonsworth.lunar.client.fog.holograms.highlight	HighlightTask	com.moonsworth.lunar.client.render.texture	SpriteTask	SpriteSource scheduled task over a Map of sprites
+com.moonsworth.lunar.client.fog.holograms.highlight	Highlight_2	com.moonsworth.lunar.client.render.texture	SpriteSource	sprite source interface (load/destroy/state machine shared by sprite impls)
+com.moonsworth.lunar.client.fog.holograms.highlight.mixin	HighlightImpl	com.moonsworth.lunar.client.render.texture	AnimatedSpriteImpl	AnimatedSprite impl cycling a List<AnimatedSprite>
+com.moonsworth.lunar.client.fog.holograms.highlight.mixin	HighlightImpl2	com.moonsworth.lunar.client.render.texture	ResourcePackSprite	AnimatedSprite impl that reads the resource pack ("Reading pack resource ... falling back to vanilla")
+com.moonsworth.lunar.client.fog.holograms.highlight.mixin	HighlightIterator	com.moonsworth.lunar.client.render.texture	SpriteImage	AnimatedSprite impl holding a List of images
+com.moonsworth.lunar.client.fog.holograms.holograms	Holograms	com.moonsworth.lunar.client.render.turbo	RenderGroupRegistry	registry of render groups (Map + reset + list) for the turbo batching
+com.moonsworth.lunar.client.fog.holograms.holograms	Holograms2	com.moonsworth.lunar.client.render.turbo	RenderGroup	per-TransparencyMode group set with "Already in a group"/"Not in a group" guards
+com.moonsworth.lunar.client.fog.holograms.mixin	Holograms	com.moonsworth.lunar.client.render.turbo	PathFinderHooks	hooks interface (method1/method2) implemented by the event-chest entity renderer
+com.moonsworth.lunar.client.fog.holograms.mixin	Holograms2	com.moonsworth.lunar.client.render.turbo	PathMovementHelper	rotation/look + teleport helpers used by the path / relocation filters (wrapDegrees, movement math)
+com.moonsworth.lunar.client.fog.holograms.mixin	Holograms3	com.moonsworth.lunar.client.render.turbo	PathEntity	entity duck interface for the path finder (width/AABB/water/ground/velocity)
+com.moonsworth.lunar.client.fog.holograms.mixin	Holograms4	com.moonsworth.lunar.client.render.turbo	PathSearch	path search algorithm (32-node array + NodeHeap) returning a TurboPath
+com.moonsworth.lunar.client.fog.holograms.mixin	Holograms5	com.moonsworth.lunar.client.render.turbo	NodeHeap	binary heap of PathNode (insert/clear, "Failed to insert node because it is already in the heap")
+com.moonsworth.lunar.client.fog.holograms.mixin	Holograms6	com.moonsworth.lunar.client.render.turbo	PathWorldView	world/chunk accessor over the path finder (block state + collision lookups)
+com.moonsworth.lunar.client.fog.holograms.mixin	Holograms7	com.moonsworth.lunar.client.render.turbo	PathNode	path node (x/y/z + hash + g/f scores + parent + ItemcounterType2_3 state)
+com.moonsworth.lunar.client.fog.holograms.mixin	Holograms7Impl	com.moonsworth.lunar.client.render.turbo	ScoredPathNode	PathNode with best-cost bookkeeping (f = MAX_VALUE, parent, visited flag)
+com.moonsworth.lunar.client.fog.holograms.nameplate	FogHandler	com.moonsworth.lunar.client.render.jit	JitAssetIndex	loads jit_index (textures.lunarclientcdn.com, "Could not find jit index file") and resolves JIT assets
+com.moonsworth.lunar.client.fog.holograms.nameplate	Nameplate	com.moonsworth.lunar.client.render.jit	JitResource	abstract HTTP-downloaded JIT resource (lunar-jit-thread, User-Agent LunarClient/, .mcmeta, CompletableFuture)
+com.moonsworth.lunar.client.fog.holograms.nameplate	Nameplate2	com.moonsworth.lunar.client.render.jit	JitPaths	JIT path/format helpers (lunar-jit, dev_cosmetics, .mcmeta; utility class)
+com.moonsworth.lunar.client.fog.holograms.nameplate	Nameplate2_2	com.moonsworth.lunar.client.render.jit	JitResourceCache	thread-safe TTL cache of JitResource ("[LC JIT] Cache Size", video memory used)
+com.moonsworth.lunar.client.fog.holograms.nameplate	Nameplate3	com.moonsworth.lunar.client.render.jit	JitAssetKey	asset key (ResourceLocation + string) used as the cache key
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateBase	com.moonsworth.lunar.client.render.jit	JitResourceBase	abstract typed JitResource (method8 CompletableFuture<T>, method4 T)
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateBase2	com.moonsworth.lunar.client.render.jit	JitEntityResource	JitResourceBase producing inactive Nameplate2 render entities
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateBase3	com.moonsworth.lunar.client.render.jit	JitItemResource	JitResourceBase producing Rewindhandlers2_2 item data
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateBase4	com.moonsworth.lunar.client.render.jit	JitItemModelResource	JitResourceBase producing ItemTransformsBridge item models
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateBase5	com.moonsworth.lunar.client.render.jit	JitShaderResource	JitResourceBase loading vertex/fragment shaders ("Failed to load", fromString type)
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateBase_2	com.moonsworth.lunar.client.render.jit	JitImageResource	JitResourceBase producing Gui2Handler images ("Unable to find resource file")
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateImpl	com.moonsworth.lunar.client.render.turbo	LivingEntityBatchType	EntityBatchType<Horsestats20Extension> for living entities (visibility + distance ordering)
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateImpl2	com.moonsworth.lunar.client.render.jit	JitModelResource	JitResource<BOBJData> loading BOBJ models
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateImpl_2	com.moonsworth.lunar.client.render.jit	JitEmoteResource	JitResource<Bridge3Extension_7> bound to a Fov3 cosmetic/emote, consumes consumers
+com.moonsworth.lunar.client.fog.holograms.nameplate	NameplateUpdater	com.moonsworth.lunar.client.render.jit	JitAnimatedResource	JitResource with animation (Bridge_58 restartAnimation, emissive frames, tick/cleanUp)
+com.moonsworth.lunar.client.fog.holograms.nameplate	Nameplate_2	com.moonsworth.lunar.client.render.turbo	EntityBatchType	abstract per-entity-class batcher (id/bounds/section + TurboEngineManager hooks); NameplateImpl is its entity implementation
+com.moonsworth.lunar.client.fog.holograms.nameplate	Nameplate_3	com.moonsworth.lunar.client.render.jit	JitCacheSettings	cache TTL/expiry settings (Duration/Duration/Long)
+com.moonsworth.lunar.client.fog.holograms.nameplate.mixin	Nameplate	com.moonsworth.lunar.client.render.jit	JitIndexCache	cleanup task for downloaded_index.json / cached JIT files ("Cleaned up %d JIT files!")
+com.moonsworth.lunar.client.fog.holograms.rewindhandlers	Bridge13Handler	com.moonsworth.lunar.client.render.turbo	TurboPipelineHook	Bridge13_3 + lifecycle service (init/close) owning Bridge_46 for the turbo pipeline
+com.moonsworth.lunar.client.fog.holograms.rewindhandlers	Highlight3Iterator23	com.moonsworth.lunar.client.render.turbo	TurboEntityRecorder	TurboSectionCollector recording affected entities/sections/render types ("[LC Turbo Entities]")
+com.moonsworth.lunar.client.fog.holograms.rewindhandlers	Highlight3Iterator23$Data	com.moonsworth.lunar.client.render.turbo	TurboEntityCost	entity + float cost pair used by the block-entity recorder's sorted map
+com.moonsworth.lunar.client.fog.holograms.rewindhandlers	Highlight3Iterator23_2	com.moonsworth.lunar.client.render.turbo	TurboBlockEntityRecorder	TurboSectionCollector recording affected block entities ("[LC Turbo Block Entities]")
+com.moonsworth.lunar.client.fog.holograms.rewindhandlers	Rewindhandlers	com.moonsworth.lunar.client.render.turbo	TurboSectionCache	per-section cache (Map + WeakHashMap) cleared with the turbo sections in Highlight3Iterator23
+com.moonsworth.lunar.client.fog.mixin	Gui2Handler	com.moonsworth.lunar.client.config.override	AlertCard	SettingOverride/SettingIntercept/OverrideSource: settings override+intercept, not alerts [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.nameplate	Gui2Handler	com.moonsworth.lunar.client.gui.blog	BlogPost	blog post models/download task [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.nameplate	NameplateTask	com.moonsworth.lunar.client.gui.blog	BlogPostDownloadTask	blog post models/download task [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fog.rewindhandlers	RewindhandlersType	com.moonsworth.lunar.client.config	DynamicFeatureFlag	enum RADIO with identifier + enabled/disabled + registerFromJson; dynamic feature flags
+com.moonsworth.lunar.client.fog.rewindhandlers	RewindhandlersType2	com.moonsworth.lunar.client.config	FeatureFlag	client flags (Advent/AprilFools/TurboEngine/Rewind/...) with dynamic reset callbacks; move-only [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fov	Fov	com.moonsworth.lunar.client.framework	Tickable	tick-only contract with no in-tree implementers; renamed: mod.render.Fov is the real FOV mod [via moves-fovfog.tsv]
+com.moonsworth.lunar.client.fov	Fov10	com.moonsworth.lunar.client.cosmetics.emote	RenderContext	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov11	com.moonsworth.lunar.client.cosmetics	PlayerModelPartMap	armour/biped model part name map (armorHead..bipedRightLeg, _minime_, lunar)
+com.moonsworth.lunar.client.fov	Fov2	com.moonsworth.lunar.client.cosmetics.emote	BipedModelRenderer	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov2$Data	com.moonsworth.lunar.client.cosmetics.emote	MeshBatch	mesh batch impl (vertex buffer)
+com.moonsworth.lunar.client.fov	Fov2$Data2	com.moonsworth.lunar.client.cosmetics.emote	VertexBuilder	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov2$Extension	com.moonsworth.lunar.client.cosmetics.emote	VertexSink	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov2$Type	com.moonsworth.lunar.client.cosmetics.emote	GeckoRenderMode	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov2_2	com.moonsworth.lunar.client.cosmetics.emote	CosmeticMeshBuilder	mesh/vertex buffer builder (@Annotation2(min=6), "(off)", "Failed to build buffer for render type") feeding the BOBJ mesh pipeline
+com.moonsworth.lunar.client.fov	Fov2_3	com.moonsworth.lunar.client.chat	ChatMessage	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov2_4	com.moonsworth.lunar.client.cosmetics.emote	EmoteGift	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov2_5	com.moonsworth.lunar.client.cosmetics.emote	MeshPassRunner	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov3	com.moonsworth.lunar.client.cosmetics	ShaderCloakRenderer	shader cloak pipeline (shader_cloak_, lunar_shader_cloak, screenshots, Shader Cloak FBO) rendering cloak cosmetics
+com.moonsworth.lunar.client.fov	Fov3$Data3	com.moonsworth.lunar.client.cosmetics.emote	Transform	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov3$Data4	com.moonsworth.lunar.client.chat	Sticker	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov3$Data5	com.moonsworth.lunar.client.chat	PlainTextContents	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov3$Data6	com.moonsworth.lunar.client.chat	StickerContents	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov3$Data7	com.moonsworth.lunar.client.chat	SystemEventContents	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov3$Type	com.moonsworth.lunar.client.chat	MessageContentType	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov3_2	com.moonsworth.lunar.client.chat	MessageContents	message contents base (type/imageUrls/embed) — duplicate of the chat contents model
+com.moonsworth.lunar.client.fov	Fov3_3	com.moonsworth.lunar.client.cosmetics.emote	TransformStack	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov4	com.moonsworth.lunar.client.render.shader	ShaderPackHelper	shader pack/pass/uniform helpers [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov4$Data	com.moonsworth.lunar.client.cosmetics.emote	GlResources	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov4$Data2	com.moonsworth.lunar.client.chat	LinkPreviewEmbed	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov4$Data3	com.moonsworth.lunar.client.chat	ImageEmbed	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov4$Type	com.moonsworth.lunar.client.chat	EmbedType	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov4_2	com.moonsworth.lunar.client.chat	MessageEmbed	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov4_3	com.moonsworth.lunar.client.cosmetics.emote	GeckoComputePipeline	gecko compute shader pipeline (gecko-compute-vertex-in/transform, Cleaner, weakly-cached per-context buffers)
+com.moonsworth.lunar.client.fov	Fov5	com.moonsworth.lunar.client.cosmetics	PlayerModelPartVisibility	determines visible player-model parts (shield/bipedLeftArm/...) for cosmetic rendering
+com.moonsworth.lunar.client.fov	Fov5$Data	com.moonsworth.lunar.client.chat	InviteEvent	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov5$Data2	com.moonsworth.lunar.client.chat	IconChangeEvent	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov5$Data3	com.moonsworth.lunar.client.chat	LeaveEvent	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov5$Data4	com.moonsworth.lunar.client.chat	NameChangeEvent	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov5$Data5	com.moonsworth.lunar.client.chat	PinnedEvent	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov5$Type	com.moonsworth.lunar.client.chat	SystemEventType	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov5_2	com.moonsworth.lunar.client.render.shader	ShaderUniformUpdater	shader pack/pass/uniform helpers [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov5_3	com.moonsworth.lunar.client.chat	SystemEvent	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov6	com.moonsworth.lunar.client.render.texture	NativeImageBuilder	builder (nested Extension build()) around a native image/buffer (Bridge4_6/Bridge2_32)
+com.moonsworth.lunar.client.fov	Fov6Impl	com.moonsworth.lunar.client.chat	StickerStore	chat messages/embeds/system events [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov6_2	com.moonsworth.lunar.client.chat	Conversation	conversation model: participants/invitePolicy/namePolicy/iconPolicy/messagePinningPolicy/pinnedMessageIds
+com.moonsworth.lunar.client.fov	Fov6_3	com.moonsworth.lunar.client.render.texture	GlintTexture	enchanted-glint texture handler (textures/misc/enchanted_item_glint.png, atlas blocks, ShaderPipeline)
+com.moonsworth.lunar.client.fov	Fov7	com.moonsworth.lunar.client.render	MatrixStack	matrix push/pop stack over ByteBuffer/Matrix4f[] with nested Data
+com.moonsworth.lunar.client.fov	Fov7_2	com.moonsworth.lunar.client.cosmetics.emote	PositionHistory	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov8	com.moonsworth.lunar.client.cosmetics.emote	ModelRenderConfig	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov9	com.moonsworth.lunar.client.render.shader	ComputeShaderCache	cached compute shaders/GL objects (Cleaner, WeakHashMap/ConcurrentHashMap, draw counts)
+com.moonsworth.lunar.client.fov	FovHandler	com.moonsworth.lunar.client.cosmetics.emote	Emote	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	FovImpl	com.moonsworth.lunar.client.cosmetics.emote	EmoteImpl	concrete Emote (extends Emote base) with metadata/resource
+com.moonsworth.lunar.client.fov	FovIterator	com.moonsworth.lunar.client.render.shader	ShaderPass	shader pack/pass/uniform helpers [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	FovIterator2	com.moonsworth.lunar.client.cosmetics	CosmeticLayerRendererImpl	CosmeticLayerRenderer impl ("Could not render cosmetic \"%s\"", _minime_) with texture/metadata handling
+com.moonsworth.lunar.client.fov	FovIterator_2	com.moonsworth.lunar.client.cosmetics	CosmeticLayerRenderer	cosmetic render layer (MExtension<Bridge5_11, EntityPlayerBridge>, Evaluator, shouldRender)
+com.moonsworth.lunar.client.fov	FovType	com.moonsworth.lunar.client.cosmetics.emote	RenderContextKind	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	FovType2	com.moonsworth.lunar.client.cosmetics.emote	RenderContextType	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	FovType3	com.moonsworth.lunar.client.cosmetics.emote	RenderPass	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov_2	com.moonsworth.lunar.client.render.shader	ShaderStateHelper	shader pack/pass/uniform helpers [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov_3	com.moonsworth.lunar.client.account	GuiProfile	GUI player profile (uuid/username/isLunarPlus/plusColor/rankName/lunarPlus badge) serialized to JSON
+com.moonsworth.lunar.client.fov	Fov_4	com.moonsworth.lunar.client.cosmetics.emote	ModelVertexShader	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov_5	com.moonsworth.lunar.client.cosmetics.emote	EmoteModelRenderer	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Fov_6	com.moonsworth.lunar.client.cosmetics.emote	RenderEntityHandle	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov	Gui2Iterator	com.moonsworth.lunar.client.cosmetics.emote	EmoteModel	GeckoLib animatable emote model (IAnimatable/AnimationFactory, registerControllers)
+com.moonsworth.lunar.client.fov	Util2Impl	com.moonsworth.lunar.client.cosmetics	ElytraTextureLoader	custom elytra/wing cloak texture loader (textures/entity/equipment/wings/elytra.png, elytra_ prefix, metadata)
+com.moonsworth.lunar.client.fov	Util2Impl$Data2	com.moonsworth.lunar.client.cosmetics	ElytraTextureMetadata	BufferedImage-based elytra metadata record
+com.moonsworth.lunar.client.fov	Util2Impl_2	com.moonsworth.lunar.client.cosmetics	ElytraTextureLoaderLegacy	legacy elytra texture loader (File/NativeImage/BufferedImage)
+com.moonsworth.lunar.client.fov.mixin	Fov	com.moonsworth.lunar.client.cosmetics	CosmeticIndexEntry	cosmetic index entry (id/name/resource/category/morph/animated/tags/colors/releasedAt) — duplicate of the cosmetics index model
+com.moonsworth.lunar.client.fov.mixin	Fov2	com.moonsworth.lunar.client.cosmetics.emote	PhysicsPoint	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov.mixin	Fov3	com.moonsworth.lunar.client.cosmetics	ClothCloakSolver	cloth/cloak verlet solver (Fov2[][] points, AtomicDoubles, "Cloth Cloak Physics Thread")
+com.moonsworth.lunar.client.fov.mixin	Fov3Task	com.moonsworth.lunar.client.cosmetics	ClothCloakUpdater	per-frame cloth updater (low_body bones, MExtension for players)
+com.moonsworth.lunar.client.fov.mixin	Fov4	com.moonsworth.lunar.client.cosmetics.emote	DistanceConstraint	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov.mixin	FovType	com.moonsworth.lunar.client.cosmetics.emote	CosmeticType	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov.mixin	FovType2	com.moonsworth.lunar.client.cosmetics.emote	Direction2D	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov.mixin	Gui2Handler	com.moonsworth.lunar.client.cosmetics	OwnedCosmetic	owned cosmetic entry (name/resourceLocation/display/itemType/gifter/isFavorite/desiredSkin/skin flags)
+com.moonsworth.lunar.client.fov.mixin	Gui2Handler2	com.moonsworth.lunar.client.cosmetics.emote	EmoteGiftInfo	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov.mixin	Gui2Handler3	com.moonsworth.lunar.client.cosmetics	CosmeticMetadata	metadata holder (metadata JsonObject + Module2 + Gui2Handler cosmetic)
+com.moonsworth.lunar.client.fov.mixin	Gui2Type	com.moonsworth.lunar.client.cosmetics	CosmeticCategoryType	store category enum (CLOAK/HEADWEAR/HAT/BANDANNA/.../SWORD/PICKAXE) with icon/store fields — duplicate of cosmetics CosmeticCategory
+com.moonsworth.lunar.client.fov.mixin	Holograms	com.moonsworth.lunar.client.cosmetics.emote	EmoteRenderLayer	cosmetic/emote render layer (MExtension<Bridge5_11, EntityPlayerBridge>, low_body)
+com.moonsworth.lunar.client.fov.mixin.nameplate	ModuleType3	com.moonsworth.lunar.client.feature	HeightOffsetModuleType	ModuleType3 subclass adding heightOffsetRange metadata
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers	Gui2Iterator	com.moonsworth.lunar.client.cosmetics	Outfit	outfit model (name/favorite/createdAt/updatedAt/skin/badge/cosmetics) serializing to OutfitTree
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers	Rewindhandlers	com.moonsworth.lunar.client.cosmetics.emote	EquipConditionPredicate	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers	Rewindhandlers2	com.moonsworth.lunar.client.cosmetics.emote	ConditionalOutfitTree	cosmetic emote/outfit engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl	com.moonsworth.lunar.client.cosmetics.emote	ConditionEquipCondition	EquipCondition impl driven by a condition predicate
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl10	com.moonsworth.lunar.client.cosmetics.emote	LiteralEquipCondition	EquipCondition matching a literal String variant
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl2	com.moonsworth.lunar.client.cosmetics.emote	NamedEquipCondition	EquipCondition matching a name String
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl3	com.moonsworth.lunar.client.cosmetics.emote	TemperatureEquipCondition	EquipCondition with two Ranges + Temperature
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl4	com.moonsworth.lunar.client.cosmetics.emote	LiquidEquipCondition	EquipCondition matching a Liquid
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl5	com.moonsworth.lunar.client.cosmetics.emote	TimeEquipCondition	EquipCondition matching a Time
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl6	com.moonsworth.lunar.client.cosmetics.emote	StateEquipCondition	EquipCondition matching a State
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl7	com.moonsworth.lunar.client.cosmetics.emote	StringEquipCondition	EquipCondition matching a plain String
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl8	com.moonsworth.lunar.client.cosmetics.emote	BooleanEquipCondition	EquipCondition matching a boolean
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin	RewindhandlersImpl9	com.moonsworth.lunar.client.cosmetics.emote	PatternEquipCondition	EquipCondition matching a regex/pattern String
+com.moonsworth.lunar.client.fov.nameplate	Nameplate	com.moonsworth.lunar.client.network.server	ServerMapping	server-network mapping (name/primaryAddress/addresses) from the server discovery metadata
+com.moonsworth.lunar.client.fov.nameplate	Nameplate2	com.moonsworth.lunar.client.network.server	ServerAnnouncement	announcement (text/countDownTo/countUpFrom)
+com.moonsworth.lunar.client.fov.nameplate	Nameplate3	com.moonsworth.lunar.client.network.server	ServerRecommendation	recommendation (announcement + server) shown in the server list
+com.moonsworth.lunar.client.fov.nameplate	Nameplate4	com.moonsworth.lunar.client.network.server	RecommendedServer	server entry (recommendationId/serverMappingsId/name/logo/background/colors/badge/gameTypes/regionCodes)
+com.moonsworth.lunar.client.fov.nameplate	Nameplate5	com.moonsworth.lunar.client.network.server	SocialLinks	social links (twitter/discord/youtube/instagram/twitch/telegram/reddit/tiktok/facebook)
+com.moonsworth.lunar.client.fov.nameplate	Nameplate6	com.moonsworth.lunar.client.network.server	DiscoverySection	server-discovery section (name/icon/showNotInterested/cardSize/cards)
+com.moonsworth.lunar.client.fov.nameplate	Nameplate7	com.moonsworth.lunar.client.network.server	DiscoveryCard	server-discovery card (name/icon)
+com.moonsworth.lunar.client.fps	Fps	com.moonsworth.lunar.client.cosmetics.molang	MolangVariablePath	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps10	com.moonsworth.lunar.client.cosmetics.molang	MolangCompileOptions	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps11	com.moonsworth.lunar.client.cosmetics.molang	MolangScope	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps2	com.moonsworth.lunar.client.cosmetics.molang	MolangClassDefiner	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps3	com.moonsworth.lunar.client.cosmetics.molang	VariablesMap	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps4	com.moonsworth.lunar.client.cosmetics.molang	MolangJitSignature	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps5	com.moonsworth.lunar.client.cosmetics.molang	MolangBuiltinFunctions	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps6Handler	com.moonsworth.lunar.client.cosmetics.molang	ConstantExpression	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7	com.moonsworth.lunar.client.cosmetics.molang	MolangSymbol	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension	com.moonsworth.lunar.client.cosmetics.molang	MolangBuiltin	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension10	com.moonsworth.lunar.client.cosmetics.molang	MolangMathLn	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension11	com.moonsworth.lunar.client.cosmetics.molang	MolangMathMin	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension12	com.moonsworth.lunar.client.cosmetics.molang	MolangMathSign	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension13	com.moonsworth.lunar.client.cosmetics.molang	MolangMathSqrt	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension14	com.moonsworth.lunar.client.cosmetics.molang	MolangMathCosRadians	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension15	com.moonsworth.lunar.client.cosmetics.molang	MolangMathRandom	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension16	com.moonsworth.lunar.client.cosmetics.molang	MolangMathRandomInteger	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension17	com.moonsworth.lunar.client.cosmetics.molang	MolangCustomFunction	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension18	com.moonsworth.lunar.client.cosmetics.molang	MolangMathAcos	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension19	com.moonsworth.lunar.client.cosmetics.molang	MolangMathMod	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension2	com.moonsworth.lunar.client.cosmetics.molang	MolangMathTanRadians	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension20	com.moonsworth.lunar.client.cosmetics.molang	MolangMathExp	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension21	com.moonsworth.lunar.client.cosmetics.molang	MolangMathSin	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension22	com.moonsworth.lunar.client.cosmetics.molang	MolangMathTrunc	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension23	com.moonsworth.lunar.client.cosmetics.molang	MolangMathAbs	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension24	com.moonsworth.lunar.client.cosmetics.molang	MolangMathAsin	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension25	com.moonsworth.lunar.client.cosmetics.molang	MolangMathCos	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension26	com.moonsworth.lunar.client.cosmetics.molang	MolangMathMinAngle	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension27	com.moonsworth.lunar.client.cosmetics.molang	MolangMathSinRadians	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension28	com.moonsworth.lunar.client.cosmetics.molang	MolangMathAtan	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension29	com.moonsworth.lunar.client.cosmetics.molang	MolangMathLerp	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension3	com.moonsworth.lunar.client.cosmetics.molang	MolangMathDiceRollInteger	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension30	com.moonsworth.lunar.client.cosmetics.molang	MolangMathLerpRotate	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension31	com.moonsworth.lunar.client.cosmetics.molang	MolangMathMax	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension32	com.moonsworth.lunar.client.cosmetics.molang	MolangMathPow	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension33	com.moonsworth.lunar.client.cosmetics.molang	MolangMathDiceRoll	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension4	com.moonsworth.lunar.client.cosmetics.molang	MolangMathRound	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension5	com.moonsworth.lunar.client.cosmetics.molang	MolangMathCeil	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension6	com.moonsworth.lunar.client.cosmetics.molang	MolangMathClamp	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension7	com.moonsworth.lunar.client.cosmetics.molang	MolangMathAtan2	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension8	com.moonsworth.lunar.client.cosmetics.molang	MolangMathFloor	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Extension9	com.moonsworth.lunar.client.cosmetics.molang	MolangMathTan	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps7Handler	com.moonsworth.lunar.client.cosmetics.molang	MolangVariable	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	Fps8	com.moonsworth.lunar.client.cosmetics.molang	MolangClassBuilder	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.fps	MolangExprCompiler	com.moonsworth.lunar.client.cosmetics.molang	MolangExprCompiler	Molang expression JIT compiler (ASM emitters, MolangValueType) — referenced by cosmetics/molang; move-only
+com.moonsworth.lunar.client.fps	MolangStmtCompiler	com.moonsworth.lunar.client.cosmetics.molang	MolangStmtCompiler	Molang statement JIT compiler (MolangStmtEmitter, "Not jiting stmt") — referenced by cosmetics/molang; move-only
+com.moonsworth.lunar.client.fps.mixin	EvaluatableImpl	com.moonsworth.lunar.client.cosmetics.molang.ast	ConstantEvaluatable	Molang expression JIT used by cosmetic animations [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer	com.moonsworth.lunar.client.render.particle	IComponentBase	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer$Data	com.moonsworth.lunar.client.render.particle	TintSolid	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer$Data2	com.moonsworth.lunar.client.render.particle	TintGradient	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2	com.moonsworth.lunar.client.render.particle	BedrockLibrary	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base	com.moonsworth.lunar.client.render.particle	BedrockComponentAppearanceBillboard	Upstream Blockbuster Bedrock component: size/facing_camera_mode/uv+flipbook, calculateUVs w/h; registered by JsonDeserializerIterator under minecraft:particle_appearance_billboard [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base2	com.moonsworth.lunar.client.render.particle	BedrockComponentAppearanceTinting	Upstream Blockbuster component: Tint color from "color"; registered under minecraft:particle_appearance_tinting, sorting index -10 [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base2_2	com.moonsworth.lunar.client.render.particle	BedrockComponentLifetimeLooping	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base2_3	com.moonsworth.lunar.client.render.particle	SNFunction	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base3	com.moonsworth.lunar.client.render.particle	SSFunction	mclib.math.functions.SSFunction: string-in/string-out function base ("cannot receive number arguments", stringValue(), booleanValue = equalsIgnoreCase("true")) [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base3_2	com.moonsworth.lunar.client.render.particle	BedrockComponentLifetimeOnce	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base4	com.moonsworth.lunar.client.render.particle	Cos	mclib.math.functions.trig.Cos: Math.cos(arg0); MathBuilder registers it as function "cos" [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base42	com.moonsworth.lunar.client.render.particle	Abs	mclib.math.functions.classic.Abs: Math.abs(arg0); MathBuilder registers it as "abs" [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base42_2	com.moonsworth.lunar.client.render.particle	Max	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base42_3	com.moonsworth.lunar.client.render.particle	Ceil	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base43	com.moonsworth.lunar.client.render.particle	Exp	mclib.math.functions.classic.Exp: Math.exp(arg0); MathBuilder registers it as "exp" [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base43_2	com.moonsworth.lunar.client.render.particle	Clamp	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base43_3	com.moonsworth.lunar.client.render.particle	Round	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base44	com.moonsworth.lunar.client.render.particle	Min	mclib.math.functions.limit.Min: Math.min(arg0,arg1); MathBuilder registers it as "min" [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base44_2	com.moonsworth.lunar.client.render.particle	Trunc	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base44_3	com.moonsworth.lunar.client.render.particle	Ln	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base45	com.moonsworth.lunar.client.render.particle	Pow	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base46	com.moonsworth.lunar.client.render.particle	Sin	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base47	com.moonsworth.lunar.client.render.particle	Sqrt	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base48	com.moonsworth.lunar.client.render.particle	Mod	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base4_2	com.moonsworth.lunar.client.render.particle	NNFunction	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base4_3	com.moonsworth.lunar.client.render.particle	Floor	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base4_4	com.moonsworth.lunar.client.render.particle	BedrockComponentLifetimeExpression	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base_2	com.moonsworth.lunar.client.render.particle	NSFunction	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Base_3	com.moonsworth.lunar.client.render.particle	BedrockComponentLifetime	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler	com.moonsworth.lunar.client.render.particle	MathFunction	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler2	com.moonsworth.lunar.client.render.particle	Constant	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler22	com.moonsworth.lunar.client.render.particle	Variable	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler3	com.moonsworth.lunar.client.render.particle	Ternary	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler4	com.moonsworth.lunar.client.render.particle	ValueWrapper	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler42	com.moonsworth.lunar.client.render.particle	Negative	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler43	com.moonsworth.lunar.client.render.particle	Negate	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler5	com.moonsworth.lunar.client.render.particle	Operator	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Handler_2	com.moonsworth.lunar.client.render.particle	Group	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Impl	com.moonsworth.lunar.client.render.particle	BedrockComponentParticleLifetime	Upstream Blockbuster component: expiration_expression/max_lifetime -> particle.lifetime; registered under minecraft:particle_lifetime_expression, sorting index 1000 [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Impl2	com.moonsworth.lunar.client.render.particle	BedrockComponentKillPlane	Upstream Blockbuster component: exactly the 4-float plane a,b,c,d and plane-crossing particle.dead test; registered under minecraft:particle_kill_plane, sorting index 100 [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2Impl_2	com.moonsworth.lunar.client.render.particle	BedrockComponentAppearanceLighting	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2_2	com.moonsworth.lunar.client.render.particle	JsonPrettyPrinter	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2_3	com.moonsworth.lunar.client.render.particle	BedrockComponentBase	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer2_4	com.moonsworth.lunar.client.render.particle	IValue	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer3	com.moonsworth.lunar.client.render.particle	MathBuilder	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer3_2	com.moonsworth.lunar.client.render.particle	BedrockScheme	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer3_3	com.moonsworth.lunar.client.render.particle	AngleMath	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer4	com.moonsworth.lunar.client.render.particle	CooldownTimer	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer4_2	com.moonsworth.lunar.client.render.particle	BedrockParticle	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer5	com.moonsworth.lunar.client.render.particle	ClampUtils	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer5_2	com.moonsworth.lunar.client.render.particle	BedrockEmitter	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerExtension	com.moonsworth.lunar.client.render.particle	IComponentEmitterInitialize	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerExtension2	com.moonsworth.lunar.client.render.particle	IComponentEmitterUpdate	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerExtension3	com.moonsworth.lunar.client.render.particle	IComponentParticleRender	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerExtension4	com.moonsworth.lunar.client.render.particle	IComponentParticleUpdate	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerExtension5	com.moonsworth.lunar.client.render.particle	IComponentParticleInitialize	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerImpl	com.moonsworth.lunar.client.render.particle	MolangAssignment	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerImpl2	com.moonsworth.lunar.client.render.particle	MolangValue	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerIterator	com.moonsworth.lunar.client.render.particle	MolangMultiStatement	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerType	com.moonsworth.lunar.client.render.particle	Operation	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerType2	com.moonsworth.lunar.client.render.particle	BedrockMaterial	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerType_2	com.moonsworth.lunar.client.render.particle	CameraFacing	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerType_3	com.moonsworth.lunar.client.render.particle	Interpolation	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	GlintcolorizerType_4	com.moonsworth.lunar.client.render.particle	BedrockCurveType	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer_2	com.moonsworth.lunar.client.render.particle	Interpolations	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer_3	com.moonsworth.lunar.client.render.particle	BedrockCurve	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer_4	com.moonsworth.lunar.client.render.particle	TruePredicate	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer_5	com.moonsworth.lunar.client.render.particle	MolangExpression	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer_6	com.moonsworth.lunar.client.render.particle	HologramSorting	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	Glintcolorizer_7	com.moonsworth.lunar.client.render.particle	Tint	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer	JsonDeserializerIterator	com.moonsworth.lunar.client.render.particle	BedrockParticleDeserializer	abstract JsonDeserializer+JsonSerializer<Glintcolorizer3_2> for Bedrock "particle_effect"/format_version 1.10.0 JSON: description/basic_render_parameters, curves, component registry BiMap (emitter_*/particle_* -> Glin... [via moves-namesC.tsv]
+com.moonsworth.lunar.client.glintcolorizer.highlight	Glintcolorizer2Base	com.moonsworth.lunar.client.render.particle.highlight	BedrockComponentShapeBase	Upstream Blockbuster shape base: offset/direction(inwards [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.highlight	Glintcolorizer2Base2	com.moonsworth.lunar.client.render.particle.highlight	BedrockComponentShapeEntityAABB	Upstream Blockbuster shape: random point in the target entity AABB (width/eye-height) with 6-way surface roll [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.highlight	Glintcolorizer2Base3	com.moonsworth.lunar.client.render.particle.highlight	BedrockComponentShapeSphere	Upstream Blockbuster shape: random unit vector scaled by "radius" (half radius when not surface_only) [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.highlight	Glintcolorizer2Base32	com.moonsworth.lunar.client.render.particle.highlight	BedrockComponentShapeDisc	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer.highlight	Glintcolorizer2Base4	com.moonsworth.lunar.client.render.particle.highlight	BedrockComponentShapePoint	Upstream Blockbuster shape: position = offset, fixed direction applied only for ShapeDirection.Vector [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.highlight	Glintcolorizer2Base5	com.moonsworth.lunar.client.render.particle.highlight	BedrockComponentShapeBox	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer.highlight	Highlight	com.moonsworth.lunar.client.render.particle.highlight	ParticleDirection	abstract particle "direction" JSON option (values "inwards"/"outwards" or [x,y,z]) written into Glintcolorizer4_2.field30; nested FixedVelocity (Molang x/y/z) and RadialVelocity(-1/1); parsed by Glintcolorizer2Base.me... [via moves-namesC.tsv]
+com.moonsworth.lunar.client.glintcolorizer.holograms	Glintcolorizer2Base	com.moonsworth.lunar.client.render.particle.holograms	BedrockComponentRate	Upstream Blockbuster abstract rate base with the single MolangExpression particles field [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.holograms	Glintcolorizer2Base2	com.moonsworth.lunar.client.render.particle.holograms	BedrockComponentRateSteady	Upstream Blockbuster component: spawn_rate/max_particles (default 50), per-emitter-tick emission with fraction carry [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.holograms	Glintcolorizer2Base3	com.moonsworth.lunar.client.render.particle.holograms	BedrockComponentRateInstant	Upstream Blockbuster component: num_particles burst on the first emitter tick (default 10) [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.mixin	Glintcolorizer2Base4	com.moonsworth.lunar.client.render.particle.mixin	SinDegrees	mclib.math.molang.functions.SinDegrees: Math.sin(deg/180*PI); MolangParser (Glintcolorizer3Iterator) registers it as "sin" [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.mixin	Glintcolorizer2Base42	com.moonsworth.lunar.client.render.particle.mixin	CosDegrees	mclib.math.molang.functions.CosDegrees: Math.cos(deg/180*PI); MolangParser registers it as "cos" (distinct from the root Cos) [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.mixin	Glintcolorizer3Iterator	com.moonsworth.lunar.client.render.particle.mixin	MolangParser	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer.mixin	GlintcolorizerException	com.moonsworth.lunar.client.render.particle.mixin	MolangException	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Bridge8Extension3	com.moonsworth.lunar.client.render.particle.nameplate	GifTexture	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Glintcolorizer2Base4	com.moonsworth.lunar.client.render.particle.nameplate	Lerp	mclib.math.functions.utility.Lerp: Interpolations.lerp(a,b,t); registered as "lerp" in MathBuilder [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Glintcolorizer2Base42	com.moonsworth.lunar.client.render.particle.nameplate	HermiteBlend	mclib.math.functions.utility.HermiteBlend: 3x^2-2x^3; registered as "hermite_blend" [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Glintcolorizer2Base43	com.moonsworth.lunar.client.render.particle.nameplate	LerpRotate	mclib.math.functions.utility.LerpRotate: Interpolations.lerpYaw(a,b,t); registered as "lerprotate" [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Glintcolorizer2Base44	com.moonsworth.lunar.client.render.particle.nameplate	RandomFunction	mclib.math.functions.utility.Random: seeded/range random (3rd arg seeds, 2 args pick min..max); registered as "random"; suffixed to avoid the java.util.Random clash in the declaring file [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Glintcolorizer2Impl	com.moonsworth.lunar.client.render.particle.nameplate	BedrockComponentLocalSpace	Upstream Blockbuster component: position/rotation/scale/scale_billboard/direction/acceleration/gravity + linear/angular_velocity flags, sorting index 1000 [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Glintcolorizer2Impl2	com.moonsworth.lunar.client.render.particle.nameplate	BedrockComponentInitialization	Upstream Blockbuster meta component: creation_expression/per_update_expression on the emitter (IComponentEmitterInitialize+Update) [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	JsonDeserializerIterator	com.moonsworth.lunar.client.render.particle.nameplate	BlockbusterParticleDeserializer	subclass of the Bedrock particle deserializer adding billboard/tinting components (particle_appearance_billboard/tinting) and blockbuster:particle_collision_appearance/tinting; instantiated by Glintcolorizer3_2.method2 [via moves-namesC.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Nameplate	com.moonsworth.lunar.client.render.particle.nameplate	HologramBatchRenderer	method1 sorts MorphRenderer holograms by distance and batches them per HologramsType (PARTICLE/BLOCK) with lightmap toggle; method2 decomposes a Matrix3f into scale+Tait-Bryan angles [via moves-namesB.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Nameplate2	com.moonsworth.lunar.client.render.particle.nameplate	ParticleEffectLoader	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate	Nameplate_2	com.moonsworth.lunar.client.render.particle.nameplate	ParticleMath	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate.mixin	Glintcolorizer2Base	com.moonsworth.lunar.client.render.particle.nameplate.mixin	NameplateBillboardComponent	Nameplate-engine appearance billboard: extends the root billboard component and renders nameplate quads through Bridge2_32; registered for minecraft:particle_appearance_billboard by nameplate/JsonDeserializerIterator [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate.mixin	Glintcolorizer2Base2	com.moonsworth.lunar.client.render.particle.nameplate.mixin	NameplateTintingComponent	Nameplate-engine tinting: extends the root tinting component, renderOnScreen applies the Tint; registered for minecraft:particle_appearance_tinting [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate.mixin	Glintcolorizer2Impl	com.moonsworth.lunar.client.render.particle.nameplate.mixin	NameplateCollisionTintingComponent	Upstream BedrockComponentCollisionTinting for the nameplate engine: enabled+color, renders collision-tinting particles only; registered for blockbuster:particle_collision_tinting [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate.mixin	Glintcolorizer2Impl2	com.moonsworth.lunar.client.render.particle.nameplate.mixin	NameplateCollisionAppearanceComponent	Upstream BedrockComponentCollisionAppearance for the nameplate engine: enabled/lit/material/texture + billboard UV/flipbook and the full nameplate quad render; registered for blockbuster:particle_collision_appearance [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.nameplate.mixin	Glintcolorizer5Iterator	com.moonsworth.lunar.client.highlight.mixin	HologramsIterator	particle/entity renderer for the hologram batch (extends Glintcolorizer5_2, implements Holograms8, HologramsType.PARTICLE)
+com.moonsworth.lunar.client.glintcolorizer.nameplate.mixin	GlintcolorizerExtension3	com.moonsworth.lunar.client.render.particle.nameplate.mixin	NameplateGlintRenderer	vendored McLib + Blockbuster Bedrock particle engine [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.glintcolorizer.rewindhandlers	Glintcolorizer2Base	com.moonsworth.lunar.client.render.particle.rewindhandlers	BedrockComponentMotion	Upstream Blockbuster abstract motion base (empty body) [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.rewindhandlers	Glintcolorizer2Base2	com.moonsworth.lunar.client.render.particle.rewindhandlers	BedrockComponentMotionParametric	Upstream Blockbuster component: relative_position + rotation applied to the particle matrix [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.rewindhandlers	Glintcolorizer2Base3	com.moonsworth.lunar.client.render.particle.rewindhandlers	BedrockComponentMotionDynamic	Upstream Blockbuster component: linear_acceleration / linear_drag_coefficient / rotation_acceleration / rotation_drag_coefficient [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.rewindhandlers	Glintcolorizer2Impl	com.moonsworth.lunar.client.render.particle.rewindhandlers	BedrockComponentInitialSpin	Upstream Blockbuster component: "rotation" + "rotation_rate" -> particle initialRotation/rotationVelocity (rate/20) [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.rewindhandlers	Glintcolorizer2Impl2	com.moonsworth.lunar.client.render.particle.rewindhandlers	BedrockComponentInitialSpeed	Upstream Blockbuster component: JSON array direction[3] or primitive speed (default 1) scaling the particle direction [via moves-namesE.tsv]
+com.moonsworth.lunar.client.glintcolorizer.rewindhandlers	Glintcolorizer2Iterator	com.moonsworth.lunar.client.render.particle.rewindhandlers	BedrockComponentMotionCollision	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.holograms	Gui2Handler	com.moonsworth.lunar.client.cosmetics.holograms	EmoteGiftProvider	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.holograms	Holograms	com.moonsworth.lunar.client.cosmetics.holograms	EmoteMorphAnimator	Facade over MorphTracker + EmoteAnimator: update(EmoteController, entity) / render(entity, matrix, bone, partialTick) / isActive; no supertype and zero source refs (legacy emote+morph model driver) [via moves-namesD.tsv]
+com.moonsworth.lunar.client.holograms	Holograms2	com.moonsworth.lunar.client.cosmetics.holograms	IBoneRenderer	GeckoLib/Bedrock hologram + morph models [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.holograms	Holograms3	com.moonsworth.lunar.client.cosmetics.holograms	MorphTimeline	GeckoLib/Bedrock hologram + morph models [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.holograms	Holograms4	com.moonsworth.lunar.client.cosmetics.holograms	MorphTracker	GeckoLib/Bedrock hologram + morph models [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.holograms	Holograms5	com.moonsworth.lunar.client.cosmetics.holograms	EmoteDefinition	GeckoLib/Bedrock hologram + morph models [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.holograms	Holograms6	com.moonsworth.lunar.client.cosmetics.holograms	EmoteAnimator	GeckoLib/Bedrock hologram + morph models [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.holograms	Holograms7	com.moonsworth.lunar.client.cosmetics.holograms	MorphTransform	GeckoLib/Bedrock hologram + morph models [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.holograms	Holograms8	com.moonsworth.lunar.client.cosmetics.holograms	MorphRenderer	GeckoLib/Bedrock hologram + morph models [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.holograms	Holograms8Handler	com.moonsworth.lunar.client.cosmetics.holograms	BlockMorphRenderer	resolved via classes-finalclientA.tsv [via classes-finalclientA.tsv]
+com.moonsworth.lunar.client.holograms	HologramsType	com.moonsworth.lunar.client.cosmetics.holograms	MorphRenderType	PARTICLE/BLOCK tag returned by MorphRenderer.method11(); Nameplate buckets morph renderers by it to order the two passes [via moves-namesD.tsv]
+com.moonsworth.lunar.client.horsestats	FogIterator	com.moonsworth.lunar.client.profile	ModProfileManager	activeProfile/active + /assets/profiles/ + controls.json profile manager [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats	com.moonsworth.lunar.client.profile	ModProfile	mod profile model; icons/profiles/ + ".png" profile icons [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats$Data	com.moonsworth.lunar.client.profile	ProfileData	enabled/value profile-fields bundle [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats$Data2	com.moonsworth.lunar.client.profile	HudPosition	BOTTOM_CENTER/... anchor constants + computed/height HUD position [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats2	com.moonsworth.lunar.client.profile.importer	ExternalProfileLocator	profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats2_2	com.moonsworth.lunar.client.profile	ProfileColor	alpha/blue/CHROMA/color/green/mode profile color [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats3	com.moonsworth.lunar.client.profile.importer	BadlionProfileConverter	profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats4	com.moonsworth.lunar.client.profile.importer	BadlionProfileImporter	profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats5	com.moonsworth.lunar.client.profile.importer	ConvertedProfile	profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats	Horsestats_2	com.moonsworth.lunar.client.profile.importer	BadlionProfileConfig	profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats.mixin	Horsestats	com.moonsworth.lunar.client.profile.importer	ParsedProfileColor	parses "r/g/b[/a]" profile-color string into packed RGBA int [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats.mixin	Horsestats2	com.moonsworth.lunar.client.profile.importer	FeatherConvertedProfile	feather profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats.mixin	Horsestats3	com.moonsworth.lunar.client.profile.importer	FeatherProfileConfig	feather profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats.mixin	Horsestats4	com.moonsworth.lunar.client.profile.importer	FeatherProfileConverter	feather profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.horsestats.mixin	Horsestats5	com.moonsworth.lunar.client.profile.importer	FeatherProfileImporter	feather profile importer piece; name accurate, move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds	com.moonsworth.lunar.client.config.migration	ConfigIdResolver	root id-resolution entry of the config-migration cluster [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds10	com.moonsworth.lunar.client.config.migration	HudOptionMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds11	com.moonsworth.lunar.client.config.migration	CrosshairF5Migration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds12	com.moonsworth.lunar.client.config.migration	HeightLimitMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds13	com.moonsworth.lunar.client.config.migration	ParticleChangerMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds14	com.moonsworth.lunar.client.config.migration	AutoTextActionsMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15	com.moonsworth.lunar.client.config.migration	BossbarColorMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl	com.moonsworth.lunar.client.config.migration	CosmeticIdMigration	per-mod cosmetic id migration root of the 15-family [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl10	com.moonsworth.lunar.client.config.migration	CrosshairOutlineMigration	crosshair-outline per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl2	com.moonsworth.lunar.client.config.migration	OverlayEnabledMigration	overlay-enabled per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl3	com.moonsworth.lunar.client.config.migration	TimeChangerMigration	time-changer per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl4	com.moonsworth.lunar.client.config.migration	BossbarPositionMigration	bossbar y 40->12 per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl5	com.moonsworth.lunar.client.config.migration	SkyblockBossMigration	skyblock bossbar per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl6	com.moonsworth.lunar.client.config.migration	BossbarOffsetMigration	bossbar y 12->1 per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl7	com.moonsworth.lunar.client.config.migration	FullBrightMigration	fullbright per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl8	com.moonsworth.lunar.client.config.migration	ParticleQualityMigration	particle-quality per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl9	com.moonsworth.lunar.client.config.migration	CoordinatesColorMigration	coordinates-color per-mod migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator	com.moonsworth.lunar.client.config.migration	UhcOverlayMigration	UHC overlay migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator2	com.moonsworth.lunar.client.config.migration	HeldItemScaleMigration	held-item scale migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator3	com.moonsworth.lunar.client.config.migration	SettingsMigratorV0toV1	V0→V1 settings migration (loads /assets/conversion/V0toV1/{features,options,enumValues}.json, "SettingsMigratorV0toV1 does not support upgradeOptionId!"); referenced by ConfigMigrator
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator4	com.moonsworth.lunar.client.config.migration	WaypointRenderMigration	waypoint-render migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator5	com.moonsworth.lunar.client.config.migration	MultiFeatureMigration	multi-feature migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator6	com.moonsworth.lunar.client.config.migration	OverlayCleanupMigration	overlay-cleanup migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds2	com.moonsworth.lunar.client.config.migration	ConfigEntryMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds2_2	com.moonsworth.lunar.client.config.migration	BedWarsHeightLimitMigration	BedWars height-limit migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds3	com.moonsworth.lunar.client.config.migration	PotionEffectsMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds3_2	com.moonsworth.lunar.client.config.migration	ConfigMigration	core config-migration driver [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds4	com.moonsworth.lunar.client.config.migration	ConfigMigrator	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds4_2	com.moonsworth.lunar.client.config.migration	FogScaleMigration	removes useMinecraftScale [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds5	com.moonsworth.lunar.client.config.migration	PingMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds6	com.moonsworth.lunar.client.config.migration	BlockOutlineMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds7	com.moonsworth.lunar.client.config.migration	PingEntryMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds8	com.moonsworth.lunar.client.config.migration	SkyblockFloorFourMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds9	com.moonsworth.lunar.client.config.migration	SnaplookMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	KillsoundsHandler	com.moonsworth.lunar.client.config.migration	VersionedIdResolver	versioned id-resolution handler [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds	Killsounds_2	com.moonsworth.lunar.client.config.migration	StopwatchMigration	already-named *Migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds	com.moonsworth.lunar.client.config.migration	VanillaOptionsFile	reads vanilla options file optionsLC.txt [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds2	com.moonsworth.lunar.client.config.migration	MigratedOptionReader	reader over migrated options [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds3	com.moonsworth.lunar.client.config.migration	OptionMigration	already-named option migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds4	com.moonsworth.lunar.client.config.migration	KeyCodeOptionMigration	already-named option migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds5	com.moonsworth.lunar.client.config.migration	FovOptionMigration	already-named option migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds6	com.moonsworth.lunar.client.config.migration	KeyNameOptionMigration	already-named option migration; move-only [via moves-misc.tsv]
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds6Impl	com.moonsworth.lunar.client.config.migration	TypeCoercionMigration	option type-coercion migration [via moves-misc.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay	com.moonsworth.lunar.client.config.option.trait	Lightoverlay	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay2	com.moonsworth.lunar.client.config.option.trait	TraitReader	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay2Extension	com.moonsworth.lunar.client.config.option.trait	TraitHost	resolved via classes-finalclientB.tsv [via classes-finalclientB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay2Extension2	com.moonsworth.lunar.client.config.option.trait	TraitContainer	Iterable<Trait> container with type()/size()/value access
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay3	com.moonsworth.lunar.client.config.option.trait	TraitSet	trait-set reader contract extended by MutableTraitHost (extends Lightoverlay2Extension2 + iterator)
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay3Extension	com.moonsworth.lunar.client.config.option.trait	MutableTraitHost	resolved via classes-finalclientB.tsv [via classes-finalclientB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay3Extension2	com.moonsworth.lunar.client.config.option.trait	MutableTraitHostImpl	MutableTraitContainer impl over an Int2ObjectArrayMap
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay3Extension22	com.moonsworth.lunar.client.config.option.trait	MutableTraitSnapshot	mutable container extension carrying its own snapshot map
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay4	com.moonsworth.lunar.client.config.option.trait	TraitSnapshot	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay5	com.moonsworth.lunar.client.config.option.trait	TraitListener	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay6	com.moonsworth.lunar.client.config.option.trait	TraitReaderMap	TraitReader over a Map of trait types (Maps.newHashMap) used while parsing traits
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay7	com.moonsworth.lunar.client.config.option.trait	TraitDebugFormatter	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay8	com.moonsworth.lunar.client.config.option.trait	Trait	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay9	com.moonsworth.lunar.client.config.option.trait	TraitType	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	Lightoverlay9Impl	com.moonsworth.lunar.client.config.option.trait	BuilderTraitType	resolved via classes-finalclientB.tsv [via classes-finalclientB.tsv]
+com.moonsworth.lunar.client.lightoverlay	LightoverlayException	com.moonsworth.lunar.client.config.option.trait	LightoverlayException	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	LightoverlayHandler	com.moonsworth.lunar.client.config.option.trait	LightoverlayHandler	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lightoverlay	LightoverlayType	com.moonsworth.lunar.client.config.option.trait	LightoverlayType	settings/options framework (OptionCombiner, OptionTreeNode, OptionBaker...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lotusfish	FunctionProvider	com.moonsworth.lunar.client.framework.transform	LwjglFunctionProvider	org.lwjgl.system.FunctionProvider resolving relocated LWJGL function names
+com.moonsworth.lunar.client.lotusfish	Ichor2Handler	com.moonsworth.lunar.client.framework.transform	PreMixinTransform	Lunar bytecode transforms (LwjglRelocation, PreMixin...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lotusfish	Ichor2Handler2	com.moonsworth.lunar.client.framework.transform	GlAccessTransform	IchorInjection restricting org/lwjgl/opengl/GL + java/lang/RuntimeException access (com/moonsworth/ gate)
+com.moonsworth.lunar.client.lotusfish	Ichor2Handler22	com.moonsworth.lunar.client.framework.transform	NewInstanceFactoryTransform	Lunar bytecode transforms (LwjglRelocation, PreMixin...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lotusfish	Ichor2Impl	com.moonsworth.lunar.client.framework.transform	LwjglRelocationTransform	Lunar bytecode transforms (LwjglRelocation, PreMixin...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lotusfish	Ichor2Iterator	com.moonsworth.lunar.client.framework.transform	OmniMixinValidationTransform	IchorInjection validating OmniMixins ("[OmniMixin] All OmniMixins are ok!", Shadow/lombok filtering, com/moonsworth/)
+com.moonsworth.lunar.client.lotusfish	Ichor2Iterator2	com.moonsworth.lunar.client.framework.transform	RandomRewriteTransform	Lunar bytecode transforms (LwjglRelocation, PreMixin...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lotusfish	Ichor5Iterator	com.moonsworth.lunar.client.framework.transform	LunarIntermediaryMapper	Lunar→Intermediary mapping loader (bridge/bridgeConfig.json, "Can't find Lunar to Intermediary mappings")
+com.moonsworth.lunar.client.lotusfish	Ichor6Impl	com.moonsworth.lunar.client.framework.transform	LunarTransformLoader	Lunar bytecode transforms (LwjglRelocation, PreMixin...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lotusfish	Lotusfish	com.moonsworth.lunar.client.framework.transform	FunctionProviderFactory	Lunar bytecode transforms (LwjglRelocation, PreMixin...) [via pkgs-bucketsB.tsv]
+com.moonsworth.lunar.client.lotusfish	MixinInternalTask	com.moonsworth.lunar.client.framework.transform	MixinTaskTransform	client-side IchorInjection wrapper around ichor.MixinInternalTask
+com.moonsworth.lunar.client.nameplate	FogHandler2	com.moonsworth.lunar.client.network.transfer	PingServerCache	ping/transfer server cache [via moves-bucketsC1.tsv]
+com.moonsworth.lunar.client.nameplate	Highlight3Iterator	com.moonsworth.lunar.client.network.transfer	TransferHandler	Apollo transfer/ping websocket handler (super("transfer","Transfer")); obfuscation-leftover name [via moves-bucketsC1.tsv]
+com.moonsworth.lunar.client.nameplate	Nameplate	com.moonsworth.lunar.client.framework.build	LunarBuildData	parses lunarBuildData.txt build keys; nothing to do with nameplates [via moves-bucketsC1.tsv]
+com.moonsworth.lunar.client.nameplate	Nameplate2	com.moonsworth.lunar.client.network.transfer	PingServerData	ping/transfer server data [via moves-bucketsC1.tsv]
+com.moonsworth.lunar.client.nameplate	Nameplate_2	com.moonsworth.lunar.client.network.transfer	TransferSrvResolver	SRV-based transfer server resolver [via moves-bucketsC1.tsv]

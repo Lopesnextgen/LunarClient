@@ -1,0 +1,10 @@
+# Package audit 09 — wrong / misplaced packages
+# Format: old.package<TAB>new.package[<TAB>evidence]
+# Prefix semantics: `old` and every `old.*` subtree move under `new`.
+# Apply with: tools/apply_package_renames.py --map tools/renames/packages-audit09.tsv
+#
+# Apply the class rename map (classes-audit09.tsv) FIRST.
+
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin	com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod	seven debug-report FpsDebugTasks (ThreadDumpTask/ProfileDataTask/FeatureFlagsTask/McSettingsTask/GpuObjectsTask/MiscDataTask/ModsEnabledTask), zero @Mixin classes
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod.mixin	com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod	two stack samplers (ThreadProfiler/AllThreadsProfiler), zero @Mixin classes
+com.moonsworth.lunar.client.framework.feature.crosshair.mixin	com.moonsworth.lunar.client.framework.feature.crosshair	five crosshair option enums (CrosshairGridSize/Scale/Shape/Type/CrosshairMode), zero @Mixin classes

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fat-jar descriptor used by MavenMCP-1.8.9.
+
+  The default `jar-with-dependencies` descriptor ignores system-scoped
+  dependencies, which is where Lunar's bundled libraries (Kotlin stdlib,
+  ASM, Mixin, protobuf, okhttp, …) live. This descriptor unpacks both the
+  regular runtime dependencies and the system-scoped libs, while filtering
+  `com/moonsworth/**` out of the bundled library jar so the compiled sources
+  are not duplicated by their bytecode copies.
+-->
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.1.2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.1.2 http://maven.apache.org/xsd/assembly-2.1.2.xsd">
+    <id>jar-with-dependencies</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <unpack>true</unpack>
+            <scope>runtime</scope>
+            <unpackOptions>
+                <excludes>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                </excludes>
+            </unpackOptions>
+        </dependencySet>
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <useTransitiveDependencies>false</useTransitiveDependencies>
+            <unpack>true</unpack>
+            <scope>system</scope>
+            <unpackOptions>
+                <excludes>
+                    <exclude>com/moonsworth/**</exclude>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                </excludes>
+            </unpackOptions>
+        </dependencySet>
+    </dependencySets>
+</assembly>

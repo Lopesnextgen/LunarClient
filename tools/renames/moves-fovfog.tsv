@@ -1,0 +1,72 @@
+com.moonsworth.lunar.client.fov	ChatMessage	com.moonsworth.lunar.client.conversation	ChatMessage	proto ConversationMessage/ConversationMessageKind + JsonProvider; keys id/content/kind/pinned/sender/sentAt
+com.moonsworth.lunar.client.fov	EmbedType	com.moonsworth.lunar.client.conversation	EmbedType	IMAGE/LINK_PREVIEW embed discriminator
+com.moonsworth.lunar.client.fov	IconChangeEvent	com.moonsworth.lunar.client.conversation	IconChangeEvent	SystemEvent: "changed conversation icon to" + newIconUrl
+com.moonsworth.lunar.client.fov	ImageEmbed	com.moonsworth.lunar.client.conversation	ImageEmbed	MessageEmbed with mimeType key
+com.moonsworth.lunar.client.fov	InviteEvent	com.moonsworth.lunar.client.conversation	InviteEvent	SystemEvent: "invited" + invitees array
+com.moonsworth.lunar.client.fov	LeaveEvent	com.moonsworth.lunar.client.conversation	LeaveEvent	SystemEvent: "left the conversation" + leftMember
+com.moonsworth.lunar.client.fov	LinkPreviewEmbed	com.moonsworth.lunar.client.conversation	LinkPreviewEmbed	MessageEmbed with title/siteName/description/mimeType keys
+com.moonsworth.lunar.client.fov	MessageContentType	com.moonsworth.lunar.client.conversation	MessageContentType	PLAIN_TEXT/STICKER/SYSTEM contents discriminator
+com.moonsworth.lunar.client.fov	MessageEmbed	com.moonsworth.lunar.client.conversation	MessageEmbed	abstract embed; proto ConversationMessageEmbed/ImageEmbed/LinkPreviewEmbed; keys type/rawUrl/proxiedUrl/capturedAtMs
+com.moonsworth.lunar.client.fov	NameChangeEvent	com.moonsworth.lunar.client.conversation	NameChangeEvent	SystemEvent: "changed conversation name" + newName
+com.moonsworth.lunar.client.fov	PinnedEvent	com.moonsworth.lunar.client.conversation	PinnedEvent	SystemEvent: "pinned a message" + pinnedMessageId
+com.moonsworth.lunar.client.fov	PlainTextContents	com.moonsworth.lunar.client.conversation	PlainTextContents	message contents with plainText key
+com.moonsworth.lunar.client.fov	Sticker	com.moonsworth.lunar.client.conversation	Sticker	sticker model: id()/url()/name()
+com.moonsworth.lunar.client.fov	StickerContents	com.moonsworth.lunar.client.conversation	StickerContents	message contents with id/name/sticker/url keys
+com.moonsworth.lunar.client.fov	StickerStore	com.moonsworth.lunar.client.conversation	StickerStore	proto LunarSticker/LunarStickerPack/LunarEmoji; keys stickerPacks/emojis/emojiCategories/maxMessageLength/participantLimit
+com.moonsworth.lunar.client.fov	SystemEvent	com.moonsworth.lunar.client.conversation	SystemEvent	abstract event; proto SystemMessage; keys actor/type/plainText
+com.moonsworth.lunar.client.fov	SystemEventContents	com.moonsworth.lunar.client.conversation	SystemEventContents	message contents with systemEvent key
+com.moonsworth.lunar.client.fov	SystemEventType	com.moonsworth.lunar.client.conversation	SystemEventType	PINNED/INVITE/LEAVE/NAME_CHANGE/ICON_CHANGE
+com.moonsworth.lunar.client.fov	BipedModelRenderer	com.moonsworth.lunar.client.emote	BipedModelRenderer	single-method biped render contract (Bridge5_11/ModelBipedBridge/partialTicks)
+com.moonsworth.lunar.client.fov	Emote	com.moonsworth.lunar.client.emote	Emote	abstract emote; mchorse.emoticons Emotes + emotes/icons/*.webp + expiry + EmoteGift
+com.moonsworth.lunar.client.fov	EmoteGift	com.moonsworth.lunar.client.emote	EmoteGift	gifted emote: id/expiry Instant/gifted ids/EmoteGiftInfo
+com.moonsworth.lunar.client.fov	EmoteModelRenderer	com.moonsworth.lunar.client.emote	EmoteModelRenderer	single-method model render contract implemented by Emote
+com.moonsworth.lunar.client.fov	GeckoRenderMode	com.moonsworth.lunar.client.emote	GeckoRenderMode	RENDERED_NORMAL/RENDERED_GECKO_COMPUTE geckolib dispatch
+com.moonsworth.lunar.client.fov	GlResources	com.moonsworth.lunar.client.emote	GlResources	GL buffer bundle (GlObjectBridge pair + sizes + float[]/int[]) for compute skinning
+com.moonsworth.lunar.client.fov	MeshPassRunner	com.moonsworth.lunar.client.emote	MeshPassRunner	mesh-pass dispatch over VertexSink (NORMAL/EMISSIVE/GLINT passes)
+com.moonsworth.lunar.client.fov	ModelRenderConfig	com.moonsworth.lunar.client.emote	ModelRenderConfig	geckolib render params: AnimationProcessor/texture/color/renderType/pass/light + Data builder
+com.moonsworth.lunar.client.fov	ModelVertexShader	com.moonsworth.lunar.client.emote	ModelVertexShader	#version 430 compute sources for quaternion vertex skinning
+com.moonsworth.lunar.client.fov	PositionHistory	com.moonsworth.lunar.client.emote	PositionHistory	20-sample rolling position averager for cosmetic models
+com.moonsworth.lunar.client.fov	RenderContext	com.moonsworth.lunar.client.emote	RenderContext	render-site context: world/player-model/gui optionals + molang Evaluator + RenderContextType set
+com.moonsworth.lunar.client.fov	RenderContextKind	com.moonsworth.lunar.client.emote	RenderContextKind	IN_WORLD*/IN_COSMETIC* with usesPlayer/inGui flags
+com.moonsworth.lunar.client.fov	RenderContextType	com.moonsworth.lunar.client.emote	RenderContextType	IN_WORLD/IN_PLAYER_MODEL/IN_GUI/IN_FIRST_PERSON
+com.moonsworth.lunar.client.fov	RenderEntityHandle	com.moonsworth.lunar.client.emote	RenderEntityHandle	entity render handle wrapper + flag
+com.moonsworth.lunar.client.fov	RenderPass	com.moonsworth.lunar.client.emote	RenderPass	NORMAL/EMISSIVE/NORMAL_GLINT model pass
+com.moonsworth.lunar.client.fov	Transform	com.moonsworth.lunar.client.emote	Transform	bone transform: scale Vector3f + Quaternionf + translation
+com.moonsworth.lunar.client.fov	TransformStack	com.moonsworth.lunar.client.emote	TransformStack	32-slot push/pop bone transform stack
+com.moonsworth.lunar.client.fov	VertexBuilder	com.moonsworth.lunar.client.emote	VertexBuilder	abstract 8-float vertex accumulator
+com.moonsworth.lunar.client.fov	VertexSink	com.moonsworth.lunar.client.emote	VertexSink	8-float vertex emit contract
+com.moonsworth.lunar.client.fov	Fov	com.moonsworth.lunar.client.framework	Tickable	tick-only contract with no in-tree implementers; renamed: mod.render.Fov is the real FOV mod
+com.moonsworth.lunar.client.fov	ShaderPackHelper	com.moonsworth.lunar.client.shader	ShaderPackHelper	OptiFine ShadersBridge pack-active check + DFB/viewport handling + shader-log line parse
+com.moonsworth.lunar.client.fov	ShaderPass	com.moonsworth.lunar.client.shader	ShaderPass	ShaderDefinition wrapper implementing Colorsaturation_2 pipeline stage
+com.moonsworth.lunar.client.fov	ShaderStateHelper	com.moonsworth.lunar.client.shader	ShaderStateHelper	model-view/projection matrix state + Lunar*Mat uniforms + shader-active checks
+com.moonsworth.lunar.client.fov	ShaderUniformUpdater	com.moonsworth.lunar.client.shader	ShaderUniformUpdater	per-ColorsaturationType2 uniform updater maps
+com.moonsworth.lunar.client.fov.mixin	ConditionalOutfitTree	com.moonsworth.lunar.client.emote	ConditionalOutfitTree	proto OutfitTree/ConditionalOutfit builder over player UUID
+com.moonsworth.lunar.client.fov.mixin	Direction2D	com.moonsworth.lunar.client.emote	Direction2D	already renamed (LEFT/UP/RIGHT/DOWN); move-only
+com.moonsworth.lunar.client.fov.mixin	DistanceConstraint	com.moonsworth.lunar.client.emote	DistanceConstraint	already renamed (soft distance constraint over PhysicsPoints); move-only
+com.moonsworth.lunar.client.fov.mixin	EmoteGiftInfo	com.moonsworth.lunar.client.emote	EmoteGiftInfo	already renamed (gift uuid/username/message/anonymous JSON); move-only
+com.moonsworth.lunar.client.fov.mixin	EquipConditionPredicate	com.moonsworth.lunar.client.emote	EquipConditionPredicate	abstract predicate over proto EquipCondition for outfit equip rules
+com.moonsworth.lunar.client.fov.mixin	FovType	com.moonsworth.lunar.client.emote	CosmeticType	HAT/CLOAK/BODYWEAR/WINGS/GECKOLIB cosmetic slot enum; old name is not FOV code
+com.moonsworth.lunar.client.fov.mixin	PhysicsPoint	com.moonsworth.lunar.client.emote	PhysicsPoint	already renamed (Verlet point for cosmetic cloth solver); move-only
+com.moonsworth.lunar.client.fog	Fog	com.moonsworth.lunar.client.framework	LoadableHandler	init()/close() lifecycle; implemented by hitcolor/horsestats/inactive handlers + RenderSubmissionManager; not fog code
+com.moonsworth.lunar.client.fog	FogHandler	com.moonsworth.lunar.client.framework	ItemSetHandler	Set<T> loading handler ("Loading X.../loaded N items"); old name collides with hitcolor.FogHandler
+com.moonsworth.lunar.client.fog	AbstractMapHandler	com.moonsworth.lunar.client.framework	ItemMapHandler	Map<T,V> loading handler; extended by nameplate/PingServerCache
+com.moonsworth.lunar.client.fog	Lighting3Extension	com.moonsworth.lunar.client.framework	JsonFileConfig	file-backed JSON load/save with sentry CrashReporter "Savable" attachment; no in-tree implementers
+com.moonsworth.lunar.client.fog	FogType	com.moonsworth.lunar.client.account	AccountType	MOJANG/Xbox account enum over handshake MinecraftIdentity.Type; not fog code
+com.moonsworth.lunar.client.fog	Lighting3Loader	com.moonsworth.lunar.client.account	AccountProfile	profile flags: avatar/eligibleForMigration/hasMultipleProfiles/legacy/persistent/userProperites
+com.moonsworth.lunar.client.fog	Lighting3Loader2	com.moonsworth.lunar.client.account	AccountSession	abstract session: accessToken/username/AccountType/expiry + skin via SavedSkin/DummyPlayer; used by AccountBridge
+com.moonsworth.lunar.client.fog	Lighting3Loader3	com.moonsworth.lunar.client.account	MinecraftProfile	minecraftProfile {id,name} holder
+com.moonsworth.lunar.client.fog	GcMonitor	com.moonsworth.lunar.client.performance	GcMonitor	JFR jdk.GarbageCollection pause tracker feeding setGcCycles/Longest/Shortest/Avg/MedianGcMicro
+com.moonsworth.lunar.client.fog	Highlight3Iterator	com.moonsworth.lunar.client.performance	PerfSnapshotRecorder	frame-time ring over EventRenderTickEnd + sodium flag into RecordPerfSnapshotRequest.Builder
+com.moonsworth.lunar.client.fog	IgnoredExceptionPatterns	com.moonsworth.lunar.client.inventorymod	IgnoredExceptionPatterns	static name->Pattern registry consumed by ExceptionSanitizer; move-only
+com.moonsworth.lunar.client.fog.chest	StyngrSong	com.moonsworth.lunar.client.music	StyngrSong	styngr track: styngrId/name/artist/album/durationMillis/copyrightSafe; consumed by Emote
+com.moonsworth.lunar.client.fog.click	ClickImpl	com.moonsworth.lunar.client.texture	ClickImpl	package-private string-set collector; parent fog.click.mixin.Click absent from tree
+com.moonsworth.lunar.client.fog.click	TextureProcessor	com.moonsworth.lunar.client.texture	TextureProcessor	@FunctionalInterface over Extension (name/dims/get/set pixel); used by overlay Glass/OreTextureProcessor
+com.moonsworth.lunar.client.fog.fishing	SavedSkin	com.moonsworth.lunar.client.skin	SavedSkin	saved skin: url/skinType/name/hash/favoriteIndex
+com.moonsworth.lunar.client.fog.fishing	SkinLoadException	com.moonsworth.lunar.client.skin	SkinLoadException	skin loading failure; move-only
+com.moonsworth.lunar.client.fog.fishing	SkinType	com.moonsworth.lunar.client.skin	SkinType	CLASSIC/Steve + SLIM/Alex with default texture URLs
+com.moonsworth.lunar.client.fog.gui	ModMetadata	com.moonsworth.lunar.client.framework	ModMetadata	ModCategory sets + features.<id> language path; move-only
+com.moonsworth.lunar.client.fog.gui	OptionGroup	com.moonsworth.lunar.client.lighting	OptionGroup	name + List<LightingExtension<?>> holder; move-only
+com.moonsworth.lunar.client.fog.mixin	AlertCard	com.moonsworth.lunar.client.alert	AlertCard	lunar alert card: id/name/text/color/icon/link/dismissible + {COUNTDOWN:} + icons/alerts/*.webp; no in-tree users
+com.moonsworth.lunar.client.fog.nameplate	BlogPost	com.moonsworth.lunar.client.blog	BlogPost	post: title/imageUrl/link + hash for http texture cache; move-only
+com.moonsworth.lunar.client.fog.nameplate	BlogPostDownloadTask	com.moonsworth.lunar.client.blog	BlogPostDownloadTask	Runnable downloading BlogPost images to texture cache; move-only
+com.moonsworth.lunar.client.fog.rewindhandlers	FeatureFlag	com.moonsworth.lunar.client.config	FeatureFlag	client flags (Advent/AprilFools/TurboEngine/Rewind/...) with dynamic reset callbacks; move-only

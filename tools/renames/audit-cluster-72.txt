@@ -1,0 +1,8 @@
+com.moonsworth.lunar.icon
+com.moonsworth.lunar.icon.mixin
+com.moonsworth.lunar.legacy
+com.moonsworth.lunar.legacy.mixin
+com.moonsworth.lunar.legacy.optifine.wrapper
+com.moonsworth.lunar.legacy.wrapper
+com.moonsworth.lunar.legacy.wrapper.mixin
+com.moonsworth.lunar.legacy.wrapper.util

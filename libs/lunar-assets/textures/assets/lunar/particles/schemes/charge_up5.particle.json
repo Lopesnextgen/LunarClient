@@ -1,0 +1,54 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "lunar:charge_up5",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "lunar:particles/textures/rocks.webp"
+			}
+		},
+		"curves": {
+			"variable.size": {
+				"type": "catmull_rom",
+				"input": "variable.particle_age",
+				"horizontal_range": "variable.particle_lifetime",
+				"nodes": [0, 0, 1, 0.67, 0, 0]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 30,
+				"max_particles": 100
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_point": {
+				"offset": [0, "math.random(0.0, 0.2)", 0],
+				"direction": [0, 1, 0]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 1
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(-80.0, 80.0)",
+				"rotation_rate": 180
+			},
+			"minecraft:particle_initial_speed": "1.75 + variable.particle_random_3",
+			"minecraft:particle_motion_parametric": {
+				"relative_position": ["math.sin((variable.particle_age + variable.particle_random_3) * 270) * (0.75 + variable.particle_age / 5)", "variable.particle_age / 2 + variable.particle_random_2", "math.cos((variable.particle_age + variable.particle_random_3) * 270) * (0.75 + variable.particle_age / 5)"]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": ["0.1 * variable.size", "0.1 * variable.size"],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 24,
+					"texture_height": 24,
+					"uv": ["math.floor(variable.particle_random_1 * 3.0) * 8.0", "math.floor(variable.particle_random_2 * 3.0) * 8.0"],
+					"uv_size": [8, 8]
+				}
+			}
+		}
+	}
+}

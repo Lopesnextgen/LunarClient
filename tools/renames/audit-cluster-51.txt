@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.inactive.mixin
+com.moonsworth.lunar.client.inactive.mixin.colorsaturation
+com.moonsworth.lunar.client.inactive.mixin.colorsaturation.mixin
+com.moonsworth.lunar.client.inactive.mixin.fishing
+com.moonsworth.lunar.client.inactive.mixin.gui
+com.moonsworth.lunar.client.inactive.mixin.gui.mixin
+com.moonsworth.lunar.client.inactive.mixin.highlight
+com.moonsworth.lunar.client.inactive.mixin.highlight.mixin

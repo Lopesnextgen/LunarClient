@@ -1,0 +1,343 @@
+{
+  "catacombs": {
+    "basic": {
+      "finalPattern": " +\u2620 Defeated .*",
+      "bloodOpen": {
+        "translatableName": "bloodOpen",
+        "color": "dark_red",
+        "pattern": "\\[BOSS\\] The Watcher: .*"
+      },
+      "bloodClear": {
+        "translatableName": "bloodClear",
+        "color": "red",
+        "pattern": "\\[BOSS\\] The Watcher: You have proven yourself\\. You may pass\\."
+      }
+    },
+    "F1": {
+      "bossName": "Bonzo",
+      "color": "gold",
+      "uniqueSplits": [
+        {
+          "translatableName": "bonzoPhaseOne",
+          "color": "gold",
+          "pattern": "\\[BOSS\\] Bonzo: Oh I'm dead!"
+        },
+        {
+          "translatableName": "bonzoPhaseTwo",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "M1": {
+      "bossName": "Bonzo",
+      "color": "gold",
+      "uniqueSplits": [
+        {
+          "translatableName": "bonzoPhaseOne",
+          "color": "gold",
+          "pattern": "\\[BOSS\\] Bonzo: Oh I'm dead!"
+        },
+        {
+          "translatableName": "bonzoPhaseTwo",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "F2": {
+      "bossName": "Scarf",
+      "color": "white",
+      "uniqueSplits": [
+        {
+          "translatableName": "scarfPhaseOne",
+          "color": "white",
+          "pattern": "\\[BOSS\\] Scarf: Those toys are not strong enough I see\\."
+        },
+        {
+          "translatableName": "scarfPhaseTwo",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "M2": {
+      "bossName": "Scarf",
+      "color": "white",
+      "uniqueSplits": [
+        {
+          "translatableName": "scarfPhaseOne",
+          "color": "white",
+          "pattern": "\\[BOSS\\] Scarf: Those toys are not strong enough I see\\."
+        },
+        {
+          "translatableName": "scarfPhaseTwo",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "F3": {
+      "bossName": "The Professor",
+      "entryTranslation": "professorEntry",
+      "color": "red",
+      "uniqueSplits": [
+        {
+          "translatableName": "guardians",
+          "color": "white",
+          "pattern": "\\[BOSS\\] The Professor: Oh\\? You found my Guardians' one weakness\\?"
+        },
+        {
+          "translatableName": "professorPhaseOne",
+          "color": "red",
+          "pattern": "\\[BOSS\\] The Professor: I see\\. You have forced me to use my ultimate technique\\."
+        },
+        {
+          "translatableName": "professorPhaseTwo",
+          "color": "red",
+          "final": true
+        }
+      ]
+    },
+    "M3": {
+      "bossName": "The Professor",
+      "entryTranslation": "professorEntry",
+      "color": "red",
+      "uniqueSplits": [
+        {
+          "translatableName": "guardians",
+          "color": "white",
+          "pattern": "\\[BOSS\\] The Professor: Oh\\? You found my Guardians' one weakness\\?"
+        },
+        {
+          "translatableName": "professorPhaseOne",
+          "color": "red",
+          "pattern": "\\[BOSS\\] The Professor: I see\\. You have forced me to use my ultimate technique\\."
+        },
+        {
+          "translatableName": "professorPhaseTwo",
+          "color": "red",
+          "final": true
+        }
+      ]
+    },
+    "F4": {
+      "bossName": "Thorn",
+      "color": "white",
+      "uniqueSplits": [
+        {
+          "name": "Thorn",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "M4": {
+      "bossName": "Thorn",
+      "color": "white",
+      "uniqueSplits": [
+        {
+          "name": "Thorn",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "F5": {
+      "bossName": "Livid",
+      "color": "red",
+      "uniqueSplits": [
+        {
+          "name": "Livid",
+          "color": "red",
+          "final": true
+        }
+      ]
+    },
+    "M5": {
+      "bossName": "Livid",
+      "color": "red",
+      "uniqueSplits": [
+        {
+          "name": "Livid",
+          "color": "red",
+          "final": true
+        }
+      ]
+    },
+    "F6": {
+      "bossName": "Sadan",
+      "color": "red",
+      "uniqueSplits": [
+        {
+          "name": "Terracottas",
+          "color": "light_purple",
+          "pattern": "\\[BOSS\\] Sadan: ENOUGH!"
+        },
+        {
+          "translatableName": "giants",
+          "color": "green",
+          "pattern": "\\[BOSS\\] Sadan: You did it\\. I understand now, you have earned my respect\\."
+        },
+        {
+          "name": "Sadan",
+          "color": "red",
+          "final": true
+        }
+      ]
+    },
+    "M6": {
+      "bossName": "Sadan",
+      "color": "red",
+      "uniqueSplits": [
+        {
+          "name": "Terracottas",
+          "color": "light_purple",
+          "pattern": "\\[BOSS\\] Sadan: ENOUGH!"
+        },
+        {
+          "translatableName": "giants",
+          "color": "green",
+          "pattern": "\\[BOSS\\] Sadan: You did it\\. I understand now, you have earned my respect\\."
+        },
+        {
+          "name": "Sadan",
+          "color": "red",
+          "final": true
+        }
+      ]
+    },
+    "F7": {
+      "bossName": "Maxor",
+      "color": "red",
+      "uniqueSplits": [
+        {
+          "name": "Maxor",
+          "color": "light_purple",
+          "pattern": "\\[BOSS\\] Storm: Pathetic Maxor, just like expected\\."
+        },
+        {
+          "name": "Storm",
+          "color": "aqua",
+          "pattern": "\\[BOSS\\] Goldor: Who dares trespass into my domain\\?"
+        },
+        {
+          "translatableName": "terminals",
+          "color": "gold",
+          "pattern": "The Core entrance is opening!"
+        },
+        {
+          "name": "Goldor",
+          "color": "gray",
+          "pattern": "\\[BOSS\\] Necron: You went further than any human before, congratulations\\."
+        },
+        {
+          "name": "Necron",
+          "color": "red",
+          "final": true
+        }
+      ]
+    },
+    "M7": {
+      "bossName": "Maxor",
+      "color": "red",
+      "uniqueSplits": [
+        {
+          "name": "Maxor",
+          "color": "light_purple",
+          "pattern": "\\[BOSS\\] Storm: Pathetic Maxor, just like expected\\."
+        },
+        {
+          "name": "Storm",
+          "color": "aqua",
+          "pattern": "\\[BOSS\\] Goldor: Who dares trespass into my domain\\?"
+        },
+        {
+          "translatableName": "terminals",
+          "color": "gold",
+          "pattern": "The Core entrance is opening!"
+        },
+        {
+          "name": "Goldor",
+          "color": "gray",
+          "pattern": "\\[BOSS\\] Necron: You went further than any human before, congratulations\\."
+        },
+        {
+          "name": "Necron",
+          "color": "red",
+          "pattern": "\\[BOSS\\] Necron: All this, for nothing\\.\\.\\."
+        },
+        {
+          "name": "Wither King",
+          "color": "gray",
+          "final": true
+        }
+      ]
+    }
+  },
+  "kuudra": {
+    "basic": {
+      "finalPattern": " +KUUDRA DOWN!",
+      "supplies": {
+        "translatableName": "supplies",
+        "color": "dark_aqua",
+        "pattern": "\\[NPC\\] Elle: OMG! Great work collecting my supplies!"
+      },
+      "build": {
+        "translatableName": "build",
+        "color": "aqua",
+        "pattern": "\\[NPC\\] Elle: Phew! The Ballista is finally ready! It should be strong enough to tank Kuudra's blows now!"
+      },
+      "stun": {
+        "translatableName": "stun",
+        "color": "green",
+        "pattern": "\\[NPC\\] Elle: POW! SURELY THAT'S IT! I don't think he has any more in him!"
+      }
+    },
+    "T1": {
+      "uniqueSplits": [
+        {
+          "translatableName": "end",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "T2": {
+      "uniqueSplits": [
+        {
+          "translatableName": "end",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "T3": {
+      "uniqueSplits": [
+        {
+          "translatableName": "end",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "T4": {
+      "uniqueSplits": [
+        {
+          "translatableName": "end",
+          "color": "white",
+          "final": true
+        }
+      ]
+    },
+    "T5": {
+      "uniqueSplits": [
+        {
+          "name": "Kuudra",
+          "color": "red",
+          "final": true
+        }
+      ]
+    }
+  }
+}

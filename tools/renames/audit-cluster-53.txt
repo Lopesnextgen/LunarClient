@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.itemtracker
+com.moonsworth.lunar.client.keystrokes
+com.moonsworth.lunar.client.killsounds
+com.moonsworth.lunar.client.killsounds.mixin
+com.moonsworth.lunar.client.knockbacktrainer
+com.moonsworth.lunar.client.lighting
+com.moonsworth.lunar.client.lighting.mixin
+com.moonsworth.lunar.client.lighting.nameplate

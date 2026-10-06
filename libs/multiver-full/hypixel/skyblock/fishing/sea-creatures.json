@@ -1,0 +1,780 @@
+{
+  "SQUID": {
+    "name": "Squid",
+    "spawnMessage": "A Squid appeared.",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "SEA_WALKER": {
+    "name": "Sea Walker",
+    "spawnMessage": "You caught a Sea Walker.",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "FROZEN_STEVE": {
+    "name": "Frozen Steve",
+    "spawnMessage": "Frozen Steve fell into the pond long ago, never to resurface...until now!",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER",
+      "WINTER"
+    ]
+  },
+  "FROSTY": {
+    "name": "Frosty",
+    "spawnMessage": "It's a snowman! He looks harmless.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "WINTER"
+    ]
+  },
+  "NIGHT_SQUID": {
+    "name": "Inkling",
+    "spawnMessage": "You get an inkling that you've caught... an Inkling!",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "HOTSPOT"
+    ]
+  },
+  "SEA_GUARDIAN": {
+    "name": "Jumpin' Jack",
+    "spawnMessage": "Watch out! It's Jumpin' Jack.",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER",
+      "SPOOKY"
+    ]
+  },
+  "FROG_MAN": {
+    "name": "Frog Man",
+    "spawnMessage": "Is it a frog? Is it a man? Well, yes, sorta, IT'S FROG MAN!!!!!!",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER",
+      "HOTSPOT"
+    ]
+  },
+  "TRASH_GOBBLER": {
+    "name": "Trash Gobbler",
+    "spawnMessage": "The Trash Gobbler is hungry for you!",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER",
+      "BAYOU"
+    ]
+  },
+  "BOGGED": {
+    "name": "Bogged",
+    "spawnMessage": "You've hooked a Bogged!",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER",
+      "GALATEA"
+    ]
+  },
+  "DUMPSTER_DIVER": {
+    "name": "Dumpster Diver",
+    "spawnMessage": "A Dumpster Diver has emerged from the swamp!",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "BAYOU"
+    ]
+  },
+  "NURSE_SHARK": {
+    "name": "Nurse Shark",
+    "spawnMessage": "A tiny fin emerges from the water, you've caught a Nurse Shark.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "FESTIVAL"
+    ]
+  },
+  "MITHRIL_GRUBBER": {
+    "name": "Mithril Grubber",
+    "spawnMessage": "A leech of the mines surfaces... you've caught a Mithril Grubber.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "QUARRY"
+    ]
+  },
+  "MEDIUM_MITHRIL_GRUBBER": {
+    "name": "Medium Mithril Grubber",
+    "spawnMessage": "A leech of the mines surfaces... you've caught a Medium Mithril Grubber.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "QUARRY"
+    ]
+  },
+  "LARGE_MITHRIL_GRUBBER": {
+    "name": "Large Mithril Grubber",
+    "spawnMessage": "A leech of the mines surfaces... you've caught a Large Mithril Grubber.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "QUARRY"
+    ]
+  },
+  "BLOATED_MITHRIL_GRUBBER": {
+    "name": "Bloated Mithril Grubber",
+    "spawnMessage": "A leech of the mines surfaces... you've caught a Bloated Mithril Grubber.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "QUARRY"
+    ]
+  },
+  "WETWING": {
+    "name": "Wetwing",
+    "spawnMessage": "Look! A Wetwing emerges!",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "GALATEA"
+    ]
+  },
+  "SEA_WITCH": {
+    "name": "Sea Witch",
+    "spawnMessage": "It looks like you've disrupted the Sea Witch's brewing session. Watch out, she's furious!",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "SCARECROW": {
+    "name": "Scarecrow",
+    "spawnMessage": "Phew! It's only a Scarecrow.",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER",
+      "SPOOKY"
+    ]
+  },
+  "SEA_ARCHER": {
+    "name": "Sea Archer",
+    "spawnMessage": "You reeled in a Sea Archer.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "TADGANG": {
+    "name": "Tadgang",
+    "spawnMessage": "A gang of Liltads!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "GALATEA"
+    ]
+  },
+  "OASIS_SHEEP": {
+    "name": "Oasis Sheep",
+    "spawnMessage": "An Oasis Sheep appears from the water.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "OASIS"
+    ]
+  },
+  "OASIS_RABBIT": {
+    "name": "Oasis Rabbit",
+    "spawnMessage": "An Oasis Rabbit appears from the water.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "OASIS"
+    ]
+  },
+  "BANSHEE": {
+    "name": "Banshee",
+    "spawnMessage": "The desolate wail of a Banshee breaks the silence.",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "BAYOU"
+    ]
+  },
+  "BLUE_SHARK": {
+    "name": "Blue Shark",
+    "spawnMessage": "You spot a fin as blue as the water it came from, it's a Blue Shark.",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "FESTIVAL"
+    ]
+  },
+  "SNAPPING_TURTLE": {
+    "name": "Snapping Turtle",
+    "spawnMessage": "A Snapping Turtle is coming your way, and it's ANGRY!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "HOTSPOT"
+    ]
+  },
+  "MONSTER_OF_THE_DEEP": {
+    "name": "Rider of The Deep",
+    "spawnMessage": "The Rider of the Deep has emerged.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "ENT": {
+    "name": "Ent",
+    "spawnMessage": "You've hooked an Ent, as ancient as the forest itself.",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER",
+      "GALATEA"
+    ]
+  },
+  "CATFISH": {
+    "name": "Catfish",
+    "spawnMessage": "Huh? A Catfish!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "GRINCH": {
+    "name": "Grinch",
+    "spawnMessage": "The Grinch stole Jerry's Gifts...get them back!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "WINTER"
+    ]
+  },
+  "FRIED_CHICKEN": {
+    "name": "Fried Chicken",
+    "spawnMessage": "Smells of burning. Must be a Fried Chicken.",
+    "rarity": "COMMON",
+    "requirements": [
+      "LAVA",
+      "HOTSPOT",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "CARROT_KING": {
+    "name": "Carrot King",
+    "spawnMessage": "Is this even a fish? It's the Carrot King!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "CARROT_BAIT"
+    ]
+  },
+  "NIGHTMARE": {
+    "name": "Nightmare",
+    "spawnMessage": "You hear trotting from beneath the waves, you caught a Nightmare.",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "SPOOKY"
+    ]
+  },
+  "AGARIMOO": {
+    "name": "Agarimoo",
+    "spawnMessage": "Your Chumcap Bucket trembles, it's an Agarimoo.",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "CHUMCAP"
+    ]
+  },
+  "WATER_WORM": {
+    "name": "Water Worm",
+    "spawnMessage": "A Water Worm surfaces!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "CRYSTAL_HOLLOWS"
+    ]
+  },
+  "BAYOU_SLUDGE": {
+    "name": "Bayou Sludge",
+    "spawnMessage": "A swampy mass of slime emerges, the Bayou Sludge!",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER",
+      "BAYOU"
+    ]
+  },
+  "SEA_LEECH": {
+    "name": "Sea Leech",
+    "spawnMessage": "Gross! A Sea Leech!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "FIREPROOF_WITCH": {
+    "name": "Fireproof Witch",
+    "spawnMessage": "Trouble's brewing, it's a Fireproof Witch!",
+    "rarity": "RARE",
+    "requirements": [
+      "LAVA",
+      "HOTSPOT",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "STRIDERSURFER": {
+    "name": "Stridersurfer",
+    "spawnMessage": "You caught a Stridersurfer.",
+    "rarity": "RARE",
+    "requirements": [
+      "LAVA",
+      "GALATEA"
+    ]
+  },
+  "POISIONED_WATER_WORM": {
+    "name": "Poisoned Water Worm",
+    "spawnMessage": "A Poisoned Water Worm surfaces!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "CRYSTAL_HOLLOWS"
+    ]
+  },
+  "GUARDIAN_DEFENDER": {
+    "name": "Guardian Defender",
+    "spawnMessage": "You've discovered a Guardian Defender of the sea.",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "WEREWOLF": {
+    "name": "Werewolf",
+    "spawnMessage": "It must be a full moon, a Werewolf appears.",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER",
+      "SPOOKY"
+    ]
+  },
+  "TIGER_SHARK": {
+    "name": "Tiger Shark",
+    "spawnMessage": "A striped beast bounds from the depths, the wild Tiger Shark!",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER",
+      "FESTIVAL"
+    ]
+  },
+  "DEEP_SEA_PROTECTOR": {
+    "name": "Deep Sea Protector",
+    "spawnMessage": "You have awoken the Deep Sea Protector, prepare for a battle!",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "FLAMING_WORM": {
+    "name": "Flaming Worm",
+    "spawnMessage": "A Flaming Worm surfaces from the depths!",
+    "rarity": "RARE",
+    "requirements": [
+      "LAVA",
+      "CRYSTAL_HOLLOWS"
+    ]
+  },
+  "WATER_HYDRA": {
+    "name": "Water Hydra",
+    "spawnMessage": "The Water Hydra has come to test your strength.",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "LAVA_BLAZE": {
+    "name": "Lava Blaze",
+    "spawnMessage": "A Lava Blaze has surfaced from the depths!",
+    "rarity": "EPIC",
+    "requirements": [
+      "LAVA",
+      "CRYSTAL_HOLLOWS"
+    ]
+  },
+  "ALLIGATOR": {
+    "name": "Alligator",
+    "spawnMessage": "A long snout breaks the surface of the water. It's an Alligator!",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "BAYOU"
+    ]
+  },
+  "SEA_EMPEROR": {
+    "name": "The Loch Emperor",
+    "spawnMessage": "The Loch Emperor arises from the depths.",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER"
+    ]
+  },
+  "PHANTOM_FISHER": {
+    "name": "Phantom Fisher",
+    "spawnMessage": "The spirit of a long lost Phantom Fisher has come to haunt you.",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "SPOOKY"
+    ]
+  },
+  "LAVA_PIGMAN": {
+    "name": "Lava Pigman",
+    "spawnMessage": "A Lava Pigman arose from the depths!",
+    "rarity": "EPIC",
+    "requirements": [
+      "LAVA",
+      "CRYSTAL_HOLLOWS"
+    ]
+  },
+  "ZOMBIE_MINER": {
+    "name": "Abyssal Miner",
+    "spawnMessage": "An Abyssal Miner breaks out of the water!",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "CRYSTAL_HOLLOWS"
+    ]
+  },
+  "GREAT_WHITE_SHARK": {
+    "name": "Great White Shark",
+    "spawnMessage": "Hide no longer, a Great White Shark has tracked your scent and thirsts for your blood!",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "FESTIVAL"
+    ]
+  },
+  "YETI": {
+    "name": "Yeti",
+    "spawnMessage": "What is this creature!?",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "WINTER"
+    ]
+  },
+  "NESSIE": {
+    "name": "Nessie",
+    "spawnMessage": "You've caused a disturbance in the loch. Could it be... Nessie?",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "WATER",
+      "GALATEA"
+    ]
+  },
+  "GRIM_REAPER": {
+    "name": "Grim Reaper",
+    "spawnMessage": "This can't be! The manifestation of death himself!",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "SPOOKY"
+    ]
+  },
+  "MAGMA_SLUG": {
+    "name": "Magma Slug",
+    "spawnMessage": "From beneath the lava appears a Magma Slug.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "MOOGMA": {
+    "name": "Moogma",
+    "spawnMessage": "You hear a faint Moo from the lava... A Moogma appears.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "NUTCRACKER": {
+    "name": "Nutcracker",
+    "spawnMessage": "You found a forgotten Nutcracker laying beneath the ice.",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER",
+      "WINTER"
+    ]
+  },
+  "LAVA_LEECH": {
+    "name": "Lava Leech",
+    "spawnMessage": "A small but fearsome Lava Leech emerges.",
+    "rarity": "RARE",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "TITANOBOA": {
+    "name": "Titanoboa",
+    "spawnMessage": "A massive Titanoboa surfaces. Its body stretches as far as the eye can see.",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "WATER",
+      "BAYOU"
+    ]
+  },
+  "PYROCLASTIC_WORM": {
+    "name": "Pyroclastic Worm",
+    "spawnMessage": "You feel the heat radiating as a Pyroclastic Worm surfaces.",
+    "rarity": "RARE",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "LAVA_FLAME": {
+    "name": "Lava Flame",
+    "spawnMessage": "A Lava Flame flies out from beneath the lava.",
+    "rarity": "RARE",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "FIRE_EEL": {
+    "name": "Fire Eel",
+    "spawnMessage": "A Fire Eel slithers out from the depths.",
+    "rarity": "RARE",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "TAURUS": {
+    "name": "Taurus",
+    "spawnMessage": "Taurus and his steed emerge.",
+    "rarity": "EPIC",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "BLUE_RINGED_OCTOPUS": {
+    "name": "Blue Ringed Octopus",
+    "spawnMessage": "A garish set of tentacles arise. It's a Blue Ringed Octopus!",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "HOTSPOT"
+    ]
+  },
+  "REINDRAKE": {
+    "name": "Reindrake",
+    "spawnMessage": "A Reindrake forms from the depths.",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "WATER",
+      "WINTER"
+    ]
+  },
+  "PLHLEGBLAST": {
+    "name": "Plhlegblast",
+    "spawnMessage": "WOAH! A Plhlegblast appeared.",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "THUNDER": {
+    "name": "Thunder",
+    "spawnMessage": "You hear a massive rumble as Thunder emerges.",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "FIERY_SCUTTLER": {
+    "name": "Fiery Scuttler",
+    "spawnMessage": "A Fiery Scuttler inconspicuously waddles up to you, friends in tow.",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "LAVA",
+      "HOTSPOT",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "WIKI_TIKI": {
+    "name": "Wiki Tiki",
+    "spawnMessage": "The water bubbles and froths. A massive form emerges- you have disturbed the Wiki Tiki! You shall pay the price.",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "WATER",
+      "HOTSPOT"
+    ]
+  },
+  "LORD_JAWBUS": {
+    "name": "Lord Jawbus",
+    "spawnMessage": "You have angered a legendary creature... Lord Jawbus has arrived.",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "LAVA",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "RAGNAROK": {
+    "name": "Ragnarok",
+    "spawnMessage": "The sky darkens and the air thickens. The end times are upon us: Ragnarok is here.",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "LAVA",
+      "HOTSPOT",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "ATOLL_CROAKER": {
+    "name": "Atoll Croaker",
+    "spawnMessage": "An inquisitive Atoll Croaker takes the bait!",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER",
+      "LOTUS"
+    ]
+  },
+  "PUDDLE_JUMPER": {
+    "name": "Puddle Jumper",
+    "spawnMessage": "A Puddle Jumper is preparing for liftoff—cast your rod into it and hold on tight!",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "LOTUS"
+    ]
+  },
+  "LOTUS_GUARDIAN": {
+    "name": "Lotus Guardian",
+    "spawnMessage": "A Lotus Guardian emerges, ready to protect the Atoll.",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "LOTUS"
+    ]
+  },
+  "GORF": {
+    "name": "gorF",
+    "spawnMessage": "What even is that?! A... gorF?",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "LOTUS"
+    ]
+  },
+  "FROG_PRINCE": {
+    "name": "Frog Prince",
+    "spawnMessage": "Bow down before the Frog Prince... or pay the hefty price!",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "WATER",
+      "LOTUS"
+    ]
+  },
+  "DROWNED_CAPTAIN": {
+    "name": "Drowned Captain",
+    "spawnMessage": "A Drowned Captain takes hold of your bobber!",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER",
+      "LOTUS"
+    ]
+  },
+  "VOLCANIC_SNAIL": {
+    "name": "Volcanic Snail",
+    "spawnMessage": "You feel a burning sensation as you reel in a Volcanic Snail!",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "LAVA",
+      "HOTSPOT",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "MAGMA_PILLAR": {
+    "name": "Magma Pillar",
+    "spawnMessage": "A Magma Pillar rises from the lava.",
+    "rarity": "EPIC",
+    "requirements": [
+      "LAVA",
+      "HOTSPOT",
+      "CRIMSON_ISLE"
+    ]
+  },
+  "MANTA_RAY": {
+    "name": "Manta Ray",
+    "spawnMessage": "A majestic creature rises from the water. It's a Manta Ray.",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER",
+      "HOTSPOT"
+    ]
+  },
+  "HAGGARD": {
+    "name": "Haggard",
+    "spawnMessage": "A Haggard stumbles to the shore, ready for a fight!",
+    "rarity": "COMMON",
+    "requirements": [
+      "WATER",
+      "CANYON"
+    ]
+  },
+  "BRINELING": {
+    "name": "Brineling",
+    "spawnMessage": "A Brineling interrupts you with a stream of bubbles!",
+    "rarity": "UNCOMMON",
+    "requirements": [
+      "WATER",
+      "CANYON"
+    ]
+  },
+  "SPRAWL": {
+    "name": "Sprawl",
+    "spawnMessage": "A Sprawl emerges from the blue, and it’s looking for you!",
+    "rarity": "RARE",
+    "requirements": [
+      "WATER",
+      "CANYON"
+    ]
+  },
+  "TORRID": {
+    "name": "Torrid",
+    "spawnMessage": "The laughter of a Torrid echoes through the air.",
+    "rarity": "EPIC",
+    "requirements": [
+      "WATER",
+      "CANYON"
+    ]
+  },
+  "SILKBREEZE": {
+    "name": "Silkbreeze",
+    "spawnMessage": "Something zips through the air - it’s a Silkbreeze!",
+    "rarity": "LEGENDARY",
+    "requirements": [
+      "WATER",
+      "CANYON"
+    ]
+  },
+  "GIANT_ISOPOD": {
+    "name": "Giant Isopod",
+    "spawnMessage": "A Giant Isopod was dredged up from the depths!",
+    "rarity": "MYTHIC",
+    "requirements": [
+      "WATER",
+      "CANYON"
+    ]
+  }
+}

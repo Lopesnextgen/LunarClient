@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.highlight.mixin.rewindhandlers
+com.moonsworth.lunar.client.hitbox
+com.moonsworth.lunar.client.hitcolor
+com.moonsworth.lunar.client.holograms
+com.moonsworth.lunar.client.horsestats
+com.moonsworth.lunar.client.horsestats.mixin
+com.moonsworth.lunar.client.inactive
+com.moonsworth.lunar.client.inactive.gui

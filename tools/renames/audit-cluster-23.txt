@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.crosshair
+com.moonsworth.lunar.client.framework.feature.crosshair.crosshairelytra
+com.moonsworth.lunar.client.framework.feature.crosshair.mixin
+com.moonsworth.lunar.client.framework.feature.debug
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod.mixin

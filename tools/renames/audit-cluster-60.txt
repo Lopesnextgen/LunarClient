@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.render.particle.highlight
+com.moonsworth.lunar.client.render.particle.holograms
+com.moonsworth.lunar.client.render.particle.mixin
+com.moonsworth.lunar.client.render.particle.nameplate
+com.moonsworth.lunar.client.render.particle.nameplate.mixin
+com.moonsworth.lunar.client.render.particle.rewindhandlers
+com.moonsworth.lunar.client.render.shader
+com.moonsworth.lunar.client.render.texture

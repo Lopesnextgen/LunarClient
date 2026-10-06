@@ -1,0 +1,183 @@
+# Cluster B renames — `Nameplate` / `Nameplate2*` / `Gui2Extension` / `GuiExtension` mass names
+
+Map: `tools/renames/moves-namesB.tsv` — **86 rows, all renames in place** (newpkg == oldpkg);
+no two rows share the same `oldpkg`+`old`, so no 6th `file` column is needed.
+
+Dry run:
+
+```
+$ python3 tools/apply_class_moves.py --map tools/renames/moves-namesB.tsv
+[class-moves] rows=86 skipped=0 files_moved=86 files_touched=261 mode=dry-run
+```
+
+## 1. `Nameplate` (14 of 15 packages; `util.nameplate` already fixed by namesA) — 14 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.cosmetics.inactive.mixin.nameplate` | `Nameplate` | **`AnimationFileLoader`** | loads GeckoLib animation JSON per ResourceLocation: method1 builds AnimationCache, method3 reads the resource stream (Sentry attachment literally "animation-file-loader.json"); used by FogIterator/ModelGeometryLoader |
+| `com.moonsworth.lunar.client.driver.core.gui.mixin.nameplate` | `Nameplate` | **`ConversationImageUploader`** | conversation group-icon / chat-image upload pipeline: file picker (Gui4), 5 MiB limit, MimeTypeUtils, GetUploadUrls + presigned PUT, posts "conversation:iconUpload"/"chatImagesUploaded" JS events |
+| `com.moonsworth.lunar.client.driver.nameplate.mixin` | `Nameplate` | **`ComponentCharCallback`** | @FunctionalInterface void accept(T, int) bound to DriverComponent.method17(int) (char typed) via ComponentStyleData.method26, alongside the sibling Component*Callback interfaces |
+| `com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms.nameplate` | `Nameplate` | **`HologramTextRenderer`** | static draw of a string/Component at x,y with NORMAL/SHADOW/BORDER (Type); used by Holograms3_2, MapRoomRenderer, Holograms4Updater |
+| `com.moonsworth.lunar.client.framework.feature.mod.gui.nameplate` | `Nameplate` | **`HudVisibilityWrapper`** | MixinCore9Extension decorator: method4(boolean)/method30() gate rendering on IslandUtils + "hide on other islands" option; factory method4(MixinCore9Extension) used by dozens of HUD mods as Nameplate.method4(new X.Data()) |
+| `com.moonsworth.lunar.client.framework.listener.nameplate` | `Nameplate` | **`EventSubscriptionRegistry`** | holds List<EventSubscription<Highlight>>, register()/unregister() every consumer with its priority on the LunarEventBus; siblings DynamicListenerEvent/ThreadedEvent |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Nameplate` | **`UnlockableFeature`** | Framework3 decorator with a locked flag (initially true): isEnabled/method3 report false and load() buffers the value until unlock() applies it; debug mods wrap Framework3.method6(default) with it |
+| `com.moonsworth.lunar.client.render.particle.nameplate` | `Nameplate` | **`HologramBatchRenderer`** | method1 sorts MorphRenderer holograms by distance and batches them per HologramsType (PARTICLE/BLOCK) with lightmap toggle; method2 decomposes a Matrix3f into scale+Tait-Bryan angles |
+| `com.moonsworth.lunar.client.replay.highlight.nameplate` | `Nameplate` | **`UndoRedoStore`** | K/V store interface with get/put/remove/method7 that applies changes inside UndoRedoManager transactions; implemented by LinkedHashMapImpl/TreeMapImpl/TransactionalSet |
+| `com.moonsworth.lunar.client.replay.mixin.nameplate` | `Nameplate` | **`ZipEntryLocator`** | ZIP central-directory parser: method1(FileChannel, name) walks EOCD/ZIP64 records to return ZipEntryLocation(dataOffset, size); used by RewindFileReader for "packets.dat" |
+| `com.moonsworth.lunar.client.replay.nameplate` | `Nameplate` | **`ReplayPacketRegistry`** | static Map<Integer,List<Class<? extends ReplayPacket>>>: method1 class->index of the packet id, method2 id+index -> newInstance; id 0 registers every recorded packet class |
+| `com.moonsworth.lunar.client.replay.rewindhandlers.nameplate` | `Nameplate` | **`LayerPropertiesContext`** | per-layer mod (Fishing2Iterator) maps keyed by type: method2 rotates "applied" into "previously applied", cleanup() tears down entries absent from the new set; Lombok toString is literally "LayerPropertiesContext(...)" |
+| `com.moonsworth.lunar.client.replay.rewindhandlersNameplate` | `Nameplate` | **`VideoFrameBuffer`** | immutable ByteBuffer + width + height frame handed to the ffmpeg pipeline (RewindRenderQueue -> FFmpegRenderer.method2) |
+| `com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore` | `Nameplate` | **`ClientboundPacketEventFactory`** | static factories wrapping a raw packet into a clientbound EventPacket: method1 uses CONFIGURATION, method2 uses PLAY; used by the capture/recorder classes |
+
+## 2. `Nameplate2Impl` (7 packages) — 7 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.replay.nameplate` | `Nameplate2Impl` | **`KeybindPacket`** | KeybindAction + boolean state; applies into ReplayContext.method15() keybind map and method4 returns the inverted packet; recorded by KeybindRecorder |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin` | `Nameplate2Impl` | **`LocationPacket`** | ReplayEnvironment + value string; replay sets ReplayContext.method30(new ReplayLocation(env,value)); recorded by LocationRecorder |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.colorsaturation` | `Nameplate2Impl` | **`TickMarkerPacket`** | tick-only packet with empty replay handler; RewindHandlers.method23 uses getTick() to seek and InputTimelinePanel splits the stream into per-tick segments (marker) |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.fishing` | `Nameplate2Impl` | **`SnapshotEndPacket`** | no payload; method3 calls ReplayContext.method36(-1) clearing the state-refresh target tick; emitted last by RewindRecorder.method2 after all RecorderCapture snapshots |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.highlight` | `Nameplate2Impl` | **`NoOpPacket`** | empty read/write and empty replay handler; used as the no-op inverse packet (e.g. returned by gui/Nameplate2Impl2.method4) and by RewindFileReader |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.holograms` | `Nameplate2Impl` | **`AttackStrengthPacket`** | tick value replayed onto Player.bridge$setAttackStrengthTicker (and itemSwapTicker on MC>=35); recorded by PlayerStateRecorder |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.nameplate` | `Nameplate2Impl` | **`MessageSignaturePacket`** | byte[] serialized chat message-signature cache; replay calls NetHandlerPlayClient.bridge$deserializeMessageSignatureCache (MC>=15); recorded by MessageSignatureRecorder |
+
+## 3. `Nameplate2Impl2` (6 packages) — 6 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.replay.nameplate` | `Nameplate2Impl2` | **`ProtobufMessagePacket`** | protobuf Any bytes: replayed via AssetServerClient.method2, or FogHandler2.method18 for Override/ConfigurableSettings; recorded from RewindRecorder.method1 (ApolloSettingsCapture and asset-server websocket messages) |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin` | `Nameplate2Impl2` | **`HypixelLocationPacket`** | JSON string deserialized to HypixelLocation and pushed to HypixelLocationListener; recorded by ScoreboardRecorder |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.fishing` | `Nameplate2Impl2` | **`SnapshotStartPacket`** | boolean payload; emitted first by RewindRecorder.method2 before every RecorderCapture, sets ReplayContext.method36(current tick) as the state-refresh target when flagged |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.gui` | `Nameplate2Impl2` | **`CloseScreenPacket`** | clears the replay GUI screen (GuiScreenContext.method1(null)); inverse method4 reopens the stored screen |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.holograms` | `Nameplate2Impl2` | **`UseItemOnBlockPacket`** | position/block fields; replay calls PlayerController.bridge$useItemOn; recorded by PlayerStateRecorder |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.nameplate` | `Nameplate2Impl2` | **`SetPausedPacket`** | paused boolean replayed into ReplayContext.method33(paused); method4 returns the inverted packet; recorded by PlayerStateRecorder |
+
+## 4. `Nameplate2Impl3` (5 packages) — 5 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.replay.nameplate` | `Nameplate2Impl3` | **`HudPositionPacket`** | feature id + Gui2Extension2 (HUD anchor) + x/y; replay calls MixinCore9Extension.method27(anchor)/method17(x,y) on the mod named by the id |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.fishing` | `Nameplate2Impl3` | **`SnapshotLoadPacket`** | UUID + boolean; method3 calls RewindFileReader.method8(uuid) which switches to "snapshots/<uuid>/packets.dat" and loads mods.json |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.gui` | `Nameplate2Impl3` | **`MouseInputPacket`** | MouseInputType CLICK/RELEASE/DRAG/SCROLL with coords and modifiers; replayed through GuiScreenContext alignment mapping into bridge$mouseClicked/Released/ClickMove/Scrolled |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.holograms` | `Nameplate2Impl3` | **`SetSprintingPacket`** | sprinting boolean replayed onto Player.bridge$setSprinting; recorded by PlayerStateRecorder |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.nameplate` | `Nameplate2Impl3` | **`RawNetworkPacket`** | packet id + byte[] + PacketDirectionBridge + BridgeType2_2; replay rebuilds and handles the raw packet; recorded/described by PacketRecorder (name()/data() debug strings) |
+
+## 5. `Nameplate2Impl4` (4 packages) — 4 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.replay.nameplate` | `Nameplate2Impl4` | **`DisconnectPacket`** | Type.DISCONNECT -> EventDisconnect.method2(true); recorded by RewindRecorder.method6 on EventDisconnect |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.fishing` | `Nameplate2Impl4` | **`ResetLevelPacket`** | no payload; method3 calls RewindHandlers.method14() which clears the level and chat and re-creates the local session; emitted on resume |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.gui` | `Nameplate2Impl4` | **`ScreenAlignmentPacket`** | two GuiType values set GuiScreenContext.method17/18 (x/y anchoring used to map recorded mouse coords) |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.holograms` | `Nameplate2Impl4` | **`AttackPacket`** | no payload; replay calls PlayerController.bridge$attack(); recorded by PlayerStateRecorder |
+
+## 6. `Nameplate2Impl5` (3 packages) — 3 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.replay.nameplate` | `Nameplate2Impl5` | **`MouseWheelPacket`** | double delta replayed as EventMouseWheel on the event bus; method4 returns the negated packet; recorded from the EventMouseWheel handler |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.gui` | `Nameplate2Impl5` | **`OpenChatPacket`** | message string replayed via Screen.bridge$openChat(message); recorded from GuiStateRecorder |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.holograms` | `Nameplate2Impl5` | **`UseItemPacket`** | EventUseItem slot; replay calls PlayerController.bridge$useItem(slot); recorded by PlayerStateRecorder |
+
+## 7. `Nameplate2Impl6` (3 packages) — 3 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.replay.nameplate` | `Nameplate2Impl6` | **`ServerSettingOverridePacket`** | feature id + Type FORCE_ENABLED/FORCE_DISABLED/NONE; method3 applies SettingIntercept from OverrideSource.SERVER to the named mod |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.gui` | `Nameplate2Impl6` | **`OpenInventoryPacket`** | creative-tab index; replay calls bridge$setCreativeTab and opens the inventory; recorded from GuiStateRecorder |
+| `com.moonsworth.lunar.client.replay.nameplate.mixin.holograms` | `Nameplate2Impl6` | **`PickBlockPacket`** | no payload; replay calls Screen.bridge$pickBlock(); recorded from EventPickBlock |
+
+## 8. `Nameplate2_2` (3 packages) — 3 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.framework.nameplate` | `Nameplate2_2` | **`CommandSuggestionProvider`** | @FunctionalInterface provide(CommandArguments, Nameplate3_2) called by ArgumentCommandNode/CommandArgumentParser and CommandCompleter to collect tab suggestions |
+| `com.moonsworth.lunar.client.replay.nameplate` | `Nameplate2_2` | **`EntityOverridesCategory`** | DynamicCategory listing online players as SettingOptions keyed RewindSettingKeys("player", uuid); instantiated for the "entityOverrides" category |
+| `com.moonsworth.lunar.client.replay.rewindhandlers.nameplate` | `Nameplate2_2` | **`RewindInteractionJsApi`** | DriverGuiExtension registered as the "rewindInteraction" JS provider; callbacks setAsCameraTarget/hide/nametag/skin write rewind setting overrides for the selected entity |
+
+## 9. `Gui2Extension` option enums (21 of 22 packages; `util.rewindhandlers` already fixed by namesA) — 21 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.framework.feature.armorstatus` | `Gui2Extension` | **`ArmorStatusListMode`** | option "listMode"/"mode": VERTICAL("vertical")/HORIZONTAL("horizontal") selecting the armor-status list layout (Armorstatus.field19, ArmorStatusPanelRenderer) |
+| `com.moonsworth.lunar.client.framework.feature.mod.fishing` | `Gui2Extension` | **`FishingChatType`** | chat-message categories ISLAND_VISITOR/ALL/PARTY/GUILD/GUILD_OFFICER/DM_RECEIVE/DM_SEND/COOP with command + Rewindhandlers.Extension class + id; filters which chats a fishing command records |
+| `com.moonsworth.lunar.client.framework.feature.mod.fishing.highlight.mixin` | `Gui2Extension` | **`HighlightTextSide`** | option "textSide": ABOVE/LEFT/RIGHT/BELOW placement of a HighlightButton hover text (HighlightSerializer/HighlightButton) |
+| `com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms` | `Gui2Extension` | **`HeadBorderStyle`** | option "HeadBorderStyle": NONE/SINGLE_COLOR/CLASS_COLORS border colouring of map player heads (BettermapSettings.field38) |
+| `com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms.nameplate` | `Gui2Extension` | **`RouteRenderType`** | option "secretRoutesPathType": PARTICLES/LINE/ARROW/LINE_DASHED/ARROW_DASHED/NONE (ids routeRenderType*), SecretRoutePath setting of SkyblockDungeonRoutes |
+| `com.moonsworth.lunar.client.framework.feature.mod.highlight` | `Gui2Extension` | **`ContainerOverlayPreviewMode`** | option "skyblockContainerOverlayPreview": ALWAYS/RECENT(60s)/NEVER gating the container-overlay preview in NameplateComponent.method15 |
+| `com.moonsworth.lunar.client.framework.feature.mod.impl.calculator.mixin` | `Gui2Extension` | **`RaffleTaskFilter`** | option "raffleTaskFilter": ALL/EASY/MEDIUM/HARD (+RaffleTaskDifficulty) used by SkyblockRaffleTasksHud |
+| `com.moonsworth.lunar.client.framework.feature.mod.impl.chest.dungeon.dungeonwaypoints.mixin` | `Gui2Extension` | **`DungeonWaypointBoxMode`** | option "boxMode"/"dungeonWaypointBoxMode": FULL("fullBlock")/HITBOX("blockHitbox") waypoint hitbox style (DungeonWaypointManager) |
+| `com.moonsworth.lunar.client.framework.feature.momentum` | `Gui2Extension` | **`MomentumRounding`** | option "rounding": NEAREST/1Decimal/2Decimal/3Decimal DecimalFormats used by Momentum.format |
+| `com.moonsworth.lunar.client.framework.feature.potioncounter` | `Gui2Extension` | **`PotionCounterType`** | option "potionCounter": POTION/SOUP counting mode of mod.combat.PotionCounter |
+| `com.moonsworth.lunar.client.framework.feature.pvpinfo` | `Gui2Extension` | **`PvpInfoTimePeriod`** | option "timePeriod": SESSION/DAY/WEEK/MONTH/YEAR/ALL_TIME stat window of PvpInfo |
+| `com.moonsworth.lunar.client.framework.feature.render` | `Gui2Extension` | **`ParticleColorMode`** | option "colorMode": OVERLAY/RECOLOR for ParticleChildMod (referenced from the jar-built ParticleChanger); the only file in feature.render |
+| `com.moonsworth.lunar.client.framework.feature.snaplook` | `Gui2Extension` | **`SnaplookPerspective`** | THIRD("thirdPerson",1)/FORWARD("forward",2) selecting the snaplook camera perspective (mod.movement.Snaplook) |
+| `com.moonsworth.lunar.client.framework.feature.tiertagger` | `Gui2Extension` | **`TiertaggerSource`** | option "tierSource": PVPTIERS_COM/MCTIERS_COM/SUBTIERS/TIERTESTS/PVPHQ each carrying its Tiertagger2_2 provider + name Codec |
+| `com.moonsworth.lunar.client.framework.feature.tiertagger.mixin` | `Gui2Extension` | **`TiertaggerShownStatistic`** | option "shownStatistic": TIER/RANK deciding whether Tiertagger draws the tier badge or the rank |
+| `com.moonsworth.lunar.client.framework.feature.tps` | `Gui2Extension` | **`LevelHeadSource`** | option "levelHeadSource": NETWORK/BEDWARS/SKYWARS level-head data sources with query param and random nick-level range (HypixelMod.field23) |
+| `com.moonsworth.lunar.client.replay` | `Gui2Extension` | **`ReplayClipDuration`** | option "shadowRecordingTime": thirtySixtySeconds/oneTwoMinute/twoFourMinutes/fiveTenMinutes -> ms used by ReplayHandlerImpl.method1 (clip < 300000ms) and KeyframeRecorder |
+| `com.moonsworth.lunar.client.replay.rewindhandlers` | `Gui2Extension` | **`ReplayAudioChannels`** | option "channels": MONO/STEREO for the exported replay audio (ExportSettingsPanel.field20) |
+| `com.moonsworth.lunar.client.replay.rewindhandlers.fishing` | `Gui2Extension` | **`VideoResolution`** | option "videoResolution": 720p/1080p/1440p/4k/CUSTOM with width+height (GuiIterator.field7) |
+| `com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore.mixin` | `Gui2Extension` | **`CameraFollowMode`** | option "follow": POSITION("positionOnly")/POS_ROT_BODY/POS_ROT_HEAD camera tracking detail (RewindHandlers3Updater.field12, RewindhandlersImpl) |
+| `com.moonsworth.lunar.client.replay.rewindhandlersNameplate` | `Gui2Extension` | **`VideoFormat`** | export container MP4/MKV/MOV/AVI/WEBP/WEBM with audio support + allowed VideoCodecs (RewindhandlersNameplate.field1) |
+
+## 10. `GuiExtension` (5 packages) — 5 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.config.option` | `GuiExtension` | **`OptionDataProvider`** | the "data_provider" trait (OptionTraits.field10): Gui + JsonProvider that serializes an option for the settings UI; implemented by OptionJsonProvider, default methods add child categories |
+| `com.moonsworth.lunar.client.driver.core.gui` | `GuiExtension` | **`ButtonProviderGui`** | abstract DriverGuiExtension holding LinkedHashMap<String,Gui2Task> (Gui2Task.toString leaks "ButtonProvider"): method1(task) registers, click-by-id runs task.method11() |
+| `com.moonsworth.lunar.client.driver.core.gui.mixin` | `GuiExtension` | **`SpiritLeapMapBridge`** | @CallbackJS provider (setMap/sendButtonPress/sendMapPress/settings/showMap/setDefault) for the Spirit Leap map: floor + player list JSON with Lunar Plus colours |
+| `com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers` | `GuiExtension` | **`WaypointGroupBridge`** | @CallbackJS provider (createWaypointGroup/delete/update/set) writing GuiHandler/Loader waypoint groups through Client mods |
+| `com.moonsworth.lunar.client.driver.gui` | `GuiExtension` | **`ScreenshotUploadBridge`** | @CallbackJS("upload") provider that shares a screenshot via ScreenshotShareThread/AssetServerClient with a progress iterator |
+
+## 11. `com.moonsworth.lunar.client.framework.nameplate` leftovers — 15 rows
+
+| package | old | new | evidence |
+|---|---|---|---|
+| `com.moonsworth.lunar.client.framework.nameplate` | `Alert2Iterator` | **`SettingOverrideInterceptor`** | SettingIntercept<Framework7Extension,Boolean>: EnumMap<OverrideSource,SettingOverride<Boolean>> with CLIENT_CRITERIA predicates, broadcasts to the Apollo ModSettingModule and rewrites child options; instantiated by KeystrokeKey as the "intercept" trait |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Alert2Iterator2` | **`ModCategorySet`** | ModCategories impl wrapping Set.of(RewindhandlersType...): returns the categories a feature belongs to; the factory impl of ModCategories.method2/3 |
+| `com.moonsworth.lunar.client.framework.nameplate` | `FeatureDetailsImpl` | **`FeatureDetails`** | Framework8 + Translatable base details: language path "<id>.details", translated name/description/info, categories/aliases/authors, isVanilla/allowsKeybind; DynamicFeatureDetails extends it (Lombok toString leaks the old name only) |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Framework4Handler` | **`ConditionalChildBinding`** | ChildModBinding impl: parent Framework7Extension + optional BooleanSupplier visibility; the concrete binding created by ChildModBinding.method3/4/5 |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Nameplate3_2` | **`CommandSuggestionBuilder`** | tab-suggestion accumulator interface over the input cursor: remaining text (method1), start index, add(String) and copy-with-start(int); implemented by Nameplate3Handler and consumed by RouteCommand |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Nameplate3Handler` | **`CommandSuggestionCollector`** | CommandSuggestionBuilder impl: holds input + start + List<String> of suggestions, add() skips duplicates of the remaining text, copy-with-start shares the list; built by CommandCompleter |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Nameplate4Impl` | **`CompoundBooleanOption`** | Framework3 combining several LightingExtension<Boolean> options with AND/OR semantics; isEnabled walks the OptionCombiner, setEnabled is a no-op |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Nameplate4Impl2` | **`FixedBooleanOption`** | Framework3 with no option (Optional.empty) and a fixed default: value restored by method2, mutable via setEnabled; used as a constant feature toggle |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Nameplate4Impl22` | **`ModDisplayData`** | ModDisplay impl: thumbnail icon pair + name Supplier, draws the centered name, persists seen/lastModified/favorite; built by ModDisplay.method(data) |
+| `com.moonsworth.lunar.client.framework.nameplate` | `Nameplate4Loader` | **`DefaultedBooleanOption`** | EnabledOption + JsonConfigurable: creates/overrides the "enabled" LightingExtension with a default value and sets it as default (priority 100) |
+| `com.moonsworth.lunar.client.framework.nameplate` | `NameplateImpl` | **`SuggestionCommandArguments`** | CommandArguments singleton whose every getter throws "no argument values are parsed during tab-complete suggestion gathering"; passed to suggestion providers by CommandCompleter |
+| `com.moonsworth.lunar.client.framework.nameplate` | `NameplateTask` | **`FeatureLifecycleManager`** | ModLifecycle impl: tracks enabled state + DynamicCondition/ChildModBinding, registers/unregisters event listeners and GuiRewindhandlers, owns commands, child-mod lifecycle and on-enable/disable/once runnables |
+| `com.moonsworth.lunar.client.framework.nameplate` | `OptionContainerImpl` | **`FeatureOptionContainer`** | OptionContainer impl: LinkedHashSet of LightingExtension options, nested/child collection, predicate walk, rebuild from a feature, load/save("options") with priority 200 |
+| `com.moonsworth.lunar.client.framework.nameplate` | `PageStateImpl` | **`MutablePageState`** | PageState impl: single mutable boolean with getter + fluent setter; built by PageState.method3 |
+| `com.moonsworth.lunar.client.framework.nameplate` | `PanelPositionImpl` | **`ConfigPanelPosition`** | PanelPosition + JsonConfigurable: x/y floats, panelIndex and reset flag with load/save("panelIndex"); built by PanelPosition.method9 |
+
+## Already renamed in this package (left untouched, 6 files)
+
+These were renamed by the applied `classes-modfishing` batch (commit `b0c29117`) and already
+describe what the class does — re-renaming would only churn references:
+
+| class | purpose |
+|---|---|
+| `CommandCompleter` | command tab-completion helper (walks the command tree via the suggestion provider/collector) |
+| `DynamicFeatureDetails` | FeatureDetails subclass with Supplier<String> name/description |
+| `EnabledOption` | Framework3 wrapper around one LightingExtension<Boolean> |
+| `FeatureChildren` | ModChildren container of child features with JSON load/save |
+| `FeatureIndex` | Framework9 search-key prefix index |
+| `KeystrokeSupport` | Framework13 keystroke support/type/flipped metadata |
+
+There is no `PageStateImpl`/`OptionContainerImpl`/`PanelPositionImpl`/`FeatureDetailsImpl` class left:
+row 11.3 (`FeatureDetailsImpl`) and rows 11.13–11.15 (`OptionContainerImpl`, `PageStateImpl`, `PanelPositionImpl`) replace the `Impl`-suffixed names with descriptive ones.
+
+## Notable findings
+
+- `replay/nameplate` is the **ReplayMod-style recorded-packet system**, not nameplates. `Nameplate2Impl*` are all `ReplayPacket` subclasses; each new name says which user action/state it records and replays.
+- `replay.nameplate.Nameplate` (now `ReplayPacketRegistry`) is the id→class registry referenced by `ReplayHandler`.
+- `replay/mixin/nameplate/Nameplate` is a **ZIP central-directory reader** (`EOCD`/ZIP64 walking) — `ZipEntryLocator`.
+- `replay/rewindhandlers/nameplate/Nameplate` already self-identified as `LayerPropertiesContext` in its Lombok `toString()`.
+- `util/nameplate/Nameplate` is the Mojang-style `ExtraCodecs` toolbox (nested `TagOrElementLocation`/`StrictUnboundedMapCodec` match `net.minecraft.util.ExtraCodecs`).
+- `framework.nameplate.Nameplate` is a **lock gate**: it hides a `Framework3` option until `unlock()` is called; debug mods wrap `Framework3.method6(default)` with it.
+- `framework.nameplate.Nameplate3_2`/`Nameplate3Handler` form the tab-completion suggestion accumulator used by the command tree; `Nameplate2_2` is its provider callback.
+- `Gui2Extension` is the options framework's enum-option interface; each enum was named after its **setting**, e.g. `listMode` → `ArmorStatusListMode`, `tierSource` → `TiertaggerSource`, `shownStatistic` → `TiertaggerShownStatistic`, `colorMode` → `ParticleColorMode` (found only in the jar-built `ParticleChildMod`).
+- No class was moved between packages: these are pure renames, so the 86 `git mv` rows land in the same directory.
+- **Concurrent overlap with `moves-namesA.tsv` (already applied, commit `e920d1d7`):** `util.nameplate.Nameplate` is now `com.moonsworth.lunar.client.util.ExtraCodecs` and `util.rewindhandlers.Gui2Extension` is now `com.moonsworth.lunar.client.render.color.ColorAnimation`. Both were in this task's `Nameplate`/`Gui2Extension` clusters, so this map omits them to stay conflict-free; 86 + 2 = 88 = the assigned rows.
+- `Nameplate2Impl$Type.java` (a `$`-named top-level enum) is **out of scope** and untouched; the token guard keeps `Nameplate2Impl` renames from rewriting it.

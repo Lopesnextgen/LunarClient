@@ -1,0 +1,469 @@
+# wave6 replay/driver/leftovers move map
+# columns: old.package<TAB>Old<TAB>new.package<TAB>New<TAB>evidence
+
+# com.moonsworth.lunar.client.replay.project
+com.moonsworth.lunar.client.replay	ReplayCompression	com.moonsworth.lunar.client.replay.project	ReplayCompression	static zlib deflate/inflate helpers for the ZLIB packet-stream codec
+com.moonsworth.lunar.client.replay	ReplayMetadata	com.moonsworth.lunar.client.replay.project	ReplayMetadata	DTO (minecraftVersion/protocol/externalMods) parsed when scanning saved replays; project-file model
+com.moonsworth.lunar.client.replay	ReplayProjectManager	com.moonsworth.lunar.client.replay.project	ReplayProjectManager	owns the project Gson + project file/dir + timeline list + MediaPool + ThumbnailManager; the project manager
+com.moonsworth.lunar.client.replay	RewindProject	com.moonsworth.lunar.client.replay.project	RewindProject	project file model (name/version/selectedTimeline/mediaPool/repository/externalMods); loaded+saved by ReplayProjectManager
+com.moonsworth.lunar.client.replay	RewindType	com.moonsworth.lunar.client.replay.project	RewindType	compression codec enum ZLIB/ZSTD/LZ4/DYNAMIC for the replay file format
+com.moonsworth.lunar.client.replay.gui	PathUtils	com.moonsworth.lunar.client.replay.project	PathUtils	static relative-path helpers used by the resource-pack/media JSON
+com.moonsworth.lunar.client.replay.gui	RewindPaths	com.moonsworth.lunar.client.replay.project	RewindPaths	path constants for the rewind project dir (thumbnails/media/render cache); version cut-offs
+com.moonsworth.lunar.client.replay.mixin	InputStreamLoader	com.moonsworth.lunar.client.replay.project	InputStreamLoader	shared-input stream loader for the replay zip (Guava MultiInputStream equivalent)
+com.moonsworth.lunar.client.replay.mixin	RewindFileCache	com.moonsworth.lunar.client.replay.project	RewindFileCache	replay .zip file cache keyed by recording id; shared by the replay reader/exporter
+com.moonsworth.lunar.client.replay.mixin	RewindFileReader	com.moonsworth.lunar.client.replay.project	RewindFileReader	reads a rewind .zip (packets.dat + snapshots) and yields replay packets; shared by project + exporter
+com.moonsworth.lunar.client.replay.mixin	RewindThread	com.moonsworth.lunar.client.replay.project	RewindThread	background thread for rewind file work
+com.moonsworth.lunar.client.replay.mixin.nameplate	SeekableByteChannelLoader	com.moonsworth.lunar.client.replay.project	SeekableByteChannelLoader	SeekableByteChannel over concatenated zip entries
+com.moonsworth.lunar.client.replay.mixin.nameplate	ZipEntryLocator	com.moonsworth.lunar.client.replay.project	ZipEntryLocator	locates zip entries inside the replay archive
+
+# com.moonsworth.lunar.client.replay.timeline
+com.moonsworth.lunar.client.replay	AudioSegment	com.moonsworth.lunar.client.replay.timeline	AudioSegment	timeline clip of type audio (owns an AudioStream + waveform)
+com.moonsworth.lunar.client.replay	BooleanProperty	com.moonsworth.lunar.client.replay.timeline	BooleanProperty	step/boolean keyframe property
+com.moonsworth.lunar.client.replay	ColorProperty	com.moonsworth.lunar.client.replay.timeline	ColorProperty	ARGB keyframe property
+com.moonsworth.lunar.client.replay	EffectSegment	com.moonsworth.lunar.client.replay.timeline	EffectSegment	timeline clip of type effect (base of image/text clips)
+com.moonsworth.lunar.client.replay	GameplaySegment	com.moonsworth.lunar.client.replay.timeline	GameplaySegment	timeline clip of type gameplay (camera/fov/speed/markers)
+com.moonsworth.lunar.client.replay	HudPositionProperty	com.moonsworth.lunar.client.replay.timeline	HudPositionProperty	HUD x/y keyframe property
+com.moonsworth.lunar.client.replay	KeyframeProperty	com.moonsworth.lunar.client.replay.timeline	KeyframeProperty	abstract animated property (keyframe map + easing + Sliceable)
+com.moonsworth.lunar.client.replay	ListProperty	com.moonsworth.lunar.client.replay.timeline	ListProperty	list-valued keyframe property
+com.moonsworth.lunar.client.replay	NumberProperty	com.moonsworth.lunar.client.replay.timeline	NumberProperty	numeric keyframe property (NumberInterpolator)
+com.moonsworth.lunar.client.replay	RewindImpl	com.moonsworth.lunar.client.replay.timeline	ImageSegment	EffectSegment whose type()=="image" (image clip; thumbnail from the MediaPool)
+com.moonsworth.lunar.client.replay	RewindIterator	com.moonsworth.lunar.client.replay.timeline	RewindIterator	abstract replay timeline clip (uuid + range + Sliceable copy)
+com.moonsworth.lunar.client.replay	TextSegment	com.moonsworth.lunar.client.replay.timeline	TextSegment	timeline clip of type text
+com.moonsworth.lunar.client.replay	TimelineSegment	com.moonsworth.lunar.client.replay.timeline	TimelineSegment	abstract segment base with contentStart (parent of audio/gameplay)
+com.moonsworth.lunar.client.replay	TransformProperty	com.moonsworth.lunar.client.replay.timeline	TransformProperty	3-coord + shortest-angle rotation keyframe property
+com.moonsworth.lunar.client.replay.fishing	NumberInterpolator	com.moonsworth.lunar.client.replay.timeline	NumberInterpolator	static lerp helpers for the timeline properties
+com.moonsworth.lunar.client.replay.fishing	RewindSettingKeys	com.moonsworth.lunar.client.replay.timeline	RewindSettingKeys	rewind settings-tree path constants + join helpers
+com.moonsworth.lunar.client.replay.fishing	Sliceable	com.moonsworth.lunar.client.replay.timeline	Sliceable	functional slice(copy) interface for timeline values
+com.moonsworth.lunar.client.replay.fishing	UuidProvider	com.moonsworth.lunar.client.replay.timeline	UuidProvider	uuid accessor interface for timeline entities
+com.moonsworth.lunar.client.replay.gui	AngleUtils	com.moonsworth.lunar.client.replay.timeline	AngleUtils	angle wrap/normalise helpers used by camera orientation interpolation
+com.moonsworth.lunar.client.replay.gui	EntityPositionApplier	com.moonsworth.lunar.client.replay.timeline	EntityPositionApplier	default method applying a recorded position to the client player; implemented by the position packets
+com.moonsworth.lunar.client.replay.gui	GameplayTrack	com.moonsworth.lunar.client.replay.timeline	GameplayTrack	gameplay track category of the timeline
+com.moonsworth.lunar.client.replay.gui	GuiImpl	com.moonsworth.lunar.client.replay.timeline	EffectTrack	Track subtype whose type()=="effect" (the effect track category)
+com.moonsworth.lunar.client.replay.gui	SoundTrack	com.moonsworth.lunar.client.replay.timeline	SoundTrack	audio track category of the timeline
+com.moonsworth.lunar.client.replay.gui	Track	com.moonsworth.lunar.client.replay.timeline	Track	abstract timeline track (id/layers/type/keyframes)
+com.moonsworth.lunar.client.replay.gui	TrackCollection	com.moonsworth.lunar.client.replay.timeline	TrackCollection	the timeline tracks object (effect/gameplay/audio sets + shared layer map)
+com.moonsworth.lunar.client.replay.gui	TrackCollectionDeserializer	com.moonsworth.lunar.client.replay.timeline	TrackCollectionDeserializer	Gson deserializer for TrackCollection through TrackRegistry
+com.moonsworth.lunar.client.replay.highlight	HashMapImpl	com.moonsworth.lunar.client.replay.timeline	HashMapImpl	uuid -> (range,segment) layer map
+com.moonsworth.lunar.client.replay.highlight	LinkedHashMapImpl	com.moonsworth.lunar.client.replay.timeline	PropertyMap	String->PropertyGroup LinkedHashMap over the undo/redo aware nameplate map (shared layer index)
+com.moonsworth.lunar.client.replay.highlight	MediaPool	com.moonsworth.lunar.client.replay.timeline	MediaPool	project media store (media/folders/parents/custom names)
+com.moonsworth.lunar.client.replay.highlight	MediaPoolAdapter	com.moonsworth.lunar.client.replay.timeline	MediaPoolAdapter	Gson TypeAdapter for MediaPool (rewind-relative paths)
+com.moonsworth.lunar.client.replay.highlight	ReplayTimeline	com.moonsworth.lunar.client.replay.timeline	ReplayTimeline	the editable timeline document (id/name/tracks/settings/playhead/overlay flags)
+com.moonsworth.lunar.client.replay.highlight	SegmentLinkManager	com.moonsworth.lunar.client.replay.timeline	SegmentLinkManager	owns the links map (group uuid -> member segment uuids) with undo/redo batches
+com.moonsworth.lunar.client.replay.highlight	SegmentTimeline	com.moonsworth.lunar.client.replay.timeline	SegmentTimeline	segment container over the timeline range map
+com.moonsworth.lunar.client.replay.highlight	ThumbnailManager	com.moonsworth.lunar.client.replay.timeline	ThumbnailManager	per-frame thumbnail cache + capture queue for the timeline
+com.moonsworth.lunar.client.replay.highlight	ThumbnailRequest	com.moonsworth.lunar.client.replay.timeline	ThumbnailRequest	queued timeline thumbnail render request
+com.moonsworth.lunar.client.replay.highlight	TimelineMarker	com.moonsworth.lunar.client.replay.timeline	TimelineMarker	timeline marker value (in/out frame + colour + label)
+com.moonsworth.lunar.client.replay.highlight	TimelineRenderJob	com.moonsworth.lunar.client.replay.timeline	TimelineRenderJob	ReplayTimeline subclass used as a render job
+com.moonsworth.lunar.client.replay.highlight.nameplate	HighlightTreeMap	com.moonsworth.lunar.client.replay.timeline	HighlightTreeMap	TreeMap range->segment map maintaining the uuid index
+com.moonsworth.lunar.client.replay.highlight.nameplate	LinkedHashMapImpl	com.moonsworth.lunar.client.replay.timeline	LinkedHashMapImpl	generic undo/redo aware LinkedHashMap base
+com.moonsworth.lunar.client.replay.highlight.nameplate	LinkedHashSetImpl	com.moonsworth.lunar.client.replay.timeline	LinkedHashSetImpl	undo/redo aware LinkedHashSet
+com.moonsworth.lunar.client.replay.highlight.nameplate	TransactionalSet	com.moonsworth.lunar.client.replay.timeline	TransactionalSet	set counterpart of the undo/redo store interface
+com.moonsworth.lunar.client.replay.highlight.nameplate	TreeMapImpl	com.moonsworth.lunar.client.replay.timeline	TreeMapImpl	undo/redo aware TreeMap base
+com.moonsworth.lunar.client.replay.highlight.nameplate	UndoRedoManager	com.moonsworth.lunar.client.replay.timeline	UndoRedoManager	undo/redo transaction manager
+com.moonsworth.lunar.client.replay.highlight.nameplate	UndoRedoStore	com.moonsworth.lunar.client.replay.timeline	UndoRedoStore	undo/redo aware map/set interface
+com.moonsworth.lunar.client.replay.holograms	EntityOverrideRegistry	com.moonsworth.lunar.client.replay.timeline	EntityOverrideRegistry	entity-override loader registry (hide/name/skin)
+com.moonsworth.lunar.client.replay.holograms	SegmentRegistry	com.moonsworth.lunar.client.replay.timeline	SegmentRegistry	segment type-string registry
+com.moonsworth.lunar.client.replay.holograms	TimelineElementRegistry	com.moonsworth.lunar.client.replay.timeline	TimelineElementRegistry	registry of timeline element providers
+com.moonsworth.lunar.client.replay.holograms	TrackRegistry	com.moonsworth.lunar.client.replay.timeline	TrackRegistry	track type-string registry
+com.moonsworth.lunar.client.replay.nameplate	AnimatedPropertyGroup	com.moonsworth.lunar.client.replay.timeline	AnimatedPropertyGroup	PropertyGroup with explicit child types + property suppliers
+com.moonsworth.lunar.client.replay.nameplate	DynamicCategory	com.moonsworth.lunar.client.replay.timeline	DynamicCategory	PropertyGroup whose children are computed lazily
+com.moonsworth.lunar.client.replay.nameplate	EntityIdOverrideGroup	com.moonsworth.lunar.client.replay.timeline	EntityIdOverrideGroup	entity override group keyed by numeric entity id
+com.moonsworth.lunar.client.replay.nameplate	EntityOverrideGroup	com.moonsworth.lunar.client.replay.timeline	EntityOverrideGroup	abstract per-entity option override group
+com.moonsworth.lunar.client.replay.nameplate	EntityOverridesCategory	com.moonsworth.lunar.client.replay.timeline	EntityOverridesCategory	root entity-overrides category group
+com.moonsworth.lunar.client.replay.nameplate	ModPropertyGroup	com.moonsworth.lunar.client.replay.timeline	ModPropertyGroup	PropertyGroup bound to a mod (toggles it, supplies its options)
+com.moonsworth.lunar.client.replay.nameplate	PlayerOverrideGroup	com.moonsworth.lunar.client.replay.timeline	PlayerOverrideGroup	entity override group keyed by player uuid
+com.moonsworth.lunar.client.replay.nameplate	PropertyGroup	com.moonsworth.lunar.client.replay.timeline	PropertyGroup	abstract rewind property-tree node (children + keyframe values)
+com.moonsworth.lunar.client.replay.nameplate	SettingOption	com.moonsworth.lunar.client.replay.timeline	SettingOption	leaf option (type/display name/uuid) in the rewind settings tree
+
+# com.moonsworth.lunar.client.replay.network
+com.moonsworth.lunar.client.replay.gui	ByteBufLoader	com.moonsworth.lunar.client.replay.network	ByteBufLoader	ByteBuf implementation used to (de)serialise replay packets
+com.moonsworth.lunar.client.replay.nameplate	BeamPacket	com.moonsworth.lunar.client.replay.network	BeamPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	ButtonStatePacket	com.moonsworth.lunar.client.replay.network	ButtonStatePacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	ClickHandlerPacket	com.moonsworth.lunar.client.replay.network	ClickHandlerPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	DisconnectPacket	com.moonsworth.lunar.client.replay.network	DisconnectPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	HudPositionPacket	com.moonsworth.lunar.client.replay.network	HudPositionPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	KeybindPacket	com.moonsworth.lunar.client.replay.network	KeybindPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	ModuleConfigPacket	com.moonsworth.lunar.client.replay.network	ModuleConfigPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	MouseWheelPacket	com.moonsworth.lunar.client.replay.network	MouseWheelPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	ProtobufMessagePacket	com.moonsworth.lunar.client.replay.network	ProtobufMessagePacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	ReplayPacket	com.moonsworth.lunar.client.replay.network	ReplayPacket	abstract replay packet (read/write via ByteBufLoader + handler dispatch)
+com.moonsworth.lunar.client.replay.nameplate	ReplayPacketRegistry	com.moonsworth.lunar.client.replay.network	ReplayPacketRegistry	id -> packet-class registry used by the replay stream codec
+com.moonsworth.lunar.client.replay.nameplate	ServerHologramPacket	com.moonsworth.lunar.client.replay.network	ServerHologramPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	ServerSettingOverridePacket	com.moonsworth.lunar.client.replay.network	ServerSettingOverridePacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	SettingValuePacket	com.moonsworth.lunar.client.replay.network	SettingValuePacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	SettingValueType	com.moonsworth.lunar.client.replay.network	SettingValueType	payload encoding enum STRING/INTEGER/FLOAT/DOUBLE/LONG/BOOLEAN for SettingValuePacket
+com.moonsworth.lunar.client.replay.nameplate	WaypointPacket	com.moonsworth.lunar.client.replay.network	WaypointPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate	WorldBorderPacket	com.moonsworth.lunar.client.replay.network	WorldBorderPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin	HypixelLocationPacket	com.moonsworth.lunar.client.replay.network	HypixelLocationPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin	LocationPacket	com.moonsworth.lunar.client.replay.network	LocationPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.colorsaturation	TickMarkerPacket	com.moonsworth.lunar.client.replay.network	TickMarkerPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.fishing	ResetLevelPacket	com.moonsworth.lunar.client.replay.network	ResetLevelPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.fishing	SnapshotEndPacket	com.moonsworth.lunar.client.replay.network	SnapshotEndPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.fishing	SnapshotLoadPacket	com.moonsworth.lunar.client.replay.network	SnapshotLoadPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.fishing	SnapshotStartPacket	com.moonsworth.lunar.client.replay.network	SnapshotStartPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.gui	CloseScreenPacket	com.moonsworth.lunar.client.replay.network	CloseScreenPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.gui	CursorPositionPacket	com.moonsworth.lunar.client.replay.network	CursorPositionPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.gui	MouseInputPacket	com.moonsworth.lunar.client.replay.network	MouseInputPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.gui	OpenChatPacket	com.moonsworth.lunar.client.replay.network	OpenChatPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.gui	OpenInventoryPacket	com.moonsworth.lunar.client.replay.network	OpenInventoryPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.gui	ScreenAlignmentPacket	com.moonsworth.lunar.client.replay.network	ScreenAlignmentPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.highlight	NoOpPacket	com.moonsworth.lunar.client.replay.network	NoOpPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	AttackPacket	com.moonsworth.lunar.client.replay.network	AttackPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	AttackStrengthPacket	com.moonsworth.lunar.client.replay.network	AttackStrengthPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	DropItemPacket	com.moonsworth.lunar.client.replay.network	DropItemPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	HeldItemPacket	com.moonsworth.lunar.client.replay.network	HeldItemPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	ItemSwapPacket	com.moonsworth.lunar.client.replay.network	ItemSwapPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	LookPacket	com.moonsworth.lunar.client.replay.network	LookPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	MovementInputPacket	com.moonsworth.lunar.client.replay.network	MovementInputPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	PickBlockPacket	com.moonsworth.lunar.client.replay.network	PickBlockPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	PlayerAnimationPacket	com.moonsworth.lunar.client.replay.network	PlayerAnimationPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	PositionPacket	com.moonsworth.lunar.client.replay.network	PositionPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	RelativePositionPacket	com.moonsworth.lunar.client.replay.network	RelativePositionPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	SetSprintingPacket	com.moonsworth.lunar.client.replay.network	SetSprintingPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	StartUsingItemPacket	com.moonsworth.lunar.client.replay.network	StartUsingItemPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	StopUsingItemPacket	com.moonsworth.lunar.client.replay.network	StopUsingItemPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	SwingHandPacket	com.moonsworth.lunar.client.replay.network	SwingHandPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	UseItemOnBlockPacket	com.moonsworth.lunar.client.replay.network	UseItemOnBlockPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.holograms	UseItemPacket	com.moonsworth.lunar.client.replay.network	UseItemPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.nameplate	MessageSignaturePacket	com.moonsworth.lunar.client.replay.network	MessageSignaturePacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.nameplate	RawNetworkPacket	com.moonsworth.lunar.client.replay.network	RawNetworkPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.nameplate	SetPausedPacket	com.moonsworth.lunar.client.replay.network	SetPausedPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.rewindhandlers	ClientPackPacket	com.moonsworth.lunar.client.replay.network	ClientPackPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+com.moonsworth.lunar.client.replay.nameplate.mixin.rewindhandlers	ServerPackPacket	com.moonsworth.lunar.client.replay.network	ServerPackPacket	replay protocol packet (ReplayPacket subtype) written/read by the replay recorder + player
+
+# com.moonsworth.lunar.client.replay.recording
+com.moonsworth.lunar.client.replay	ReplayHandler	com.moonsworth.lunar.client.replay.recording	ReplayHandler	replay data handler interface (segments/pause/record/mark/tick/packets)
+com.moonsworth.lunar.client.replay	ReplayHandlerImpl	com.moonsworth.lunar.client.replay.recording	ReplayHandlerImpl	implements ReplayHandler over the deque of replay data segments
+com.moonsworth.lunar.client.replay.gui	KeybindAction	com.moonsworth.lunar.client.replay.recording	KeybindAction	replay keybind-state enum (TAB/ZOOM/F1) recorded per keybind packet
+com.moonsworth.lunar.client.replay.gui	ReplayEnvironment	com.moonsworth.lunar.client.replay.recording	ReplayEnvironment	replay environment enum (live/hosted/singleplayer/multiplayer) recorded with ReplayLocation
+com.moonsworth.lunar.client.replay.gui	ReplayLocation	com.moonsworth.lunar.client.replay.recording	ReplayLocation	immutable (ReplayEnvironment, value) pair recorded per tick
+com.moonsworth.lunar.client.replay.rewindhandlers	ReplayClock	com.moonsworth.lunar.client.replay.recording	ReplayClock	replay playback clock
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	ApolloSettingsCapture	com.moonsworth.lunar.client.replay.recording	ApolloSettingsCapture	captures the Apollo configurable settings into the recording
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	AudioSampleConverter	com.moonsworth.lunar.client.replay.recording	AudioSampleConverter	downmix/resample helpers for recorded audio
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	AudioTrack	com.moonsworth.lunar.client.replay.recording	AudioTrack	recorded mic/loopback audio track (file + stream + metadata)
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	ClientboundPacketEventFactory	com.moonsworth.lunar.client.replay.recording	ClientboundPacketEventFactory	wraps clientbound packets as replay events
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	EntityStateCapture	com.moonsworth.lunar.client.replay.recording	EntityStateCapture	captures entity/particle/world-event packets each tick
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	PlayerListCapture	com.moonsworth.lunar.client.replay.recording	PlayerListCapture	captures the tab-list packets each tick
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	PlayerStateCapture	com.moonsworth.lunar.client.replay.recording	PlayerStateCapture	captures local player abilities/held-item/experience/window packets
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	RecorderCapture	com.moonsworth.lunar.client.replay.recording	RecorderCapture	per-tick recorder capture task interface
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	RewindAudioMetadata	com.moonsworth.lunar.client.replay.recording	RewindAudioMetadata	recorded audio metadata (frequency/channels/frameSize/duration)
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	RewindhandlersNameplateCore	com.moonsworth.lunar.client.replay.recording	RecorderConstants	constants holder (field1..5) for the recorder packet stream; unused in this tree
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	RewindhandlersNameplateCoreHandler	com.moonsworth.lunar.client.replay.recording	ContainerCapture	capture task: emits open-chat/open-inventory/container packets each tick
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	RewindhandlersNameplateCoreIterator	com.moonsworth.lunar.client.replay.recording	EntityPairingCapture	capture task: emits entity pairing-data packets for the world entities each tick
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	RewindhandlersNameplateCoreType	com.moonsworth.lunar.client.replay.recording	RecorderState	recorder state enum RECORDING/PAUSED/STOPPED
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	ScoreboardCapture	com.moonsworth.lunar.client.replay.recording	ScoreboardCapture	captures scoreboard/boss-info/tab-list header packets
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore	WorldStateCapture	com.moonsworth.lunar.client.replay.recording	WorldStateCapture	captures world packets (difficulty/border/time/chunks/maps)
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	CosmeticsRecorder	com.moonsworth.lunar.client.replay.recording	CosmeticsRecorder	records the local player cosmetics/outfit state while recording
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	GuiStateRecorder	com.moonsworth.lunar.client.replay.recording	GuiStateRecorder	records GUI interaction (screen/slot/cursor/key events)
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	HudStateRecorder	com.moonsworth.lunar.client.replay.recording	HudStateRecorder	records HUD component enable/active state
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	KeybindRecorder	com.moonsworth.lunar.client.replay.recording	KeybindRecorder	records TAB/ZOOM/F1 keybind toggles
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	KeyframeRecorder	com.moonsworth.lunar.client.replay.recording	KeyframeRecorder	starts a new replay segment on the keyframe interval and autosaves
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	LocationRecorder	com.moonsworth.lunar.client.replay.recording	LocationRecorder	records the current ReplayLocation
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	MessageSignatureRecorder	com.moonsworth.lunar.client.replay.recording	MessageSignatureRecorder	records the 1.19+ chat message-signature cache
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	PacketRecorder	com.moonsworth.lunar.client.replay.recording	PacketRecorder	records raw clientbound network packets
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	PlayerStateRecorder	com.moonsworth.lunar.client.replay.recording	PlayerStateRecorder	records local player movement/held-item/use state
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	ResourcePackRecorder	com.moonsworth.lunar.client.replay.recording	ResourcePackRecorder	records server/client resource-pack lists
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	RewindhandlersNameplateCore	com.moonsworth.lunar.client.replay.recording	RecorderEventListener	abstract recorder event-dispatch base: per-event methods (packet/tick/mouse/teleport/screen)
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	RewindhandlersNameplateCoreImpl	com.moonsworth.lunar.client.replay.recording	RecorderEventAdapter	default RecorderEventListener implementation (teleport/position handling)
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	RewindhandlersNameplateCoreIterator	com.moonsworth.lunar.client.replay.recording	SettingRecorder	recorder event adapter emitting setting-value + server-setting-override packets from the option tree
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	ScoreboardRecorder	com.moonsworth.lunar.client.replay.recording	ScoreboardRecorder	records the sidebar scoreboard JSON
+com.moonsworth.lunar.client.replay.rewindhandlersNameplateCore.mixin	WorldEffectRecorder	com.moonsworth.lunar.client.replay.recording	WorldEffectRecorder	records block-break animation + world-effect packets
+
+# com.moonsworth.lunar.client.replay.audio
+com.moonsworth.lunar.client.replay.gui	AudioSampleFormat	com.moonsworth.lunar.client.replay.audio	AudioSampleFormat	OpenAL sample-format enum
+com.moonsworth.lunar.client.replay.rewindhandlers	AudioSampleRate	com.moonsworth.lunar.client.replay.audio	AudioSampleRate	export audio sample-rate option enum
+com.moonsworth.lunar.client.replay.rewindhandlers	AudioStream	com.moonsworth.lunar.client.replay.audio	AudioStream	abstract OpenAL audio stream (source/buffer/playback rate/waveform)
+com.moonsworth.lunar.client.replay.rewindhandlers	BitrateMode	com.moonsworth.lunar.client.replay.audio	BitrateMode	export bitrate mode enum
+com.moonsworth.lunar.client.replay.rewindhandlers	MediaAudioStream	com.moonsworth.lunar.client.replay.audio	MediaAudioStream	AudioStream for media:// files (MediaPool + MusicTrackManager)
+com.moonsworth.lunar.client.replay.rewindhandlers	ReplayAudioChannels	com.moonsworth.lunar.client.replay.audio	ReplayAudioChannels	export audio channel option enum
+com.moonsworth.lunar.client.replay.rewindhandlers.highlight	MusicTrack	com.moonsworth.lunar.client.replay.audio	MusicTrack	built-in rewind music track (opus file + hash + icon)
+com.moonsworth.lunar.client.replay.rewindhandlers.highlight	MusicTrackManager	com.moonsworth.lunar.client.replay.audio	MusicTrackManager	downloads/loads the built-in music tracks
+com.moonsworth.lunar.client.replay.rewindhandlers.mixin	AudioWaveformRenderer	com.moonsworth.lunar.client.replay.audio	AudioWaveformRenderer	renders audio waveform PNGs and caches samples
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	LoopbackAudioRecorder	com.moonsworth.lunar.client.replay.audio	LoopbackAudioRecorder	OpenAL loopback device recorder writing s16le capture frames
+
+# com.moonsworth.lunar.client.replay.export
+com.moonsworth.lunar.client.replay	ReplayClipDuration	com.moonsworth.lunar.client.replay.export	ReplayClipDuration	export clip-length option enum (30s/1m/2m/5m)
+com.moonsworth.lunar.client.replay.rewindhandlers	ExportSettingsJsApi	com.moonsworth.lunar.client.replay.export	ExportSettingsJsApi	@CallbackJS updatePropertyValue/resetPropertyValue for the export panel
+com.moonsworth.lunar.client.replay.rewindhandlers	ExportSettingsPanel	com.moonsworth.lunar.client.replay.export	ExportSettingsPanel	provider for the export settings (codec/resolution/framerate/bitrate/audio/range)
+com.moonsworth.lunar.client.replay.rewindhandlers	RenderRange	com.moonsworth.lunar.client.replay.export	RenderRange	export render-range option enum (entire/region)
+com.moonsworth.lunar.client.replay.rewindhandlers.coordinates	ExportSettingsSection	com.moonsworth.lunar.client.replay.export	ExportSettingsSection	a section (render/video/audio/export) of the export settings panel
+com.moonsworth.lunar.client.replay.rewindhandlers.fishing	VideoOrientation	com.moonsworth.lunar.client.replay.export	VideoOrientation	export orientation option enum
+com.moonsworth.lunar.client.replay.rewindhandlers.fishing	VideoResolution	com.moonsworth.lunar.client.replay.export	VideoResolution	export resolution option enum
+com.moonsworth.lunar.client.replay.rewindhandlers.highlight	MediaExporter	com.moonsworth.lunar.client.replay.export	MediaExporter	provider serialising the media/folder tree + provided audio
+com.moonsworth.lunar.client.replay.rewindhandlers.highlight	MediaExporterJsApi	com.moonsworth.lunar.client.replay.export	MediaExporterJsApi	@CallbackJS onClick for clip/media selection
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	EncoderProbe	com.moonsworth.lunar.client.replay.export	EncoderProbe	probes ffmpeg encoders and picks a working hardware encoder
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	FFmpegDownloader	com.moonsworth.lunar.client.replay.export	FFmpegDownloader	downloads + extracts the bundled ffmpeg
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	FFmpegRenderer	com.moonsworth.lunar.client.replay.export	FFmpegRenderer	owns the ffmpeg process (rawvideo stdin) and muxes audio
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	RewindhandlersNameplate	com.moonsworth.lunar.client.replay.export	ExportSettings	export settings DTO (container/codec/encoder/width/height/fps/audio/frequency/bitrate)
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	VideoCodec	com.moonsworth.lunar.client.replay.export	VideoCodec	video codec enum (H264/HEVC/VP9/AV1/WEBP)
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	VideoEncoder	com.moonsworth.lunar.client.replay.export	VideoEncoder	video encoder enum (h264_nvenc/libx264/...) with ffmpeg args
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	VideoFormat	com.moonsworth.lunar.client.replay.export	VideoFormat	container/video format enum
+
+# com.moonsworth.lunar.client.replay.render
+com.moonsworth.lunar.client.replay.rewindhandlers.holograms	PlaybackStateProvider	com.moonsworth.lunar.client.replay.render	PlaybackStateProvider	provider exposing the replay playback state to the editor UI
+com.moonsworth.lunar.client.replay.rewindhandlers.holograms	ReplayViewContext	com.moonsworth.lunar.client.replay.render	ReplayViewContext	DriverViewContext rendering the rewind framebuffer/overlay/markers during playback
+com.moonsworth.lunar.client.replay.rewindhandlers.holograms	RewindLoadingScreen	com.moonsworth.lunar.client.replay.render	RewindLoadingScreen	loading screen shown while a replay is prepared
+com.moonsworth.lunar.client.replay.rewindhandlers.mixin	CameraRewindHandler	com.moonsworth.lunar.client.replay.render	CameraRewindHandler	controller updating the render view entity/yaw/pitch for the replay
+com.moonsworth.lunar.client.replay.rewindhandlers.mixin	RewindCameraController	com.moonsworth.lunar.client.replay.render	RewindCameraController	abstract controller driving the replay camera
+com.moonsworth.lunar.client.replay.rewindhandlers.mixin	RewindhandlersImpl	com.moonsworth.lunar.client.replay.render	RewindhandlersImpl	base controller behaviour shared by the camera handler
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	CameraUpdateHandler	com.moonsworth.lunar.client.replay.render	CameraUpdateHandler	applies camera mode/follow/freecam/fov options to the controller
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	EntityOverrideRenderer	com.moonsworth.lunar.client.replay.render	EntityOverrideRenderer	render event handler applying hide/skin/name entity overrides
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	ExportTargetHandler	com.moonsworth.lunar.client.replay.render	ExportTargetHandler	allocates the export framebuffer, binds the render target per frame
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	HudVisibilityHandler	com.moonsworth.lunar.client.replay.render	HudVisibilityHandler	gates crosshair/chat/titles/scoreboard/hotbar rendering during export
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	ReplayDriverHandler	com.moonsworth.lunar.client.replay.render	ReplayDriverHandler	owns the WebOSR driver surface for replay and forwards mouse/key events
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	ReplaySoundHandler	com.moonsworth.lunar.client.replay.render	ReplaySoundHandler	applies recorded sound volume to the OpenAL listener
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	ResourcePackHandler	com.moonsworth.lunar.client.replay.render	ResourcePackHandler	applies recorded server/client resource packs
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	ScreenRenderHandler	com.moonsworth.lunar.client.replay.render	ScreenRenderHandler	event handler for screen changes/container slot rendering/custom cursor
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	SelectionHighlightHandler	com.moonsworth.lunar.client.replay.render	SelectionHighlightHandler	raycasts under the cursor to track the hovered entity/block for the editor
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	WorldRenderHandler	com.moonsworth.lunar.client.replay.render	WorldRenderHandler	applies blocks/clouds/entities/players/sky/particles + chroma options to the export
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore	ZoomKeyHandler	com.moonsworth.lunar.client.replay.render	ZoomKeyHandler	drives the replay zoom option/keybind
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore.mixin	CameraFollowMode	com.moonsworth.lunar.client.replay.render	CameraFollowMode	camera follow-mode option enum
+com.moonsworth.lunar.client.replay.rewindhandlers.rewindhandlersCore.mixin	CameraMode	com.moonsworth.lunar.client.replay.render	CameraMode	replay camera-mode option enum
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate	VideoFrameBuffer	com.moonsworth.lunar.client.replay.render	VideoFrameBuffer	single ffmpeg frame buffer
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate.mixin	PersistentPixelBufferPool	com.moonsworth.lunar.client.replay.render	PersistentPixelBufferPool	FrameBufferPool using GL pixel-pack buffers + persistent mapped buffers
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate.mixin	RewindhandlersNameplate	com.moonsworth.lunar.client.replay.render	FrameBufferPool	abstract frame-buffer pool handed to the ffmpeg renderer
+com.moonsworth.lunar.client.replay.rewindhandlersNameplate.mixin	RewindhandlersNameplateImpl	com.moonsworth.lunar.client.replay.render	QueuedFrameBufferPool	ArrayBlockingQueue based FrameBufferPool
+
+# com.moonsworth.lunar.client.replay.gui
+com.moonsworth.lunar.client.replay	KeybindCombination	com.moonsworth.lunar.client.replay.gui	KeybindCombination	key + ctrl/shift/alt combination used as the replay keybind map key
+com.moonsworth.lunar.client.replay	ReplayAction	com.moonsworth.lunar.client.replay.gui	ReplayAction	editor action callback interface
+com.moonsworth.lunar.client.replay	ReplayKeybindHandler	com.moonsworth.lunar.client.replay.gui	ReplayKeybindHandler	dispatches rewind keybinds to editor actions
+com.moonsworth.lunar.client.replay	TimelineSelection	com.moonsworth.lunar.client.replay.gui	TimelineSelection	editor selection value (handlers/timeline/undo manager/track/segment)
+com.moonsworth.lunar.client.replay.rewindhandlers	EffectsJsApi	com.moonsworth.lunar.client.replay.gui	EffectsJsApi	@CallbackJS updateBoundingBoxes for the highlight effects panel
+com.moonsworth.lunar.client.replay.rewindhandlers	EffectsPanel	com.moonsworth.lunar.client.replay.gui	EffectsPanel	serialises the enabled highlight effects for the editor UI
+com.moonsworth.lunar.client.replay.rewindhandlers	EntityOptionOverrides	com.moonsworth.lunar.client.replay.gui	EntityOptionOverrides	per-entity option override registry applied while replaying
+com.moonsworth.lunar.client.replay.rewindhandlers	HighlightOptionWatcher	com.moonsworth.lunar.client.replay.gui	HighlightOptionWatcher	watches an option and re-applies the HUD highlight
+com.moonsworth.lunar.client.replay.rewindhandlers	InputTimelineJsApi	com.moonsworth.lunar.client.replay.gui	InputTimelineJsApi	@CallbackJS goToTick for the input timeline panel
+com.moonsworth.lunar.client.replay.rewindhandlers	InputTimelinePanel	com.moonsworth.lunar.client.replay.gui	InputTimelinePanel	serialises input ticks/packets around the current tick
+com.moonsworth.lunar.client.replay.rewindhandlers	RewindFileCallbacks	com.moonsworth.lunar.client.replay.gui	RewindFileCallbacks	@CallbackJS create/open/delete/import callbacks for rewind files
+com.moonsworth.lunar.client.replay.rewindhandlers	RewindListProvider	com.moonsworth.lunar.client.replay.gui	RewindListProvider	editor list provider for saved replays
+com.moonsworth.lunar.client.replay.rewindhandlers	RewindPackListProvider	com.moonsworth.lunar.client.replay.gui	RewindPackListProvider	editor list provider for replay resource packs
+com.moonsworth.lunar.client.replay.rewindhandlers.chest	RewindTimelineBridge	com.moonsworth.lunar.client.replay.gui	RewindTimelineBridge	@CallbackJS bridge for the timeline track/layer/keyframe edits
+com.moonsworth.lunar.client.replay.rewindhandlers.chest	RewindTimelinePanel	com.moonsworth.lunar.client.replay.gui	RewindTimelinePanel	provider for the timeline track/layer tree
+com.moonsworth.lunar.client.replay.rewindhandlers.click	RewindTimelinesListBridge	com.moonsworth.lunar.client.replay.gui	RewindTimelinesListBridge	@CallbackJS bridge for the timelines list
+com.moonsworth.lunar.client.replay.rewindhandlers.click	RewindTimelinesListPanel	com.moonsworth.lunar.client.replay.gui	RewindTimelinesListPanel	provider for the timelines list
+com.moonsworth.lunar.client.replay.rewindhandlers.colorsaturation	RewindPropertiesBridge	com.moonsworth.lunar.client.replay.gui	RewindPropertiesBridge	@CallbackJS bridge for the property/keyframe panel
+com.moonsworth.lunar.client.replay.rewindhandlers.colorsaturation	RewindPropertiesPanel	com.moonsworth.lunar.client.replay.gui	RewindPropertiesPanel	provider for the property/keyframe panel
+com.moonsworth.lunar.client.replay.rewindhandlers.coordinates	RewindEditorContext	com.moonsworth.lunar.client.replay.gui	RewindEditorContext	shared base for the rewind editor JS APIs (driver extension)
+com.moonsworth.lunar.client.replay.rewindhandlers.coordinates	RewindPropertyProvider	com.moonsworth.lunar.client.replay.gui	RewindPropertyProvider	abstract provider base for rewind editor panels
+com.moonsworth.lunar.client.replay.rewindhandlers.coordinates	SelectedKeyframe	com.moonsworth.lunar.client.replay.gui	SelectedKeyframe	editor selection value (layer/provider/frame)
+com.moonsworth.lunar.client.replay.rewindhandlers.coordinates	TimelineBridgePayloads	com.moonsworth.lunar.client.replay.gui	TimelineBridgePayloads	Gson DTOs for the timeline bridge callbacks
+com.moonsworth.lunar.client.replay.rewindhandlers.fishing	CreateProjectBridge	com.moonsworth.lunar.client.replay.gui	CreateProjectBridge	driver extension creating a new rewind project
+com.moonsworth.lunar.client.replay.rewindhandlers.holograms	RewindEditorBridge	com.moonsworth.lunar.client.replay.gui	RewindEditorBridge	@CallbackJS bridge for the rewind editor surface
+com.moonsworth.lunar.client.replay.rewindhandlers.nameplate	EntityContextMenu	com.moonsworth.lunar.client.replay.gui	EntityContextMenu	context-menu provider for a rewind entity
+com.moonsworth.lunar.client.replay.rewindhandlers.nameplate	GuiScreenContext	com.moonsworth.lunar.client.replay.gui	GuiScreenContext	per-tick GUI screen state captured/replayed
+com.moonsworth.lunar.client.replay.rewindhandlers.nameplate	LayerPropertiesContext	com.moonsworth.lunar.client.replay.gui	LayerPropertiesContext	per-layer property state captured/replayed
+com.moonsworth.lunar.client.replay.rewindhandlers.nameplate	LocalPlayerContext	com.moonsworth.lunar.client.replay.gui	LocalPlayerContext	local player transform state captured/replayed
+com.moonsworth.lunar.client.replay.rewindhandlers.nameplate	ReplayContext	com.moonsworth.lunar.client.replay.gui	ReplayContext	whole replay/rewind runtime state (player/gui/layer/server packs/tick)
+com.moonsworth.lunar.client.replay.rewindhandlers.nameplate	RewindInteractionJsApi	com.moonsworth.lunar.client.replay.gui	RewindInteractionJsApi	@CallbackJS interaction API for the editor
+com.moonsworth.lunar.client.replay.rewindhandlers.nameplate	RewindingContext	com.moonsworth.lunar.client.replay.gui	RewindingContext	bounded queue of rewind actions
+com.moonsworth.lunar.client.replay.rewindhandlers.nameplate	SelectedElement	com.moonsworth.lunar.client.replay.gui	SelectedElement	editor selection holder (handlers/segment/highlight/label)
+
+# com.moonsworth.lunar.client.driver
+com.moonsworth.lunar.client.driver.core	DriverFieldType	com.moonsworth.lunar.client.driver	DriverFieldType	driver field-type enum
+com.moonsworth.lunar.client.driver.core	DriverView	com.moonsworth.lunar.client.driver	DriverView	driver view model (WebOSR screen state)
+com.moonsworth.lunar.client.driver.core	MarkerIconRenderer	com.moonsworth.lunar.client.driver	MarkerIconRenderer	renders a marker icon through the driver
+com.moonsworth.lunar.client.driver.core	UltralightConfigFactory	com.moonsworth.lunar.client.driver	UltralightConfigFactory	Ultralight config factory for the WebOSR view
+com.moonsworth.lunar.client.driver.core.nameplate	LockerContext	com.moonsworth.lunar.client.driver	LockerContext	driver context for the locker screen
+com.moonsworth.lunar.client.driver.core.nameplate	LockerSection	com.moonsworth.lunar.client.driver	LockerSection	locker-screen section enum
+
+# com.moonsworth.lunar.client.driver.bridge
+com.moonsworth.lunar.client.driver.core.gui	ButtonProvider	com.moonsworth.lunar.client.driver.bridge	ButtonProvider	driver GUI button descriptor + builder
+com.moonsworth.lunar.client.driver.core.gui	ButtonProviderGui	com.moonsworth.lunar.client.driver.bridge	ButtonProviderGui	abstract button-provider driver extension
+com.moonsworth.lunar.client.driver.core.gui	DriverDataProvider	com.moonsworth.lunar.client.driver.bridge	DriverDataProvider	driver data-provider interface
+com.moonsworth.lunar.client.driver.core.gui	JsonProvider	com.moonsworth.lunar.client.driver.bridge	JsonProvider	driver JSON provider interface
+com.moonsworth.lunar.client.driver.core.gui	JsonSection	com.moonsworth.lunar.client.driver.bridge	JsonSection	driver JSON section annotation
+com.moonsworth.lunar.client.driver.core.gui	JsonSetSerializer	com.moonsworth.lunar.client.driver.bridge	JsonSetSerializer	serialises a Set to a driver JSON array
+com.moonsworth.lunar.client.driver.core.gui.mixin	AccountBridge	com.moonsworth.lunar.client.driver.bridge	AccountBridge	home-screen JS bridge: accounts
+com.moonsworth.lunar.client.driver.core.gui.mixin	AlertBridge	com.moonsworth.lunar.client.driver.bridge	AlertBridge	home-screen JS bridge: alerts
+com.moonsworth.lunar.client.driver.core.gui.mixin	BadgeBridge	com.moonsworth.lunar.client.driver.bridge	BadgeBridge	home-screen JS bridge: badges
+com.moonsworth.lunar.client.driver.core.gui.mixin	ColorBridge	com.moonsworth.lunar.client.driver.bridge	ColorBridge	home-screen JS bridge: chroma colours
+com.moonsworth.lunar.client.driver.core.gui.mixin	CosmeticPreviewBridge	com.moonsworth.lunar.client.driver.bridge	CosmeticPreviewBridge	home-screen JS bridge: cosmetic preview
+com.moonsworth.lunar.client.driver.core.gui.mixin	HomeButtonBridge	com.moonsworth.lunar.client.driver.bridge	HomeButtonBridge	home-screen JS bridge: home buttons
+com.moonsworth.lunar.client.driver.core.gui.mixin	HomeNavigationBridge	com.moonsworth.lunar.client.driver.bridge	HomeNavigationBridge	home-screen JS bridge: home navigation
+com.moonsworth.lunar.client.driver.core.gui.mixin	HomeRadioBridge	com.moonsworth.lunar.client.driver.bridge	HomeRadioBridge	home-screen JS bridge: home radio
+com.moonsworth.lunar.client.driver.core.gui.mixin	HomeThemeBridge	com.moonsworth.lunar.client.driver.bridge	HomeThemeBridge	home-screen JS bridge: home themes
+com.moonsworth.lunar.client.driver.core.gui.mixin	HostedWorldBridge	com.moonsworth.lunar.client.driver.bridge	HostedWorldBridge	home-screen JS bridge: hosted worlds
+com.moonsworth.lunar.client.driver.core.gui.mixin	LanguagePageBridge	com.moonsworth.lunar.client.driver.bridge	LanguagePageBridge	home-screen JS bridge: language page
+com.moonsworth.lunar.client.driver.core.gui.mixin	LunarPlusBridge	com.moonsworth.lunar.client.driver.bridge	LunarPlusBridge	home-screen JS bridge: Lunar+ colour
+com.moonsworth.lunar.client.driver.core.gui.mixin	MarkersBridge	com.moonsworth.lunar.client.driver.bridge	MarkersBridge	driver JS bridge: markers
+com.moonsworth.lunar.client.driver.core.gui.mixin	MetadataBridge	com.moonsworth.lunar.client.driver.bridge	MetadataBridge	home-screen JS bridge: client metadata
+com.moonsworth.lunar.client.driver.core.gui.mixin	NotificationBridge	com.moonsworth.lunar.client.driver.bridge	NotificationBridge	home-screen JS bridge: notifications
+com.moonsworth.lunar.client.driver.core.gui.mixin	OutfitBridge	com.moonsworth.lunar.client.driver.bridge	OutfitBridge	home-screen JS bridge: outfits
+com.moonsworth.lunar.client.driver.core.gui.mixin	PlayerBridge	com.moonsworth.lunar.client.driver.bridge	PlayerBridge	home-screen JS bridge: local player info
+com.moonsworth.lunar.client.driver.core.gui.mixin	ProfileBridge	com.moonsworth.lunar.client.driver.bridge	ProfileBridge	home-screen JS bridge: profiles
+com.moonsworth.lunar.client.driver.core.gui.mixin	PromotionBridge	com.moonsworth.lunar.client.driver.bridge	PromotionBridge	home-screen JS bridge: promotions
+com.moonsworth.lunar.client.driver.core.gui.mixin	SavedSkinBridge	com.moonsworth.lunar.client.driver.bridge	SavedSkinBridge	home-screen JS bridge: saved skins
+com.moonsworth.lunar.client.driver.core.gui.mixin	ServerDiscoveryBridge	com.moonsworth.lunar.client.driver.bridge	ServerDiscoveryBridge	home-screen JS bridge: server discovery
+com.moonsworth.lunar.client.driver.core.gui.mixin	ServerPingBridge	com.moonsworth.lunar.client.driver.bridge	ServerPingBridge	home-screen JS bridge: server ping
+com.moonsworth.lunar.client.driver.core.gui.mixin	SettingsBridge	com.moonsworth.lunar.client.driver.bridge	SettingsBridge	home-screen JS bridge: settings tree
+com.moonsworth.lunar.client.driver.core.gui.mixin	SkyblockBridge	com.moonsworth.lunar.client.driver.bridge	SkyblockBridge	home-screen JS bridge: skyblock mod list
+com.moonsworth.lunar.client.driver.core.gui.mixin	SocialMediaBridge	com.moonsworth.lunar.client.driver.bridge	SocialMediaBridge	home-screen JS bridge: social media
+com.moonsworth.lunar.client.driver.core.gui.mixin	SpiritLeapMapBridge	com.moonsworth.lunar.client.driver.bridge	SpiritLeapMapBridge	home-screen JS bridge: spirit-leap map
+com.moonsworth.lunar.client.driver.core.gui.mixin	StyngrBridge	com.moonsworth.lunar.client.driver.bridge	StyngrBridge	driver JS bridge: Styngr music
+com.moonsworth.lunar.client.driver.core.gui.mixin	UiStateBridge	com.moonsworth.lunar.client.driver.bridge	UiStateBridge	driver JS bridge: window/sort/quick-navigation state
+com.moonsworth.lunar.client.driver.core.gui.mixin.nameplate	ConversationImageUploader	com.moonsworth.lunar.client.driver.bridge	ConversationImageUploader	uploads chat conversation images for the friends bridge
+com.moonsworth.lunar.client.driver.core.gui.mixin.nameplate	FriendApi	com.moonsworth.lunar.client.driver.bridge	FriendApi	@CallbackJS friends API
+com.moonsworth.lunar.client.driver.core.gui.mixin.nameplate	FriendsGuiExtension	com.moonsworth.lunar.client.driver.bridge	FriendsGuiExtension	driver extension for the friends list screen
+com.moonsworth.lunar.client.driver.core.highlight	StorePrice	com.moonsworth.lunar.client.driver.bridge	StorePrice	store price value bundle (driver store screen)
+com.moonsworth.lunar.client.driver.core.highlight	StorePriceEntry	com.moonsworth.lunar.client.driver.bridge	StorePriceEntry	store price entry implementing JsonProvider
+com.moonsworth.lunar.client.driver.gui	AbstractDataProvider	com.moonsworth.lunar.client.driver.bridge	AbstractDataProvider	abstract driver data provider (looks up a feature by id)
+com.moonsworth.lunar.client.driver.gui	AnalyticsDataProvider	com.moonsworth.lunar.client.driver.bridge	AnalyticsDataProvider	@CallbackJS submit for analytics events
+com.moonsworth.lunar.client.driver.gui	FeatureDataProvider	com.moonsworth.lunar.client.driver.bridge	FeatureDataProvider	driver provider exposing a feature's JSON by id
+com.moonsworth.lunar.client.driver.gui	MarkersDataProvider	com.moonsworth.lunar.client.driver.bridge	MarkersDataProvider	driver provider exposing the markers GUI iterator JSON
+com.moonsworth.lunar.client.driver.gui	ModsBridge	com.moonsworth.lunar.client.driver.bridge	ModsBridge	@CallbackJS mods bridge for the home screen
+com.moonsworth.lunar.client.driver.gui	ScreenshotUploadBridge	com.moonsworth.lunar.client.driver.bridge	ScreenshotUploadBridge	@CallbackJS screenshot upload bridge
+
+# com.moonsworth.lunar.client.driver.component
+com.moonsworth.lunar.client.driver.nameplate	PositionQuad	com.moonsworth.lunar.client.driver.component	PositionQuad	4-float position quad used by driver components
+com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentCharCallback	com.moonsworth.lunar.client.driver.component	ComponentCharCallback	driver component char-input callback
+com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentCursorCallback	com.moonsworth.lunar.client.driver.component	ComponentCursorCallback	driver component cursor-position callback
+com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentDropCallback	com.moonsworth.lunar.client.driver.component	ComponentDropCallback	driver component file-drop callback
+com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentFocusCallback	com.moonsworth.lunar.client.driver.component	ComponentFocusCallback	driver component window-focus callback
+com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentKeyCallback	com.moonsworth.lunar.client.driver.component	ComponentKeyCallback	driver component key callback
+com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentMouseButtonCallback	com.moonsworth.lunar.client.driver.component	ComponentMouseButtonCallback	driver component mouse-button callback
+com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentResizeCallback	com.moonsworth.lunar.client.driver.component	ComponentResizeCallback	driver component resize callback
+com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentScrollCallback	com.moonsworth.lunar.client.driver.component	ComponentScrollCallback	driver component scroll callback
+
+# com.moonsworth.lunar.client.driver.hologram
+com.moonsworth.lunar.client.driver.core.holograms	HologramBounds	com.moonsworth.lunar.client.driver.hologram	HologramBounds	hologram position/size rectangle with hit test
+com.moonsworth.lunar.client.driver.core.holograms	HologramElement	com.moonsworth.lunar.client.driver.hologram	HologramElement	hologram JSON element (position/id/scroll)
+com.moonsworth.lunar.client.driver.core.holograms	HologramModelBridge	com.moonsworth.lunar.client.driver.hologram	HologramModelBridge	bridge between the hologram model and its renderer
+com.moonsworth.lunar.client.driver.core.holograms	HologramRenderer	com.moonsworth.lunar.client.driver.hologram	HologramRenderer	renders/queues marker + cosmetic holograms
+com.moonsworth.lunar.client.driver.core.holograms	HologramSubject	com.moonsworth.lunar.client.driver.hologram	HologramSubject	hologram subject enum PLAYER/COSMETIC
+com.moonsworth.lunar.client.driver.core.holograms.mixin	EmoteHologram	com.moonsworth.lunar.client.driver.hologram	EmoteHologram	emote preview hologram model (skin/display/emoteId)
+com.moonsworth.lunar.client.driver.core.holograms.mixin	HologramCameraPreset	com.moonsworth.lunar.client.driver.hologram	HologramCameraPreset	hologram camera preset enum (front/back/hat/cloak/...)
+com.moonsworth.lunar.client.driver.core.holograms.mixin	HologramEntry	com.moonsworth.lunar.client.driver.hologram	HologramEntry	one hologram entry in the driver model
+com.moonsworth.lunar.client.driver.core.holograms.mixin	HologramSkin	com.moonsworth.lunar.client.driver.hologram	HologramSkin	hologram skin enum resolving skin textures
+com.moonsworth.lunar.client.driver.core.holograms.mixin	SkinOverride	com.moonsworth.lunar.client.driver.hologram	SkinOverride	custom skin override model for a hologram
+com.moonsworth.lunar.client.driver.holograms	CosmeticHighlightRenderer	com.moonsworth.lunar.client.driver.hologram	CosmeticHighlightRenderer	renders the highlight outline of a cosmetic preview hologram
+com.moonsworth.lunar.client.driver.holograms	CosmeticHighlightShader	com.moonsworth.lunar.client.driver.hologram	CosmeticHighlightShader	shader used by the cosmetic highlight renderer
+com.moonsworth.lunar.client.driver.holograms	CosmeticHologram	com.moonsworth.lunar.client.driver.hologram	CosmeticHologram	cosmetic preview hologram model (cosmeticId/metadata/spin)
+com.moonsworth.lunar.client.driver.holograms	HologramsIterator	com.moonsworth.lunar.client.driver.hologram	HologramsIterator	marker-model renderer for cosmetic holograms
+com.moonsworth.lunar.client.driver.holograms	HoverModel	com.moonsworth.lunar.client.driver.hologram	HoverModel	hovered cosmetic model state (sends model:hover)
+com.moonsworth.lunar.client.driver.holograms	MarkerModelRenderer	com.moonsworth.lunar.client.driver.hologram	MarkerModelRenderer	renderer interface for marker models
+
+# com.moonsworth.lunar.client.driver.waypoint
+com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers	MinimapJsApi	com.moonsworth.lunar.client.driver.waypoint	MinimapJsApi	@CallbackJS minimap API (dimensions/drag/zoom/show/reset)
+com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers	WaypointGroupBridge	com.moonsworth.lunar.client.driver.waypoint	WaypointGroupBridge	@CallbackJS waypoint-group bridge
+com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers	WaypointImportJsApi	com.moonsworth.lunar.client.driver.waypoint	WaypointImportJsApi	@CallbackJS waypoint import API
+com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers	WaypointJsApi	com.moonsworth.lunar.client.driver.waypoint	WaypointJsApi	@CallbackJS waypoint API (requestColor/showAddWaypoint)
+com.moonsworth.lunar.client.driver.core.rewindhandlers	MinimapViewContext	com.moonsworth.lunar.client.driver.waypoint	MinimapViewContext	DriverViewContext rendering the minimap
+com.moonsworth.lunar.client.driver.rewindhandlers	ConfigureWaypointProps	com.moonsworth.lunar.client.driver.waypoint	ConfigureWaypointProps	driver context serialising waypoint properties
+com.moonsworth.lunar.client.driver.rewindhandlers	WaypointContext	com.moonsworth.lunar.client.driver.waypoint	WaypointContext	driver context for waypoints (enabled/locked)
+
+# com.moonsworth.lunar.client.cosmetics
+com.moonsworth.lunar.client.feature	ModuleType3	com.moonsworth.lunar.client.cosmetics	AbstractCosmetic	abstract cosmetic model (ModuleType slot + CosmeticCategory + cosmetics/models assets); super of BodywearCosmetic
+com.moonsworth.lunar.client.feature	Module_2	com.moonsworth.lunar.client.cosmetics	CosmeticModelRenderer	static renderer drawing a cosmetic model in the WebOSR/model preview (transform + texture + condition hooks)
+com.moonsworth.lunar.client.feature.mixin	MixinHelper	com.moonsworth.lunar.client.cosmetics	CosmeticLayerExtension	MExtension<Bridge5_11, EntityPlayerBridge> providing cosmetic RenderLayers for player entities (CosmeticManager backed)
+
+# com.moonsworth.lunar.client.framework.listener
+com.moonsworth.lunar.client.guiRewindhandlers	GuiRewindhandlersHandler2	com.moonsworth.lunar.client.framework.listener	DynamicListener	dynamic-listener base class (@TriggeredBy target; ref-counted enable/disable, changed()-event hooks); the rest of this package already lives in framework/listener
+com.moonsworth.lunar.client.guiRewindhandlers.holograms	GuiRewindhandlers2Extension	com.moonsworth.lunar.client.framework.listener	TrackedValue	DependencyValue with get/set whose get() registers the read with DependencyTracker (option dependency tracking)
+com.moonsworth.lunar.client.guiRewindhandlers.holograms	GuiRewindhandlers2Extension2	com.moonsworth.lunar.client.framework.listener	TrackedValueImpl	TrackedValue implementation: listener list + change dispatch on set(), read registration on get()
+
+# com.moonsworth.lunar.client.replay.replaymod.forge
+com.moonsworth.lunar.replaymod.forge	Ichor5Loader	com.moonsworth.lunar.client.replay.replaymod.forge	Ichor5Loader	ReplayMod mixin-loader glue (Ichor pipeline for the ReplayMod mixin set)
+com.moonsworth.lunar.replaymod.forge	Ichor5Loader2	com.moonsworth.lunar.client.replay.replaymod.forge	Ichor5Loader2	ReplayMod mixin-loader glue (Ichor pipeline for the ReplayMod mixin set)
+com.moonsworth.lunar.replaymod.forge	Ichor6Impl	com.moonsworth.lunar.client.replay.replaymod.forge	Ichor6Impl	ReplayMod mixin-loader glue (Ichor pipeline for the ReplayMod mixin set)
+
+# com.moonsworth.lunar.client.replay.replaymod.forge.ichor
+com.moonsworth.lunar.replaymod.forge.ichor	Ichor2Handler2	com.moonsworth.lunar.client.replay.replaymod.forge.ichor	Ichor2Handler2	ReplayMod mixin-loader glue (Ichor pipeline for the ReplayMod mixin set)
+
+# com.moonsworth.lunar.client.replay.replaymod.forge.v1_12.mixin
+com.moonsworth.lunar.replaymod.forge.v1_12.mixin	ConnectionEventHandlerAccessor	com.moonsworth.lunar.client.replay.replaymod.forge.v1_12.mixin	ConnectionEventHandlerAccessor	Lunar's ReplayMod integration mixin into ? (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.forge.v1_12.mixin	EventRegistrationsHandler	com.moonsworth.lunar.client.replay.replaymod.forge.v1_12.mixin	EventRegistrationsHandler	Lunar's ReplayMod integration mixin into ? (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.forge.v1_12.mixin	MixinHelper	com.moonsworth.lunar.client.replay.replaymod.forge.v1_12.mixin	ReplayHandlerAccessor	1.8/1.12 ReplayHandler duck (bridge$setStopped/setPaused/updateState); name was a junk-drawer leftover
+com.moonsworth.lunar.replaymod.forge.v1_12.mixin	PacketListenerAccessor	com.moonsworth.lunar.client.replay.replaymod.forge.v1_12.mixin	PacketListenerAccessor	Lunar's ReplayMod integration mixin into ? (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.forge.v1_12.mixin	PacketLoader	com.moonsworth.lunar.client.replay.replaymod.forge.v1_12.mixin	PacketLoader	Lunar's ReplayMod integration mixin into ? (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+
+# com.moonsworth.lunar.client.replay.replaymod.forge.v1_8.mixin
+com.moonsworth.lunar.replaymod.forge.v1_8.mixin	ConnectionEventHandlerV1_8Accessor	com.moonsworth.lunar.client.replay.replaymod.forge.v1_8.mixin	ConnectionEventHandlerV1_8Accessor	Lunar's ReplayMod integration mixin into ? (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.forge.v1_8.mixin	EventRegistrationsHandler	com.moonsworth.lunar.client.replay.replaymod.forge.v1_8.mixin	EventRegistrationsHandler	Lunar's ReplayMod integration mixin into ? (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.forge.v1_8.mixin	MixinHelper	com.moonsworth.lunar.client.replay.replaymod.forge.v1_8.mixin	ReplayHandlerAccessor	1.8/1.12 ReplayHandler duck (bridge$setStopped/setPaused/updateState); name was a junk-drawer leftover
+com.moonsworth.lunar.replaymod.forge.v1_8.mixin	PacketListenerV1_8Accessor	com.moonsworth.lunar.client.replay.replaymod.forge.v1_8.mixin	PacketListenerV1_8Accessor	Lunar's ReplayMod integration mixin into ? (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.forge.v1_8.mixin	PacketLoader	com.moonsworth.lunar.client.replay.replaymod.forge.v1_8.mixin	PacketLoader	Lunar's ReplayMod integration mixin into ? (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+
+# com.moonsworth.lunar.client.replay.replaymod.mixin
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiButtonMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiButtonMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiButtonV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiButtonV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiDropdownMenuEntryV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiDropdownMenuEntryV1_8Mixin	Lunar's ReplayMod integration mixin into AbstractGuiDropdownMenu$DropdownEntry (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiDropdownMenuMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiDropdownMenuMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiDropdownMenuV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiDropdownMenuV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiElementMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiElementMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiElementV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiElementV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiHorizontalScrollbarMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiHorizontalScrollbarMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiHorizontalScrollbarV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiHorizontalScrollbarV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiLabelMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiLabelMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiLabelV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiLabelV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiOverlayMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiOverlayMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiOverlayV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiOverlayV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiPopupMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiPopupMixin	Lunar's ReplayMod integration mixin into AbstractGuiPopup$2 (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiPopupV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiPopupV1_8Mixin	Lunar's ReplayMod integration mixin into AbstractGuiPopup$2 (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiScreenMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiScreenMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiScreenV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiScreenV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiSliderMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiSliderMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiSliderV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiSliderV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiTimelineMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiTimelineMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiTimelineTimeMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiTimelineTimeMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiTimelineTimeV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiTimelineTimeV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	AbstractGuiTimelineV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	AbstractGuiTimelineV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	CameraEntityMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	CameraEntityMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	CameraEntityV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	CameraEntityV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ClassicCameraControllerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ClassicCameraControllerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ClassicCameraControllerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ClassicCameraControllerV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ConnectionEventHandlerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ConnectionEventHandlerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ConnectionEventHandlerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ConnectionEventHandlerV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	DisableFastRenderMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	DisableFastRenderMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	DisableFastRenderV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	DisableFastRenderV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	DropdownEntryMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	DropdownEntryMixin	Lunar's ReplayMod integration mixin into AbstractGuiDropdownMenu$DropdownEntry (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ElementMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ElementMixin	Lunar's ReplayMod integration mixin into GuiBackgroundProcesses$Element (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	EntityRendererHandlerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	EntityRendererHandlerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	EntityRendererHandlerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	EntityRendererHandlerV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	EventHandlerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	EventHandlerMixin	Lunar's ReplayMod integration mixin into VanillaGuiScreen$EventHandler (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	FullBrightnessMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	FullBrightnessMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	FullBrightnessV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	FullBrightnessV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiBackgroundProcessesElementV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiBackgroundProcessesElementV1_8Mixin	Lunar's ReplayMod integration mixin into GuiBackgroundProcesses$Element (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiBackgroundProcessesMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiBackgroundProcessesMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiBackgroundProcessesV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiBackgroundProcessesV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiHandlerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiHandlerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiHandlerRecordingV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiHandlerRecordingV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiHandlerReplayMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiHandlerReplayMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiHandlerReplayV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiHandlerReplayV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiPathingKeyframeWarningV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiPathingKeyframeWarningV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiPathingMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiPathingMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiPathingRealtimeTickMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiPathingRealtimeTickMixin	Lunar's ReplayMod integration mixin into GuiPathing$10 (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiPathingRealtimeTickV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiPathingRealtimeTickV1_8Mixin	Lunar's ReplayMod integration mixin into GuiPathing$10 (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiRecordingControlsMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiRecordingControlsMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiRecordingControlsV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiRecordingControlsV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiRecordingOverlayMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiRecordingOverlayMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiRecordingOverlayV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiRecordingOverlayV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiReplayListMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiReplayListMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiReplayListV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiReplayListV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiSavingReplayMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiSavingReplayMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	GuiSavingReplayV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	GuiSavingReplayV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	MCVerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	MCVerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	MCVerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	MCVerV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	MessageDeserializerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	MessageDeserializerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	MessageDeserializerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	MessageDeserializerV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	PacketListenerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	PacketListenerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	PacketListenerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	PacketListenerV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	PboOpenGlFrameCapturerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	PboOpenGlFrameCapturerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	PboOpenGlFrameCapturerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	PboOpenGlFrameCapturerV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayHandlerMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayHandlerMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayHandlerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayHandlerV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayModBackendMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayModBackendMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayModBackendV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayModBackendV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayModMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayModMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayModMixinConfigPluginMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayModMixinConfigPluginMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayModMixinConfigPluginV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayModMixinConfigPluginV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayModRecordingMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayModRecordingMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayModRecordingV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayModRecordingV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	ReplayModV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	ReplayModV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	SettingKeysMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	SettingKeysMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	SettingKeysV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	SettingKeysV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	SettingsRegistryMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	SettingsRegistryMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	SettingsRegistryV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	SettingsRegistryV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	VanillaGuiScreenEventHandlerV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	VanillaGuiScreenEventHandlerV1_8Mixin	Lunar's ReplayMod integration mixin into VanillaGuiScreen$EventHandler (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	VanillaGuiScreenMixin	com.moonsworth.lunar.client.replay.replaymod.mixin	VanillaGuiScreenMixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)
+com.moonsworth.lunar.replaymod.mixin	VanillaGuiScreenV1_8Mixin	com.moonsworth.lunar.client.replay.replaymod.mixin	VanillaGuiScreenV1_8Mixin	Lunar's ReplayMod integration mixin into class (bundled ReplayMod/jGui); lives with the replay subsystem (target is a third-party class)

@@ -1,0 +1,4 @@
+com.moonsworth.lunar.bridge.minecraft	Horsestats20Extension2	com.moonsworth.lunar.bridge.horsestats	Horsestats20Extension2	jar-coupled: Bridge2.method4 (jar) returns bridge.horsestats.Horsestats20Extension2; renaming/moving the source twin breaks signature compatibility (see audit02.md)
+com.moonsworth.lunar.bridge.minecraft	HorsestatsType$Type	com.moonsworth.lunar.bridge.horsestats	HorsestatsType$Type	jar-coupled: HorsestatsType_2/EnumFacing comparisons use the jar package type
+com.moonsworth.lunar.bridge.minecraft	HorsestatsType$Type3	com.moonsworth.lunar.bridge.horsestats	HorsestatsType$Type3	jar-coupled: facing/axis group enum referenced from jar signatures
+com.moonsworth.lunar.bridge.minecraft	Vec3iBridge	com.moonsworth.lunar.bridge.horsestats	Vec3iBridge	jar-coupled via Horsestats20Extension2 (BlockPos) signatures

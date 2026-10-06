@@ -1,0 +1,3 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client	ApolloApprovedServer	MixinExtra	jar-coupled: Ref.method4().method84().method25() resolves through jar classes returning client.MixinExtra	com/moonsworth/lunar/client/ApolloApprovedServer.java
+com.moonsworth.lunar.client.highlight	ApolloPacketEvent	HighlightImpl_3	jar-coupled: jar abstract Highlight3Iterator_3.method3(HighlightImpl_3) is overridden by the Apollo handlers	com/moonsworth/lunar/client/highlight/ApolloPacketEvent.java

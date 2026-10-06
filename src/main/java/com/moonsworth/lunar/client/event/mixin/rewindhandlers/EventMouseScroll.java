@@ -1,0 +1,17 @@
+package com.moonsworth.lunar.client.event.mixin.rewindhandlers;
+
+import lombok.Generated;
+
+public class EventMouseScroll extends com.moonsworth.lunar.client.event.CancellableEvent {
+   private final double field1;
+
+   @Generated
+   public double method1() {
+      return this.field1;
+   }
+
+   @Generated
+   public EventMouseScroll(double value) {
+      this.field1 = value;
+   }
+}

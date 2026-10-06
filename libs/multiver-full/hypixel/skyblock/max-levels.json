@@ -1,0 +1,21 @@
+{
+  "skills": {
+    "COMBAT": 60,
+    "MINING": 60,
+    "FARMING": 60,
+    "FORAGING": 57,
+    "FISHING": 50,
+    "ENCHANTING": 60,
+    "ALCHEMY": 50,
+    "TAMING": 60,
+    "HUNTING": 50,
+    "CARPENTRY": 50,
+    "SOCIAL": 25,
+    "RUNECRAFTING": 25
+  },
+  "pets": {
+    "GOLDEN_DRAGON": 200,
+    "JADE_DRAGON": 200,
+    "ROSE_DRAGON": 200
+  }
+}

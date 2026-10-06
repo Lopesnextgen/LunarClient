@@ -1,0 +1,10 @@
+# Package audit 02 — wrong / misplaced packages
+# Format: old.package<TAB>new.package[<TAB>evidence]
+# Prefix semantics: `old` and every `old.*` subtree move under `new`.
+# Apply with: tools/apply_package_renames.py --map tools/renames/packages-audit02.tsv
+#
+# Apply the class rename map (classes-audit02.tsv) FIRST.
+
+com.moonsworth.lunar.bridge.lighting	com.moonsworth.lunar.bridge.scoreboard	only remaining class is the scoreboard-objective bridge alongside ScoreboardBridge/ScoreBridge/ScorePlayerTeamBridge; `lighting` is a scrambler segment
+com.moonsworth.lunar.bridge.slayer	com.moonsworth.lunar.bridge.optifine	only remaining classes are the connected-textures pair alongside OptifineBridge/ShadersBridge/CustomColorsBridge/CustomItemsBridge; `slayer` is a scrambler segment
+com.moonsworth.lunar.bridge.horsestats.mixin	com.moonsworth.lunar.bridge.particle	particle system (ParticleData/SimpleParticleData/LegacyParticleType/ParticleType); `horsestats` is a scrambler segment

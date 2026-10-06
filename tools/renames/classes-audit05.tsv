@@ -1,0 +1,10 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client.external.mixin	Fishing2Extension	MainMenuExternalLink	main-menu button hook (handleMainMenuButton); consumed via ExternalLinkRegistry by HomeNavigationBridge	com/moonsworth/lunar/client/external/mixin/Fishing2Extension.java
+com.moonsworth.lunar.client.external.highlight	Fishing2Extension	RecordingExternalLink	recording-state link (isRecording/method5/icon method6 + session UUID); consumed by ReplaymodRecordingIndicatorChild, RewindHandlers, Replaymod	com/moonsworth/lunar/client/external/highlight/Fishing2Extension.java
+com.moonsworth.lunar.client.external.holograms	Fishing2Extension	HologramExternalLink	empty ExternalLink marker for hologram hooks; no live implementors	com/moonsworth/lunar/client/external/holograms/Fishing2Extension.java
+com.moonsworth.lunar.client.external.rewindhandlers	Fishing2Extension	TurboExternalLink	turbo renderer state callbacks (lunar$onTurboEntityStateChange/lunar$onTurboBlockEntityStateChange)	com/moonsworth/lunar/client/external/rewindhandlers/Fishing2Extension.java
+com.moonsworth.lunar.client.fog.chest	Chest	StyngrSong	Styngr song model (id/styngrId/name/image/song/artist/album/lyrics); consumed via Chest2 jamId lookup by StyngrBridge	com/moonsworth/lunar/client/fog/chest/Chest.java
+com.moonsworth.lunar.client.fog.click	Click	TextureProcessor	@FunctionalInterface process(Extension) implemented by OverlayTextureProcessor + Glass/Ore processors and legacy BufferedImageTexture	com/moonsworth/lunar/client/fog/click/Click.java
+com.moonsworth.lunar.client.fog.fishing	Gui2Handler	SavedSkin	saved-skin entry (path/type/name); created as "New skin" and queried by SavedSkinBridge	com/moonsworth/lunar/client/fog/fishing/Gui2Handler.java
+com.moonsworth.lunar.client.fog.fishing	Gui2Type	SkinType	skin models CLASSIC/SLIM (Steve/Alex + default URLs), JsonProvider	com/moonsworth/lunar/client/fog/fishing/Gui2Type.java
+com.moonsworth.lunar.client.fog.fishing	FishingException	SkinLoadException	thrown by skin/profile fetching (SavedSkinBridge skin load, Holograms17 profile lookup)	com/moonsworth/lunar/client/fog/fishing/FishingException.java

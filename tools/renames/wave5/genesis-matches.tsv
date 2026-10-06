@@ -1,0 +1,10 @@
+src	old	fqn	score	cov	shared	sample
+src/main/java/com/moonsworth/lunar/genesis/CollectPreconditions.java	CollectPreconditions	org.spongepowered.include.com.google.common.collect.CollectPreconditions	26.65	0.50	3	 cannot be negative but was: ; null key in entry: null=; null value in entry: 
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper18_3.java	MixinHelper18_3	org.spongepowered.include.com.google.common.collect.CollectPreconditions	26.65	0.50	3	 cannot be negative but was: ; null key in entry: null=; null value in entry: 
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper2_8.java	MixinHelper2_8	org.spongepowered.include.com.google.common.base.Preconditions	26.65	0.30	3	%s (%s) must not be negative; negative size: ; start index
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper32_5.java	MixinHelper32_5	org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeEscaper	25.27	0.38	3	 at index ; ' with value ; Index exceeds specified range
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper5_5.java	MixinHelper5_5	com.github.benmanes.caffeine.cache.Caffeine	17.77	0.03	2	maximumWeight requires weigher; weigher requires maximumWeight
+src/main/java/com/moonsworth/lunar/genesis/MixinHelper_15.java	MixinHelper_15	org.spongepowered.include.com.google.common.base.Strings	17.77	0.67	2	Required array size too large: ; invalid count: %s
+src/main/java/com/moonsworth/lunar/genesis/Preconditions.java	Preconditions	org.spongepowered.include.com.google.common.base.Preconditions	26.65	0.30	3	%s (%s) must not be negative; negative size: ; start index
+src/main/java/com/moonsworth/lunar/genesis/Strings.java	Strings	org.spongepowered.include.com.google.common.base.Strings	17.77	0.67	2	Required array size too large: ; invalid count: %s
+src/main/java/com/moonsworth/lunar/genesis/UnicodeEscaper.java	UnicodeEscaper	org.yaml.snakeyaml.external.com.google.gdata.util.common.base.UnicodeEscaper	25.27	0.38	3	 at index ; ' with value ; Index exceeds specified range

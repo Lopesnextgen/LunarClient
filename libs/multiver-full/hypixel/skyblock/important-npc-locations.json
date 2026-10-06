@@ -1,0 +1,144 @@
+{
+  "HUB": [
+    {
+      "npc": "Bazaar",
+      "pos": "-34.5,72,-23.5"
+    },
+    {
+      "npc": "Bazaar Agent",
+      "pos": "-35.5,72,-31.5"
+    },
+    {
+      "npc": "Banker",
+      "pos": "-29.5,72,-38"
+    },
+    {
+      "npc": "Lobby Selector",
+      "pos": "-5.5,69,-22.5"
+    },
+    {
+      "npc": "Sirius",
+      "pos": "91.5,75,176.5"
+    },
+    {
+      "npc": "Elizabeth",
+      "pos": "-6.5,79,19"
+    },
+    {
+      "npc": "Baker",
+      "pos": "-37.5,69,16.5"
+    }
+  ],
+  "PARK": [
+    {
+      "npc": "Vanessa",
+      "pos": "-304.5,76,-79.5"
+    }
+  ],
+  "FARMING_ISLANDS": [
+    {
+      "npc": "Jake",
+      "pos": "261.5,184,-565.5"
+    },
+    {
+      "npc": "Trevor",
+      "pos": "281.5,104,-542.5"
+    }
+  ],
+  "CRIMSON_ISLES": [
+    {
+      "npc": "Kuudra Gatekeeper",
+      "pos": "-371,114,-1042"
+    },
+    {
+      "npc": "Vesuvius",
+      "pos": "-381,115,-1031"
+    },
+    {
+      "npc": "Odger",
+      "pos": "-373.5,207,-810.5"
+    },
+    {
+      "npc": "Master Tao",
+      "pos": "-234,108,-602"
+    }
+  ],
+  "GOLD_MINE": [
+    {
+      "npc": "Rusty",
+      "pos": "-20,78,-325.5"
+    }
+  ],
+  "DEEP_CAVERNS": [
+    {
+      "npc": "Gunpowder Lift Operator",
+      "pos": "45.5,150,15.5"
+    },
+    {
+      "npc": "Lapis Lift Operator",
+      "pos": "45.5,121,15.5"
+    },
+    {
+      "npc": "Redstone Lift Operator",
+      "pos": "45.5,101,17.5"
+    },
+    {
+      "npc": "Emerald Lift Operator",
+      "pos": "45.5,66,15.5"
+    },
+    {
+      "npc": "Diamond Lift Operator",
+      "pos": "45.5,38,15.5"
+    },
+    {
+      "npc": "Obsidian Lift Operator",
+      "pos": "45.5,13,15.5"
+    }
+  ],
+  "DWARVEN_MINES": [
+    {
+      "npc": "Gwendolyn",
+      "pos": "88.5,198,-98.5"
+    },
+    {
+      "npc": "Jotraeline Greatforge",
+      "pos": "-6.5,145,-18.5"
+    },
+    {
+      "npc": "Don Expresso",
+      "pos": "37,202,-123"
+    },
+    {
+      "npc": "Old Man Garry",
+      "pos": "5.4,200,-109.2"
+    }
+  ],
+  "DUNGEON_HUB": [
+    {
+      "npc": "Mort",
+      "pos": "-61.5,123,0.5"
+    },
+    {
+      "npc": "Hub Selector",
+      "pos": "-34.5,119,9.5"
+    },
+    {
+      "npc": "Ophelia",
+      "pos": "-49.5,119,-9.5"
+    },
+    {
+      "npc": "Croesus",
+      "pos": "-27.5,119.5,35.5"
+    },
+    {
+      "npc": "Kuudra Gatekeeper",
+      "pos": "-47.5,121,-24.5"
+    }
+  ],
+  "GALATEA": [
+    {
+      "npc": "Agatha",
+      "pos": "-648.5,89,-3.5"
+    }
+  ]
+}

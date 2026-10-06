@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers
+com.moonsworth.lunar.client.cosmetics.molang
+com.moonsworth.lunar.client.cosmetics.molang.ast
+com.moonsworth.lunar.client.cosmetics.skin
+com.moonsworth.lunar.client.driver
+com.moonsworth.lunar.client.driver.core
+com.moonsworth.lunar.client.driver.core.gui
+com.moonsworth.lunar.client.driver.core.gui.mixin

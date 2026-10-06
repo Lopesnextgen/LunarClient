@@ -1,0 +1,338 @@
+[
+    {
+        "id": 289,
+        "name": "Medal",
+        "description": "",
+        "resource": "lunar:badges/medal.webp",
+        "releasedAt": "2026-07-05T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 256,
+        "name": "PvPHQ",
+        "description": "",
+        "resource": "lunar:badges/pvphq.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 225,
+        "name": "Soccer Ball",
+        "description": "",
+        "resource": "lunar:badges/ballthree.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 224,
+        "name": "Soccer Ball (Two)",
+        "description": "",
+        "resource": "lunar:badges/balltwo.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 223,
+        "name": "Soccer Ball (One)",
+        "description": "",
+        "resource": "lunar:badges/ballone.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 194,
+        "name": "Snake",
+        "description": "",
+        "resource": "lunar:badges/snake.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 193,
+        "name": "Gift Gauntlet (Diamond)",
+        "description": "",
+        "resource": "lunar:badges/fistdiamond.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 192,
+        "name": "Gift Gauntlet (Gold)",
+        "description": "",
+        "resource": "lunar:badges/fistgold.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 191,
+        "name": "Gift Gauntlet (Silver)",
+        "description": "",
+        "resource": "lunar:badges/fistsilver.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 190,
+        "name": "Gift Gauntlet (Bronze)",
+        "description": "",
+        "resource": "lunar:badges/fistbronze.webp",
+        "releasedAt": "2026-06-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 160,
+        "name": "Tuxedo Badge (Silver)",
+        "description": "",
+        "resource": "lunar:badges/tux_silver.webp",
+        "releasedAt": "2026-05-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 159,
+        "name": "Tuxedo Badge (Gold)",
+        "description": "",
+        "resource": "lunar:badges/tux_gold.webp",
+        "releasedAt": "2026-05-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 158,
+        "name": "Tuxedo Badge (Black)",
+        "description": "",
+        "resource": "lunar:badges/tux_black.webp",
+        "releasedAt": "2026-05-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 157,
+        "name": "Tux Badge",
+        "description": "",
+        "resource": "lunar:badges/tuxedo_badge.webp",
+        "releasedAt": "2026-05-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 124,
+        "name": "Lunar 7 Year Black Moon",
+        "description": "",
+        "resource": "lunar:badges/blackmoon.webp",
+        "releasedAt": "2026-04-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 123,
+        "name": "Lunar 7 Year (Pink)",
+        "description": "",
+        "resource": "lunar:badges/76.webp",
+        "releasedAt": "2026-04-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 90,
+        "name": "Lunar 7 Year",
+        "description": "",
+        "resource": "lunar:badges/lunar7.webp",
+        "releasedAt": "2026-03-30T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 57,
+        "name": "Physci",
+        "description": "",
+        "resource": "lunar:badges/physci.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 56,
+        "name": "Macguy",
+        "description": "",
+        "resource": "lunar:badges/macguy.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 55,
+        "name": "Jordan",
+        "description": "",
+        "resource": "lunar:badges/jordan.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 54,
+        "name": "Apex",
+        "description": "",
+        "resource": "lunar:badges/apex.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 53,
+        "name": "Chat Diamond",
+        "description": "",
+        "resource": "lunar:badges/chat-diamond.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 52,
+        "name": "Chat Gold",
+        "description": "",
+        "resource": "lunar:badges/chat-gold.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 51,
+        "name": "Chat Plain",
+        "description": "",
+        "resource": "lunar:badges/chat-plain.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 50,
+        "name": "Advent Calendar (2025)",
+        "description": "",
+        "resource": "lunar:badges/christmas-tree.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 49,
+        "name": "Dancing",
+        "description": "",
+        "resource": "lunar:badges/dancing.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 48,
+        "name": "Diamond",
+        "description": "",
+        "resource": "lunar:badges/diamond.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 47,
+        "name": "Dog",
+        "description": "",
+        "resource": "lunar:badges/dog.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 46,
+        "name": "Easter Egg",
+        "description": "",
+        "resource": "lunar:badges/easter-egg.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 45,
+        "name": "Hat",
+        "description": "",
+        "resource": "lunar:badges/hat.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 44,
+        "name": "Icecream",
+        "description": "",
+        "resource": "lunar:badges/icecream.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 43,
+        "name": "Lunar Diamond",
+        "description": "",
+        "resource": "lunar:badges/lunar-diamond.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 42,
+        "name": "Lunar Gold",
+        "description": "",
+        "resource": "lunar:badges/lunar-gold.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 41,
+        "name": "Lunar Plain",
+        "description": "",
+        "resource": "lunar:badges/lunar-plain.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 40,
+        "name": "Pumpkin",
+        "description": "",
+        "resource": "lunar:badges/pumpkin.webp",
+        "releasedAt": "2025-09-10T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 39,
+        "name": "Shirt Diamond",
+        "description": "",
+        "resource": "lunar:badges/shirt-diamond.webp",
+        "releasedAt": "2025-09-03T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 38,
+        "name": "Shirt Gold",
+        "description": "",
+        "resource": "lunar:badges/shirt-gold.webp",
+        "releasedAt": "2025-09-02T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 37,
+        "name": "Shirt Plain",
+        "description": "",
+        "resource": "lunar:badges/shirt-plain.webp",
+        "releasedAt": "2025-09-03T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 36,
+        "name": "Snowflake",
+        "description": "",
+        "resource": "lunar:badges/snowflake.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 35,
+        "name": "Wrench",
+        "description": "",
+        "resource": "lunar:badges/wrench.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 2,
+        "name": "Plus",
+        "description": "",
+        "resource": "lunar:badges/plus.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": false
+    },
+    {
+        "id": 1,
+        "name": "Trophy",
+        "description": "",
+        "resource": "lunar:badges/trophy.webp",
+        "releasedAt": "2025-09-01T04:00:00.000Z",
+        "animated": true
+    }
+]

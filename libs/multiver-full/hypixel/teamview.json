@@ -1,0 +1,45 @@
+{
+  "partySupport": [
+    "The games in this list will always show the party in the TeamView mod. Other games will show the team, if applicable.",
+    {
+      "gametypes": [
+        "SKYBLOCK",
+        "SMP"
+      ]
+    }
+  ],
+  "blacklist": [
+    "The games in this list are blacklisted, and TeamView doesn't work in them.",
+    {
+      "gametypes": [
+        "TNTGAMES",
+        "MURDER_MYSTERY",
+        "HOUSING",
+        "VAMPIREZ",
+        "WALLS3",
+        "PROTOTYPE",
+        "QUAKECRAFT",
+        "ARCADE",
+        "UHC",
+        "LEGACY",
+        "MCGO",
+        "WOOL_GAMES",
+        "SURVIVAL_GAMES",
+        "BATTLEGROUND",
+        "ARENA",
+        "WALLS",
+        "SKYWARS",
+        "VAMPIREZ",
+        "BEDWARS",
+        "PAINTBALL",
+        "SUPER_SMASH",
+        "TRUE_COMBAT",
+        "PIT",
+        "SPEED_UHC",
+        "DUELS",
+        "GINGERBREAD",
+        "BUILD_BATTLE"
+      ]
+    }
+  ]
+}

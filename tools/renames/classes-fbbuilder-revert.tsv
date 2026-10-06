@@ -1,0 +1,2 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.bridge	FramebufferBuilder	Bridge_52	jar-coupled pair with Bridge3_24: Bridge.method56/58 and Bridge_53 builders type against bridge.Bridge_52	com/moonsworth/lunar/bridge/FramebufferBuilder.java

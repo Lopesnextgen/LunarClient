@@ -1,0 +1,15 @@
+package com.moonsworth.lunar.bridge;
+
+public interface Bridge2_19 {
+   double bridge$getPosX();
+
+   double bridge$getPosY();
+
+   double bridge$getPosZ();
+
+   float bridge$getYaw();
+
+   float bridge$getPitch();
+
+   void bridge$setEyeHeight(float var1);
+}

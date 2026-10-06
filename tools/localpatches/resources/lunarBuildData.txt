@@ -1,0 +1,22 @@
+# Build data for Lunar Client — LOCAL OVERRIDE (MavenMCP workspace)
+#
+# This file is packaged first on the game classpath by tools/build_localpatches.sh
+# and read by com.moonsworth.lunar.client.ICRHORIIHOHROHOHOCOOHOOCOORRHO.HORHROIOIOICIRHIOCOICHHHIHCIIO
+# (the production/version flags).
+#
+# production=false is the supported "dev/gradle" build mode of the client. It:
+#   * makes AccountManager.canPlayOnline() return true, which removes the
+#     "must have the launcher open" gate on Singleplayer/Multiplayer/Discover
+#   * enables the serviceOverrideAuthenticator / serviceOverrideAssetServer /
+#     serviceOverrideApi system properties so a local fake backend can serve
+#     the asset/authenticator websockets.
+#
+# NOTE: the other keys are required by the parser; keep them all present.
+gitBranch=master
+gitHash=1c88451
+fullGitHash=1c884515c8fddc28c336ff5614ef3207bb3b2d97
+production=false
+proguardUuid=5c04951e-38a3-48e4-8786-709b052b0729
+lunarVersion=2.22.35-2637
+uiBranch=master
+uiGitHash=b0989d37d35f43cb1ead4eb05c8babb7804075c5

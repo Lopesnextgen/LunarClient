@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.debug.optimizationdebugmod
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod
+com.moonsworth.lunar.client.framework.feature.directionhud
+com.moonsworth.lunar.client.framework.feature.f3display
+com.moonsworth.lunar.client.framework.feature.f3display.chart
+com.moonsworth.lunar.client.framework.feature.f3display.mixin
+com.moonsworth.lunar.client.framework.feature.freelook
+com.moonsworth.lunar.client.framework.feature.gui

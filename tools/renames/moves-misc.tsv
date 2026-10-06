@@ -1,0 +1,304 @@
+com.moonsworth.lunar.client.calculator	CachedReplacement	com.moonsworth.lunar.client.translation	CachedReplacement	translation replacement part; name accurate, move-only
+com.moonsworth.lunar.client.calculator	ClientLanguage	com.moonsworth.lunar.client.translation	ClientLanguage	translation replacement part; name accurate, move-only
+com.moonsworth.lunar.client.calculator	ConstantReplacement	com.moonsworth.lunar.client.translation	ConstantReplacement	translation replacement part; name accurate, move-only
+com.moonsworth.lunar.client.calculator	SharedInfo	com.moonsworth.lunar.client.translation	SharedTranslations	"shared_info" + takeMeThere/blocks keys; the shared translation bundle
+com.moonsworth.lunar.client.calculator	StringArrayReplacement	com.moonsworth.lunar.client.translation	StringArrayReplacement	translation replacement part; name accurate, move-only
+com.moonsworth.lunar.client.calculator	SupplierReplacement	com.moonsworth.lunar.client.translation	SupplierReplacement	translation replacement part; name accurate, move-only
+com.moonsworth.lunar.client.calculator	Translatable	com.moonsworth.lunar.client.translation	Translatable	translation replacement part; name accurate, move-only
+com.moonsworth.lunar.client.calculator	TranslationVariable	com.moonsworth.lunar.client.translation	TranslationVariable	translation replacement part; name accurate, move-only
+com.moonsworth.lunar.client.click	BugReportCategory	com.moonsworth.lunar.client.gui	BugReportCategory	misc GUI model; name accurate, move-only
+com.moonsworth.lunar.client.click	EmptyScreen	com.moonsworth.lunar.client.gui	EmptyScreen	misc GUI model; name accurate, move-only
+com.moonsworth.lunar.client.click.chest	AnchorFunction	com.moonsworth.lunar.client.notification	AnchorFunction	player/hosted-world notice model; name accurate, move-only
+com.moonsworth.lunar.client.click.chest	FriendNotification	com.moonsworth.lunar.client.notification	FriendNotification	player/hosted-world notice model; name accurate, move-only
+com.moonsworth.lunar.client.click.chest	FriendNotificationLong	com.moonsworth.lunar.client.notification	FriendNotificationLong	player/hosted-world notice model; name accurate, move-only
+com.moonsworth.lunar.client.click.chest	HostedWorldNotification	com.moonsworth.lunar.client.notification	HostedWorldNotification	player/hosted-world notice model; name accurate, move-only
+com.moonsworth.lunar.client.click.chest	Notification	com.moonsworth.lunar.client.notification	Notification	player/hosted-world notice model; name accurate, move-only
+com.moonsworth.lunar.client.click.chest	NotificationAnchor	com.moonsworth.lunar.client.notification	NotificationAnchor	player/hosted-world notice model; name accurate, move-only
+com.moonsworth.lunar.client.click.chest	NotificationType	com.moonsworth.lunar.client.notification	NotificationType	player/hosted-world notice model; name accurate, move-only
+com.moonsworth.lunar.client.feature	BodywearCosmetic	com.moonsworth.lunar.client.cosmetics	BodywearCosmetic	cosmetic model (category/slot/settings); name accurate, move-only
+com.moonsworth.lunar.client.feature	Cosmetic	com.moonsworth.lunar.client.cosmetics	Cosmetic	cosmetic model (category/slot/settings); name accurate, move-only
+com.moonsworth.lunar.client.feature	CosmeticCategory	com.moonsworth.lunar.client.cosmetics	CosmeticCategory	cosmetic model (category/slot/settings); name accurate, move-only
+com.moonsworth.lunar.client.feature	CosmeticSettings	com.moonsworth.lunar.client.cosmetics	CosmeticSettings	cosmetic model (category/slot/settings); name accurate, move-only
+com.moonsworth.lunar.client.feature	CosmeticSlot	com.moonsworth.lunar.client.cosmetics	CosmeticSlot	cosmetic model (category/slot/settings); name accurate, move-only
+com.moonsworth.lunar.client.framework.feature.pkg	LegacySkinLayerRenderer	com.moonsworth.lunar.client.cosmetics.skin	LegacySkinLayerRenderer	skin-layer cache/renderer/factory; name accurate, move-only
+com.moonsworth.lunar.client.framework.feature.pkg	Pkg	com.moonsworth.lunar.client.cosmetics.skin	SkinOverlayDetector	64x64 skin transparency probe (region x32-64/y0-16) over BridgeExtension222
+com.moonsworth.lunar.client.framework.feature.pkg	Pkg2_2	com.moonsworth.lunar.client.cosmetics.skin	HatLayerRenderer	LayerRendererBridge gated on bridge$bipedHead visible + bridge$showHat + skull/limb checks
+com.moonsworth.lunar.client.framework.feature.pkg	Pkg3$Data	com.moonsworth.lunar.client.cosmetics.skin	SkinPartEntry	6-field mesh + garment + body-spec + part/visible-supplier bundle consumed by body-overlay renderer
+com.moonsworth.lunar.client.framework.feature.pkg	Pkg3$Type	com.moonsworth.lunar.client.cosmetics.skin	OverlayGarment	LEFT/RIGHT_PANTS_LEG, LEFT/RIGHT_SLEEVE, JACKET second-layer garment tags
+com.moonsworth.lunar.client.framework.feature.pkg	Pkg3$Type2	com.moonsworth.lunar.client.cosmetics.skin	BodyPartSpec	HEAD/BODY/LEGS/ARMS/ARMS_SLIM + voxel dims + yOffsetMagicValue
+com.moonsworth.lunar.client.framework.feature.pkg	Pkg3_2	com.moonsworth.lunar.client.cosmetics.skin	BodyOverlayLayerRenderer	LayerRendererBridge building pants/sleeve/jacket Pkg3$Data entries from method34
+com.moonsworth.lunar.client.framework.feature.pkg	SkinDataCache	com.moonsworth.lunar.client.cosmetics.skin	SkinDataCache	skin-layer cache/renderer/factory; name accurate, move-only
+com.moonsworth.lunar.client.framework.feature.pkg	SkinLayerCache	com.moonsworth.lunar.client.cosmetics.skin	SkinLayerCache	skin-layer cache/renderer/factory; name accurate, move-only
+com.moonsworth.lunar.client.framework.feature.pkg	SkinLayerFactory	com.moonsworth.lunar.client.cosmetics.skin	SkinLayerFactory	skin-layer cache/renderer/factory; name accurate, move-only
+com.moonsworth.lunar.client.framework.feature.pkg	SkinLayerRenderer	com.moonsworth.lunar.client.cosmetics.skin	SkinLayerRenderer	skin-layer cache/renderer/factory; name accurate, move-only
+com.moonsworth.lunar.client.framework.feature.pkg	SkullSkinLayerRenderer	com.moonsworth.lunar.client.cosmetics.skin	SkullSkinLayerRenderer	skin-layer cache/renderer/factory; name accurate, move-only
+com.moonsworth.lunar.client.framework.feature.pkg.mixin	CustomizableCube	com.moonsworth.lunar.client.cosmetics.skin	CustomizableCube	skin-cube helper; name accurate, move-only
+com.moonsworth.lunar.client.framework.feature.pkg.mixin	Pkg	com.moonsworth.lunar.client.cosmetics.skin	CubeListBuilder	CustomizableCube list + tex-offset builder (method1/method2/method5 chaining)
+com.moonsworth.lunar.client.framework.feature.pkg.mixin	PkgType	com.moonsworth.lunar.client.cosmetics.skin	CubeDirection	DOWN/UP/NORTH/SOUTH/WEST/EAST + axis/step getters; cube-face enum
+com.moonsworth.lunar.client.framework.feature.pkg.mixin	SolidPixelWrapper	com.moonsworth.lunar.client.cosmetics.skin	SolidPixelWrapper	skin-cube helper; name accurate, move-only
+com.moonsworth.lunar.client.horsestats	BadlionProfileConfig	com.moonsworth.lunar.client.profile.importer	BadlionProfileConfig	profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats	BadlionProfileConverter	com.moonsworth.lunar.client.profile.importer	BadlionProfileConverter	profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats	BadlionProfileImporter	com.moonsworth.lunar.client.profile.importer	BadlionProfileImporter	profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats	ConvertedProfile	com.moonsworth.lunar.client.profile.importer	ConvertedProfile	profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats	ExternalProfileLocator	com.moonsworth.lunar.client.profile.importer	ExternalProfileLocator	profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats	FogIterator	com.moonsworth.lunar.client.profile	ModProfileManager	activeProfile/active + /assets/profiles/ + controls.json profile manager
+com.moonsworth.lunar.client.horsestats	Horsestats$Data	com.moonsworth.lunar.client.profile	ProfileData	enabled/value profile-fields bundle
+com.moonsworth.lunar.client.horsestats	Horsestats$Data2	com.moonsworth.lunar.client.profile	HudPosition	BOTTOM_CENTER/... anchor constants + computed/height HUD position
+com.moonsworth.lunar.client.horsestats	Horsestats	com.moonsworth.lunar.client.profile	ModProfile	mod profile model; icons/profiles/ + ".png" profile icons
+com.moonsworth.lunar.client.horsestats	Horsestats2_2	com.moonsworth.lunar.client.profile	ProfileColor	alpha/blue/CHROMA/color/green/mode profile color
+com.moonsworth.lunar.client.horsestats.mixin	FeatherConvertedProfile	com.moonsworth.lunar.client.profile.importer	FeatherConvertedProfile	feather profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats.mixin	FeatherProfileConfig	com.moonsworth.lunar.client.profile.importer	FeatherProfileConfig	feather profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats.mixin	FeatherProfileConverter	com.moonsworth.lunar.client.profile.importer	FeatherProfileConverter	feather profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats.mixin	FeatherProfileImporter	com.moonsworth.lunar.client.profile.importer	FeatherProfileImporter	feather profile importer piece; name accurate, move-only
+com.moonsworth.lunar.client.horsestats.mixin	Horsestats	com.moonsworth.lunar.client.profile.importer	ParsedProfileColor	parses "r/g/b[/a]" profile-color string into packed RGBA int
+com.moonsworth.lunar.client.keystrokes	Highlight3Iterator	com.moonsworth.lunar.client.server	ServerBrandWatcher	handles EventServerChange/EventServerBrand/EventDisconnect; brand holder over absent KeystrokesType
+com.moonsworth.lunar.client.keystrokes	Keystrokes	com.moonsworth.lunar.client.server	PluginChannelRegistry	channel lists lunar:apollo/apollo:json/lunarclient:pm/badl ion:timers + worldedit:cui->worldeditcui
+com.moonsworth.lunar.client.keystrokes	PinnedServer	com.moonsworth.lunar.client.server	PinnedServer	server icon/pinned entry; name accurate, move-only
+com.moonsworth.lunar.client.keystrokes	ServerIconEntry	com.moonsworth.lunar.client.server	ServerIconEntry	server icon/pinned entry; name accurate, move-only
+com.moonsworth.lunar.client.killsounds	AutoTextActionsMigration	com.moonsworth.lunar.client.config.migration	AutoTextActionsMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	BlockOutlineMigration	com.moonsworth.lunar.client.config.migration	BlockOutlineMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	BossbarColorMigration	com.moonsworth.lunar.client.config.migration	BossbarColorMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	ConfigEntryMigration	com.moonsworth.lunar.client.config.migration	ConfigEntryMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	ConfigMigrator	com.moonsworth.lunar.client.config.migration	ConfigMigrator	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	CrosshairF5Migration	com.moonsworth.lunar.client.config.migration	CrosshairF5Migration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	HeightLimitMigration	com.moonsworth.lunar.client.config.migration	HeightLimitMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	HudOptionMigration	com.moonsworth.lunar.client.config.migration	HudOptionMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	Killsounds	com.moonsworth.lunar.client.config.migration	ConfigIdResolver	root id-resolution entry of the config-migration cluster
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl	com.moonsworth.lunar.client.config.migration	CosmeticIdMigration	per-mod cosmetic id migration root of the 15-family
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl10	com.moonsworth.lunar.client.config.migration	CrosshairOutlineMigration	crosshair-outline per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl2	com.moonsworth.lunar.client.config.migration	OverlayEnabledMigration	overlay-enabled per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl3	com.moonsworth.lunar.client.config.migration	TimeChangerMigration	time-changer per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl4	com.moonsworth.lunar.client.config.migration	BossbarPositionMigration	bossbar y 40->12 per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl5	com.moonsworth.lunar.client.config.migration	SkyblockBossMigration	skyblock bossbar per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl6	com.moonsworth.lunar.client.config.migration	BossbarOffsetMigration	bossbar y 12->1 per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl7	com.moonsworth.lunar.client.config.migration	FullBrightMigration	fullbright per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl8	com.moonsworth.lunar.client.config.migration	ParticleQualityMigration	particle-quality per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Impl9	com.moonsworth.lunar.client.config.migration	CoordinatesColorMigration	coordinates-color per-mod migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator	com.moonsworth.lunar.client.config.migration	UhcOverlayMigration	UHC overlay migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator2	com.moonsworth.lunar.client.config.migration	HeldItemScaleMigration	held-item scale migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator4	com.moonsworth.lunar.client.config.migration	WaypointRenderMigration	waypoint-render migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator5	com.moonsworth.lunar.client.config.migration	MultiFeatureMigration	multi-feature migration
+com.moonsworth.lunar.client.killsounds	Killsounds15Iterator6	com.moonsworth.lunar.client.config.migration	OverlayCleanupMigration	overlay-cleanup migration
+com.moonsworth.lunar.client.killsounds	Killsounds2_2	com.moonsworth.lunar.client.config.migration	BedWarsHeightLimitMigration	BedWars height-limit migration
+com.moonsworth.lunar.client.killsounds	Killsounds3_2	com.moonsworth.lunar.client.config.migration	ConfigMigration	core config-migration driver
+com.moonsworth.lunar.client.killsounds	Killsounds4_2	com.moonsworth.lunar.client.config.migration	FogScaleMigration	removes useMinecraftScale
+com.moonsworth.lunar.client.killsounds	KillsoundsHandler	com.moonsworth.lunar.client.config.migration	VersionedIdResolver	versioned id-resolution handler
+com.moonsworth.lunar.client.killsounds	ParticleChangerMigration	com.moonsworth.lunar.client.config.migration	ParticleChangerMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	PingEntryMigration	com.moonsworth.lunar.client.config.migration	PingEntryMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	PingMigration	com.moonsworth.lunar.client.config.migration	PingMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	PotionEffectsMigration	com.moonsworth.lunar.client.config.migration	PotionEffectsMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	SkyblockFloorFourMigration	com.moonsworth.lunar.client.config.migration	SkyblockFloorFourMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	SnaplookMigration	com.moonsworth.lunar.client.config.migration	SnaplookMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds	StopwatchMigration	com.moonsworth.lunar.client.config.migration	StopwatchMigration	already-named *Migration; move-only
+com.moonsworth.lunar.client.killsounds.mixin	FovOptionMigration	com.moonsworth.lunar.client.config.migration	FovOptionMigration	already-named option migration; move-only
+com.moonsworth.lunar.client.killsounds.mixin	KeyCodeOptionMigration	com.moonsworth.lunar.client.config.migration	KeyCodeOptionMigration	already-named option migration; move-only
+com.moonsworth.lunar.client.killsounds.mixin	KeyNameOptionMigration	com.moonsworth.lunar.client.config.migration	KeyNameOptionMigration	already-named option migration; move-only
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds	com.moonsworth.lunar.client.config.migration	VanillaOptionsFile	reads vanilla options file optionsLC.txt
+com.moonsworth.lunar.client.killsounds.mixin	Killsounds6Impl	com.moonsworth.lunar.client.config.migration	TypeCoercionMigration	option type-coercion migration
+com.moonsworth.lunar.client.killsounds.mixin	OptionAccessor	com.moonsworth.lunar.client.config.migration	MigratedOptionReader	reader over migrated options
+com.moonsworth.lunar.client.killsounds.mixin	OptionMigration	com.moonsworth.lunar.client.config.migration	OptionMigration	already-named option migration; move-only
+com.moonsworth.lunar.client.lighting	AbstractOptionBuilder	com.moonsworth.lunar.client.option	AbstractOptionBuilder	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	BooleanOption	com.moonsworth.lunar.client.option	BooleanOption	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	ConditionalOption	com.moonsworth.lunar.client.option	ConditionalOption	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	DevOptionBaker	com.moonsworth.lunar.client.option	DevOptionBaker	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	JsonConfigurable	com.moonsworth.lunar.client.option	JsonConfigurable	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	KeyBind	com.moonsworth.lunar.client.option	KeyBind	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	Lighting$Extension	com.moonsworth.lunar.client.option	NumberRangeBuilder	numeric-range builder
+com.moonsworth.lunar.client.lighting	Lighting$Extension2	com.moonsworth.lunar.client.option	SteppedNumberRangeBuilder	stepped numeric-range builder
+com.moonsworth.lunar.client.lighting	Lighting2_2	com.moonsworth.lunar.client.option	OptionBakerFactory	option-baker factory
+com.moonsworth.lunar.client.lighting	LightingBase	com.moonsworth.lunar.client.option	DefaultedOptionBuilder	defaulted option builder root
+com.moonsworth.lunar.client.lighting	LightingException	com.moonsworth.lunar.client.option	OptionException	option-framework exception
+com.moonsworth.lunar.client.lighting	LightingExtension2$Extension	com.moonsworth.lunar.client.option	SettingsGroupFactory	settings-group factory
+com.moonsworth.lunar.client.lighting	LightingExtension2$Extension2	com.moonsworth.lunar.client.option	SettingsParentFactory	settings-parent factory
+com.moonsworth.lunar.client.lighting	LightingHandler	com.moonsworth.lunar.client.option	BakedOptionNode	baked option node
+com.moonsworth.lunar.client.lighting	LightingIterator	com.moonsworth.lunar.client.option	PruningOptionBaker	pruning option baker
+com.moonsworth.lunar.client.lighting	LightingType	com.moonsworth.lunar.client.option	OptionFlag	option flag enum
+com.moonsworth.lunar.client.lighting	OptionBaker	com.moonsworth.lunar.client.option	OptionBaker	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	OptionCategory	com.moonsworth.lunar.client.option	OptionCategory	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	OptionCombiner	com.moonsworth.lunar.client.option	OptionCombiner	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	OptionGroup	com.moonsworth.lunar.client.option	OptionGroup	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	OptionProvider	com.moonsworth.lunar.client.option	OptionProvider	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	OptionTreeNode	com.moonsworth.lunar.client.option	OptionTreeNode	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	RootSettingsBuilder	com.moonsworth.lunar.client.option	RootSettingsBuilder	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	SettingsBuilder	com.moonsworth.lunar.client.option	SettingsBuilder	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	SettingsNode	com.moonsworth.lunar.client.option	SettingsNode	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	SettingsRegistrant	com.moonsworth.lunar.client.option	SettingsRegistrant	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	SettingsTreeBuilder	com.moonsworth.lunar.client.option	SettingsTreeBuilder	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	SettingsTreeMapper	com.moonsworth.lunar.client.option	SettingsTreeMapper	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting	TriState	com.moonsworth.lunar.client.option	TriState	already-named option/settings type; move-only
+com.moonsworth.lunar.client.lighting.mixin	CrosshairDrawOption	com.moonsworth.lunar.client.option	CrosshairDrawOption	already-named option type; move-only
+com.moonsworth.lunar.client.lighting.nameplate	AlertExtension	com.moonsworth.lunar.client.option	AlertExtension	already-named option/display type; move-only
+com.moonsworth.lunar.client.lighting.nameplate	GuiExtension	com.moonsworth.lunar.client.option	GuiExtension	already-named option/display type; move-only
+com.moonsworth.lunar.client.lighting.nameplate	Nameplate	com.moonsworth.lunar.client.option	OptionTraits	option traits model
+com.moonsworth.lunar.client.lighting.nameplate	Nameplate2Task	com.moonsworth.lunar.client.option	ListenerSet	update-listener set
+com.moonsworth.lunar.client.lighting.nameplate	Nameplate3Handler	com.moonsworth.lunar.client.option	FeatureLinkRef	feature-link reference
+com.moonsworth.lunar.client.lighting.nameplate	Nameplate4Task	com.moonsworth.lunar.client.option	DisplaySpec	display spec
+com.moonsworth.lunar.client.lighting.nameplate	OptionChildren	com.moonsworth.lunar.client.option	OptionChildren	already-named option/display type; move-only
+com.moonsworth.lunar.client.lighting.nameplate	OptionDisplay	com.moonsworth.lunar.client.option	OptionDisplay	already-named option/display type; move-only
+com.moonsworth.lunar.client.lighting.nameplate	OptionFeatureLink	com.moonsworth.lunar.client.option	OptionFeatureLink	already-named option/display type; move-only
+com.moonsworth.lunar.client.lighting.nameplate	OptionJsonProvider	com.moonsworth.lunar.client.option	OptionJsonProvider	already-named option/display type; move-only
+com.moonsworth.lunar.client.lighting.nameplate	OptionUpdateListeners	com.moonsworth.lunar.client.option	OptionUpdateListeners	already-named option/display type; move-only
+com.moonsworth.lunar.client.lighting.nameplate	ThreadModuleDump43Extension	com.moonsworth.lunar.client.option	SettingsSectionBuilder	settings-section builder
+com.moonsworth.lunar.client.lighting.nameplate	ThreadModuleDump43Extension2	com.moonsworth.lunar.client.option	SettingsSection	settings section
+com.moonsworth.lunar.client.lighting.nameplate	ThreadModuleDump43Extension22	com.moonsworth.lunar.client.option	SettingsSectionImpl	settings-section impl
+com.moonsworth.lunar.client.lighting.nameplate.mixin	ByteNumberRange	com.moonsworth.lunar.client.option	ByteNumberRange	already-named numeric-range rule; move-only
+com.moonsworth.lunar.client.lighting.nameplate.mixin	FloatNumberRange	com.moonsworth.lunar.client.option	FloatNumberRange	already-named numeric-range rule; move-only
+com.moonsworth.lunar.client.lighting.nameplate.mixin	IntegerNumberRange	com.moonsworth.lunar.client.option	IntegerNumberRange	already-named numeric-range rule; move-only
+com.moonsworth.lunar.client.lighting.nameplate.mixin	LongNumberRange	com.moonsworth.lunar.client.option	LongNumberRange	already-named numeric-range rule; move-only
+com.moonsworth.lunar.client.lighting.nameplate.mixin	Nameplate	com.moonsworth.lunar.client.option	NumberRule	numeric rule over NameplateHandler
+com.moonsworth.lunar.client.lighting.nameplate.mixin	NameplateHandler	com.moonsworth.lunar.client.option	AbstractNumberRule	abstract numeric-rule base
+com.moonsworth.lunar.client.lighting.nameplate.mixin	NameplateImpl	com.moonsworth.lunar.client.option	DoubleNumberRule	Double rule; method4() returns "Double"
+com.moonsworth.lunar.client.lighting.nameplate.mixin	ShortNumberRange	com.moonsworth.lunar.client.option	ShortNumberRange	already-named numeric-range rule; move-only
+com.moonsworth.lunar.client.lotusfish	Ichor2Handler	com.moonsworth.lunar.client.transform	PreMixinTransform	PRE_MIXIN stage forwarding ClassNode to absent Ichor5Iterator
+com.moonsworth.lunar.client.lotusfish	Ichor2Handler22	com.moonsworth.lunar.client.transform	NewInstanceFactoryTransform	PRE_META_MIXIN synthesizing static newInstance factories per <init>
+com.moonsworth.lunar.client.lotusfish	Ichor2Impl	com.moonsworth.lunar.client.transform	LwjglRelocationTransform	POST_MIXIN SimpleRemapper org/lwjgl BufferUtils->actually3 + nanovg/tinyfd/stb/system/opus prefixes
+com.moonsworth.lunar.client.lotusfish	Ichor2Iterator2	com.moonsworth.lunar.client.transform	RandomRewriteTransform	FINAL over net/minecraft/client: Math.random->ThreadLocalRandom.nextDouble, new Random()->RandomImpl
+com.moonsworth.lunar.client.lotusfish	Ichor6Impl	com.moonsworth.lunar.client.transform	LunarTransformLoader	Ichor6 "lunar" loader returning Ichor5Iterator
+com.moonsworth.lunar.client.lotusfish	Lotusfish	com.moonsworth.lunar.client.transform	FunctionProviderFactory	@KeepName factory whose newFunctionProvider builds absent FunctionProvider
+com.moonsworth.lunar.client.markers	Bridge7Handler	com.moonsworth.lunar.client.driver	DualMarkerScreen	Bridge7_8 impl fanning method1/2/3 to two delegates; flag swaps zero-position Markers.Data4 (Data4 absent)
+com.moonsworth.lunar.client.markers	ClipboardHandler	com.moonsworth.lunar.client.driver	ClipboardHandler	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	DriverBridge	com.moonsworth.lunar.client.driver	DriverBridge	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	DriverComponent	com.moonsworth.lunar.client.driver	DriverComponent	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	DriverContext	com.moonsworth.lunar.client.driver	DriverContext	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	DriverElement	com.moonsworth.lunar.client.driver	DriverElement	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	DriverGuiExtension	com.moonsworth.lunar.client.driver	DriverGuiExtension	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	DriverScreen	com.moonsworth.lunar.client.driver	DriverScreen	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	DriverSettingExtension	com.moonsworth.lunar.client.driver	DriverSettingExtension	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	DriverViewContext	com.moonsworth.lunar.client.driver	DriverViewContext	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	FunctionBusImpl	com.moonsworth.lunar.client.driver	FunctionBusImpl	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	GuiExtension	com.moonsworth.lunar.client.driver	ProfileImportProvider	DriverGuiExtension whose provide() returns feather/badlion file arrays + maxImports
+com.moonsworth.lunar.client.markers	Highlight3Iterator	com.moonsworth.lunar.client.driver	DriverViewport	abstract EventBusAccess+Translatable view base: width/height/framebuffer + DriverComponent list; webosr debug flag
+com.moonsworth.lunar.client.markers	Markers$Data	com.moonsworth.lunar.client.driver	ComponentStyleData	component style data bundle
+com.moonsworth.lunar.client.markers	Markers2Handler	com.moonsworth.lunar.client.driver	DriverOverlayRegistry	driver overlay registry
+com.moonsworth.lunar.client.markers	Markers2Handler2	com.moonsworth.lunar.client.driver	DriverRouteRegistry	driver route registry
+com.moonsworth.lunar.client.markers	MarkersImpl	com.moonsworth.lunar.client.driver	MigrationContext	DriverContext + migration/featherDetected/badlionDetected JSON
+com.moonsworth.lunar.client.markers	MarkersType	com.moonsworth.lunar.client.driver	PhosphorIcon	PI_*_SOLID phosphor-icon constants
+com.moonsworth.lunar.client.markers	TextureHandler	com.moonsworth.lunar.client.driver	TextureHandler	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	VanillaHomeContext	com.moonsworth.lunar.client.driver	VanillaHomeContext	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers	WebOsrNative	com.moonsworth.lunar.client.driver	WebOsrNative	driver-framework type, in-tree vocabulary; name accurate, move-only
+com.moonsworth.lunar.client.markers.gui	AbstractDataProvider	com.moonsworth.lunar.client.driver.gui	AbstractDataProvider	driver GUI data provider; name accurate, move-only
+com.moonsworth.lunar.client.markers.gui	AnalyticsDataProvider	com.moonsworth.lunar.client.driver.gui	AnalyticsDataProvider	driver GUI data provider; name accurate, move-only
+com.moonsworth.lunar.client.markers.gui	FeatureDataProvider	com.moonsworth.lunar.client.driver.gui	FeatureDataProvider	driver GUI data provider; name accurate, move-only
+com.moonsworth.lunar.client.markers.gui	Gui	com.moonsworth.lunar.client.driver.gui	Gui	driver GUI data provider; name accurate, move-only
+com.moonsworth.lunar.client.markers.gui	GuiExtension	com.moonsworth.lunar.client.driver.gui	GuiExtension	driver GUI data provider; name accurate, move-only
+com.moonsworth.lunar.client.markers.gui	MarkersDataProvider	com.moonsworth.lunar.client.driver.gui	MarkersDataProvider	driver GUI data provider; name accurate, move-only
+com.moonsworth.lunar.client.markers.holograms	ColorsaturationExtension	com.moonsworth.lunar.client.driver.holograms	ColorsaturationExtension	driver hologram model; name accurate, move-only
+com.moonsworth.lunar.client.markers.holograms	Holograms	com.moonsworth.lunar.client.driver.holograms	Holograms	driver hologram model; name accurate, move-only
+com.moonsworth.lunar.client.markers.holograms	Holograms2Impl	com.moonsworth.lunar.client.driver.holograms	CosmeticHologram	extends absent Holograms2 base; cosmeticId/metadata/spin JSON
+com.moonsworth.lunar.client.markers.holograms	HologramsIterator	com.moonsworth.lunar.client.driver.holograms	HologramsIterator	driver hologram model; name accurate, move-only
+com.moonsworth.lunar.client.markers.holograms	HoverModel	com.moonsworth.lunar.client.driver.holograms	HoverModel	driver hologram model; name accurate, move-only
+com.moonsworth.lunar.client.markers.holograms	MarkerModelRenderer	com.moonsworth.lunar.client.driver.holograms	MarkerModelRenderer	driver hologram model; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin	MarkerIconRenderer	com.moonsworth.lunar.client.driver.core	MarkerIconRenderer	driver core type; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin	Markers	com.moonsworth.lunar.client.driver.core	DriverView	driver view model
+com.moonsworth.lunar.client.markers.mixin	Markers3Impl	com.moonsworth.lunar.client.driver.core	UltralightConfigFactory	ultralight config factory
+com.moonsworth.lunar.client.markers.mixin	MarkersType	com.moonsworth.lunar.client.driver.core	DriverFieldType	driver field-type enum
+com.moonsworth.lunar.client.markers.mixin.gui	Annotation	com.moonsworth.lunar.client.driver.core.gui	Annotation	driver core GUI bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui	Gui	com.moonsworth.lunar.client.driver.core.gui	Gui	driver core GUI bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui	Gui2Task	com.moonsworth.lunar.client.driver.core.gui	Gui2Task	driver core GUI bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui	GuiExtension	com.moonsworth.lunar.client.driver.core.gui	GuiExtension	driver core GUI bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui	JsonProvider	com.moonsworth.lunar.client.driver.core.gui	JsonProvider	driver core GUI bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui	JsonSetSerializer	com.moonsworth.lunar.client.driver.core.gui	JsonSetSerializer	driver core GUI bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	AccountBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	AccountBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	AlertBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	AlertBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	BadgeBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	BadgeBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	ColorBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	ColorBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	CosmeticPreviewBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	CosmeticPreviewBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	Gui	com.moonsworth.lunar.client.driver.core.gui.mixin	Gui	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	GuiExtension	com.moonsworth.lunar.client.driver.core.gui.mixin	GuiExtension	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	HomeButtonBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	HomeButtonBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	HomeNavigationBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	HomeNavigationBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	HomeRadioBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	HomeRadioBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	HomeThemeBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	HomeThemeBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	HostedWorldBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	HostedWorldBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	LanguagePageBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	LanguagePageBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	LunarPlusBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	LunarPlusBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	MetadataBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	MetadataBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	NotificationBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	NotificationBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	OutfitBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	OutfitBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	PlayerBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	PlayerBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	ProfileBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	ProfileBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	PromotionBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	PromotionBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	SavedSkinBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	SavedSkinBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	ServerDiscoveryBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	ServerDiscoveryBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	ServerPingBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	ServerPingBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	SettingsBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	SettingsBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	SkyblockBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	SkyblockBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	SocialMediaBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	SocialMediaBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	StyngrBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	StyngrBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin	UiStateBridge	com.moonsworth.lunar.client.driver.core.gui.mixin	UiStateBridge	home-screen JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.nameplate	FriendApi	com.moonsworth.lunar.client.driver.core.gui.mixin.nameplate	FriendApi	friends/locker JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.nameplate	FriendsGuiExtension	com.moonsworth.lunar.client.driver.core.gui.mixin.nameplate	FriendsGuiExtension	friends/locker JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.nameplate	Nameplate	com.moonsworth.lunar.client.driver.core.gui.mixin.nameplate	Nameplate	friends/locker JS bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.rewindhandlers	GuiExtension	com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers	GuiExtension	minimap/waypoint JS API; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.rewindhandlers	MinimapJsApi	com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers	MinimapJsApi	minimap/waypoint JS API; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.rewindhandlers	WaypointImportJsApi	com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers	WaypointImportJsApi	minimap/waypoint JS API; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.rewindhandlers	WaypointJsApi	com.moonsworth.lunar.client.driver.core.gui.mixin.rewindhandlers	WaypointJsApi	minimap/waypoint JS API; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.highlight	Gui2Handler	com.moonsworth.lunar.client.driver.core.highlight	StorePriceEntry	store price entry over Highlight value bundle
+com.moonsworth.lunar.client.markers.mixin.highlight	Highlight	com.moonsworth.lunar.client.driver.core.highlight	StorePrice	Integer/double/Double price bundle
+com.moonsworth.lunar.client.markers.mixin.holograms	HologramBounds	com.moonsworth.lunar.client.driver.core.holograms	HologramBounds	driver hologram bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.holograms	HologramElement	com.moonsworth.lunar.client.driver.core.holograms	HologramElement	driver hologram bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.holograms	HologramRenderer	com.moonsworth.lunar.client.driver.core.holograms	HologramRenderer	driver hologram bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.holograms	Holograms	com.moonsworth.lunar.client.driver.core.holograms	Holograms	driver hologram bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.holograms	HologramsType	com.moonsworth.lunar.client.driver.core.holograms	HologramSubject	PLAYER/COSMETIC subject enum
+com.moonsworth.lunar.client.markers.mixin.holograms.mixin	HologramSkin	com.moonsworth.lunar.client.driver.core.holograms.mixin	HologramSkin	driver hologram impl; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.holograms.mixin	Holograms	com.moonsworth.lunar.client.driver.core.holograms.mixin	Holograms	driver hologram impl; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.holograms.mixin	Holograms2Iterator	com.moonsworth.lunar.client.driver.core.holograms.mixin	EmoteHologram	extends absent Holograms2 base; skin/display/emoteId + EmoteAPI
+com.moonsworth.lunar.client.markers.mixin.holograms.mixin	HologramsType	com.moonsworth.lunar.client.driver.core.holograms.mixin	HologramCameraPreset	FRONT/BACK/DEFAULT/SUITS/HAT/CLOAK camera-preset enum
+com.moonsworth.lunar.client.markers.mixin.holograms.mixin	SkinOverride	com.moonsworth.lunar.client.driver.core.holograms.mixin	SkinOverride	driver hologram impl; name accurate, move-only
+com.moonsworth.lunar.client.markers.mixin.nameplate	MarkersImpl	com.moonsworth.lunar.client.driver.core.nameplate	LockerContext	locker driver context
+com.moonsworth.lunar.client.markers.mixin.nameplate	NameplateType	com.moonsworth.lunar.client.driver.core.nameplate	LockerSection	locker-section enum
+com.moonsworth.lunar.client.markers.mixin.rewindhandlers	Markers3Handler	com.moonsworth.lunar.client.driver.core.rewindhandlers	MinimapViewContext	DriverViewContext rendering minimap via MinimapJsApi zoom + render-distance clamp
+com.moonsworth.lunar.client.markers.nameplate	PositionQuad	com.moonsworth.lunar.client.driver.nameplate	PositionQuad	driver component-callback model; name accurate, move-only
+com.moonsworth.lunar.client.markers.nameplate.mixin	ComponentCursorCallback	com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentCursorCallback	driver component callback; name accurate, move-only
+com.moonsworth.lunar.client.markers.nameplate.mixin	ComponentDropCallback	com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentDropCallback	driver component callback; name accurate, move-only
+com.moonsworth.lunar.client.markers.nameplate.mixin	ComponentFocusCallback	com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentFocusCallback	driver component callback; name accurate, move-only
+com.moonsworth.lunar.client.markers.nameplate.mixin	ComponentKeyCallback	com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentKeyCallback	driver component callback; name accurate, move-only
+com.moonsworth.lunar.client.markers.nameplate.mixin	ComponentMouseButtonCallback	com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentMouseButtonCallback	driver component callback; name accurate, move-only
+com.moonsworth.lunar.client.markers.nameplate.mixin	ComponentResizeCallback	com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentResizeCallback	driver component callback; name accurate, move-only
+com.moonsworth.lunar.client.markers.nameplate.mixin	ComponentScrollCallback	com.moonsworth.lunar.client.driver.nameplate.mixin	ComponentScrollCallback	driver component callback; name accurate, move-only
+com.moonsworth.lunar.client.markers.nameplate.mixin	Nameplate	com.moonsworth.lunar.client.driver.nameplate.mixin	Nameplate	driver component callback; name accurate, move-only
+com.moonsworth.lunar.client.markers.rewindhandlers	ConfigureWaypointProps	com.moonsworth.lunar.client.driver.rewindhandlers	ConfigureWaypointProps	waypoint-props bridge; name accurate, move-only
+com.moonsworth.lunar.client.markers.rewindhandlers	MarkersImpl	com.moonsworth.lunar.client.driver.rewindhandlers	WaypointContext	DriverContext + waypoints enabled/locked JSON
+com.moonsworth.lunar.client.pkg	Pkg	com.moonsworth.lunar.client.server	ResolvedServerAddress	InetSocketAddress-backed address: hostName/hostAddress/port + method4 factory
+com.moonsworth.lunar.client.pkg	Pkg2	com.moonsworth.lunar.client.server	ServerBlocklist	sessionserver.mojang.com/blockedservers fetch + patchy BlockedServers reflection; nested Data3 is the MojangBlocklist payload
+com.moonsworth.lunar.client.pkg	Pkg3	com.moonsworth.lunar.client.server	UnresolvedServerAddress	Guava HostAndPort + IDN parse, server.invalid fallback, toString ServerAddress(...)
+com.moonsworth.lunar.client.pkg	Pkg4	com.moonsworth.lunar.client.server	ServerAddressResolver	@FunctionalInterface resolve(Pkg3)->Optional<Pkg>; SYSTEM does InetAddress.getByName
+com.moonsworth.lunar.client.pkg	Pkg5	com.moonsworth.lunar.client.server	ServerSrvLookup	SRV lookup over _minecraft._tcp. via JNDI DNS (com.sun.jndi.dns globals)
+com.moonsworth.lunar.client.pkg	Pkg6	com.moonsworth.lunar.client.server	ServerAddressPipeline	composes Pkg4 resolver + Pkg5 SRV redirect + Pkg2 blocklist into Optional<Pkg>
+com.moonsworth.lunar.client.util.lotusfish.mixin	Lotusfish	com.moonsworth.lunar.client.audio.ogg	Crc32	CRC-32 (poly 79764919/0x04C11DB7) table over bytes
+com.moonsworth.lunar.client.util.lotusfish.mixin	LotusfishException	com.moonsworth.lunar.client.audio.ogg	LotusfishException	Ogg page model/reader; name accurate, move-only
+com.moonsworth.lunar.client.util.lotusfish.mixin	OggPage	com.moonsworth.lunar.client.audio.ogg	OggPage	Ogg page model/reader; name accurate, move-only
+com.moonsworth.lunar.client.util.lotusfish.mixin	OggPageReader	com.moonsworth.lunar.client.audio.ogg	OggPageReader	Ogg page model/reader; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	AxisCoordinateChooser	com.moonsworth.lunar.bridge.horsestats	AxisCoordinateChooser	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	BridgeExtension	com.moonsworth.lunar.bridge	BridgeExtension	empty MovementInputBridge alias in wrong package; relocated next to it, move-only
+com.moonsworth.lunar.bridge.horsestats	ChatComponentFactoryBridge	com.moonsworth.lunar.bridge.horsestats	ChatComponentFactoryBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	ChatFormatting	com.moonsworth.lunar.bridge.horsestats	ChatFormatting	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	ClickEventActionBridge	com.moonsworth.lunar.bridge.horsestats	ClickEventActionBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	ClipboardBridge	com.moonsworth.lunar.bridge.horsestats	ClipboardBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	DamageSourceBridge	com.moonsworth.lunar.bridge.horsestats	DamageSourceBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	DirectionAxisDirection	com.moonsworth.lunar.bridge.horsestats	DirectionAxisDirection	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	DyeColorBridge	com.moonsworth.lunar.bridge.horsestats	DyeColorBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	EntityEquipmentSlotBridge	com.moonsworth.lunar.bridge.horsestats	EntityEquipmentSlotBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	EnumChatFormattingBridge	com.moonsworth.lunar.bridge.horsestats	EnumChatFormattingBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	EnumFacingBridge	com.moonsworth.lunar.bridge.horsestats	EnumFacingBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	EnumFacingValue	com.moonsworth.lunar.bridge.horsestats	EnumFacingValue	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	FaceBakeryBridge	com.moonsworth.lunar.bridge.horsestats	FaceBakeryBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	GameProfilePropertyMerger	com.moonsworth.lunar.bridge.horsestats	GameProfilePropertyMerger	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	GuiResourcePackListBridge	com.moonsworth.lunar.bridge.horsestats	GuiResourcePackListBridge	bridge type, precedent keeps package; name accurate, move-only
+# DEFERRED(stale-jar coupling, see audit02.md): com.moonsworth.lunar.bridge.horsestats	Horsestats20Extension2	com.moonsworth.lunar.bridge.horsestats	BlockPosBridge	offset/above/below/asLong over Vec3iBridge; impl by BlockPos/MutableBlockPos mixins (absent)
+# DEFERRED(stale-jar coupling, see audit02.md): com.moonsworth.lunar.bridge.horsestats	HorsestatsType$Type	com.moonsworth.lunar.bridge.horsestats	DirectionAxis	X/Y/Z + isVertical/isHorizontal over absent HorsestatsType_2 facing enum
+# DEFERRED(stale-jar coupling, see audit02.md): com.moonsworth.lunar.bridge.horsestats	HorsestatsType$Type3	com.moonsworth.lunar.bridge.horsestats	AxisPlane	HORIZONTAL/VERTICAL facing+axis groups
+com.moonsworth.lunar.bridge.horsestats	HorsestatsType	com.moonsworth.lunar.bridge.horsestats	HoverEventAction	SHOW_TEXT; SackCountListener compares hoverevent.action()==SHOW_TEXT
+com.moonsworth.lunar.bridge.horsestats	IChatComponentMarker	com.moonsworth.lunar.bridge.horsestats	IChatComponentMarker	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	ImageConverterBridge	com.moonsworth.lunar.bridge.horsestats	ImageConverterBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	KeyBindingEntry	com.moonsworth.lunar.bridge.horsestats	KeyBindingEntry	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	KeyBindingSource	com.moonsworth.lunar.bridge.horsestats	KeyBindingSource	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	LanguageBridge	com.moonsworth.lunar.bridge.horsestats	LanguageBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	LunarSymbols	com.moonsworth.lunar.bridge.horsestats	LunarSymbols	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	ModelRotationBridge	com.moonsworth.lunar.bridge.horsestats	ModelRotationBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	MovingObjectPositionBridge	com.moonsworth.lunar.bridge.horsestats	MovingObjectPositionBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	MovingObjectTypeBridge	com.moonsworth.lunar.bridge.horsestats	MovingObjectTypeBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	RaytraceType	com.moonsworth.lunar.bridge.horsestats	RaytraceType	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	RotationOperator	com.moonsworth.lunar.bridge.horsestats	RotationOperator	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	TexturedBoxBridge	com.moonsworth.lunar.bridge.horsestats	TexturedBoxBridge	bridge type, precedent keeps package; name accurate, move-only
+com.moonsworth.lunar.bridge.horsestats	Vec3iBridge	com.moonsworth.lunar.bridge.horsestats	Vec3iBridge	bridge type, precedent keeps package; name accurate, move-only

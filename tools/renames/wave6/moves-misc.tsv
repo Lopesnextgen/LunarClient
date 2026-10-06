@@ -1,0 +1,65 @@
+# Wave 6 misc/client-structure moves.
+# old.package<TAB>Old<TAB>new.package<TAB>New<TAB>evidence
+# New == Old means move-only. Applied by tools/apply_class_moves.py.
+com.moonsworth.lunar.client	AutoTextHotkeyApolloHandler	com.moonsworth.lunar.client.network.apollo	AutoTextHotkeyApolloHandler	Apollo module handler (AutoTextHotkey); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	BeamApolloHandler	com.moonsworth.lunar.client.network.apollo	BeamApolloHandler	Apollo module handler (Beam); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	ColoredFireApolloHandler	com.moonsworth.lunar.client.network.apollo	ColoredFireApolloHandler	Apollo module handler (ColoredFire); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	CombatApolloHandler	com.moonsworth.lunar.client.network.apollo	CombatApolloHandler	Apollo module handler (Combat); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	CooldownApolloHandler	com.moonsworth.lunar.client.network.apollo	CooldownApolloHandler	Apollo module handler (Cooldown); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	EntityApolloHandler	com.moonsworth.lunar.client.network.apollo	EntityApolloHandler	Apollo module handler (Entity); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	GlowApolloHandler	com.moonsworth.lunar.client.network.apollo	GlowApolloHandler	Apollo module handler (Glow); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	HeightLimitApolloHandler	com.moonsworth.lunar.client.network.apollo	HeightLimitApolloHandler	Apollo module handler (HeightLimit); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	NickHiderApolloHandler	com.moonsworth.lunar.client.network.apollo	NickHiderApolloHandler	Apollo module handler (NickHider); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	NotificationApolloHandler	com.moonsworth.lunar.client.network.apollo	NotificationApolloHandler	Apollo module handler (Notification); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	PacketEnrichmentApolloHandler	com.moonsworth.lunar.client.network.apollo	PacketEnrichmentApolloHandler	Apollo module handler (PacketEnrichment); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	PayNowApolloHandler	com.moonsworth.lunar.client.network.apollo	PayNowApolloHandler	Apollo module handler (PayNow); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	RichPresenceApolloHandler	com.moonsworth.lunar.client.network.apollo	RichPresenceApolloHandler	Apollo module handler (RichPresence); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	SaturationApolloHandler	com.moonsworth.lunar.client.network.apollo	SaturationApolloHandler	Apollo module handler (Saturation); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	ServerRuleApolloHandler	com.moonsworth.lunar.client.network.apollo	ServerRuleApolloHandler	Apollo module handler (ServerRule); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	TebexApolloHandler	com.moonsworth.lunar.client.network.apollo	TebexApolloHandler	Apollo module handler (Tebex); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	TitleApolloHandler	com.moonsworth.lunar.client.network.apollo	TitleApolloHandler	Apollo module handler (Title); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	TntCountdownApolloHandler	com.moonsworth.lunar.client.network.apollo	TntCountdownApolloHandler	Apollo module handler (TntCountdown); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	VignetteApolloHandler	com.moonsworth.lunar.client.network.apollo	VignetteApolloHandler	Apollo module handler (Vignette); loop()/super() id string; Apollo layer target network/apollo
+com.moonsworth.lunar.client	Highlight3Iterator_3	com.moonsworth.lunar.client.network.apollo	ApolloModuleHandler	abstract Apollo module handler base: enabled/options/onEnable/onDisable + HighlightImpl_3 dispatch
+com.moonsworth.lunar.client	Highlight3Iterator$Data2	com.moonsworth.lunar.client.network.apollo	ApolloModuleHandler$ListenerEntry	private listener registration (Class/Consumer/priority) used only by the Apollo handler base
+com.moonsworth.lunar.client	Highlight3Iterator_2	com.moonsworth.lunar.client.network.apollo	ModSettingApolloHandler	handles mod_setting InstalledMods{Request,Response}/ConfigurableSettings; implements Calculator2
+com.moonsworth.lunar.client	Highlight3Iterator2	com.moonsworth.lunar.client.network.apollo	GlintApolloHandler	Apollo module handler, super("glint", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator4	com.moonsworth.lunar.client.network.apollo	StaffModApolloHandler	Apollo module handler, super("staff_mod", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator8	com.moonsworth.lunar.client.network.apollo	HologramApolloHandler	Apollo module handler, super("hologram", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator11	com.moonsworth.lunar.client.network.apollo	BorderApolloHandler	Apollo module handler, super("border", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator15	com.moonsworth.lunar.client.network.apollo	ChatApolloHandler	Apollo module handler, super("chat", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator16	com.moonsworth.lunar.client.network.apollo	LimbApolloHandler	Apollo module handler, super("limb", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator17	com.moonsworth.lunar.client.network.apollo	NametagApolloHandler	Apollo module handler, super("nametag", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator19	com.moonsworth.lunar.client.network.apollo	ServerLinkApolloHandler	Apollo module handler, super("server_link", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator22	com.moonsworth.lunar.client.network.apollo	WaypointApolloHandler	Apollo module handler, super("waypoint", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator24	com.moonsworth.lunar.client.network.apollo	StopwatchApolloHandler	Apollo module handler, super("stopwatch", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator26	com.moonsworth.lunar.client.network.apollo	CosmeticApolloHandler	Apollo module handler, super("cosmetic", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator28	com.moonsworth.lunar.client.network.apollo	InventoryApolloHandler	Apollo module handler, super("inventory", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator32	com.moonsworth.lunar.client.network.apollo	TeamApolloHandler	Apollo module handler, super("team", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	Highlight3Iterator33	com.moonsworth.lunar.client.network.apollo	MarkerApolloHandler	Apollo module handler, super("marker", ...); registered by FogHandler2/ApolloModuleManager
+com.moonsworth.lunar.client	OptionsImpl	com.moonsworth.lunar.client.network.apollo	OptionsImpl	client implementation of com.lunarclient.apollo.option.OptionsImpl (Apollo options store)
+com.moonsworth.lunar.client	ApolloTypeRegistry	com.moonsworth.lunar.client.network.apollo	ApolloTypeRegistry	protobuf TypeRegistry builder for all Apollo module messages
+com.moonsworth.lunar.client	FogHandler2	com.moonsworth.lunar.client.network.apollo	ApolloModuleManager	extends fog.FogHandler2<String, Highlight3Iterator_3>; registers every Apollo handler (method9), returns Client.framework().method84(); referenced by 20+ classes
+com.moonsworth.lunar.client	MixinHelper_3	com.moonsworth.lunar.client.network.apollo	ApolloModSettingsBridge	collects AbstractFeature ClientOption values into ApolloModsManager map<String,Value>
+com.moonsworth.lunar.client	MixinHelper	com.moonsworth.lunar.client.network.apollo	ApolloButtonRenderer	renders Apollo chat-button widgets (button_circle.png, ButtonContentPart/ButtonShape)
+com.moonsworth.lunar.client	ApolloButtonContent	com.moonsworth.lunar.client.network.apollo	ApolloButtonContent	package-private Apollo button content model (Component/ItemStack/Icon + sizes)
+com.moonsworth.lunar.client	ApolloButtonShape	com.moonsworth.lunar.client.network.apollo	ApolloButtonShape	ROUNDED_SQUARE/CIRCLE enum for Apollo buttons
+com.moonsworth.lunar.client	HorizontalAlignment	com.moonsworth.lunar.client.ui	HorizontalAlignment	HUD/text alignment enum LEFT/RIGHT
+com.moonsworth.lunar.client	NotificationLink	com.moonsworth.lunar.client.ui.notification	NotificationLink	notification link model (id/Component/URI) next to Notification/NotificationAnchor
+com.moonsworth.lunar.client	Autotexthotkey	com.moonsworth.lunar.client.network.websocket	PromotionMessageHandler	consumes websocket promotion.v1 PendingReward/PromotionType and publishes GUI JSON; extends fog.FogHandler<PromotionType> next to BadgeManager-style websocket handlers
+com.moonsworth.lunar.client	Badge	com.moonsworth.lunar.client.account	Badge	badge model (id/name/description/resources/animated) serialized for the driver GUI + websocket
+com.moonsworth.lunar.client	Gui2Handler	com.moonsworth.lunar.client.account	OwnedBadge	wraps a Badge plus OwnedBadge.ExpirationReason/expiry; badge/account ownership model
+com.moonsworth.lunar.client	EventHandlerEntry	com.moonsworth.lunar.client.event	EventHandlerEntry	generified (LunarEvent class, Consumer, priority) registration entry used by the event bus
+com.moonsworth.lunar.client	RenderScope	com.moonsworth.lunar.client.cosmetics	RenderScope	render-cosmetics/emotes/sprays scope keys; consumed by the cosmetic render filters
+com.moonsworth.lunar.client	MixinExtra	com.moonsworth.lunar.client.cosmetics	CosmeticRenderFilter	per-scope id allow-lists filtering cosmetic/emote/spray render passes (Framework.method25)
+com.moonsworth.lunar.client	LunarLogger	com.moonsworth.lunar.client.util	LunarLogger	static '[LC]' log4j facade; logging utility, not a client root type
+com.moonsworth.lunar.client	Slayer	com.moonsworth.lunar.client.util	Slayer	identical static '[LC]' log4j facade (duplicate of LunarLogger, dedupe candidate)
+com.moonsworth.lunar.client	Client	com.moonsworth.lunar.client.framework	Client	main client singleton/bootstrap (handshake, websocket, mod manager); framework/ owns bootstrap
+com.moonsworth.lunar.client	MixinHelper_2	com.moonsworth.lunar.client.mod.render.markers	MarkerData	immutable marker model (id/chatNotify/inGameNotification/middleClickRemove + Markers.Type*); imported by framework/feature/markers/{Markers,Markers2,MarkerManager}
+com.moonsworth.lunar.client	MixinHelper$Data22	com.moonsworth.lunar.client.mod.render.markers	MarkerData$Builder	Generated builder twin of MixinHelper_2 with the same marker fields
+com.moonsworth.lunar.client.alert	AlertExtension	com.moonsworth.lunar.client.config.override	AlertExtension	recursive child-container extension base (config.option.AlertExtension and framework.AlertExtension both extend it); belongs to the override/options framework
+com.moonsworth.lunar.client.network.safety	MaliciousListFetcher	com.moonsworth.lunar.client.network.server	MaliciousListFetcher	fetches /game/safety malicious server+url lists; server-list data, safety/ is a 1-class package
+com.moonsworth.lunar.client.chest	Chest	com.moonsworth.lunar.client.render	OpenGlInfo	OpenGL major/minor version + capability dump ('OpenGl: - Major Version:')
+com.moonsworth.lunar.client.chest	Chest2	com.moonsworth.lunar.client.render	GlBufferFunctions	GL45C/ARBDirectStateAccess glCreateBuffers/... wrapper functions
+com.moonsworth.lunar.client.chest	Chest3	com.moonsworth.lunar.client.render	GlScratchBuffers	three pooled IntBuffers (10000/1000/200) allocated with MemoryUtil.memCallocInt
+com.moonsworth.lunar.client.chest	Chest4	com.moonsworth.lunar.client.render	SvgTextureRenderer	NanoSVG/NanoVG image loading + textured quad renderer

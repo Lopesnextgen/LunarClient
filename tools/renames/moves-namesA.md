@@ -1,0 +1,156 @@
+# moves-namesA — misplaced `client.util.*` subpackages
+
+Scope: 54 classes in ten `com.moonsworth.lunar.client.util.*` junk drawers
+(alert, chest, click, colorsaturation, gui, highlight, holograms, mixin,
+nameplate, rewindhandlers) that are not utilities. Each row moves the class
+to the top-level bucket that matches its role and (where the old name was
+junk) renames it. Pure move-only rows keep their current name.
+
+Map: `tools/renames/moves-namesA.tsv` — dry-run verified:
+`python3 tools/apply_class_moves.py --map tools/renames/moves-namesA.tsv`
+-> `rows=54 skipped=0 files_moved=54 files_touched=95`.
+
+## Table
+
+| old | new | evidence |
+|---|---|---|
+| `com.moonsworth.lunar.client.util.alert.Alert` | `com.moonsworth.lunar.client.util.ResourceUsageTracker` | AsyncResourceManager.field7 = WeakHashMap<AsyncResource,Alert>; method1() resets the nanoTime stamp, method2(now) = expired after 60s unused, method3(now) fades 15s->60s (0..1), method4/5 = resident byte size; a resource-usage/expiry timer, not an alert |
+| `com.moonsworth.lunar.client.util.alert.Alert5Extension` | `com.moonsworth.lunar.client.render.texture.PersistentTexture` | empty marker extends Bridge3_4 implemented by Alert5Impl; AbstractTextureImpl.field4 = value1 instanceof Alert5Extension and deleteGlTexture() skips release() when true -> marks a texture whose GL object persists across reloads |
+| `com.moonsworth.lunar.client.util.alert.Alert5Handler` | `com.moonsworth.lunar.client.render.texture.BaseTexture` | implements Bridge3_4 with empty load (method1(Bridge11_2,Bridge8Extension34)) and delete (method22); passed as the default texture object in MarkerIconRenderer/StencilEmulator (textureManager.method3(id,new Alert5Handler())) |
+| `com.moonsworth.lunar.client.util.alert.Alert5Impl` | `com.moonsworth.lunar.client.render.texture.PersistentTextureImpl` | extends Alert5Handler implements Alert5Extension; created as textureManager.method3(id,new Alert5Impl()) in TextureHandler/Minimap/Holograms/Fishing2Handler so the texture survives reloads |
+| `com.moonsworth.lunar.client.util.alert.AnimatedTexture` | `com.moonsworth.lunar.client.render.texture.AnimatedTexture` | interface method7() -> SpriteAnimationBridge and method12() restart; HologramsIterator casts Bridge3_4 textures to it and restarts the sprite animation |
+| `com.moonsworth.lunar.client.util.alert.CloakTextureSlicer` | `com.moonsworth.lunar.client.cosmetics.CloakTextureSlicer` | static cloak-texture helper: method2(Identifier) tests membership in Holograms12.method70() cloak set, method3-7 rescale a 2:1 cape image to the required slice size; called from SimpleTextureMixin.lunar$sliceCloakTexture |
+| `com.moonsworth.lunar.client.util.alert.CosmeticTextureLoader` | `com.moonsworth.lunar.client.cosmetics.CosmeticTextureLoader` | static cosmetic texture loader: method1(ModuleType3,Gui2Handler,boolean) resolves the module/dynamic texture Identifier, method2 loads it through the texture manager |
+| `com.moonsworth.lunar.client.util.alert.ConnectedTexturesListener` | `com.moonsworth.lunar.client.framework.feature.overlay.ConnectedTexturesListener` | GuiRewindhandlersHandler2 DynamicListener that parses OptiFine getConnectedTextures().getTileProperties()/getBlockProperties() into tile->ConnectedTexture lookups; consumed by framework/feature/overlay/OverlayTextureProcessor |
+| `com.moonsworth.lunar.client.util.alert.ShaderDefinition` | `com.moonsworth.lunar.client.render.shader.ShaderDefinition` | immutable shader definition (texture, two Colorsaturation2, uniform lists, flags); method3(Colorsaturation4,BiConsumer) declares LunarModelViewMat/LunarNormalMat/LunarProjectionMat/LunarLegacyUISize; consumed only by render/shader/ShaderPass, ShaderStateHelper, ShaderPreprocessor, ShaderDebugMod |
+| `com.moonsworth.lunar.client.util.chest.Chest` | `com.moonsworth.lunar.client.util.raytrace.RaySegment` | immutable pair of Horsestats15 endpoints (method1/method2 getters, static method3(start,end)); SBase.method1() reads both points from Supplier<Chest>; RayBuilder builds them from eye/view vectors |
+| `com.moonsworth.lunar.client.util.chest.FixedRay` | `com.moonsworth.lunar.client.util.raytrace.FixedRay` | abstract SExtension with two fixed endpoints + SImpl config; anonymous instance returned by SImpl.method1(start,end,...) for the normal raycasts |
+| `com.moonsworth.lunar.client.util.chest.SBase` | `com.moonsworth.lunar.client.util.raytrace.DynamicRay` | abstract SExtension whose start/end come from a Supplier<Chest>, resolved in method1() (the positions supplier path: error "Ray already has positions assigned! - RayPointSupplier"); returned by SImpl.method2(supplier,...) |
+| `com.moonsworth.lunar.client.util.chest.SExtension` | `com.moonsworth.lunar.client.util.raytrace.Ray` | the built ray: method3() context, method4/5 start/end, method6() result factory, method8(T) traverse; nested RayBuilder resolves it (error strings "Ray already has positions assigned!", "RayContext must have at least one trigger!"); used by ~12 mods (Waila, Markers, EtherwarpPreview, RewindHandlers3Impl2, ...) |
+| `com.moonsworth.lunar.client.util.chest.SImpl` | `com.moonsworth.lunar.client.util.raytrace.Raycaster` | ray-trace configuration/factory: Type enum BLOCK/ENTITY/CHUNK/COSMETIC/SPRAY/CLIENT_ENTITY with traverse(T,Ray), static field1..field13 per target (block/light/biome/entity/chunk/cosmetic/spray/client-entity); methods return FixedRay/DynamicRay (RayBuilder error when null: "RayContext must have at least one trigger!") |
+| `com.moonsworth.lunar.client.util.chest.mixin.Chest` | `com.moonsworth.lunar.client.util.raytrace.RaycastContext` | empty marker interface used as the S type of every SExtension/SImpl; implemented by BlockRaycastContext, EntityRaycastContext and ChestHandler |
+| `com.moonsworth.lunar.client.util.chest.mixin.ChestHandler` | `com.moonsworth.lunar.client.util.raytrace.CosmeticRaycastContext` | boolean-only context; S type of SImpl.field11 (COSMETIC trace, Chest2.method9) and instantiated as new ChestHandler(true) in Waila's cosmetic hit-test |
+| `com.moonsworth.lunar.client.util.chest.mixin.BlockRaycastContext` | `com.moonsworth.lunar.client.util.raytrace.BlockRaycastContext` | boolean-only context used as S for the eight BLOCK SImpl instances (field1-field8: block/light/sky-light/biome) |
+| `com.moonsworth.lunar.client.util.chest.mixin.EntityRaycastContext` | `com.moonsworth.lunar.client.util.raytrace.EntityRaycastContext` | (boolean + two floats, default 0) context used as S for SImpl.field9 (ENTITY) and constructed with partial-tick data in MarkerManager/RewindHandlers3Impl2 |
+| `com.moonsworth.lunar.client.util.click.ByteBufferCache` | `com.moonsworth.lunar.client.render.ByteBufferCache` | static reusable BufferUtils.createByteBuffer grown on demand, position(0) before reuse; used by legacy/mixin/AbstractTextureMixin |
+| `com.moonsworth.lunar.client.util.click.Click` | `com.moonsworth.lunar.client.render.PipelinePass` | one render pass: Identifier texture + BiConsumer<Boolean,Bridge4_6> draw callback + RenderTypeLookup + enabled flag; held as RenderPipeline.getPasses() and produced by mchorse Animation.renderPasses(...) (RenderPass already taken by the cosmetics.emote enum) |
+| `com.moonsworth.lunar.client.util.click.Click4Impl` | `com.moonsworth.lunar.client.render.SkinRenderCache` | extends RenderCache and only adds public String skinType; legacy/mixin/RenderManagerMixin2 casts lunar$getCache() to it, stores AbstractClientPlayer.getSkinType() and re-reads it |
+| `com.moonsworth.lunar.client.util.click.EntityRenderLayer` | `com.moonsworth.lunar.client.render.EntityRenderLayer` | abstract layer method1(renderContext,entity,renderType,partialTicks,light) with six static instances rendering holograms, cosmetics, emote low_body/cape, nametag/armour layers and the self dummy |
+| `com.moonsworth.lunar.client.util.click.FloatArrayBuilder` | `com.moonsworth.lunar.client.render.FloatArrayBuilder` | static singleton growable float[] with size cursor + method1(n) ensureCapacity; used by mobsize/mixin/WorldRenderer to append vertex floats |
+| `com.moonsworth.lunar.client.util.click.GlProgramCache` | `com.moonsworth.lunar.client.render.GlProgramCache` | caches glGetInteger(GL_CURRENT_PROGRAM=35725) behind OptimizationDebugOption.GECKO_CURRENT_PROGRAM_CACHE |
+| `com.moonsworth.lunar.client.util.click.GpuResourceTracker` | `com.moonsworth.lunar.client.render.GpuResourceTracker` | debug tracker of live GL textures/buffers/off-heap allocations with allocation Throwables; dump() prints "Texture count"/"Buffer count", error "Failed to write gpu-objects"; used by fpsdebugmod/GpuObjectsTask |
+| `com.moonsworth.lunar.client.util.click.PoseMatrixProvider` | `com.moonsworth.lunar.client.render.PoseMatrixProvider` | interface method53(): Matrix4f; implemented by RenderContextLegacyTransform (own Matrix4fStack) and RenderContextModernTransform (joml pose of the current pose stack) |
+| `com.moonsworth.lunar.client.util.click.RenderCache` | `com.moonsworth.lunar.client.render.RenderCache` | per-instance mutable render cache: Object value + int (default -1) + boolean + Component, get/set via method1/method2; returned by RenderCacheProvider.lunar$getCache() |
+| `com.moonsworth.lunar.client.util.click.RenderCacheProvider` | `com.moonsworth.lunar.client.render.RenderCacheProvider` | mixin duck interface lunar$getCache(): RenderCache, implemented by legacy RenderManagerMixin2/EntityMixin2 and BridgeIterator_2 |
+| `com.moonsworth.lunar.client.util.click.RenderContextLegacyTransform` | `com.moonsworth.lunar.client.render.RenderContextLegacyTransform` | BridgeExtension3_5 implementation backed by a joml Matrix4fStack(10) (translate/scale/rotateXYZ/push/pop); throws "Unable to use recordDisplayList on RenderContextLegacyTransform" |
+| `com.moonsworth.lunar.client.util.click.RenderContextModernTransform` | `com.moonsworth.lunar.client.render.RenderContextModernTransform` | BridgeExtension2_11 implementation exposing the joml pose of the current pose stack (method51().bridge$last().bridge$pose().bridge$toJoml()); throws "Unable to use createTessellationBuilder on RenderContextModernTransform" |
+| `com.moonsworth.lunar.client.util.click.RenderPipeline` | `com.moonsworth.lunar.client.render.RenderPipeline` | holds a Bridge5_16 buffer source + List<PipelinePass> passes; passed as the pipeline payload of EventPreRenderPlayer.method10/11 |
+| `com.moonsworth.lunar.client.util.click.StencilEmulator` | `com.moonsworth.lunar.client.render.StencilEmulator` | singleton that creates a framebuffer + "lunar:stencil_emulator" texture, overrides the main render target and draws the stencil quad; used by mod/render/Minimap |
+| `com.moonsworth.lunar.client.util.colorsaturation.BOBJModel` | `com.moonsworth.lunar.client.cosmetics.emote.BOBJModel` | mchorse skin_n_bones BOBJ model: ImmutableList<BOBJMesh> built from BOBJLoader.loadMeshes(compiledData), aggregates AABB (method4/6) and frees all meshes; method1/method2 render on legacy/modern paths |
+| `com.moonsworth.lunar.client.util.colorsaturation.Colorsaturation` | `com.moonsworth.lunar.client.cosmetics.emote.BOBJMesh` | one renderable BOBJ mesh: meshSize method1(), legacy method2 / modern method3 draw, delete(), AABB method4(); static method5(CompiledData) picks ColorsaturationTask (modern) or ColorsaturationHandler (legacy) |
+| `com.moonsworth.lunar.client.util.colorsaturation.ColorsaturationHandler` | `com.moonsworth.lunar.client.cosmetics.emote.LegacyBOBJMesh` | legacy BOBJ mesh implementation: VBO/IBO setup in method6, immediate GL11 vertex-pointer draw in method2 (@VersionGate(max=7)) and method3, AABB from posData |
+| `com.moonsworth.lunar.client.util.gui.CopyOnWriteIfNeededArrayList` | `com.moonsworth.lunar.client.util.collection.CopyOnWriteIfNeededArrayList` | copy-on-write List whose inner list is cloned only when a mutation happens while an immutable view is live; error "CopyOnWriteIfNeededArrayList doesn't support subList()!"; used by config/option/ListenerSet |
+| `com.moonsworth.lunar.client.util.gui.Gui` | `com.moonsworth.lunar.client.util.collection.ReadOnlyCollection` | package-private read-only collection contract (size/isEmpty/contains/toArray/containsAll/indexOf/lastIndexOf); unreferenced dead interface - candidate for deletion |
+| `com.moonsworth.lunar.client.util.gui.ImmutableListView` | `com.moonsworth.lunar.client.util.collection.ImmutableListView` | immutable List view: every mutator throws UnsupportedOperationException("List is immutable!"); factory method1(List) wraps in ImmutableListViewImpl |
+| `com.moonsworth.lunar.client.util.gui.ImmutableListViewImpl` | `com.moonsworth.lunar.client.util.collection.ImmutableListViewImpl` | only ImmutableListView implementation; reads delegate to the wrapped List and subList re-wraps via ImmutableListView.method1 |
+| `com.moonsworth.lunar.client.util.gui.ListExtension` | `com.moonsworth.lunar.client.util.collection.ListExtension` | List extension adding method1(Consumer<ImmutableListView<T>>) (the withImmutableView hook); implemented by CopyOnWriteIfNeededArrayList |
+| `com.moonsworth.lunar.client.util.mixin.MixinHelper` | `com.moonsworth.lunar.client.util.collection.ElementAdder` | fluent element-adder contract: default method1(T...) -> method2(Collection), both @Contract("_->this") returning the concrete builder via <B> B; base of ListBuilder (the old name collided with a dozen unrelated MixinHelper classes) |
+| `com.moonsworth.lunar.client.util.mixin.ListBuilder` | `com.moonsworth.lunar.client.util.collection.ListBuilder` | fluent list builder: default method2(T...) -> method3(Collection) plus no-arg removal API; extended by ListBuilderImpl and its lazy variant |
+| `com.moonsworth.lunar.client.util.mixin.ListBuilderImpl` | `com.moonsworth.lunar.client.util.collection.ListBuilderImpl` | ArrayList-backed ListBuilder (method2 addAll, method3 removeAll/removeIf, build(), method4 unmodifiableList) with static factories and nested LazyListBuilder (Supplier<L>, null until first add) |
+| `com.moonsworth.lunar.client.util.highlight.Highlight` | `com.moonsworth.lunar.client.util.AtomicFileWriter` | static atomic text writer: mkdirs, write to "<name>.tmp", Files.move(REPLACE_EXISTING, ATOMIC_MOVE) with AtomicMoveNotSupportedException fallback; used by DungeonwaypointManager/Dungeonwaypoints for JSON files |
+| `com.moonsworth.lunar.client.util.highlight.CloseableImpl` | `com.moonsworth.lunar.client.util.DirectoryWatcher` | Closeable WatchService wrapper: registers a Path for CREATE/DELETE/MODIFY/OVERFLOW, polls every second via BackgroundExecutor and feeds the event Consumer; close() cancels the future and the service; used by KillSounds |
+| `com.moonsworth.lunar.client.util.highlight.FilenameFilter` | `com.moonsworth.lunar.client.util.FileExtensionFilter` | java.io.FilenameFilter matching FilenameUtils.getExtension against a Set<String>; factory method1("mp3","wav","ogg"); used by KillSounds and util/Coordinates |
+| `com.moonsworth.lunar.client.util.holograms.MapImpl` | `com.moonsworth.lunar.client.util.collection.CachedValuesMap` | HashMap-backed Map whose values() is cached as an unmodifiable ArrayList until the next mutation; used by cosmetics AnimationJsonParser for boneAnimations |
+| `com.moonsworth.lunar.client.util.nameplate.Nameplate` | `com.moonsworth.lunar.client.util.ExtraCodecs` | DataFixerUpper codec library (mirrors vanilla ExtraCodecs): JsonElement/Vector3f/Quaternionf/Matrix4f/Pattern/UUID codecs, orCompressed/withLifecycle helpers, String codec validators, nested TagOrElementLocation and StrictUnboundedMapCodec; used by config/option/KeyBind and tiertagger Gui2Extension |
+| `com.moonsworth.lunar.client.util.rewindhandlers.AnimatedColor` | `com.moonsworth.lunar.client.render.color.AnimatedColor` | colour interface method1(float) -> ARGB plus default channel/HSB accessors; factory method11(int,ColorAnimation,int) and chroma default method12() (WAVE, red, 50); used by SkyblockDebugHud/SkyblockScathaTrackerHud |
+| `com.moonsworth.lunar.client.util.rewindhandlers.AnimatedColorImpl` | `com.moonsworth.lunar.client.render.color.AnimatedColorImpl` | AnimatedColor impl wrapping a ColorAnimation (WAVE/SHIFT) + base colour + speed; method1 mirrors the coordinate by screen width+height and applies the animation function |
+| `com.moonsworth.lunar.client.util.rewindhandlers.Gui2Extension` | `com.moonsworth.lunar.client.render.color.ColorAnimation` | enum WAVE("wave", PI_MOTION_EASE_IN_OUT_STROKE) / SHIFT("shift", PI_REPEAT_SQUARE_STROKE) implementing lighting.Gui2Extension; color() is BiFunction<Float,AnimatedColor,Integer> returning HSB chroma; option value in Fishing2Loader4 and CrosshairChildMod |
+| `com.moonsworth.lunar.client.util.rewindhandlers.MutableColor` | `com.moonsworth.lunar.client.render.color.MutableColor` | interface extending RewindhandlersExtension + ColorMutator with default setRed/Green/Blue/Alpha and HSB setters built on getColor()/ColorUtils |
+| `com.moonsworth.lunar.client.util.rewindhandlers.Rewindhandlers` | `com.moonsworth.lunar.client.render.color.ColorMutator` | abstract colour mutation contract: setColor + setRed/Green/Blue/Alpha (int and float) + HSB method14(float,float,float); no getters (the getter side is the jar-only RewindhandlersExtension) |
+| `com.moonsworth.lunar.client.util.rewindhandlers.SolidColor` | `com.moonsworth.lunar.client.render.color.SolidColor` | constant ARGB color implementation (method1/getColor return the single int); built by the jar-only RewindhandlersExtension.method23(int) |
+
+## Destination buckets
+
+| bucket | classes |
+|---|---|
+| `util` | ResourceUsageTracker (util.alert timer), AtomicFileWriter, DirectoryWatcher, FileExtensionFilter (util.highlight file I/O), ExtraCodecs (util.nameplate DFU codec library) |
+| `util.collection` | list/map toolbox: CopyOnWriteIfNeededArrayList, ImmutableListView, ImmutableListViewImpl, ListExtension, ReadOnlyCollection, ElementAdder, ListBuilder, ListBuilderImpl, CachedValuesMap |
+| `util.raytrace` | the whole `util.chest` ray-trace stack: Ray, RaySegment, FixedRay, DynamicRay, Raycaster, RaycastContext + Block/Entity/Cosmetic contexts |
+| `render` | the `util.click` render/GPU toolchain: RenderPipeline, PipelinePass, EntityRenderLayer, RenderCache, SkinRenderCache, RenderCacheProvider, RenderContextLegacy/ModernTransform, PoseMatrixProvider, ByteBufferCache, FloatArrayBuilder, GlProgramCache, GpuResourceTracker, StencilEmulator |
+| `render.texture` | AnimatedTexture, PersistentTexture, PersistentTextureImpl, BaseTexture |
+| `render.shader` | ShaderDefinition |
+| `render.color` | AnimatedColor, AnimatedColorImpl, ColorAnimation, ColorMutator, MutableColor, SolidColor |
+| `cosmetics` | CloakTextureSlicer, CosmeticTextureLoader |
+| `cosmetics.emote` | BOBJModel, BOBJMesh, LegacyBOBJMesh |
+| `framework.feature.overlay` | ConnectedTexturesListener |
+
+## Judgement calls / lower-confidence names
+
+* **`util.alert.Alert` -> `ResourceUsageTracker`** — no real name recoverable. The class
+  is a per-resource "last touched" timestamp (60s unused = expired, 15s..60s = fade)
+  plus a resident-byte-size slot; `AsyncResourceManager` is its only consumer.
+  A `ResourceExpiryTimer`/`TextureUsageTimer` would be equally defensible.
+* **`chest` naming** — the original source is gone, but its own error strings leak
+  the real vocabulary: `"Ray already has positions assigned!"`,
+  `"RayContext must have at least one trigger!"`, `"Ray already has positions
+  assigned! - RayPointSupplier"`. I mapped `SExtension` -> `Ray`,
+  `SImpl` -> `Raycaster`, `SBase` -> `DynamicRay`, and the two-endpoint holder
+  `Chest` -> `RaySegment`. `Raycaster` vs `RayContext` is a coin flip: the
+  "RayContext must have at least one trigger!" message is thrown when the
+  `SImpl` is null, which is the main argument for `RayContext`; I chose
+  `Raycaster` because `SImpl.Type` is the *target* selector (BLOCK/ENTITY/...)
+  and the nested builder is already `RayBuilder`.
+* **`Alert5Extension` / `Alert5Impl` -> `PersistentTexture` /
+  `PersistentTextureImpl`** — inferred from
+  `AbstractTextureImpl.field4 = value1 instanceof Alert5Extension` and
+  `deleteGlTexture()` skipping `release()` for those instances, i.e. the GL
+  texture survives resource reloads. The delegate itself is a no-op
+  (`Alert5Handler` -> `BaseTexture`). The exact original term ("cached",
+  "shared", "self-managed") is unknown.
+* **`ColorsaturationHandler` -> `LegacyBOBJMesh`** — `Colorsaturation.method5`
+  picks `ColorsaturationTask` on modern versions and this class otherwise; it is
+  the GL11/buffer-object path, but "legacy" is inferred from the version gate,
+  not from a leaked string.
+* **`Click` -> `PipelinePass`** — `Animation.renderPasses(...)` returns
+  `List<Click>` and `RenderPipeline.getPasses()` holds them, so the class *is* a
+  render pass; the plain `RenderPass` name is already taken by the unrelated
+  `cosmetics.emote.RenderPass` enum, hence the pipeline-qualified name.
+* **`Gui` (util.gui) -> `ReadOnlyCollection`** — package-private and completely
+  unreferenced in source and in the jar (dead code). It is a move+rename row
+  rather than a deletion because the batch format only expresses moves; the
+  class is a deletion candidate (see below).
+* **`MixinHelper` (util.mixin) -> `ElementAdder`** — the interface is only the
+  fluent "add elements, return this" half of the builder (`method1(T...)`,
+  `method2(Collection)`), while `ListBuilder` adds removal. No upstream library
+  match was found for `LazyListBuilder`; the name is behaviour-derived.
+
+## Notable findings
+
+* **Same-simple-name duplicates inside the cluster**: `util.chest.Chest`
+  (endpoint pair) and `util.chest.mixin.Chest` (empty raycast-context marker)
+  were two different classes; `chest/mixin/*` are not mixins at all (no
+  `@Mixin`, no `$` injection points) — the folder name was junk. Resolved as
+  `RaySegment` vs `RaycastContext`.
+* **Jar-only siblings stay behind**: `util.rewindhandlers.RewindhandlersExtension`,
+  `util.colorsaturation.ColorsaturationTask` (same package) and
+  `fog.chest.Chest2` (referenced by the ray-tracer) have no source files
+  (classpath fallback jar only). The
+  moved `render.color.*` classes therefore keep an explicit
+  `import com.moonsworth.lunar.client.util.rewindhandlers.RewindhandlersExtension;`
+  (added automatically by the applier's left-behind pass); `RewindhandlersExtension`
+  itself can only be renamed once its source/jar twin is dealt with.
+* **Dead code**: `util.gui.Gui` (`ReadOnlyCollection`) has zero implementors or
+  call sites in source and in `libs/lunar-renamed-classes.jar` — safe to delete
+  instead of moving.
+* **Not utilities at all**: `util.alert` was a texture/shader grab-bag
+  (cloak slicing, cosmetic texture loading, OptiFine CTM parsing, shader
+  definitions), `util.holograms`/`util.nameplate`/`util.highlight`/`util.gui`/
+  `util.mixin` were generic collection/file helper drawers, and `util.click`/
+  `util.chest` were engine subsystems; only `util.alert.Alert` was arguably a
+  real utility (moved to `util` root).
+* **Nested classes left as-is**: `SExtension.RayBuilder`/`SExtension.Data`
+  become `Ray.RayBuilder`/`Ray.Data`, `SImpl.Extension`/`SImpl.Type` become
+  `Raycaster.Extension`/`Raycaster.Type`, and `Nameplate.TagOrElementLocation`/
+  `Nameplate.StrictUnboundedMapCodec` become `ExtraCodecs.*` — all rewritten by
+  the outer-class rows; no nested rows were needed (nested rows are silently
+  skipped by the applier, see `apply_class_moves.py` basename check).

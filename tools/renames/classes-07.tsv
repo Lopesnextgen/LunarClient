@@ -1,0 +1,44 @@
+com.moonsworth.lunar.bridge	Annotation2	BridgeParameterTarget	parameter-level mapping annotation (only member Annotation3[] method1); applied to bridge-method params, see quarantined bridge/Bridge2_12
+com.moonsworth.lunar.bridge	Annotation3	BridgeVersionTarget	per-version mapping entry: int version() + Annotation4[] method1() target descriptors
+com.moonsworth.lunar.bridge	Annotation4	BridgeTarget	target descriptor annotation (String[] value()); used for MC class names and member paths inside Annotation3
+com.moonsworth.lunar.bridge	AutoCloseableExtension2	BufferedImageBridge	implements AutoCloseableExtension on top of java.awt.image.BufferedImage (getRGB alpha checks); used by ThreadDownloadImageDataMixin
+com.moonsworth.lunar.bridge	AutoCloseableExtension3	DirectImageBridge	implements AutoCloseableExtension on a direct native-order RGBA ByteBuffer (glGetTexImage readback)
+com.moonsworth.lunar.bridge	Bridge11	RendererLivingEntityBridge	implemented by legacy/wrapper/RendererLivingEntityImpl extends net.minecraft RendererLivingEntity; method1 = canRenderName
+com.moonsworth.lunar.bridge	Bridge14	ResourcePackBridge	resource-pack bridge; implemented by AbstractResourcePackMixin/DefaultResourcePackMixin; getPackName/getPackImage/getInputStream(IResourceLocation)
+com.moonsworth.lunar.bridge	Bridge15	ResourceBridge	IResource bridge; SimpleResourceMixin implements it; getInputStream/hasMetadata/getMetadata/getResourcePackName
+com.moonsworth.lunar.bridge	Bridge16	BufferSourceWrapper	decorator whose only method unwrap() yields a Bridge17; render context unwraps it to find the real BufferSource
+com.moonsworth.lunar.bridge	Bridge17	MultiBufferSourceBridge	MultiBufferSource: getBuffer(RenderType), renderUnbatchableAfter/renderSortedBatchable/contributeWeightedOrderings; extensions add endBatch/endLastBatch/isOutlineBufferSource
+com.moonsworth.lunar.bridge	Bridge19	RenderStateShardBridge	RenderStateShard: bridge$setupState/bridge$clearState; impls are a shader state handler and a pair of Runnables
+com.moonsworth.lunar.bridge	Bridge20	RenderTypeBridge	RenderType: name/bufferSize/sortOnUpload/vertexFormat/vertexFormatMode/renderPipeline/shaderUniforms/outline
+com.moonsworth.lunar.bridge	Bridge21	FrustumBridge	Frustum bridge; FrustumMixin implements it; bridge$getPosition + bridge$isBoundingBoxInFrustum
+com.moonsworth.lunar.bridge	Bridge3	MethodParameter	method parameter/local slot (descriptor type + local index + parameter annotations); load() emits the matching VarInsnNode
+com.moonsworth.lunar.bridge	Bridge5	TextBridge	Adventure text utility of the bridge API: stripColor/getTextContent/asAdventure/asBridge/asLegacyString/doesComponentContain/getTextWidth
+com.moonsworth.lunar.bridge	Bridge8	BlockTripWireBridge	marker interface; sole implementor legacy/mixin/BlockTripWireMixin (@Mixin BlockTripWire)
+com.moonsworth.lunar.bridge	Bridge9	ServerListEntryNormalBridge	marker interface; sole implementor legacy/mixin/ServerListEntryNormalMixin (@Mixin ServerListEntryNormal)
+com.moonsworth.lunar.bridge	BridgeExtension2	EntityFallingBlockBridge	EntityFallingBlockMixin implements it; bridge$getBlock; used by SkyblockHideFallingBlocks/MidasBlocks
+com.moonsworth.lunar.bridge	BridgeExtension5	EntityItemFrameBridge	EntityItemFrameMixin extends EntityHanging implements it; displayed item, rotation, map packet, hanging position
+com.moonsworth.lunar.bridge	BridgeExtension52	EntityItemBridge	EntityItemMixin implements it; getItemStack/itemState/renderCount/renderSeed/bakedModel/bobOffset
+com.moonsworth.lunar.bridge	BridgeExtension_10	ModelBipedBridge	ModelBipedMixin extends ModelBase implements it; bipedHead/bipedBody/bipedArms/bipedLegs + setSneak
+com.moonsworth.lunar.bridge	BridgeExtension_11	SulfurCubeTntBridge	modern (min 39) TNT-like entity bridge (getFuse/getMaximumFuse); TntCountdown keys its instances "sulfur-cube-tnt-..." while classic PrimedTnt uses BridgeExtension4
+com.moonsworth.lunar.bridge	BridgeExtension_12	EntityRenderStateProvider	entity extension (min 16) exposing bridge$getRenderState() returning MixinHelper_12, the cached render state (min 17)
+com.moonsworth.lunar.bridge	BridgeExtension_13	GlStateManagerBridge	GL state operations (enable/blendFunc/depthFunc/polygonMode/shadeModel); BridgeExtension3_4 delegates to the GL11 bridge, BridgeExtension2_4 is a no-op impl
+com.moonsworth.lunar.bridge	BridgeExtension_2	EntityArmorStandBridge	EntityArmorStandMixin implements it; helmet/chestplate/leggings/boots/mainHand/offhand + bridge$isMarker
+com.moonsworth.lunar.bridge	BridgeExtension_3	EntityFireworkRocketBridge	EntityFireworkRocketMixin implements it; bridge$getAttachedToEntity (elytra boost rocket)
+com.moonsworth.lunar.bridge	BridgeExtension_5	ContainerChestBridge	ContainerChestMixin extends Container implements it; bridge$getLowerInventory
+com.moonsworth.lunar.bridge	BridgeExtension_6	GlHandleBridge	functional GL-object interface with lunar$getHandle() and create(int) factory; checked before texture/framebuffer pixel readback (client/util texture util)
+com.moonsworth.lunar.bridge	BridgeExtension_7	NetHandlerPlayClientBridge	ClientPacketListener bridge: addToSendQueue/getNetworkManager/getPlayerInfoMap/quit/getServerBrand
+com.moonsworth.lunar.bridge	BridgeHandler2	NewInstanceEmitter	emits NEW + DUP to build the receiver of an <init> invocation (see BridgeIterator3)
+com.moonsworth.lunar.bridge	BridgeHandler3	FieldGetEmitter	emits GETSTATIC/GETFIELD after pushing the receiver
+com.moonsworth.lunar.bridge	BridgeHandler4	FieldSetEmitter	emits PUTSTATIC/PUTFIELD after pushing receiver and value
+com.moonsworth.lunar.bridge	BridgeHandler5	ParameterConversionEmitter	loads a parameter and, when annotated with @BridgeParameterTarget, emits a null-checked lens conversion path
+com.moonsworth.lunar.bridge	BridgeHandler6	ReturnEmitter	emits RETURN or the return opcode matching the target method descriptor
+com.moonsworth.lunar.bridge	BridgeHandler_2	ThisEmitter	emits ALOAD 0 and pushes the target class type as the receiver of a chain
+com.moonsworth.lunar.bridge	BridgeIterator2	InvocationEmitter	root emitter: parses the target method descriptor, queues parameters, installs the path emitters plus return emitter
+com.moonsworth.lunar.bridge	BridgeIterator3	PathEmitter	walks a List<Bridge_13> target path and builds the field/method emitter chain for it
+com.moonsworth.lunar.bridge	BridgeIterator4	CompositeEmitter	runs a list of emitters and pops values they leave on the stack (POP/POP2)
+com.moonsworth.lunar.bridge	BridgeType2	ShaderStageType	shader stage enum VERTEX(35633)/FRAGMENT(35632)/GEOMETRY(36313)/CONTROL(36488)/EVALUATION(36487)/COMPUTE(37305)
+com.moonsworth.lunar.bridge	BridgeType3	PolygonMode	polygon mode enum GL_POINT/GL_LINE/GL_FILL (6912..6914); returned by bridge$polygonMode
+com.moonsworth.lunar.bridge	BridgeType4	ShadeModel	shade model enum GL_FLAT/GL_SMOOTH (7424/7425); passed to the glShadeModel bridge
+com.moonsworth.lunar.bridge	BridgeType5	TextureUnit	texture unit enum GL_TEXTURE_0..GL_TEXTURE31; getId() = 33984 + ordinal
+com.moonsworth.lunar.bridge	BridgeType6	VertexElementType	vertex element/GL data type enum BYTE..DOUBLE, id() = 5120 + ordinal (matches VertexFormatElement types plus GL_2/3/4_BYTES)
+com.moonsworth.lunar.bridge	BridgeType_10	DepthFunction	depth function enum GL_NEVER..GL_ALWAYS (512..519); used by the depthFunc bridge

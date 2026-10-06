@@ -1,0 +1,32 @@
+# Bucket batch C1: wrong-folder / wrong-name classes
+# col6 `file` only needed for nested rows
+com.moonsworth.lunar.client.heightlimit	Heightlimit	com.moonsworth.lunar.client.framework.feature.heightlimit	HeightLimitState	height-limit toggle state (setEnabled 2/3); feature impl lives in framework.feature.heightlimit
+com.moonsworth.lunar.client.heightlimit	ThreadedPresentSupport	com.moonsworth.lunar.client.render	ThreadedPresentSupport	threaded-present GPU capability flag; unrelated to height limit
+com.moonsworth.lunar.client.knockbacktrainer	KnockbacktrainerThread	com.moonsworth.lunar.client.framework.feature.knockbacktrainer	KnockbackTrainerThread	tick-driven knockback trainer thread; feature impl lives in framework.feature.knockbacktrainer
+com.moonsworth.lunar.client.itemphysics.mixin	Itemphysics	com.moonsworth.lunar.client.framework.feature.itemphysics.mixin	Itemphysics	item physics mixin; feature impl
+com.moonsworth.lunar.client.itemphysics.mixin	ProfanityFilterConfig	com.moonsworth.lunar.client.chat	ProfanityFilterConfig	profanity filter config, not item physics
+com.moonsworth.lunar.client.itemphysics.mixin	ProfanityWordLists	com.moonsworth.lunar.client.chat	ProfanityWordLists	profanity word lists, not item physics
+com.moonsworth.lunar.client.mobsize.mixin	TessellatorRenderer	com.moonsworth.lunar.client.framework.feature.mobsize.mixin	TessellatorRenderer	mob-size Tessellator override
+com.moonsworth.lunar.client.mobsize.mixin	WorldRenderer	com.moonsworth.lunar.client.framework.feature.mobsize.mixin	WorldRenderer	mob-size WorldRenderer override
+com.moonsworth.lunar.client.itemtracker	TypeAdapter	com.moonsworth.lunar.client.util	JsonDateAdapter	Gson TypeAdapter for LocalDate; not an item tracker
+com.moonsworth.lunar.client.itemcounter	Itemcounter	com.moonsworth.lunar.client.network.safety	MaliciousListFetcher	fetches /game/safety maliciousServers+maliciousUrls and drives the prompts; real item counter is framework.feature.itemcounter
+com.moonsworth.lunar.client.freelook	Highlight3Handler	com.moonsworth.lunar.client.network.server	PluginMessageHandler	lunarclient:pm/lunar:apollo plugin-channel handler + server ping/disconnect events; no freelook code
+com.moonsworth.lunar.client.nameplate	Highlight3Iterator	com.moonsworth.lunar.client.network.transfer	TransferHandler	Apollo transfer/ping websocket handler (super("transfer","Transfer")); obfuscation-leftover name
+com.moonsworth.lunar.client.nameplate	PingServerCache	com.moonsworth.lunar.client.network.transfer	PingServerCache	ping/transfer server cache
+com.moonsworth.lunar.client.nameplate	PingServerData	com.moonsworth.lunar.client.network.transfer	PingServerData	ping/transfer server data
+com.moonsworth.lunar.client.nameplate	TransferSrvResolver	com.moonsworth.lunar.client.network.transfer	TransferSrvResolver	SRV-based transfer server resolver
+com.moonsworth.lunar.client.nameplate	Nameplate	com.moonsworth.lunar.client.framework.build	LunarBuildData	parses lunarBuildData.txt build keys; nothing to do with nameplates
+com.moonsworth.lunar.client.inventorymod	CrashReporter	com.moonsworth.lunar.client.framework.crash	CrashReporter	Sentry bootstrap/breadcrumbs; not the inventory mod
+com.moonsworth.lunar.client.inventorymod	ExceptionSanitizer	com.moonsworth.lunar.client.framework.crash	ExceptionSanitizer	sanitizes throwables against IgnoredExceptionPatterns
+com.moonsworth.lunar.client.inventorymod	IgnoredExceptionPatterns	com.moonsworth.lunar.client.framework.crash	IgnoredExceptionPatterns	regex list of ignorable exception messages
+com.moonsworth.lunar.client.inventorymod	InventorymodError	com.moonsworth.lunar.client.framework.crash	CrashReportError	throwable wrapper preserving cause name/stacktrace
+com.moonsworth.lunar.client.inventorymod	Inventorymod	com.moonsworth.lunar.client.framework.crash	IchorStackTraceFilter	rewrites ichor-transformed stack frames via IchorAPI
+com.moonsworth.lunar.client.inventorymod	JsonSerializer	com.moonsworth.lunar.client.framework.crash	ThrowableJsonSerializer	Gson serializer for Bridge3_22 throwables (Sentry payload)
+com.moonsworth.lunar.client.hitcolor	FogHandler	com.moonsworth.lunar.client.framework.combat	PlayerCombatState	per-player interaction/combat timestamps used by attack animations + stat tracker; package/class names meaningless
+com.moonsworth.lunar.client.hitbox	Hitbox	com.moonsworth.lunar.client.framework.hud	HudRowLayout	static HUD row layout/measure/draw engine
+com.moonsworth.lunar.client.hitbox	HudRow	com.moonsworth.lunar.client.framework.hud	HudRow	HUD row primitive
+com.moonsworth.lunar.client.hitbox	TextHudRow	com.moonsworth.lunar.client.framework.hud	TextHudRow	text row
+com.moonsworth.lunar.client.hitbox	SpacerHudRow	com.moonsworth.lunar.client.framework.hud	SpacerHudRow	fixed-width gap row
+com.moonsworth.lunar.client.hitbox	HorizontalHudRow	com.moonsworth.lunar.client.framework.hud	HorizontalHudRow	left-to-right composite row
+com.moonsworth.lunar.client.hitbox	ItemIconHudRow	com.moonsworth.lunar.client.framework.hud	ItemIconHudRow	item icon row
+com.moonsworth.lunar.client.hitbox	HudRowAlignment	com.moonsworth.lunar.client.framework.hud	HudRowAlignment	LEFT/CENTER/RIGHT row alignment

@@ -1,0 +1,224 @@
+// ============================================================================
+// Lunar Client 1.8.9 deobf — Gradle build (parallel to the Maven build)
+//
+// Dual-build layout: Gradle writes its classes and jars to the same paths the
+// Maven build uses (`target/classes`, `target/*.jar`), so tools/run-lunar.sh
+// and IntelliJ run configurations work with either build system.
+//
+//   gradle compileJava     # fast incremental compile
+//   gradle jar             # thin jar  -> target/lunar-client-deobf-1.8.9.jar
+//   gradle fatJar          # fat jar   -> target/lunar-client-deobf-1.8.9-jar-with-dependencies.jar
+//   gradle runLunar        # launch through tools/run-lunar.sh
+// ============================================================================
+plugins {
+    id 'java'
+}
+
+group = 'com.moonsworth'
+version = '1.8.9'
+description = 'Deobfuscated Lunar Client 1.8.9 sources merged into an MCP 1.8.9 workspace'
+
+layout.buildDirectory.set(file('target'))
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 17
+    options.encoding = 'UTF-8'
+    options.debug = false
+    options.compilerArgs += ['-Xmaxerrs', '100000', '-proc:none']
+}
+
+configurations.all {
+    // Some dependencies (e.g. the Twitch SDK) pull a newer Gson whose
+    // TypeAdapter.read/write are final, which breaks MCP 1.8.9's
+    // EnumTypeAdapterFactory. Pin the 1.8.9-era version (same as pom.xml).
+    resolutionStrategy.force 'com.google.code.gson:gson:2.2.4'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    maven { url = 'https://repo.marcloud.net/' }
+}
+
+dependencies {
+    implementation 'io.netty:netty-all:4.0.23.Final'
+    implementation 'com.mojang:patchy:1.7.7'
+    implementation 'net.sf.jopt-simple:jopt-simple:4.6'
+    implementation 'org.lwjgl:lwjgl:2.9.4-nightly'
+    implementation 'org.lwjgl:util:2.9.4-nightly'
+    implementation 'net.java.jinput:jinput:2.0.5'
+    implementation 'com.mojang:icu4j-core-mojang:51.2'
+    implementation 'org.apache.httpcomponents:httpclient:4.3.3'
+    implementation 'org.apache.httpcomponents:httpcore:4.3.2'
+    implementation 'oshi:oshi-core:1.1'
+    implementation 'net.java.dev.jna:jna:3.4.0'
+    implementation 'net.java.dev.jna:platform:3.4.0'
+    implementation 'net.java.jutils:jutils:1.0.0'
+    implementation 'commons-logging:commons-logging:1.1.3'
+    implementation 'org.apache.commons:commons-compress:1.8.1'
+    implementation 'org.apache.logging.log4j:log4j-api:2.0-beta9'
+    implementation 'org.apache.logging.log4j:log4j-core:2.0-beta9'
+    implementation 'tv.twitch:twitch:6.5'
+    implementation 'com.google.guava:guava:29.0-jre'
+    implementation 'org.apache.commons:commons-lang3:3.3.2'
+    implementation 'commons-io:commons-io:2.4'
+    implementation 'commons-codec:commons-codec:1.9'
+    // Vendored 1.8.9 Gson, declared before lunar-bundled-libs.jar so it wins
+    // over the 2.11 copy bundled inside that jar (MCP implements TypeAdapter).
+    implementation files('libs/vanilla/libraries/com/google/code/gson/gson/2.2.4/gson-2.2.4.jar')
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.15.0'
+    implementation 'com.paulscode.sound:libraryjavasound:20101123'
+    implementation 'com.paulscode.sound:codecwav:20101023'
+    implementation 'com.paulscode.sound:soundsystem:20120107'
+    implementation 'com.paulscode.sound:codecjorbis:20101023'
+    implementation 'com.paulscode.sound:librarylwjglopenal:20100824'
+    implementation 'com.mojang:authlib:1.5.21'
+    implementation 'org.joml:joml:1.10.5'
+    implementation 'it.unimi.dsi:fastutil:8.5.15'
+    implementation 'org.jspecify:jspecify:1.0.0'
+    // Vendored 24.1.0, declared before lunar-bundled-libs.jar so TYPE_USE
+    // @Nullable wins over the old copy bundled inside that jar.
+    implementation files('libs/annotations-24.1.0.jar')
+    implementation 'org.brotli:dec:0.1.2'
+    compileOnly 'org.projectlombok:lombok:1.18.34'
+
+    // Bundled Lunar jars (Maven system-scope equivalents).
+    // Jar-free policy (pom.xml, 2026-09-16): Lunar classes resolve from
+    // src/main/java. Only the compiled protocol API and the third-party
+    // libraries its reference jar bundled stay on the classpath. The old
+    // libs/lunar-libraries.jar symlink is gone; do not re-add it.
+    implementation files('libs/lunarclient-protocol.jar')
+    implementation files('libs/lunar-bundled-libs.jar')
+    implementation files('libs/multiver-full/ReplayMod-v1_8-2.6.24.jar')
+    implementation files('libs/forge-1.8.9-compile.jar')
+    implementation files('libs/optifine-1.8.9-compile.jar')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java']
+            // Same exclusions as the Maven compiler executions.
+            exclude 'com/moonsworth/lunar/forge/lib/**'
+            exclude 'com/moonsworth/lunar/OHOOORICRHIIIIRHCICICOCHROICRC/HRICOROOOCCOCOROCRHHCRRIRCOICO$1.java'
+            exclude 'com/moonsworth/lunar/OHOOORICRHIIIIRHCICICOCHROICRC/HRICOROOOCCOCOROCRHHCRRIRCOICO$2.java'
+        }
+        resources {
+            srcDirs = ['src/main/resources']
+        }
+    }
+}
+
+// Keep test outputs out of target/classes (the main output dir the jar tasks
+// pack) so Gradle 8 does not treat compileTestJava as a jar input.
+tasks.named('compileTestJava') {
+    destinationDirectory.set(layout.buildDirectory.dir('test-classes'))
+}
+sourceSets.test.output.resourcesDir = layout.buildDirectory.dir('test-resources').get().asFile
+
+// ---------------------------------------------------------------------------
+// Two-phase compilation, mirroring the Maven setup:
+//   1. net/minecraft (MCP) at --release 8 (the game classes must stay class
+//      file 52 for Lunar's Ichor ASM 5 transformer; they are Java 8 sources).
+//   2. com/moonsworth (Lunar) at --release 17 against the MCP output.
+// Both write to target/classes so the launch harness sees one tree.
+// ---------------------------------------------------------------------------
+def classesDir = layout.buildDirectory.dir('classes')
+
+def compileMcp = tasks.register('compileMcp', JavaCompile) {
+    group = 'build'
+    description = 'Compile the MCP 1.8.9 game sources at --release 8'
+    source = fileTree('src/main/java/net/minecraft') { include '**/*.java' }
+    classpath = configurations.compileClasspath
+    destinationDirectory.set(classesDir)
+    options.release = 8
+    options.compilerArgs += ['-Xmaxerrs', '100000', '-proc:none']
+    options.encoding = 'UTF-8'
+    options.debug = false
+}
+
+def compileLunar = tasks.register('compileLunar', JavaCompile) {
+    group = 'build'
+    description = 'Compile the deobfuscated Lunar sources at --release 17'
+    dependsOn compileMcp
+    // target/classes is both the resource output and this task's classpath
+    // entry (the MCP classes); Gradle 8 wants that dependency declared.
+    dependsOn tasks.named('processResources')
+    source = fileTree('src/main/java/com/moonsworth') {
+        include '**/*.java'
+        exclude 'lunar/forge/lib/**'
+        exclude 'lunar/OHOOORICRHIIIIRHCICICOCHROICRC/HRICOROOOCCOCOROCRHHCRRIRCOICO$1.java'
+        exclude 'lunar/OHOOORICRHIIIIRHCICICOCHROICRC/HRICOROOOCCOCOROCRHHCRRIRCOICO$2.java'
+    }
+    classpath = files(classesDir) + configurations.compileClasspath
+    destinationDirectory.set(classesDir)
+    options.release = 17
+    options.compilerArgs += ['-Xmaxerrs', '100000', '-proc:none', '-XDshould-stop.ifError=GENERATE']
+    options.encoding = 'UTF-8'
+    options.debug = false
+}
+
+tasks.named('compileJava') { enabled = false }
+
+sourceSets.main.output.classesDirs.setFrom(classesDir)
+sourceSets.main.output.resourcesDir = classesDir.get().asFile
+
+tasks.named('classes') {
+    dependsOn compileLunar
+    dependsOn tasks.named('processResources')
+}
+
+// The two compile tasks intentionally share target/classes; the build cache
+// cannot key overlapping outputs, so opt out for them.
+compileMcp.configure { outputs.cacheIf { false } }
+compileLunar.configure { outputs.cacheIf { false } }
+
+tasks.named('jar', Jar) {
+    archiveFileName = "lunar-client-deobf-${version}.jar"
+    destinationDirectory = layout.buildDirectory
+}
+
+tasks.register('jarWithDependencies', Jar) {
+    group = 'build'
+    description = 'Fat jar mirroring the Maven assembly output'
+    archiveFileName = "lunar-client-deobf-${version}-jar-with-dependencies.jar"
+    destinationDirectory = layout.buildDirectory
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from sourceSets.main.output
+
+    // Maven-normal dependencies, unpacked.
+    from({
+        configurations.runtimeClasspath.filter { f -> !f.path.contains('/libs/') }
+                .collect { f -> f.isDirectory() ? f : zipTree(f) }
+    })
+
+    // System-scope Lunar jars, unpacked with sources' com/moonsworth kept
+    // out so compiled sources are not shadowed by bytecode copies.
+    from({
+        files('libs/lunarclient-protocol.jar', 'libs/lunar-bundled-libs.jar',
+              'libs/multiver-full/ReplayMod-v1_8-2.6.24.jar', 'libs/forge-1.8.9-compile.jar',
+              'libs/optifine-1.8.9-compile.jar').collect { f -> zipTree(f) }
+    }) {
+        exclude 'com/moonsworth/**'
+    }
+
+    exclude 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
+}
+
+tasks.named('assemble') {
+    dependsOn tasks.named('jarWithDependencies')
+}
+
+tasks.register('runLunar', Exec) {
+    group = 'application'
+    description = 'Launch the deobfuscated client through tools/run-lunar.sh'
+    workingDir = projectDir
+    commandLine 'bash', 'tools/run-lunar.sh'
+}

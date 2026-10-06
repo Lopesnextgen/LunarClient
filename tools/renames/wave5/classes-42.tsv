@@ -1,0 +1,27 @@
+package	old	new	evidence
+com.moonsworth.lunar.client.util	MixinHelper222	TypeSpec	extends AbstractSpec (SourceEmitter family); renders package/imports/modifier+class-name/extends/implements then field+method+nested specs and optional private ctor; nested Data builder PUBLIC/PROTECTED/PRIVATE + static/final/abstract + addField/addMethod/addType; held by JavaFileWriter/Util; jar-only, no TypeSpec declared in tree
+com.moonsworth.lunar.client.util	Data2	ResolvedAddress	nested ThreadModuleDump$Data2: address record (address, module name, module path, module base, symbol) built by resolveAddress and printed by formatAddress as "0x%016x  module!symbol+0x.." / "<no address>"
+com.moonsworth.lunar.client.util	Data3	LoadedModule	nested ThreadModuleDump$Data3: loaded-module record (szModule, szExePath, modBaseAddr, modBaseSize) built by enumerateModules from MODULEENTRY32W; findOwningModule range-checks base <= addr < base+size
+com.moonsworth.lunar.client.util	Data4	ThreadStartAddress	nested ThreadModuleDump$Data4: tryGetWin32StartAddress result from NtQueryInformationThread(ThreadQuerySetWin32StartAddress=9): address or "NTSTATUS=0x%08x" error
+com.moonsworth.lunar.client.util	Data2	ListSerializer	nested ThreadModuleDump35$Data2: JsonSerializer<List<?>> writing a JsonArray, null when null/empty; sibling adapters Data(JsonSerializer<Map>)/Data3(Set)/Data4(String) are registered on the replay+fog Gson builders
+com.moonsworth.lunar.client.util	Data3	SetSerializer	nested ThreadModuleDump35$Data3: JsonSerializer<Set<?>> writing a JsonArray, null when empty; registerTypeHierarchyAdapter(Set.class, new Data3()) in fog/gui/FogHandler2
+com.moonsworth.lunar.client.util	Data4	StringSerializer	nested ThreadModuleDump35$Data4: JsonSerializer<String> emitting a JsonPrimitive, null for null/empty; registerTypeAdapter(String.class, new Data4()) in fog/gui/FogHandler2
+com.moonsworth.lunar.client.util	Data5	SerializedNameExclusionStrategy	nested ThreadModuleDump35$Data5: Gson ExclusionStrategy skipping fields of classes annotated @Annotation7(SerializedNameOnly) that lack @SerializedName; setExclusionStrategies(new Data5()) in feature/rewind/Rewind2_3 and replay/ReplayProjectManager
+com.moonsworth.lunar.client.util	Data6	IntegerRangeDeserializer	nested ThreadModuleDump35$Data6: JsonDeserializer<Range<Integer>> parsing "[a..b]" ("Invalid range format: ") into org.apache.commons.lang3.Range.between; imported by the Rewind2_3/ReplayProjectManager Gson builders
+com.moonsworth.lunar.client.util	Data2	RefreshAccountResult	nested ThreadModuleDump39$Data2: refreshAccount callback result (isSuccessful + Type2 error ACCOUNTS_FILE_EMPTY/LAUNCHER_NOT_OPEN/MISSING_REFRESH_TOKEN/NOT_PURCHASED_MINECRAFT); produced by ThreadModuleDump39.method2, imported by account/AccountSession and fog/Lighting3Loader2
+com.moonsworth.lunar.client.util	Data2	AbstractTransform	nested ThreadModuleDump91$Data2: abstract cosmetic transform with Vector3f position + Type condition; JSON save/load keys "transformType"/"values"(x,y,z)/"condition"; base of DynamicTransform/ScaleTransform/TranslateTransform
+com.moonsworth.lunar.client.util	Data3	DynamicTransform	nested ThreadModuleDump91$Data3: transform whose Vector3f comes from Function<BridgeExtension222,Vector3f> evaluated per entity; save() writes "gui"/"player" variants; factory base for CosmeticSlot.translate/scale(Function,Type)
+com.moonsworth.lunar.client.util	Data4	ScaleTransform	nested ThreadModuleDump91$Data4: scale transform (transformType()=Type2.SCALE, BridgeExtension_9.scale / Matrix4f.scale); loaded from cosmetic JSON in fog/holograms/Holograms12
+com.moonsworth.lunar.client.util	Data5	TranslateTransform	nested ThreadModuleDump91$Data5: translate transform (transformType()=Type2.TRANSLATE, BridgeExtension_9.translate / Matrix4f.translate); loaded from cosmetic JSON in fog/holograms/Holograms12
+com.moonsworth.lunar.client.util	Data6	RotateTransform	nested ThreadModuleDump91$Data6: rotate transform (float[4] angle+x+y+z, transformType()=Type2.ROTATE; BridgeExtension_9.method4/method5 and Quaternionf.rotationX/Y/Z); built by the rotate(...)/rotateOnAxis(...) factories
+com.moonsworth.lunar.client.util	Kernel32	Kernel32Library	nested Wasapi$Kernel32: JNA StdCallLibrary Native.load("kernel32", ...) with CreateEvent/WaitForSingleObject/CloseHandle for the WASAPI capture; digit-free variant avoids the tree's imported com.sun.jna.platform.win32.Kernel32
+# SKIPPED (stale-jar twins of already-named classes -- delete/unify in the repair pass, do NOT rename; see notes-42.md):
+# Annotation2=NotNullSerialized; Annotation3=Identifier; Annotation4=TranslationEntry; Annotation5=ConstantName
+# Annotation6=ParameterPosition; Annotation7=SerializedNameOnly; InputStreamLoader2=RewindableInputStream
+# MixinHelper2=SourceEmitter; MixinHelper22=AbstractSpec; MixinHelper223=MethodSpec; MixinHelper224=FieldSpec
+# MixinHelper23=AnnotationSpec; MixinHelper23$Data2=AnnotationSpec$AnnotationLiteral; MixinHelper23$Data3=AnnotationSpec$AnnotationSpecBuilder
+# MixinHelper25$Data2=JavadocSpec$JavadocBuilder; ThreadModuleDump17$Data2=ColorMath$LabColor
+# ThreadModuleDump18$Data2..6=Easing$ElasticInOut/ElasticOut/BackInOut/BackOut/BackIn
+# ThreadModuleDump47$Data2=WeightedQuadtree$QuadTreeEntry
+# ThreadModuleDump77$Extension2..4=UncheckedFunctional$ThrowingConsumer/ThrowingRunnable/ThrowingSupplier
+# ThreadModuleDumpType5$Data2..5=ConditionState$FunctionCondition/Condition/ConstantCondition/SupplierCondition

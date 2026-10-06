@@ -1,0 +1,2 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client.event	ApolloPacketEvent	HighlightImpl_3	jar-coupled: jar Highlight3Iterator_3.method3(HighlightImpl_3) abstract method is overridden by ~30 Apollo handlers; param type must match exactly	com/moonsworth/lunar/client/event/ApolloPacketEvent.java

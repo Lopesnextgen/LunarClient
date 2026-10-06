@@ -1,0 +1,1094 @@
+[
+  {
+    "name": "ABSORB",
+    "displayName": "Absorb",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "AB"
+  },
+  {
+    "name": "AIMING",
+    "displayName": "Aiming",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "AI"
+  },
+  {
+    "name": "ANGLER",
+    "displayName": "Angler",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "AN"
+  },
+  {
+    "name": "AQUA_AFFINITY",
+    "displayName": "Aqua Affinity",
+    "maxLevel": 1,
+    "hypermaxLevel": 1,
+    "abbreviation": "AA"
+  },
+  {
+    "name": "BANE_OF_ARTHROPODS",
+    "displayName": "Bane of Arthropods",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "BA"
+  },
+  {
+    "name": "BIG_BRAIN",
+    "displayName": "Big Brain",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "BB"
+  },
+  {
+    "name": "BLAST_PROTECTION",
+    "displayName": "Blast Protection",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "BP"
+  },
+  {
+    "name": "BLESSING",
+    "displayName": "Blessing",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "BL"
+  },
+  {
+    "name": "CASTER",
+    "displayName": "Caster",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "CA"
+  },
+  {
+    "name": "CHANCE",
+    "displayName": "Chance",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "CH"
+  },
+  {
+    "name": "CLEAVE",
+    "displayName": "Cleave",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "CL" 
+  },
+  {
+    "name": "COMPACT",
+    "displayName": "Compact",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "CO"
+  },
+  {
+    "name": "COUNTER_STRIKE",
+    "displayName": "Counter-Strike",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "CS"
+  },
+  {
+    "name": "CRITICAL",
+    "displayName": "Critical",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "CR"
+  },
+  {
+    "name": "CUBISM",
+    "displayName": "Cubism",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "CB"
+  },
+  {
+    "name": "CULTIVATING",
+    "displayName": "Cultivating",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "CU" 
+  },
+  {
+    "name": "DELICATE",
+    "displayName": "Delicate",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "DE"
+  },
+  {
+    "name": "DEPTH_STRIDER",
+    "displayName": "Depth Strider",
+    "maxLevel": 3,
+    "hypermaxLevel": 3,
+    "abbreviation": "DS"
+  },
+  {
+    "name": "DRAGON_HUNTER",
+    "displayName": "Gravity",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "GR"
+  },
+  {
+    "name": "DRAGON_TRACER",
+    "displayName": "Dragon Tracer",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "DT"
+  },
+  {
+    "name": "EFFICIENCY",
+    "displayName": "Efficiency",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "EF"
+  },
+  {
+    "name": "ENDER_SLAYER",
+    "displayName": "Ender Slayer",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "ES"
+  },
+  {
+    "name": "EXECUTE",
+    "displayName": "Execute",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "EX"
+  },
+  {
+    "name": "EXPERIENCE",
+    "displayName": "Experience",
+    "maxLevel": 4,
+    "hypermaxLevel": 5,
+    "abbreviation": "XP"
+  },
+  {
+    "name": "EXPERTISE",
+    "displayName": "Expertise",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "EX"
+  },
+  {
+    "name": "FEATHER_FALLING",
+    "displayName": "Feather Falling",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "FF"
+  },
+  {
+    "name": "FIRE_ASPECT",
+    "displayName": "Fire Aspect",
+    "maxLevel": 2,
+    "hypermaxLevel": 3,
+    "abbreviation": "FA"
+  },
+  {
+    "name": "FIRE_PROTECTION",
+    "displayName": "Fire Protection",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "FP"
+  },
+  {
+    "name": "FIRST_STRIKE",
+    "displayName": "First Strike",
+    "maxLevel": 4,
+    "hypermaxLevel": 5,
+    "abbreviation": "FS"
+  },
+  {
+    "name": "FLAME",
+    "displayName": "Flame",
+    "maxLevel": 1,
+    "hypermaxLevel": 2,
+    "abbreviation": "FL"
+  },
+  {
+    "name": "FOREST_PLEDGE",
+    "displayName": "Forest Pledge",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "FP"
+  },
+  {
+    "name": "FORTUNE",
+    "displayName": "Fortune",
+    "maxLevel": 4,
+    "hypermaxLevel": 4,
+    "abbreviation": "FO"
+  },
+  {
+    "name": "FRAIL",
+    "displayName": "Frail",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "FR"
+  },
+  {
+    "name": "FROST_WALKER",
+    "displayName": "Frost Walker",
+    "maxLevel": 2,
+    "hypermaxLevel": 2,
+    "abbreviation": "FW"
+  },
+  {
+    "name": "GIANT_KILLER",
+    "displayName": "Giant Killer",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "GK"
+  },
+  {
+    "name": "GROWTH",
+    "displayName": "Growth",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "GR"
+  },
+  {
+    "name": "HARVESTING",
+    "displayName": "Harvesting",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "HA"
+  },
+  {
+    "name": "IMPALING",
+    "displayName": "Impaling",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "IM"
+  },
+  {
+    "name": "INFINITE_QUIVER",
+    "displayName": "Infinite Quiver",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "IQ"
+  },
+  {
+    "name": "KNOCKBACK",
+    "displayName": "Knockback",
+    "maxLevel": 2,
+    "hypermaxLevel": 2,
+    "abbreviation": "KB"
+  },
+  {
+    "name": "LETHALITY",
+    "displayName": "Lethality",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "LE"
+  },
+  {
+    "name": "LIFE_STEAL",
+    "displayName": "Life Steal",
+    "maxLevel": 4,
+    "hypermaxLevel": 5,
+    "abbreviation": "LS"
+  },
+  {
+    "name": "LOOTING",
+    "displayName": "Looting",
+    "maxLevel": 4,
+    "hypermaxLevel": 5,
+    "abbreviation": "LO"
+  },
+  {
+    "name": "LUCK_OF_THE_SEA",
+    "displayName": "Luck of the Sea",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "LS"
+  },
+  {
+    "name": "LUCK",
+    "displayName": "Luck",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "LU"
+  },
+  {
+    "name": "LURE",
+    "displayName": "Lure",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "LR"
+  },
+  {
+    "name": "MANA_STEAL",
+    "displayName": "Mana Steal",
+    "maxLevel": 3,
+    "hypermaxLevel": 3,
+    "abbreviation": "MS"
+  },
+  {
+    "name": "MAGNET",
+    "displayName": "Magnet",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "MG"
+  },
+  {
+    "name": "OVERLOAD",
+    "displayName": "Overload",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "OV"
+  },
+  {
+    "name": "PIERCING",
+    "displayName": "Piercing",
+    "maxLevel": 1,
+    "hypermaxLevel": 1,
+    "abbreviation": "PI"
+  },
+  {
+    "name": "POWER",
+    "displayName": "Power",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "PO"
+  },
+  {
+    "name": "PROJECTILE_PROTECTION",
+    "displayName": "Projectile Protection",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "PP"
+  },
+  {
+    "name": "PROSECUTE",
+    "displayName": "Prosecute",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "PR"
+  },
+  {
+    "name": "PROTECTION",
+    "displayName": "Protection",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "PT"
+  },
+  {
+    "name": "PUNCH",
+    "displayName": "Punch",
+    "maxLevel": 2,
+    "hypermaxLevel": 2,
+    "abbreviation": "PU"
+  },
+  {
+    "name": "RAINBOW",
+    "displayName": "Rainbow",
+    "maxLevel": 1,
+    "hypermaxLevel": 3,
+    "abbreviation": "RA"
+  },
+  {
+    "name": "REJUVENATE",
+    "displayName": "Rejuvenate",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "RJ"
+  },
+  {
+    "name": "REPLENISH",
+    "displayName": "Replenish",
+    "maxLevel": 1,
+    "hypermaxLevel": 1,
+    "abbreviation": "RP"
+  },
+  {
+    "name": "RESPIRATION",
+    "displayName": "Respiration",
+    "maxLevel": 3,
+    "hypermaxLevel": 4,
+    "abbreviation": "RE"
+  },
+  {
+    "name": "RESPITE",
+    "displayName": "Respite",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "RP"
+  },
+  {
+    "name": "SCAVENGER",
+    "displayName": "Scavenger",
+    "maxLevel": 4,
+    "hypermaxLevel": 6,
+    "abbreviation": "SV"
+  },
+  {
+    "name": "SCUBA",
+    "displayName": "Scuba",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "SC"
+  },
+  {
+    "name": "SHARPNESS",
+    "displayName": "Sharpness",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "SH"
+  },
+  {
+    "name": "SILK_TOUCH",
+    "displayName": "Silk Touch",
+    "maxLevel": 1,
+    "hypermaxLevel": 1,
+    "abbreviation": "ST"
+  },
+  {
+    "name": "SMELTING_TOUCH",
+    "displayName": "Smelting Touch",
+    "maxLevel": 1,
+    "hypermaxLevel": 1,
+    "abbreviation": "ST"
+  },
+  {
+    "name": "SMARTY_PANTS",
+    "displayName": "Smarty Pants",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "SP"
+  },
+  {
+    "name": "SMITE",
+    "displayName": "Smite",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "SM"
+  },
+  {
+    "name": "SMOLDERING",
+    "displayName": "Smoldering",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "SM"
+  },
+  {
+    "name": "SNIPE",
+    "displayName": "Snipe",
+    "maxLevel": 3,
+    "hypermaxLevel": 4,
+    "abbreviation": "SN"
+  },
+  {
+    "name": "SPIKED_HOOK",
+    "displayName": "Spiked Hook",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "SH"
+  },
+  {
+    "name": "STEALTH",
+    "displayName": "Stealth",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "ST"
+  },
+  {
+    "name": "SUGAR_RUSH",
+    "displayName": "Sugar Rush",
+    "maxLevel": 3,
+    "hypermaxLevel": 3,
+    "abbreviation": "SR"
+  },
+  {
+    "name": "SYPHON",
+    "displayName": "Drain",
+    "maxLevel": 4,
+    "hypermaxLevel": 5,
+    "abbreviation": "DR"
+  },
+  {
+    "name": "THORNS",
+    "displayName": "Thorns",
+    "maxLevel": 3,
+    "hypermaxLevel": 4,
+    "abbreviation": "TH"
+  },
+  {
+    "name": "THUNDERBOLT",
+    "displayName": "Thunderbolt",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TB"
+  },
+  {
+    "name": "THUNDERLORD",
+    "displayName": "Thunderlord",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TL"
+  },
+  {
+    "name": "TITAN_KILLER",
+    "displayName": "Titan Killer",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TK"
+  },
+  {
+    "name": "TIDAL",
+    "displayName": "Tidal",
+    "maxLevel": 3,
+    "hypermaxLevel": 3,
+    "abbreviation": "TD"
+  },
+  {
+    "name": "TRIPLE_STRIKE",
+    "displayName": "Triple-Strike",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "TS"
+  },
+  {
+    "name": "TRUE_PROTECTION",
+    "displayName": "True Protection",
+    "maxLevel": 1,
+    "hypermaxLevel": 1,
+    "abbreviation": "TP"
+  },
+  {
+    "name": "TURBO_CROP",
+    "displayName": "Turbo-Crop",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TC"
+  },
+  {
+    "name": "TURBO_CACTUS",
+    "displayName": "Turbo-Cacti",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TC"
+  },
+  {
+    "name": "TURBO_CANE",
+    "displayName": "Turbo-Cane",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TC"
+  },
+  {
+    "name": "TURBO_CARROT",
+    "displayName": "Turbo-Carrot",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TC"
+  },
+  {
+    "name": "TURBO_COCO",
+    "displayName": "Turbo-Cocoa",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TC"
+  },
+  {
+    "name": "TURBO_MELON",
+    "displayName": "Turbo-Melon",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TM"
+  },
+  {
+    "name": "TURBO_MUSHROOMS",
+    "displayName": "Turbo-Mushrooms",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TM"
+  },
+  {
+    "name": "TURBO_POTATO",
+    "displayName": "Turbo-Potato",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TP"
+  },
+  {
+    "name": "TURBO_PUMPKIN",
+    "displayName": "Turbo-Pumpkin",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TP"
+  },
+  {
+    "name": "TURBO_WHEAT",
+    "displayName": "Turbo-Wheat",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TW"
+  },
+  {
+    "name": "TURBO_WARTS",
+    "displayName": "Turbo-Warts",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TW"
+  },
+  {
+    "name": "TURBO_MOONFLOWER",
+    "displayName": "Turbo-Moonflower",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TM"
+  },
+  {
+    "name": "TURBO_ROSE",
+    "displayName": "Turbo-Rose",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TR"
+  },
+  {
+    "name": "TURBO_SUNFLOWER",
+    "displayName": "Turbo-Sunflower",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "TS"
+  },
+  {
+    "name": "VAMPIRISM",
+    "displayName": "Vampirism",
+    "maxLevel": 6,
+    "hypermaxLevel": 6,
+    "abbreviation": "VA"
+  },
+  {
+    "name": "VENOMOUS",
+    "displayName": "Venomous",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "VE"
+  },
+  {
+    "name": "VICIOUS",
+    "displayName": "Vicious",
+    "maxLevel": 4,
+    "hypermaxLevel": 5,
+    "abbreviation": "VI"
+  },
+  {
+    "name": "ARCANE",
+    "displayName": "Woodsplitter",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "WS"
+  },
+  {
+    "name": "TRANSYLVANIAN",
+    "displayName": "Transylvanian",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "TR"
+  },
+  {
+    "name": "ICE_COLD",
+    "displayName": "Ice Cold",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "IC"
+  },
+  {
+    "name": "PESTERMINATOR",
+    "displayName": "Pesterminator",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "PE"
+  },
+  {
+    "name": "REFLECTION",
+    "displayName": "Reflection",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "RF"
+  },
+  {
+    "name": "PALEONTOLOGIST",
+    "displayName": "Paleontologist",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "PA"
+  },
+  {
+    "name": "PRISTINE",
+    "displayName": "Prismatic",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "PR"
+  },
+  {
+    "name": "LAPIDARY",
+    "displayName": "Lapidary",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "LA"
+  },
+  {
+    "name": "DEDICATION",
+    "displayName": "Dedication",
+    "maxLevel": 4,
+    "hypermaxLevel": 4,
+    "abbreviation": "DE"
+  },
+  {
+    "name": "GREEN_THUMB",
+    "displayName": "Green Thumb",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "GT"
+  },
+  {
+    "name": "QUANTUM",
+    "displayName": "Quantum",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "QT"
+  },
+  {
+    "name": "QUICK_BITE",
+    "displayName": "Quick Bite",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "QB"
+  },
+  {
+    "name": "ULTIMATE_BANK",
+    "displayName": "Bank",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "BA"
+  },
+  {
+    "name": "ULTIMATE_CHIMERA",
+    "displayName": "Chimera",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "CH"
+  },
+  {
+    "name": "ULTIMATE_COMBO",
+    "displayName": "Combo",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "CO"
+  },
+  {
+    "name": "ULTIMATE_LAST_STAND",
+    "displayName": "Last Stand",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "LS"
+  },
+  {
+    "name": "ULTIMATE_LEGION",
+    "displayName": "Legion",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "LE"
+  },
+  {
+    "name": "ULTIMATE_NO_PAIN_NO_GAIN",
+    "displayName": "No Pain No Gain",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "NP"
+  },
+  {
+    "name": "ULTIMATE_ONE_FOR_ALL",
+    "displayName": "One For All",
+    "maxLevel": 1,
+    "hypermaxLevel": 1,
+    "abbreviation": "OF"
+  },
+  {
+    "name": "ULTIMATE_REND",
+    "displayName": "Rend",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "RE"
+  },
+  {
+    "name": "ULTIMATE_SOUL_EATER",
+    "displayName": "Soul Eater",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "SE"
+  },
+  {
+    "name": "ULTIMATE_SWARM",
+    "displayName": "Swarm",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "SW"
+  },
+  {
+    "name": "ULTIMATE_JERRY",
+    "displayName": "Ultimate Jerry",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "JE"
+  },
+  {
+    "name": "ULTIMATE_WISE",
+    "displayName": "Ultimate Wise",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "UW"
+  },
+  {
+    "name": "ULTIMATE_WISDOM",
+    "displayName": "Wisdom",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "WI"
+  },
+  {
+    "name": "ULTIMATE_BOBBIN_TIME",
+    "displayName": "Bobbin\u0027 Time",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "BT"
+  },
+  {
+    "name": "ULTIMATE_REITERATE",
+    "displayName": "Duplex",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "DX"
+  },
+  {
+    "name": "ULTIMATE_HABANERO_TACTICS",
+    "displayName": "Habanero Tactics",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "HT"
+  },
+  {
+    "name": "ULTIMATE_INFERNO",
+    "displayName": "Inferno",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "IN"
+  },
+  {
+    "name": "ULTIMATE_FLASH",
+    "displayName": "Flash",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "FL"
+  },
+  {
+    "name": "ULTIMATE_FATAL_TEMPO",
+    "displayName": "Fatal Tempo",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "FT"
+  },
+  {
+    "name": "ULTIMATE_REFRIGERATE",
+    "displayName": "Refrigerate",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "RE"
+  },
+  {
+    "name": "ULTIMATE_FLOWSTATE",
+    "displayName": "Flowstate",
+    "maxLevel": 3,
+    "hypermaxLevel": 3,
+    "abbreviation": "FS"
+  },
+  {
+    "name": "ULTIMATE_THE_ONE",
+    "displayName": "The One",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "TO"
+  },
+  {
+    "name": "ULTIMATE_FIRST_IMPRESSION",
+    "displayName": "First Impression",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "FI"
+  },
+  {
+    "name": "ULTIMATE_MISSILE",
+    "displayName": "Missile",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "MI"
+  },
+  {
+    "name": "ULTIMATE_CROP_FEVER",
+    "displayName": "Crop Fever",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "CF"
+  },
+  {
+    "name": "ULTIMATE_SUNSET",
+    "displayName": "Sunset",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "SS"
+  },
+  {
+    "name": "HECATOMB",
+    "displayName": "Hecatomb",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "HT"
+  },
+  {
+    "name": "CHAMPION",
+    "displayName": "Champion",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "CH"
+  },
+  {
+    "name": "TOXOPHILITE",
+    "displayName": "Toxophilite",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "TX"
+  },
+  {
+    "name": "PISCARY",
+    "displayName": "Piscary",
+    "maxLevel": 6,
+    "hypermaxLevel": 7,
+    "abbreviation": "PS"
+  },
+  {
+    "name": "CAYENNE",
+    "displayName": "Cayenne",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "CY"
+  },
+  {
+    "name": "CHARM",
+    "displayName": "Charm",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "CH"
+  },
+  {
+    "name": "CORRUPTION",
+    "displayName": "Corruption",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "CO"
+  },
+  {
+    "name": "FEROCIOUS_MANA",
+    "displayName": "Vivacious Vitality",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "FM"
+  },
+  {
+    "name": "HARDENED_MANA",
+    "displayName": "Hardened Vitality",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "HM"
+  },
+  {
+    "name": "STRONG_MANA",
+    "displayName": "Strong Vitality",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "SM"
+  },
+  {
+    "name": "MANA_VAMPIRE",
+    "displayName": "Vampiric Vitality",
+    "maxLevel": 6,
+    "hypermaxLevel": 10,
+    "abbreviation": "MV"
+  },
+  {
+    "name": "PROSPERITY",
+    "displayName": "Prosperity",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "PR"
+  },
+  {
+    "name": "TABASCO",
+    "displayName": "Tabasco",
+    "maxLevel": 3,
+    "hypermaxLevel": 3,
+    "abbreviation": "TA"
+  },
+  {
+    "name": "DIVINE_GIFT",
+    "displayName": "Divine Gift",
+    "maxLevel": 3,
+    "hypermaxLevel": 3,
+    "abbreviation": "DG"
+  },
+  {
+    "name": "GREAT_SPOOK",
+    "displayName": "Great Spook",
+    "maxLevel": 1,
+    "hypermaxLevel": 1,
+    "abbreviation": "GS"
+  },
+  {
+    "name": "SMALL_BRAIN",
+    "displayName": "Small Brain",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "SB"
+  },
+  {
+    "name": "BUG_BLENDER",
+    "displayName": "Bug Blender",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "BB"
+  },
+  {
+    "name": "FEAST",
+    "displayName": "Feast",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "FE"
+  },
+  {
+    "name": "MAGMARIZER",
+    "displayName": "Pyroclasm",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "PY"
+  },
+  {
+    "name": "PETALFALL",
+    "displayName": "Petalfall",
+    "maxLevel": 5,
+    "hypermaxLevel": 5,
+    "abbreviation": "PF"
+  },
+  {
+    "name": "KARMA",
+    "displayName": "Karma",
+    "maxLevel": 5,
+    "hypermaxLevel": 6,
+    "abbreviation": "KA"
+  }
+]

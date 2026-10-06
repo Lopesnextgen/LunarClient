@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.config
+com.moonsworth.lunar.client.config.migration
+com.moonsworth.lunar.client.config.option
+com.moonsworth.lunar.client.config.option.trait
+com.moonsworth.lunar.client.config.override
+com.moonsworth.lunar.client.coordinates
+com.moonsworth.lunar.client.coordinates.mixin
+com.moonsworth.lunar.client.cosmetics

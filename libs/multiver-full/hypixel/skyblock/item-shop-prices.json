@@ -1,0 +1,767 @@
+{
+  "bits": {
+    "GOD_POTION_2": {
+      "price": 1500,
+      "type": "ITEM"
+    },
+    "KISMET_FEATHER": {
+      "price": 1350,
+      "type": "ITEM"
+    },
+    "KAT_FLOWER": {
+      "price": 500,
+      "type": "ITEM",
+      "itemLegacy": "red_flower:4",
+      "itemModern": "red_tulip"
+    },
+    "KAT_BOUQUET": {
+      "price": 2500,
+      "type": "ITEM",
+      "itemLegacy": "double_plant:4",
+      "itemModern": "rose_bush"
+    },
+    "HEAT_CORE": {
+      "price": 3000,
+      "type": "ITEM"
+    },
+    "HYPER_CATALYST_UPGRADE": {
+      "price": 300,
+      "type": "ITEM"
+    },
+    "ULTIMATE_CARROT_CANDY_UPGRADE": {
+      "price": 8000,
+      "type": "ITEM"
+    },
+    "COLOSSAL_EXP_BOTTLE_UPGRADE": {
+      "price": 1200,
+      "type": "ITEM"
+    },
+    "JUMBO_BACKPACK_UPGRADE": {
+      "price": 4000,
+      "type": "ITEM"
+    },
+    "MINION_STORAGE_EXPANDER": {
+      "price": 1500,
+      "type": "ITEM"
+    },
+    "MATRIARCH_PARFUM": {
+      "price": 1200,
+      "type": "ITEM"
+    },
+    "DITTO_BLOB": {
+      "price": 600,
+      "type": "ITEM"
+    },
+    "BUILDERS_WAND": {
+      "price": 12000,
+      "type": "ITEM"
+    },
+    "BLOCK_ZAPPER": {
+      "price": 5000,
+      "type": "ITEM"
+    },
+    "BITS_TALISMAN": {
+      "price": 15000,
+      "type": "ITEM"
+    },
+    "SHARD_BITBUG": {
+      "price": 5000,
+      "type": "ITEM",
+      "skin": {
+        "id": "174cfdb4-a3cb-43b5-bfcd-e424c3bb2c6e",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTcyOTY0Mjk1MDU5NSwKICAicHJvZmlsZUlkIiA6ICIxNzRjZmRiNGEzY2I0M2I1YmZjZGU0MjRjM2JiMmM2ZSIsCiAgInByb2ZpbGVOYW1lIiA6ICJtYXJhZWwxOCIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS8zMTIwMmYyZTZiNDA4MjMxYjQ2OTg3MjM5NzFhYjM5ZWE2MTVkMmRhM2NjNjQxMzA3YmYxYzA4YTBiN2YwZGNhIgogICAgfQogIH0KfQ==",
+        "signature": "u9B62SsUHuT56Nnz+a3NQ17Ff2pRctHz8WrGS0HjDjW4dEwtLPyHSZ8lU/Oi8hWgsjWYpmxwxUixFelOREynVSM2AD2udbtk1CRAYHH2FVx2wjb+0qYKJQadNuADrWAThx5sD3WhTDwJ3r/bhVC4QF/Ybz/lqsTw30yKJbBnGidxzgP2eiW7F2byLgDeteK3zcs5VUHPpnArkX+PAdqNAbzsmM5KdnWYiwMT3A5RlPR45o7Pe3uZRMXZJz5X7SRpq5OfCFm2fw7NZoLoot3PWdI0dgfUs4z7wtJeqOX3VO+1hxH5UFbKU3VfpSO3i7yI7Dky7Djv5BnsNNZ8bkJkStPG92X0nDchbTqc5UDzDWlrtxt/FHJUXn8zwRhbllcaO8HoXHb+mmVX0ic8r3m68UhjK6XVByFP8xbXqEXEf/GmZSaCjr76ZAd1FnScQ3rnb0FV4zqc8gtu/ulO4hFIstiKFFBeWrdzCvIs0YqSQcZJJgriaj2nIk7VAO5kspQRvlUr5fXYURqNHCkxGXp92jTSo3lQAxltdBdljsyRuOAPc/m1PZvjQEoFKmXmYYn3QgSD3mmz/XEU19jYanlfNUQU/S3jmW2fG3fwGZ/bCoRPxfOgP42TxB3sbCOvhSC8n6eqr47rWsfieXVWSPngNKwKUvbkBLgfcKzpDGtTjx4="
+      }
+    },
+    "POCKET_SACK_IN_A_SACK": {
+      "price": 8000,
+      "type": "ITEM"
+    },
+    "PORTALIZER": {
+      "price": 4800,
+      "type": "ITEM"
+    },
+    "TRIO_CONTACTS_ADDON": {
+      "price": 6450,
+      "type": "ITEM",
+      "itemLegacy": "comparator",
+      "itemModern": "comparator"
+    },
+    "ABICASE_SUMSUNG_1": {
+      "price": 15000,
+      "type": "ABICASE",
+      "displayName": "Sumsung© G3 Abicase",
+      "skin": {
+        "id": "7af2ca59-0283-37f1-84a9-489b9f75c7d1",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTcxMTY0ODU4NzU4NSwKICAicHJvZmlsZUlkIiA6ICIyNDc2OWQ0ODM1MDU0N2JmYjg4OThiZTJlYzQ5ODZiMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJBaXJidXNfQTM4TyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83MGNlMzJiOTBlMTY0MTkzMTlkYWYzNWU2YWQwMWJiNzE1ZDg5ODU0OGI5ZWY2NmRkNzk5YTAwMTA3ZTg3Mzc2IiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0=",
+        "signature": "Z2KKXE7kS2GlxxysMjWWb0bFNRPiJRCPRTxiSM1lLv9jFXQ7eJnzT8VACOI9sZCZH80X/en2ZYJdghyKvtuqOfErcOV3nst2fkxeFDPv7zaGjSctPB0VlVEwVzl4EL3GLPeYbOCIwTVW2494vdN6B/dYqBbTDHAIy4WxOl82x0FPZFQyR2ZlvxNoU1u0lEseHxKjGlyoPVGGmK6zTOgHPDxnBu2waIRGaepEvN5UYIwnHSu11Oez27SHP+x41RCGd5mn6BCOVVajIV/fJAuygXg1jtxLiSM7G9xrNQf4CO8xRzwVNkvsn2DgjVZ5bnhW7sPFfKm6aluEpu4g+xEXmon8EihhbPdkdeWj+jYMJnukKPJeTNDKNBGiyGP10kf8ivss3O1g12+rDb41jUf//1wR/yK/yUBHriITXxDR7hBoACYUZsvV/T5PaDYfumcGnJVhxLs/FD/0a7YRpMY3MmvGE8hi38l2Ba1R2zFrxmXIHWW/5DK5f9bP+WtQH6SLeYj/HL7uO6g986PLppfcw9v611TfmFDz6ICQ4UfVJYWbobf0IjQTrYF/tFIKrT0AuXHA79e7koUDC6or7kakKteQvmjrxIzCdjPGjTw/zoPf/T2zsSn67/KS/X14iLOMT6OrVauQ66g2NNnzc8lmpWD9emB/bTA/cf+T9Tj31fA="
+      }
+    },
+    "ABICASE_SUMSUNG_2": {
+      "price": 25000,
+      "type": "ABICASE",
+      "displayName": "Sumsung© GG Abicase",
+      "skin": {
+        "id": "fd96f182-ed3b-3a3e-b946-7da90e3a4194",
+        "signature": "cD5o0xPvbdyTQH75/tTxdmDDbLKtXTcVw+lyKMG5odusyPuRXZG/QyL2mOL1BiEgYTQrdd3Jks0ABBEIHYN1TBVHXT8NLOQo8Vutli41DQZ2kGuA34By66nBPa/Y4tzKr+pPs55nTl8fkXZsQUHsNYfVBFmqWbV2G6HyXnjms4uBLQIgjj8cIjM0+UKKAExA74UfCGG5mVyR8JhLfxC1AN5/E+uGkbuXTt8pQ4Gh0LcOI8h7SXfJ3roYbokyCFBeyP6hiusAcesxyITy9HK1cHc1mc3X3XYWg7v2u/fCNJzN94eoDtxlVcAxR9bb2fx7ItBILH6eTLTfL6/AHAh2Mffy1nhYQ9p72hKZKFQ6QPCJeatCyggUm6KmuUfn7uPswSCIGTbAsvFVXbkTwkDR6GECPEvwNpaeIWoop2LoQjURhaAH7cOixLprYaZIWeIneaQi87Sd3gcM17bC2qtDYK+DAzmobHb1cQSc5QzvFNJkF3QvoTrFwHDCfBpCFwtLY1hDVk0l1qchwkhWP7dfn4rTGQByr9k9H2Ctpjyn9wUxdU8bt+3Q+WvWOMCG4aPjys8sK7AqtVVVOIaVf6nxbPCn1hrqC8M1vV845dNlc8KVGhOrgHYim1zL2U6uIsly4bB+tsUazQyI/ORzdRrDQqTaZewis0ZnePVBJ4js+Kc=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY1NzgxNDQwMzI2OSwKICAicHJvZmlsZUlkIiA6ICIyNDIyZWM1ZWFiZDM0MDQ5YmYzNjBlOTFiMTFhMmFmZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJsYXJnZWJyZWFzdHMiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzZhMTBlZTIxNTVmYzAxMzRkOTM5MjAwMGE5ZWI5ZWJjYmE4NTI2ZWZmMzg5M2U1NDQzNGU4MjVlNTU4ZmI1NSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9"
+      }
+    },
+    "ABICASE_REZAR": {
+      "price": 26000,
+      "type": "ABICASE",
+      "displayName": "Rezar® Abicase",
+      "skin": {
+        "id": "28bc756f-fcfc-363b-a286-74109f9762e5",
+        "signature": "FGyjBYcfFgf81Ym/QKzaDs3HK/4IOKgQXIVxAwYftNXWONcR5f3VbqxMZYs3UCquXZa4u0AwLr1pAbjLlih9fxcBnytyYt6a53hlzCzlvdvpKCq7rWfHyoXHJVkdD8Gj8ruGBOZ1P5KhiirAHggxY0pAlcPXuQXYg3UsJWdx8vT6x/L16pQsxzF6z9J0neR/GYqEZBJ9mSgVoEdGACMk4v2rHNmv9K/x8cZO8+4rXGPpY9UdeU0+Nw9RdUdZzhikWTc4VbEgsMgvpWYDFwjZ/Lh7HQ93qkfiCSvLwvyVrAK4NV+df/IMKbGFUOXCG2VYC/n4fSnFS2SFC5lbcUucI8Dh8F2TY2tNwcY8oBhhIHgDajKsFHZsrqk8e/y5e+u1WBxc/6hDdt/c0rDE6S8faUQLwdbHcd0ksiXVbVuFFtnpibiMH09xCm7niMGZ0DslZzzgblMaom3RmQoBiurZ7MAodN0QY+26WOxrJguWfRONSNEI1kPUxuVopSw3duvRF8OUulZiGJXZM1gwHwlC6B3irbiN5AEBQhP8xSkfr6mzncT0UqZPpaetibmPH4ljI/aJyFxeYAU8ZRm4F9zZ+LB5Pw8gk/6cT3/NO05Tl2CUjfsP8QNiQVqddJAeW3cJiV1JbCxuHsFnBQhjp2wC46poW+kDUOA3hEupHXpfkYI=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTcyMDAyMDY2ODk1MywKICAicHJvZmlsZUlkIiA6ICI5NDczNjdlMTE1N2Q0ZjQzYTZmYmY0MGQwOTY3MjY3MyIsCiAgInByb2ZpbGVOYW1lIiA6ICJ3aW5uZXIzMiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iMjEyOGY0OGQ5OTcxODY1NjNmYmM1YjQ3YTg4YzBkMGFhYzkyZmEyYzI4NWNkMWZhZTQyMGMzNGZhOGYyMDEwIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
+      }
+    },
+    "ABICASE_BLUE_RED": {
+      "price": 17000,
+      "type": "ABICASE",
+      "displayName": "Blue™ but Red Abicase",
+      "skin": {
+        "id": "a56bf8e8-28af-3b07-890c-e50686af67ab",
+        "signature": "eZfr3JBGoaxkKvA21ddYNONo7Og+BOsrv5BSaIqlUwgVQeR7UtN2nMppVJl+D0IqGIO+izYj3UmiSHuZgPX7V3XS7blxH6jnqIIIndxbsAnlVfApmK/1ldQbQyQhO0sMCn+mdMU6nxUlgxssDMm8ZynmOuRwreEkWl0JeiFSNcNb4vkU6pMQt4Bj7U9od+V4qbcyIlHx2bSOP6szNRlFZAS7K7rH49ZYHKYWZ9cpK9M5sJ4LmmS1GplhU0nlFAmwTlKXAHUm63wD1zYC26LX0orkJhs7ff/EQhyFItJr/ABNiTvUy3+BiJG7rCxjPjB7OZVQ1+grwcMLWE1+LMRlFsTqsRBrlTGZpbekZhCoiljwG9WNSmARovwp5rJ0Noz9bUf+QM/HhfI1GNjUiZYJoijbinhQ+ASEV4Bp4AtEaa2p6HoMCNbLEkmqRGxCXLvjFyFRI2O5bHb6MKe+mdA58la1orllsA0GZ4kMES0LUgnx9yt5whY11eJ3K/ENmUR+n9m6FLbSBVSZ7k6QrYdPS2i2lH9kmRwdDmsSCAVgIU1Qbsmb6DQaIA2GiW/gwcPn/0A258rY0jadjOWhlMULxcQwAXGjn5WA/1yT2kA2k2qgsNCgRYF79RD1fPryJUrClVY3z6kcHud51VgI8BBVz0BMrIJ9TOvUd4X807N0scI=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTcyMDAyMDczNDQ2MCwKICAicHJvZmlsZUlkIiA6ICI2YWVmMjM3Y2RhNDY0Y2QzYTdiZDcxYjg3YzFlMDEwNSIsCiAgInByb2ZpbGVOYW1lIiA6ICJLYWlqdW5va2kiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQyNTgwZTE1MWY5NjJkNzM2MTE2ODZmNWE5MDlmMjJhZjJjZjhlM2ZiYTVmYmY5MTIyNjkyZTg5ZTY0YTY2NyIKICAgIH0KICB9Cn0="
+      }
+    },
+    "ABICASE_BLUE_BLUE": {
+      "price": 17000,
+      "type": "ABICASE",
+      "displayName": "Actually Blue™ Abicase",
+      "skin": {
+        "id": "11ab939a-66a0-343d-97e1-9c26ef0187a4",
+        "signature": "l2UGsfNZrTI5vqgp6x0+k89dfkgTpqjXoZyAGt/I2tlq8WZRQzZ9HrO4mCcSd77odE+Z2EOgkDAvVzzEjM6xZa52vkCkBe4g21hYe+ucIiw4vLEgV1OCVj+5EpprRihNt7On8TmiE++dqgbpJ6l5p4P6iJaIVGj/+oziwY8sii1DdRd8/SqM+StjIcMm42/MfqATQwAw8y98ZLaYgdp2DioMXMqKIldeMkOYQ+I3HU1ApjOniHNHYLNeG35Svhwsva/zQ/Bw7Z8J2V92zpMIZiHKm5UChvnH6vIGyOsS/SOh+eh5uPabDuD+xFJhyvdaC0zM4VvRdxx6b7O1c8uCT+csgtAofwR4CiJAYRdBREym5OQ9Tz5r12dcjtVOfwAuRhG3E5jwPRkK6w+2wYr+Fc9B/AWaieqqYccSxYEhnsctObABOh94NZrfMdx97lezqXJVTgzSuoen2GN4gjHZQKyVXZPDKTRiMuywWRLAzQC1lnrKtIvFLr4zfDjOasKkgJOQ6q8KcN9834Ug5vxgGwr2Gj1t+c6GYAsmh2BoNBdTlmoX+mYYQ1wYpExzV1DjNeKhln57lV0uBb7kTf6XLXjfqdAMyfbP+5ZPkhWZUGPPAdORqr16VA22j/A/cJ5rAfl3FK8NfK4VW5dn+pJJBbtyAwWYabmqs4Fo2FYnZQ0=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNDQyMjY1NzA2MywKICAicHJvZmlsZUlkIiA6ICJkZTU3MWExMDJjYjg0ODgwOGZlN2M5ZjQ0OTZlY2RhZCIsCiAgInByb2ZpbGVOYW1lIiA6ICJNSEZfTWluZXNraW4iLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjQ0MTAxMjA1NzVhYjY1Zjk4NThhMDE2M2U3ZTM5NDBkYjVmZGI1NWE4ZGM2Yzc0ODI3NTdmNjZmOTI3ODgzMSIKICAgIH0KICB9Cn0="
+      }
+    },
+    "ABICASE_BLUE_GREEN": {
+      "price": 17000,
+      "type": "ABICASE",
+      "displayName": "Blue™ but Green Abicase",
+      "skin": {
+        "id": "6949044e-c735-3801-9e20-d85d4b4e6024",
+        "signature": "usHiKqdlVHRZZWSN4Q07h0EUZuF4KNRxpSufjNnPzKDR9wdfzRwN3VSjcOqmOVMRLE+RXd91Q4lMl8k1jiVOGngxxMlzizH1VjtBoA21Fan7aD2gF+bD7mN2uDZ7fhMon7qelLEDoWFWZd79T1j59qRdqBUQnmMuWcDOT29QGu0RmOmCvhKJFjATH6Y0auPsk3w+yOl1nUPccsD20Zh/Uw7wTPeF1S0AYtE7CeNQ/OlRVowu7cIWZ0uTjDxxb0XTO25os6D/83S3IX+oi2uEGse3brtLvl+V7QPn9nQfh2fN5FRHBCL8h6L1B0xE3tfdAD8+mnX56S5JNgQev6xsfTmSnpTMAevGsWbfAdam4DXqGEov+m32sJLGM5V91iqJvfLxkgbjzjNoLmVJ182oaERgpmC0QaO/jzUNho6eQKWhoNFmOeINi3/punzEOuEtWBnj71P2zYk3+nyginK/ZkkkhO96Y8xyRg+VsyBvh8M/jUSXW7pqCKeaAm8H0GHglEBvYumViFgNPe4+ty1dYQtTXnOu6lmurnLGGkPk/Xozm9RfxUyfdoV+k6YkYhutfMrYwmzJac54jVIc8DNv5iAZVKF6ShgyZTsUQiNuUVT5LuFgyzmoHEt5LHoXeexL1AqBBcuADKcF9vautXX+JdVVz37DWzZF+hYIrGto84A=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNjAxOTAzNDEzMiwKICAicHJvZmlsZUlkIiA6ICJiMGQ3MzJmZTAwZjc0MDdlOWU3Zjc0NjMwMWNkOThjYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJPUHBscyIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9lNDQ0ZmQzYTM5YWExMTc0ZGZlYjhhN2MxMWUzOTQ0ZmU4YmRmM2M3NWI1YjdjNDk5NTgyOGRjOTdmZDc0OTcyIgogICAgfQogIH0KfQ=="
+      }
+    },
+    "ABICASE_BLUE_YELLOW": {
+      "price": 17000,
+      "type": "ABICASE",
+      "displayName": "Blue™ but Yellow Abicase",
+      "skin": {
+        "id": "e3316956-9ca5-30c2-a8b1-07a03cdad38d",
+        "signature": "IU0oQC9CKRkpXb1YDrTeyaPTrlqb6eTIM133NLS52fSbxXFq9CBoOkXqhHGNoCsF3rjYC/BVizs+l+wOUrpE0Sq40tU24N+iJAR/88p/ucueTil2fRw/Qwp4Pl2IAfnCNI5kwSbGvcA1XT9Gu6trW6drStPmA99dc70U59sJbJ/nvIDfCPrkV5TEk1s75zSBVg6uGYW4VHUf5lKCcgSzyzc9kqAOVg/6q+Q18HaAS/aI3V0DWnZ9t2kkkM9Y/kjSXsLw4mFCBh8dx99FgTpXDu8pj2Y0bT6jkTQzHEnHwzxHg0YpWewgDBsEjy9jm3mVm6umpv2rb/I5WFSWcTxcIR/e0E+oEPjMrSics33GkaqRbM3Pw/II9oBZ+O4ckS+FKl8qZZpvb/ZpdEpUTi4A7gsE3rhW4O9zcRZCBc7T9FRpKTxPSZ/yGCDaUefw32u6F3RJPIpyePhkgzfmxiYnnif4D5cvR4GmmLiD1TpDnbfXhawiEf9qyHPqRFc3MbAzLgsYp1xQArGW1GhXJVqx0xy076XbzMbJvhP8bJvajLTjVkhbRDZfMmdnAJ+wLtyITaZEPHnAYGM1OXqPNR7diu9jGrIKPP8j06U+rtKYd4EWuP3w/Ojnscp8ZqfkDU6n0ffl6WwEmB1z1/Ho1s3ECykwXv+W311QQMFihv7SyrQ=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNjAxOTAwOTgyMiwKICAicHJvZmlsZUlkIiA6ICJhNzdkNmQ2YmFjOWE0NzY3YTFhNzU1NjYxOTllYmY5MiIsCiAgInByb2ZpbGVOYW1lIiA6ICIwOEJFRDUiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGVlYzNkOGQ0YzJhYjVjYWYzYzVmNTA4ODU2ZGMxMDM4NDMzMDBmYWE0YmEwYTBhMzE0MjUxMzRhM2RhOGQ2MiIKICAgIH0KICB9Cn0="
+      }
+    },
+    "ABICASE_BLUE_AQUA": {
+      "price": 17000,
+      "type": "ABICASE",
+      "displayName": "Lighter Blue™ Abicase",
+      "skin": {
+        "id": "257ff24a-cf4e-318f-b305-c4e9f8d33a7b",
+        "signature": "FEz+FD2A3t2IhTznnXup2hkQ33/Z4ZevVdvKm0bRBYKK3giT344ZQOL7u7HLt90sgyevZUImgwsv+6pxqOWuZn56BTkw8Tr3Qv0qD/EocxKQkQRKPsAvwMZmjHuCpFrM7hhzYS00Gk+R/6s2me7Bm0UYEik2N2yT2ONE0/kxpGjuSyr5Mr2GwNuoi85PVIK/56jki73crSkMdB23lxVA5r9SBYxPajRmBpJWDU+2CxajirS3wFw3DCSoN7lgcVJq9iXGvpGzTiMAkQ2Dvrt4P0IPa1G0zf0dC7irSbRjCrcJCtAzr5u+GhxY73ER4RIKWRVBZ2RdHhl+xQusSAGMeaeOSSUVMyyYFdvxxCSbB5ip+ONW8rIx8dyoYZYV4p477UJoEFRuApS1eqfF/8DTeFDZQ2vo4cE9ScE+QOVf4bd3jAG2MSjOmZlc3OcpKPivy4G4erh18vFnLY6sx1oA2dLftVYgxQAvdweLgyv6g1Ldcx8eWpYyWF7E/6bvAT3P/cG6YhLw0y7q+w2t077qSlJK+omrhWoygN6r146TmXWMXWo4+UAO72fbUcP+p4/5A/tjf5ck/3yBjwIhODJGhb2SYU3zSr5JDFUVj0tNo9+nnJU+MLW0ehu3LFpV5Ozwa21WZoRyP2TXcHy3cgYBfX7OgEak/q159/+uwoxo+Is=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTYxNDQyNDU0NTY5MSwKICAicHJvZmlsZUlkIiA6ICJhYTZhNDA5NjU4YTk0MDIwYmU3OGQwN2JkMzVlNTg5MyIsCiAgInByb2ZpbGVOYW1lIiA6ICJiejE0IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzkyYTFkNDI3ODlmZTFkNmYxM2Y3Yjc2YTg4M2I3NzYyM2FkYjE2MGYzZjdmNDE2MmU4ZWU1ZDM1Y2QwZTM2NDMiCiAgICB9CiAgfQp9"
+      }
+    },
+    "AUTOPET_RULES_2": {
+      "price": 21000,
+      "type": "ITEM"
+    },
+    "DYE_PURE_BLACK": {
+      "price": 250000,
+      "type": "DYE",
+      "displayName": "Pure Black Dye",
+      "skin": {
+        "id": "44133e89-85ec-32b4-82a0-7c240555dd85",
+        "signature": "WCFGXSg9vGjKV2//6iLH00hGndDNN3SiJ5+Kf7gN9EkKbkpsjeKvrrjhX9AtHjMNiYZqAf5w5gK75sLKtD7jTfTpJG1rir+8GNVR9r96i5XzeY2wma0MCX8e0eeYRs6px0XX7ajqR2fT37CA/g64saIOHYGaiLy4jV2cQ2g6SgtZWEoyScTDjSzdvmwuDIOEzRxT6/Hx7bl8otK944+wp06Vq+OkcKVVIxGp2Pz+jbPA4qmamHu0pdiQ3SRb+zLFmJKoKwBaVLx7Qz8KmTBKV3s5vR1jv5uBpd9Vq6yvkhEYbDyEWWLzITild/aJnzT10SV9IN3o8a74kOwIqM9nbVYri0ostHunRt9IIxIS4WpjLbG5Y6Qlq+2evCAKnv33ZI/FkHRIuCyqF2+7/dz5HFcPR4ehFVuwPaxkXwm1Yl9VieQxZuZQ+hPSSW48GrHuESmujswfQjZ+y50wyi1YNjEU2cNVx6WiCRYM73vPVq5ihPQ4fvTSpYvXvLiLskZYnR8amkV/sbZYgkb1Mk71rW83WIj31QK5xL+NitrvqcylQBPWtNwKM6Y9vCo6ARlUfeDkYWVDr1VKU40JFeRr4RJZRBTPzOQ0IzP3Ec9ddmOHxgW20IEzbKETH6zHGi5jiw+EffDmZBTcb0uHsaWqsTZIAaEroK5vRAwQesJmR3U=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTc0MTE2MTM2NTIyOSwKICAicHJvZmlsZUlkIiA6ICIxMDJiMWQxOGFhZTg0ZjQzYWMyYTY1MjQyNzdjMDU0NiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNeXRob2xvdGwiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmQ0M2Y5ZGI2MWJlZTk0MTUyZTE2M2UxZjMxNjgwODlmYTk4YmNmNmRhNzg5ZmRhNGM5NmIzZjY5ZTNiZWQwYyIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9"
+      }
+    },
+    "DYE_PURE_WHITE": {
+      "price": 250000,
+      "type": "DYE",
+      "displayName": "Pure White Dye",
+      "skin": {
+        "id": "259750e6-3eb2-39bc-bd74-102ec49666a9",
+        "signature": "AhCB7bTmRVrFM7YsfPnFb0Au5TLjI02QnzuTmVgY6VTnSupS6xJTE1ZKiyTQEJK+4can65R83T6/pDHuJ0zjN0JNKGcJUOmc9c/0awL0V5Ol/qZkeuewbM2tGJ1uskGzsduYHeAtMgYjUh0X2zmCVaQQQRVir138jfRbs23HssZhgAc+6Apg41Bgat4GEKG5V9OjRylgJuAczMs6yhvM0J2/hJD/LJHY6Lxi9s70dtKwaajuOUkbAkpcEV4UFnwLsZBMLGR1KGg8lyea//o1wEu4MUQWgsFQUC9EwN4ZxOIZbNZbagMOTj8EDuopWwLaSRsSAnhHtpoEGZkMyIMsmAFyST3CHqPftvB60XeuXzDFy0fuCmorrAkOu9IHfYBsPr/SFYO42Yoc2riUMvJBETdYroeWLaZ8ANcaXoainpByeUz2BpgPkKfNTZ+N5OHrTcjOQWnD2DK98RH7urbxAWDU9uRT+GO5KwLNTAubgbHFtSajI9C302kYPQzslLAwCT19iFr9sTXeDm+n1bySLapViJIqMQYr+y4V/m7fddqo8UD3iV110y+tcqk6dA3hROcZscGoF7IGZgFK4H0p53NDDjo04n5ZuoBgDOcJp7MlXyJ9/MhpTOgSaRx9UICCUGpLulCAhTOivyy8LVsMyunFuktFZbYJDBkfvjLwOIU=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTc0MTE2MTQ1NTQ4MSwKICAicHJvZmlsZUlkIiA6ICJjZjc4YzFkZjE3ZTI0Y2Q5YTIxYmU4NWQ0NDk5ZWE4ZiIsCiAgInByb2ZpbGVOYW1lIiA6ICJNYXR0c0FybW9yU3RhbmRzIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzIwMTNhNWMzZWMwNjdjNGYzNzY1Y2JmMGE5ZTFlMGU3YTBlMTk5MmY0ZTNkMzhkMjc5OTZmZGVmYjhjODE4ZjgiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ=="
+      }
+    },
+    "ENCHANTMENT_EXPERTISE_1": {
+      "skyblockId": "ENCHANTED_BOOK",
+      "price": 4000,
+      "type": "ENCHANTMENT",
+      "displayName": "Expertise I"
+    },
+    "ENCHANTMENT_COMPACT_1": {
+      "skyblockId": "ENCHANTED_BOOK",
+      "price": 4000,
+      "type": "ENCHANTMENT",
+      "displayName": "Compact I"
+    },
+    "ENCHANTMENT_CULTIVATING_1": {
+      "skyblockId": "ENCHANTED_BOOK",
+      "price": 4000,
+      "type": "ENCHANTMENT",
+      "displayName": "Cultivating I"
+    },
+    "ENCHANTMENT_ABSORB_1": {
+      "skyblockId": "ENCHANTED_BOOK",
+      "price": 4000,
+      "type": "ENCHANTMENT",
+      "displayName": "Absorb I"
+    },
+    "ENCHANTMENT_CHAMPION_1": {
+      "skyblockId": "ENCHANTED_BOOK",
+      "price": 4000,
+      "type": "ENCHANTMENT",
+      "displayName": "Champion I"
+    },
+    "ENCHANTMENT_HECATOMB_1": {
+      "skyblockId": "ENCHANTED_BOOK",
+      "price": 6000,
+      "type": "ENCHANTMENT",
+      "displayName": "Hecatomb I"
+    },
+    "ENCHANTMENT_TOXOPHILITE_1": {
+      "skyblockId": "ENCHANTED_BOOK",
+      "price": 4000,
+      "type": "ENCHANTMENT",
+      "displayName": "Toxophilite I"
+    },
+    "TALISMAN_ENRICHMENT_WALK_SPEED": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_INTELLIGENCE": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_CRITICAL_DAMAGE": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_CRITICAL_CHANCE": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_STRENGTH": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_DEFENSE": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_HEALTH": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_MAGIC_FIND": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_FEROCITY": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_SEA_CREATURE_CHANCE": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_ATTACK_SPEED": {
+      "price": 5000,
+      "type": "ENRICHMENT"
+    },
+    "TALISMAN_ENRICHMENT_SWAPPER": {
+      "price": 200,
+      "type": "ENRICHMENT",
+      "itemLegacy": "comparator",
+      "itemModern": "comparator"
+    },
+    "INFERNO_FUEL_BLOCK": {
+      "price": "56.25",
+      "type": "ITEM",
+      "displayName": "Inferno Fuel Block (x64)"
+    }
+  },
+  "skyMart": {
+    "farmingEssentials": {
+      "GARDEN_SCYTHE": {
+        "price": 20,
+        "type": "TOOL"
+      },
+      "BUILDERS_RULER": {
+        "price": 20,
+        "type": "TOOL"
+      },
+      "ENCHANTMENT_DEDICATION_1": {
+        "skyblockId": "ENCHANTED_BOOK",
+        "price": 250,
+        "type": "ENCHANTMENT",
+        "displayName": "Dedication I"
+      },
+      "ENCHANTMENT_GREEN_THUMB_1": {
+        "skyblockId": "ENCHANTED_BOOK",
+        "price": 1500,
+        "type": "ENCHANTMENT",
+        "displayName": "Green Thumb I"
+      },
+      "LOTUS_BRACELET": {
+        "price": 50,
+        "type": "EQUIPMENT"
+      },
+      "LOTUS_BELT": {
+        "price": 100,
+        "type": "EQUIPMENT"
+      },
+      "LOTUS_NECKLACE": {
+        "price": 200,
+        "type": "EQUIPMENT"
+      },
+      "LOTUS_CLOAK": {
+        "price": 500,
+        "type": "EQUIPMENT"
+      },
+      "BLOSSOM_BRACELET": {
+        "price": 2500,
+        "type": "EQUIPMENT",
+        "requiredItems": [
+          {
+            "id": "LOTUS_BRACELET"
+          }
+        ]
+      },
+      "BLOSSOM_BELT": {
+        "price": 5000,
+        "type": "EQUIPMENT",
+        "requiredItems": [
+          {
+            "id": "LOTUS_BELT"
+          }
+        ]
+      },
+      "BLOSSOM_NECKLACE": {
+        "price": 7500,
+        "type": "EQUIPMENT",
+        "requiredItems": [
+          {
+            "id": "LOTUS_NECKLACE"
+          }
+        ]
+      },
+      "BLOSSOM_CLOAK": {
+        "price": 10000,
+        "type": "EQUIPMENT",
+        "requiredItems": [
+          {
+            "id": "LOTUS_CLOAK"
+          }
+        ]
+      },
+      "BASIC_GARDENING_HOE": {
+        "price": 5,
+        "type": "TOOL"
+      },
+      "BASIC_GARDENING_AXE": {
+        "price": 5,
+        "type": "TOOL"
+      },
+      "SKYMART_BROCHURE": {
+        "price": 100,
+        "type": "REFORGE"
+      },
+      "ADVANCED_GARDENING_HOE": {
+        "price": 20,
+        "type": "TOOL",
+        "requiredItems": [
+          {
+            "id": "BASIC_GARDENING_HOE"
+          }
+        ]
+      },
+      "ADVANCED_GARDENING_AXE": {
+        "price": 20,
+        "type": "TOOL",
+        "requiredItems": [
+          {
+            "id": "BASIC_GARDENING_AXE"
+          }
+        ]
+      },
+      "LARGE_WALNUT": {
+        "price": 150,
+        "type": "REFORGE"
+      },
+      "YELLOW_BANDANA": {
+        "price": 300,
+        "type": "ITEM",
+        "displayName": "Yellow Bandana",
+        "skin": {
+          "id": "af29695b-92b7-305e-965e-8d906f99b342",
+          "signature": "uz5d4UsIcS+T7duc6nw0/dA3/JQbD16nyHvzNYBKqHBsHfQITdXUnClxR7WaYOiJxP4o6aeSP5jM5HvEL6LklRTtE8bFgbNgOoskUbnUjgWPcKnrGqzSYmvMGlUqkVZzW2Ha3NwAy1T6FDRtQsLZos7Ff7IfujAalEQ/Bjb7igb21pDH82n8DLSPIDvobLwOmnCMfB0z6RUnDVi7EwADkFBAG0Bylr9/UasGWbOYFs3fOcepC3Op4Ogp1CjT+06N6oYAgoC7i6ZpfE7OLUBeW3D3ELnD+7mm5xdP1ORcc8MUAne90Z5I9QR1U+KSs+ki4kkXXo8Z1dIDpPNRJN3CwBVrP4Ev6kdNkrpkIfNrB7z05rvocd0mCQ050RGTcUd+vds/G8QVpmC9otvcIF01ahLOuU4DrbIkimGewqt9VaczohGVAqheDTwSeLzST/MSQRRVH2zVhs2wxz5aI+KiB3OFDD6HITVAvvXOoIklnUlMk+MZdqNs5EquZ5bG82WPJVl6nflpvJviHbbxy0AV6gadZnzIBZoNbAETo15WUrYwPcEh9Wt0sVa79FM0KDuoxpS+eow/teMiZwA5Qq3WifHCMXWC3aUIFEeuya1ue79oj6rKP1b9Sb+DKk7Ec+m7056Vti4vfSg2Mnv3zOrdOUT3Tx30Il6WZLgmWeL/kt0=",
+          "texture": "ewogICJ0aW1lc3RhbXAiIDogMTY3ODgyMjE1OTcwMSwKICAicHJvZmlsZUlkIiA6ICI0NDAzZGM1NDc1YmM0YjE1YTU0OGNmZGE2YjBlYjdkOSIsCiAgInByb2ZpbGVOYW1lIiA6ICJHYXl0b3duIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzc5OWQxNjczN2I0ZjI2MzNmOWU3YzQ1Mzg5OTIxMTVjMTA3OTI4YTlhMDFhYmZmNDA3YzAyOTcxOTRiZDY4NjciCiAgICB9CiAgfQp9"
+        }
+      },
+      "SOWLEDGE_GARDEN_CHIP": {
+        "price": 200,
+        "type": "ITEM"
+      },
+      "CROPSHOT_GARDEN_CHIP": {
+        "price": 500,
+        "type": "ITEM"
+      },
+      "HYDRO_CAN_TURBO_2000": {
+        "price": 200,
+        "type": "WATERING_CAN",
+        "requiredItems": [
+          {
+            "id": "HYDRO_CAN_1000"
+          }
+        ]
+      },
+      "HYDRO_CAN_ULTRA_3000": {
+        "price": 500,
+        "type": "WATERING_CAN",
+        "requiredItems": [
+          {
+            "id": "HYDRO_CAN_TURBO_2000"
+          }
+        ]
+      },
+      "AQUAMASTER_X": {
+        "price": 1000,
+        "type": "WATERING_CAN",
+        "requiredItems": [
+          {
+            "id": "HYDRO_CAN_ULTRA_3000"
+          }
+        ]
+      },
+      "AQUAMASTER_HYDROMAX": {
+        "price": 2500,
+        "type": "WATERING_CAN",
+        "requiredItems": [
+          {
+            "id": "AQUAMASTER_X"
+          },
+          {
+            "id": "IRIDIUM"
+          }
+        ]
+      },
+      "PLANT_DIAGNOSTICS_TOOL": {
+        "price": 50,
+        "type": "ITEM"
+      },
+      "COPPER_TALISMAN": {
+        "price": 5000,
+        "type": "ACCESSORY"
+      },
+      "COPPER_RING": {
+        "price": 20000,
+        "type": "ACCESSORY",
+        "requiredItems": [
+          {
+            "id": "COPPER_TALISMAN"
+          }
+        ]
+      },
+      "COPPER_ARTIFACT": {
+        "price": 50000,
+        "type": "ACCESSORY",
+        "requiredItems": [
+          {
+            "id": "COPPER_RING"
+          }
+        ]
+      }
+    },
+    "farmingTools": {
+      "THEORETICAL_HOE_WHEAT_1": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "THEORETICAL_HOE_CARROT_1": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "THEORETICAL_HOE_POTATO_1": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "PUMPKIN_DICER": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "THEORETICAL_HOE_CANE_1": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "MELON_DICER": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "CACTUS_KNIFE": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "COCO_CHOPPER": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "FUNGI_CUTTER": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "THEORETICAL_HOE_WARTS_1": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "THEORETICAL_HOE_SUNFLOWER_1": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "THEORETICAL_HOE_WILD_ROSE_1": {
+        "price": 250,
+        "type": "TOOL"
+      },
+      "FARMING_TOOLKIT": {
+        "price": 500,
+        "type": "ITEM"
+      }
+    },
+    "barnSkins": {
+      "TRADING_POST_BARN_SKIN": {
+        "price": 1000,
+        "type": "SKIN",
+        "itemModern": "oak_fence"
+      },
+      "AUTUMN_HUT_BARN_SKIN": {
+        "price": 2000,
+        "type": "SKIN"
+      },
+      "BAMBOO_BARN_SKIN": {
+        "price": 7500,
+        "type": "SKIN"
+      },
+      "HIVE_BARN_SKIN": {
+        "price": 10000,
+        "type": "SKIN"
+      },
+      "CASTLE_BARN_SKIN": {
+        "price": 15000,
+        "type": "SKIN"
+      }
+    },
+    "greenhouseSkins": {
+      "ORCHARD_GREENHOUSE_SKIN": {
+        "price": 3000,
+        "type": "SKIN"
+      },
+      "BOTANICAL_GREENHOUSE_SKIN": {
+        "price": 5000,
+        "type": "SKIN",
+        "itemLegacy": "brick_block",
+        "itemModern": "bricks"
+      }
+    },
+    "pests": {
+      "SKYMART_TURBO_VACUUM": {
+        "price": 200,
+        "type": "VACUUM",
+        "requiredItems": [
+          {
+            "id": "SKYMART_VACUUM"
+          }
+        ]
+      },
+      "SKYMART_HYPER_VACUUM": {
+        "price": 500,
+        "type": "VACUUM",
+        "itemLegacy": "furnace_minecart",
+        "itemModern": "furnace_minecart",
+        "requiredItems": [
+          {
+            "id": "SKYMART_TURBO_VACUUM"
+          }
+        ]
+      },
+      "INFINI_VACUUM": {
+        "price": 1000,
+        "type": "VACUUM",
+        "itemLegacy": "chest_minecart",
+        "itemModern": "chest_minecart",
+        "requiredItems": [
+          {
+            "id": "SKYMART_HYPER_VACUUM"
+          }
+        ]
+      },
+      "INFINI_VACUUM_HOOVERIUS": {
+        "price": 2500,
+        "type": "VACUUM",
+        "itemLegacy": "tnt_minecart",
+        "itemModern": "tnt_minecart",
+        "requiredItems": [
+          {
+            "id": "INFINI_VACUUM"
+          },
+          {
+            "id": "CHIRPING_STEREO"
+          }
+        ]
+      },
+      "PEST_REPELLENT": {
+        "price": 15,
+        "type": "ITEM"
+      },
+      "PEST_REPELLENT_MAX": {
+        "price": 25,
+        "type": "ITEM",
+        "requiredItems": [
+          {
+            "id": "PEST_REPELLENT"
+          }
+        ]
+      }
+    }
+  },
+  "chocolate": {
+    "SUPREME_CHOCOLATE_BAR": {
+      "price": 2000000,
+      "type": "ITEM"
+    },
+    "EGGLOCATOR": {
+      "price": 7500000,
+      "type": "ITEM"
+    },
+    "NIBBLE_CHOCOLATE_STICK": {
+      "price": 250000000,
+      "type": "ACCESSORY"
+    },
+    "SMOOTH_CHOCOLATE_BAR": {
+      "price": 1000000000,
+      "type": "ACCESSORY",
+      "requiredItems": [
+        {
+          "id": "NIBBLE_CHOCOLATE_STICK"
+        }
+      ]
+    },
+    "RICH_CHOCOLATE_CHUNK": {
+      "price": 2000000000,
+      "type": "ACCESSORY",
+      "requiredItems": [
+        {
+          "id": "SMOOTH_CHOCOLATE_BAR"
+        }
+      ]
+    },
+    "GANACHE_CHOCOLATE_SLAB": {
+      "price": 3000000000,
+      "type": "ACCESSORY",
+      "requiredItems": [
+        {
+          "id": "RICH_CHOCOLATE_CHUNK"
+        }
+      ]
+    },
+    "PRESTIGE_CHOCOLATE_REALM": {
+      "price": 4500000000,
+      "type": "ACCESSORY",
+      "requiredItems": [
+        {
+          "id": "GANACHE_CHOCOLATE_SLAB"
+        }
+      ]
+    },
+    "DARK_CACAO_TRUFFLE": {
+      "price": 2500000000,
+      "type": "ITEM"
+    },
+    "DYE_CHOCOLATE": {
+      "price": 40000000000,
+      "type": "DYE",
+      "displayName": "Chocolate Dye",
+      "skin": {
+        "id": "93f557a5-b8fe-31d1-8541-1674adaf1d9b",
+        "signature": "jUISMtDZnHyl8OjAcB1ybjGOoHkspGc2yO9EU5v91AW7IAsfBynk/hXD74keBhTG1IEfDauQJg+kOvufJnR+a/i1LxxrDE+At/u5+rfE3tlJKpBhsKw3FHIWdp+QqArgJwBHKCrajVEu5jIPl4BkcUkn6s05wYS1RM7ywHHCCJALl7qcUZyKdlL0RML10mfr0MjoTm2458GW3Jk8bNooH0zDREZjNLbDHP3R9KDxSFl37LRQl2tBR4OpafZqCU3Sn+fJe+1rpXxEeD9UpgW0yMfp1VwFHx/GnV7Px/n3nLI+wmK/41q5ROHb0kBTFsTnugdxSlzR3UDb0TM0CcF8oTCqNo98lz2KPH+ie0aUuHEE/LZ4tAPck5F0jBLacdYidySW1Vj8gawe17xPwFrAYc9u55T+Fflumdjs7RgyTj5vYPtn1DISX0RABPjYqQypEYwoZjXoLsA7qGz9PYtWHzcKNZFiNfHDF9AZWzJ67EhbWr2WpabZUiI8vZ017r3Zl+jl3JGIkVFPJu+3TAOyy7NTPnWy2Rr8pe0NntTMmPvi5jHRwHrsFRiLVdO4mkA2O0guDZuULkCchQzuRrNOxaorVwgSkcdcO/Q7/cp6l6w5FrJZzayIrxyi9kaaD8FjmHrgGk2FH3uX6WTCqN4fPPuMiUxZoDdC2yykVlq9oqo=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTc0MTE2MTAxMTU5OSwKICAicHJvZmlsZUlkIiA6ICJkNDAwODgyZmY3OGQ0ZGVhYjliMGNlMTc2YmQ1ZTQyMyIsCiAgInByb2ZpbGVOYW1lIiA6ICJQcmF4aWJldGwiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTE1ZTcyMDg1MzkzMDZmNjVkNjhkZjliZTZjMzEyNGM0ODAyN2UzMDc3MzlmYzhkYzM1NTI2ZmViZDY0M2MyMSIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9"
+      }
+    },
+    "CHOCOLATE_FACTORY_BARN_SKIN": {
+      "price": 7000000000,
+      "type": "SKIN"
+    },
+    "PET_ITEM_CHOCOLATE_SYRINGE": {
+      "price": 10000000000,
+      "type": "ITEM"
+    },
+    "CHOCO_RABBIT_PERSONALITY": {
+      "price": 2500000000,
+      "type": "SKIN"
+    },
+    "ZORROS_CAPE": {
+      "price": 20000000000,
+      "type": "EQUIPMENT"
+    },
+    "STEAMED_CHOCOLATE_FISH": {
+      "price": 50000000000,
+      "type": "ITEM",
+      "requiredItems": [
+        {
+          "id": "RABBIT_THE_FISH"
+        }
+      ]
+    },
+    "HOT_CHOCOLATE_MIXIN": {
+      "price": 1500000000,
+      "type": "ITEM"
+    },
+    "SHARD_RABBIT_MAFIOSO": {
+      "price": 1000000000,
+      "type": "ITEM",
+      "displayName": "Rabbit Mafioso Shard",
+      "skin": {
+        "id": "d3efb2f1-8c05-4bda-a149-5ee64d81f7e8",
+        "signature": "Yvd1IGYYor2cgmqIuLart3FGdPnLLGwMbYTiC3HBiYtsdutAngJ+NMxtpRCJpGlQ6h3IBZmT4E4Kju8EiYpFQxwb0x3zdMJjbWjEF6AnUDAElQT6jpUY4OYaUn71JK7vd4DF6LRqfmAFOa3+gYNJ2ip2LN7BR2DGfaiiMX8VaaJje22EK6ukwGYmVfXPgSnPJh75y5Hfjm+RDsbBindCpCx5QRFfr1uGGNGAECm812/I1WRmqXriGIG+fnhQEGDqsm42WEhOWTuFxC51a+int5AHGjnxcQOf4qQqRvAZs13YXKMkEwxRLh5g5+gbpsSS7+l+26l0DGEDfj+2QuEi10cGTqexSQU+ZnqWLBBQMBcBov2okC++jW2z/s+65N30RKqjvSzrxrgcf7ODzAXx7p834pH7ZpaI8HAbCTe2caqTi5epZ9xsbbSJce7KrXhxrikslAP1NygEuXTDJ9g+TiZvnCtKv9nBeR1XbpMWlJLV7h3MgfE+sjXXAiSpt+1KrRhlDWC+oxPdm/lLDMuz49pHoIJs2vWhIdB3Hb2ZQIUoRvI2iCrhrXf5cD/5aqFx52Ct4resNvmqhm2hBODEsuooJPDm4JV5oNHyHLkRhlFsb8Z6bgSfsLKInCZPI2Z1W5/IfTKObe4ukhM5QQxy8X7vFOkG64fLCos54PFvr9M=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTc4NDIxNjYwMjc5OSwKICAicHJvZmlsZUlkIiA6ICJkM2VmYjJmMThjMDU0YmRhYTE0OTVlZTY0ZDgxZjdlOCIsCiAgInByb2ZpbGVOYW1lIiA6ICJNTEsxNSIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS83MDNkNTQ3NTBhOGE3OGQyNTg5NzlhNmZjMjA2YjY2OGM0NjhlZjY3YTBiMTYyMmQ1ZjU4MTYxNjVmZjMyMzIzIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
+      }
+    },
+    "SHARD_RABBIT_CAT": {
+      "price": 4000000000,
+      "type": "ITEM",
+      "displayName": "Rabbit Cat Shard",
+      "skin": {
+        "id": "67c57513-6538-41bc-a451-90cb2dab1a09",
+        "signature": "DDb78iYEzNtLGFfRBTtcrbJPh3IxGl1odqGBLL3hQHt6yy2MatcA79U+FyfbI5e+nGTipTGHmgBVge/S2+e9CwNj7yShNjfqNulsD8dMVCZFjNmFapb81CUsbE5dWvp5VHAZuFfQrz3O6z8wUf83eY+XXAl5vpoJRW6/+k3GFIunaoqPTzZIZtX0CR59ReT68UJBSl/v3UuHN/0uDlZqUaJbKu1IFFaKXmhw7tciiDVWJsQG0v6hZOXUsGXWS/HESThnax6oZO0GZSgWiPzwKEk8GlPiNykAn5z1ycXicql3a7CZ3gYcyXidfwEne0badId2bxPqNK1oDqFkc8aZxIowD1PFSOAehn2dKnZYcbujGt44CZekE0M/DN/v7Uph2TcE4Y+7uq/3d+YfLFtqXTPTfulSCJHr+36zDzWR2C1YmHeEn4n3rnC0YPhXM0yZ8Jdspjw5mfCd1ggWed09nSSGwHA5HW60qg5Um1KRk08Uf2PjnnMEeHdNTWu2zGv4mmcbrBBtbX+h8AULZgd7vDDCc7M5/AYiFlyoBYQrEO7zAyLdKaPzfIAbtjRRb+LdXn2mkharyMCF/mWOTsnUqnLFbRHBwHTTCAc7eydxfJtx61LLMNkTw9ExO4WNLUVvZGXpPCixL/032TQiL4ggSwipILV4C/945v3n8ARJVVs=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTc4NDIxNjIzMTUwMSwKICAicHJvZmlsZUlkIiA6ICI2N2M1NzUxMzY1Mzg0MWJjYTQ1MTkwY2IyZGFiMWEwOSIsCiAgInByb2ZpbGVOYW1lIiA6ICJuaXRlc3RhbGtlcjg3IiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzNkYmViZGFlMDA2ZmJlZGYwM2VmOTRlMWE1MTgxYTJmMDkwMDQzODdmODNjZGRlZGE0MDFmZmZkYzk4ZjU5MjQiLAogICAgICAibWV0YWRhdGEiIDogewogICAgICAgICJtb2RlbCIgOiAic2xpbSIKICAgICAgfQogICAgfQogIH0KfQ=="
+      }
+    },
+    "SHARD_RABBIT_NEIGHBOR": {
+      "price": 10000000000,
+      "type": "ITEM",
+      "displayName": "Rabbit Neighbor Shard",
+      "skin": {
+        "id": "14817417-ea5b-48c5-9337-09b6c171e77a",
+        "signature": "FIlzLcK6ONJB/XME6l3oo+yV6WQeiOaqe7qipyaIN7Fkt2od8mxa0KcgzQhUymuGPFw9KjYtgdXalvai2Am6XV1fSiOSgARJdd1/tL1OBNDM4e1uAplTT5rqvqvALqgQPzYU7jmQ2liZ3WHYXlESx2E4wPmTxd2pA1velirUPsit2NrqQZcrLklNN6xIQxODtqKZ66KLt3clIIYKCpw08XMIPND55LdL2M4cAO/Aitzv3rRq75r/eag1FbAneNsSZ65Sjgv7FUbPgaYAt1ed9gGQ+AKqvvgmpH9il5gESt7PwQp3wfz+PBiktBi07EdDXXQlerol4Csr/SOz+KS7y0sT+/20UTZVMZsDvvoE9RyfO8AhUrlGydCGV4os0S+pFL9kIZqNKV0qJW14vtg2A5u5hH0jaLfhFWt0oA9wKE3Mwb9Jp82bxX1a0eCcfzI53KWO7rUTK3e6hR3d2op6pQC6jfpHbsb6nHEkT3uWL/XEgbih56pCeAgDDtnh1XcmStu9AYYNuuxdoxt3+Uq6VKpt4lXQO933wvpGYlF5EBnQx6mCActh5+/2fMKffUUF8mdBcuhW7eyTRV0C9N031eN5naqNHN2MewchV/3TtRUs8PyVmPt8bg7gauy9D9zRgYkpDZMsLX13UP/Yd4g7+zKBNaHSPxHZHA7AnGivZ88=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTc4NDIxNjYwMTk0MCwKICAicHJvZmlsZUlkIiA6ICIxNDgxNzQxN2VhNWI0OGM1OTMzNzA5YjZjMTcxZTc3YSIsCiAgInByb2ZpbGVOYW1lIiA6ICJJdHNtZV90byIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9iYjAyNWEyOTM1NTViNzhlODI0MzI2NDkxMTY5MDBiZmRiNjZlOTg2NzM2Mzk4OTE5YTE1YTBjM2Y0NTk4ZTAxIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
+      }
+    },
+    "SHARD_RABBIT_GODMOTHER": {
+      "price": 20000000000,
+      "type": "ITEM",
+      "displayName": "Rabbit Godmother Shard",
+      "skin": {
+        "id": "c1e579ff-7462-4993-a295-7e63cde94657",
+        "signature": "czwgn75DO25vHLOZuHiBIEmrm60XXs9YWZ1v5XKtNkmjik0b+uK9sRSQfK/uC7EaRhnydHvduY/aC+TeBugVYfq5O6VrYi9GuuN+ynirf+BSJhM21yqCjHwVb7rH5P2e5UbSTroKdaP2np5QbFnfrUgKWGUH+NZFEd2xqO6/j7OK8IoWT8n5PHffKl55nQepKJd36IhsyNFcuuedYpEpsWghsdnJjnwN3t2k7iy6WJdXkjY1eiAk4HJVK7tBwb3gffu142hBShwTQkjvZ/pO5UJbwW6B9pNpFxMqBl79QFvgG1pPS7DpPMGufdi039n4maDTZpDSKGLkNeFv6kJDxySL9TKvEl/6kEFDDBImUrwqSI3iZ84GJteuQjTbMpBFzNz1udq4Gy9WUnQTKdajom+TSa6NAn/5BFOlMRMhc9rawWr0r4lAPk8ZbbAzGGEulXO37yjT3n6PAi+tzMTDyCqF2rk/Nb6aheeoLIGB5PuL4pbwtLvF0trkre06Sr7++YZmuCTTiXxc9B/4/YPZR9wSHnT0VkZFuqNAF7upmXVjK8jYfXphqP++Ph6SQjTnJHy67bX7nDgepSW69VZBAd//PwpXHrTywkZvO7yWSzifPv3j2OhjFGZqGsvvKoakb/PVUBAsiKXepWAJlG0dZWBJfuoYde/BtG9ND99vuYk=",
+        "texture": "ewogICJ0aW1lc3RhbXAiIDogMTc4NDIxNjIzMTk1MiwKICAicHJvZmlsZUlkIiA6ICJjMWU1NzlmZjc0NjI0OTkzYTI5NTdlNjNjZGU5NDY1NyIsCiAgInByb2ZpbGVOYW1lIiA6ICJNaW5lU2tpbl8xNiIsCiAgInNpZ25hdHVyZVJlcXVpcmVkIiA6IHRydWUsCiAgInRleHR1cmVzIiA6IHsKICAgICJTS0lOIiA6IHsKICAgICAgInVybCIgOiAiaHR0cDovL3RleHR1cmVzLm1pbmVjcmFmdC5uZXQvdGV4dHVyZS9hMTg1YzExODhjNDhlNzU5NDczNWRmYjNmZmEyN2NhZTkwZjRiNjc2NDIyMjFmMGUzNmQwOTJjYThjYTllY2JmIiwKICAgICAgIm1ldGFkYXRhIiA6IHsKICAgICAgICAibW9kZWwiIDogInNsaW0iCiAgICAgIH0KICAgIH0KICB9Cn0="
+      }
+    }
+  }
+}

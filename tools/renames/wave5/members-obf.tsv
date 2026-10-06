@@ -1,0 +1,37 @@
+owner	kind	name	signature	count	files
+ActiveRenderInfo	F	OBJECTCOORDS	FloatBuffer	1	net/minecraft/client/renderer/ActiveRenderInfo.java
+AdventureChatFormatting	M	STRIKETHROUGH		1	com/moonsworth/lunar/bridge/horsestats/AdventureChatFormatting.java
+BiomeHitResult	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	return	1	com/moonsworth/lunar/bridge/horsestats/BiomeHitResult.java
+BridgeType2_2	F	CONFIGURATION		1	com/moonsworth/lunar/bridge/BridgeType2_2.java
+ChatFormatting	M	STRIKETHROUGH		1	com/moonsworth/lunar/bridge/minecraft/ChatFormatting.java
+ChunkHitResult	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	return	1	com/moonsworth/lunar/bridge/horsestats/ChunkHitResult.java
+ClientEntityHitResult	M	HHRROIIHRRICIIHIIHICRHHRHOHHOO	return	1	com/moonsworth/lunar/bridge/horsestats/ClientEntityHitResult.java
+ConnectionProtocol	F	CONFIGURATION		1	com/moonsworth/lunar/bridge/ConnectionProtocol.java
+ConnectionState	M	DISCONNECTED		1	com/moonsworth/lunar/client/network/websocket/ConnectionState.java
+CoordinatesType	M	RUNECRAFTING		1	com/moonsworth/lunar/client/framework/feature/mod/fishing/coordinates/mixin/CoordinatesType.java
+CosmeticHitResult	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	return	1	com/moonsworth/lunar/bridge/horsestats/CosmeticHitResult.java
+CryptManagerBridge	F	IHCHIIICCCHCCIROHOHROHOOHRCHRC		1	com/moonsworth/lunar/bridge/horsestats/CryptManagerBridge.java
+DriverScreen	M	SINGLEPLAYER		1	com/moonsworth/lunar/client/driver/DriverScreen.java
+DriverScreenLegacy	M	SINGLEPLAYER		1	com/moonsworth/lunar/client/driver/DriverScreenLegacy.java
+EntityHitResult	M	ICRHORIIHOHROHOHOCOOHOOCOORRHO	return	1	com/moonsworth/lunar/bridge/horsestats/EntityHitResult.java
+EnumChatFormatting	M	STRIKETHROUGH		1	net/minecraft/util/EnumChatFormatting.java
+FeatureSettingsScreen	M	IHIIRCRIIHICHHRIOOHIROHRHHRCHI		1	com/moonsworth/lunar/client/ui/menu/FeatureSettingsScreen.java
+GeneralSettings	M	ALPHABETICAL		1	com/moonsworth/lunar/client/config/GeneralSettings.java
+GuiType	M	INVISIBILITY		1	com/moonsworth/lunar/client/framework/feature/mod/fishing/gui/mixin/GuiType.java
+GuiType	M	REGENERATION		1	com/moonsworth/lunar/client/framework/feature/mod/fishing/gui/mixin/GuiType.java
+GuiType4	M	SINGLEPLAYER		1	com/moonsworth/lunar/client/framework/feature/rewind/gui/GuiType4.java
+ItemStack	F	DECIMALFORMAT	DecimalFormat	1	net/minecraft/item/ItemStack.java
+LightHitResult	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	return	1	com/moonsworth/lunar/bridge/horsestats/LightHitResult.java
+MissResult	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	return	2	com/moonsworth/lunar/bridge/horsestats/MissResult.java
+MissResult	M	OHOOORICRHIIIIRHCICICOCHROICRC	return	1	com/moonsworth/lunar/bridge/horsestats/MissResult.java
+PickaxeTier	F	DUNGEONBREAKER		1	com/moonsworth/lunar/client/framework/feature/mod/fishing/holograms/nameplate/PickaxeTier.java
+PotionVariantItemCounterEntry	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	return	1	com/moonsworth/lunar/client/framework/feature/itemcounter/PotionVariantItemCounterEntry.java
+ReplayEnvironment	M	SINGLEPLAYER		1	com/moonsworth/lunar/client/replay/recording/ReplayEnvironment.java
+SkyblockTicTacToe	F	UNDETERMINED		1	com/moonsworth/lunar/client/mod/skyblock/dungeonpuzzles/SkyblockTicTacToe.java
+SprayHitResult	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	return	1	com/moonsworth/lunar/bridge/horsestats/SprayHitResult.java
+ThreadModuleDump11	M	MILLISECONDS		2	com/moonsworth/lunar/client/util/ThreadModuleDump11.java
+TileEntityBannerRenderer	F	BANNERTEXTURES	ResourceLocation	1	net/minecraft/client/renderer/tileentity/TileEntityBannerRenderer.java
+TimeFormatting	M	MILLISECONDS		2	com/moonsworth/lunar/client/util/text/TimeFormatting.java
+Wasapi	M	WAVEFORMATEX	public	1	com/moonsworth/lunar/client/audio/Wasapi.java
+WorldGenDungeons	F	CHESTCONTENT	List<WeightedRandomChestContent>	1	net/minecraft/world/gen/feature/WorldGenDungeons.java
+WorldGenDungeons	F	SPAWNERTYPES	String[]	1	net/minecraft/world/gen/feature/WorldGenDungeons.java

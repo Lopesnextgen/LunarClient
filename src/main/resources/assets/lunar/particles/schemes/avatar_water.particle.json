@@ -1,0 +1,97 @@
+{
+    "format_version": "1.10.0",
+    "particle_effect": {
+        "description": {
+            "identifier": "lunar:avatar_water",
+            "basic_render_parameters": {
+                "material": "particles_alpha",
+                "texture": "textures/particle/particles"
+            }
+        },
+        "curves": {
+            "variable.scale": {
+                "type": "catmull_rom",
+                "nodes": [
+                    1.0,
+                    0.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0,
+                    1.0
+                ],
+                "input": "variable.particle_age",
+                "horizontal_range": "variable.particle_lifetime"
+            }
+        },
+        "components": {
+            "minecraft:emitter_initialization": {
+                "creation_expression": "variable.size \u003d 0.1"
+            },
+            "minecraft:emitter_rate_steady": {
+                "spawn_rate": "variable.emitter_age \u003c 3.0 ? 200.0 : 0.0",
+                "max_particles": 1000.0
+            },
+            "minecraft:emitter_shape_point": {
+                "offset": [
+                    0.0,
+                    0.0,
+                    0.0
+                ]
+            },
+            "minecraft:particle_lifetime_expression": {
+                "max_lifetime": 2.0
+            },
+            "minecraft:particle_initial_speed": 0.4,
+            "minecraft:particle_motion_parametric": {
+                "relative_position": [
+                    "temp.x \u003d variable.particle_random_1 - 0.5; temp.y \u003d variable.particle_random_2 - 0.5; temp.z \u003d variable.particle_random_3 - 0.5; temp.d \u003d math.sqrt(temp.x * temp.x + temp.y * temp.y + temp.z * temp.z); temp.s \u003d math.sin(variable.particle_age * 360.0) * 0.075 + 0.3; temp.x \u003d temp.x / temp.d * temp.s; temp.y \u003d temp.y / temp.d * temp.s; temp.z \u003d temp.z / temp.d * temp.s; return temp.x",
+                    "temp.x \u003d variable.particle_random_1 - 0.5; temp.y \u003d variable.particle_random_2 - 0.5; temp.z \u003d variable.particle_random_3 - 0.5; temp.d \u003d math.sqrt(temp.x * temp.x + temp.y * temp.y + temp.z * temp.z); temp.s \u003d math.sin(variable.particle_age * 360.0) * 0.075 + 0.3; temp.x \u003d temp.x / temp.d * temp.s; temp.y \u003d temp.y / temp.d * temp.s; temp.z \u003d temp.z / temp.d * temp.s; return temp.y",
+                    "temp.x \u003d variable.particle_random_1 - 0.5; temp.y \u003d variable.particle_random_2 - 0.5; temp.z \u003d variable.particle_random_3 - 0.5; temp.d \u003d math.sqrt(temp.x * temp.x + temp.y * temp.y + temp.z * temp.z); temp.s \u003d math.sin(variable.particle_age * 360.0) * 0.075 + 0.3; temp.x \u003d temp.x / temp.d * temp.s; temp.y \u003d temp.y / temp.d * temp.s; temp.z \u003d temp.z / temp.d * temp.s; return temp.z"
+                ]
+            },
+            "minecraft:particle_appearance_billboard": {
+                "size": [
+                    "variable.size * variable.scale * (variable.emitter_age \u003e 2.5 ? 1.0 - math.min(variable.emitter_age - 2.5, 1.0) : 1.0)",
+                    "variable.size * variable.scale * (variable.emitter_age \u003e 2.5 ? 1.0 - math.min(variable.emitter_age - 2.5, 1.0) : 1.0)"
+                ],
+                "facing_camera_mode": "rotate_xyz",
+                "uv": {
+                    "texture_width": 128,
+                    "texture_height": 128,
+                    "uv": [
+                        "math.floor(variable.particle_random_4 * 4.0) * 8.0 + 3.0",
+                        8.0
+                    ],
+                    "uv_size": [
+                        8.0,
+                        8.0
+                    ]
+                }
+            },
+            "minecraft:emitter_local_space": {
+                "position": true,
+                "rotation": true
+            },
+            "blockbuster:particle_collision_appearance": {
+                "enabled": 0.0,
+                "lit": false,
+                "material": "particles_opaque",
+                "size": [
+                    0.0,
+                    0.0
+                ],
+                "facing_camera_mode": "lookat_xyz",
+                "uv": {
+                    "texture_width": 128,
+                    "texture_height": 128
+                }
+            },
+            "blockbuster:particle_collision_tinting": {
+                "enabled": 0.0
+            },
+            "minecraft:particle_appearance_lighting": {}
+        }
+    }
+}

@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.feature.mixin
+com.moonsworth.lunar.client.fishing
+com.moonsworth.lunar.client.fishing.gui.mixin
+com.moonsworth.lunar.client.fishing.highlight
+com.moonsworth.lunar.client.fishing.holograms
+com.moonsworth.lunar.client.fishing.mixin
+com.moonsworth.lunar.client.fishing.rewindhandlers
+com.moonsworth.lunar.client.fog

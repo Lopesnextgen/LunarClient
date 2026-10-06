@@ -1,0 +1,363 @@
+# owner.fqn	M|F	oldName	newName	evidence
+com.moonsworth.lunar.client.profile.HudPosition	F	field1	quadrant	JSON "quadrant" key (TOP_LEFT/TOP_CENTER/.../BOTTOM_RIGHT); returned by getQuadrant(); HudPosition.of(x,y) in Apollo common/location
+com.moonsworth.lunar.client.profile.HudPosition	F	field2	x	constructor arg #2 = JSON "xPosition"; getter getX(); renderer math pixelX()
+com.moonsworth.lunar.client.profile.HudPosition	F	field3	y	constructor arg #3 = JSON "yPosition"; getter getY()
+com.moonsworth.lunar.client.profile.HudPosition	F	field4	width	constructor arg #4 = JSON "width"
+com.moonsworth.lunar.client.profile.HudPosition	F	field5	height	constructor arg #5 = JSON "height"
+com.moonsworth.lunar.client.profile.HudPosition	F	field6	screenWidth	constructor arg #6 = JSON "screenWidth" (int)
+com.moonsworth.lunar.client.profile.HudPosition	F	field7	screenHeight	constructor arg #7 = JSON "screenHeight" (int)
+com.moonsworth.lunar.client.profile.HudPosition	F	field8	scale	JSON "scale" (default 2.0F); sole public getter is scale()
+com.moonsworth.lunar.client.profile.HudPosition	M	method1	parse	static factory from JsonObject; reads quadrant/xPosition/yPosition/width/height/screenWidth/screenHeight/type/scale (Badlion boxes)
+com.moonsworth.lunar.client.profile.HudPosition	M	method2	getFloat	JsonObject opt-float helper, returns default when absent/not primitive
+com.moonsworth.lunar.client.profile.HudPosition	M	method3	pixelX	anchorX() + round(x * thirdWidth()); screen-space X used by BadlionProfileConverter$ModConverter.applyHudPosition
+com.moonsworth.lunar.client.profile.HudPosition	M	method4	pixelY	anchorY() + round(y * thirdHeight()); screen-space Y
+com.moonsworth.lunar.client.profile.HudPosition	M	method5	thirdWidth	screenWidth / 3.0F (Badlion 3x3 quadrant grid)
+com.moonsworth.lunar.client.profile.HudPosition	M	method6	thirdHeight	screenHeight / 3.0F
+com.moonsworth.lunar.client.profile.HudPosition	M	method7	anchorX	horizontalQuadrant() * thirdWidth() (left/center/right origin)
+com.moonsworth.lunar.client.profile.HudPosition	M	method8	anchorY	verticalQuadrant() * thirdHeight() (top/middle/bottom origin)
+com.moonsworth.lunar.client.profile.HudPosition	M	method9	horizontalQuadrant	quadrant string -> 0/1/2 (LEFT/CENTER/RIGHT)
+com.moonsworth.lunar.client.profile.HudPosition	M	method10	verticalQuadrant	quadrant string -> 0/1/2 (TOP/MIDDLE/BOTTOM)
+com.moonsworth.lunar.client.profile.HudPosition	M	method11	getQuadrant	returns the quadrant name
+com.moonsworth.lunar.client.profile.HudPosition	M	method12	getX	x getter (JSON "xPosition")
+com.moonsworth.lunar.client.profile.HudPosition	M	method13	getY	y getter (JSON "yPosition")
+com.moonsworth.lunar.client.profile.HudPosition	M	method14	getWidth	width getter
+com.moonsworth.lunar.client.profile.HudPosition	M	method15	getHeight	height getter
+com.moonsworth.lunar.client.profile.HudPosition	M	method16	getScreenWidth	screenWidth getter
+com.moonsworth.lunar.client.profile.HudPosition	M	method17	getScreenHeight	screenHeight getter
+com.moonsworth.lunar.client.profile.HudPosition	M	method18	isComputed	JSON "type" == "computed"
+com.moonsworth.lunar.client.profile.ModProfile	F	field1	icon	Horsestats14/ResourceLocationBridge built from "lunar:icons/profiles/<iconName>.png"; toString "icon="
+com.moonsworth.lunar.client.profile.ModProfile	F	field2	defaultProfile	toString prints "defaultProfile="; isDefaultProfile()
+com.moonsworth.lunar.client.profile.ModProfile	M	method1	setIconName	setter for iconName + reloads the icon ResourceLocation (Lombok setter with custom body)
+com.moonsworth.lunar.client.profile.ModProfile	M	method2	isDefaultProfile	boolean getter; equals/hashCode/toString all use it ("defaultProfile")
+com.moonsworth.lunar.client.profile.ModProfile	M	method4	setIcon	Lombok setter for field1
+com.moonsworth.lunar.client.profile.ModProfile	M	method5	setDefaultProfile	Lombok setter for field2
+com.moonsworth.lunar.client.profile.ModProfileManager	F	field1	DEFAULT_PROFILE_NAMES	static ImmutableList "Arena PvP","Hypixel Skyblock","UHC" (bundled /assets/profiles)
+com.moonsworth.lunar.client.profile.ModProfileManager	F	field2	PROFILE_CONFIG_FILES	static ImmutableList controls.json/general.json/mods.json/performance.json copied into each profile dir
+com.moonsworth.lunar.client.profile.ModProfileManager	F	field3	modProfiles	LinkedList<ModProfile> (Badlion ModProfileManager.modProfiles); getModProfiles() returns a sorted copy
+com.moonsworth.lunar.client.profile.ModProfileManager	F	field4	activeProfile	the current profile; getActiveProfile(); set in switch/setActiveProfile
+com.moonsworth.lunar.client.profile.ModProfileManager	F	field5	lastSwitchTime	System.currentTimeMillis() stamped on switch; getLastSwitchTime() debounces reloads (>= 500L)
+com.moonsworth.lunar.client.profile.ModProfileManager	F	field6	switching	guard flag set around close/reload/init of active profile
+com.moonsworth.lunar.client.profile.ModProfileManager	F	field7	pendingProfile	profile queued for next EventTick
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method2	getModProfiles	sorted copy of modProfiles (default profile last); Badlion ModProfileManager.getModProfiles
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method3	switchProfile	closes settings, reloads for the target profile, re-inits; the important public overload (same name kept for both overloads)
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method4	scheduleSwitch	queues field7, applied on next EventTick
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method5	deleteProfile	removes from list and deletes the profile directory
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method6	createProfile	creates+named profile based on active one and switches to it
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method7	setActiveProfile	deactivates old, activates new, updates field4
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method8	addProfile	adds profile if name not already present (used by importers)
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method9	save	writes profile_manager.json
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method10	toJson	serializes name/displayName/default/active/iconName/server array
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method11	createBundledProfile	writes the bundled "Arena PvP"/"Hypixel Skyblock"/"UHC" profile from assets/profiles
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method12	createBundledProfileAt	creates a bundled profile at a list index (-1 = append), used by resetDefaultProfile
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method13	resetDefaultProfile	removes and recreates a bundled default profile in place
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method14	getActiveProfile	active profile accessor (call sites: Ref.method4().method61().method14().getName())
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method15	getLastSwitchTime	field5 accessor, >= 500L debounce in fog/holograms/FogLoader22
+com.moonsworth.lunar.client.profile.ModProfileManager	M	method16	isSwitching	field6 accessor
+com.moonsworth.lunar.client.profile.ProfileColor	F	field1	chroma	JSON "mode" RAINBOW/CHROMA; isChroma()
+com.moonsworth.lunar.client.profile.ProfileColor	M	method1	parse	reads "color".red/green/blue/alpha + "mode"; static import-color helper
+com.moonsworth.lunar.client.profile.ProfileColor	M	method2	readChannel	reads a 0-255 channel with 255 default
+com.moonsworth.lunar.client.profile.ProfileColor	M	method3	toRgba	packs alpha<<24|red<<16|green<<8|blue; mirror of ParsedProfileColor.method2
+com.moonsworth.lunar.client.profile.ProfileColor	M	method4	isChroma	field1 accessor (RAINBOW/CHROMA flag)
+com.moonsworth.lunar.client.profile.ProfileData	F	field1	json	root JsonObject holding the profile fields ("value" unwrapping)
+com.moonsworth.lunar.client.profile.ProfileData	M	method1	isEnabled	reads "enabled" (default false)
+com.moonsworth.lunar.client.profile.ProfileData	M	method2	getBoolean	typed getter with default
+com.moonsworth.lunar.client.profile.ProfileData	M	method3	getFloat	typed getter with default
+com.moonsworth.lunar.client.profile.ProfileData	M	method4	getString	typed getter with default
+com.moonsworth.lunar.client.profile.ProfileData	M	method5	getColor	builds ProfileColor from the named element
+com.moonsworth.lunar.client.profile.ProfileData	M	method6	getElement	raw named JsonElement
+com.moonsworth.lunar.client.profile.ProfileData	M	method7	getSection	same helpers for a nested object section (e.g. animationConfig)
+com.moonsworth.lunar.client.profile.ProfileData	M	method8	getValue	unwraps {"value": ...} object entries (Badlion format)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	F	field1	NON_MOD_KEYS	static Set of top-level JSON keys skipped while collecting mods (version/guiScale/textModeSettings/boxes/...)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	F	field2	modData	Map<mod id, ProfileData> built from every other top-level object
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	F	field3	boxesById	Map<lowercase "identifier", box JsonObject> from the "boxes" array
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	F	field4	graphicModeSettings	JSON "graphicModeSettings"
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	F	field5	textModeSettings	JSON "textModeSettings"
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	F	field6	defaultModMode	JSON "defaultModMode" (GRAPHICS/TEXT)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method1	parse	static factory: separates mods, boxes, graphic/text settings, defaultModMode
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method2	asJsonObject	null-safe JsonElement->JsonObject (new JsonObject())
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method3	getModIds	unmodifiable key set of modData
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method4	getModData	named ProfileData
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method5	getHudPosition	named box -> HudPosition.parse (used by converter applyHudPosition)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method6	isTextMode	defaultModMode == "TEXT"
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method7	getGraphicSetting	per-mod graphicModeSettings.<key> (falls back to field4)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method8	getTextSetting	per-mod textModeSettings.<key> (falls back to field5)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConfig	M	method9	resolveSetting	shared resolver for graphic/text mode settings (value must be "set")
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	F	field1	KEY_CODE_NAMES	static Set of valid KeyCode enum names (from KeyCode.values())
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	F	field2	DEFAULT_SCALE	unused 2.0F constant (Badlion default HUD scale); kept for reference
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	F	field3	DEFAULT_HUD_HEIGHTS	Map<badlion hud id, default pixel height> (fps 30, coordinates 99, minimap 414, ...) used to rescale Feather/Badlion HUDs
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	F	field4	NO_OP	no-op BiConsumer used for mods that need only enabled/position
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method1	convert	ConvertedProfile convert(config) = convert(config, null)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method2	convert	ConvertedProfile convert(config, CanvasCrosshair); entry point used by BadlionProfileImporter
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method3	convertKeystrokes	Badlion KEYSTROKES -> keystrokes mod (colors/fade/arrows/CPS)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method4	convertKeystrokeAnimation	KEYSTROKES.animationConfig -> animate/animationType/timerType/easing/colors
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method5	convertCps	CPS mod (reverseText/showCPSText/ignoreCancelledClicks/rightClick/lineColor)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method6	convertCoordinates	coordinates mod (list mode, decimalCoordinates)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method7	convertArmorStatus	armorStatus mod (damageDisplay/overlay/listMode/durabilityPosition/colors)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method8	convertScoreboard	scoreboard mod (numbers, headerColor)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method9	convertBossBar	bossBar mod (renderBar/renderBossText/customBossBar/barColor)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method10	convertMemory	memory mod (displayMode total/percentage)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method11	convertReachDisplay	reach display mod (reverseOrder/hideZero/highlight attackable/color)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method12	convertTntTimer	TNT_COUNTDOWN mod (color/staticCountdownColor/background)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method13	convertCooldowns	COOLDOWNS mod (textColor/cooldownTextPosition)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method14	convertPotionStatus	POTION_EFFECTS mod (blink/formatted/uppercase/reversed/icons/colors)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method15	convertDirectionHud	DIRECTION_HUD mod (hudStyle mapping COMPASS/REAL_COMPASS/..., background)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method16	convertPackDisplay	PACK_DISPLAY mod (icon/extension/description/formatting/order/text replacement)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method17	convertPackTextMode	FULL_PACK_TEXT/WHITE_TEXT_ONLY -> title/description replacement enum
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method18	convertSpeedometer	MOMENTUM mod (ground speed/average/precision rounding)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method19	convertBlockInfo	WAILA mod (coords/tool/break time/light level/colors)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method20	convertMinimap	MINIMAP mod (rotation/shape/compass/colors/military time)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method21	convertPlayerList	TAB mod (self top/header/footer/heads/ping/NPCs/colors)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method22	convertPing	PING mod (spike detection/thresholds/rolling average)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method23	convertZoom	ZOOM mod (smooth/variable/toggle/zoom factor/keybind)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method24	convertMotionBlur	MOTION_BLUR mod (strength + Type V1/V2/V3)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method25	convertTimeChanger	TIME_CHANGER mod (time/frozen/speed/overworld sky)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method26	convertColorSaturation	COLOR_SATURATION mod (saturation/grayscale)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method27	convertFullbright	LIGHTING mod -> fullBright/brightnessBoost
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method28	convertEnchantGlint	GLINT_COLORIZER mod (glint flags + glintColor spread to item/armor lunar+vanilla)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method29	convertBlockOverlay	BLOCK_OUTLINE mod (outline/fill/colors/width/side)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method30	convertDamageTint	DAMAGE_TINT mod (vignette intensity/threshold/heartbeat audio)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method31	convertFreelook	FREELOOK mod (keybind/toggle/smooth/invert axes)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method32	convertSkins	3D_SKINS mod (showOthers + hat/jacket/sleeves/pants toggles)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method33	convertGuiScale	GUI_SCALE mod (inventoryScale)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method34	convertNickHider	NICK_HIDER mod (hide names/skins/lobby id, own name/prefix/suffix)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method35	convertWeatherChanger	WEATHER_CHANGER mod (weatherMode/rain/thunder/lightning/color)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method36	convertFovChanger	FOV mod (sprinting/speed/slowness/flying/default FOV, dynamic bow)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method37	copyClampedFloat	copies a float property clamped to [min,max] (FOV fields)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method38	convertChunkBorders	CHUNK_BORDERS mod (grid + wall/corner line colors+thickness)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method39	convertChunkBorderLines	reads a nested lineColor/lineThickness section (walls/corners)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method40	convertChat	CHAT mod (smooth/unlimited/stack/timestamp/background opacity)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method41	copyBoolean	copies a boolean property when present (the workhorse used ~60x)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method42	copyEnum	copies an enum property by name, writing its Gui2Extension id()
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method43	copyColor	copies a ProfileColor as {"value":rgba[,"chroma"]} option
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method44	copyString	copies a non-blank string property
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method45	isEnabled	JsonObject entry has "enabled": true (used for background/border toggles)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method46	toJsonColor	ProfileColor -> {"value": packed rgba} / {"value":[chroma],"chroma":true}
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method47	copyKeybind	converts a Badlion keybind object to a Lunar keybind option
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method48	parseKeyCode	reads "keyCode", returns it when it is a known KeyCode, else null
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method49	parseKeybind	keybind object -> {value, shift, control, alt}
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method50	getBooleanValue	reads a boolean that may be wrapped in {"value": ...}
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method51	roundClamp	Math.round + [min,max] clamp (int) - Badlion sliders
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method52	toHudAnchor	quadrant string -> HudAnchor (BOTTOM_CENTER -> BOTTOM_CENTER_R)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method53	buildKeyCodeNames	KeyCode.values() -> LinkedHashSet<String> (field1)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method54	toCrosshairPattern	CanvasCrosshair pixels + size -> CrosshairPattern string (CrosshairGridSize)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter	M	method55	dominantColor	most frequent non-transparent crosshair pixel -> ProfileColor
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	F	field1	config	BadlionProfileConfig being converted
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	F	field2	crosshair	CanvasCrosshair from the zip (null when absent)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	F	field3	mods	mods.json root ("version" + one object per Lunar mod id)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	F	field4	general	general.json root (betterframes settings)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	F	field5	mappedModIds	Badlion mod ids consumed by a converter; remainder = skipped in ConvertedProfile.skippedModIds
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method1	convertMod	main entry: creates the mod, applies HUD position + text style + per-mod options
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method2	convertModWithChild	mod plus a *_CHILD HUD entry (e.g. PING/PING_HUD, SATURATION/SATURATION_HUD_CHILD)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method3	convertModOptions	mod options with no HUD position/text-mode handling
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method4	convertToggleSprint	TOGGLE_SNEAK -> toggleSprint (+ TOGGLE_SNEAK_HUD_CHILD, toggleSneak from config)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method5	convertHypixelMod	HYPIXEL_MOD (autoGG/autoFriend/levelHead/autoTip/autoWho)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method6	convertBedwars	HYPIXEL_BEDWARS (coloredBeds/stats/team/upgrade children)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method7	convertSkyblock	SKYBLOCK (large dungeon/slayer/mining/... key table + dragon/boss/miniboss groups)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method8	putMod	puts {enabled[,seen], options} mod entry when absent
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method9	convertFeatureGroup	turns a set of Badlion feature flags into one SKYBLOCK_* mod entry
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method10	hasAny	true when any named key exists
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method11	isAnyEnabled	true when any named key is enabled
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method12	convertAutoTextHotkeys	AUTO_TEXT_HOTKEY entries -> numbered hotkey objects
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method13	convertCrosshair	CROSSHAIR (showInF5 + normal/enemy/friendly variants)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method14	convertCrosshairVariant	one crosshair variant (shape/size/gap/thickness/dot/outline/health shift)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method15	applyHudPosition	badlion box -> "position"/x/y/scale options (HudAnchor math)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method16	applyTextStyle	badlion text/bracket style -> brackets/background/border/colors/textShadow
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method17	copyValueBoolean	copies a {"value":bool} option
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method18	convertChildHud	adds a child HUD entry with default options (armor status children)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method19	convertHudChildren	adds several child HUD entries sharing one extra options mapper
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method20	convertBetterFrames	betterframesConfig -> general.json (smartDisconnect)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method21	beginMod	creates the mod entry {enabled,seen} and records the Badlion id as mapped
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method22	putOptions	attaches non-empty "options"
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method23	build	ConvertedProfile(mods,general,controls,performance,mapped,skipped)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$ModConverter	M	method24	newSection	new {"version": ConfigMigrator version} JsonObject (controls/performance.json)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$CanvasCrosshair	F	field1	size	square crosshair size (width == height, 2..64)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$CanvasCrosshair	F	field2	pixels	ARGB int[] read via BufferedImage.getRGB in BadlionProfileImporter.readCanvasCrosshair
+com.moonsworth.lunar.client.profile.importer.BadlionProfileConverter$CanvasCrosshair	M	method1	getPixels	accessor for the ARGB pixel array (used by toCrosshairPattern/dominantColor)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	F	field1	CHILD_AWARE_MODS	Set.of("SKYBLOCK","HYPIXEL_BEDWARS"): mods whose missing children are disabled on import
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method1	importProfile	reads data.json (+info.json name) from the zip and imports it
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method2	readProfileName	name from info.json (or null)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method3	readCanvasCrosshair	reads crosshairs/<currentCanvasCrosshair>.png for CANVAS mode zips
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method4	importProfile	import from an already-parsed data.json (no crosshair)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method5	importProfile	core: convert -> clamp numeric options -> fill children -> write the four JSON files -> create ModProfile
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method6	getAllMods	registered Framework7Extension mods (or empty list before Client init)
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method7	disableMissingChildren	adds enabled:false entries for children of SKYBLOCK/HYPIXEL_BEDWARS missing from the import
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method8	createUniqueName	"Badlion Import" / name (2), (3), ... when taken
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method9	isNameTaken	profile list or profile directory already has the name
+com.moonsworth.lunar.client.profile.importer.BadlionProfileImporter	M	method10	writeJson	writes a JsonObject to a file with the Lunar Gson
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	F	field1	mods	mods.json (arg #1)
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	F	field2	general	general.json (arg #2)
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	F	field3	controls	controls.json (arg #3)
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	F	field4	performance	performance.json (arg #4)
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	F	field5	mappedModIds	Badlion mod ids that were converted
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	F	field6	skippedModIds	Badlion mod ids with no Lunar equivalent (logged "N skipped")
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	M	method1	getMods	mods.json accessor (written to mods.json)
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	M	method2	getGeneral	general.json accessor (written to general.json)
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	M	method3	getControls	controls.json accessor
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	M	method4	getPerformance	performance.json accessor
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	M	method5	getMappedModIds	count logged as "%d mods mapped"
+com.moonsworth.lunar.client.profile.importer.ConvertedProfile	M	method6	getSkippedModIds	count logged as "%d skipped"
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	F	field1	available	Boolean cache for hasAnyExternalProfiles()
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method1	hasAnyExternalProfiles	cached: any mcDataDir/user-home .minecraft has a Badlion .zip or Feather .json
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method2	isProfileInDir	dir has .zip (Badlion) or .json (Feather)
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method3	isBadlionDetected	any Minecraft dir has BLClient-Mod-Profiles/*.zip (driver key "badlionDetected")
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method4	isFeatherDetected	any Minecraft dir has feather/configuration/profiles/*.json (driver key "featherDetected")
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method5	findBadlionProfiles	deduped (by lowercase file name) .zip profiles across Minecraft dirs
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method6	findFeatherProfiles	deduped .json profiles across Minecraft dirs
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method7	findProfiles	shared walker: dir selector function + extension, LinkedHashMap dedupe
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method8	getBadlionProfileDir	<minecraft>/BLClient-Mod-Profiles
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method9	getFeatherProfileDir	<minecraft>/feather/configuration/profiles
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method10	containsFileWithExtension	true when listFiles matches the extension
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method11	getMinecraftDirs	Ref mcDataDir + OS default .minecraft
+com.moonsworth.lunar.client.profile.importer.ExternalProfileLocator	M	method12	getDefaultMinecraftDir	APPDATA/.minecraft on Windows, Library/Application Support/minecraft on macOS, ~/.minecraft else
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	F	field1	mods	mods.json (arg #1)
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	F	field2	general	general.json (arg #2)
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	F	field3	controls	controls.json (arg #3)
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	F	field4	performance	performance.json (arg #4)
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	F	field5	mappedModIds	Feather module ids that were converted
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	F	field6	skippedModIds	Feather module ids with no Lunar equivalent (logged "N skipped")
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	M	method1	getMods	mods.json accessor (written to mods.json)
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	M	method2	getGeneral	general.json accessor
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	M	method3	getControls	controls.json accessor
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	M	method4	getPerformance	performance.json accessor
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	M	method5	getMappedModIds	count logged as "%d mods mapped"
+com.moonsworth.lunar.client.profile.importer.FeatherConvertedProfile	M	method6	getSkippedModIds	count logged as "%d skipped"
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig	F	field1	ARBITRARY_DATA_KEY	the "**ArbitraryData**" key holding Feather's free-form object
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig	F	field2	modData	Map<module id, Data> built from every top-level object
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig	M	method1	parse	static factory: wraps every top-level object into a Data
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig	M	method2	wrap	wraps a bare JsonObject (graphicsOptions) as a Data
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig	M	method3	parseData	flattens a module object into String->String settings + **ArbitraryData**
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig	M	method4	getModIds	unmodifiable module id set
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig	M	method5	getModData	named module Data
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	F	field1	arbitraryData	the "**ArbitraryData**" object (item counter Config etc.)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method1	getArbitraryData	accessor for the arbitrary-data object (item counter Config)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method2	subSection	prefix-stripped view of settings ("inventoryHud:" -> hudEnabled1)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method3	getString	typed getter with default (settings are Strings)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method4	isEnabled	"enabled" setting (default false)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method5	getBoolean	parseBoolean with default
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method6	getFloat	parseFloat with default
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method7	getInt	first comma part parsed as int, 0 -> null (Feather's "N, ..." values)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method8	getColor	"r/g/b[/a]" color string -> ParsedProfileColor
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method9	getHudAnchor	"hudAnchor" setting
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method10	getHudRelativeX	"hudRelativeX" setting
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method11	getHudRelativeY	"hudRelativeY" setting
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConfig$Data	M	method12	getHudScale	"hudScale" setting (default 1.0)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	F	field1	VK_KEY_CODES	Map<vk code, KeyCode name> built from KeyCode.getVk() + manual shift/control/menu/return/equals
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	F	field2	GLFW_KEY_CODES	Map<glfw key code, KeyCode name> for Feather "keys" arrays (letters/digits/F1-19/numpad)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	F	field3	ARMOR_STATUS_CHILD_IDS	prefix -> ARMORSTATUS_*_CHILD ids ("helmet:" -> ARMORSTATUS_HELMET_CHILD, ...)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	F	field4	NO_OP	no-op BiConsumer (NONE mappers)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method1	convert	convert(config) = convert(config, null, null)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method2	convert	convert(config, autotext array)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method3	convert	convert(config, autotext array, sidebar); entry point used by FeatherProfileImporter
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method4	convertKeystrokes	KEYSTROKES (animation, movement/clicks/spacebar modes, borders, colors)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method5	convertArmorStatus	ARMORSTATUS (item damage/names/overlay/listMode/durabilityPosition)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method6	convertScoreboard	SCOREBOARD (numbers, titleBackgroundColor)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method7	convertDirectionHud	DIRECTION_HUD (textShadow/colors/width)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method8	convertBlockOverlay	BLOCK_OUTLINE (outline/fill/colors/width/side/accurate shape)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method9	convertWeatherChanger	WEATHER_CHANGER (weatherMode clear/rain/thunder, rain color)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method10	convertColorSaturation	COLOR_SATURATION (saturation/brightness/contrast/hue)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method11	copyBoolean	copies a boolean setting when present (the workhorse used ~25x)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method12	copyColor	copies a ParsedProfileColor as {"value":rgba[,"chroma"]}
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method13	copyKeybind	integer vk code -> KeyCode name via VK_KEY_CODES
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method14	parseKeybind	Feather "keys" int array -> {value,shift,control,alt}
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method15	roundClamp	Math.round + [min,max] clamp (int)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method16	convertItemSlug	Feather item slug -> Lunar item id ("minecraft:potion$SLUG" -> slug[_splash|_lingering])
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method17	damageDisplayMode	percent/none/off/value -> Lunar damageDisplay
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method18	durabilityPosition	up/top/down/bottom/left -> Lunar durabilityPosition
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method19	asJsonObject	null-safe JsonElement->JsonObject
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method20	putZeroColor	writes an empty {"value":0} color option (disabled backgrounds)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method21	toHudAnchor	Feather anchor name (top_left/center/...) -> HudAnchor
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method22	buildVkKeyCodes	builds field1
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter	M	method23	buildGlfwKeyCodes	builds field2
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	F	field1	config	FeatherProfileConfig being converted
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	F	field2	mods	mods.json root ("version" + one object per Lunar mod id)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	F	field3	mappedModIds	Feather module ids consumed by a converter; remainder = skipped
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method1	convertMod	main entry: mod entry + HUD position + text style + options
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method2	convertModWithChild	mod plus a *_CHILD HUD entry (PING/SATURATION/TOTEM/TOGGLE_SNEAK)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method3	convertModOptions	mod options without HUD position/text-mode handling
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method4	applyTextStyle	displayMode -> brackets/background/border/colors/textShadow
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method5	convertChildren	adds several child HUD entries (coordinates/armor)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method6	convertHurtCam	animations.hurtAnimationMode -> HURT_CAM (disable/intensity)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method7	convertOverlayMod	graphicsOptions -> OVERLAY_MOD (minimalViewBobbing/clearGlass/fireHeight)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method8	convertInventoryHud	inventory -> INVENTORY_MOD/INVENTORY_HUD (position/scale/colors/grid)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method9	convertItemCounter	itemCounter Config[] -> ITEM_COUNTER_*_CHILD entries + grouped flag
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method10	convertItemTracker	inventory.itemPickup -> ITEM_TRACKER
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method11	convertArmorStatusChildren	armorStatus.<slot> children (+ equipped/offhand items) -> ARMORSTATUS_*_CHILD
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method12	convertGuiScale	uiScaling.containerScale -> GUI_SCALE.inventoryScale
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method13	convertAutoTextHotkeys	autotext.json entries -> numbered hotkey objects
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method14	convertCrosshair	CROSSHAIR normal/friendly/enemy variants (invertColor)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method15	convertCrosshairVariant	one crosshair variant (thickness/shape/gap/dot/outline/bow zoom)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method16	beginMod	creates the mod entry {enabled,seen} and records the module id as mapped
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method17	applyHudPosition	hudAnchor/hudRelativeX/Y/hudScale -> position/x/y/scale options
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method18	putOptions	attaches non-empty "options"
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method19	getOrCreateOptions	existing "options" object or a new one attached in place
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method20	build	FeatherConvertedProfile(mods,general,controls,performance,mapped,skipped)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileConverter$Data	M	method21	newSection	new {"version": ConfigMigrator version} JsonObject
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method1	importProfile	reads the Feather profile json and imports it
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method2	readAutoText	autotext.json (or misc/autotext.json) array beside the profile
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method3	readSidebar	sidebar.json object beside the profile
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method4	readSiblingJson	looks up a file up to 3 parent dirs above the profile
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method5	importProfile	import from an already-parsed json (no autotext/sidebar)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method6	importProfile	core: convert -> clamp numeric options -> write the four JSON files -> create ModProfile
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method7	clampAllOptions	clamps every numeric option of every registered mod to its NumberRule range
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method8	clampModOptions	recurses options + child mods
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method9	clampOptions	clamps numeric values inside one OptionContainer (keeps Float/Double vs int)
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method10	createUniqueName	"Feather Import" / name (2), (3), ... when taken
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method11	isNameTaken	profile list or profile directory already has the name
+com.moonsworth.lunar.client.profile.importer.FeatherProfileImporter	M	method12	writeJson	writes a JsonObject to a file with the Lunar Gson
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	F	field1	red	first "r" component
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	F	field2	green	second "g" component
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	F	field3	blue	third "b" component
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	F	field4	alpha	fourth "a" component (default 255)
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	F	field5	chroma	leading boolean in the "chroma/r/g/b[/a]" form
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	M	method1	parse	parses "[bool/]r/g/b[/a]" with 0-255 clamping (Feather color settings)
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	M	method2	toRgba	packs alpha<<24|red<<16|green<<8|blue; mirror of ProfileColor.toRgba
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	M	method3	isNumeric	all-digits check distinguishing the optional leading chroma boolean
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	M	method4	clampChannel	clamps a channel to 0..255
+com.moonsworth.lunar.client.profile.importer.ParsedProfileColor	M	method5	isChroma	field5 accessor
+com.moonsworth.lunar.client.render.ByteBufferCache	F	field1	buffer	reusable ByteBuffer grown on demand; position/limit reset before reuse
+com.moonsworth.lunar.client.render.ByteBufferCache	M	method1	getBuffer	rewinds and returns a buffer with at least N capacity (AbstractTextureMixin)
+com.moonsworth.lunar.client.render.EntityRenderLayer	F	field1	HOLOGRAMS	static layer rendering Holograms (Ref...CosmeticManager.method75) per player
+com.moonsworth.lunar.client.render.EntityRenderLayer	F	field2	COSMETICS	static layer rendering worn bodywear/hat cosmetics (CosmeticManager.method74)
+com.moonsworth.lunar.client.render.EntityRenderLayer	F	field3	EMOTES	static layer rendering the low_body emote matrix + cape
+com.moonsworth.lunar.client.render.EntityRenderLayer	F	field4	CAPES	static layer rendering cloth cloaks/capes (CosmeticManager.method77, CLOAK)
+com.moonsworth.lunar.client.render.EntityRenderLayer	F	field5	COMPANIONS	static layer rendering companion/pet cosmetics with held items (CosmeticManager.method78)
+com.moonsworth.lunar.client.render.EntityRenderLayer	F	field6	SELF_DUMMY	static layer rendering the self dummy mannequin (skips self/dummy)
+com.moonsworth.lunar.client.render.EntityRenderLayer	M	method1	render	abstract layer render(renderContext, player, model, partialTicks, packedLight) + 6 anonymous overrides in the same file
+com.moonsworth.lunar.client.render.FloatArrayBuilder	F	field1	INSTANCE	static singleton builder used by mobsize WorldRenderer pos()/tex()
+com.moonsworth.lunar.client.render.FloatArrayBuilder	F	field2	array	growable float[] backing store
+com.moonsworth.lunar.client.render.FloatArrayBuilder	M	method1	ensureCapacity	grows array[] when fewer than N slots remain
+com.moonsworth.lunar.client.render.GlProgramCache	F	field1	cachedProgram	cached glGetInteger(GL_CURRENT_PROGRAM=35725), only used when GECKO_CURRENT_PROGRAM_CACHE is enabled
+com.moonsworth.lunar.client.render.GlProgramCache	M	method1	getCurrentProgram	returns cached program or queries GL
+com.moonsworth.lunar.client.render.GpuResourceTracker	F	field1	TRACKING_ENABLED	Boolean.getBoolean("lunar.resourceTracking") constant
+com.moonsworth.lunar.client.render.GpuResourceTracker	F	field2	instance	lazy singleton (getInstance)
+com.moonsworth.lunar.client.render.GpuResourceTracker	F	field3	textures	live GL texture ids -> allocation Throwable (dump prints "Texture count")
+com.moonsworth.lunar.client.render.GpuResourceTracker	F	field4	buffers	live GL buffer ids -> allocation Throwable ("Buffer count")
+com.moonsworth.lunar.client.render.GpuResourceTracker	F	field5	offHeapAllocations	address -> (Throwable,size) from trackOffHeap (printed by dumpOffHeapAllocations)
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method1	trackTexture	records a texture id with its allocation site
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method2	untrackTexture	removes a texture id
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method3	trackBuffer	records a buffer id with its allocation site
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method4	untrackBuffer	removes a buffer id
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method5	trackOffHeap	records an off-heap address + size
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method6	untrackOffHeap	removes an off-heap address
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method7	getTextureCount	field3 size
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method8	getBufferCount	field4 size
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method9	dumpOffHeapAllocations	dumps address/size + allocation stack for off-heap objects
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method10	getInstance	lazy singleton accessor
+com.moonsworth.lunar.client.render.GpuResourceTracker	M	method11	isTrackingEnabled	system property OR (non-production build && ENABLE_RESOURCE_TRACKING)
+com.moonsworth.lunar.client.render.PipelinePass	F	field1	texture	ResourceLocationBridge/Identifier texture of the pass
+com.moonsworth.lunar.client.render.PipelinePass	F	field2	drawCallback	BiConsumer<Boolean,VertexConsumerBridge> drawing the pass
+com.moonsworth.lunar.client.render.PipelinePass	F	field3	enabled	pass toggle (setEnabled); default true
+com.moonsworth.lunar.client.render.PipelinePass	M	method1	getTexture	field1 accessor
+com.moonsworth.lunar.client.render.PipelinePass	M	method2	getDrawCallback	field2 accessor
+com.moonsworth.lunar.client.render.PipelinePass	M	method4	isEnabled	field3 accessor
+com.moonsworth.lunar.client.render.PipelinePass	M	method6	setEnabled	field3 setter
+com.moonsworth.lunar.client.render.PoseMatrixProvider	M	method53	poseMatrix	interface: Matrix4f of the current pose; implemented by RenderContextLegacyTransform/ModernTransform only
+com.moonsworth.lunar.client.render.RenderCache	F	field1	value	generic cached value (getValue/setValue); Click4Impl uses it for the player renderer object
+com.moonsworth.lunar.client.render.RenderCache	F	field2	cachedWidth	int text width cache with -1 sentinel; 1.8 NametagRenderer wrapper recomputes only when changed
+com.moonsworth.lunar.client.render.RenderCache	F	field3	cachedState	boolean render-state cache compared before recomputing the width
+com.moonsworth.lunar.client.render.RenderCache	F	field4	cachedText	Component cache (compared against the current component)
+com.moonsworth.lunar.client.render.RenderCache	M	method1	getValue	generic cached-value getter (T)
+com.moonsworth.lunar.client.render.RenderCache	M	method2	setValue	generic cached-value setter (T)
+com.moonsworth.lunar.client.render.RenderContextLegacyTransform	F	field6	matrixStack	joml Matrix4fStack(10) backing translate/scale/rotateXYZ/push/pop
+com.moonsworth.lunar.client.render.RenderContextLegacyTransform	M	method53	poseMatrix	PoseMatrixProvider override returning the matrix stack (real method name kept from base interface)
+com.moonsworth.lunar.client.render.RenderContextModernTransform	M	method53	poseMatrix	PoseMatrixProvider override: last pose of the pose stack as joml Matrix4f

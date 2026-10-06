@@ -1,0 +1,132 @@
+old.package	Old	new.package	New	evidence
+com.moonsworth.lunar.client.cosmetics.emote	GlResources	com.moonsworth.lunar.client.cosmetics.gecko	GlResources	GL buffer/program cache used by the gecko compute renderer (MixinHelper_21/GlObjectBridge); geckolib-core core/util
+com.moonsworth.lunar.client.cosmetics.emote	MeshPassRunner	com.moonsworth.lunar.client.cosmetics.gecko	MeshPassRunner	drives the six gecko GPU compute passes (Fov3Task.method1x); geckolib-core core/processor
+com.moonsworth.lunar.client.cosmetics.emote	ModelRenderConfig	com.moonsworth.lunar.client.cosmetics.gecko	ModelRenderConfig	geoModel/renderType/pass/animationProcessor/tint/flippedWinding state for gecko model draws; imported by Bedrock geometry; geckolib-core core/processor
+com.moonsworth.lunar.client.cosmetics.emote	ModelVertexShader	com.moonsworth.lunar.client.cosmetics.gecko	ModelVertexShader	GLSL 430 compute shaders for gecko GPU vertex skinning (transformIndex, flippedWinding); geckolib-core core/processor
+com.moonsworth.lunar.client.cosmetics.emote	RenderPass	com.moonsworth.lunar.client.cosmetics.gecko	RenderPass	NORMAL/EMISSIVE/NORMAL_GLINT passes of the gecko renderer
+com.moonsworth.lunar.client.cosmetics.emote	Transform	com.moonsworth.lunar.client.cosmetics.gecko	Transform	per-bone translate/scale/quaternion record for the gecko compute transform buffer
+com.moonsworth.lunar.client.cosmetics.emote	TransformStack	com.moonsworth.lunar.client.cosmetics.gecko	TransformStack	push/pop stack of Transform for gecko bone hierarchy walks
+com.moonsworth.lunar.client.cosmetics.emote	VertexBuilder	com.moonsworth.lunar.client.cosmetics.gecko	VertexBuilder	VertexSink implementation filling gecko vertex buffers
+com.moonsworth.lunar.client.cosmetics.emote	VertexSink	com.moonsworth.lunar.client.cosmetics.gecko	VertexSink	vertex emission interface consumed by MeshPassRunner
+com.moonsworth.lunar.client.cosmetics.emote	GeckoRenderMode	com.moonsworth.lunar.client.cosmetics.gecko	GeckoRenderMode	RENDERED_NORMAL vs RENDERED_GECKO_COMPUTE; literally names the gecko path
+com.moonsworth.lunar.client.cosmetics.emote	CosmeticType	com.moonsworth.lunar.client.cosmetics	CosmeticType	HAT/CLOAK/BODYWEAR/WINGS/GECKOLIB renderer selector; belongs with Cosmetic/CosmeticCategory/CosmeticSlot at the cosmetics root
+com.moonsworth.lunar.client.cosmetics.emote	Direction2D	com.moonsworth.lunar.client.util.math	Direction2D	generic LEFT/UP/RIGHT/DOWN enum; imported by fishing click, scrollable tooltips and SkyblockArrowAlign, not a cosmetic; PLAN target util/math
+com.moonsworth.lunar.client.cosmetics.holograms	BlockMorphRenderer	com.moonsworth.lunar.client.cosmetics.emote	BlockMorphRenderer	renders Blockbuster/snowstorm BLOCK morphs (MorphRenderer impl) for emotes
+com.moonsworth.lunar.client.cosmetics.holograms	EmoteAnimator	com.moonsworth.lunar.client.cosmetics.emote	EmoteAnimator	plays emote morph animations per entity (IBoneRenderer callback); emote playback
+com.moonsworth.lunar.client.cosmetics.holograms	EmoteDefinition	com.moonsworth.lunar.client.cosmetics.emote	EmoteDefinition	emote definition binding; pairs with EmoteGift
+com.moonsworth.lunar.client.cosmetics.holograms	EmoteGiftProvider	com.moonsworth.lunar.client.cosmetics.emote	EmoteGiftProvider	JsonProvider exposing EmoteGift (emoteId/slotId/jamId); emote domain
+com.moonsworth.lunar.client.cosmetics.holograms	EmoteMorphAnimator	com.moonsworth.lunar.client.cosmetics.emote	EmoteMorphAnimator	per-entity morph animator for emote playback
+com.moonsworth.lunar.client.cosmetics.holograms	IBoneRenderer	com.moonsworth.lunar.client.cosmetics.emote	IBoneRenderer	applyBoneTransform callback used only by the morph/emote animators
+com.moonsworth.lunar.client.cosmetics.holograms	MorphRenderer	com.moonsworth.lunar.client.cosmetics.emote	MorphRenderer	McHorse/snowstorm Morph renderer interface (RenderBlocks + BedrockScheme particle)
+com.moonsworth.lunar.client.cosmetics.holograms	MorphRenderType	com.moonsworth.lunar.client.cosmetics.emote	MorphRenderType	PARTICLE/BLOCK morph kinds
+com.moonsworth.lunar.client.cosmetics.holograms	MorphTimeline	com.moonsworth.lunar.client.cosmetics.emote	MorphTimeline	timeline over a MorphConfiguration entry for one entity
+com.moonsworth.lunar.client.cosmetics.holograms	MorphTracker	com.moonsworth.lunar.client.cosmetics.emote	MorphTracker	per-entity morph timeline tracker driven by cosmetic manager
+com.moonsworth.lunar.client.cosmetics.holograms	MorphTransform	com.moonsworth.lunar.client.cosmetics.emote	MorphTransform	bone transform record for morph rendering
+com.moonsworth.lunar.client.cosmetics.inactive	AnimationTicker	com.moonsworth.lunar.client.cosmetics.gecko	AnimationTicker	animation clock (time + ticks) consumed by EmoteModel/MolangRuntime
+com.moonsworth.lunar.client.cosmetics.inactive	ArmorSlot	com.moonsworth.lunar.client.cosmetics.gecko	ArmorSlot	HELMET/CHEST/LEGS/BOOTS model transform conditions for gecko rigs
+com.moonsworth.lunar.client.cosmetics.inactive	AttachedBone	com.moonsworth.lunar.client.cosmetics.gecko	AttachedBone	bone-name to CosmeticSlot attachment map (head/low_body/left_arm) for gecko rigs
+com.moonsworth.lunar.client.cosmetics.inactive	FirstPersonArmMode	com.moonsworth.lunar.client.cosmetics.gecko	FirstPersonArmMode	NONE/SINGLE_ARM/DOUBLE_ARM rig mode enum for gecko models
+com.moonsworth.lunar.client.cosmetics.inactive	InactiveType	com.moonsworth.lunar.client.cosmetics.gecko	InactiveType	held-item matcher enum for gecko animation queries
+com.moonsworth.lunar.client.cosmetics.inactive	ItemRenderMaterial	com.moonsworth.lunar.client.cosmetics.gecko	ItemRenderMaterial	item material matcher enum for gecko animation queries
+com.moonsworth.lunar.client.cosmetics.inactive	PlayerModelType	com.moonsworth.lunar.client.cosmetics.gecko	PlayerModelType	NONE/MINIME player model variant enum for gecko models
+com.moonsworth.lunar.client.cosmetics.inactive.gui	AnimationSelector	com.moonsworth.lunar.client.cosmetics.gecko	AnimationSelector	selects an animation for a RenderContext; gecko controller input
+com.moonsworth.lunar.client.cosmetics.inactive.gui	GuiHandler	com.moonsworth.lunar.client.cosmetics.gecko	GuiHandler	AnimationSelector entry (anim/transition_ticks/easing) for gecko controllers
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.colorsaturation	ModelMatrixStack	com.moonsworth.lunar.client.cosmetics.gecko	ModelMatrixStack	one-level model matrix stack used by BedrockGeometry
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.colorsaturation	TickConverter	com.moonsworth.lunar.client.cosmetics.gecko	TickConverter	tick-to-time conversion adapter for animation keyframes
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.colorsaturation	VectorConverter	com.moonsworth.lunar.client.cosmetics.gecko	VectorConverter	JSON vector adapter for animation keyframes
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.colorsaturation.mixin	AnimationJsonParser	com.moonsworth.lunar.client.cosmetics.gecko	AnimationJsonParser	parses geckolib animations/bones/rotation/scale json into Animation+BoneAnimation
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.colorsaturation.mixin	AnimationKeyframeParser	com.moonsworth.lunar.client.cosmetics.gecko	AnimationKeyframeParser	parses geckolib KeyFrame/easing/vector entries
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.gui	AnimationControllerImpl	com.moonsworth.lunar.client.cosmetics.gecko	AnimationControllerImpl	Lunar subclass of software.bernie.geckolib3 AnimationController
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.gui	AnimationEventImpl	com.moonsworth.lunar.client.cosmetics.gecko	AnimationEventImpl	Lunar subclass of geckolib3 AnimationEvent carrying RenderContext
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.holograms.mixin	BedrockAnimatedModel	com.moonsworth.lunar.client.cosmetics.gecko	BedrockAnimatedModel	base class resolving textures/animations from BedrockGeometry
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.holograms.mixin	ModelRenderState	com.moonsworth.lunar.client.cosmetics.gecko	ModelRenderState	transient render-state flags for gecko model passes
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.holograms.mixin	ModelTextureProvider	com.moonsworth.lunar.client.cosmetics.gecko	ModelTextureProvider	texture lookup interface for gecko models
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.nameplate	AnimationCache	com.moonsworth.lunar.client.cosmetics.gecko	AnimationCache	cache of parsed geckolib animations
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.nameplate	AnimationFileLoader	com.moonsworth.lunar.client.cosmetics.gecko	AnimationFileLoader	loads lunar:animations json via AnimationJsonParser
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.nameplate	ModelGeometryLoader	com.moonsworth.lunar.client.cosmetics.gecko	ModelGeometryLoader	loads geo.json 1.12.0 into BedrockGeometry (throws RewindhandlersException)
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.rewindhandlers.mixin	BoneHierarchyBuilder	com.moonsworth.lunar.client.cosmetics.gecko	BoneHierarchyBuilder	validates geo.json bone parenting into a hierarchy graph
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.rewindhandlers.mixin	BoneHierarchyNode	com.moonsworth.lunar.client.cosmetics.gecko	BoneHierarchyNode	node of the geo.json bone hierarchy graph
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.rewindhandlers.mixin	DefaultEdgeImpl	com.moonsworth.lunar.client.cosmetics.gecko	DefaultEdgeImpl	JGraphT DefaultEdge subclass for the bone hierarchy graph
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	BedrockBone	com.moonsworth.lunar.client.cosmetics.gecko	BedrockBone	geo.json bone (cubes/bind_pose_rotation/locators)
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	BedrockGeometry	com.moonsworth.lunar.client.cosmetics.gecko	BedrockGeometry	geo.json model (bones + description) exposing an AABB
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	BedrockGeometryFile	com.moonsworth.lunar.client.cosmetics.gecko	BedrockGeometryFile	geo.json root struct (format_version, minecraft:geometry)
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	BedrockModel	com.moonsworth.lunar.client.cosmetics.gecko	BedrockModel	geo.json bones/cape/description holder
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	BoneHierarchySerializer	com.moonsworth.lunar.client.cosmetics.gecko	BoneHierarchySerializer	bone hierarchy serializer interface
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	CubeMesh	com.moonsworth.lunar.client.cosmetics.gecko	CubeMesh	cube-to-mesh conversion for bedrock geometry
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	FormatVersion	com.moonsworth.lunar.client.cosmetics.gecko	FormatVersion	geo.json format version enum (1.12.0/1.14.0/1.21.20)
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	GeoModelSerializer	com.moonsworth.lunar.client.cosmetics.gecko	GeoModelSerializer	Gson serializer/deserializer for the bedrock geometry format
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	IBoneSerializer	com.moonsworth.lunar.client.cosmetics.gecko	IBoneSerializer	bone serialization using bone_*_pos/rot/scale keys
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	ModelCube	com.moonsworth.lunar.client.cosmetics.gecko	ModelCube	geo.json cube (origin/size/pivot/rotation/inflate/mirror)
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	ModelDescription	com.moonsworth.lunar.client.cosmetics.gecko	ModelDescription	geo.json model flags (animationArmsDown, animationNoHeadBob, ...)
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	ModelQuad	com.moonsworth.lunar.client.cosmetics.gecko	ModelQuad	geo.json cube face quad (uv/rotation/material)
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	ModelVertex	com.moonsworth.lunar.client.cosmetics.gecko	ModelVertex	geo.json mesh vertex
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	PolyMesh	com.moonsworth.lunar.client.cosmetics.gecko	PolyMesh	polygon mesh emitted from a bedrock bone
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	RewindhandlersException	com.moonsworth.lunar.client.cosmetics.gecko	RewindhandlersException	exception type of the gecko geometry loader
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	RewindhandlersIterator	com.moonsworth.lunar.client.cosmetics.gecko	RewindhandlersIterator	iterates/deserializes bedrock geometry (BoneHierarchySerializer)
+com.moonsworth.lunar.client.cosmetics.inactive.rewindhandlers	TextureMesh	com.moonsworth.lunar.client.cosmetics.gecko	TextureMesh	textured mesh emitted from a bedrock bone
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight	EvaluatorIterator	com.moonsworth.lunar.client.cosmetics.molang	EvaluatorIterator	Molang AST evaluator over com.eliotlash.molang (JIT path)
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight	MolangRuntime	com.moonsworth.lunar.client.cosmetics.molang	MolangRuntime	per-render Molang runtime: query.* variables + scope + molang JIT
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight	QueryDefaults	com.moonsworth.lunar.client.cosmetics.molang	QueryDefaults	default values for query.* variables
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight	QueryTransition	com.moonsworth.lunar.client.cosmetics.molang	QueryTransition	smoothed query transition state
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight.mixin	FunctionImpl	com.moonsworth.lunar.client.cosmetics.molang	FunctionImpl	custom Molang Function over an Evaluatable body
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight.mixin	MolangAnimationState	com.moonsworth.lunar.client.cosmetics.molang	MolangAnimationState	MolangBuiltin exposing animation state to scripts
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight.mixin	MolangCheckBiome	com.moonsworth.lunar.client.cosmetics.molang	MolangCheckBiome	query.biome builtin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight.mixin	MolangCheckBiomeCategory	com.moonsworth.lunar.client.cosmetics.molang	MolangCheckBiomeCategory	query.biome_category builtin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight.mixin	MolangCheckSnowyBiome	com.moonsworth.lunar.client.cosmetics.molang	MolangCheckSnowyBiome	query.is_snowy builtin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight.mixin	MolangLightLevel	com.moonsworth.lunar.client.cosmetics.molang	MolangLightLevel	query.light_level builtin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.highlight.mixin	MolangSmoothQuery	com.moonsworth.lunar.client.cosmetics.molang	MolangSmoothQuery	smoothed query builtin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.holograms	EvaluatorImpl	com.moonsworth.lunar.client.cosmetics.molang	EvaluatorImpl	Molang JIT Evaluator subclass (crash reporter tag Molang JIT)
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.holograms	EmoteModel	com.moonsworth.lunar.client.cosmetics.emote	EmoteModel	emote playback model (BedrockAnimatedModel) resolving texture/animation providers
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.holograms	MolangResourceModel	com.moonsworth.lunar.client.cosmetics.emote	MolangResourceModel	EmoteModel whose resources come from MolangResourceProvider expressions
+com.moonsworth.lunar.client.gui	BugReportCategory	com.moonsworth.lunar.client.ui	BugReportCategory	bug-report category enum (mod/gui/cosmetic/store/voice/launcher/other) for the report screen
+com.moonsworth.lunar.client.gui	CompetitiveDisconnectScreen	com.moonsworth.lunar.client.ui	CompetitiveDisconnectScreen	Apollo competitive-disconnect GUI screen; PLAN ui/ holds screens
+com.moonsworth.lunar.client.gui	EmptyScreen	com.moonsworth.lunar.client.ui	EmptyScreen	blank wrapper screen used by CheckoutUtils/Bridge.method18
+com.moonsworth.lunar.client.gui	IllegalStateException	com.moonsworth.lunar.client.ui	IllegalStateException	GUI-specific IllegalStateException subclass (dead subclass of java.lang)
+com.moonsworth.lunar.client.gui.blog	BlogPost	com.moonsworth.lunar.client.ui.blog	BlogPost	launcher blog post (title/imageUrl/link); PLAN ui/ holds blog
+com.moonsworth.lunar.client.gui.blog	BlogPostDownloadTask	com.moonsworth.lunar.client.ui.blog	BlogPostDownloadTask	downloads blog post banner textures; blog subsystem
+com.moonsworth.lunar.client.gui.external	ExternalLink	com.moonsworth.lunar.client.ui.external	ExternalLink	external-link interface (launcher/main menu integration); PLAN ui/ holds external links
+com.moonsworth.lunar.client.gui.external	ExternalLinkRegistry	com.moonsworth.lunar.client.ui.external	ExternalLinkRegistry	registry/lookup of ExternalLink providers; external-link subsystem
+com.moonsworth.lunar.client.gui.external	FancyMenuCompat	com.moonsworth.lunar.client.ui.external	FancyMenuCompat	reflection compat with de.keksuccino.fancymenu; external-link subsystem
+com.moonsworth.lunar.client.gui.external	ModMenuCompat	com.moonsworth.lunar.client.ui.external	ModMenuCompat	reflection compat with ModMenu screens; external-link subsystem
+com.moonsworth.lunar.client.gui.external.gui	GuiExternalLink	com.moonsworth.lunar.client.ui.external	GuiExternalLink	ExternalLink variant for screen buttons; flatten junk `gui` subpackage
+com.moonsworth.lunar.client.gui.external.highlight	RecordingExternalLink	com.moonsworth.lunar.client.ui.external	RecordingExternalLink	ExternalLink variant for the recording UI; flatten junk `highlight` subpackage
+com.moonsworth.lunar.client.gui.external.holograms	HologramExternalLink	com.moonsworth.lunar.client.ui.external	HologramExternalLink	ExternalLink variant for hologram display; flatten junk `holograms` subpackage
+com.moonsworth.lunar.client.gui.external.mixin	MainMenuExternalLink	com.moonsworth.lunar.client.ui.external	MainMenuExternalLink	ExternalLink for the main-menu button (plain interface, not a real mixin); flatten junk `mixin`
+com.moonsworth.lunar.client.gui.external.rewindhandlers	TurboExternalLink	com.moonsworth.lunar.client.ui.external	TurboExternalLink	ExternalLink variant for turbo/frame-unlock; flatten junk `rewindhandlers`
+com.moonsworth.lunar.client.gui.notification	AnchorFunction	com.moonsworth.lunar.client.ui.notification	AnchorFunction	notification anchor resolver; PLAN ui/ holds notifications
+com.moonsworth.lunar.client.gui.notification	FriendNotification	com.moonsworth.lunar.client.ui.notification	FriendNotification	friend online notification overlay
+com.moonsworth.lunar.client.gui.notification	FriendNotificationLong	com.moonsworth.lunar.client.ui.notification	FriendNotificationLong	long-form friend notification variant
+com.moonsworth.lunar.client.gui.notification	HostedWorldNotification	com.moonsworth.lunar.client.ui.notification	HostedWorldNotification	hosted-world notification overlay
+com.moonsworth.lunar.client.gui.notification	NotificationAnchor	com.moonsworth.lunar.client.ui.notification	NotificationAnchor	topLeft/bottomLeft/topRight/bottomRight option enum
+com.moonsworth.lunar.client.gui.notification	Notification	com.moonsworth.lunar.client.ui.notification	Notification	popup notification model (JsonProvider + Translatable)
+com.moonsworth.lunar.client.gui.notification	NotificationType	com.moonsworth.lunar.client.ui.notification	NotificationType	info/success/warning/error/lunar notification icons
+com.moonsworth.lunar.client.gui.prompt	ActivePrompt	com.moonsworth.lunar.client.ui.prompt	ActivePrompt	active prompt state; PLAN ui/ holds prompts
+com.moonsworth.lunar.client.gui.prompt	BlockedActionPrompt	com.moonsworth.lunar.client.ui.prompt	BlockedActionPrompt	PromptAction blocking a user action
+com.moonsworth.lunar.client.gui.prompt	MaliciousServerPrompt	com.moonsworth.lunar.client.ui.prompt	MaliciousServerPrompt	safety.maliciousServer.prompt with saveChoice
+com.moonsworth.lunar.client.gui.prompt	MaliciousUrlPrompt	com.moonsworth.lunar.client.ui.prompt	MaliciousUrlPrompt	safety.maliciousUrl.prompt with saveChoice
+com.moonsworth.lunar.client.gui.prompt	OpenUrlPrompt	com.moonsworth.lunar.client.ui.prompt	OpenUrlPrompt	gui.apollo.button.openUrlPrompt action
+com.moonsworth.lunar.client.gui.prompt	PromptAction	com.moonsworth.lunar.client.ui.prompt	PromptAction	abstract prompt action base
+com.moonsworth.lunar.client.gui.prompt	RunCommandPrompt	com.moonsworth.lunar.client.ui.prompt	RunCommandPrompt	gui.apollo.button.runCommandPrompt action
+com.moonsworth.lunar.client.translation	CachedReplacement	com.moonsworth.lunar.client.chat.translation	CachedReplacement	replacement template interface for translated strings
+com.moonsworth.lunar.client.translation	ClientLanguage	com.moonsworth.lunar.client.chat.translation	ClientLanguage	client locale enum (nl_NL/fr_FR/de_DE/en_US/...)
+com.moonsworth.lunar.client.translation	ConstantReplacement	com.moonsworth.lunar.client.chat.translation	ConstantReplacement	constant translation replacement
+com.moonsworth.lunar.client.translation	SharedTranslations	com.moonsworth.lunar.client.chat.translation	SharedTranslations	shared translation keys (cps/blocks/true/false)
+com.moonsworth.lunar.client.translation	StringArrayReplacement	com.moonsworth.lunar.client.chat.translation	StringArrayReplacement	array translation replacement
+com.moonsworth.lunar.client.translation	SupplierReplacement	com.moonsworth.lunar.client.chat.translation	SupplierReplacement	lazy supplier translation replacement
+com.moonsworth.lunar.client.translation	Translatable	com.moonsworth.lunar.client.chat.translation	Translatable	translation lookup interface used by chat/notifications
+com.moonsworth.lunar.client.translation	TranslationVariable	com.moonsworth.lunar.client.chat.translation	TranslationVariable	variable enum for translation templates
+com.moonsworth.lunar.client.profile	HudPosition	com.moonsworth.lunar.client.config.profile	HudPosition	serialized HUD element position (quadrant/xPosition/screenWidth/scale) stored in mod profiles
+com.moonsworth.lunar.client.profile	ModProfile	com.moonsworth.lunar.client.config.profile	ModProfile	mod profile (icon/name/displayName); PLAN config/ holds mod profiles
+com.moonsworth.lunar.client.profile	ModProfileManager	com.moonsworth.lunar.client.config.profile	ModProfileManager	loads/saves mods.json/general.json/controls.json profiles
+com.moonsworth.lunar.client.profile	ProfileColor	com.moonsworth.lunar.client.config.profile	ProfileColor	profile color (STATIC/RAINBOW/CHROMA)
+com.moonsworth.lunar.client.profile	ProfileData	com.moonsworth.lunar.client.config.profile	ProfileData	enabled/value profile entry
+com.moonsworth.lunar.client.profile.importer	BadlionProfileConfig	com.moonsworth.lunar.client.config.profile.importer	BadlionProfileConfig	Badlion data.json/info.json schema for profile import
+com.moonsworth.lunar.client.profile.importer	BadlionProfileConverter	com.moonsworth.lunar.client.config.profile.importer	BadlionProfileConverter	maps Badlion HUD/mod settings to Lunar options (ProfileData/HudPosition/ProfileColor)
+com.moonsworth.lunar.client.profile.importer	BadlionProfileImporter	com.moonsworth.lunar.client.config.profile.importer	BadlionProfileImporter	imports a Badlion profile directory into ModProfile/ModProfileManager
+com.moonsworth.lunar.client.profile.importer	ConvertedProfile	com.moonsworth.lunar.client.config.profile.importer	ConvertedProfile	converted profile result holder (interface with Feather/Parsed variants)
+com.moonsworth.lunar.client.profile.importer	ExternalProfileLocator	com.moonsworth.lunar.client.config.profile.importer	ExternalProfileLocator	locates BLClient-Mod-Profiles/feather configuration files under user.home/APPDATA
+com.moonsworth.lunar.client.profile.importer	FeatherConvertedProfile	com.moonsworth.lunar.client.config.profile.importer	FeatherConvertedProfile	Feather-specific converted profile
+com.moonsworth.lunar.client.profile.importer	FeatherProfileConfig	com.moonsworth.lunar.client.config.profile.importer	FeatherProfileConfig	Feather profile schema (hudAnchor/hudRelativeX/hudScale)
+com.moonsworth.lunar.client.profile.importer	FeatherProfileConverter	com.moonsworth.lunar.client.config.profile.importer	FeatherProfileConverter	maps Feather HUD/mod settings to Lunar options
+com.moonsworth.lunar.client.profile.importer	FeatherProfileImporter	com.moonsworth.lunar.client.config.profile.importer	FeatherProfileImporter	imports a Feather profile directory into ModProfileManager
+com.moonsworth.lunar.client.profile.importer	ParsedProfileColor	com.moonsworth.lunar.client.config.profile.importer	ParsedProfileColor	parsed profile color used during import

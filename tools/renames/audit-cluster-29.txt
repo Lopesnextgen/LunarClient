@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui
+com.moonsworth.lunar.client.framework.feature.mod.fishing.gui.mixin
+com.moonsworth.lunar.client.framework.feature.mod.fishing.highlight
+com.moonsworth.lunar.client.framework.feature.mod.fishing.highlight.mixin
+com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms
+com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms.holograms

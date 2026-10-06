@@ -1,0 +1,9 @@
+# Files held out of the QA compile because javac (21/22) aborts with an
+# internal error while attributing them, truncating the error list.
+#
+# Regenerate/extend with: tools/find_crash_triggers.py
+#
+# 2026-09-16: emptied after the com/lunarclient sources moved to
+# libs/lunarclient-protocol.jar (the 80 entries added while they were in src
+# were mis-attributed and caused their own cascade errors, e.g. excluding
+# Uuid.java broke 317 references).

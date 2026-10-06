@@ -1,0 +1,232 @@
+[
+    {
+        "hash": "057a740cbd5923f07420337449689bad6b08905c",
+        "name": "Home",
+        "rarity": "UNCOMMON"
+    },
+    {
+        "hash": "1441bed9241454587b09a46eeccb817e284abf30",
+        "name": "Translator",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "17a4dd5c70e91377559863f7e0953d2749468769",
+        "name": "Common",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "17f76a23ff4d227a94ea3d5802dccae9f2ae9aa9",
+        "name": "Migrator",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "1a2e66ce3d184fee9dfdd1ca1ba08f4006e8250b",
+        "name": "MineCon 2011",
+        "rarity": "EPIC"
+    },
+    {
+        "hash": "28f6ab27b371ca4df7a423125738562cc140441b",
+        "name": "Minecraft Experience",
+        "rarity": "RARE"
+    },
+    {
+        "hash": "2c97c9f45891d5c1e64d11e49a7f1b4c30680791",
+        "name": "Blueprint",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "2d275161c8575a50cbdf6e7ba1c1d6b0e9767746",
+        "name": "Cobalt",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "3091743e31a3bc8c10aa9200fb60e9df3edae4a6",
+        "name": "Zombie Horse",
+        "rarity": "UNCOMMON"
+    },
+    {
+        "hash": "37394c6836c51b9735b6252ef25b210bf70d9131",
+        "name": "MineCon 2016",
+        "rarity": "EPIC"
+    },
+    {
+        "hash": "391fcef8d13280b95b3978f646954318bfc6cf58",
+        "name": "Pan",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "3c8daf4b60f93f3cb11b7c5548b959b7d7b43f80",
+        "name": "Valentine",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "3c8daf4b60f93f3cb11b7c5548b959b7d7b43f80",
+        "name": "Valentine",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "46b55deda77455a3f3e3f123121274438a59dbfb",
+        "name": "Oxeye",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "473bf9d8f97650633ece54fb92b809bb1dc9fbd7",
+        "name": "MineCon 2012",
+        "rarity": "EPIC"
+    },
+    {
+        "hash": "49e69f33243ddd6ab6bf5794562a877f9266c245",
+        "name": "dB",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "4fea22b1ea4e31b1a76357b8eb59cda18efd5f54",
+        "name": "Menace",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "577ad2055c373bbb06634e1a247bb7f0802f3b41",
+        "name": "Mojang Office",
+        "rarity": "UNCOMMON"
+    },
+    {
+        "hash": "5b2a396ad1206ea793766d058046513f5d2c13c1",
+        "name": "Builder",
+        "rarity": "UNCOMMON"
+    },
+    {
+        "hash": "5d56c83d83d10d0f1e3ac7a5b8b896d4b26bde3e",
+        "name": "Founder's",
+        "rarity": "UNCOMMON"
+    },
+    {
+        "hash": "603ad2e764e001f5d51e395fa80842d05e1c66c8",
+        "name": "Mojira Moderator",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "61e9005c57ff473b71b331f1dd5ef9f0bb9d0e00",
+        "name": "Prismarine",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "712a11a4a1eeb6851270244ac3cb9574378b5315",
+        "name": "Crafter",
+        "rarity": "EPIC"
+    },
+    {
+        "hash": "71716f0d5ebbc0b24f957d38cfc593906a3cdadf",
+        "name": "Mojang Studios",
+        "rarity": "MOJANG"
+    },
+    {
+        "hash": "7bf71570fb55a94e60338d771d292de25e8a404e",
+        "name": "Follower's",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "808fab6f6c3f2edbe62d9db46d8fe57beb3b7e8a",
+        "name": "15th Anniversary",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "87803f30f711a80046ade4cc4e687a5c4cf92850",
+        "name": "Cherry Blossom",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "89574b4844b809cdce277fe83b6f315f3b4af268",
+        "name": "Scrolls",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "9225e00112c3dfb8c4f3e0b397fc8404d64c71d1",
+        "name": "Purple Heart",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "9eeb3aa671dd4b0c9d425756c3dde510e1abcb8d",
+        "name": "MCC 15th Year",
+        "rarity": "UNCOMMON"
+    },
+    {
+        "hash": "a7938f76a4df31e7611efb7c47db3a6d843cfae4",
+        "name": "Millionth Customer",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "ae2e73e16ce512faf28270b373c70b014c764af0",
+        "name": "Birthday",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "b5fa1ffb0f5b47d0803ca98b3759f12d5910760e",
+        "name": "Mojang (Classic)",
+        "rarity": "MOJANG"
+    },
+    {
+        "hash": "baea3e21e56cf79da92c4387294d5fb8a9c98a1f",
+        "name": "Moonlight Trail Cape",
+        "rarity": "EPIC"
+    },
+    {
+        "hash": "cbe322bf538b8ca6934625667830b24d84920f39",
+        "name": "Copper",
+        "rarity": "UNCOMMON"
+    },
+    {
+        "hash": "ce9c9163038784c6f9b03524c4954aa3113126f6",
+        "name": "Translator (Chinese)",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "d2637f37ab51424c639e984ba65afc59452ae1e3",
+        "name": "Translator (Japanese)",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "da4d3c988919596be9461b716e55165c4f96d640",
+        "name": "Snowman",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "de27748a636bf9599f998d4964a9849c3ea78fac",
+        "name": "MineCon 2013",
+        "rarity": "EPIC"
+    },
+    {
+        "hash": "dec980c6702e26c7f9b4b4e372c92f2202cade66",
+        "name": "Realms Mapmaker",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "e0d6f05ef3954991019d26274908828d1ef3a971",
+        "name": "Vanilla",
+        "rarity": "COMMON"
+    },
+    {
+        "hash": "e1e2b8f8fbbcd0e1bbf9520c63e23e195760f3e0",
+        "name": "Turtle",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "e887feab8bc6d726e84adc98d848278d9a77f150",
+        "name": "MineCon 2015",
+        "rarity": "EPIC"
+    },
+    {
+        "hash": "ea963f1b7d7c510da28800a770882d0c4b0aee6d",
+        "name": "Mojang",
+        "rarity": "MOJANG"
+    },
+    {
+        "hash": "eae3a9f6b8e052717a5c5107d95c8f5d833b36e4",
+        "name": "Spade",
+        "rarity": "LEGENDARY"
+    },
+    {
+        "hash": "f842d3eaa6410a77b351310d0949ce707040d9da",
+        "name": "Yearn",
+        "rarity": "UNCOMMON"
+    }
+]

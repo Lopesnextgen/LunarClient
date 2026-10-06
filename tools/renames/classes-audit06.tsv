@@ -1,0 +1,72 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client.fog.mixin	Gui2Handler	AlertCard	alert card (id/name/text/color/icon/link/dismissible + {COUNTDOWN} templating, icons/alerts/*.webp)	com/moonsworth/lunar/client/fog/mixin/Gui2Handler.java
+com.moonsworth.lunar.client.fog.nameplate	Gui2Handler	BlogPost	blog post (title/imageUrl/link, md5 hash, backgrounds/post-default fallback); downloaded by BlogPostDownloadTask with "BlogPost" logs	com/moonsworth/lunar/client/fog/nameplate/Gui2Handler.java
+com.moonsworth.lunar.client.fog.nameplate	NameplateTask	BlogPostDownloadTask	downloads blog-post http textures to disk ("BlogPost" logs, 200-check, FileUtils copy)	com/moonsworth/lunar/client/fog/nameplate/NameplateTask.java
+com.moonsworth.lunar.client.fov	Fov2_3	ChatMessage	chat message (uuid/instant/sender/contents/kind); built from ConversationMessage via Fov_3 + Fov3_2	com/moonsworth/lunar/client/fov/Fov2_3.java
+com.moonsworth.lunar.client.fov	Fov2_4	EmoteGift	emote gift grant (id/timestamp/indices + EmoteGiftInfo); held by holograms/EmoteDefinition, built from Emote GiftInfo	com/moonsworth/lunar/client/fov/Fov2_4.java
+com.moonsworth.lunar.client.fov	Fov3_3	TransformStack	matrix/transform stack (32 slots, push/pop/current)	com/moonsworth/lunar/client/fov/Fov3_3.java
+com.moonsworth.lunar.client.fov	Fov3$Data3	Transform	single transform (scale Vector3f + Quaternionf rotation + position) with copy/translate	com/moonsworth/lunar/client/fov/Fov3$Data3.java
+com.moonsworth.lunar.client.fov	Fov3$Data4	Sticker	sticker (id/url/name) wrapped by StickerContents	com/moonsworth/lunar/client/fov/Fov3$Data4.java
+com.moonsworth.lunar.client.fov	Fov3$Data5	PlainTextContents	PLAIN_TEXT message contents (text)	com/moonsworth/lunar/client/fov/Fov3$Data5.java
+com.moonsworth.lunar.client.fov	Fov3$Data6	StickerContents	STICKER message contents (wraps Sticker)	com/moonsworth/lunar/client/fov/Fov3$Data6.java
+com.moonsworth.lunar.client.fov	Fov3$Data7	SystemEventContents	SYSTEM message contents (wraps SystemEvent)	com/moonsworth/lunar/client/fov/Fov3$Data7.java
+com.moonsworth.lunar.client.fov	Fov3$Type	MessageContentType	PLAIN_TEXT/STICKER/SYSTEM	com/moonsworth/lunar/client/fov/Fov3$Type.java
+com.moonsworth.lunar.client.fov	Fov4_2	MessageEmbed	message embed base (rawUrl/proxiedUrl/capturedAt); factory from ConversationMessageEmbed IMAGE/LINK_PREVIEW	com/moonsworth/lunar/client/fov/Fov4_2.java
+com.moonsworth.lunar.client.fov	Fov4$Data2	LinkPreviewEmbed	LINK_PREVIEW embed (title/description/siteName/contentType)	com/moonsworth/lunar/client/fov/Fov4$Data2.java
+com.moonsworth.lunar.client.fov	Fov4$Data3	ImageEmbed	IMAGE embed (+mimeType)	com/moonsworth/lunar/client/fov/Fov4$Data3.java
+com.moonsworth.lunar.client.fov	Fov4$Type	EmbedType	IMAGE/LINK_PREVIEW	com/moonsworth/lunar/client/fov/Fov4$Type.java
+com.moonsworth.lunar.client.fov	Fov4$Data	GlResources	GL resource bundle (GlObject + buffer handles with delete())	com/moonsworth/lunar/client/fov/Fov4$Data.java
+com.moonsworth.lunar.client.fov	Fov5_3	SystemEvent	system-message event base; factory from SystemMessage PINNED/INVITE/LEAVE/NAME_CHANGE/ICON_CHANGE	com/moonsworth/lunar/client/fov/Fov5_3.java
+com.moonsworth.lunar.client.fov	Fov5$Data	InviteEvent	INVITE event (actor + invitees)	com/moonsworth/lunar/client/fov/Fov5$Data.java
+com.moonsworth.lunar.client.fov	Fov5$Data2	IconChangeEvent	ICON_CHANGE event (actor + new icon url)	com/moonsworth/lunar/client/fov/Fov5$Data2.java
+com.moonsworth.lunar.client.fov	Fov5$Data3	LeaveEvent	LEAVE event (actor + player)	com/moonsworth/lunar/client/fov/Fov5$Data3.java
+com.moonsworth.lunar.client.fov	Fov5$Data4	NameChangeEvent	NAME_CHANGE event (actor + new name)	com/moonsworth/lunar/client/fov/Fov5$Data4.java
+com.moonsworth.lunar.client.fov	Fov5$Data5	PinnedEvent	PINNED event (actor + pinned message id)	com/moonsworth/lunar/client/fov/Fov5$Data5.java
+com.moonsworth.lunar.client.fov	Fov5$Type	SystemEventType	PINNED/INVITE/LEAVE/NAME_CHANGE/ICON_CHANGE	com/moonsworth/lunar/client/fov/Fov5$Type.java
+com.moonsworth.lunar.client.fov	Fov6Impl	StickerStore	sticker packs + emoji categories store (method1 set, clear)	com/moonsworth/lunar/client/fov/Fov6Impl.java
+com.moonsworth.lunar.client.fov	Fov7_2	PositionHistory	20-sample x/y/z ring buffer; consumed by ShaderUniformUpdater	com/moonsworth/lunar/client/fov/Fov7_2.java
+com.moonsworth.lunar.client.fov	FovHandler	Emote	abstract emote (id/gift/name/icon from emotes/icons + StyngrSong + Holograms_2 playback); implements EmoteModelRenderer	com/moonsworth/lunar/client/fov/FovHandler.java
+com.moonsworth.lunar.client.fov	FovIterator	ShaderPass	shader-definition binding (id/name + render pipeline); wraps ShaderDefinition	com/moonsworth/lunar/client/fov/FovIterator.java
+com.moonsworth.lunar.client.fov	FovType	RenderContextKind	IN_WORLD/IN_WORLD_PLAYER_MODEL/IN_COSMETIC_* (usesPlayer/inGui)	com/moonsworth/lunar/client/fov/FovType.java
+com.moonsworth.lunar.client.fov	Fov2$Type	GeckoRenderMode	RENDERED_NORMAL/RENDERED_GECKO_COMPUTE	com/moonsworth/lunar/client/fov/Fov2$Type.java
+com.moonsworth.lunar.client.fov	Fov2$Data2	VertexBuilder	abstract 8-float vertex builder (vertex() + cached flush)	com/moonsworth/lunar/client/fov/Fov2$Data2.java
+com.moonsworth.lunar.client.fov	Fov2$Extension	VertexSink	mesh vertex sink (method1 8 floats + method2 flush)	com/moonsworth/lunar/client/fov/Fov2$Extension.java
+com.moonsworth.lunar.client.fov	Fov2_5	MeshPassRunner	runs the six Fov3Task mesh passes over a VertexSink	com/moonsworth/lunar/client/fov/Fov2_5.java
+com.moonsworth.lunar.client.fov	Fov5_2	ShaderUniformUpdater	per-frame shader uniforms (TIME_SECONDS/CAMERA_ROTATION feeds into Fov3)	com/moonsworth/lunar/client/fov/Fov5_2.java
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers	Rewindhandlers	EquipConditionPredicate	abstract equip-condition predicate (BIOME_TEMPERATURE/DIMENSION/.../WEATHER factory method4); sibling of ConditionalOutfitTree	com/moonsworth/lunar/client/fov/mixin/rewindhandlers/Rewindhandlers.java
+com.moonsworth.lunar.client.fps	Fps	MolangVariablePath	formats Molang variable paths (Access/Call/FunctionDefinition/Variable -> dotted lowercase path)	com/moonsworth/lunar/client/fps/Fps.java
+com.moonsworth.lunar.client.fps	Fps6Handler	ConstantExpression	constant compiled expression (run() returns fixed double); implements jar-phantom Fps6	com/moonsworth/lunar/client/fps/Fps6Handler.java
+com.moonsworth.lunar.client.fps	Fps7Extension	MolangBuiltin	builtin-function interface (call(double...) + arity/mode checks + JIT emit)	com/moonsworth/lunar/client/fps/Fps7Extension.java
+com.moonsworth.lunar.client.fps	Fps7Handler	MolangVariable	mutable variable cell (public double value); scope values	com/moonsworth/lunar/client/fps/Fps7Handler.java
+com.moonsworth.lunar.client.fps	Fps7Extension17	MolangCustomFunction	user-defined closure (arity + arg cells + compiled Fps6 body)	com/moonsworth/lunar/client/fps/Fps7Extension17.java
+com.moonsworth.lunar.client.fps	Fps7Extension2	MolangMathTanRadians	math.tanradians: Math.tan (see MolangBuiltinFunctions registry)	com/moonsworth/lunar/client/fps/Fps7Extension2.java
+com.moonsworth.lunar.client.fps	Fps7Extension3	MolangMathDiceRollInteger	math.dice_roll_integer (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension3.java
+com.moonsworth.lunar.client.fps	Fps7Extension4	MolangMathRound	math.round: Math.round (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension4.java
+com.moonsworth.lunar.client.fps	Fps7Extension5	MolangMathCeil	math.ceil (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension5.java
+com.moonsworth.lunar.client.fps	Fps7Extension6	MolangMathClamp	math.clamp (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension6.java
+com.moonsworth.lunar.client.fps	Fps7Extension7	MolangMathAtan2	math.atan2 (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension7.java
+com.moonsworth.lunar.client.fps	Fps7Extension8	MolangMathFloor	math.floor (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension8.java
+com.moonsworth.lunar.client.fps	Fps7Extension9	MolangMathTan	math.tan (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension9.java
+com.moonsworth.lunar.client.fps	Fps7Extension10	MolangMathLn	math.ln: Math.log (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension10.java
+com.moonsworth.lunar.client.fps	Fps7Extension11	MolangMathMin	math.min (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension11.java
+com.moonsworth.lunar.client.fps	Fps7Extension12	MolangMathSign	math.sign (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension12.java
+com.moonsworth.lunar.client.fps	Fps7Extension13	MolangMathSqrt	math.sqrt (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension13.java
+com.moonsworth.lunar.client.fps	Fps7Extension14	MolangMathCosRadians	math.cosradians (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension14.java
+com.moonsworth.lunar.client.fps	Fps7Extension15	MolangMathRandom	math.random: Math.random (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension15.java
+com.moonsworth.lunar.client.fps	Fps7Extension16	MolangMathRandomInteger	math.random_integer (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension16.java
+com.moonsworth.lunar.client.fps	Fps7Extension18	MolangMathAcos	math.acos (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension18.java
+com.moonsworth.lunar.client.fps	Fps7Extension19	MolangMathMod	math.mod (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension19.java
+com.moonsworth.lunar.client.fps	Fps7Extension20	MolangMathExp	math.exp (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension20.java
+com.moonsworth.lunar.client.fps	Fps7Extension21	MolangMathSin	math.sin (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension21.java
+com.moonsworth.lunar.client.fps	Fps7Extension22	MolangMathTrunc	math.trunc (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension22.java
+com.moonsworth.lunar.client.fps	Fps7Extension23	MolangMathAbs	math.abs (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension23.java
+com.moonsworth.lunar.client.fps	Fps7Extension24	MolangMathAsin	math.asin (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension24.java
+com.moonsworth.lunar.client.fps	Fps7Extension25	MolangMathCos	math.cos (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension25.java
+com.moonsworth.lunar.client.fps	Fps7Extension26	MolangMathMinAngle	math.min_angle (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension26.java
+com.moonsworth.lunar.client.fps	Fps7Extension27	MolangMathSinRadians	math.sinradians (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension27.java
+com.moonsworth.lunar.client.fps	Fps7Extension28	MolangMathAtan	math.atan (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension28.java
+com.moonsworth.lunar.client.fps	Fps7Extension29	MolangMathLerp	math.lerp: Interpolations.lerp (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension29.java
+com.moonsworth.lunar.client.fps	Fps7Extension30	MolangMathLerpRotate	math.lerprotate: Interpolations.lerpYaw (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension30.java
+com.moonsworth.lunar.client.fps	Fps7Extension31	MolangMathMax	math.max (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension31.java
+com.moonsworth.lunar.client.fps	Fps7Extension32	MolangMathPow	math.pow (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension32.java
+com.moonsworth.lunar.client.fps	Fps7Extension33	MolangMathDiceRoll	math.dice_roll (see registry)	com/moonsworth/lunar/client/fps/Fps7Extension33.java

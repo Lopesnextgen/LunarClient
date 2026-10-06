@@ -1,0 +1,6 @@
+old.package	new.package	evidence
+com.moonsworth.lunar.bridge.fog	com.moonsworth.lunar.bridge.potion	obfuscated segment 'fog' reused by the scrambler; the three classes are the potion bridges Fog (PotionEffectBridge), PotionBridge and PotionRegistryBridge
+com.moonsworth.lunar.bridge.glintcolorizer	com.moonsworth.lunar.bridge.server	obfuscated segment 'glintcolorizer'; the sole class is the IntegratedServer bridge returned by Bridge5_12.bridge$getIntegratedServer()
+com.moonsworth.lunar.bridge.glintcolorizer.mixin	com.moonsworth.lunar.bridge.resourcepack	duck interfaces for resource-pack internals: parent-dir access (Glintcolorizer) and pack filters (PackFiltersBridge)
+com.moonsworth.lunar.bridge.hitbox	com.moonsworth.lunar.bridge.stats	obfuscated segment 'hitbox'; the contents are the StatFileWriter/StatisticsFile bridge (Hitbox) and StatBaseBridge, i.e. the statistics subsystem
+com.moonsworth.lunar.bridge.hitcolor	com.moonsworth.lunar.bridge.tileentity	obfuscated segment 'hitcolor'; the contents are tile-entity bridges: BeamSegment (Hitcolor), TileEntity (HitcolorExtension) and TileEntityChest

@@ -1,0 +1,8 @@
+com.moonsworth.lunar.bridge.tileentity
+com.moonsworth.lunar.bridge.world
+com.moonsworth.lunar.bridge.world.mixin
+com.moonsworth.lunar.bridgeimpl.mixin
+com.moonsworth.lunar.client
+com.moonsworth.lunar.client.account
+com.moonsworth.lunar.client.account.skin
+com.moonsworth.lunar.client.alert

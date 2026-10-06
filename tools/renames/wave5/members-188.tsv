@@ -1,0 +1,560 @@
+# owner.fqn	M|F	oldName	newName	evidence
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field10	textShadow	option key "textShadow"; Apollo node coordinates.text-shadow
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field11	background	option key "background"; Apollo node coordinates.background
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field12	border	option key "border"; Apollo node coordinates.border
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field13	borderThickness	option key "borderThickness" (0.5..3.0); Apollo node coordinates.border-thickness
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field14	backgroundColor	option key "backgroundColor"; Apollo node coordinates.background-color
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field15	borderColor	option key "borderColor"; Apollo node coordinates.border-color
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field16	mode	option key "mode" (Gui2Extension VERTICAL/HORIZONTAL); selects the single-line vs multi-line layout
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field17	copyCoords	option key "copyCoords" (ModifierKeybindOption bound to this); copies "X: .. Y: .. Z: .." to clipboard
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field18	moveChildrenIndividually	option key "moveChildrenIndividually"; Apollo node coordinates.move-children-individually
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field19	decimalCoordinates	option key "decimalCoordinates"; Apollo node coordinates.decimal-coordinates
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field20	xChild	CoordinatesChildHudMod labelled "X" (preview "500")
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field21	yChild	CoordinatesChildHudMod labelled "Y" (preview "62")
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field22	zChild	CoordinatesChildHudMod labelled "Z" (preview "250")
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field23	renderCountChild	CoordinatesChildHudMod labelled "C" showing unculled/max render count (preview "92/4269")
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field24	biomeChild	CoordinatesChildHudModImpl labelled "Biome" (preview "Plains")
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field25	directionChild	CoordinatesChildHudModImpl2 labelled "Direction" (preview "N")
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field8	biomeListener	guiRewindhandlers.GuiRewindhandlersHandler27 = biome tracker (updates Data3 on biome change); method14 returns its method5()
+com.moonsworth.lunar.client.mod.hud.Coordinates	F	field9	showWhileTyping	option key "showWhileTyping"; Apollo ModCoordinates node coordinates.show-while-typing
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method13	moveChildrenTogether	returns !field18.get() (moveChildrenIndividually); child elements use it as their background visibility condition
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method14	getBiome	field8.method5() -> current biome Data3
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method15	getShowWhileTyping	@Generated getter for field9
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method16	getMoveChildrenIndividually	@Generated getter for field18
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method2	registerOptions	@Override settings entry point (RootSettingsAssembler): registers the field9..field19 option tree and the copy-coords keybind action
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method3	render	@Override MixinCore9Extension.method3 in Data: lays out X/Y/Z/C/biome/direction rows or single line
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean) in Data; SPLIT: outer method4(CoordinatesChildHudMod) = syncChildOptions, Data.method4(renderer,xyz,yaw,counts,...) = renderCoordinates
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method5	formatCoordinate	formats a coordinate per decimalCoordinates (2-decimal or rounded int)
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method6	getCardinalDirection	static: yaw -> N/NE/E/SE/S/SW/W/NW
+com.moonsworth.lunar.client.mod.hud.Coordinates	M	method9	getChildMods	@Override AbstractFeature.method9(): returns the X/Y/Z/C/biome/direction child mods
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	F	field10	labelColor	option key "labelColor" with dynamic condition Calculator2Iterator392(parent::moveChildrenTogether)
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	F	field11	valueSupplier	Supplier<String> formatting the current value for this child
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	F	field12	previewValue	String shown in the HUD editor preview ("500"/"62"/"250"/"N")
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	F	field8	clickHandler	fog.click.GuiRewindhandlersHandler2 marker/click handler obtained via method63(...); unused in this file
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	F	field9	showLabel	option key "showLabel" (default true)
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method1	configureBackground	@Override TypedHudRenderer.method1(ToggleOptionBuilder) hook (Data overrides it to attach a visibility condition); SPLIT: Data.method1(FloatOption.Data) = configureScale
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method13	clickPredicate	private MarkerPredicate that syncs all sibling options via parent.syncChildOptions(this) on click
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method14	getLabelColorOption	Data.method35() text colour option; throws "Unable to find the text color option for this mod!"
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method15	getShowLabel	@Generated getter for field9; SPLIT: Data.method15() returns HudSize = getSize
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method16	getLabelColor	@Generated getter for field10
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method2	registerOptions	@Override settings entry point; SPLIT: method2(CoordinatesHud) factory = createElement, Data.method2(ToggleOptionBuilder) = configureTextShadow
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method24	getTextColorArgb	helper: this.textColor.method14(0.0F) ARGB passed to ComponentRenderer.drawString
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method3	render	@Override MixinCore9Extension.method3 in Data: draws label/value with bracket handling
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean) in Data: hidden when the parent row is hidden or chat is open
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method5	getConditions	@Override TypedHudRenderer.method5() in Data: HudConditionSet.method5().method1(true).method2(true).method8()
+com.moonsworth.lunar.client.mod.hud.CoordinatesChildHudMod	M	method6	create	static factory; its own exception message says "must be created using CoordinatesChildHudMod.create()!" - anonymous subclass overrides getId; SPLIT: Data.method6(boolean) = getText (text provider returning null)
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field10	textShadow	option key "textShadow"; Apollo node coordinates.text-shadow
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field11	background	option key "background"; Apollo node coordinates.background
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field12	border	option key "border"; Apollo node coordinates.border
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field13	borderThickness	option key "borderThickness" (0.5..3.0); Apollo node coordinates.border-thickness
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field14	backgroundColor	option key "backgroundColor"; Apollo node coordinates.background-color
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field15	borderColor	option key "borderColor"; Apollo node coordinates.border-color
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field16	mode	option key "mode" (ArmorStatusListMode VERTICAL/HORIZONTAL in this revision)
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field17	copyCoords	option key "copyCoords" (ModifierKeybindOption); copies coordinates to clipboard
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field18	moveChildrenIndividually	option key "moveChildrenIndividually"; Apollo node coordinates.move-children-individually
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field19	decimalCoordinates	option key "decimalCoordinates"; Apollo node coordinates.decimal-coordinates
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field20	xChild	CoordinatesChildHudMod labelled "X"
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field21	yChild	CoordinatesChildHudMod labelled "Y"
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field22	zChild	CoordinatesChildHudMod labelled "Z"
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field23	renderCountChild	CoordinatesChildHudMod labelled "C" (unculled/max render count)
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field24	biomeChild	CoordinatesBiomeChildMod labelled "Biome"
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field25	directionChild	CoordinatesDirectionChildMod labelled "Direction"
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field8	biomeListener	framework.listener.BiomeListener (this copy uses the twin listener class); method14 returns its BiomeDisplay
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	F	field9	showWhileTyping	option key "showWhileTyping"; Apollo ModCoordinates node coordinates.show-while-typing
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method13	moveChildrenTogether	returns !field18.get() (moveChildrenIndividually)
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method14	getBiome	field8.method5() -> current BiomeDisplay
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method15	getShowWhileTyping	@Generated getter for field9
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method16	getMoveChildrenIndividually	@Generated getter for field18
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method2	registerOptions	@Override settings entry point (RootSettingsBuilder): registers the option tree; SPLIT: Data.method2? (none) - Data.method30 is the framework visibility hook
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method3	render	@Override MixinCore9Extension.method3 in Data: renders the coordinates lines
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean) in Data; SPLIT: outer method4(CoordinatesChildHudMod) = syncChildOptions, Data.method4(renderer,...) = renderCoordinates
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method5	formatCoordinate	formats a coordinate per decimalCoordinates
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method6	getCardinalDirection	static: yaw -> N/NE/E/SE/S/SW/W/NW
+com.moonsworth.lunar.client.mod.hud.CoordinatesHud	M	method9	getChildMods	@Override AbstractFeature.method9(): returns the X/Y/Z/C/biome/direction child mods
+com.moonsworth.lunar.client.mod.hud.Cps	F	field10	reverseText	option key "reverseText"; Apollo node cps.reverse-text
+com.moonsworth.lunar.client.mod.hud.Cps	F	field11	ignoreCancelledClicks	option key "ignoreCancelledClicks"; Apollo node cps.ignore-cancelled-clicks
+com.moonsworth.lunar.client.mod.hud.Cps	F	field12	lineColor	option key "lineColor"; Apollo node cps.line-color (default 0xFF202020)
+com.moonsworth.lunar.client.mod.hud.Cps	F	field13	cpsListener	CpsListener counting left/right clicks (method5/method7/method8)
+com.moonsworth.lunar.client.mod.hud.Cps	F	field8	rightClick	option key "rightClick"; Apollo ModCps node cps.right-click
+com.moonsworth.lunar.client.mod.hud.Cps	F	field9	showCpsText	option key "showCPSText" (default true); Apollo node cps.show-c-p-s-text
+com.moonsworth.lunar.client.mod.hud.Cps	M	method15	getSize	@Override TypedHudRenderer.method15(): HudSize.method1(10,18,22,40,56,62)
+com.moonsworth.lunar.client.mod.hud.Cps	M	method18	renderDecoration	@Override TypedHudRenderer.method18(renderer,x,y,partial,afterText): draws the 1px vertical separator when rightClick is enabled
+com.moonsworth.lunar.client.mod.hud.Cps	M	method2	registerOptions	@Override settings entry point; registers rightClick group + field9/10/11; SPLIT: also Data.method2(boolean) = getText
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	F	field29	customKey	option key "customKey" (SimpleKeybindOption, the bound key)
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	F	field30	customText	option key "customText" (TextOption override label)
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	F	field31	keyIndex	index used in getId "KEYSTROKE_KEY_<n>_CUSTOM" and "custom:<n>" state key
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	M	method13	getStateKey	@Override KeystrokeKey.method13(): "custom:<index>" pressed-state key handed to Keystrokes.method33()
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	M	method14	getDisplayText	@Override KeystrokeKey.method14(): custom text or the bound key name (uppercased)
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	M	method15	getKeyBinding	@Override KeystrokeKey.method15(): field29.method19() KeyBindingBridge
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	M	method16	getCps	@Override KeystrokeKey.method16(): 0 (custom keys show no CPS)
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	M	method17	updateSize	@Override KeystrokeKey.method17(): grows the element width to fit the label (MixinCore9Extension.method16(w,h))
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	M	method2	registerOptions	@Override KeystrokeKey settings entry point: customKey, customText, super plus "remove" button
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	M	method20	createDetails	@Override AbstractFeature.method20(): ModDetails.method7().method4(this::getDisplayText).method11(this)
+com.moonsworth.lunar.client.mod.hud.CustomKeystrokeKey	M	method23	getKeyIndex	@Generated getter for field31 (keyIndex)
+com.moonsworth.lunar.client.mod.hud.DayCounter	F	field8	useWorldType	option key "useWorldType"; Apollo ModDayCounter node day-counter.use-world-type; picks world day time vs game time
+com.moonsworth.lunar.client.mod.hud.DayCounter	M	method15	getSize	@Override TypedHudRenderer.method15(): HudSize.method1(10,18,22,46,56,62)
+com.moonsworth.lunar.client.mod.hud.DayCounter	M	method2	registerOptions	@Override settings entry point; registers field8 under SETTINGS; SPLIT: also Data.method2(boolean) = getText
+com.moonsworth.lunar.client.mod.hud.DayCounter	M	method5	getConditions	@Override TypedHudRenderer.method5(): HudConditionSet.method5().method1(false).method8()
+com.moonsworth.lunar.client.mod.hud.DebugTimerHud	F	field8	timer	util.HudTimer start/stop/reset state; reset() sets it null, start() builds a HudTimer
+com.moonsworth.lunar.client.mod.hud.DebugTimerHud	M	method13	stopTimer	stops field8 (field8.stop()); sibling of start()/reset(); registered as option "stop"
+com.moonsworth.lunar.client.mod.hud.DebugTimerHud	M	method15	getSize	@Override TypedHudRenderer.method15(): HudSize.method1(10,15,30,70,120,170)
+com.moonsworth.lunar.client.mod.hud.DebugTimerHud	M	method2	registerOptions	@Override settings entry point; registers start/stop/reset buttons; SPLIT: same file also declares Data.method2(boolean) = getText (text provider)
+com.moonsworth.lunar.client.mod.hud.DebugTimerHud	M	method3	createText	private helper Component.text(text) for preview/timer text
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field1	playerMemory	Data2 holder: player memory record (com.moonsworth.lunar.client.memory.Memory)
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field10	border	option key "border"
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field11	showWithTab	option key "showWithTab"; Apollo ModDirectionHud node direction-hud.show-with-tab
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field12	hudStyle	option key "hudStyle" (Type NORMAL/LEGACY/SIMPLE/COMPASS); picks the renderer
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field13	width	option key "width" (168..448, default 280); Apollo node direction-hud.width
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field14	textShadow	option key "textShadow"; Apollo node direction-hud.text-shadow
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field15	boldDirections	option key "boldDirections"; Apollo node direction-hud.bold-directions
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field16	showMarker	option key "showMarker"; Apollo node direction-hud.show-marker
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field17	showMarkerValue	option key "showMarkerValue"; Apollo node direction-hud.show-marker-value
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field18	borderColor	option key "borderColor"; Apollo node direction-hud.border-color
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field19	backgroundColor	option key "backgroundColor"; Apollo node direction-hud.background-color
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field2	player	Data2 holder: matching world player (Bridge6_10) or null
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field20	directionColor	option key "directionColor"; Apollo node direction-hud.direction-color
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field21	markerColor	option key "markerColor"; Apollo node direction-hud.marker-color
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field22	teammates	option key "teammates" (enum above/below)
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field23	waypoints	option key "waypoints" (enum above/below)
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field24	externalMarkers	option key "externalMarkers" (enum above/below)
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field25	showTeammates	option key "showTeammates"; Apollo node direction-hud.show-teammates
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field26	showWaypoints	option key "showWaypoints"; Apollo node direction-hud.show-waypoints
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field27	showExternalMarkers	option key "showExternalMarkers"; Apollo node direction-hud.show-external-markers
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field8	borderThickness	option key "borderThickness" (0.5..3.0); only for LEGACY style
+com.moonsworth.lunar.client.mod.hud.DirectionHud	F	field9	background	option key "background"; LEGACY only
+com.moonsworth.lunar.client.mod.hud.DirectionHud	M	method1	render	Extension.renderer contract (DirectionHud, renderer, x, y, yaw) implemented by Directionhud/Directionhud2/Directionhud3; SPLIT: Data2.method1() = getMemory
+com.moonsworth.lunar.client.mod.hud.DirectionHud	M	method2	registerOptions	@Override settings entry point (RootSettingsAssembler); SPLIT: method2(Consumer<GuiHandler2>) = forEachVisibleWaypoint, Data2.method2() = getPlayer
+com.moonsworth.lunar.client.mod.hud.DirectionHud	M	method3	forEachTeamMember	iterates team members (TeamMemberManager) and accepts DirectionHud.Data2 entries; SPLIT: Data.method3(HighlightImpl,...) = render
+com.moonsworth.lunar.client.mod.hud.DirectionHud	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean) in Data: hides while TAB list is open unless showWithTab
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field1	textShadow	Data: option key "textShadow" (default true)
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field10	fpsChartDisplay	F3displayImpl2; FPS_CHART consumer and start/stop on fpsChart flag changes
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field11	gpuChartDisplay	F3displayImpl3; GPU_CHART consumer
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field12	bandwidthChartDisplay	F3displayImpl; BANDWIDTH + BANDWIDTH_CHART consumers
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field13	extensionRenderers	EnumMap<Gui2Extension, BiConsumer<F3display_3, F3ModuleChildMod>> with the "FPS: "/"Biome: "/... line writers
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field14	extensionById	Map<String, Gui2Extension> built from Gui2Extension.id() for config lookup (F3ModuleChildMod uses it)
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field15	enterAnimationDuration	option key "enterAnimationDuration" (0.0..1.0, default 0.25); Apollo ModF3Display node f3-display.enter-animation-duration
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field16	exitAnimationDuration	option key "exitAnimationDuration" (default 0.05); Apollo node f3-display.exit-animation-duration
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field17	onlyMoversInF3	option key "onlyMoversInF3" (default true); Apollo node f3-display.only-movers-in-f3
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field18	globalDisplayOptions	F3Display.Data shared textShadow/background/label/value colours (registered as "globalDisplayOptions")
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field19	modules	Map<moduleId, F3ModuleChildMod> live module list
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field2	background	Data: option key "background"
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field20	pieChartVisible	computed from modules containing Gui2Extension.PIE_CHART
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field21	pingChartVisible	computed from Gui2Extension.PING_CHART (MC >= 19)
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field22	ramChartVisible	computed from Gui2Extension.RAM_CHART
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field23	fpsChartVisible	computed from Gui2Extension.FPS_CHART
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field24	gpuChartVisible	computed from Gui2Extension.GPU_CHART
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field3	backgroundColor	Data: option key "backgroundColor" (default 0x55000000)
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field4	labelColor	Data: option key "labelColor" (default white); matchColors derives valueColor from it
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field5	valueColor	Data: option key "valueColor"
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field8	pingChartDisplay	F3displayImpl5 ("Ping"); PING_CHART consumer calls renderer.method5(field8)
+com.moonsworth.lunar.client.mod.hud.F3Display	F	field9	ramChartDisplay	F3displayImpl4; RAM_CHART consumer calls field9.method3()/method4(...)
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method1	save	@Override JsonPersistable: super + persists the module ids and addedDefaultModules flag; SPLIT: Data.method1(RootSettingsAssembler.Data) = registerOptions
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method13	clearModules	detaches the children container and clears field19
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method14	updateChartVisibility	recomputes pie/ping/ram/fps/gpu flags from the enabled modules (starts FPS chart on change)
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method15	isPieChartVisible	isEnabled() && field20; SPLIT: private method15(String,String,Gui2Extension[],int,float,float,HudAnchor) = createModule
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method16	isPingChartVisible	MC>=19 && isEnabled() && field21
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method17	isGpuChartVisible	isEnabled() && field24
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method19	createDefaultModules	private: builds game_info/player_info/world_info/system_specs/target_info/pie_chart modules
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method2	registerOptions	@Override settings entry point (RootSettingsAssembler): animation durations, onlyMoversInF3, globalDisplayOptions, "modules" addModule button; SPLIT: private method2(HighlightImpl) = onRender; SPLIT: private method2(HighlightImpl) = onRender, Data.method2() = matchColors
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method20	createDetails	@Override AbstractFeature.method20(): authors "TreyRuffy"/"cominixo"
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method21	shouldShowVanillaPieChart	static: true when the F3 pie chart module is active (MinecraftEventMixin showDebugProfilerChart redirects)
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method3	setEnabled	@Override Framework7Extension.method3(boolean): stops the pie chart handler when disabled; SPLIT: method3(F3ModuleChildMod) = addModule
+com.moonsworth.lunar.client.mod.hud.F3Display	M	method4	reset	@Override AbstractFeature.method4(): reloads modules and re-adds the defaults; SPLIT: removeModule shares the old name; SPLIT: method4(F3ModuleChildMod) = removeModule
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field10	alwaysShow	option key "alwaysShow"; SPLIT: Data.field10 = activeElements (EnumSet<Gui2Extension>)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field11	elements	option key "elements" (MultiSelectOption of Gui2Extension ids); SPLIT: Data.field11 = fadeTimer (HologramsImpl3)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field12	autoAlign	option key "autoAlign" (default true); SPLIT: Data.field12 = hideOffset (float)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field13	alignment	option key "alignment" (hitbox.Gui2Extension); SPLIT: Data.field13 = visible (boolean)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field14	overrideDisplayOptions	option key "overrideDisplayOptions"; SPLIT: Data.field14 = prepared (boolean)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field15	showClientBrand	option key "showClientBrand"; SPLIT: Data.field15 = previewMode (boolean)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field16	showWorldName	option key "showWorldName"; SPLIT: Data.field16 = renderContext (F3display2)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field17	showRegionFile	option key "showRegionFile"; SPLIT: Data.field17 = scale (float)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field18	showBlockProperties	option key "showProperties" for TARGET_BLOCK (duplicate key with field20); SPLIT: Data.field18 = width (double)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field19	showBlockTags	option key "showTags" for TARGET_BLOCK (duplicate key with field21); SPLIT: Data.field19 = height (double)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field20	showFluidProperties	option key "showProperties" for TARGET_FLUID
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field21	showFluidTags	option key "showTags" for TARGET_FLUID
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field22	showEmpty	option key "showEmpty" (TARGET_FLUID)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field23	showSimulationDistance	option key "showSimulationDistance" (RENDER_DISTANCE)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field24	showMood	option key "showMood" (SOUNDS)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field25	showAllocationRate	option key "showAllocationRate" (MEMORY_USAGE)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field26	showGlobalPercent	option key "showGlobalPercent" (PIE_CHART)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field27	useCustomColor	option key "useCustomColor" (PIE_CHART)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field28	alignToMaxRam	option key "alignToMaxRam" (RAM_CHART)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field29	showLunarResources	option key "showLunarResources" (LUNAR_DEBUG)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field30	showLunarTurbo	option key "showLunarTurbo" (LUNAR_DEBUG)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field31	showLunarJIT	option key "showLunarJIT" (LUNAR_DEBUG)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field32	ownDisplayOptions	F3Display.Data used when overrideDisplayOptions is on
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field33	globalDisplayOptions	F3Display.field18 reference (used when overrideDisplayOptions is off)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field8	element	the module's F3ModuleChildMod.Data HUD element
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	F	field9	name	option key "name" (TextOption, default "New Module"); SPLIT: Data.field9 = hitboxAlignment (hitbox.Gui2Extension)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method10	measureLines	Data: builds the F3display$Data4 size probe with all active extensions
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method13	getDisplayOptions	field14.get() ? field32 : field33
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method14	getElement	@Generated getter for field8; SPLIT: Data.method14(boolean,boolean) = shouldAnimate
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method15	getShowBlockProperties	@Generated getter for field18; SPLIT: Data.method15() = renderPost
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method16	getShowBlockTags	@Generated getter for field19; SPLIT: Data.method16() = finishRender
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method17	getShowFluidProperties	@Generated getter for field20; SPLIT: Data.method17() = pushTransform
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method18	resetPosition	@Override HudElementBase.method18() in Data: intentionally empty (framework family; base owner cluster 080)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method19	getShowFluidTags	@Generated getter for field21; SPLIT: Data.method19() = consumeDirty
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method2	registerOptions	@Override settings entry point (RootSettingsAssembler): name/alignment/elements/per-extension options + remove button
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method20	createDetails	@Override AbstractFeature.method20(): details label from the name option; SPLIT: Data.method20() = refreshElements
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method21	getShowEmpty	@Generated getter for field22
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method22	getShowGlobalPercent	@Generated getter for field26; SPLIT: Data.method22() = updateAlignment
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method23	getAlignment	@Generated Data getter for Data.field9
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method27	setAnchor	@Override HudElementBase.method27(HudAnchor) in Data (framework family; base owner cluster 080) - re-layouts on anchor change
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method3	registerExtensionOptions	private: registers a section for one Gui2Extension with a visibility condition on Data.field10; SPLIT: outer method3(boolean) = setEnabled
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method4	prepareRender	Data: computes position/alignment and builds the F3display2 render context; SPLIT: Data.method4(boolean) = shouldRender (override)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method5	renderContent	Data: renders the module lines through the render context
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method6	create	static: new module with a timestamp id and random label/value colours; message says "F3ModuleChildMod must be created using F3ModuleChildMod.create()!"
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method7	create	static overload: module with the given id (anonymous subclass overriding getId)
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method8	isElementEnabled	Data.field10.contains(var1) && Data.field13
+com.moonsworth.lunar.client.mod.hud.F3ModuleChildMod	M	method9	renderLines	Data: writes every active extension line (reduced ones as "Reduced")
+com.moonsworth.lunar.client.mod.hud.Fps	F	field8	reverseOrder	option key "reverseOrder" (Lighting.method7); Apollo ModFps node fps.reverse-order; toggles "fps"/"reverse" text
+com.moonsworth.lunar.client.mod.hud.Fps	M	method2	registerOptions	settings entry point (override of AbstractFeature method2(RootSettingsBuilder)); registers field8; see members-settings.md "registrant entry point"
+com.moonsworth.lunar.client.mod.hud.HorseStats	F	field10	jumpColor	option key "jumpColor"
+com.moonsworth.lunar.client.mod.hud.HorseStats	F	field11	healthColor	option key "healthColor"
+com.moonsworth.lunar.client.mod.hud.HorseStats	F	field8	textColor	option key "textColor" (default 0xFF404040)
+com.moonsworth.lunar.client.mod.hud.HorseStats	F	field9	speedColor	option key "speedColor"
+com.moonsworth.lunar.client.mod.hud.HorseStats	M	method1	onContainerSlotRender	EventRenderContainerSlotPost listener: draws horse health/jump/speed bars in the horse inventory GUI
+com.moonsworth.lunar.client.mod.hud.HorseStats	M	method2	registerOptions	@Override settings entry point; registers field8 + "barsColor" group; SPLIT: also private method2(...) = renderStatBar (bar renderer)
+com.moonsworth.lunar.client.mod.hud.HudDebug	M	method20	createDetails	@Override AbstractFeature.method20(): ModDetails.method7().method1(new ModCategory[]{ModCategory.field7}).method11(this) = mod metadata for the debug HUD
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field10	IRON_ITEM	static ItemStackBridge for Bridge.method28().method26() (iron)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field11	GOLD_ITEM	static ItemStackBridge for Bridge.method28().method27() (gold)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field12	DIAMOND_ITEM	static ItemStackBridge for Bridge.method28().method28() (diamond)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field13	EMERALD_ITEM	static ItemStackBridge for Bridge.method28().method29() (emerald)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field14	textShadow	option key "textShadow" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field15	background	option key "background" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field16	border	option key "border"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field17	autoAlign	option key "autoAlign" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field18	borderThickness	option key "borderThickness" (0.5..3.0)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field19	alignment	option key "alignment" (HudRowAlignment)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field20	showTitle	option key "showTitle" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field21	useResourceIcons	option key "useResourceIcons"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field22	showResourcesInEnderchest	option key "showResourcesInEnderchest"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field23	showIron	option key "showIron" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field24	showGold	option key "showGold" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field25	showDiamonds	option key "showDiamonds" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field26	showEmeralds	option key "showEmeralds" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field27	titleColor	option key "titleColor" (default 0xFFFFFF55)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field28	textColor	option key "textColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field29	numberColor	option key "numberColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field30	dividerColor	option key "dividerColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field31	backgroundColor	option key "backgroundColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field32	borderColor	option key "borderColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field33	active	bedwars game running and location known; gates updateCounts
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field34	ironCount	inventory iron total (item match on field10)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field35	goldCount	inventory gold total
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field36	diamondCount	inventory diamond total
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field37	emeraldCount	inventory emerald total
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field38	enderIronCount	ender-chest iron total minus inventory
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field39	enderGoldCount	ender-chest gold total minus inventory
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field40	enderDiamondCount	ender-chest diamond total minus inventory
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field41	enderEmeraldCount	ender-chest emerald total minus inventory
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field8	screenTitleListener	ScreenTitleListener obtained via method12(...); method2(updateCounts) reads field8.method5() (container title)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	F	field9	EXECUTOR	static ScheduledExecutorService ("lunar-bedwars-resource-counter-thread") polling the screen every 500ms
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	M	method1	onScreenChange	EventScreenChange listener: re-reads the container counts
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	M	method13	createElement	builds the anonymous HudRowElement (title + iron/gold/diamond/emerald rows)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	M	method2	registerOptions	@Override settings entry point: "hudDisplayOptions", "renderOptions" and COLOR sections; SPLIT: private method2(GuiScreenBridge) = updateCounts (inventory/ender-chest scan); SPLIT: anonymous HudRowElement.method2(renderer,x,y,partial,rows) = renderRows
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	M	method20	createDetails	@Override AbstractFeature.method20(): ModCategory.field5 details
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	M	method3	setActive	HypixelLocation update: active = in bedwars && location has a world id
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	M	method4	shouldRender	anonymous HudRowElement @Override HudRowElement.method4(boolean): in bedwars and at least one resource enabled (framework family; base owner in framework cluster)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	M	method5	buildRows	anonymous HudRowElement @Override HudRowElement.method5(boolean): builds title + iron/gold/diamond/emerald rows (framework family; base owner in framework cluster)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsResourceCounterChild	M	method6	createRow	builds one HudRow ("Iron: 37 + 12" or icon variant) for a resource
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field10	border	option key "border"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field11	autoAlign	option key "autoAlign" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field12	borderThickness	option key "borderThickness" (0.5..3.0)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field13	alignment	option key "alignment" (HudRowAlignment)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field14	showGame	option key "showGame" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field15	bedwarsSession	option key "bedwarsSession" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field16	total	option key "total"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field17	winstreak	option key "winstreak" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field18	sessionGames	option key "sessionGames" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field19	sessionTime	option key "sessionTime" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field20	gameTime	option key "gameTime" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field21	avgGameTime	option key "avgGameTime"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field22	finals	option key "finals" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field23	finalsRatio	option key "finalsRatio" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field24	bedwarsBeds	option key "bedwarsBeds" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field25	bedsRatio	option key "bedsRatio" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field26	kills	option key "kills" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field27	killsRatio	option key "killsRatio" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field28	wins	option key "wins" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field29	winsRatio	option key "winsRatio" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field30	headingColor	option key "headingColor" (default 0xFFFFFF55)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field31	statColor	option key "statColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field32	numberColor	option key "numberColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field33	dividerColor	option key "dividerColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field34	backgroundColor	option key "backgroundColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field35	borderColor	option key "borderColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field36	updater	BedwarsUpdater (extends Bedwars) tracking session stats and parsing scoreboard/chat
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field37	sessionStart	system time when the session was reset
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field38	parseEnabled	true until the "Current Winstreak" armor stand was consumed
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field39	bedwarsState	-1 unknown / 0 not bedwars / 1 bedwars (scoreboard title "BED WARS")
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field40	winstreakPattern	Pattern "^Current Winstreak: ([0-9,]+)$"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field8	textShadow	option key "textShadow" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	F	field9	background	option key "background" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method11	formatDuration	static: ms -> "mm:ss" or "h:mm:ss"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method13	resetSession	resets the BedwarsUpdater data and the session timer
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method14	isInBedwars	checks the sidebar objective display name == "BED WARS" (caches field39)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method15	createElement	builds the anonymous HudRowElement (game/session/total rows)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method16	getUpdater	@Generated getter for field36
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method2	registerOptions	@Override settings entry point: GENERAL + renderOptions + extraRenderOptions + COLOR; SPLIT: anonymous HudRowElement.method2(renderer,x,y,partial,rows) = renderRows and private method2(int,int) = computeRatio
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method20	createDetails	@Override AbstractFeature.method20(): ModCategory.field5 details
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method3	onChatMessage	TypedChatMessage listener -> updater.method12; SPLIT: anonymous method3(List<HudRow>,String,String,int,int,boolean,boolean,int) = addRatioRow
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method4	onServerJoin	EventServerJoin listener: updater.method6 + reset state; SPLIT: anonymous HudRowElement.method4(boolean) = shouldRender and private method4(...) = addStatsSection
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method5	onEntitySpawn	EventEntitySpawn listener: reads "Current Winstreak" from armor-stand names; SPLIT: anonymous HudRowElement.method5(boolean) = buildRows
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method6	onSecond	EventSecond listener -> updater.method11 (timers)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsStatsChild	M	method7	onLocationUpdate	HypixelLocation update: lobby -> updater.method7(null)/method8 per game state
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field1	name	BedwarsTeamMember: player name
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field10	ignoreCastlesMode	option key "ignoreCastlesMode" (default true; skips *_CASTLE modes)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field11	showName	option key "showName" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field12	dynamicHealthColor	option key "dynamicHealthColor" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field13	showHearts	option key "showHearts" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field14	textShadow	option key "textShadow" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field15	background	option key "background" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field16	border	option key "border"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field17	borderThickness	option key "borderThickness" (0.5..3.0)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field18	backgroundColor	option key "backgroundColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field19	borderColor	option key "borderColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field2	uuid	BedwarsTeamMember: player UUID (also seeds bot health)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field20	titleText	option key "titleText" (default 0xFFFFFF55)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field21	textColor	option key "textColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field22	healthColor	option key "healthColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field23	lowHealthColor	option key "lowHealthColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field24	mediumHealthColor	option key "mediumHealthColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field25	highHealthColor	option key "highHealthColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field26	highestHealthColor	option key "highestHealthColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field27	previewMembers	three Teammate_1..3 placeholder BedwarsTeamMember rows shown in the editor
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field28	maxHealth	highest player max health seen on this world (health bar scale)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field29	lastWorld	last Hypixel world id (field4); change clears the member list
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field3	bot	BedwarsTeamMember: true for a fake/preview member (no world entity)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field30	members	live teammate list
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field31	healthBarBuilder	StringBuilder reused for the heart rows
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field4	DEFAULT_SKIN	static fallback ResourceLocationBridge "textures/skins/wide/steve.png"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field8	flip	option key "flip"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	F	field9	displayMode	option key "displayMode" (Type MINIMAL/TEXT/NORMAL)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method1	getEntity	BedwarsTeamMember: world player (Bridge6_10) by UUID or empty for bots
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method2	registerOptions	@Override settings entry point: GENERAL + COLOR sections with visibility gates; SPLIT: BedwarsTeamMember.method2() = getHealth
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method20	createDetails	@Override AbstractFeature.method20(): ModCategory.field5 details
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method3	onTick	EventTick listener: rebuilds members from the scoreboard teams (colour prefix match); SPLIT: Data.method3(EventRenderHudBase,...) = render and Data.method3(renderer,x,y) = renderPanel; SPLIT: BedwarsTeamMember.method3() = isBot
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean) in Data: false outside bedwars or with an empty list (ignoreCastlesMode); SPLIT: Data.method4(renderer,x,y) = renderNormalMode
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method5	renderMinimalMode	Data: icon+health column layout for Type.MINIMAL
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method6	renderHead	Data: draws the member skin head (3x scale) with hat layer
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method7	renderHealthText	Data: draws health number/hearts with the dynamic colour
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTeamDisplayChild	M	method8	getHealthColor	Data: picks the low/medium/high/highest health colour (or HSB ramp)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field1	item	Data: ItemStackBridge parsed from the "item"/"type" field
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field10	showIcons	option key "showIcons" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field11	reverseText	option key "reverseText"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field12	reverseOrder	option key "reverseOrder" (descending duration order)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field13	textShadow	option key "textShadow" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field14	background	option key "background" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field15	border	option key "border"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field16	borderThickness	option key "borderThickness" (0.5..3.0)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field17	backgroundColor	option key "backgroundColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field18	borderColor	option key "borderColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field19	titleColor	option key "titleColor" (default 0xFFFFFF55)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field2	repeating	Data: true when the timer restarts after expiring
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field20	timerNameColor	option key "timerNameColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field21	durationColor	option key "durationColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field22	timers	live TreeMap<id, Data> of active timers
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field23	pendingSync	timer ids awaiting the next SYNC_TIMERS message
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field24	defaultTimers	"Timer 1"/"Timer 2" placeholders shown in the editor preview
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field25	timerCache	Cache<location, Map<long,Data>> (15 min) restoring timers on world re-entry
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field26	lastWorldChange	system time of the last CHANGE_WORLD message
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field3	timer	Data: HudTimer driving the countdown
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field8	showTitle	option key "showTitle" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	F	field9	showName	option key "showName" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method1	renderItemIcon	private: draws a Data item stack with the item-render pipeline; SPLIT: Data.method1() = getDisplayTime; SPLIT: Data.method1() = getDisplayTime (formatted countdown)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method10	requireJsonElement	static: json.get(key) or NoSuchElementException "Timers message doesn't have required '<key>'"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method13	tickTimers	expires finished timers and restarts repeating ones
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method14	clearTimers	destroys and clears every live timer
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method15	getWorldId	current Hypixel world id (location field4) or null outside bedwars
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method2	registerOptions	@Override settings entry point: GENERAL + COLOR options; SPLIT: BedwarsTimersHudElement.method2(renderer,map) = renderTimersList; SPLIT: Data.method2(long) = restartTimer
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method3	render	@Override MixinCore9Extension.method3 in BedwarsTimersHudElement: draws the list; SPLIT: Data.method3(JsonObject) = setItemFromJson
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean) in BedwarsTimersHudElement: only inside bedwars with timers (or preview); SPLIT: private method4(long) = ticksToMillis
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method5	handleTimerMessage	parses the "<action>|<json>" plugin message (REGISTER/CHANGE_WORLD/ADD_TIMER/REMOVE_TIMER/REMOVE_ALL_TIMERS/UPDATE_TIMER/SYNC_TIMERS)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method6	invalidateCache	drops the cached timer map for a location
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsTimersChildHud	M	method7	restoreCachedTimers	reuses the cached timers for a location (true when a cache hit was applied)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field1	upgrades	registry: name -> BedwarsUpgrade map
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field10	upgradeMessagePattern	Pattern "<player> purchased|unlocked <name> <roman>"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field11	trapSetPattern	Pattern "<player> purchased|unlocked <trap> Trap"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field12	trapRemovedPattern	Pattern "Removed <trap> Trap from the queue!"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field13	trapTriggeredPattern	Pattern "<trap> Trap was set off!|set off by ..."
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field14	teamEliminatedPattern	Pattern "TEAM ELIMINATED > <team> Team has been eliminated!"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field15	hideWhenNoUpgrades	option key "hideWhenNoUpgrades" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field16	displayUpgradeCost	option key "displayUpgradeCost" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field17	showUpgrades	option key "showUpgrades" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field18	showTraps	option key "showTraps" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field19	effectNames	option key "effectNames" (translate the upgrade id)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field2	levels	registry: active upgrade -> level map (LinkedHashMap preserves order)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field20	romanNumeralsOption	option key "romanNumerals"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field21	textShadow	option key "textShadow" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field22	background	option key "background" (default true)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field23	border	option key "border"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field24	borderThickness	option key "borderThickness" (0.5..3.0)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field25	backgroundColor	option key "backgroundColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field26	borderColor	option key "borderColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field27	upgradesTitleColor	option key "upgradesTitleColor" (default 0xFFFFFF55)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field28	upgradeTextColor	option key "upgradeTextColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field29	trapsTitleColor	option key "trapsTitleColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field3	name	registry builder: pending upgrade name
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field30	trapsTextColor	option key "trapsTextColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field31	upgradeCostColor	option key "upgradeCostColor" (default 0xFF45A5B5)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field32	maxUpgradeCostColor	option key "maxUpgradeCostColor"
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field33	excludedItems	Set<String> of upgrade names hidden by the user (persisted as "excludedItems")
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field34	registry	BedwarsUpgradeRegistry with the built-in upgrades (Sharpened Swords, Reinforced Armor, ...)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field35	activeTraps	Set of currently queued traps
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field36	previewLevels	Map<BedwarsUpgrade,Integer> of the first 3 upgrades at level 1 shown as the editor preview (line 200); distinct from the registry levels map
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field37	gameMode	Type SOLO/DOUBLES/OTHER (from the world id) selecting the cost table
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field38	lastLocation	last Hypixel world name (field1) to reset on change
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field4	id	registry builder: pending upgrade translation id
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field5	soloDoublesCosts	registry builder: pending per-level costs for SOLO/DOUBLES
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field6	teamsCosts	registry builder: pending per-level costs for OTHER modes
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field8	romanNumerals	static BiMap<Integer,String> 1..10 -> I..X
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	F	field9	forgeTiers	static List<String> Iron/Golden/Emerald/Molten (Forge level names)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method1	save	@Override JsonPersistable: super + persists excludedItems; SPLIT: BedwarsUpgradeRegistry.method1(String) = name (builder)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method10	hasActive	registry: !levels.isEmpty()
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method11	setLevel	registry: parses the roman numeral (or current+1) and stores it in field2
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method12	getLevel	registry: stored level for an upgrade (0 when absent)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method13	unlockAll	registry: sets every non-DeadShot upgrade to its max level (CRAB/constellation mode)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method2	registerOptions	@Override settings entry point: GENERAL + COLOR sections; SPLIT: BedwarsUpgradeRegistry.method2(String) = id (builder)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method20	createDetails	@Override AbstractFeature.method20(): ModCategory.field5 details
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method3	render	@Override MixinCore9Extension.method3 in Data: draws upgrades/traps with costs; SPLIT: Data.method3(BedwarsUpgrade,int) = formatUpgrade; SPLIT: Data.method3(BedwarsUpgrade,int) = formatUpgrade, BedwarsUpgradeRegistry.method3(int...) = soloDoublesCosts
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean) in Data: hides outside bedwars or with no upgrades when hideWhenNoUpgrades; SPLIT: outer method4() = reset, BedwarsUpgradeRegistry.method4(int...) = teamsCosts
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method5	updateGameMode	EventTick listener: sets gameMode from the world id suffix (_eight_one -> SOLO ...) and clears on world change; SPLIT: BedwarsUpgradeRegistry.method5() = add (commit builder)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method6	onChatMessage	TypedChatMessage listener: parses purchased/unlocked upgrade + trap messages and team eliminations; SPLIT: BedwarsUpgradeRegistry.method6(String) = contains
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method7	getAll	registry: upgrades.values() (iterated by the renderer)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method8	getActive	registry: levels.keySet()
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild	M	method9	clearActive	registry: levels.clear()
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	F	field1	name	upgrade display name (map key; "Forge" special-case)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	F	field2	maxLevel	level count (registry passes costs.length); compared with current level index
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	F	field3	translationKey	id used with method5(<key>) translation lookup ("sharpness", "protection", ...)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	F	field4	soloDoublesCosts	per-level cost used for SOLO/DOUBLES (registry method3)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	F	field5	teamsCosts	per-level cost used for the OTHER (3s/4s) modes (registry method4)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	M	method1	isForge	"Forge".equals(field1); Forge renders roman numerals from its level list
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	M	method2	getName	getter for field1 (upgrade display name)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	M	method3	getMaxLevel	getter for field2 (max level)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	M	method4	getTranslationKey	getter for field3 (translation key)
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	M	method5	getSoloDoublesCost	getter for field4
+com.moonsworth.lunar.client.mod.hud.HypixelBedwarsUpgradeDisplayChild$HRICOROOOCCOCOROCRHHCRRIRCOICO$Data	M	method6	getTeamsCost	getter for field5
+com.moonsworth.lunar.client.mod.hud.HypixelTps	F	field10	rollingAverageWindow	option key "rollingAverageWindow" (IntegerOption 1..30 default 10); passed to TpsTracker.method2
+com.moonsworth.lunar.client.mod.hud.HypixelTps	F	field11	tpsText	current "TPS: x.y" string replaced every second
+com.moonsworth.lunar.client.mod.hud.HypixelTps	F	field31	DEFAULT_TPS_TEXT	static final String "TPS: 20.0" placeholder shown in preview (UPPER_SNAKE constant)
+com.moonsworth.lunar.client.mod.hud.HypixelTps	F	field8	locationListener	HypixelLocationListener obtained with method19(...); gates rendering (field8.method7().method2())
+com.moonsworth.lunar.client.mod.hud.HypixelTps	F	field9	tpsTracker	rewindhandlers.TpsTracker; updateTps refreshes field11 via field9.method2(window)
+com.moonsworth.lunar.client.mod.hud.HypixelTps	M	method1	updateTps	EventSecond listener: field11 = field9.method2((Integer)field10.get())
+com.moonsworth.lunar.client.mod.hud.HypixelTps	M	method15	getSize	@Override TypedHudRenderer.method15(): new HudSize(10,18,30,50,100,200)
+com.moonsworth.lunar.client.mod.hud.HypixelTps	M	method2	registerOptions	@Override settings entry point; super.method45 + register field10; SPLIT: also Data.method2(boolean) = getText
+com.moonsworth.lunar.client.mod.hud.HypixelTps	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean): hide when not on Hypixel, else super
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field10	showEmpty	option key "showEmpty" (default true) - render even with empty inventory
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field11	background	option key "background" (default true) - master background toggle
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field12	grid	option key "grid" (default true) - draw slot grid
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field13	gridColor	option key "gridColor"
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field14	backgroundColor	option key "backgroundColor" (uses field15 colour when on)
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field15	color	option key "color" (custom background colour)
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field16	items	cached main-inventory ItemStackBridge[27] (slots 9..35)
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field17	empty	true when every cached slot is empty (gates rendering with showEmpty)
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field8	inventoryTexture	static Horsestats14 "textures/gui/container/inventory.png"
+com.moonsworth.lunar.client.mod.hud.InventoryHud	F	field9	mcBackground	option key "mcBackground" (default true) - use the vanilla inventory texture
+com.moonsworth.lunar.client.mod.hud.InventoryHud	M	method1	registerOptions	@Override SettingsRegistrant.method1 for the nested Data element: intentionally empty
+com.moonsworth.lunar.client.mod.hud.InventoryHud	M	method13	updateItems	EventTick listener: copies player main inventory (slots 9+) into field16 and recomputes field17
+com.moonsworth.lunar.client.mod.hud.InventoryHud	M	method2	registerOptions	@Override settings entry point; registers showEmpty + background/grid/colour groups; SPLIT: also Data.method2(renderer,x,y) = renderBackground
+com.moonsworth.lunar.client.mod.hud.InventoryHud	M	method3	render	@Override MixinCore9Extension.method3: pushes, rounds position, draws background/grid and items; SPLIT: also Data.method3(renderer,x,y) = renderInventoryTexture
+com.moonsworth.lunar.client.mod.hud.InventoryHud	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean): false when empty/hide, else sets 320x107 size
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field1	x	HudRectangle left
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field10	background	option key "background"; Apollo node item-counter.background
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field11	border	option key "border"; Apollo node item-counter.border
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field12	backgroundColor	option key "backgroundColor"; Apollo node item-counter.background-color
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field13	borderColor	option key "borderColor"; Apollo node item-counter.border-color
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field14	borderThickness	option key "borderThickness"; Apollo node item-counter.border-thickness
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field15	countedItems	option key "itemCounterCountedItems" (ItemSelectOption multi-select of ItemCounterEntry)
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field16	elementMods	Map<itemId, ItemCounterElementChildMod> of live child elements
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field17	dirty	set by EventInventoryUpdate and consumed on EventTick to refresh counters
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field2	y	HudRectangle top
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field3	width	HudRectangle width
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field4	height	HudRectangle height
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field8	childScale	option key "childScale" (0.5..1.5); Apollo ModItemCounter node item-counter.child-scale
+com.moonsworth.lunar.client.mod.hud.ItemCounter	F	field9	itemCounterGrouped	option key "itemCounterGrouped"; Apollo node item-counter.item-counter-grouped; SPLIT: Data.field9 = bounds (HudRectangle)
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method1	registerOptions	@Override SettingsRegistrant.method1 for the nested Data element: adds the background-size controls; SPLIT: HudRectangle.method1() = getWidth
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method11	setDirty	@Generated setter for field17
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method13	getChildScale	@Generated getter for field8
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method14	getGroupedOption	@Generated getter for field9
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method2	registerOptions	@Override settings entry point; SPLIT: HudRectangle.method2() = getHeight
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method20	createDetails	@Override AbstractFeature.method20(): ModDetails with ModCategory.field4
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method3	render	@Override MixinCore9Extension.method3 in Data: computes the grouped bounds once then background/border + draws each child
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method4	reset	@Override AbstractFeature.method4(): detaches the children container and clears elementMods; SPLIT: Data.method4(boolean) = shouldRender
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method5	addElement	creates the ItemCounterElementChildMod for an item id and attaches it
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method6	attachChild	adds a child mod through ModChildren
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method7	detachChild	removes a child mod and drops the empty children container
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method8	layoutElements	private: on grouped-mode change, repositions every enabled child around the group bounds
+com.moonsworth.lunar.client.mod.hud.ItemCounter	M	method9	getChildMods	@Override AbstractFeature.method9(): returns List.of() (children are handled through ModChildren)
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field10	renderItemIcon	option key "renderItemIcon" (default true)
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field11	textSide	option key "textSide" (enum ItemCounterTextSide NONE/...)
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field12	background	option key "background"
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field13	border	option key "border"
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field14	backgroundColor	option key "backgroundColor"
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field15	borderColor	option key "borderColor"
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field16	borderThickness	option key "borderThickness" (0.5..3.0)
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field8	entry	ItemCounterEntry (item id/display stack) this child counts
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	F	field9	renderer	feature.itemcounter.ItemCounterRenderer drawing the item + side text
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method13	refresh	re-invokes the renderer cache (field9.method3()), called by ItemCounter
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method14	measure	field9.method2(textSide, renderItemIcon) -> FloatFloatPair (width,height) used for layout
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method15	getParentCounter	(ChildModBinding)method7(ModTraits.field16).method1() -> owning ItemCounter
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method16	getEntry	@Generated getter for field8 (entry)
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method2	registerOptions	@Override settings entry point; registers the icon/text/background/border option tree; SPLIT: also Data.method2(renderer,x,y) = renderContent
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method20	createDetails	@Override AbstractFeature.method20(): details label from field8.toString()
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method3	render	@Override MixinCore9Extension.method3 in Data: sizes the element from measure() then background/border + content; SPLIT: also outer method3(boolean) = setEnabled
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method4	shouldRender	@Override MixinCore9Extension.method4(boolean) in Data: grouped/empty state hides the element
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method5	render	renders the child element at 0,0 through the nested Data (((Data)method7(ModTraits.field1)).method2(...))
+com.moonsworth.lunar.client.mod.hud.ItemCounterElementChildMod	M	method8	create	static factory; its own exception message says "must be created using ItemCounterElementChildMod.create()!" - anonymous subclass overrides getId
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field11	keystrokesMode	option key "keystrokesMode" (Type GROUPED/INDIVIDUAL)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field12	keyStrokesClicks	option key "keyStrokesClicks" (default true); Apollo ModKeystrokes node keystrokes.key-strokes-clicks
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field13	leftCps	option key "leftCPS"; Apollo node keystrokes.left-c-p-s
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field14	rightCps	option key "rightCPS"; Apollo node keystrokes.right-c-p-s
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field15	keyStrokesMovement	option key "keyStrokesMovement" (default true); Apollo node keystrokes.key-strokes-movement
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field16	keyStrokesSpacebar	option key "keyStrokesSpacebar" (default true); Apollo node keystrokes.key-strokes-spacebar
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field17	useArrows	option key "useArrows"; Apollo node keystrokes.use-arrows
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field18	textShadow	option key "textShadow"; Apollo node keystrokes.text-shadow
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field19	border	option key "border"; Apollo node keystrokes.border
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field20	innerBorder	option key "innerBorder"; Apollo node keystrokes.inner-border
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field21	borderColor	option key "borderColor"; Apollo node keystrokes.border-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field22	textColor	option key "textColor"; Apollo node keystrokes.text-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field23	textPressedColor	option key "textPressedColor"; Apollo node keystrokes.text-pressed-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field24	backgroundColor	option key "backgroundColor"; Apollo node keystrokes.background-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field25	backgroundPressedColor	option key "backgroundPressedColor"; Apollo node keystrokes.background-pressed-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field26	boxSize	option key "boxSize" (10..32, default 18); Apollo node keystrokes.box-size
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field27	borderThickness	option key "borderThickness"; Apollo node keystrokes.border-thickness
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field28	keyFadeDelay	option key "keyFadeDelay" (0..500ms, default 75); Apollo node keystrokes.key-fade-delay
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field29	spacebarThickness	option key "spacebarThickness" (1.0..4.25); Apollo node keystrokes.spacebar-thickness
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field30	animate	option key "animate"; Apollo node keystrokes.animate
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field31	animationType	option key "animationType" (KeystrokeAnimationType SYNCED/STACKED)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field32	timerType	option key "timerType" (KeystrokeTimerType HALF)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field33	animation	option key "animation" (KeystrokeAnimationStyle RIPPLE)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field34	animateColor	option key "animateColor"; Apollo node keystrokes.animate-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field35	animationStartColor	option key "animationStartColor"; Apollo node keystrokes.animation-start-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field36	animationCenterColor	option key "animationCenterColor"; Apollo node keystrokes.animation-center-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field37	animationEndColor	option key "animationEndColor"; Apollo node keystrokes.animation-end-color
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field38	duration	option key "duration" (0.1..1.0, default 0.5); Apollo node keystrokes.duration
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field39	timingFunction	option key "timingFunction" (EasingFunction LINEAR)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field40	layout	feature.keystrokes.KeystrokeLayout owning the map of default key elements and their positioning
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field41	customKeys	user-created CustomKeystrokeKey list (loaded from "<n>_CUSTOM" config keys)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	F	field8	cpsListener	CpsListener obtained with method29(...); supplies left/right CPS to the key elements
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method1	registerOptions	@Override SettingsRegistrant.method1 for the nested Data element: intentionally empty
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method13	refreshLayout	clears the children container, rebuilds layout, refreshes the screen renderer and repaints
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method18	resetPosition	@Override HudElementBase.method18() in Data: anchor back to TOP_LEFT before super (framework family; base owner cluster 080)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method2	registerOptions	@Override settings entry point; whole option tree + addCustomKey/copyOptions buttons
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method3	render	@Override MixinCore9Extension.method3 in Data: Layout renders all key elements; SPLIT: outer method3(CustomKeystrokeKey) = removeCustomKey
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method4	reset	@Override AbstractFeature.method4(): super + clears customKeys + refreshLayout; SPLIT: Data.method4(boolean) = shouldRender
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method6	copyOptionsToOthers	copies every shared option id to the other keystroke key mods
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method7	copyOptions	applies the given option ids from this key to the other key mods (source -> target)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method8	copyOptionsTo	applies this mod's option values to one KeystrokeKey (default/custom key synchronisation)
+com.moonsworth.lunar.client.mod.hud.Keystrokes	M	method9	getChildMods	@Override AbstractFeature.method9(): layout keys + custom keys
+com.moonsworth.lunar.client.mod.hud.Memory	F	field10	lowMemColor	option key "lowMemColor" (used >=75%)
+com.moonsworth.lunar.client.mod.hud.Memory	F	field11	medMemColor	option key "medMemColor" (used >=50%)
+com.moonsworth.lunar.client.mod.hud.Memory	F	field12	highMemColor	option key "highMemColor" (else)
+com.moonsworth.lunar.client.mod.hud.Memory	F	field31	memoryUsage	int percent stored by getText and used to pick the colour
+com.moonsworth.lunar.client.mod.hud.Memory	F	field8	displayMode	option key "displayMode" (enum PERCENTAGE/MEGABYTES/GIGABYTES); Apollo ModMemory
+com.moonsworth.lunar.client.mod.hud.Memory	F	field9	colorBasedOnUsage	option key "colorBasedOnUsage"; Apollo node memory.color-based-on-usage
+com.moonsworth.lunar.client.mod.hud.Memory	M	method15	getSize	@Override TypedHudRenderer.method15(): HudSize.method1(10,18,22,46,56,62)
+com.moonsworth.lunar.client.mod.hud.Memory	M	method2	registerOptions	@Override settings entry point; registers displayMode + colorBasedOnUsage group
+com.moonsworth.lunar.client.mod.hud.Memory	M	method3	getText	@Override TypedHudRenderer.method7(boolean) slot: "used/max" formatted per displayMode, stores field31; SPLIT: also Data.method3(ColorOption.Data) = configureTextColor
+com.moonsworth.lunar.client.mod.hud.Memory	M	method4	renderText	@Override TypedHudRenderer.method17(...) row renderer: swaps text colour by usage when colorBasedOnUsage
+com.moonsworth.lunar.client.mod.hud.Memory	M	method5	getConditions	@Override TypedHudRenderer.method5(): HudConditionSet.method5().method1(false).method8()

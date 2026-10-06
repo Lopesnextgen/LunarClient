@@ -1,0 +1,118 @@
+{
+    "format_version": "1.10.0",
+    "particle_effect": {
+        "description": {
+            "identifier": "lunar:avatar_earth2",
+            "basic_render_parameters": {
+                "material": "particles_alpha",
+                "texture": "minecraft:textures/blocks/dirt.png"
+            }
+        },
+        "curves": {
+            "variable.size": {
+                "type": "catmull_rom",
+                "nodes": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.57,
+                    0.08,
+                    0.0,
+                    0.0
+                ],
+                "input": "variable.particle_age / variable.particle_lifetime",
+                "horizontal_range": 1.0
+            }
+        },
+        "components": {
+            "minecraft:emitter_lifetime_looping": {
+                "active_time": 1.0
+            },
+            "minecraft:particle_lifetime_expression": {
+                "max_lifetime": "math.random(0.25, 1.1)"
+            },
+            "minecraft:particle_initial_spin": {
+                "rotation_rate": "math.random(-100.0, 100.0)"
+            },
+            "minecraft:particle_initial_speed": 2.0,
+            "minecraft:particle_motion_dynamic": {
+                "linear_acceleration": [
+                    0.0,
+                    -3.0,
+                    0.0
+                ],
+                "linear_drag_coefficient": 4.0
+            },
+            "minecraft:particle_appearance_billboard": {
+                "size": [
+                    "(0.04 + variable.particle_random_3 / 20.0) * variable.size",
+                    "(0.04 + variable.particle_random_3 / 20.0) * variable.size"
+                ],
+                "facing_camera_mode": "rotate_xyz",
+                "uv": {
+                    "texture_width": 16,
+                    "texture_height": 16,
+                    "uv": [
+                        "variable.particle_random_1 * 12.0",
+                        "variable.particle_random_2 * 12.0"
+                    ],
+                    "uv_size": [
+                        4.0,
+                        4.0
+                    ]
+                }
+            },
+            "minecraft:particle_appearance_tinting": {
+                "color": [
+                    "math.clamp(variable.particle_random_4 * 0.3 + 0.7, 0.0, 1.0)",
+                    "math.clamp(variable.particle_random_4 * 0.3 + 0.7, 0.0, 1.0)",
+                    "math.clamp(variable.particle_random_4 * 0.3 + 0.7, 0.0, 1.0)",
+                    1.0
+                ]
+            },
+            "blockbuster:particle_collision_appearance": {
+                "enabled": 0.0,
+                "lit": false,
+                "material": "particles_opaque",
+                "size": [
+                    0.0,
+                    0.0
+                ],
+                "facing_camera_mode": "lookat_xyz",
+                "uv": {
+                    "texture_width": 128,
+                    "texture_height": 128
+                }
+            },
+            "blockbuster:particle_collision_tinting": {
+                "enabled": 0.0
+            },
+            "minecraft:particle_motion_collision": {
+                "collision_radius": 0.1
+            },
+            "minecraft:emitter_shape_disc": {
+                "offset": [
+                    0.0,
+                    0.1,
+                    0.0
+                ],
+                "direction": [
+                    "math.random(-0.25, 0.25)",
+                    0.05,
+                    "math.random(-0.25, 0.25)"
+                ],
+                "surface_only": true,
+                "radius": 0.15,
+                "plane_normal": [
+                    0.0,
+                    1.0,
+                    0.0
+                ]
+            },
+            "minecraft:emitter_rate_instant": {
+                "num_particles": 150.0
+            },
+            "minecraft:particle_appearance_lighting": {}
+        }
+    }
+}

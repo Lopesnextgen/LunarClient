@@ -1,0 +1,2 @@
+com.moonsworth.lunar.bridge.itemcounter	Itemcounter$Type2	com.moonsworth.lunar.bridge.world	AxisDirection	NONE/FORWARD/BACKWARD axis enum consumed by bridge$forAllAxisEdges; zero source refs (jar-only users)
+com.moonsworth.lunar.bridge.itemcounter	Itemcounter4_2	com.moonsworth.lunar.bridge.world	WorldDirectoryBridge	File bridge$getWorldDirectory(); zero source refs

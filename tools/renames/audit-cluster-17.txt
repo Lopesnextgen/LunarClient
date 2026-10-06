@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.fog.holograms
+com.moonsworth.lunar.client.fog.holograms.chest
+com.moonsworth.lunar.client.fog.holograms.chest.mixin
+com.moonsworth.lunar.client.fog.holograms.click
+com.moonsworth.lunar.client.fog.holograms.colorsaturation
+com.moonsworth.lunar.client.fog.holograms.colorsaturation.mixin
+com.moonsworth.lunar.client.fog.holograms.coordinates
+com.moonsworth.lunar.client.fog.holograms.fishing

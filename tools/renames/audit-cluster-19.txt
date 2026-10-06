@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.fog.mixin
+com.moonsworth.lunar.client.fog.nameplate
+com.moonsworth.lunar.client.fog.rewindhandlers
+com.moonsworth.lunar.client.fov
+com.moonsworth.lunar.client.fov.mixin
+com.moonsworth.lunar.client.fov.mixin.nameplate
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers
+com.moonsworth.lunar.client.fov.mixin.rewindhandlers.mixin

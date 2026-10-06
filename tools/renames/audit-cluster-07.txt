@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.click.holograms
+com.moonsworth.lunar.client.click.holograms.mixin
+com.moonsworth.lunar.client.click.holograms.nameplate
+com.moonsworth.lunar.client.click.holograms.nameplate.mixin
+com.moonsworth.lunar.client.click.lotusfish
+com.moonsworth.lunar.client.click.lotusfish.mixin
+com.moonsworth.lunar.client.click.mixin
+com.moonsworth.lunar.client.click.rewindhandlers

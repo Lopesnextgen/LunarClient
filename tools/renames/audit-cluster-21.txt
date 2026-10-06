@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.animations.customhelditems
+com.moonsworth.lunar.client.framework.feature.armorstatus
+com.moonsworth.lunar.client.framework.feature.armorstatus.armorstatusbarschild
+com.moonsworth.lunar.client.framework.feature.armorstatus.hud
+com.moonsworth.lunar.client.framework.feature.armorstatus.mixin
+com.moonsworth.lunar.client.framework.feature.armorstatus.nameplate
+com.moonsworth.lunar.client.framework.feature.armorstatus.nameplate.mixin
+com.moonsworth.lunar.client.framework.feature.attackindicator

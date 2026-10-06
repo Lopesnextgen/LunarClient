@@ -1,0 +1,8 @@
+com.moonsworth.lunar.loader
+com.moonsworth.lunar.loader.mixin
+com.moonsworth.lunar.mixin
+com.moonsworth.lunar.mixin.mixin
+com.moonsworth.lunar.network
+com.moonsworth.lunar.network.mixin
+com.moonsworth.lunar.replaymod.forge
+com.moonsworth.lunar.replaymod.forge.ichor

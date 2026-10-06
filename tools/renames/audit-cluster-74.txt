@@ -1,0 +1,8 @@
+com.moonsworth.lunar.replaymod.forge.v1_12.mixin
+com.moonsworth.lunar.replaymod.forge.v1_8.mixin
+com.moonsworth.lunar.replaymod.mixin
+com.moonsworth.lunar.v1_12.mixin
+com.moonsworth.lunar.v1_7.mixin
+com.moonsworth.lunar.v1_7.optifine.wrapper
+com.moonsworth.lunar.v1_8.mixin
+com.moonsworth.lunar.v1_8.optifine.wrapper

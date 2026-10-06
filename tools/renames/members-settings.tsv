@@ -1,0 +1,128 @@
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method1	section	declares section(String label; Consumer<Parent> body); mods call lightingextension231.method1("vanillaAttackCooldowns"; x -> ...) and section labels "general"/"sizeAndShape"; obf call-site aliases HICHRCOHCCRHOHCICOOCHOIHCCHIRI and OHOOORICRHIIIIRHCICICOCHROICRC
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method2	section	section(String label; MarkersType icon; Consumer<Parent>); enforces "Category icons must be of type 'solid'"
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method3	section	section(Supplier<String> label; Consumer<Parent>) - dynamic label variant
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method4	section	section(RewindhandlersType type; Consumer<Parent>) default - delegates to section(name; icon; body); @Subst("generalOptions"); this is the RewindhandlersType.GENERAL/COLOR overload whose CALL-SITE PLACEHOLDER IS still method7 (AttackIndicator:123; ~170 sites) and HORHROIOIOICIRHIOCOICHHHIHCIIO on builders
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method5	section	section(RewindhandlersType type) - get-or-create the predefined category; sets the headerless flag (LightingExtension2_2.method5(RT))
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method6	removeOption	void removeOption(LightingExtension option) - strips the option from every section's option and child list
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method7	addSection	void addSection(option; options...) - new section built from options with the option appended last; provider overload method8
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method8	addSection	default addSection(option; Lighting_7...) delegating to method7
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method9	addSectionFirst	void addSectionFirst(option; options...) - new section with the option first then the trailing options; provider overloads method10/method11
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method10	addSectionFirst	default addSectionFirst(option; Lighting_7...) delegating to method9
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method11	addSectionFirst	default addSectionFirst(Lighting_7 parent; Lighting_7...) delegating to method9
+com.moonsworth.lunar.client.lighting.CategorizedSettingsBuilder	M	method12	buildMap	Map<Option;SettingsNode> buildMap() - the settings tree handed to Nameplate6.method8/FeatureOptionContainer
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method1	section	override of CategorizedSettingsBuilder.section(String; Consumer) (obf HICHRCOHCCRHOHCICOOCHOIHCCHIRI); SPLIT: same file also declares method1(Consumer<Lighting_5>;Consumer<Setting>) register - do not blind-rename
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method2	section	override of section(String; MarkersType; Consumer); obf RCIRROCCCIIHCIHCCRHHCCHOHHHCHH
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method3	section	override of section(Supplier<String>; Consumer); obf RCIRROCCCIIHCIHCCRHHCCHOHHHCHH
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method5	group	impl of SettingsBuilder.group(option; Consumer): section with the option + consumer-registered children (obf RCIRROCCCIIHCIHCCRHHCCHOHHHCHH); SPLIT: same file also declares method5(RewindhandlersType) section(RT)
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method6	removeOption	impl of CategorizedSettingsBuilder.removeOption (obf IHCRORHRORIICHRHRCHRRIRRHHOCOO); SPLIT: same file also declares method6(option;consumer;settingConsumer) group
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method7	addSection	impl of addSection(option;options...) (obf HHCCIRHCCCIIRHCROHIORHIRHHIORH); SPLIT: same file also declares private method7(builder;consumer) walker
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method8	addOptions	impl of SettingsBuilder.addOptions(options...) - new section inserted at the head of the builder list; SettingsParent.addOptions delegates here
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method9	addSectionFirst	impl of addSectionFirst(option;options...)
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method11	addOptionsBefore	impl of SettingsBuilder.addOptionsBefore(option;options...) - inserts a new section directly before the found option, splitting its section if needed; SPLIT: same file also declares method11(options...) appendOptions
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method12	addOptionsAfter	impl of addOptionsAfter(option;options...) - insert after, splitting if needed; SPLIT: same file also declares method12(String) label and method12() buildMap
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method13	separator	no-arg separator(): adds a section built from the empty-id label option; called as lightingextension231.method13() between sections
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method14	spacer	no-arg spacer(): empty-id label with the full-width/label flag (LabelOption.Data.method12())
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method18	getSettings	List<Setting> getSettings() - the builder's current section list
+com.moonsworth.lunar.client.lighting.LightingExtension2_2	M	method20	findSection	private findSection(String id; Consumer; Consumer<LabelOption>) - locates an already registered label/category by id
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method1	register	void register(Consumer<SettingsBuilder> body; Consumer<Setting> each)
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method2	group	group(option; Consumer<Parent>) - fluent nested-group contract
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method3	group	default group(Lighting_7 provider; Consumer) delegating to method2
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method4	group	group(option; Consumer<Parent>; Consumer<Setting>) overload
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method5	group	default provider overload of method4
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method6	addOptions	addOptions(options...) - adds a section at the head of the tree
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method7	addOptions	default provider overload of method6
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method8	addOptionsBefore	addOptionsBefore(option; options...) - insert a section before the given option
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method9	addOptionsBefore	default provider overload of method8
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method10	addOptionsAfter	addOptionsAfter(option; options...) - insert a section after the given option
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method11	addOptionsAfter	default provider overload of method10
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method12	appendOptions	appendOptions(options...) - append a section at the end
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method13	appendOptions	default provider overload of method12
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method14	appendOptions	default collection overload of method12
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method15	label	label(String text) - adds a text label node
+com.moonsworth.lunar.client.lighting.Lighting_5	M	method18	getSettings	List<Setting> getSettings()
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method1	register	forwards to the inner builder register(consumer; consumer)
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method2	addSectionOptions	forwards (LightingExtension...) to the CURRENT section's addOptions (field2.method1); call alias ICRHORIIHOHROHOHOCOOHOOCOORRHO; SPLIT: same file also declares method2(BooleanSupplier) which must be visibleWhen
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method4	flat	forwards the boolean headerless/flat flag to the current section (SettingsSectionBuilder.flat)
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method5	hiddenWhen	forwards hiddenWhen(BooleanSupplier) to the current section
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method6	setHidden	@TestOnly forwards setHidden(boolean)
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method7	group	group(option; Consumer<Parent>) - creates a nested group under the option; THE `arg1x.HORHROIOIOICIRHIOCOICHHHIHCIIO(option; consumer)` call sites; returns the section builder so `.method3(...)` chains work
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method8	group	group(option; Consumer; Consumer<Setting>) overload (forwards builder method4)
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method9	addOptions	forwards (LightingExtension...) to the builder addOptions; the dominant `arg1x.method9(new LightingExtension[]{...})` call sites
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method11	addOptionsBefore	forwards (option; options...) to the builder
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method12	addOptionsAfter	forwards (option; options...) to the builder
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method13	appendOptions	forwards (options...) to the builder appendOptions; SPLIT: same file also declares method13(String) label
+com.moonsworth.lunar.client.lighting.SettingsParent	M	method18	getSettings	forwards List<Setting> getSettings()
+com.moonsworth.lunar.client.lighting.SettingsParent	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	group	call-site alias for group(option; Consumer) on the section handle (MinimapMod borderOptions; PvpInfoStatHud displayOptions; Coordinates child groups)
+com.moonsworth.lunar.client.lighting.SettingsParent	M	ICRHORIIHOHROHOHOCOOHOOCOORRHO	addSectionOptions	call-site alias for the (LightingExtension...) add-to-section call (87 files: MinimapMod; CoordinatesBiomeChildMod; SkyblockVisitorBazaarHelper; SkyblockInventoryButtons method2 form)
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension	M	method1	addOptions	add options to this node (mutator behind group/addSection; obf OOROOCCIRCCRHOIOIORIHCHHOOCCOR)
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension	M	method2	addOptions	default provider overload
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension	M	method3	visibleWhen	visibleWhen(BooleanSupplier) - the ubiquitous `addOptions(...).method3(() -> ...)` guard; obf IIHRRHORCRCROCHHOHORCHCROCIHRO
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension	M	method4	hiddenWhen	hiddenWhen(BooleanSupplier) - obf HICHRCOHCCRHOHCICOOCHOIHCCHIRI
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension	M	method5	flat	flat(boolean) - headerless/embedded section flag
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension	M	method6	setHidden	@TestOnly setHidden(boolean)
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension2	M	method6	splitAt	Self splitAt(int index) - splits the section tail starting at index (used by addOptionsBefore/After)
+com.moonsworth.lunar.client.config.option.SettingsSectionBuilder	M	method1	addOptions	section-level addOptions(LightingExtension...) contract (mutator that back-fills the section's option list)
+com.moonsworth.lunar.client.config.option.SettingsSectionBuilder	M	method2	addOptions	default OptionProvider overload calling method1
+com.moonsworth.lunar.client.config.option.SettingsSectionBuilder	M	method3	visibleWhen	visibleWhen(BooleanSupplier) contract
+com.moonsworth.lunar.client.config.option.SettingsSectionBuilder	M	method4	hiddenWhen	hiddenWhen(BooleanSupplier) contract
+com.moonsworth.lunar.client.config.option.SettingsSectionBuilder	M	method5	flat	flat(boolean) contract
+com.moonsworth.lunar.client.config.option.SettingsSectionBuilder	M	method6	setHidden	@TestOnly setHidden(boolean)
+com.moonsworth.lunar.client.config.option.SettingsSectionImpl	M	method4	flat	impl of SettingsSectionBuilder.flat; SPLIT: same file also declares method4() getter
+com.moonsworth.lunar.client.config.option.SettingsSectionImpl	M	method5	hiddenWhen	impl of SettingsSectionBuilder.hiddenWhen (field4 |= condition); SPLIT: same file also declares method5() getter
+com.moonsworth.lunar.client.config.option.SettingsSectionImpl	M	method6	showOnlyOnVersion	int... gate: hide unless Ref.MC_VERSION matches one of the versions (Hitbox uses method6(5)); SPLIT: same file also declares method6(boolean) setHidden
+com.moonsworth.lunar.client.config.option.SettingsSectionImpl	M	method7	showExceptOnVersion	int... gate: hide when Ref.MC_VERSION matches one of the versions
+com.moonsworth.lunar.client.config.option.SettingsSectionImpl	M	method8	showOnlyWithModule	String... gate: hide when a named module is missing
+com.moonsworth.lunar.client.config.option.SettingsSectionImpl	M	method9	showExceptWithModule	String... gate: hide when a named module is present
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension22	M	method5	hiddenWhen	lighting twin of SettingsSectionImpl.hiddenWhen; SPLIT: same file also declares method5() getter
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension22	M	method6	showOnlyOnVersion	lighting twin of the int... version gate; SPLIT: also method6(boolean) setHidden
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension22	M	method7	showExceptOnVersion	lighting twin int... version gate
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension22	M	method8	showOnlyWithModule	lighting twin String... module gate
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension22	M	method9	showExceptWithModule	lighting twin String... module gate
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method1	register	twin of Lighting_5.register - same contract from the config/option jar
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method2	group	twin of Lighting_5.group
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method3	group	twin default provider overload
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method4	group	twin overload (option; consumer; settingConsumer)
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method5	group	twin default provider overload
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method6	addOptions	twin of Lighting_5.addOptions
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method7	addOptions	twin default provider overload
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method8	addOptionsBefore	twin of Lighting_5.addOptionsBefore
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method9	addOptionsBefore	twin default provider overload
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method10	addOptionsAfter	twin of Lighting_5.addOptionsAfter
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method11	addOptionsAfter	twin default provider overload
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method12	appendOptions	twin of Lighting_5.appendOptions
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method13	appendOptions	twin default provider overload
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method14	appendOptions	twin default collection overload
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method15	label	twin label(String)
+com.moonsworth.lunar.client.config.option.SettingsBuilder	M	method18	getSettings	twin List<Setting> getSettings()
+com.moonsworth.lunar.client.config.option.OptionBakerFactory	M	method1	createBaker	B createBaker(String id; boolean dev) - factory contract
+com.moonsworth.lunar.client.config.option.RootSettingsBuilder	M	method2	createBaker	impl: dev ? new OptionBaker(id) : new DevOptionBaker(id)
+com.moonsworth.lunar.client.config.option.SettingsTreeBuilder	M	method2	createBaker	byte-identical twin impl
+com.moonsworth.lunar.client.lighting.Lighting2_2	M	method1	createBaker	lighting-side factory contract B createBaker(String; boolean)
+com.moonsworth.lunar.client.lighting.RootSettingsAssembler	M	method2	createBaker	impl: dev ? new LightingIterator2(id) : new LightingIterator22(id)
+com.moonsworth.lunar.client.lighting.SettingsTreeAssembler	M	method2	createBaker	twin impl
+com.moonsworth.lunar.client.config.option.SettingsRegistrant	M	method1	registerOptions	void registerOptions(RootSettingsBuilder builder)
+com.moonsworth.lunar.client.lighting.Lighting_3	M	method1	registerOptions	twin contract used by Nameplate6.method9 to push each registrant into the built tree (takes RootSettingsAssembler)
+com.moonsworth.lunar.client.config.option.RootSettingsBuilder	M	method7	section	CALL-SITE ONLY: mods use method7(RewindhandlersType; Consumer) for CategorizedSettingsBuilder.section(RewindhandlersType; Consumer) (no such declaration in this file); SPLIT: PvpInfoStatHud/Hitbox also use method7(option; Consumer) group on this same receiver type
+com.moonsworth.lunar.client.config.option.RootSettingsBuilder	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	section	CALL-SITE ONLY: builder-side alias of section(RewindhandlersType; Consumer) (TypedHudRenderer; Coordinates; FogLoader2; SkyblockDungeonTimer)
+com.moonsworth.lunar.client.config.option.RootSettingsBuilder	M	OHOOORICRHIIIIRHCICICOCHROICRC	section	CALL-SITE ONLY: builder-side alias of section(String; Consumer) (PvpInfoProjectileChild method3; ArmorStatusElementChildMod)
+com.moonsworth.lunar.client.lighting.RootSettingsAssembler	M	method7	section	CALL-SITE ONLY: lighting twin of the method7(RewindhandlersType; Consumer) section token; SPLIT with the (option; Consumer) group form as above
+com.moonsworth.lunar.client.lighting.RootSettingsAssembler	M	HORHROIOIOICIRHIOCOICHHHIHCIIO	section	CALL-SITE ONLY: builder-side alias of section(RewindhandlersType; Consumer) in the lighting twin hierarchy
+com.moonsworth.lunar.client.lighting.RootSettingsAssembler	M	OHOOORICRHIIIIRHCICICOCHROICRC	section	CALL-SITE ONLY: builder-side alias of section(String; Consumer) in the lighting twin hierarchy
+com.moonsworth.lunar.client.framework.ModDetails	M	method7	details	static factory: ModDetails.method7() starts the fluent details builder (187 call sites)
+com.moonsworth.lunar.client.framework.ModDetails	M	method1	categories	getter Set<Calculator2Handler>/ModCategory; Nameplate5.toString labels it "categories="
+com.moonsworth.lunar.client.framework.ModDetails	M	method2	aliases	getter Set<String>; Nameplate5.toString labels it "aliases=" (search aliases; parent-suggested alternative name: hints)
+com.moonsworth.lunar.client.framework.ModDetails	M	method3	originalAuthors	getter Set<String>; Nameplate5.toString labels it "originalAuthors="
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method1	categories	setter: method1(new ModCategory[]{ModCategory.field3; ...}) on nearly every mod
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method2	aliases	setter: method2(new String[]{"Crosshair"}), method2(new String[]{"f7"; "m7"; "floor seven"; "master seven"}); 21 sites
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method3	originalAuthors	setter: method3(new String[]{"xb4d"; "Walksy"}), method3(new String[]{"uku3lig"})
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method4	name	Supplier<String> display name (Nameplate2 name supplier)
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method5	description	Supplier<String> description (Nameplate2 description supplier)
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method6	id	String id / language-path override (@Annotation5)
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method7	dev	forces the "dev" category in ModDetails.Data.method11 (field7; uncertain - alternative: devCategory)
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method8	debug	dev-environment-only "dev" category flag (field8; uncertain - alternative: devOnly)
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method9	vanilla	boolean isVanilla passed to Nameplate5/Nameplate2 (Nameplate5.isVanilla returns it)
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method10	disallowKeybind	sets allowsKeybind false (Nameplate5.method4 returns the inverted default-true flag)
+com.moonsworth.lunar.client.framework.ModDetails$Data	M	method11	instance	terminal build: Nameplate5/Nameplate2 ModDetails for the feature; mods call ModDetails.details()...method11(this) (187 sites)
+com.moonsworth.lunar.client.config.option.SettingsSection	M	method6	splitAt	Self splitAt(int index) - section-tail split contract (twin of ThreadModuleDump43Extension2.method6)
+com.moonsworth.lunar.client.lighting.nameplate.ThreadModuleDump43Extension22	M	method11	splitAt	impl of the split: removes and returns the options from index onward as a new section
+com.moonsworth.lunar.client.config.option.SettingsSectionImpl	M	method11	splitAt	impl of the split: removes and returns the options from index onward as a new section

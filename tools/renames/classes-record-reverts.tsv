@@ -1,0 +1,3 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.bridge	BridgeMethodTarget	Bridge3_5	jar-coupled record twin: jar Bridge3_5 is a final record used in Bridge2_35 signatures; source twin must keep the FQN	com/moonsworth/lunar/bridge/BridgeMethodTarget.java
+com.moonsworth.lunar.bridge	MixinTargetMemberResolverBridge	Bridge6_6	jar-coupled record twin: jar Bridge6_6 is a final record returned by Bridge4_2.method3 (jar)	com/moonsworth/lunar/bridge/MixinTargetMemberResolverBridge.java

@@ -1,0 +1,125 @@
+{
+  "skyBlockYearQuestion": "What SkyBlock year is it?",
+  "totalFairySoulsQuestion": "How many total Fairy Souls are there?",
+  "totalFairySoulsAnswer": "289 Fairy Souls",
+  "success": "^\\[STATUE] Oruo the Omniscient: (\\w+) answered (.+) correctly!$",
+  "failure": "^\\[STATUE] Oruo the Omniscient: Yikes$",
+  "questions": [
+    {
+      "question": "^What is the status of ([\\w, ]+)\\?$",
+      "answerMap": {
+        "The Watcher": "Stalker",
+        "Bonzo": "New Necromancer",
+        "Scarf": "Apprentice Necromancer",
+        "The Professor": "Professor",
+        "Thorn": "Shaman Necromancer",
+        "Livid": "Master Necromancer",
+        "Sadan": "Necromancer Lord",
+        "Maxor": "Young Wither",
+        "Storm": "Elementalist",
+        "Goldor": "Wither Soldier",
+        "Necron": "Wither Lord",
+        "Maxor, Storm, Goldor, and Necron": "The Wither Lords"
+      },
+      "group": 1
+    },
+    {
+      "question": "^How many Fairy Souls are there in ?([Tt]he)? (.+)\\?$",
+      "answerMap": {
+        "Park": "12 Fairy Souls",
+        "End": "12 Fairy Souls",
+        "Dwarven Mines": "15 Fairy Souls",
+        "Rift": "1 Fairy Soul",
+        "Crimson Isle": "29 Fairy Souls",
+        "Deep Caverns": "21 Fairy Souls",
+        "Hub": "80 Fairy Souls",
+        "Farming Islands": "20 Fairy Souls",
+        "Dungeon Hub": "7 Fairy Souls",
+        "Spider's Den": "19 Fairy Souls",
+        "Jerry's Workshop": "5 Fairy Souls",
+        "Gold Mine": "12 Fairy Souls",
+        "Backwater Bayou": "5 Fairy Souls",
+        "Galatea": "12 Fairy Souls",
+        "Lotus Atoll": "6 Fairy Souls",
+        "Torrhus Canyon": "12 Fairy Souls",
+        "Safari": "4 Fairy Souls"
+      },
+      "group": 2
+    },
+    {
+      "question": "^What is the name of the vendor in the Hub who sells stained$",
+      "answerSet": [
+        "Wool Weaver"
+      ]
+    },
+    {
+      "question": "^Which brother is on the Spider's Den\\?$",
+      "answerSet": [
+        "Rick"
+      ]
+    },
+    {
+      "question": "^What is the name of Rick's brother\\?$",
+      "answerSet": [
+        "Pat"
+      ]
+    },
+    {
+      "question": "^What is the name of the person that upgrades pets\\?$",
+      "answerSet": [
+        "Kat"
+      ]
+    },
+    {
+      "question": "^What is the name of the lady of the Nether\\?$",
+      "answerSet": [
+        "Elle"
+      ]
+    },
+    {
+      "question": "^Which villager in the Village gives you a Rogue Sword\\?$",
+      "answerSet": [
+        "Jamie"
+      ]
+    },
+    {
+      "question": "^How many unique minions are there\\?$",
+      "answerSet": [
+        "61 Minions"
+      ]
+    },
+    {
+      "question": "^Which of these enemies does not spawn in the Spider's Den\\?$",
+      "answerSet": [
+        "Wither Skeleton",
+        "Zombie Spider",
+        "Cave Spider",
+        "Broodfather",
+        "Dashing Spooder",
+        "Night Spider"
+      ]
+    },
+    {
+      "question": "^Which of these monsters only spawns at night\\?$",
+      "answerSet": [
+        "Zombie Villager",
+        "Ghast"
+      ]
+    },
+    {
+      "question": "^Which of these is not a dragon in The End\\?$",
+      "answerSet": [
+        "Zoomer Dragon",
+        "Weak Dragon",
+        "Stonk Dragon",
+        "Holy Dragon",
+        "Boomer Dragon",
+        "Stable Dragon",
+        "Older Dragon",
+        "Elder Dragon",
+        "Booger Dragon",
+        "Professor Dragon"
+      ]
+    }
+  ]
+}

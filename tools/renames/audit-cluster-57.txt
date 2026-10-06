@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.mod.combat
+com.moonsworth.lunar.client.mod.hud
+com.moonsworth.lunar.client.mod.misc
+com.moonsworth.lunar.client.mod.movement
+com.moonsworth.lunar.client.mod.player
+com.moonsworth.lunar.client.mod.render
+com.moonsworth.lunar.client.mumble
+com.moonsworth.lunar.client.nameplate

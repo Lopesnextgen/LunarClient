@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.glintcolorizer.highlight
+com.moonsworth.lunar.client.glintcolorizer.holograms
+com.moonsworth.lunar.client.glintcolorizer.mixin
+com.moonsworth.lunar.client.glintcolorizer.nameplate
+com.moonsworth.lunar.client.glintcolorizer.nameplate.mixin
+com.moonsworth.lunar.client.glintcolorizer.rewindhandlers
+com.moonsworth.lunar.client.gui
+com.moonsworth.lunar.client.gui.blog

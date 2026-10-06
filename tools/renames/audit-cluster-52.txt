@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.inactive.mixin.holograms
+com.moonsworth.lunar.client.inactive.mixin.holograms.mixin
+com.moonsworth.lunar.client.inactive.mixin.nameplate
+com.moonsworth.lunar.client.inactive.mixin.rewindhandlers.mixin
+com.moonsworth.lunar.client.inactive.rewindhandlers
+com.moonsworth.lunar.client.inventorymod
+com.moonsworth.lunar.client.itemcounter
+com.moonsworth.lunar.client.itemphysics.mixin

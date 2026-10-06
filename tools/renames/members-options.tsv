@@ -1,0 +1,225 @@
+# owner.fqn	M|F	oldName	newName	evidence
+com.moonsworth.lunar.client.lighting.Lighting	M	method2	floatOption	static factory -> FloatOption.Data (float slider+range builder)
+com.moonsworth.lunar.client.lighting.Lighting	M	method5	shortOption	static factory -> ShortOption.Data
+com.moonsworth.lunar.client.lighting.Lighting	M	method6	byteOption	static factory -> ByteOption.Data
+com.moonsworth.lunar.client.lighting.Lighting	M	method7	toggle	static factory -> ToggleOption.ToggleOptionBuilder (1576 call sites)
+com.moonsworth.lunar.client.lighting.Lighting	M	method8	color	static factory -> ColorOption.Data (540 call sites)
+com.moonsworth.lunar.client.lighting.Lighting	M	method9	enumOption	static factory -> EnumOption.Data<T>
+com.moonsworth.lunar.client.lighting.Lighting	M	method10	enumOption	static factory -> EnumOption.Data<T> with default value (221 call sites)
+com.moonsworth.lunar.client.lighting.Lighting	M	method11	triState	static factory -> TriStateOption.Data (BooleanOption FALSE/DEFAULT/TRUE)
+com.moonsworth.lunar.client.lighting.Lighting	M	method12	text	static factory -> TextOption.Data
+com.moonsworth.lunar.client.lighting.Lighting	M	method13	sound	static factory -> SoundOption.Data
+com.moonsworth.lunar.client.lighting.Lighting	M	method14	button	static factory -> ButtonOption.Data (90 call sites)
+com.moonsworth.lunar.client.lighting.Lighting	M	method15	label	static factory -> LabelOption.Data
+com.moonsworth.lunar.client.lighting.Lighting	M	method16	autoTextHotkey	static factory -> AutoTextHotkeyOption.Data
+com.moonsworth.lunar.client.lighting.Lighting	M	method17	simpleKeybind	static factory -> SimpleKeybindOption.Data
+com.moonsworth.lunar.client.lighting.Lighting	M	method18	modifierKeybind	static factory -> ModifierKeybindOption.Data (mod hotkeys, 118 call sites)
+com.moonsworth.lunar.client.lighting.Lighting	M	method19	dynamicDropdown	static factory -> DynamicDropdownOption.Data
+com.moonsworth.lunar.client.lighting.Lighting	M	method20	multiNumber	static factory -> MultiNumberOption.Data<T>
+com.moonsworth.lunar.client.lighting.Lighting	M	method22	multiNumber	static factory -> MultiNumberOption.Data<T> varargs default
+com.moonsworth.lunar.client.lighting.Lighting	M	method23	dropdown	static factory -> DropdownOption.Data<T>
+com.moonsworth.lunar.client.lighting.Lighting	M	method24	dropdown	static factory -> DropdownOption.Data<T> with default value
+com.moonsworth.lunar.client.lighting.Lighting	M	method25	namedDropdown	static factory -> NamedDropdownOption.Data<T>
+com.moonsworth.lunar.client.lighting.Lighting	M	method26	namedDropdown	static factory -> NamedDropdownOption.Data<T> with default value
+com.moonsworth.lunar.client.lighting.Lighting	M	method27	multiSelect	static factory -> MultiSelectOption.Data (20 call sites)
+com.moonsworth.lunar.client.lighting.Lighting	M	method28	itemSelect	static factory -> ItemSelectOption.Data (item registry multi-select)
+com.moonsworth.lunar.client.lighting.Lighting	M	method29	list	static factory -> ListOption.Data<?, T>
+com.moonsworth.lunar.client.lighting.Lighting	M	method30	list	static factory -> ListOption.Data<?, T> with default list
+com.moonsworth.lunar.client.lighting.Lighting	M	method31	list	static factory -> ListOption.Data<?, T> with list Codec
+com.moonsworth.lunar.client.lighting.Lighting	M	method32	listWithRenderer	static factory -> ListOption.Data + custom entry renderer (Calculator2Iterator34)
+com.moonsworth.lunar.client.lighting.Lighting	M	method33	set	static factory -> SetOption.Data<V, S>
+com.moonsworth.lunar.client.lighting.Lighting	M	method34	set	static factory -> SetOption.Data<V, S> with default set
+com.moonsworth.lunar.client.lighting.Lighting	M	method35	set	static factory -> SetOption.Data<V, S> with set Codec
+com.moonsworth.lunar.client.lighting.Lighting	M	method36	map	static factory -> MapOption.Data<K, V, M>
+com.moonsworth.lunar.client.lighting.Lighting	M	method37	map	static factory -> MapOption.Data<K, V, M> with default map
+com.moonsworth.lunar.client.lighting.Lighting	M	method38	map	static factory -> MapOption.Data<K, V, M> with map Codec
+com.moonsworth.lunar.client.lighting.Lighting	M	method39	empty	static factory -> Lighting.Data placeholder option (MarkersType.UNKNOWN, null value)
+com.moonsworth.lunar.client.lighting.Lighting	M	method40	simpleOption	static factory -> Lighting.SimpleOptionBuilder<T>
+com.moonsworth.lunar.client.lighting.Lighting	M	method41	simpleOption	static factory -> SimpleOptionBuilder<T> with default value
+com.moonsworth.lunar.client.lighting.Lighting	M	method42	simpleOption	static factory -> SimpleOptionBuilder<T> with Codec
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field1	id	option id; getId() returns it
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field2	markerType	Driver/DisplaySpec marker set by method16
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field3	hideFromApi	true -> Nameplate.field12 "hide_from_api" trait (Flag.INSTANCE), else intercept alert
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field4	nameSupplier	Supplier<String> display name (method14)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field5	description	lang description set by method12
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field6	icon	stroke icon for the display spec
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field7	noCodec	true when method21() nulls the codec (raw value)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field8	jsonProvider	Function<O, GuiExtension> data provider (method10/11)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field9	visibleWhen	BooleanSupplier visibility predicate (method17)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field10	featureLink	Nameplate3 feature link (method18/19)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field11	badges	Set<LightingType> option badges (method26/27)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field12	hiddenByDefault	initial hidden flag; method24/25 set it
+com.moonsworth.lunar.client.lighting.LightingHandler_2	F	field13	customComponent	BiFunction option-renderer override (method9)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method9	customComponent	void method9(BiFunction) sets field13; no-arg method9() is the null default hook
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method12	description	B method12(String) sets the display description
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method13	displayName	B method13(String) constant display name
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method14	displayName	B method14(Supplier<String>) dynamic display name
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method15	icon	B method15(markers.MarkersType) stroke icon
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method16	markerType	B method16(markers.mixin.MarkersType) option marker/type
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method17	visibleWhen	B method17(BooleanSupplier) visibility predicate
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method18	feature	B method18(Framework7Extension) links the owning feature
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method19	featureLink	B method19(Nameplate3) explicit feature link
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method20	codec	B method20(Codec<T>) sets the value codec
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method21	unencoded	B method21() nulls the codec (no JSON round-trip)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method22	hideFromApi	B method22(boolean) hide_from_api flag
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method23	hideFromApi	B method23() forces hide_from_api = true
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method24	shown	B method24() clears the hidden-by-default flag
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method25	hidden	B method25() sets the hidden-by-default flag
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method26	setFlags	B method26(LightingType...) replaces the badge flags
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method27	addFlags	B method27(LightingType...) adds badge flags
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method28	advanced	B method28() -> addFlags(LightingType.ADVANCED)
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method29	resolveDefaults	void method29() fills codec/provider/visibility defaults before build
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method30	configure	O method30(O) copies builder state/traits onto the built option
+com.moonsworth.lunar.client.lighting.LightingHandler_2	M	method31	build	abstract O method31() final build; called by final method1()
+com.moonsworth.lunar.client.lighting.Lighting.Data	M	method31	build	build() override (delegates to the concrete option factory)
+com.moonsworth.lunar.client.lighting.Lighting.SimpleOptionBuilder	M	method31	build	build() override (delegates to the concrete option factory)
+com.moonsworth.lunar.client.lighting.AutoTextHotkeyOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.ButtonOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.ByteOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.DoubleOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.DropdownOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.DynamicDropdownOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.FloatOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.IntegerOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.LongOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.MapOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.MultiNumberOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.MultiSelectOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.NamedDropdownOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.SetOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.ShortOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.TextOption.Data	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.ToggleOption.ToggleOptionBuilder	M	method11	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.CategoryOption.Data	M	method12	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.EnumOption.Data	M	method12	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.ItemSelectOption.Data	M	method12	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.ListOption.Data	M	method12	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.ModifierKeybindOption.Data	M	method12	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.SoundOption.Data	M	method12	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.TriStateOption.Data	M	method12	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.LabelOption.Data	M	method13	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.SimpleKeybindOption.Data	M	method13	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method19	createOption	protected hook that constructs the concrete option (called by build)
+com.moonsworth.lunar.client.lighting.LabelOption.Data	M	method12	hidden	calls super.method25() (hidden-by-default flag); LightingExtension2_2 builds hidden section labels this way
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	M	method4	defaultValue	fluent int/float/long/short/byte default value
+com.moonsworth.lunar.client.lighting.Lighting2_3	M	method4	defaultValue	fluent int/float/long/short/byte default value
+com.moonsworth.lunar.client.lighting.Lighting3_2	M	method4	defaultValue	fluent int/float/long/short/byte default value
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	M	method4	defaultValue	fluent int/float/long/short/byte default value
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	M	method4	defaultValue	fluent int/float/long/short/byte default value
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	M	method4	defaultValue	fluent int/float/long/short/byte default value
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	M	method5	forceRange	forceMin/forceMax clamp flags
+com.moonsworth.lunar.client.lighting.Lighting2_3	M	method5	forceRange	forceMin/forceMax clamp flags
+com.moonsworth.lunar.client.lighting.Lighting3_2	M	method5	forceRange	forceMin/forceMax clamp flags
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	M	method5	forceRange	forceMin/forceMax clamp flags
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	M	method5	forceRange	forceMin/forceMax clamp flags
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	M	method5	forceRange	forceMin/forceMax clamp flags
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	M	method30	configure	adds the number-rule trait (Nameplate.field7) to the option
+com.moonsworth.lunar.client.lighting.Lighting2_3	M	method30	configure	adds the number-rule trait (Nameplate.field7) to the option
+com.moonsworth.lunar.client.lighting.Lighting3_2	M	method30	configure	adds the number-rule trait (Nameplate.field7) to the option
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	M	method30	configure	adds the number-rule trait (Nameplate.field7) to the option
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	M	method30	configure	adds the number-rule trait (Nameplate.field7) to the option
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	M	method30	configure	adds the number-rule trait (Nameplate.field7) to the option
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	F	field14	defaultValue	initial float default (method10())
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	F	field15	decimalPlaces	step/precision passed to FloatNumberRange
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	F	field16	forceMin	clamp below-min values
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	F	field17	forceMax	clamp above-max values
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	M	method6	decimalPlaces	int step / decimal places
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	M	method7	range	deprecated boxed range alias for method8
+com.moonsworth.lunar.client.lighting.FloatSliderOptionBuilder	M	method8	range	min/max, "Min cannot be more than Max!"
+com.moonsworth.lunar.client.lighting.Lighting2_3	F	field14	defaultValue	initial double default (method10())
+com.moonsworth.lunar.client.lighting.Lighting2_3	F	field15	decimalPlaces	step/precision passed to DoubleNumberRule
+com.moonsworth.lunar.client.lighting.Lighting2_3	F	field16	forceMin	clamp below-min values
+com.moonsworth.lunar.client.lighting.Lighting2_3	F	field17	forceMax	clamp above-max values
+com.moonsworth.lunar.client.lighting.Lighting2_3	M	method6	decimalPlaces	int step / decimal places
+com.moonsworth.lunar.client.lighting.Lighting2_3	M	method7	range	deprecated boxed range alias for method8
+com.moonsworth.lunar.client.lighting.Lighting2_3	M	method8	range	min/max, "Min cannot be more than Max!"
+com.moonsworth.lunar.client.lighting.Lighting3_2	F	field14	defaultValue	initial int default (method10())
+com.moonsworth.lunar.client.lighting.Lighting3_2	F	field15	forceMin	clamp below-min values
+com.moonsworth.lunar.client.lighting.Lighting3_2	F	field16	forceMax	clamp above-max values
+com.moonsworth.lunar.client.lighting.Lighting3_2	M	method6	range	deprecated boxed range alias for method7
+com.moonsworth.lunar.client.lighting.Lighting3_2	M	method7	range	min/max, "Min cannot be more than Max!"
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	F	field14	defaultValue	initial long default (method10())
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	F	field15	max	maximum (min already named)
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	F	field16	forceMin	clamp below-min values
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	F	field17	forceMax	clamp above-max values
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	M	method6	range	deprecated boxed range alias for method7
+com.moonsworth.lunar.client.lighting.LongSliderOptionBuilder	M	method7	range	min/max, "Min cannot be more than Max!"
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	F	field14	defaultValue	initial short default (method10())
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	F	field15	min	minimum
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	F	field16	max	maximum
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	F	field17	forceMin	clamp below-min values
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	F	field18	forceMax	clamp above-max values
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	M	method6	range	deprecated boxed range alias for method7
+com.moonsworth.lunar.client.lighting.ShortSliderOptionBuilder	M	method7	range	min/max, "Min cannot be more than Max!"
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	F	field14	defaultValue	initial byte default (method10())
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	F	field15	min	minimum
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	F	field16	max	maximum
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	F	field17	forceMin	clamp below-min values
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	F	field18	forceMax	clamp above-max values
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	M	method6	range	deprecated boxed range alias for method7
+com.moonsworth.lunar.client.lighting.ByteRangeOptionBuilder	M	method7	range	min/max, "Min cannot be more than Max!"
+com.moonsworth.lunar.client.lighting.BooleanOptionBuilder	F	field14	defaultValue	initial boolean default (method10())
+com.moonsworth.lunar.client.lighting.BooleanOptionBuilder	M	method4	defaultValue	fluent boolean default; MarkersType.CHECKBOX
+com.moonsworth.lunar.client.lighting.CharacterOptionBuilder	F	field14	defaultValue	initial char default (method10())
+com.moonsworth.lunar.client.lighting.CharacterOptionBuilder	M	method2	defaultValue	fluent char default
+com.moonsworth.lunar.client.lighting.ToggleOption.ToggleOptionBuilder	F	field15	alert	BooleanSupplier alert attached via Alert2Handler
+com.moonsworth.lunar.client.lighting.ToggleOption.ToggleOptionBuilder	M	method2	alert	method2(BooleanSupplier) installs the Nameplate.field5 intercept alert
+com.moonsworth.lunar.client.lighting.LightingExtension	M	method20	copy	clone/copy the option (delegates field3.method3()); @Override chain
+com.moonsworth.lunar.client.lighting.AbstractOption	M	method20	copy	clone/copy the option (delegates field3.method3()); @Override chain
+com.moonsworth.lunar.client.lighting.CompositeOption	M	method20	copy	clone/copy the option (delegates field3.method3()); @Override chain
+com.moonsworth.lunar.client.lighting.GuardedOption	M	method20	copy	clone/copy the option (delegates field3.method3()); @Override chain
+com.moonsworth.lunar.client.config.option.ConditionalOption	M	method20	copy	clone/copy the option (delegates field3.method3()); @Override chain
+com.moonsworth.lunar.client.config.option.OptionCombiner	M	method20	copy	clone/copy the option (delegates field3.method3()); @Override chain
+com.moonsworth.lunar.client.lighting.ListOption	M	method20	copy	clone/copy the option (delegates field3.method3()); @Override chain
+com.moonsworth.lunar.client.lighting.AbstractOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.AutoTextHotkeyOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.ButtonOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.ByteOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.CategoryOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.ColorOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.DoubleOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.DropdownOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.DynamicDropdownOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.EnumOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.FloatOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.IntegerOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.LabelOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.ListOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.LongOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.ModifierKeybindOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.MultiNumberOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.MultiSelectOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.NamedDropdownOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.ShortOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.SimpleKeybindOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.SoundOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.TextOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.ToggleOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.TriStateOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.config.option.CrosshairDrawOption	M	method25	createRenderer	protected renderer hook called by method18(Calculator2Handler) -> Calculator2Iterator3
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method4	chroma	Consumer<ToggleOption.ToggleOptionBuilder> configures the chroma toggle
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method5	chromaSpeed	Consumer<IntegerOption.Data> configures the chromaSpeed slider
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method6	chromaType	Consumer<EnumOption.Data<Gui2Extension>> configures chromaType
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method7	defaultValue	color default setter overload (TextColor/HorsestatsType8/Color/rgb/rgba/float)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method8	defaultValue	color default setter overload (TextColor/HorsestatsType8/Color/rgb/rgba/float)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method9	defaultValue	color default setter overload (TextColor/HorsestatsType8/Color/rgb/rgba/float)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method10	defaultValue	color default setter overload (TextColor/HorsestatsType8/Color/rgb/rgba/float)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method11	defaultValue	color default setter overload (TextColor/HorsestatsType8/Color/rgb/rgba/float)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method12	defaultValue	color default setter overload (TextColor/HorsestatsType8/Color/rgb/rgba/float)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method13	defaultValue	color default setter overload (TextColor/HorsestatsType8/Color/rgb/rgba/float)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method14	withChroma	enables the chroma toggle (this.field19)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method15	withoutChroma	field17 = false (chroma controls hidden)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method16	forceOpaque	field18 = false (alpha disabled)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method17	chroma	boolean chroma-controls flag (field17)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	M	method18	allowAlpha	boolean alpha flag (field18); false masks alpha in ColorOption.method1
+com.moonsworth.lunar.client.lighting.ColorOption.Data	F	field17	chroma	controls chroma widgets in Calculator2Iterator39 (ColorOption.field12)
+com.moonsworth.lunar.client.lighting.ColorOption.Data	F	field18	allowAlpha	alpha allowed (ColorOption.field13)
+com.moonsworth.lunar.client.lighting.AutoTextHotkeyOption.Data	F	field14	defaultKey	BridgeType_8 default key
+com.moonsworth.lunar.client.lighting.AutoTextHotkeyOption.Data	M	method3	index	int hotkey index ("Index must be set!")
+com.moonsworth.lunar.client.lighting.AutoTextHotkeyOption.Data	M	method4	defaultKey	fluent BridgeType_8 default key
+com.moonsworth.lunar.client.lighting.SimpleKeybindOption.Data	F	field16	showInControls	passed to Bridge2.method12 flag4 -> added to gameSettings.keyBindings
+com.moonsworth.lunar.client.lighting.SimpleKeybindOption.Data	F	field17	ignoreClashing	JSON "ignoreClashing" property
+com.moonsworth.lunar.client.lighting.SimpleKeybindOption.Data	M	method2	ignoreClashing	sets the "ignoreClashing" JSON flag
+com.moonsworth.lunar.client.lighting.SimpleKeybindOption.Data	M	method11	respectClashing	resets ignoreClashing to false
+com.moonsworth.lunar.client.lighting.SimpleKeybindOption.Data	M	method6	showInControls	fluent showInControls flag (field16)
+com.moonsworth.lunar.client.lighting.SimpleKeybindOption.Data	M	method12	showInControls	sets showInControls = true (Chat chatVisibilityKeybind)

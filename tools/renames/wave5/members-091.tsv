@@ -1,0 +1,311 @@
+# owner.fqn	M|F	old	new	evidence
+# WARNING: apply with tools/apply_member_renames.py only AFTER fixing the
+# substring-replace bug in access_worker (see notes-members-091.md, finding 1):
+#   _CAST_ACCESS hits must keep the full match, and the replacement loop must
+#   sort hits by length desc and use re.sub(r'\Qold\E(?!\w)', ...).
+# Without the fix, e.g. 'Ref.method10' becomes 'Ref.percentage0'.
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud2	F	field1	COMPASS_TEXTURE	icons/round-compass.png; COMPASS style renderer registered in DirectionHud.Type.COMPASS
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud2	F	field2	COMPASS_POINTER_TEXTURE	icons/round-compass-pointer.png drawn rotated by heading; same COMPASS renderer
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud2	M	method2	drawTeammateMarker	draws memory/team icon at computed offset (DirectionHud.Data2); callers DirectionHud.method3
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud2	M	method3	drawPlayerMarker	draws player head texture for teammate; called from method1/TeamView.method4/5
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud2	M	method4	computeMarkerOffset	converts world pos to radar offset Data(x,y); called by method2/method3 and marker loop
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	F	field1	TEXTURE_U_0	compass-modern.png atlas U offset 0 (currently unused constant)
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	F	field2	TEXTURE_U_1	compass-modern.png atlas U offset 23
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	F	field3	TEXTURE_U_2	compass-modern.png atlas U offset 46
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	F	field4	TEXTURE_U_3	compass-modern.png atlas U offset 69
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	F	field5	TEXTURE_U_4	compass-modern.png atlas U offset 92
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	F	field6	TEXTURE_U_5	compass-modern.png atlas U offset 116
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	F	field7	TEXTURE_V_0	compass-modern.png atlas V offset 0 (unused constant)
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	F	field8	TEXTURE_V_1	compass-modern.png atlas V offset 9 (unused constant)
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	M	method2	drawWaypointMarker	draws GuiHandler2 waypoint triangle via Bridge7Iterator.method78; called in method1
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	M	method3	drawPlayerMarker	draws Memory/teammate skin icon on compass; called in method1/TeamView callbacks
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	M	method4	drawMapMarker	draws Markers2 map marker via MarkerType.method5; called in method1 loop
+com.moonsworth.lunar.client.framework.feature.directionhud.Directionhud3	M	method5	normalizeHeading	wraps yaw to 0..360; called by method1; same math as Horsestats30.method3
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method1	writeLine	default F3DebugWriter method1(String)->method3(false,..); providers call writer.method1("Not Available")
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method2	writeLabeledLine	default method2(String,String)->method3(true,..); F3DebugInfo.method1 writes "Minecraft "+brand
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method3	writeSegments	core varargs sink (boolean=labelFirst); impl F3DebugRendererWriter.method1 / F3DebugDataTask anon
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method4	writePieChart	writes profiler pie chart + legend; call F3Display.java:407 var0x.method4(...)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method5	writeChart	writes a chart component; call F3Display.java:411 var0x.method5(field8)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method7	isReducedInfo	returns reduced-info flag driving "Reduced" placeholders in F3ModuleChildMod.method9
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method8	rendererWriter	factory new F3DebugRendererWriter(renderer); mirrors F3display_3.method8
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method9	measurer	factory new F3DebugMeasurer(flag); mirrors F3display_3.method9
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method10	conditionalWriter	factory new F3DebugConditionalWriter(renderer); mirrors F3display_3.method10
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugWriter	M	method11	notAvailable	returns "Not Available < " + text; used by all method6 impls
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRendererWriter	F	field1	renderer	wraps F3DebugRenderer; ctor + method1/method4 delegate to it
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRendererWriter	M	method1	writeSegments	implements F3DebugWriter.method3 (varargs sink); delegates to renderer.method2
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRendererWriter	M	method4	writePieChart	forwards pie chart list to renderer.method4 (fallback renderer.field2)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRendererWriter	M	method5	writeChart	forwards chart to renderer.method7
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRendererWriter	M	method7	isReducedInfo	returns renderer.field4 (reduced info)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugConditionalWriter	F	field1	renderer	wraps F3DebugRenderer
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugConditionalWriter	M	method3	writeSegments	writes only when renderer.method12() (background pass); implements F3DebugWriter.method3
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugConditionalWriter	M	method4	writePieChart	conditional variant of F3DebugWriter.method4
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugConditionalWriter	M	method5	writeChart	conditional variant of F3DebugWriter.method5
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugConditionalWriter	M	method7	isReducedInfo	returns renderer.field4
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugMeasurer	F	field1	reducedInfo	reduced-info flag passed to ctor; drives methods
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugMeasurer	M	method3	writeSegments	accumulates width/height instead of drawing (measures)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugMeasurer	M	method4	writePieChart	adds 150x150 for pie chart block
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugMeasurer	M	method5	writeChart	adds 242x52 for chart block
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugMeasurer	M	method7	isReducedInfo	returns field1
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugEntry	F	field1	updated	per-frame once flag set by TargetInfoRegistry.method3 and reset in clear()
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugEntry	M	method1	update	first-call state capture; overridden by TargetInfoProvider.method1
+com.moonsworth.lunar.client.framework.feature.f3display.F3display$Data	F	field1	updated	twin of F3DebugEntry.field1; set by F3display_2.method3 / clear()
+com.moonsworth.lunar.client.framework.feature.f3display.F3display$Data	M	method1	update	first-call state capture; overridden by F3display2_2.method1
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2_2	F	field2	label	"Target Block"/"Target Fluid" line label from ctor
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2_2	F	field3	fluid	true for the fluid provider (ray-trace mode + default block strings)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2_2	F	field4	targetPosition	formatted "x y z" of the picked block
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2_2	F	field5	blockState	picked block state (pre-1.16 path)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2_2	F	field6	fluidState	picked fluid state (MC >= 1.16 path)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2_2	M	method1	update	ray-traces target and fills position/block/fluid state
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2_2	M	method4	isBlockDetailEnabled	reads "… block properties" option from F3ModuleChildMod (method15/17)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2_2	M	method5	isTagListEnabled	reads "… tags" option from F3ModuleChildMod (method16/19)
+com.moonsworth.lunar.client.framework.feature.f3display.TargetInfoProvider	F	field2	label	twin of F3display2_2.field2; ctor text1 "Target Block"/"Target Fluid" (TargetInfoRegistry)
+com.moonsworth.lunar.client.framework.feature.f3display.TargetInfoProvider	F	field3	fluid	twin of F3display2_2.field3
+com.moonsworth.lunar.client.framework.feature.f3display.TargetInfoProvider	F	field4	targetPosition	twin of F3display2_2.field4
+com.moonsworth.lunar.client.framework.feature.f3display.TargetInfoProvider	F	field5	blockState	twin of F3display2_2.field5
+com.moonsworth.lunar.client.framework.feature.f3display.TargetInfoProvider	F	field6	fluidState	twin of F3display2_2.field6
+com.moonsworth.lunar.client.framework.feature.f3display.TargetInfoProvider	M	method1	update	twin of F3display2_2.method1; override in F3DebugEntry family
+com.moonsworth.lunar.client.framework.feature.f3display.TargetInfoProvider	M	method4	isBlockDetailEnabled	twin of F3display2_2.method4
+com.moonsworth.lunar.client.framework.feature.f3display.TargetInfoProvider	M	method5	isTagListEnabled	twin of F3display2_2.method5
+com.moonsworth.lunar.client.framework.feature.f3display.F3display_3	M	method1	writeLine	twin of F3DebugWriter.method1 (default String sink)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display_3	M	method3	writeSegments	core varargs sink; impls F3display$Data2.method1/F3display$Data3.method3
+com.moonsworth.lunar.client.framework.feature.f3display.F3display_3	M	method8	rendererWriter	factory new F3display$Data2; call F3ModuleChildMod.java:315
+com.moonsworth.lunar.client.framework.feature.f3display.F3display_3	M	method9	measurer	factory new F3display$Data4(flag); call F3ModuleChildMod.java:363
+com.moonsworth.lunar.client.framework.feature.f3display.F3display_3	M	method10	conditionalWriter	factory new F3display$Data3; call F3ModuleChildMod.java:301
+com.moonsworth.lunar.client.framework.feature.f3display.F3display_3	M	method11	notAvailable	returns "Not Available < " + text; used by method6 impls
+com.moonsworth.lunar.client.framework.feature.f3display.F3display$Data2	F	field1	renderer	wraps F3display2; methods delegate
+com.moonsworth.lunar.client.framework.feature.f3display.F3display$Data2	M	method1	writeSegments	implements F3display_3.method3 (varargs); delegates renderer.method2
+com.moonsworth.lunar.client.framework.feature.f3display.F3display$Data3	F	field1	renderer	wraps F3display2
+com.moonsworth.lunar.client.framework.feature.f3display.F3display$Data3	M	method3	writeSegments	conditional varargs sink (renderer.method12 background gate)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display$Data4	F	field1	reducedInfo	reduced flag from ctor (F3display_3.method9)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display$Data4	M	method3	writeSegments	measures string + font height
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	F	field1	TARGET_INFO_REGISTRY	TargetInfoRegistry instance; clear() in F3DataTask/F3Display; target block/fluid providers
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	F	field2	lastPieChartResults	cached List<ProfilerResultBridge> from bridge$getPieChartResults; used by method28/29
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	F	field5	allocationRate	bytes/sec retained in method16 and returned
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method1	writeVersionInfo	writes "Minecraft " + version + client brand; F3Display Gui2Extension.MINECRAFT_VERSION provider
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method2	getFps	F3Display.java:332 "FPS: "; bridge$getDebugFPS
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method3	getBiome	F3Display.java:334 "Biome: "; bridge$getBiomeName
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method4	getCoordinates	F3Display.java:355 "XYZ: " (3/5/3 decimals)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method5	getBlockCoordinates	F3Display.java:356 "Block: " int block pos
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method6	getChunkCoordinates	F3Display.java:363 "Chunk: " (pos >> 4)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method7	getChunkRegion	F3Display.java:365 "[x z in r.rx.rz.mca]"
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method8	getLocalCoordinates	F3Display.java:372 "Section Relative: " (pos & 15)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method9	writeTargetEntity	F3Display TARGET_ENTITY; getPointedEntity + "Target Entity: "
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method10	getFacing	F3Display.java:357 "Facing: "; direction name + axis + degrees
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method11	getDimension	F3Display.java:359 "World: "; bridge$getDimensionKey
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method12	getFacingName	North/Northeast/... from yaw; called by method10
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method13	getFacingAxis	-Z/+X -Z/... from yaw; called by method10
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method14	getGpuUtilization	F3Display.java:380 "GPU: "; bridge$getGpuUtilization
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method15	writeMemoryUsage	F3Display MEMORY_USAGE; "RAM Usage: " + "Allocation Rate: "
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method16	getAllocationRate	private sampler used by method15; backs field5
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method17	writeHardwareInfo	F3Display HARDWARE_INFO; Java/CPU/Display lines
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method18	getLightLevel	F3Display "Client Light: " sky/block packed light
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method19	getDayCount	F3Display.java:338 "Day: "; worldTime/24000
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method20	getEntityCount	F3Display.java:335 "Entities: "; rendered/total
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method21	getChunkCount	F3Display.java:336 "Chunks: "; bridge$getUnculledRenderCount
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method22	getParticleCount	F3Display.java:337 "Particles: "; bridge$countParticles
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method23	writeRenderDistance	F3Display RENDER_DISTANCE; render + simulation distance
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method24	writeSounds	F3Display SOUNDS; sound debug string + mood
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method25	getServerBrand	F3Display.java:345 "Server: "; Integrated Server / brand
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method26	getPostEffect	F3Display.java:346 POST_EFFECT; bridge$getShaderGroupName
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method27	getBandwidth	F3Display.java:343 "Bandwidth: "; BandwidthChart.method11(value)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method28	getPieChartResults	F3Display PIE_CHART; bridge$getPieChartResults cached in field2
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method29	clearPieChartResults	clears field2; called by F3Display on pie-chart disable
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method30	withPlayer	private Function<Bridge5Extension_5,String> guard; used by getBiome/getCoordinates/getFacing/...
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method31	withWorld	private Function<Itemcounter6,String> guard; used by getEntityCount
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method32	withLevelRenderer	private Function<Bridge14_3,String> guard; used by getChunkCount
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugInfo	M	method33	formatDecimal	decimal formatter (3/5/3) used by coordinates/pie percent
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	F	field1	TARGET_INFO_REGISTRY	TargetInfoRegistry instance; clear() in F3DataTask/F3Display; target block/fluid providers
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	F	field2	lastPieChartResults	cached List<ProfilerResultBridge> from bridge$getPieChartResults; used by method28/29
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	F	field5	allocationRate	bytes/sec retained in method16 and returned
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method1	writeVersionInfo	writes "Minecraft " + version + client brand; F3Display Gui2Extension.MINECRAFT_VERSION provider
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method2	getFps	F3Display.java:332 "FPS: "; bridge$getDebugFPS
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method3	getBiome	F3Display.java:334 "Biome: "; bridge$getBiomeName
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method4	getCoordinates	F3Display.java:355 "XYZ: " (3/5/3 decimals)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method5	getBlockCoordinates	F3Display.java:356 "Block: " int block pos
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method6	getChunkCoordinates	F3Display.java:363 "Chunk: " (pos >> 4)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method7	getChunkRegion	F3Display.java:365 "[x z in r.rx.rz.mca]"
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method8	getLocalCoordinates	F3Display.java:372 "Section Relative: " (pos & 15)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method9	writeTargetEntity	F3Display TARGET_ENTITY; getPointedEntity + "Target Entity: "
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method10	getFacing	F3Display.java:357 "Facing: "; direction name + axis + degrees
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method11	getDimension	F3Display.java:359 "World: "; bridge$getDimensionKey
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method12	getFacingName	North/Northeast/... from yaw; called by method10
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method13	getFacingAxis	-Z/+X -Z/... from yaw; called by method10
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method14	getGpuUtilization	F3Display.java:380 "GPU: "; bridge$getGpuUtilization
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method15	writeMemoryUsage	F3Display MEMORY_USAGE; "RAM Usage: " + "Allocation Rate: "
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method16	getAllocationRate	private sampler used by method15; backs field5
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method17	writeHardwareInfo	F3Display HARDWARE_INFO; Java/CPU/Display lines
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method18	getLightLevel	F3Display "Client Light: " sky/block packed light
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method19	getDayCount	F3Display.java:338 "Day: "; worldTime/24000
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method20	getEntityCount	F3Display.java:335 "Entities: "; rendered/total
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method21	getChunkCount	F3Display.java:336 "Chunks: "; bridge$getUnculledRenderCount
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method22	getParticleCount	F3Display.java:337 "Particles: "; bridge$countParticles
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method23	writeRenderDistance	F3Display RENDER_DISTANCE; render + simulation distance
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method24	writeSounds	F3Display SOUNDS; sound debug string + mood
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method25	getServerBrand	F3Display.java:345 "Server: "; Integrated Server / brand
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method26	getPostEffect	F3Display.java:346 POST_EFFECT; bridge$getShaderGroupName
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method27	getBandwidth	F3Display.java:343 "Bandwidth: "; BandwidthChart.method11(value)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method28	getPieChartResults	F3Display PIE_CHART; bridge$getPieChartResults cached in field2
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method29	clearPieChartResults	clears field2; called by F3Display on pie-chart disable
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method30	withPlayer	private Function<Bridge5Extension_5,String> guard; used by getBiome/getCoordinates/getFacing/...
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method31	withWorld	private Function<Itemcounter6,String> guard; used by getEntityCount
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method32	withLevelRenderer	private Function<Bridge14_3,String> guard; used by getChunkCount
+com.moonsworth.lunar.client.framework.feature.f3display.F3display	M	method33	formatDecimal	decimal formatter (3/5/3) used by coordinates/pie percent
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	F	field1	PIE_CHART_SIZE	150.0F chart block size (75 radius) used by method3/method4
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	F	field4	reducedInfo	reduced-info mode; ctor flag from F3ModuleChildMod.Data.field15
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	F	field5	renderer	MixinHelper_4 draw context
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	F	field6	module	F3ModuleChildMod owner (Data/options)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	F	field7	originX	layout origin X from ctor
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	F	field8	originY	initial Y restored by method11
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	F	field9	maxWidth	max drawn width tracked by method8
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	F	field10	totalHeight	accumulated height tracked by method8
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method1	drawLineBackground	measures a text line and paints its background quad; F3display$Data3.method3
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method2	drawLine	draws label/value text segments alternating labelColor/valueColor
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method3	drawPieLegendBackground	legend rows/backgrounds around pie chart (no chart render)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method4	drawPieChart	Bridge7Iterator.method64/65 pie chart + legend names/percent
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method5	formatPieEntry	"[i] name x%" formatting with alignment
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method6	drawChartPlaceholder	240x52 box when chart unavailable/reduced
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method7	drawChart	delegates to F3Chart.method13 and advances on success
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method8	advance	y += height, totalHeight +=, maxWidth = max
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method9	getContentHeight	totalHeight or one font line
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method10	getContentWidth	max(maxWidth, 40); F3ModuleChildMod.method58
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method11	resetY	y = originY (start of frame)
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method12	isBackgroundEnabled	F3Display.Data.background toggle; gates background draws
+com.moonsworth.lunar.client.framework.feature.f3display.F3DebugRenderer	M	method13	getRenderer	lombok @Generated getter for field5
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	F	field1	PIE_CHART_SIZE	150.0F chart block size (twin of F3DebugRenderer.field1)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	F	field4	reducedInfo	reduced-info mode flag (twin)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	F	field5	renderer	MixinHelper_4 draw context (twin)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	F	field6	module	F3ModuleChildMod (twin)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	F	field7	originX	layout origin X (twin)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	F	field8	originY	initial Y (twin)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	F	field9	maxWidth	tracked max width (twin)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	F	field10	totalHeight	accumulated height (twin)
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method1	drawLineBackground	twin of F3DebugRenderer.method1
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method2	drawLine	twin of F3DebugRenderer.method2
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method3	drawPieLegendBackground	twin of F3DebugRenderer.method3
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method4	drawPieChart	twin of F3DebugRenderer.method4
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method5	formatPieEntry	twin of F3DebugRenderer.method5
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method6	drawChartPlaceholder	twin of F3DebugRenderer.method6
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method7	drawChart	twin of F3DebugRenderer.method7
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method8	advance	twin of F3DebugRenderer.method8
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method9	getContentHeight	twin of F3DebugRenderer.method9
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method10	getContentWidth	twin of F3DebugRenderer.method10
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method11	resetY	twin of F3DebugRenderer.method11
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method12	isBackgroundEnabled	twin of F3DebugRenderer.method12
+com.moonsworth.lunar.client.framework.feature.f3display.F3display2	M	method13	getRenderer	twin of F3DebugRenderer.method13
+com.moonsworth.lunar.bridge.ProfilerResultBridge	M	method1	percentage	@BridgeTargetMapping v6 "percentage"/v5 "usePercentage"/v0 field_76332_a; impls F3PieSlice/F3display3
+com.moonsworth.lunar.bridge.ProfilerResultBridge	M	method2	globalPercentage	@BridgeTargetMapping v6 "globalPercentage"/v5 "totalUsePercentage"/v0 field_76330_b
+com.moonsworth.lunar.client.framework.feature.f3display.F3PieSlice	F	field1	percentage	backing field of percentage(); ctor 100.0/91.7/... profiler defaults
+com.moonsworth.lunar.client.framework.feature.f3display.F3PieSlice	F	field2	globalPercentage	backing field of globalPercentage(); equal to percentage in default list
+com.moonsworth.lunar.client.framework.feature.f3display.F3PieSlice	F	field3	name	chart label ("root","render","tick",...); returned by bridge$getName
+com.moonsworth.lunar.client.framework.feature.f3display.F3PieSlice	M	method1	percentage	ProfilerResultBridge.percentage; F3DebugRenderer.method5 formats "x%"
+com.moonsworth.lunar.client.framework.feature.f3display.F3PieSlice	M	method2	globalPercentage	ProfilerResultBridge.globalPercentage; chart slice value
+com.moonsworth.lunar.client.framework.feature.f3display.F3display3	F	field1	percentage	backing field of percentage(); ctor 100.0/91.7/... profiler defaults
+com.moonsworth.lunar.client.framework.feature.f3display.F3display3	F	field2	globalPercentage	backing field of globalPercentage(); equal to percentage in default list
+com.moonsworth.lunar.client.framework.feature.f3display.F3display3	F	field3	name	chart label ("root","render","tick",...); returned by bridge$getName
+com.moonsworth.lunar.client.framework.feature.f3display.F3display3	M	method1	percentage	ProfilerResultBridge.percentage; F3DebugRenderer.method5 formats "x%"
+com.moonsworth.lunar.client.framework.feature.f3display.F3display3	M	method2	globalPercentage	ProfilerResultBridge.globalPercentage; chart slice value
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field1	undefinedVariablePattern	regex "undefined variable \"(\\w+)\"|undeclared identifier"; used by method33
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field2	location	shader ResourceLocationBridge from ctor; getLocation() + CosmeticManager key
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field3	hasShaderData	true when Alert6 definition exists; getter method42; provider "hasShaderData"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field4	lastDefinitionWriteAt	debounce timestamp in method2/method3
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field5	definitionDirty	set when definition needs writing (method3/20/24)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field6	vertexShaderWatcher	Shaderdebugmod3 watcher for the vertex shader dir (method37)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field7	fragmentShaderWatcher	Shaderdebugmod3 watcher for the fragment shader dir (method38)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field8	customActions	Map<String,Runnable> id->action registered by method41 / run in method16 CUSTOM
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field9	pendingReport	Shaderdebugmod.Data collected by method28 and flushed by method32
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field10	previewDirty	request preview render in method5/method34
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field11	previewFramebuffer	Fishing("shader-fb-preview") offscreen target blitted in method35
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field12	limitTo20Fps	provider "limitTo20FPS"; LIMIT_TICK
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field13	texPreviewSeparate	provider "texPreviewSeparate"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field14	texPreviewLabel	provider "texPreviewLabel"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field15	playerPreviewCloth	provider "playerPreviewCloth"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field16	playerPreviewMove	provider "playerPreviewMove"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field17	autoHotReload	provider "autoHotReload"; gates method17 -> method28
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field18	renderWidth	provider "resX"; multiple of 22
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field19	renderHeight	provider "resY"; multiple of 17
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field20	selectedUniforms	provider "selectedUniforms"; toggled by method7 (JS toggleUniform)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field21	hiddenUniforms	provider "hiddenUniforms"; toggled by method8
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field22	samplers	provider "samplers" list of Colorsaturation5; managed by method22-27
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field23	vertexCustom	provider "vshCustom"; vertex shader is custom (ColorsaturationType.CUSTOM)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field24	vertexShader	provider "vsh"; vertex definition path/key
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field25	fragmentCustom	provider "fshCustom"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field26	fragmentShader	provider "fsh"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field27	errors	provider "errors" list of Data2(message, actionId)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	F	field28	warnings	provider "warnings" list of Data2
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method1	saveIfPending	method2 (due) ? method3(false) : false
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method2	isSaveDue	true when dirty and 3000ms since field4
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method3	writeDefinition	merge field2 into indexes/shader_textures.json; force flag
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method4	buildDefinitionJson	JsonObject fragment/vertex/uniforms/samplers/render*; call method3:149
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method5	markPreviewDirty	sets field10; method34 consumes
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method6	matchesLocation	isSameShader(ResourceLocationBridge); ctor/Fov3 lookups
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method12	chooseFile	Gui4 file dialog; returns Files6_2(location,path); used by method13/method27
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method14	toResourceLocation	Path -> "lunar:dev_cosmetics/..." resource id
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method17	hotReloadIfEnabled	if autoHotReload -> method28
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method18	withGuiIterator	private Consumer<GuiIterator> guard for valid ShaderDebugMod; used by method19
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method19	updateProvider	resolves GuiIterator then method20(Type2)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method20	updateProviderFields	writes one Type2 key into the JS provider (GuiIterator.method3)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method21	initializeProvider	pushes cosmeticId/path/allUniforms/statics/errors/warnings + all Type2
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method22	createSamplerName	first free "SamplerN" name (JS createSampler)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method23	createSampler	@CallbackJS("createSampler") pick texture + append sampler
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method27	chooseSamplerTexture	file dialog (png/webp) wrapped as Colorsaturation5
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method28	hotReload	rebuild pendingReport, validate, then method31 apply
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method29	validateFpsRecommendation	warns when frame-render uniforms conflict with limitTo20Fps
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method30	validateDefinition	resolution aspect ratio + duplicate sampler names + size warnings
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method31	applyDefinition	FogIterator.method8 + CosmeticManager.method4 + ShaderDebugMod.method23/14/15
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method32	flushReport	publishes pending errors/warnings to provider; clears field9
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method33	parseMissingUniform	regex -> ColorsaturationType2 names -> Type.MISSING_UNIFORM action
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method34	renderPreview	if previewDirty -> method35; called by ShaderCloakEditorContext
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method35	blitPreview	blits field11 framebuffer (Shaderdebugmod4)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method36	isHiddenUniform	field21.contains(type); provider hiddenUniforms
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method37	setVertexShaderWatcher	replaces vertexShaderWatcher for vertexShader path
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method38	setFragmentShaderWatcher	replaces fragmentShaderWatcher for fragmentShader path
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method39	hasPendingReport	field9 != null (method40/method32)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method40	setReportLine	field9.field3/field4 = line for VERTEX/FRAGMENT
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method41	registerCustomAction	field8.put(id, runnable) + Type.CUSTOM.create(id)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method42	hasShaderData	@Generated getter for field3
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method43	getPendingReport	@Generated getter for field9
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method44	isTexPreviewSeparate	@Generated getter for field13
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method45	getRenderWidth	@Generated getter for field18
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method46	getRenderHeight	@Generated getter for field19
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method47	getSelectedUniforms	@Generated getter for field20
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method48	getSamplers	@Generated getter for field22; ShaderCloakExporter.method3
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method49	isVertexCustom	@Generated getter for field23
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method50	getVertexShader	@Generated getter for field24
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method51	isFragmentCustom	@Generated getter for field25
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod	M	method52	getFragmentShader	@Generated getter for field26
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod2	M	method1	export	entry: Fov3 screenshot callback + method3/method2; call Shaderdebugmod.method16 EXPORT
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod2	M	method2	reportExportFailure	ChestType.ERROR "Unable to export shader cloak!"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod2	M	method3	createArchive	collects cloak textures + shaders and writes export_/dev_ zips
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod2	M	method4	revealInFileManager	explorer/open/xdg-open on the produced zip
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod2	M	method5	toRuntimePath	"lunar-jit:" + cosmetics path when custom=true
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod2	M	method6	resolveResourcePath	resolves ResourceLocation path segments under dev_cosmetics
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod2	M	method7	resolveTexturePath	texture location -> webp lunar-jit path
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod2	M	method8	resolveShaderFile	vsh/fsh custom -> "lunar-jit:cosmetics/cloaks/<id>/<id>.vsh|fsh"
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod3	F	field1	watchThread	Thread consuming the WatchService; shutdown() interrupts it
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod3	F	field2	watchService	WatchService registered for ENTRY_MODIFY on the shader directory
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	F	field1	SCREENSHOT_WIDTH	fixed 704 screenshot width used in load()/blit scaling
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	F	field2	SCREENSHOT_HEIGHT	fixed 544 screenshot height
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	F	field3	cleared	tracks whether the target was cleared for the current pass (method1)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	F	field4	framebuffer	Bridge3_24.method2(704,544,false) offscreen framebuffer
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method1	render	grid-blit or full blit into the target; called from Shaderdebugmod.method35
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method2	blitTile	blits one 22x17 tile region scaled to the target framebuffer
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method3	getTileWidth	max(1, framebufferWidth/22)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method4	getTileHeight	max(1, framebufferHeight/17)
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method5	getScreenshotTileWidth	704/25 source tile width
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method6	getScreenshotTileHeight	544/20 source tile height
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method7	getWidth	@Generated 704
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method8	getHeight	@Generated 544
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod4	M	method9	getFramebuffer	@Generated field4
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method2	toggleUniform	@CallbackJS("toggleUniform"); twin ShaderDebugJsBridge.method2
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method3	toggleHiddenUniform	@CallbackJS("toggleHiddenUniform")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method4	updateResolution	@CallbackJS("updateResolution")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method5	updateShaderType	@CallbackJS("updateShaderType")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method6	updateStaticShader	@CallbackJS("updateStaticShader")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method7	requestCustomShader	@CallbackJS("requestCustomShader")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method8	updateMiscToggle	@CallbackJS("updateMiscToggle")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method9	requestFeedAction	@CallbackJS("requestFeedAction")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method10	requestHotReload	@CallbackJS("requestHotReload")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method11	createSampler	@CallbackJS("createSampler")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method12	requestSamplerRename	@CallbackJS("requestSamplerRename")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method13	requestSamplerFile	@CallbackJS("requestSamplerFile")
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod.Shaderdebugmod5	M	method14	requestDeleteSampler	@CallbackJS("requestDeleteSampler")

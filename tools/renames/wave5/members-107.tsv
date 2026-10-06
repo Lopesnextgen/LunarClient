@@ -1,0 +1,496 @@
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest.Chest	F	field1	locations	Map<String,List<Vector3d>> area->positions; read by getLocations; SkyblockHidePlayersNearNpc:36 iterates entries as positions
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest.Chest	M	method1	getLocations	getter field1.get(name); call SkyblockHidePlayersNearNpc:37 chest4.method1(IslandUtils.method2().name())
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest.NpcLocations	F	field1	locations	Map<String,List<Vector3d>> area->positions (same holder shape as Chest.locations)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest.NpcLocations	M	method1	getLocations	getter field1.get(name); call SkyblockHidePlayersNearNpc:37 chest4.method1(island name); built by ImportantNpcLocationsDeserializer.deserialize
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest.ImportantNpcLocationsDeserializer	M	method1	deserialize	implements com.google.gson.JsonDeserializer<NpcLocations>; must keep the base name deserialize(JsonElement,Type,JsonDeserializationContext); registered Module:80
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest.ImportantNpcLocationsDeserializer	M	method2	parsePosition	splits "x,y,z" via String.split(",") into a Vector3d; only caller is deserialize
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest.JsonDeserializerIterator	M	method1	deserialize	implements JsonDeserializer<Chest>; base name deserialize; Chest counterpart of the NpcLocations deserializer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.chest.JsonDeserializerIterator	M	method2	parsePosition	splits "x,y,z" via String.split(",") into a Vector3d; only caller is deserialize
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	F	field1	type	AnimatedValue.Type easing mode; drives the switch in getValue
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	F	field2	endTime	millis deadline compared against bridge$getSystemTime() in getValue/isAnimating
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	F	field3	startValue	animation start used in the getValue interpolation and getDirection
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	F	field4	duration	millis duration set by animate(); divisor in getValue
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	F	field5	enabled	setEnabled toggles interpolation (lombok @Generated setter method6)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	M	method1	animateTo	animateTo(value,duration): if value changed delegates to animate(current,value,duration); call InventorySearchOverlay:76/78/114/125/131
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	M	method2	animate	sets startValue/duration/endTime/target; called by animateTo and the storageoverlay/scrollabletooltips copies
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	M	method3	isAnimating	now < endTime; call DungeonMapOverlay:69 (!field6.method3())
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	M	method4	getDirection	Direction2D/FovType2 UP when target > start, DOWN otherwise
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AnimatedValue	M	method6	setEnabled	@Generated setter for enabled (no external call in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	F	field1	type	AnimatedValue.Type easing mode; drives the switch in getValue
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	F	field2	endTime	millis deadline compared against bridge$getSystemTime() in getValue/isAnimating
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	F	field3	startValue	animation start used in the getValue interpolation and getDirection
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	F	field4	duration	millis duration set by animate(); divisor in getValue
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	F	field5	enabled	setEnabled toggles interpolation (lombok @Generated setter method6)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	M	method1	animateTo	animateTo(value,duration): if value changed delegates to animate(current,value,duration); call InventorySearchOverlay:76/78/114/125/131
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	M	method2	animate	sets startValue/duration/endTime/target; called by animateTo and the storageoverlay/scrollabletooltips copies
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	M	method3	isAnimating	now < endTime; call DungeonMapOverlay:69 (!field6.method3())
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	M	method4	getDirection	Direction2D/FovType2 UP when target > start, DOWN otherwise
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click4	M	method6	setEnabled	@Generated setter for enabled (no external call in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.AverageInterval	M	method1	averageInterval	averages successive deltas of a FloatList over at most 8 samples; call SkyblockEggLocator:208 and SkyblockFishingHotspotLocator:199 (Math.E / averageInterval(field))
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click15	M	method1	averageInterval	twin of AverageInterval.method1 (identical body; cluster-108 twin class)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	F	field1	cache	Guava LoadingCache<String,Double> for expression->value (5 min expire, soft values)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	F	field2	SEPARATOR_PATTERN	Pattern "[ _,]" strips spaces/commas before tokenizing
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	F	field3	DIGIT_PATTERN	Pattern "[0-9.]" identifies number characters in tokenize
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	F	field4	PARENTHESIS_PATTERN	Pattern "[()]" identifies group characters in tokenize
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	F	field5	ALLOWED_CHARACTERS_PATTERN	Pattern of characters valid in a sign expression (replaceAll emptiness check in evaluate)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	F	field6	SUFFIX_MULTIPLIERS	k/m/b/t/s/e -> multiplier map filled in the static block (1000..1e12, 64, 160)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	F	field7	SCIENTIFIC_FORMAT	DecimalFormat cloned from Locale.ROOT; pattern "#.#####E0"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	F	field8	DECIMAL_FORMAT	DecimalFormat "#,##0.#" used for the final result string
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method1	formatNumber	formats a double without trailing zeros; also used as the CacheLoader target
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method2	calculateCached	cache.get(expression), NaN on ExecutionException; used by formatResult/evaluate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method3	calculate	uncached evaluate: tokenize + parse + evaluate; NaN on failure
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method4	evaluate	Optional<Double> sanitized evaluation (validates allowed characters first)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method5	formatExpression	formats an expression result without the skip-unchanged flag
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method6	formatResult	EXTERNAL: InventorySearchOverlay:67 and SkyblockCalculatorInSigns:45/59 CalculatorParser.method6(line,true) replaces a sign line with the computed value
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method7	createResultComponent	builds the " = <result>" TextComponent for sign rendering
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method8	tokenize	Queue<String> -> Queue<Token>, expands suffix multipliers and implicit multiplication
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser	M	method9	parseExpression	delegates to ExpressionNode.parse
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Data	F	field1	left	left operand expression node
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Data	F	field2	right	right operand expression node
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Data	F	field3	operator	operator token resolved in evaluate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Data	F	field4	resolved	true once the node has been folded into its parent
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Data	M	method3	evaluate	@Override ExpressionNode.evaluate; applies the operator to left/right
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.ExpressionNode	M	method1	parse	expression parser entry (static); called by parseExpression
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.ExpressionNode	M	method2	parseNode	builds a node from the next token (operation/number/group)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.ExpressionNode	M	method3	evaluate	abstract evaluate; implemented by the operator and number nodes
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.NumberNode	F	field1	token	wraps the number token
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.NumberNode	M	method3	evaluate	@Override evaluates to token.getNumber()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Token	F	field1	type	NUMBER/GROUP/OPERATION; the constructor sets it and parses the number
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Token	F	field2	number	numeric value of the token (NaN until parsed)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Token	M	method1	getType	@Generated getter; callers compare with Type.GROUP/NUMBER/OPERATION
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CalculatorParser.Token	M	method2	getNumber	@Generated getter; callers NumberNode.evaluate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	F	field1	cache	Guava LoadingCache<String,Double> for expression->value (5 min expire, soft values)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	F	field2	SEPARATOR_PATTERN	Pattern "[ _,]" strips spaces/commas before tokenizing
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	F	field3	DIGIT_PATTERN	Pattern "[0-9.]" identifies number characters in tokenize
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	F	field4	PARENTHESIS_PATTERN	Pattern "[()]" identifies group characters in tokenize
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	F	field5	ALLOWED_CHARACTERS_PATTERN	Pattern of characters valid in a sign expression (replaceAll emptiness check in evaluate)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	F	field6	SUFFIX_MULTIPLIERS	k/m/b/t/s/e -> multiplier map filled in the static block (1000..1e12, 64, 160)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	F	field7	SCIENTIFIC_FORMAT	DecimalFormat cloned from Locale.ROOT; pattern "#.#####E0"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	F	field8	DECIMAL_FORMAT	DecimalFormat "#,##0.#" used for the final result string
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method1	formatNumber	formats a double without trailing zeros; also used as the CacheLoader target
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method2	calculateCached	cache.get(expression), NaN on ExecutionException; used by formatResult/evaluate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method3	calculate	uncached evaluate: tokenize + parse + evaluate; NaN on failure
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method4	evaluate	Optional<Double> sanitized evaluation (validates allowed characters first)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method5	formatExpression	formats an expression result without the skip-unchanged flag
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method6	formatResult	EXTERNAL: InventorySearchOverlay:67 and SkyblockCalculatorInSigns:45/59 CalculatorParser.method6(line,true) replaces a sign line with the computed value
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method7	createResultComponent	builds the " = <result>" TextComponent for sign rendering
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method8	tokenize	Queue<String> -> Queue<Token>, expands suffix multipliers and implicit multiplication
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2	M	method9	parseExpression	delegates to ExpressionNode.parse
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data	F	field1	left	left operand expression node
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data	F	field2	right	right operand expression node
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data	F	field3	operator	operator token resolved in evaluate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data	F	field4	resolved	true once the node has been folded into its parent
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data	M	method3	evaluate	@Override ExpressionNode.evaluate; applies the operator to left/right
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data2	M	method1	parse	expression parser entry (static); called by parseExpression
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data2	M	method2	parseNode	builds a node from the next token (operation/number/group)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data2	M	method3	evaluate	abstract evaluate; implemented by the operator and number nodes
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data3	F	field1	token	wraps the number token
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data3	M	method3	evaluate	@Override evaluates to token.getNumber()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data4	F	field1	type	NUMBER/GROUP/OPERATION; the constructor sets it and parses the number
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data4	F	field2	number	numeric value of the token (NaN until parsed)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data4	M	method1	getType	@Generated getter; callers compare with Type.GROUP/NUMBER/OPERATION
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click2.Data4	M	method2	getNumber	@Generated getter; callers NumberNode.evaluate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter	F	field1	RADIUS_EPSILON	0.01F slack added/subtracted to the min/max radius bounds in sampleCandidate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter	M	method1	findCircles	findCircles(samples,minR,maxR,minPoints) with tolerance 1.0; call SkyblockHealingCircleOverlay:59
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter	M	method2	findCircles	overload with explicit tolerance; call SkyblockFishingCircleOverlay:90/94 (then data.method4() filter)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter	M	method3	fitCircles	iterative RANSAC driver: samples candidates and removes matched samples
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter	M	method4	sampleCandidate	picks 3 random samples, fits a Circle and scores close samples
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	F	field1	x	circle centre x (Circle.x)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	F	field2	y	circle centre y (Circle.y)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	F	field3	weight	mean sample weight of the matched particles
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	F	field4	pointCount	number of matched particles
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	M	method1	getX	getter x
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	M	method2	getY	getter y
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	M	method3	getWeight	getter weight
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	M	method4	getRadius	getter radius; call SkyblockFishingCircleOverlay:90 data.method4()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.Data	M	method5	getPointCount	getter pointCount
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.CircleCandidate	F	field1	score	accumulated (tolerance - distance) score of the candidate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.CircleCandidate	F	field2	pointIndices	indices into the sample list, reversed so removals are safe
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.CircleCandidate	M	method1	getScore	compared between candidates in fitCircles
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.CircleCandidate	M	method2	getCircle	fitted toxi Circle
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.CircleFitter.CircleCandidate	M	method3	getPointIndices	matched sample indices (iterated/removed in fitCircles)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5	F	field1	RADIUS_EPSILON	0.01F slack added/subtracted to the min/max radius bounds in sampleCandidate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5	M	method1	findCircles	findCircles(samples,minR,maxR,minPoints) with tolerance 1.0; call SkyblockHealingCircleOverlay:59
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5	M	method2	findCircles	overload with explicit tolerance; call SkyblockFishingCircleOverlay:90/94 (then data.method4() filter)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5	M	method3	fitCircles	iterative RANSAC driver: samples candidates and removes matched samples
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5	M	method4	sampleCandidate	picks 3 random samples, fits a Circle and scores close samples
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	F	field1	x	circle centre x (Circle.x)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	F	field2	y	circle centre y (Circle.y)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	F	field3	weight	mean sample weight of the matched particles
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	F	field4	pointCount	number of matched particles
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	M	method1	getX	getter x
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	M	method2	getY	getter y
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	M	method3	getWeight	getter weight
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	M	method4	getRadius	getter radius; call SkyblockFishingCircleOverlay:90 data.method4()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data	M	method5	getPointCount	getter pointCount
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data2	F	field1	score	accumulated (tolerance - distance) score of the candidate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data2	F	field2	pointIndices	indices into the sample list, reversed so removals are safe
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data2	M	method1	getScore	compared between candidates in fitCircles
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data2	M	method2	getCircle	fitted toxi Circle
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click5.Data2	M	method3	getPointIndices	matched sample indices (iterated/removed in fitCircles)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method1	drawBlockOutline	draws block outline at a Vector3ic with default colour 0x2200FF00
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method2	drawBlockOutline	block outline with explicit colour
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method3	drawBlockOutline	outline of the pos box expanded 0.01; delegates to method4
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method4	drawBlockOutline	AABB outline with line width from the settings option; called by method5 and Click consumers
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method5	drawBlockHighlight	outline + filled overlay; EXTERNAL SkyblockDungeonHighlightDoors:126 Click.method5
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method6	drawBlockOutlineBatched	outline with MixinHelper5_6.field52/field15 render layer chosen by the depth flag, BATCHED
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method7	drawBoxWires	wires box from an AABB into a RenderLayerBridge line buffer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method8	drawFaceWireframe	outline of one face for a HorsestatsType_2 direction (NORTH..DOWN)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method9	drawStringCentered	centered world String at (x,y,z); EXTERNAL DungeonSecretWaypoints:344/347, SkyblockDungeonBloodCampHelper:154, SkyblockBoulder
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method10	drawComponentCentered	centered world Component; EXTERNAL SkyblockWaterRoom:184, HologramEntityManager
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method11	drawComponentCentered	centered world Component with scale; EXTERNAL SkyblockDungeonTeammateHighlight
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method12	drawComponentCentered	core centered Component renderer (scale + depth flag)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method13	beginTextTransform	private: push/translate/rotate billboard transform for world text
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method14	drawBlockHighlightAt	outline+fill of the block at a Vector3i via Itemcounter6Extension bridge$getBlockAt
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method15	drawLine	line between two Vector3dc with colour
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method16	drawLine	line between two doubles with colour (used by drawBoxWires)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method17	drawLines	lines for a Collection<Line3D>
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method18	drawFishingLines	lines for a Set<Fishing> segment set; EXTERNAL RewindHandlers3Updater
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method19	drawLine	single Line3D with colour/width/depth; EXTERNAL SkyblockWaterRoom:201
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method20	drawLine	float-coordinate line (delegates to method19)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method21	drawLines	Set<Line3D> lines with width/depth
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method22	drawDashedLine	private: emits 2-unit segments of a Line3D
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method23	drawBoxWires	wires box from an AABB into a line buffer; EXTERNAL DungeonSecretWaypoints:293, HologramEntityManager
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method24	drawBoxWires	12-edge wires box (WIREFRAME highlight); EXTERNAL DungeonSecretWaypoints:295, SkyblockDungeonBloodCampHelper:130, SkyblockHigherLower
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method25	drawBoxFilled	filled box from an AABB; EXTERNAL DungeonSecretWaypoints:272
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method26	drawBoxFilled	filled box with per-face quads; EXTERNAL SkyblockDungeonBloodCampHelper:111, SkyblockHigherLower, DungeonSecretWaypoints:274
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method27	drawBoxSolid	filled box used for the FILL highlight style; EXTERNAL Dungeonwaypoints2:90
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method28	drawCircleOutline	circle outline from the circlePoints at radius/colour
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method29	drawCircleFilled	filled circle fan (triangles to the centre)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method30	getLookVector	player eye look vector from rotation pitch/yaw; used by drawLookLine
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method31	drawString	world String billboard (shadow/depth flags, scale 1.0)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method32	drawString	world String billboard with distance scaling; EXTERNAL Holograms9:184
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method33	drawString	world String at a Vector3d
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method34	drawString	world String with colour defaulting to RewindhandlersExtension RED
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method35	drawStringWithColor	world String with a RewindhandlersExtension colour source; EXTERNAL Holograms9:40/57
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method36	drawStringBillboard	core world String renderer (distance-based rescale/offset)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method37	drawEntityBox	unit box around an entity position with colour source/filled/through-walls
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method38	drawEntityBox	entity box with explicit scale
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method39	drawEntityBox	entity box centred on (x,z) with scale (delegates to method40)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method40	drawEntityBox	core entity box (centre offsets + entity render pos at partial ticks)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method41	drawBoxHighlight	box highlight at a Vector3ic with colour source
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method42	drawBoxHighlight	box highlight at a Vector3ic with line width
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method43	drawBoxHighlight	box highlight at a Vector3dc
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method44	drawBoxHighlight	box highlight around an entity with line width
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method45	drawBox	box at position/size with colour source (delegates to method46)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method46	drawBox	core box renderer: filled quads or wires, colour int, line width, render-layer flag; EXTERNAL Holograms9:176/180/210
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method47	drawLine	line between two Vector3dc with colour source and width
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method48	drawLine	line between two doubles with colour/width/depth; EXTERNAL Holograms9:206
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method49	drawLine	line between two doubles with colour source/width/depth
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method50	drawLineWithArrow	Vector3dc line that optionally renders an arrow head; EXTERNAL Holograms9:286/294
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method51	drawLineImpl	core line renderer: shortens the segment and calls drawArrowHead when the arrow flag is set
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method52	drawArrowHead	private: cone/tetrahedron arrow head at the line end
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method53	drawLookLine	line from the camera look direction to a target point; EXTERNAL SkyblockWaterRoom:196
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method54	drawCylinderWalls	cylinder wall quads over the 64-point circle at radius/height
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method55	circlePoints	64 sampled circle points around (x,z) plus the closing point
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method56	getBlockAABB	AABB of the block at a Vector3i (fallback unit cube); EXTERNAL DungeonSecretWaypoints:272/293
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method57	drawBlockOutlineFade	outline fading with distance (colour blended by hypot, layer field53)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method58	drawBeaconBeam	beacon beam at (x,z) (delegates to method59)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method59	drawBeaconBeamInternal	core beacon cylinder with shader push and Fishing2Extension.beginBeacon/endBeacon
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method60	pushHudTransform	scales/translates the render context for a HUD component and returns the scale; EXTERNAL SkyblockBitsShopHelper:184, SkyblockSkymartHelper
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method61	getHudScale	private: GUI scale unless the GUI type is ALL/MODS
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click	M	method62	layoutTooltip	renders multiline tooltip components and returns their Vector4f bounds
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field1	entity	located boss entity (bridge$isRiding drives RADIATION; distance-checked in isValid)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field2	nameEntity	companion entity whose bridge$getCustomName is matched in update
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field3	anchorEntity	second companion; proximity to nameEntity validated by isValid
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field4	state	SHIELD/RADIATION/NONE phase
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field5	shields	entities that hit the shield phase (SkyblockEndermanSlayer method8/method12)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field6	spawnedEntities	spawned Bridge11_5 entities added on EventEntitySpawn (SkyblockEndermanSlayer:265)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field7	radiationTimer	HudTimer started for 8000ms when RADIATION begins
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field8	glyphData	YANG_GLYPH tracker (Click10.Data)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	F	field9	lastBlockPos	last glyph block position compared in SkyblockEndermanSlayer.method15
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method1	update	per-tick name/phase refresh; call SkyblockEndermanSlayer.method11 click.method1()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method2	getEntity	@Generated getter for entity; used in the beacon render of SkyblockEndermanSlayer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method3	getNameEntity	@Generated getter for nameEntity
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method4	getAnchorEntity	@Generated getter for anchorEntity
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method5	getState	@Generated getter; call SkyblockEndermanSlayer:574 Type.RADIATION check
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method6	getShields	@Generated getter for shields
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method7	getSpawnedEntities	@Generated getter; calls SkyblockEndermanSlayer:258/265/275 contains check
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method8	getRadiationTimer	@Generated getter for radiationTimer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method9	getGlyphData	@Generated getter; call SkyblockEndermanSlayer method14 timestamp check
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method10	getLastBlockPos	@Generated getter; call SkyblockEndermanSlayer.method15
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method11	setEntity	@Generated setter for entity
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method12	setNameEntity	@Generated setter for nameEntity
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method13	setAnchorEntity	@Generated setter for anchorEntity
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method14	setState	@Generated setter for state
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method15	setShields	@Generated setter for shields
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method16	setSpawnedEntities	@Generated setter for spawnedEntities
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method17	setRadiationTimer	@Generated setter for radiationTimer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method18	setGlyphData	setter for glyphData; call SkyblockEndermanSlayer:325 new Data(entity)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10	M	method19	setLastBlockPos	setter for lastBlockPos; call SkyblockEndermanSlayer method14/method15
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	F	field1	entity	glyph source entity (may be null; position is used then)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	F	field2	position	Vec3Bridge fallback position
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	F	field3	timestamp	millis when the glyph spawned (-1 = none)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	M	method1	getEntity	getter entity
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	M	method2	getPosition	getter position
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	M	method3	getTimestamp	getter timestamp
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	M	method4	setEntity	setter entity (method14 clears the glyph)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	M	method5	setPosition	setter position
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click10.Data	M	method6	setTimestamp	setter timestamp
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	F	field1	SKYBLOCK_EPOCH	1560275700L = SkyBlock release epoch (seconds) used by every calculation
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	F	field2	YEAR_DURATION_SECONDS	446400L = SkyBlock year length (5d4h)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	F	field3	DAY_DURATION_SECONDS	1200L = SkyBlock day length (20 min)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method1	getCurrentTimeSeconds	System.currentTimeMillis()/1000; same method in SkyblockCalendar (SkyblockRaffleTasksHud:111/137/142)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method2	getYear	epoch-relative SkyBlock year number (+1)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method3	getYearSeconds	seconds elapsed in the current year; call GuiRewindhandlersHandler211:20 (election at 105900s) and SkyblockElectionListener
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method4	getDaySeconds	seconds elapsed in the current day (getPeriodSeconds(1))
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method5	getPeriodSeconds	seconds elapsed in the current N-SkyBlock-day period; call SkyblockHoppityEggHud:142/532 (2-day events)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method6	getSeason	current season phase enum (HighlightType4 / SkyblockSeason)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method7	isSeasonBetween	ordinal range test between two seasons
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method8	isSpring	EARLY_SPRING..LATE_SPRING; call SkyblockHarvestFeastTrackerHud/SkyblockHoppityEggHud twins
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click11	M	method9	isAutumn	EARLY_AUTUMN..LATE_AUTUMN; call SkyblockHarvestFeastTrackerHud:110
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12	M	method1	getStyle	Style from an EnumOption<Gui2Extension> colour; calls Holograms4_4:50/54, Fishing3:107, SkyblockDungeonTimer:644
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12	M	method2	builder	creates the Data builder; calls Holograms9_2:38/43
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12	M	method3	getProgressColor	green/yellow/red threshold colour for a value ratio
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12	M	method4	createItemLine	material line "- name x<count>" with GOLD/WHITE defaults
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12	M	method5	createItemLine	createItemLine(text,count,labelColor,valueColor) core
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12	M	method6	createClickableText	ClickableText with a plain String label
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12	M	method7	createClickableText	ClickableText from a Component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	F	field1	title	left/title TextComponent (starts as Component.empty)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	F	field2	value	right/value TextComponent (starts as Component.empty)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	F	field3	titleColor	colour applied to the title (Skyblock option colours)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	F	field4	valueColor	colour applied to the value
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	F	field5	separatorColor	colour of the ": " separator
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	F	field6	showTitle	when false build() returns only the value
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method1	title	sets the title component and returns this
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method2	title	builds the title from a String with titleColor
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method3	value	sets the value component and returns this
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method4	value	builds the value from a String with valueColor
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method5	titleColor	sets titleColor and re-colours the title
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method6	titleColor	sets titleColor from an RGB int
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method7	valueColor	sets valueColor and re-colours the value
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method8	valueColor	sets valueColor from an RGB int
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method9	separatorColor	sets separatorColor
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method10	separatorColor	sets separatorColor from an RGB int
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method11	color	applies one colour to title/value/separator
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method12	showTitle	sets showTitle
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method13	titleDecoration	applies text decorations to the title
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method14	valueDecoration	applies text decorations to the value
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method15	titleHover	sets the title hover event
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click12.Data	M	method16	valueHover	sets the value hover event
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field1	GLYPH_E000	private-use icon-font code point U+E000; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field2	GLYPH_E001	private-use icon-font code point U+E001; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field3	GLYPH_E002	private-use icon-font code point U+E002; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field4	GLYPH_E003	private-use icon-font code point U+E003; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field5	GLYPH_E004	private-use icon-font code point U+E004; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field6	GLYPH_E005	private-use icon-font code point U+E005; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field7	GLYPH_E006	private-use icon-font code point U+E006; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field8	GLYPH_E007	private-use icon-font code point U+E007; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field9	GLYPH_E008	private-use icon-font code point U+E008; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field10	GLYPH_E009	private-use icon-font code point U+E009; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field11	GLYPH_E00A	private-use icon-font code point U+E00A; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field12	GLYPH_E00B	private-use icon-font code point U+E00B; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field13	GLYPH_E00C	private-use icon-font code point U+E00C; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field14	GLYPH_E00D	private-use icon-font code point U+E00D; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field15	GLYPH_E00E	private-use icon-font code point U+E00E; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field16	GLYPH_E00F	private-use icon-font code point U+E00F; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field17	GLYPH_E010	private-use icon-font code point U+E010; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field18	GLYPH_E011	private-use icon-font code point U+E011; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field19	GLYPH_E012	private-use icon-font code point U+E012; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field20	GLYPH_E013	private-use icon-font code point U+E013; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field21	GLYPH_E014	private-use icon-font code point U+E014; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field22	GLYPH_E015	private-use icon-font code point U+E015; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field23	GLYPH_E016	private-use icon-font code point U+E016; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field24	GLYPH_E017	private-use icon-font code point U+E017; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field25	GLYPH_E018	private-use icon-font code point U+E018; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field26	GLYPH_E019	private-use icon-font code point U+E019; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field27	GLYPH_E01A	private-use icon-font code point U+E01A; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field28	GLYPH_E01B	private-use icon-font code point U+E01B; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field29	GLYPH_E01C	private-use icon-font code point U+E01C; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field30	GLYPH_E01D	private-use icon-font code point U+E01D; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field31	GLYPH_E01E	private-use icon-font code point U+E01E; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field32	GLYPH_E01F	private-use icon-font code point U+E01F; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field33	GLYPH_E020	private-use icon-font code point U+E020; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field34	GLYPH_E021	private-use icon-font code point U+E021; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field35	GLYPH_E022	private-use icon-font code point U+E022; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field36	GLYPH_E023	private-use icon-font code point U+E023; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field37	GLYPH_E024	private-use icon-font code point U+E024; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field38	GLYPH_E025	private-use icon-font code point U+E025; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field39	GLYPH_E026	private-use icon-font code point U+E026; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field40	GLYPH_E027	private-use icon-font code point U+E027; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field41	GLYPH_E028	private-use icon-font code point U+E028; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field42	GLYPH_E029	private-use icon-font code point U+E029; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field43	GLYPH_E02A	private-use icon-font code point U+E02A; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field44	GLYPH_E02B	private-use icon-font code point U+E02B; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field45	GLYPH_E02C	private-use icon-font code point U+E02C; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field46	GLYPH_E02D	private-use icon-font code point U+E02D; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field47	GLYPH_E050	private-use icon-font code point U+E050; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field48	GLYPH_E051	private-use icon-font code point U+E051; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field49	GLYPH_E052	private-use icon-font code point U+E052; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field50	GLYPH_E053	private-use icon-font code point U+E053; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field51	GLYPH_E054	private-use icon-font code point U+E054; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field52	GLYPH_E055	private-use icon-font code point U+E055; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field53	GLYPH_E056	private-use icon-font code point U+E056; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field54	GLYPH_E057	private-use icon-font code point U+E057; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field55	GLYPH_E058	private-use icon-font code point U+E058; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field56	GLYPH_E059	private-use icon-font code point U+E059; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field57	GLYPH_E05A	private-use icon-font code point U+E05A; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field58	GLYPH_E05B	private-use icon-font code point U+E05B; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field59	GLYPH_E070	private-use icon-font code point U+E070; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field60	GLYPH_E071	private-use icon-font code point U+E071; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field61	GLYPH_E072	private-use icon-font code point U+E072; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field62	GLYPH_E073	private-use icon-font code point U+E073; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field63	GLYPH_E074	private-use icon-font code point U+E074; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field64	GLYPH_E075	private-use icon-font code point U+E075; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field65	GLYPH_E076	private-use icon-font code point U+E076; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field66	GLYPH_E077	private-use icon-font code point U+E077; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field67	GLYPH_E078	private-use icon-font code point U+E078; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field68	GLYPH_E079	private-use icon-font code point U+E079; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field69	GLYPH_E07A	private-use icon-font code point U+E07A; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field70	GLYPH_E07B	private-use icon-font code point U+E07B; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field71	GLYPH_E07C	private-use icon-font code point U+E07C; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field72	GLYPH_E07D	private-use icon-font code point U+E07D; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field73	GLYPH_E07E	private-use icon-font code point U+E07E; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field74	GLYPH_E07F	private-use icon-font code point U+E07F; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field75	GLYPH_E080	private-use icon-font code point U+E080; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field76	GLYPH_E081	private-use icon-font code point U+E081; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field77	GLYPH_E082	private-use icon-font code point U+E082; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field78	GLYPH_E083	private-use icon-font code point U+E083; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field79	GLYPH_E084	private-use icon-font code point U+E084; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field80	GLYPH_E085	private-use icon-font code point U+E085; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field81	GLYPH_E086	private-use icon-font code point U+E086; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field82	GLYPH_E087	private-use icon-font code point U+E087; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field83	GLYPH_E060	private-use icon-font code point U+E060; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field84	GLYPH_E061	private-use icon-font code point U+E061; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field85	GLYPH_E062	private-use icon-font code point U+E062; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field86	GLYPH_E063	private-use icon-font code point U+E063; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field87	GLYPH_E064	private-use icon-font code point U+E064; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field88	GLYPH_E065	private-use icon-font code point U+E065; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field89	GLYPH_E066	private-use icon-font code point U+E066; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field90	GLYPH_E067	private-use icon-font code point U+E067; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click13	F	field91	GLYPH_E068	private-use icon-font code point U+E068; twin FontGlyphs; no semantic source (class unreferenced in tree)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click14	M	method1	findNearest	nearest entity matching the NPC-or-mob predicate; twin EntityFinder.method1 (SkyblockEndermanSlayer.method7 uses the EntityFinder copy)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click14	M	method2	findNearest	overload with explicit Predicate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click14	M	method3	findNearest	overload with Predicate + max squared distance (Float.MAX_VALUE default)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click14	M	method4	distanceSquared	squared distance with +2.0 y offset; call Click10.isValid (Click14.method4 > 4.0F)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	F	field1	COORDINATE_SCALE	10000.0 quantisation factor in quantize()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	M	method1	mergeEdges	MaskedMap of EdgeKey->Data for visible edges; call Dungeonwaypoints2:107
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	M	method2	mergeFaces	MaskedMap of FaceKey->BlockFace; call Dungeonwaypoints2:85
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	M	method3	isExposedEdge	IntPredicate excluding fully buried masks 3/12/5/10/15
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	M	method4	addEdgeBox	adds the 12 edges of a BlockBox to the edge map
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	M	method5	addFaceBox	adds the 6 faces of a BlockBox to the face map
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	M	method6	addEdge	EdgeKey + Data with visibility mask (1<<bit)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	M	method7	addFace	FaceKey + BlockFace with 1/2 mask
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16	M	method8	quantize	Math.round(coord*COORDINATE_SCALE) hash key
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	F	field1	x1	edge endpoint coordinate x1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	F	field2	y1	edge endpoint coordinate y1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	F	field3	z1	edge endpoint coordinate z1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	F	field4	x2	edge endpoint coordinate x2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	F	field5	y2	edge endpoint coordinate y2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	F	field6	z2	edge endpoint coordinate z2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	F	field7	color	ARGB colour passed when the edge is added
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	M	method1	getX1	@Generated getter x1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	M	method2	getY1	@Generated getter y1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	M	method3	getZ1	@Generated getter z1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	M	method4	getX2	@Generated getter x2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	M	method5	getY2	@Generated getter y2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	M	method6	getZ2	@Generated getter z2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data	M	method7	getColor	@Generated getter color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	F	field1	minX	BlockBox minX (FaceMerger.BlockBox twin)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	F	field2	minY	BlockBox minY (FaceMerger.BlockBox twin)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	F	field3	minZ	BlockBox minZ (FaceMerger.BlockBox twin)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	F	field4	maxX	BlockBox maxX (FaceMerger.BlockBox twin)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	F	field5	maxY	BlockBox maxY (FaceMerger.BlockBox twin)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	F	field6	maxZ	BlockBox maxZ (FaceMerger.BlockBox twin)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	F	field7	color	BlockBox colour
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	M	method1	fromArray	static factory from double[6]; call Dungeonwaypoints2:81/103
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	M	method2	minY	getter minY (twin FaceMerger.BlockBox.method2)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	M	method3	maxY	getter maxY (twin FaceMerger.BlockBox.method3)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data2	M	method4	getColor	getter field7
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	F	field1	x1	quantised edge key coordinate x1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	F	field2	y1	quantised edge key coordinate y1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	F	field3	z1	quantised edge key coordinate z1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	F	field4	x2	quantised edge key coordinate x2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	F	field5	y2	quantised edge key coordinate y2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	F	field6	z2	quantised edge key coordinate z2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	F	field7	color	colour part of the edge key
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	M	method1	of	static factory canonicalising the two endpoints
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	M	method2	getX1	@Generated getter x1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	M	method3	getY1	@Generated getter y1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	M	method4	getZ1	@Generated getter z1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	M	method5	getX2	@Generated getter x2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	M	method6	getY2	@Generated getter y2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	M	method7	getZ2	@Generated getter z2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data3	M	method8	getColor	@Generated getter color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	F	field1	type	face axis X/Y/Z
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	F	field2	axis	constant coordinate of the face on its axis
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	F	field3	min1	first range minimum
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	F	field4	min2	second range minimum
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	F	field5	max1	first range maximum
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	F	field6	max2	second range maximum
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	F	field7	color	face colour
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	F	field8	inverted	reverses vertex winding (back face)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method1	draw	dispatches drawY/drawZ/drawX (twin FaceMerger.BlockFace.method1)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method2	drawY	draws the Y-axis face
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method3	drawZ	draws the Z-axis face
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method4	drawX	draws the X-axis face
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method5	getType	getter type
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method6	getAxis	getter axis
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method7	getMin1	getter min1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method8	getMin2	getter min2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method9	getMax1	getter max1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method10	getMax2	getter max2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method11	getColor	getter color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data4	M	method12	isInverted	getter inverted
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	F	field1	type	face axis
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	F	field2	axis	quantised axis coordinate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	F	field3	min1	first range minimum
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	F	v0	min2	second range minimum (placeholder v0)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	F	field4	max1	first range maximum
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	F	v1	max2	second range maximum (placeholder v1)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	F	field5	color	face colour
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	M	method1	of	static factory canonicalising the min/max ranges
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	M	method2	getType	getter type
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	M	method3	getAxis	getter axis
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	M	method4	getMin1	getter min1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	M	method5	getMin2	getter min2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	M	method6	getMax1	getter max1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	M	method7	getMax2	getter max2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data5	M	method8	getColor	getter color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data6	F	field1	entries	LinkedHashMap key -> Data<V> keeping insertion order
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data6	M	method1	put	computeIfAbsent + OR the visibility mask
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data6	M	method2	values	value list filtered by the IntPredicate mask test
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click16.Data6.Data	F	field1	value	masked value (mask already named)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click17	M	method1	withPadding	pads a HUD component by 4 and wraps it in a background; call Gui:62, TitledHudElement:32
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click17	M	method2	withPadding	withPadding(component, style consumer) core
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click17	M	method3	withBackground	padded background with a visibility supplier
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click17	M	method4	withBackground	core (supplier + style consumer)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click17	M	method5	createItemComponent	ItemStack HUD component (foil on 1.20+)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click17	M	method6	createLoreLines	title + "key: value" TextComponents; call SkyblockBitsShopHelper:258, SkyblockSkymartHelper:232
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	F	field1	enabled	static generated flag, unused anywhere (low confidence; see notes)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	M	method1	hasIsland	island != NONE; calls Fishing4:93, Nameplate:27/30, GuiRewindhandlersHandler*
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	M	method2	getIsland	current SkyblockIsland via HypixelLocationListener; call Nameplate:36, Holograms2_5:629
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	M	method3	hasPowderSources	island().containsPowderSources()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	M	method4	isMiningIsland	island().isMiningIsland()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	M	method5	getEyeHeight	1.54 sneaking / 1.62 standing; call Holograms2:218
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	M	method6	updateCoordinates	Coordinates.method2(player position, player) (twin plays the island sound)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	M	method7	isEnabled	@Generated getter for enabled (unused)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click3	M	method8	setEnabled	@Generated setter for enabled (unused)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	F	field1	EMPTY_SET	sentinel IntOpenHashSet compared by identity when nothing matches
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	F	field2	exactSlots	exact GUI title -> slot indices
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	F	field3	startsWithMatchers	"^name" matchers, checked first (MiddleClickGuiRegistry.method3, SkyblockMiddleClickGui:112)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	F	field4	endsWithMatchers	"name$" matchers (MiddleClickGuiRegistry.method4, SkyblockMiddleClickGui:114)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	F	field5	containsMatchers	"*name*" matchers (MiddleClickGuiRegistry.method5, SkyblockMiddleClickGui:110)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	F	field6	cache	Guava LoadingCache<String,IntOpenHashSet> (max 50)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	M	method1	findSlots	title -> slot set or null; call SkyblockMiddleClickGui:76 click64.method1(title)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	M	method2	resolveSlots	cache loader resolving exact + pattern lists
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	M	method3	registerStartsWith	adds a startsWith matcher
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	M	method4	registerEndsWith	adds an endsWith matcher
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	M	method5	registerContains	adds a contains matcher
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6	M	method6	registerExact	adds an exact title entry
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6.Data	F	field1	pattern	matcher pattern returned by the already-named Data.name()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6.Data	F	field2	slots	slot indices for the matcher
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click6.Data	M	method1	getSlots	getter slots
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click7	M	method1	fitLine	RANSAC line fit with defaults (100 iterations, 0.1 tolerance, 100 points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click7	M	method2	fitLine	fitLine(points, iterations, tolerance, minPoints) core
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click7	M	method3	distanceToLine	point-to-ray distance used to pick inliers
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click7	M	method4	createSegment	averages inliers and projects them onto the direction -> Fishing segment
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click8	F	field1	windows	ArrayDeque of per-tick sample collections
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click8	F	field2	current	collection being filled for the current tick
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click8	M	method1	next	rotates to the next window and returns the oldest
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click9	F	field1	position	Vec2D sample position
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click9	F	field2	weight	sample weight averaged by the circle fitter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click9	F	field3	timestamp	sample time (millis)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click9	M	method1	getPosition	getter; used by circle fitting
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click9	M	method2	getWeight	getter; used by circle fitting weight average
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Click9	M	method3	getTimestamp	getter timestamp

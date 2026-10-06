@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.markers.mixin.nameplate
+com.moonsworth.lunar.client.markers.mixin.rewindhandlers
+com.moonsworth.lunar.client.markers.nameplate
+com.moonsworth.lunar.client.markers.nameplate.mixin
+com.moonsworth.lunar.client.markers.rewindhandlers
+com.moonsworth.lunar.client.memory
+com.moonsworth.lunar.client.mixin
+com.moonsworth.lunar.client.mobsize.mixin

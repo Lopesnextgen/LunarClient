@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.replay
+com.moonsworth.lunar.client.replay.fishing
+com.moonsworth.lunar.client.replay.gui
+com.moonsworth.lunar.client.replay.highlight
+com.moonsworth.lunar.client.replay.highlight.nameplate
+com.moonsworth.lunar.client.replay.holograms
+com.moonsworth.lunar.client.replay.mixin
+com.moonsworth.lunar.client.replay.mixin.nameplate

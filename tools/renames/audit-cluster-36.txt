@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.onesevenvisuals.modern
+com.moonsworth.lunar.client.framework.feature.overlay
+com.moonsworth.lunar.client.framework.feature.pkg
+com.moonsworth.lunar.client.framework.feature.pkg.mixin
+com.moonsworth.lunar.client.framework.feature.potioncounter
+com.moonsworth.lunar.client.framework.feature.potioneffects
+com.moonsworth.lunar.client.framework.feature.pvpinfo
+com.moonsworth.lunar.client.framework.feature.pvpinfo.pvp

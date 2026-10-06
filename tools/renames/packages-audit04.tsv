@@ -1,0 +1,14 @@
+# Package audit 04 — wrong / misplaced packages
+# Format: old.package<TAB>new.package[<TAB>evidence]
+# Prefix semantics: `old` and every `old.*` subtree move under `new`.
+# Apply with: tools/apply_package_renames.py --map tools/renames/packages-audit04.tsv
+#
+# Apply the class rename map (classes-audit04.tsv) FIRST.
+
+com.moonsworth.lunar.client.click.fishing	com.moonsworth.lunar.client.loading	loading screen stage/resource interfaces; `fishing` is a scrambler segment
+com.moonsworth.lunar.client.click.mixin	com.moonsworth.lunar.client.gui	confirm/disconnect screen; zero @Mixin classes
+com.moonsworth.lunar.client.click.rewindhandlers	com.moonsworth.lunar.client.font	text render cache (cached meshes, render passes, string-keyed map); `rewindhandlers` is a scrambler segment
+com.moonsworth.lunar.client.coordinates	com.moonsworth.lunar.client.hostedworld	host identity/player/settings/relay classes; `coordinates` is a scrambler segment reused across unrelated features
+com.moonsworth.lunar.client.coordinates.mixin	com.moonsworth.lunar.client.hostedworld	list-entry renderer + refresh thread; zero @Mixin classes; merges with the host/player classes above
+com.moonsworth.lunar.client.fishing	com.moonsworth.lunar.client.external	"[Ichor/External Link]" integration registry + ModMenu compat; `fishing` is a scrambler segment
+com.moonsworth.lunar.client.fishing.gui.mixin	com.moonsworth.lunar.client.external.gui	version-gated ExternalLink GUI hook; zero @Mixin classes

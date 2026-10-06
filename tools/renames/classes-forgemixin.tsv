@@ -1,0 +1,33 @@
+com.moonsworth.lunar.forge.mixin	EventBusMixin2	GuavaEventBusMixin	@Mixin(forge.lib.guava.eventbus.EventBus) v1_8; @WrapMethod post swallows Throwable
+com.moonsworth.lunar.forge.mixin	EventBusMixin22	GuavaEventBusV1_12Mixin	v1_12 variant of GuavaEventBusMixin (mixins.ichor.forge.v1_12)
+com.moonsworth.lunar.forge.mixin	EventBusMixin3	EventBusV1_12Mixin	@Mixin(forge.fml...eventhandler.EventBus) v1_12; overwrite post + redirect Logger.error
+com.moonsworth.lunar.forge.mixin	FMLCommonHandlerMixin2	FMLCommonHandlerV1_12Mixin	v1_12; redirect setPrivateValue(String) single-arg sig
+com.moonsworth.lunar.forge.mixin	FMLNetworkHandlerMixin2	FMLNetworkHandlerV1_12Mixin	v1_12; cancel fmlClient/fmlServerHandshake
+com.moonsworth.lunar.forge.mixin	FMLSanityCheckerMixin2	FMLSanityCheckerV1_12Mixin	v1_12; set fmlLocation from ichor pipeline
+com.moonsworth.lunar.forge.mixin	ForgeEventFactoryMixin2	ForgeEventFactoryV1_12Mixin	v1_12; redirect getPrivateValue(String) single-arg sig
+com.moonsworth.lunar.forge.mixin	ForgeVersionMixin2	ForgeVersionV1_12Mixin	v1_12; forge version string + skip version check
+com.moonsworth.lunar.forge.mixin	LoaderMixin2	LoaderV1_12Mixin	v1_12; redirect ModDiscoverer.findClasspathMods + inject Loader.instance
+com.moonsworth.lunar.forge.mixin	ModDiscovererMixin2	ModDiscovererV1_12Mixin	v1_12; overwrite findClasspathMods
+com.moonsworth.lunar.forge.mixin	ModelLoaderMixin2	ModelLoaderV1_12Mixin	v1_12; setupModelRegistry sprite lambda swap
+com.moonsworth.lunar.forge.mixin	SplashProgressMixin2	SplashProgressV1_12Mixin	v1_12; overwrite checkThreadState/start
+com.moonsworth.lunar.network.mixin	MixinHelper10	Authentication	openapi-generator auth.Authentication: applyToParams(query,header,cookie,payload,method,uri)
+com.moonsworth.lunar.network.mixin	MixinHelper102	ApiKeyAuth	openapi-generator auth.ApiKeyAuth: location/paramName/apiKey/prefix
+com.moonsworth.lunar.network.mixin	MixinHelper103	HttpBasicAuth	openapi-generator auth.HttpBasicAuth: username/password -> Credentials.basic
+com.moonsworth.lunar.network.mixin	MixinHelper104	HttpBearerAuth	openapi-generator auth.HttpBearerAuth: scheme + bearer token supplier
+com.moonsworth.lunar.network.mixin	MixinHelper2	StringUtil	openapi-generator StringUtil: containsIgnoreCase/join/collectionToString
+com.moonsworth.lunar.network.mixin	MixinHelper3	ApiCallback	openapi-generator ApiCallback<T>: onFailure/onSuccess/onUpload/DownloadProgress
+com.moonsworth.lunar.network.mixin	MixinHelper4	ApiResponse	openapi-generator ApiResponse<T>: statusCode/headers/data
+com.moonsworth.lunar.network.mixin	MixinHelper5	ServerConfiguration	openapi-generator ServerConfiguration: URL/description/variables
+com.moonsworth.lunar.network.mixin	MixinHelper6	ServerVariable	openapi-generator ServerVariable: description/defaultValue/allowableValues
+com.moonsworth.lunar.network.mixin	MixinHelper8	Pair	openapi-generator Pair: name/value query param
+com.moonsworth.lunar.network.mixin	MixinHelper9	Configuration	openapi-generator Configuration: VERSION 0.1.0-SNAPSHOT + defaultApiClient
+com.moonsworth.lunar.client.fov	Fov2	BipedModelRenderer	interface render(Bridge5_11, ModelBipedBridge, float); model render hook
+com.moonsworth.lunar.client.fov	Fov4	ShaderPackHelper	static DFB bind/restore + shader error line fixup (OptiFine)
+com.moonsworth.lunar.client.fov	Fov8	ModelRenderConfig	GeckoLib render config: AnimationProcessor/texture/model/renderType/pass/color/glow
+com.moonsworth.lunar.client.fov	Fov10	RenderContext	entity + molang Evaluator + FovType2 flags + render type; passed to Condition/Transform
+com.moonsworth.lunar.client.fov	FovType2	RenderContextType	enum IN_WORLD/IN_PLAYER_MODEL/IN_GUI/IN_FIRST_PERSON
+com.moonsworth.lunar.client.fov	FovType3	RenderPass	enum NORMAL/EMISSIVE/NORMAL_GLINT; Fov8 pass
+com.moonsworth.lunar.client.fov	Fov_2	ShaderStateHelper	shader uniforms LunarModelViewMat/ProjectionMat/LegacyUISize + areShadersEnabled
+com.moonsworth.lunar.client.fov	Fov_4	ModelVertexShader	GLSL compute shader sources for model vertex transform
+com.moonsworth.lunar.client.fov	Fov_5	EmoteModelRenderer	interface implemented by FovHandler (emote model)
+com.moonsworth.lunar.client.fov	Fov_6	RenderEntityHandle	pair (Gui2Handler3, boolean)

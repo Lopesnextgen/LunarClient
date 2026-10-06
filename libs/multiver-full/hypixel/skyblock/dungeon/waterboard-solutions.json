@@ -1,0 +1,1590 @@
+{
+  "normal": {
+    "1": {
+      "PURPLE_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "DOWN"
+        }
+      ],
+      "ORANGE_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "DOWN"
+        }
+      ],
+      "BLUE_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "DOWN"
+        }
+      ],
+      "LIME_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "UP"
+        }
+      ],
+      "RED_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "UP"
+        }
+      ]
+    },
+    "2": {
+      "PURPLE_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        }
+      ],
+      "ORANGE_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "DOWN"
+        }
+      ],
+      "BLUE_WOOL": [
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "UP"
+        }
+      ],
+      "LIME_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "UP"
+        }
+      ],
+      "RED_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        }
+      ]
+    },
+    "3": {
+      "PURPLE_WOOL": [
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        }
+      ],
+      "ORANGE_WOOL": [
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        }
+      ],
+      "BLUE_WOOL": [
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        }
+      ],
+      "LIME_WOOL": [
+        {
+          "a": "GOLD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        }
+      ],
+      "RED_WOOL": [
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        }
+      ]
+    },
+    "4": {
+      "PURPLE_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "DOWN"
+        }
+      ],
+      "ORANGE_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "DOWN"
+        }
+      ],
+      "BLUE_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "DOWN"
+        }
+      ],
+      "LIME_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "UP"
+        }
+      ],
+      "RED_WOOL": [
+        {
+          "a": "COAL_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "GOLD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "QUARTZ_BLOCK",
+          "b": "UP"
+        },
+        {
+          "a": "DIAMOND_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "EMERALD_BLOCK",
+          "b": "DOWN"
+        },
+        {
+          "a": "HARDENED_CLAY",
+          "b": "DOWN"
+        }
+      ]
+    }
+  },
+  "fast": {
+    "1-7": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 7497
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 9753
+      }
+    ],
+    "1-11": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 8743
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 10499
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 11994
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 14494
+      }
+    ],
+    "1-13": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 3496
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 6996
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 9744
+      }
+    ],
+    "1-14": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 4253
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 9498
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 11001
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 13001
+      }
+    ],
+    "1-19": [
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 4996
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 7248
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 10248
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 13253
+      }
+    ],
+    "1-21": [
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 5001
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 6755
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 8249
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 10754
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 13003
+      }
+    ],
+    "1-22": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 8254
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 9998
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 11008
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 13754
+      }
+    ],
+    "1-25": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 6792
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 8340
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 9700
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 15934
+      }
+    ],
+    "1-26": [
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 3500
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 10502
+      }
+    ],
+    "1-28": [
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 2000
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 9246
+      }
+    ],
+    "2-7": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 3655
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 8905
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 10103
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 11405
+      }
+    ],
+    "2-11": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 5003
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 6501
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 13249
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 14502
+      }
+    ],
+    "2-13": [
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 2250
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 8998
+      }
+    ],
+    "2-14": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 5247
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 9497
+      }
+    ],
+    "2-19": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 2248
+      },
+      {
+        "a": "WATER",
+        "b": 6501
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 11002
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 11996
+      }
+    ],
+    "2-21": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 3499
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 5749
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 6501
+      }
+    ],
+    "2-22": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 2752
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 10003
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 11251
+      }
+    ],
+    "2-25": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 3252
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 11002
+      }
+    ],
+    "2-26": [
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 4252
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 5250
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 13752
+      }
+    ],
+    "2-28": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 5193
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 9661
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 11317
+      }
+    ],
+    "3-7": [
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 3019
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 5669
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 8491
+      }
+    ],
+    "3-11": [
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 2750
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 3748
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 10749
+      }
+    ],
+    "3-13": [
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 2779
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 8889
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 11909
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 14093
+      }
+    ],
+    "3-14": [
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 1996
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 7498
+      }
+    ],
+    "3-19": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 4747
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 8501
+      }
+    ],
+    "3-21": [
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 2862
+      },
+      {
+        "a": "WATER",
+        "b": 4483
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 9844
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 14116
+      }
+    ],
+    "3-22": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 2793
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 5498
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 8656
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 10188
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 11728
+      }
+    ],
+    "3-25": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 7002
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 8001
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 10500
+      }
+    ],
+    "3-26": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 4247
+      },
+      {
+        "a": "WATER",
+        "b": 8245
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 10495
+      }
+    ],
+    "3-28": [
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 5331
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 8026
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 11780
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 12673
+      }
+    ],
+    "4-7": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 4690
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 8238
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 12087
+      }
+    ],
+    "4-11": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 8501
+      }
+    ],
+    "4-13": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 5496
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 9254
+      }
+    ],
+    "4-14": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 11002
+      }
+    ],
+    "4-19": [
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 2246
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 6004
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 7996
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 10497
+      }
+    ],
+    "4-21": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 2250
+      },
+      {
+        "a": "WATER",
+        "b": 3999
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 9747
+      }
+    ],
+    "4-22": [
+      {
+        "a": "COAL_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 3400
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 8251
+      },
+      {
+        "a": "COAL_BLOCK",
+        "b": 10127
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 11257
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 12165
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 13246
+      }
+    ],
+    "4-25": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 2746
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 6248
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 13496
+      }
+    ],
+    "4-26": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "QUARTZ_BLOCK",
+        "b": 2752
+      },
+      {
+        "a": "DIAMOND_BLOCK",
+        "b": 6503
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 12500
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 18000
+      }
+    ],
+    "4-28": [
+      {
+        "a": "GOLD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "EMERALD_BLOCK",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 0
+      },
+      {
+        "a": "WATER",
+        "b": 0
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 8753
+      },
+      {
+        "a": "HARDENED_CLAY",
+        "b": 11002
+      }
+    ]
+  }
+}

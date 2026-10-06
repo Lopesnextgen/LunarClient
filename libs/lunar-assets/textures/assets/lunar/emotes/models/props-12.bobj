@@ -1,0 +1,5021 @@
+# Blender v2.79 (sub 0) Blockbuster OBJ File: 'emotes_copy.blend'
+# www.blender.org
+# Mesh data
+o rps_rock
+o_arm Armature
+v -0.375000 0.518934 0.371212
+vw low_right_arm.item 1.000000
+v -0.162868 0.625000 0.187500
+vw low_right_arm.item 1.000000
+v -0.162868 0.884808 0.337500
+vw low_right_arm.item 1.000000
+v -0.375000 0.778742 0.521212
+vw low_right_arm.item 1.000000
+v -0.587132 0.625000 0.187500
+vw low_right_arm.item 1.000000
+v -0.587132 0.884808 0.337500
+vw low_right_arm.item 1.000000
+v -0.375000 0.731066 0.003788
+vw low_right_arm.item 1.000000
+v -0.375000 0.990874 0.153788
+vw low_right_arm.item 1.000000
+vt 1.0000 0.0000
+vt 0.0000 1.0000
+vt 0.0000 0.0000
+vt 1.0000 0.0000
+vt 0.0000 1.0000
+vt 0.0000 0.0000
+vt 0.0000 0.0000
+vt 1.0000 1.0000
+vt 0.0000 1.0000
+vt 1.0000 0.0000
+vt 0.0000 1.0000
+vt 0.0000 0.0000
+vt 1.0000 0.0000
+vt 0.0000 0.0000
+vt 0.0000 1.0000
+vt 1.0000 1.0000
+vt 1.0000 1.0000
+vt 1.0000 0.0000
+vt 1.0000 1.0000
+vt 1.0000 1.0000
+vn 0.7071 -0.3536 0.6124
+vn -0.7071 -0.3536 0.6124
+vn -0.7071 0.3536 -0.6124
+vn 0.7071 0.3536 -0.6124
+vn -0.0000 0.8660 0.5000
+vn 0.0000 -0.8660 -0.5000
+f 2/1/1 4/2/1 1/3/1
+f 1/4/2 6/5/2 5/6/2
+f 7/7/3 6/8/3 8/9/3
+f 7/10/4 3/11/4 2/12/4
+f 6/13/5 3/11/5 8/14/5
+f 1/4/6 7/15/6 2/12/6
+f 2/1/1 3/16/1 4/2/1
+f 1/4/2 4/17/2 6/5/2
+f 7/7/3 5/18/3 6/8/3
+f 7/10/4 8/19/4 3/11/4
+f 6/13/5 4/17/5 3/11/5
+f 1/4/6 5/20/6 7/15/6
+# Mesh data
+o rps_paper
+o_arm Armature
+v -0.343750 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.593750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.593750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.593750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.593750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.125000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.125000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.125000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.125000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.125000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.125000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.593750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.593750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.125000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.125000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.593750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.593750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.125000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.125000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.156250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.593750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.593750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.125000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.125000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.156250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.593750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.593750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.062500
+vw low_right_arm.item 1.000000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.4167 0.5000
+vt 0.4167 0.5000
+vt 0.4167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.4167 0.5000
+vt 0.4167 0.5000
+vt 0.4167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.4167 0.5000
+vt 0.4167 0.5000
+vt 0.4167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.4167 0.5000
+vt 0.4167 0.5000
+vt 0.4167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.4167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.4167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.5833 0.5000
+vt 0.7500 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.4167 0.5000
+vt 0.9167 0.5000
+vt 0.9167 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.4167 0.5000
+vt 0.9167 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.7500 0.5000
+vt 0.2500 0.5000
+vt 0.5833 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.7500 0.5000
+vt 0.5833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vt 0.2500 0.5000
+vt 0.0833 0.5000
+vt 0.0833 0.5000
+vn -1.0000 0.0000 0.0000
+vn 1.0000 0.0000 0.0000
+vn 0.0000 0.0000 1.0000
+vn 0.0000 0.0000 -1.0000
+vn 0.0000 1.0000 0.0000
+vn 0.0000 -1.0000 0.0000
+f 10/21/7 12/22/7 9/23/7
+f 14/24/7 16/25/7 13/26/7
+f 18/27/7 20/28/7 17/29/7
+f 22/30/7 24/31/7 21/32/7
+f 26/33/7 28/34/7 25/35/7
+f 30/36/7 32/37/7 29/38/7
+f 34/39/7 36/40/7 33/41/7
+f 38/42/7 40/43/7 37/44/7
+f 42/45/7 44/46/7 41/47/7
+f 46/48/7 48/49/7 45/50/7
+f 50/51/7 52/52/7 49/53/7
+f 54/54/7 56/55/7 53/56/7
+f 58/57/8 60/58/8 57/59/8
+f 62/60/8 64/61/8 61/62/8
+f 66/63/8 68/64/8 65/65/8
+f 70/66/8 72/67/8 69/68/8
+f 74/69/8 76/70/8 73/71/8
+f 78/72/8 80/73/8 77/74/8
+f 82/75/8 84/76/8 81/77/8
+f 86/78/8 88/79/8 85/80/8
+f 90/81/8 92/82/8 89/83/8
+f 94/84/8 96/85/8 93/86/8
+f 98/87/8 100/88/8 97/89/8
+f 102/90/8 104/91/8 101/92/8
+f 106/93/9 108/94/9 105/95/9
+f 110/96/9 112/97/9 109/98/9
+f 114/99/9 116/100/9 113/101/9
+f 118/102/9 120/103/9 117/104/9
+f 122/105/9 124/106/9 121/107/9
+f 126/108/9 128/109/9 125/110/9
+f 130/111/9 132/112/9 129/113/9
+f 134/114/9 136/115/9 133/116/9
+f 138/117/9 140/118/9 137/119/9
+f 142/120/9 144/121/9 141/122/9
+f 146/123/9 148/124/9 145/125/9
+f 150/126/9 152/127/9 149/128/9
+f 154/129/10 156/130/10 153/131/10
+f 158/132/10 160/133/10 157/134/10
+f 162/135/10 164/136/10 161/137/10
+f 166/138/10 168/139/10 165/140/10
+f 170/141/10 172/142/10 169/143/10
+f 174/144/10 176/145/10 173/146/10
+f 178/147/10 180/148/10 177/149/10
+f 182/150/10 184/151/10 181/152/10
+f 186/153/10 188/154/10 185/155/10
+f 190/156/10 192/157/10 189/158/10
+f 194/159/10 196/160/10 193/161/10
+f 198/162/10 200/163/10 197/164/10
+f 202/165/11 204/166/11 201/167/11
+f 206/168/11 208/169/11 205/170/11
+f 210/171/11 212/172/11 209/173/11
+f 214/174/11 216/175/11 213/176/11
+f 218/177/11 220/178/11 217/179/11
+f 222/180/11 224/181/11 221/182/11
+f 226/183/11 228/184/11 225/185/11
+f 230/186/11 232/187/11 229/188/11
+f 234/189/11 236/190/11 233/191/11
+f 238/192/11 240/193/11 237/194/11
+f 242/195/11 244/196/11 241/197/11
+f 246/198/11 248/199/11 245/200/11
+f 250/201/11 252/202/11 249/203/11
+f 254/204/11 256/205/11 253/206/11
+f 258/207/11 260/208/11 257/209/11
+f 262/210/11 264/211/11 261/212/11
+f 266/213/11 268/214/11 265/215/11
+f 270/216/11 272/217/11 269/218/11
+f 274/219/11 276/220/11 273/221/11
+f 278/222/11 280/223/11 277/224/11
+f 282/225/11 284/226/11 281/227/11
+f 286/228/11 288/229/11 285/230/11
+f 290/231/11 292/232/11 289/233/11
+f 294/234/11 296/235/11 293/236/11
+f 298/237/11 300/238/11 297/239/11
+f 302/240/11 304/241/11 301/242/11
+f 306/243/11 308/244/11 305/245/11
+f 310/246/11 312/247/11 309/248/11
+f 314/249/11 316/250/11 313/251/11
+f 318/252/11 320/253/11 317/254/11
+f 322/255/11 324/256/11 321/257/11
+f 326/258/11 328/259/11 325/260/11
+f 330/261/11 332/262/11 329/263/11
+f 334/264/11 336/265/11 333/266/11
+f 338/267/11 340/268/11 337/269/11
+f 342/270/11 344/271/11 341/272/11
+f 346/273/11 348/274/11 345/275/11
+f 350/276/11 352/277/11 349/278/11
+f 354/279/11 356/280/11 353/281/11
+f 358/282/11 360/283/11 357/284/11
+f 362/285/11 364/286/11 361/287/11
+f 366/288/11 368/289/11 365/290/11
+f 370/291/11 372/292/11 369/293/11
+f 374/294/11 376/295/11 373/296/11
+f 378/297/11 380/298/11 377/299/11
+f 382/300/11 384/301/11 381/302/11
+f 386/303/11 388/304/11 385/305/11
+f 390/306/11 392/307/11 389/308/11
+f 394/309/11 396/310/11 393/311/11
+f 398/312/11 400/313/11 397/314/11
+f 402/315/11 404/316/11 401/317/11
+f 406/318/11 408/319/11 405/320/11
+f 410/321/11 412/322/11 409/323/11
+f 414/324/11 416/325/11 413/326/11
+f 418/327/11 420/328/11 417/329/11
+f 422/330/11 424/331/11 421/332/11
+f 426/333/11 428/334/11 425/335/11
+f 430/336/11 432/337/11 429/338/11
+f 434/339/12 436/340/12 433/341/12
+f 438/342/12 440/343/12 437/344/12
+f 442/345/12 444/346/12 441/347/12
+f 446/348/12 448/349/12 445/350/12
+f 450/351/12 452/352/12 449/353/12
+f 454/354/12 456/355/12 453/356/12
+f 458/357/12 460/358/12 457/359/12
+f 462/360/12 464/361/12 461/362/12
+f 466/363/12 468/364/12 465/365/12
+f 470/366/12 472/367/12 469/368/12
+f 474/369/12 476/370/12 473/371/12
+f 478/372/12 480/373/12 477/374/12
+f 482/375/12 484/376/12 481/377/12
+f 486/378/12 488/379/12 485/380/12
+f 490/381/12 492/382/12 489/383/12
+f 494/384/12 496/385/12 493/386/12
+f 498/387/12 500/388/12 497/389/12
+f 502/390/12 504/391/12 501/392/12
+f 506/393/12 508/394/12 505/395/12
+f 510/396/12 512/397/12 509/398/12
+f 514/399/12 516/400/12 513/401/12
+f 518/402/12 520/403/12 517/404/12
+f 522/405/12 524/406/12 521/407/12
+f 526/408/12 528/409/12 525/410/12
+f 530/411/12 532/412/12 529/413/12
+f 534/414/12 536/415/12 533/416/12
+f 538/417/12 540/418/12 537/419/12
+f 542/420/12 544/421/12 541/422/12
+f 546/423/12 548/424/12 545/425/12
+f 550/426/12 552/427/12 549/428/12
+f 554/429/12 556/430/12 553/431/12
+f 558/432/12 560/433/12 557/434/12
+f 562/435/12 564/436/12 561/437/12
+f 566/438/12 568/439/12 565/440/12
+f 570/441/12 572/442/12 569/443/12
+f 574/444/12 576/445/12 573/446/12
+f 578/447/12 580/448/12 577/449/12
+f 582/450/12 584/451/12 581/452/12
+f 586/453/12 588/454/12 585/455/12
+f 590/456/12 592/457/12 589/458/12
+f 594/459/12 596/460/12 593/461/12
+f 598/462/12 600/463/12 597/464/12
+f 602/465/12 604/466/12 601/467/12
+f 606/468/12 608/469/12 605/470/12
+f 610/471/12 612/472/12 609/473/12
+f 614/474/12 616/475/12 613/476/12
+f 618/477/12 620/478/12 617/479/12
+f 622/480/12 624/481/12 621/482/12
+f 626/483/12 628/484/12 625/485/12
+f 630/486/12 632/487/12 629/488/12
+f 634/489/12 636/490/12 633/491/12
+f 638/492/12 640/493/12 637/494/12
+f 642/495/12 644/496/12 641/497/12
+f 646/498/12 648/499/12 645/500/12
+f 650/501/12 652/502/12 649/503/12
+f 654/504/12 656/505/12 653/506/12
+f 658/507/12 660/508/12 657/509/12
+f 662/510/12 664/511/12 661/512/12
+f 10/21/7 11/513/7 12/22/7
+f 14/24/7 15/514/7 16/25/7
+f 18/27/7 19/515/7 20/28/7
+f 22/30/7 23/516/7 24/31/7
+f 26/33/7 27/517/7 28/34/7
+f 30/36/7 31/518/7 32/37/7
+f 34/39/7 35/519/7 36/40/7
+f 38/42/7 39/520/7 40/43/7
+f 42/45/7 43/521/7 44/46/7
+f 46/48/7 47/522/7 48/49/7
+f 50/51/7 51/523/7 52/52/7
+f 54/54/7 55/524/7 56/55/7
+f 58/57/8 59/525/8 60/58/8
+f 62/60/8 63/526/8 64/61/8
+f 66/63/8 67/527/8 68/64/8
+f 70/66/8 71/528/8 72/67/8
+f 74/69/8 75/529/8 76/70/8
+f 78/72/8 79/530/8 80/73/8
+f 82/75/8 83/531/8 84/76/8
+f 86/78/8 87/532/8 88/79/8
+f 90/81/8 91/533/8 92/82/8
+f 94/84/8 95/534/8 96/85/8
+f 98/87/8 99/535/8 100/88/8
+f 102/90/8 103/536/8 104/91/8
+f 106/93/9 107/537/9 108/94/9
+f 110/96/9 111/538/9 112/97/9
+f 114/99/9 115/539/9 116/100/9
+f 118/102/9 119/540/9 120/103/9
+f 122/105/9 123/541/9 124/106/9
+f 126/108/9 127/542/9 128/109/9
+f 130/111/9 131/543/9 132/112/9
+f 134/114/9 135/544/9 136/115/9
+f 138/117/9 139/545/9 140/118/9
+f 142/120/9 143/546/9 144/121/9
+f 146/123/9 147/547/9 148/124/9
+f 150/126/9 151/548/9 152/127/9
+f 154/129/10 155/549/10 156/130/10
+f 158/132/10 159/550/10 160/133/10
+f 162/135/10 163/551/10 164/136/10
+f 166/138/10 167/552/10 168/139/10
+f 170/141/10 171/553/10 172/142/10
+f 174/144/10 175/554/10 176/145/10
+f 178/147/10 179/555/10 180/148/10
+f 182/150/10 183/556/10 184/151/10
+f 186/153/10 187/557/10 188/154/10
+f 190/156/10 191/558/10 192/157/10
+f 194/159/10 195/559/10 196/160/10
+f 198/162/10 199/560/10 200/163/10
+f 202/165/11 203/561/11 204/166/11
+f 206/168/11 207/562/11 208/169/11
+f 210/171/11 211/563/11 212/172/11
+f 214/174/11 215/564/11 216/175/11
+f 218/177/11 219/565/11 220/178/11
+f 222/180/11 223/566/11 224/181/11
+f 226/183/11 227/567/11 228/184/11
+f 230/186/11 231/568/11 232/187/11
+f 234/189/11 235/569/11 236/190/11
+f 238/192/11 239/570/11 240/193/11
+f 242/195/11 243/571/11 244/196/11
+f 246/198/11 247/572/11 248/199/11
+f 250/201/11 251/573/11 252/202/11
+f 254/204/11 255/574/11 256/205/11
+f 258/207/11 259/575/11 260/208/11
+f 262/210/11 263/576/11 264/211/11
+f 266/213/11 267/577/11 268/214/11
+f 270/216/11 271/578/11 272/217/11
+f 274/219/11 275/579/11 276/220/11
+f 278/222/11 279/580/11 280/223/11
+f 282/225/11 283/581/11 284/226/11
+f 286/228/11 287/582/11 288/229/11
+f 290/231/11 291/583/11 292/232/11
+f 294/234/11 295/584/11 296/235/11
+f 298/237/11 299/585/11 300/238/11
+f 302/240/11 303/586/11 304/241/11
+f 306/243/11 307/587/11 308/244/11
+f 310/246/11 311/588/11 312/247/11
+f 314/249/11 315/589/11 316/250/11
+f 318/252/11 319/590/11 320/253/11
+f 322/255/11 323/591/11 324/256/11
+f 326/258/11 327/592/11 328/259/11
+f 330/261/11 331/593/11 332/262/11
+f 334/264/11 335/594/11 336/265/11
+f 338/267/11 339/595/11 340/268/11
+f 342/270/11 343/596/11 344/271/11
+f 346/273/11 347/597/11 348/274/11
+f 350/276/11 351/598/11 352/277/11
+f 354/279/11 355/599/11 356/280/11
+f 358/282/11 359/600/11 360/283/11
+f 362/285/11 363/601/11 364/286/11
+f 366/288/11 367/602/11 368/289/11
+f 370/291/11 371/603/11 372/292/11
+f 374/294/11 375/604/11 376/295/11
+f 378/297/11 379/605/11 380/298/11
+f 382/300/11 383/606/11 384/301/11
+f 386/303/11 387/607/11 388/304/11
+f 390/306/11 391/608/11 392/307/11
+f 394/309/11 395/609/11 396/310/11
+f 398/312/11 399/610/11 400/313/11
+f 402/315/11 403/611/11 404/316/11
+f 406/318/11 407/612/11 408/319/11
+f 410/321/11 411/613/11 412/322/11
+f 414/324/11 415/614/11 416/325/11
+f 418/327/11 419/615/11 420/328/11
+f 422/330/11 423/616/11 424/331/11
+f 426/333/11 427/617/11 428/334/11
+f 430/336/11 431/618/11 432/337/11
+f 434/339/12 435/619/12 436/340/12
+f 438/342/12 439/620/12 440/343/12
+f 442/345/12 443/621/12 444/346/12
+f 446/348/12 447/622/12 448/349/12
+f 450/351/12 451/623/12 452/352/12
+f 454/354/12 455/624/12 456/355/12
+f 458/357/12 459/625/12 460/358/12
+f 462/360/12 463/626/12 464/361/12
+f 466/363/12 467/627/12 468/364/12
+f 470/366/12 471/628/12 472/367/12
+f 474/369/12 475/629/12 476/370/12
+f 478/372/12 479/630/12 480/373/12
+f 482/375/12 483/631/12 484/376/12
+f 486/378/12 487/632/12 488/379/12
+f 490/381/12 491/633/12 492/382/12
+f 494/384/12 495/634/12 496/385/12
+f 498/387/12 499/635/12 500/388/12
+f 502/390/12 503/636/12 504/391/12
+f 506/393/12 507/637/12 508/394/12
+f 510/396/12 511/638/12 512/397/12
+f 514/399/12 515/639/12 516/400/12
+f 518/402/12 519/640/12 520/403/12
+f 522/405/12 523/641/12 524/406/12
+f 526/408/12 527/642/12 528/409/12
+f 530/411/12 531/643/12 532/412/12
+f 534/414/12 535/644/12 536/415/12
+f 538/417/12 539/645/12 540/418/12
+f 542/420/12 543/646/12 544/421/12
+f 546/423/12 547/647/12 548/424/12
+f 550/426/12 551/648/12 552/427/12
+f 554/429/12 555/649/12 556/430/12
+f 558/432/12 559/650/12 560/433/12
+f 562/435/12 563/651/12 564/436/12
+f 566/438/12 567/652/12 568/439/12
+f 570/441/12 571/653/12 572/442/12
+f 574/444/12 575/654/12 576/445/12
+f 578/447/12 579/655/12 580/448/12
+f 582/450/12 583/656/12 584/451/12
+f 586/453/12 587/657/12 588/454/12
+f 590/456/12 591/658/12 592/457/12
+f 594/459/12 595/659/12 596/460/12
+f 598/462/12 599/660/12 600/463/12
+f 602/465/12 603/661/12 604/466/12
+f 606/468/12 607/662/12 608/469/12
+f 610/471/12 611/663/12 612/472/12
+f 614/474/12 615/664/12 616/475/12
+f 618/477/12 619/665/12 620/478/12
+f 622/480/12 623/666/12 624/481/12
+f 626/483/12 627/667/12 628/484/12
+f 630/486/12 631/668/12 632/487/12
+f 634/489/12 635/669/12 636/490/12
+f 638/492/12 639/670/12 640/493/12
+f 642/495/12 643/671/12 644/496/12
+f 646/498/12 647/672/12 648/499/12
+f 650/501/12 651/673/12 652/502/12
+f 654/504/12 655/674/12 656/505/12
+f 658/507/12 659/675/12 660/508/12
+f 662/510/12 663/676/12 664/511/12
+# Mesh data
+o rps_scissors
+o_arm Armature
+v -0.218750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.187500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.062500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.218750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.250000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.281250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.093750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.312500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.343750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.125000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.375000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.156250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.187500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.468750 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.218750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.500000 0.843750 0.437500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.250000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.343750
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.375000
+vw low_right_arm.item 1.000000
+v -0.562500 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.843750 0.406250
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.187500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.062500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.218750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.250000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.281250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.093750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.312500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.343750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.125000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.375000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.406250 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.156250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.437500 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.187500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.468750 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.218750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.500000 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.437500
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.250000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.312500
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.281250
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.343750
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.375000
+vw low_right_arm.item 1.000000
+v -0.531250 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.406250
+vw low_right_arm.item 1.000000
+v -0.562500 0.812500 0.375000
+vw low_right_arm.item 1.000000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.0625 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.5625 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.4375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.0625 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.4375 0.5000
+vt 0.0625 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.1875 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.5625 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.0625 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.5625 0.5000
+vt 0.1875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.5625 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.5625 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.1875 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.1875 0.5000
+vt 0.4375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.0625 0.5000
+vt 0.8125 0.5000
+vt 0.3125 0.5000
+vt 0.5625 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.0625 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.5625 0.5000
+vt 0.1875 0.5000
+vt 0.6875 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.5625 0.5000
+vt 0.3125 0.5000
+vt 0.1875 0.5000
+vt 0.5625 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.4375 0.5000
+vt 0.3125 0.5000
+vt 0.4375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.1875 0.5000
+vt 0.3125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.1875 0.5000
+vt 0.4375 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vt 0.8125 0.5000
+vt 0.1875 0.5000
+vt 0.8125 0.5000
+vt 0.9375 0.5000
+vt 0.8125 0.5000
+vn -1.0000 0.0000 0.0000
+vn 1.0000 0.0000 0.0000
+vn 0.0000 0.0000 1.0000
+vn 0.0000 0.0000 -1.0000
+vn 0.0000 1.0000 0.0000
+vn 0.0000 -1.0000 0.0000
+f 667/677/13 669/678/13 666/679/13
+f 671/680/13 673/681/13 670/682/13
+f 675/683/13 677/684/13 674/685/13
+f 679/686/13 681/687/13 678/688/13
+f 683/689/13 685/690/13 682/691/13
+f 687/692/13 689/693/13 686/694/13
+f 691/695/13 693/696/13 690/697/13
+f 695/698/13 697/699/13 694/700/13
+f 699/701/13 701/702/13 698/703/13
+f 703/704/13 705/705/13 702/706/13
+f 707/707/13 709/708/13 706/709/13
+f 711/710/13 713/711/13 710/712/13
+f 715/713/13 717/714/13 714/715/13
+f 719/716/13 721/717/13 718/718/13
+f 723/719/13 725/720/13 722/721/13
+f 727/722/13 729/723/13 726/724/13
+f 731/725/13 733/726/13 730/727/13
+f 735/728/13 737/729/13 734/730/13
+f 739/731/13 741/732/13 738/733/13
+f 743/734/14 745/735/14 742/736/14
+f 747/737/14 749/738/14 746/739/14
+f 751/740/14 753/741/14 750/742/14
+f 755/743/14 757/744/14 754/745/14
+f 759/746/14 761/747/14 758/748/14
+f 763/749/14 765/750/14 762/751/14
+f 767/752/14 769/753/14 766/754/14
+f 771/755/14 773/756/14 770/757/14
+f 775/758/14 777/759/14 774/760/14
+f 779/761/14 781/762/14 778/763/14
+f 783/764/14 785/765/14 782/766/14
+f 787/767/14 789/768/14 786/769/14
+f 791/770/14 793/771/14 790/772/14
+f 795/773/14 797/774/14 794/775/14
+f 799/776/14 801/777/14 798/778/14
+f 803/779/14 805/780/14 802/781/14
+f 807/782/14 809/783/14 806/784/14
+f 811/785/14 813/786/14 810/787/14
+f 815/788/14 817/789/14 814/790/14
+f 819/791/15 821/792/15 818/793/15
+f 823/794/15 825/795/15 822/796/15
+f 827/797/15 829/798/15 826/799/15
+f 831/800/15 833/801/15 830/802/15
+f 835/803/15 837/804/15 834/805/15
+f 839/806/15 841/807/15 838/808/15
+f 843/809/15 845/810/15 842/811/15
+f 847/812/15 849/813/15 846/814/15
+f 851/815/15 853/816/15 850/817/15
+f 855/818/15 857/819/15 854/820/15
+f 859/821/15 861/822/15 858/823/15
+f 863/824/15 865/825/15 862/826/15
+f 867/827/15 869/828/15 866/829/15
+f 871/830/15 873/831/15 870/832/15
+f 875/833/15 877/834/15 874/835/15
+f 879/836/15 881/837/15 878/838/15
+f 883/839/15 885/840/15 882/841/15
+f 887/842/15 889/843/15 886/844/15
+f 891/845/16 893/846/16 890/847/16
+f 895/848/16 897/849/16 894/850/16
+f 899/851/16 901/852/16 898/853/16
+f 903/854/16 905/855/16 902/856/16
+f 907/857/16 909/858/16 906/859/16
+f 911/860/16 913/861/16 910/862/16
+f 915/863/16 917/864/16 914/865/16
+f 919/866/16 921/867/16 918/868/16
+f 923/869/16 925/870/16 922/871/16
+f 927/872/16 929/873/16 926/874/16
+f 931/875/16 933/876/16 930/877/16
+f 935/878/16 937/879/16 934/880/16
+f 939/881/16 941/882/16 938/883/16
+f 943/884/16 945/885/16 942/886/16
+f 947/887/16 949/888/16 946/889/16
+f 951/890/16 953/891/16 950/892/16
+f 955/893/16 957/894/16 954/895/16
+f 959/896/17 961/897/17 958/898/17
+f 963/899/17 965/900/17 962/901/17
+f 967/902/17 969/903/17 966/904/17
+f 971/905/17 973/906/17 970/907/17
+f 975/908/17 977/909/17 974/910/17
+f 979/911/17 981/912/17 978/913/17
+f 983/914/17 985/915/17 982/916/17
+f 987/917/17 989/918/17 986/919/17
+f 991/920/17 993/921/17 990/922/17
+f 995/923/17 997/924/17 994/925/17
+f 999/926/17 1001/927/17 998/928/17
+f 1003/929/17 1005/930/17 1002/931/17
+f 1007/932/17 1009/933/17 1006/934/17
+f 1011/935/17 1013/936/17 1010/937/17
+f 1015/938/17 1017/939/17 1014/940/17
+f 1019/941/17 1021/942/17 1018/943/17
+f 1023/944/17 1025/945/17 1022/946/17
+f 1027/947/17 1029/948/17 1026/949/17
+f 1031/950/17 1033/951/17 1030/952/17
+f 1035/953/17 1037/954/17 1034/955/17
+f 1039/956/17 1041/957/17 1038/958/17
+f 1043/959/17 1045/960/17 1042/961/17
+f 1047/962/17 1049/963/17 1046/964/17
+f 1051/965/17 1053/966/17 1050/967/17
+f 1055/968/17 1057/969/17 1054/970/17
+f 1059/971/17 1061/972/17 1058/973/17
+f 1063/974/17 1065/975/17 1062/976/17
+f 1067/977/17 1069/978/17 1066/979/17
+f 1071/980/17 1073/981/17 1070/982/17
+f 1075/983/17 1077/984/17 1074/985/17
+f 1079/986/17 1081/987/17 1078/988/17
+f 1083/989/17 1085/990/17 1082/991/17
+f 1087/992/17 1089/993/17 1086/994/17
+f 1091/995/17 1093/996/17 1090/997/17
+f 1095/998/17 1097/999/17 1094/1000/17
+f 1099/1001/17 1101/1002/17 1098/1003/17
+f 1103/1004/17 1105/1005/17 1102/1006/17
+f 1107/1007/17 1109/1008/17 1106/1009/17
+f 1111/1010/17 1113/1011/17 1110/1012/17
+f 1115/1013/17 1117/1014/17 1114/1015/17
+f 1119/1016/17 1121/1017/17 1118/1018/17
+f 1123/1019/17 1125/1020/17 1122/1021/17
+f 1127/1022/17 1129/1023/17 1126/1024/17
+f 1131/1025/17 1133/1026/17 1130/1027/17
+f 1135/1028/17 1137/1029/17 1134/1030/17
+f 1139/1031/17 1141/1032/17 1138/1033/17
+f 1143/1034/17 1145/1035/17 1142/1036/17
+f 1147/1037/17 1149/1038/17 1146/1039/17
+f 1151/1040/17 1153/1041/17 1150/1042/17
+f 1155/1043/17 1157/1044/17 1154/1045/17
+f 1159/1046/17 1161/1047/17 1158/1048/17
+f 1163/1049/17 1165/1050/17 1162/1051/17
+f 1167/1052/17 1169/1053/17 1166/1054/17
+f 1171/1055/17 1173/1056/17 1170/1057/17
+f 1175/1058/17 1177/1059/17 1174/1060/17
+f 1179/1061/17 1181/1062/17 1178/1063/17
+f 1183/1064/17 1185/1065/17 1182/1066/17
+f 1187/1067/17 1189/1068/17 1186/1069/17
+f 1191/1070/18 1193/1071/18 1190/1072/18
+f 1195/1073/18 1197/1074/18 1194/1075/18
+f 1199/1076/18 1201/1077/18 1198/1078/18
+f 1203/1079/18 1205/1080/18 1202/1081/18
+f 1207/1082/18 1209/1083/18 1206/1084/18
+f 1211/1085/18 1213/1086/18 1210/1087/18
+f 1215/1088/18 1217/1089/18 1214/1090/18
+f 1219/1091/18 1221/1092/18 1218/1093/18
+f 1223/1094/18 1225/1095/18 1222/1096/18
+f 1227/1097/18 1229/1098/18 1226/1099/18
+f 1231/1100/18 1233/1101/18 1230/1102/18
+f 1235/1103/18 1237/1104/18 1234/1105/18
+f 1239/1106/18 1241/1107/18 1238/1108/18
+f 1243/1109/18 1245/1110/18 1242/1111/18
+f 1247/1112/18 1249/1113/18 1246/1114/18
+f 1251/1115/18 1253/1116/18 1250/1117/18
+f 1255/1118/18 1257/1119/18 1254/1120/18
+f 1259/1121/18 1261/1122/18 1258/1123/18
+f 1263/1124/18 1265/1125/18 1262/1126/18
+f 1267/1127/18 1269/1128/18 1266/1129/18
+f 1271/1130/18 1273/1131/18 1270/1132/18
+f 1275/1133/18 1277/1134/18 1274/1135/18
+f 1279/1136/18 1281/1137/18 1278/1138/18
+f 1283/1139/18 1285/1140/18 1282/1141/18
+f 1287/1142/18 1289/1143/18 1286/1144/18
+f 1291/1145/18 1293/1146/18 1290/1147/18
+f 1295/1148/18 1297/1149/18 1294/1150/18
+f 1299/1151/18 1301/1152/18 1298/1153/18
+f 1303/1154/18 1305/1155/18 1302/1156/18
+f 1307/1157/18 1309/1158/18 1306/1159/18
+f 1311/1160/18 1313/1161/18 1310/1162/18
+f 1315/1163/18 1317/1164/18 1314/1165/18
+f 1319/1166/18 1321/1167/18 1318/1168/18
+f 1323/1169/18 1325/1170/18 1322/1171/18
+f 1327/1172/18 1329/1173/18 1326/1174/18
+f 1331/1175/18 1333/1176/18 1330/1177/18
+f 1335/1178/18 1337/1179/18 1334/1180/18
+f 1339/1181/18 1341/1182/18 1338/1183/18
+f 1343/1184/18 1345/1185/18 1342/1186/18
+f 1347/1187/18 1349/1188/18 1346/1189/18
+f 1351/1190/18 1353/1191/18 1350/1192/18
+f 1355/1193/18 1357/1194/18 1354/1195/18
+f 1359/1196/18 1361/1197/18 1358/1198/18
+f 1363/1199/18 1365/1200/18 1362/1201/18
+f 1367/1202/18 1369/1203/18 1366/1204/18
+f 1371/1205/18 1373/1206/18 1370/1207/18
+f 1375/1208/18 1377/1209/18 1374/1210/18
+f 1379/1211/18 1381/1212/18 1378/1213/18
+f 1383/1214/18 1385/1215/18 1382/1216/18
+f 1387/1217/18 1389/1218/18 1386/1219/18
+f 1391/1220/18 1393/1221/18 1390/1222/18
+f 1395/1223/18 1397/1224/18 1394/1225/18
+f 1399/1226/18 1401/1227/18 1398/1228/18
+f 1403/1229/18 1405/1230/18 1402/1231/18
+f 1407/1232/18 1409/1233/18 1406/1234/18
+f 1411/1235/18 1413/1236/18 1410/1237/18
+f 1415/1238/18 1417/1239/18 1414/1240/18
+f 1419/1241/18 1421/1242/18 1418/1243/18
+f 667/677/13 668/1244/13 669/678/13
+f 671/680/13 672/1245/13 673/681/13
+f 675/683/13 676/1246/13 677/684/13
+f 679/686/13 680/1247/13 681/687/13
+f 683/689/13 684/1248/13 685/690/13
+f 687/692/13 688/1249/13 689/693/13
+f 691/695/13 692/1250/13 693/696/13
+f 695/698/13 696/1251/13 697/699/13
+f 699/701/13 700/1252/13 701/702/13
+f 703/704/13 704/1253/13 705/705/13
+f 707/707/13 708/1254/13 709/708/13
+f 711/710/13 712/1255/13 713/711/13
+f 715/713/13 716/1256/13 717/714/13
+f 719/716/13 720/1257/13 721/717/13
+f 723/719/13 724/1258/13 725/720/13
+f 727/722/13 728/1259/13 729/723/13
+f 731/725/13 732/1260/13 733/726/13
+f 735/728/13 736/1261/13 737/729/13
+f 739/731/13 740/1262/13 741/732/13
+f 743/734/14 744/1263/14 745/735/14
+f 747/737/14 748/1264/14 749/738/14
+f 751/740/14 752/1265/14 753/741/14
+f 755/743/14 756/1266/14 757/744/14
+f 759/746/14 760/1267/14 761/747/14
+f 763/749/14 764/1268/14 765/750/14
+f 767/752/14 768/1269/14 769/753/14
+f 771/755/14 772/1270/14 773/756/14
+f 775/758/14 776/1271/14 777/759/14
+f 779/761/14 780/1272/14 781/762/14
+f 783/764/14 784/1273/14 785/765/14
+f 787/767/14 788/1274/14 789/768/14
+f 791/770/14 792/1275/14 793/771/14
+f 795/773/14 796/1276/14 797/774/14
+f 799/776/14 800/1277/14 801/777/14
+f 803/779/14 804/1278/14 805/780/14
+f 807/782/14 808/1279/14 809/783/14
+f 811/785/14 812/1280/14 813/786/14
+f 815/788/14 816/1281/14 817/789/14
+f 819/791/15 820/1282/15 821/792/15
+f 823/794/15 824/1283/15 825/795/15
+f 827/797/15 828/1284/15 829/798/15
+f 831/800/15 832/1285/15 833/801/15
+f 835/803/15 836/1286/15 837/804/15
+f 839/806/15 840/1287/15 841/807/15
+f 843/809/15 844/1288/15 845/810/15
+f 847/812/15 848/1289/15 849/813/15
+f 851/815/15 852/1290/15 853/816/15
+f 855/818/15 856/1291/15 857/819/15
+f 859/821/15 860/1292/15 861/822/15
+f 863/824/15 864/1293/15 865/825/15
+f 867/827/15 868/1294/15 869/828/15
+f 871/830/15 872/1295/15 873/831/15
+f 875/833/15 876/1296/15 877/834/15
+f 879/836/15 880/1297/15 881/837/15
+f 883/839/15 884/1298/15 885/840/15
+f 887/842/15 888/1299/15 889/843/15
+f 891/845/16 892/1300/16 893/846/16
+f 895/848/16 896/1301/16 897/849/16
+f 899/851/16 900/1302/16 901/852/16
+f 903/854/16 904/1303/16 905/855/16
+f 907/857/16 908/1304/16 909/858/16
+f 911/860/16 912/1305/16 913/861/16
+f 915/863/16 916/1306/16 917/864/16
+f 919/866/16 920/1307/16 921/867/16
+f 923/869/16 924/1308/16 925/870/16
+f 927/872/16 928/1309/16 929/873/16
+f 931/875/16 932/1310/16 933/876/16
+f 935/878/16 936/1311/16 937/879/16
+f 939/881/16 940/1312/16 941/882/16
+f 943/884/16 944/1313/16 945/885/16
+f 947/887/16 948/1314/16 949/888/16
+f 951/890/16 952/1315/16 953/891/16
+f 955/893/16 956/1316/16 957/894/16
+f 959/896/17 960/1317/17 961/897/17
+f 963/899/17 964/1318/17 965/900/17
+f 967/902/17 968/1319/17 969/903/17
+f 971/905/17 972/1320/17 973/906/17
+f 975/908/17 976/1321/17 977/909/17
+f 979/911/17 980/1322/17 981/912/17
+f 983/914/17 984/1323/17 985/915/17
+f 987/917/17 988/1324/17 989/918/17
+f 991/920/17 992/1325/17 993/921/17
+f 995/923/17 996/1326/17 997/924/17
+f 999/926/17 1000/1327/17 1001/927/17
+f 1003/929/17 1004/1328/17 1005/930/17
+f 1007/932/17 1008/1329/17 1009/933/17
+f 1011/935/17 1012/1330/17 1013/936/17
+f 1015/938/17 1016/1331/17 1017/939/17
+f 1019/941/17 1020/1332/17 1021/942/17
+f 1023/944/17 1024/1333/17 1025/945/17
+f 1027/947/17 1028/1334/17 1029/948/17
+f 1031/950/17 1032/1335/17 1033/951/17
+f 1035/953/17 1036/1336/17 1037/954/17
+f 1039/956/17 1040/1337/17 1041/957/17
+f 1043/959/17 1044/1338/17 1045/960/17
+f 1047/962/17 1048/1339/17 1049/963/17
+f 1051/965/17 1052/1340/17 1053/966/17
+f 1055/968/17 1056/1341/17 1057/969/17
+f 1059/971/17 1060/1342/17 1061/972/17
+f 1063/974/17 1064/1343/17 1065/975/17
+f 1067/977/17 1068/1344/17 1069/978/17
+f 1071/980/17 1072/1345/17 1073/981/17
+f 1075/983/17 1076/1346/17 1077/984/17
+f 1079/986/17 1080/1347/17 1081/987/17
+f 1083/989/17 1084/1348/17 1085/990/17
+f 1087/992/17 1088/1349/17 1089/993/17
+f 1091/995/17 1092/1350/17 1093/996/17
+f 1095/998/17 1096/1351/17 1097/999/17
+f 1099/1001/17 1100/1352/17 1101/1002/17
+f 1103/1004/17 1104/1353/17 1105/1005/17
+f 1107/1007/17 1108/1354/17 1109/1008/17
+f 1111/1010/17 1112/1355/17 1113/1011/17
+f 1115/1013/17 1116/1356/17 1117/1014/17
+f 1119/1016/17 1120/1357/17 1121/1017/17
+f 1123/1019/17 1124/1358/17 1125/1020/17
+f 1127/1022/17 1128/1359/17 1129/1023/17
+f 1131/1025/17 1132/1360/17 1133/1026/17
+f 1135/1028/17 1136/1361/17 1137/1029/17
+f 1139/1031/17 1140/1362/17 1141/1032/17
+f 1143/1034/17 1144/1363/17 1145/1035/17
+f 1147/1037/17 1148/1364/17 1149/1038/17
+f 1151/1040/17 1152/1365/17 1153/1041/17
+f 1155/1043/17 1156/1366/17 1157/1044/17
+f 1159/1046/17 1160/1367/17 1161/1047/17
+f 1163/1049/17 1164/1368/17 1165/1050/17
+f 1167/1052/17 1168/1369/17 1169/1053/17
+f 1171/1055/17 1172/1370/17 1173/1056/17
+f 1175/1058/17 1176/1371/17 1177/1059/17
+f 1179/1061/17 1180/1372/17 1181/1062/17
+f 1183/1064/17 1184/1373/17 1185/1065/17
+f 1187/1067/17 1188/1374/17 1189/1068/17
+f 1191/1070/18 1192/1375/18 1193/1071/18
+f 1195/1073/18 1196/1376/18 1197/1074/18
+f 1199/1076/18 1200/1377/18 1201/1077/18
+f 1203/1079/18 1204/1378/18 1205/1080/18
+f 1207/1082/18 1208/1379/18 1209/1083/18
+f 1211/1085/18 1212/1380/18 1213/1086/18
+f 1215/1088/18 1216/1381/18 1217/1089/18
+f 1219/1091/18 1220/1382/18 1221/1092/18
+f 1223/1094/18 1224/1383/18 1225/1095/18
+f 1227/1097/18 1228/1384/18 1229/1098/18
+f 1231/1100/18 1232/1385/18 1233/1101/18
+f 1235/1103/18 1236/1386/18 1237/1104/18
+f 1239/1106/18 1240/1387/18 1241/1107/18
+f 1243/1109/18 1244/1388/18 1245/1110/18
+f 1247/1112/18 1248/1389/18 1249/1113/18
+f 1251/1115/18 1252/1390/18 1253/1116/18
+f 1255/1118/18 1256/1391/18 1257/1119/18
+f 1259/1121/18 1260/1392/18 1261/1122/18
+f 1263/1124/18 1264/1393/18 1265/1125/18
+f 1267/1127/18 1268/1394/18 1269/1128/18
+f 1271/1130/18 1272/1395/18 1273/1131/18
+f 1275/1133/18 1276/1396/18 1277/1134/18
+f 1279/1136/18 1280/1397/18 1281/1137/18
+f 1283/1139/18 1284/1398/18 1285/1140/18
+f 1287/1142/18 1288/1399/18 1289/1143/18
+f 1291/1145/18 1292/1400/18 1293/1146/18
+f 1295/1148/18 1296/1401/18 1297/1149/18
+f 1299/1151/18 1300/1402/18 1301/1152/18
+f 1303/1154/18 1304/1403/18 1305/1155/18
+f 1307/1157/18 1308/1404/18 1309/1158/18
+f 1311/1160/18 1312/1405/18 1313/1161/18
+f 1315/1163/18 1316/1406/18 1317/1164/18
+f 1319/1166/18 1320/1407/18 1321/1167/18
+f 1323/1169/18 1324/1408/18 1325/1170/18
+f 1327/1172/18 1328/1409/18 1329/1173/18
+f 1331/1175/18 1332/1410/18 1333/1176/18
+f 1335/1178/18 1336/1411/18 1337/1179/18
+f 1339/1181/18 1340/1412/18 1341/1182/18
+f 1343/1184/18 1344/1413/18 1345/1185/18
+f 1347/1187/18 1348/1414/18 1349/1188/18
+f 1351/1190/18 1352/1415/18 1353/1191/18
+f 1355/1193/18 1356/1416/18 1357/1194/18
+f 1359/1196/18 1360/1417/18 1361/1197/18
+f 1363/1199/18 1364/1418/18 1365/1200/18
+f 1367/1202/18 1368/1419/18 1369/1203/18
+f 1371/1205/18 1372/1420/18 1373/1206/18
+f 1375/1208/18 1376/1421/18 1377/1209/18
+f 1379/1211/18 1380/1422/18 1381/1212/18
+f 1383/1214/18 1384/1423/18 1385/1215/18
+f 1387/1217/18 1388/1424/18 1389/1218/18
+f 1391/1220/18 1392/1425/18 1393/1221/18
+f 1395/1223/18 1396/1426/18 1397/1224/18
+f 1399/1226/18 1400/1427/18 1401/1227/18
+f 1403/1229/18 1404/1428/18 1405/1230/18
+f 1407/1232/18 1408/1429/18 1409/1233/18
+f 1411/1235/18 1412/1430/18 1413/1236/18
+f 1415/1238/18 1416/1431/18 1417/1239/18
+f 1419/1241/18 1420/1432/18 1421/1242/18

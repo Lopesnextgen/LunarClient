@@ -1,0 +1,160 @@
+# wave6 structure audit: client/util/** -> real utils + owning subsystems
+# 154 rows. New==Old (move-only); evidence cites content/users.
+# duplicates re-added by rescue batch 6 (commit 3d38608ff) are deliberately NOT moved:
+# see notes-util.md ("left" section) for the ThreadModuleDump*/Annotation*/MixinHelper*/
+# Util* map and the util/{alert,chest,click,colorsaturation,gui,highlight,holograms,
+# lotusfish,mixin,nameplate,rewindhandlers} leftovers.
+com.moonsworth.lunar.client.util	Ref	com.moonsworth.lunar.client.framework	Ref	global client accessor: MC_VERSION/IchorPipeline/hasModule, getMinecraft/getClient/getWorld/getNetHandler/getAssetServer(res), keybind-clash registry (Map<Ref.Data,Set<KeyBindingEntry>>); referenced by ~1000 files, not a util
+com.moonsworth.lunar.client.util	LunarConstants	com.moonsworth.lunar.client.framework	LunarConstants	static runtime constants: dataDir(lunar.dataDir/user.home), OS/JVM props, log paths; consumed by framework.build/crash/tps and mod/misc+hud
+com.moonsworth.lunar.client.util	LaunchOptions	com.moonsworth.lunar.client.framework	LaunchOptions	launcher handshake state: installationId/overwolfMuid/sentryTraceId/launchId/canaryToken/ipcPort/locale; read by network.websocket+ipc+safety and framework.crash
+com.moonsworth.lunar.client.util	EarlyOptions	com.moonsworth.lunar.client.framework	EarlyOptions	pre-framework bootstrap config: reads performance.json + profile_manager.json from LunarConstants dir (noErrorContext, active profile)
+com.moonsworth.lunar.client.util	OperatingSystem	com.moonsworth.lunar.client.framework	OperatingSystem	OS detection enum (WINDOWS/MACOS/LINUX/SOLARIS, WAYLAND_DISPLAY + XDG_SESSION_TYPE probes); platform info for bootstrap/replay
+com.moonsworth.lunar.client.util	DevFeatureList	com.moonsworth.lunar.client.framework	DevFeatureList	dev-feature registry hooked to LunarBuildData (framework.build); mod-framework support class
+com.moonsworth.lunar.client.util	Initializable	com.moonsworth.lunar.client.framework	Initializable	lifecycle contract: default initAndGet()/static create(Supplier) calling init() (@OverridingMethodsMustInvokeSuper); framework lifecycle
+com.moonsworth.lunar.client.util	Flag	com.moonsworth.lunar.client.framework	Flag	singleton marker enum Flag.INSTANCE used as a sentinel by option builders (OptionTraits/AbstractOptionBuilder) and mods
+com.moonsworth.lunar.client.util	PacketUtil	com.moonsworth.lunar.client.framework	PacketUtil	main-thread task dispatch: Ref.method3().bridge$submit(...) + CrashReporter error capture; used by network.websocket and network.ipc
+com.moonsworth.lunar.client.util	ThreadModuleDump	com.moonsworth.lunar.client.framework.crash	ThreadModuleDump	JNA Windows thread+module dump (Tlhelp32 snapshot, dbghelp stack walk) producing "Thread/module dump for PID" text; driven by fpsdebugmod ThreadDumpTask for crash reports
+com.moonsworth.lunar.client.util	ReflectionUtils	com.moonsworth.lunar.client.framework.listener	ReflectionUtils	annotation scan over class hierarchy ("All methods annotated with @X must not be static"); used by event bus / listener registration (client.event)
+com.moonsworth.lunar.client.util	HudTimer	com.moonsworth.lunar.client.framework.hud	HudTimer	HUD timer (start/stop/pause/reset, DecimalFormat "0.00", nested Data presets) ticked by framework.listener.mixin.HudTimerTicker and used by mod/hud+mod/misc
+com.moonsworth.lunar.client.util	Corner	com.moonsworth.lunar.client.framework.hud	Corner	TOP_LEFT..BOTTOM_RIGHT + getOpposite enum used for HUD/anchor placement (HudAnchor, NotificationAnchor, HotbarKeyOverlay)
+com.moonsworth.lunar.client.util	Direction	com.moonsworth.lunar.client.framework.hud	Direction	TOP/BOTTOM/LEFT/RIGHT + getOpposite enum used by HUD/anchor placement code
+com.moonsworth.lunar.client.util	AbstractSpec	com.moonsworth.lunar.client.framework.codegen	AbstractSpec	JavaPoet-style spec base (javadoc+annotation sets, emit(StringBuilder,int)); part of the Apollo mod source generator used by fog/gui/Gui
+com.moonsworth.lunar.client.util	AnnotationSpec	com.moonsworth.lunar.client.framework.codegen	AnnotationSpec	@Annotation spec emitter (NamedValue args, member "value = ..."); Apollo mod generator
+com.moonsworth.lunar.client.util	FieldSpec	com.moonsworth.lunar.client.framework.codegen	FieldSpec	field spec emitter (modifiers/initializer/javadoc); Apollo mod generator
+com.moonsworth.lunar.client.util	MethodSpec	com.moonsworth.lunar.client.framework.codegen	MethodSpec	method spec emitter (return type, NamedValue params, code lines, modifiers); Apollo mod generator
+com.moonsworth.lunar.client.util	JavadocSpec	com.moonsworth.lunar.client.framework.codegen	JavadocSpec	javadoc block emitter ("/**", " * @", "*/"); Apollo mod generator
+com.moonsworth.lunar.client.util	NamedValue	com.moonsworth.lunar.client.framework.codegen	NamedValue	name+value pair implementing SourceEmitter (used for annotation members and params); Apollo mod generator
+com.moonsworth.lunar.client.util	SpecBuilder	com.moonsworth.lunar.client.framework.codegen	SpecBuilder	fluent spec builder base holding JavadocSpec/AnnotationSpec sets; Apollo mod generator
+com.moonsworth.lunar.client.util	SourceEmitter	com.moonsworth.lunar.client.framework.codegen	SourceEmitter	String emit(int indent) contract implemented by every spec; Apollo mod generator
+com.moonsworth.lunar.client.util	TypeSpec	com.moonsworth.lunar.client.framework.codegen	TypeSpec	class/interface spec emitter (package, imports, extends/implements, methods, fields); entry point of the generator (Gui.java writes Mod*.java)
+com.moonsworth.lunar.client.util	JavaFileWriter	com.moonsworth.lunar.client.framework.codegen	JavaFileWriter	collects TypeSpecs and writes "<name>.java" (4-space indent); Apollo mod generator file output
+com.moonsworth.lunar.client.util	Visibility	com.moonsworth.lunar.client.framework.codegen	Visibility	PUBLIC/PROTECTED/PRIVATE/PACKAGE modifiers enum used by FieldSpec/MethodSpec; codegen-only
+com.moonsworth.lunar.client.util	KeyBindingOrder	com.moonsworth.lunar.client.config	KeyBindingOrder	reorders KeyBindingBridge[] for the keybind settings screen (pinned binds appended); settings glue
+com.moonsworth.lunar.client.util	DirtyFlag	com.moonsworth.lunar.client.config.option	DirtyFlag	tick-driven dirty flag refreshing option views (LunarEventBus EventTick -> Ref.method28), used by BakedOptionNode/DisplaySpec
+com.moonsworth.lunar.client.util	ConditionState	com.moonsworth.lunar.client.config.option	ConditionState	ANY/TRUE/FALSE option-condition state with BooleanSupplier evaluation; used by condition-set builders
+com.moonsworth.lunar.client.util	ConfigRangeBuilder	com.moonsworth.lunar.client.config.option	ConfigRangeBuilder	fluent number-range builder interface (int[]/IntArrayList, "_,_ -> this" DSL) for option ranges
+com.moonsworth.lunar.client.util	ConstantName	com.moonsworth.lunar.client.config.option	ConstantName	annotation on option id getters (@ConstantName getId(), pattern [A-Z0-9_]{2,}); options framework metadata
+com.moonsworth.lunar.client.util	Identifier	com.moonsworth.lunar.client.config.option	Identifier	camelCase option-id annotation, sibling of ConstantName; options framework metadata
+com.moonsworth.lunar.client.util	ParameterPosition	com.moonsworth.lunar.client.config.option	ParameterPosition	@Target(PARAMETER) annotation (X/Y/POSITION enum) marking option parameter placement; used by option/GUI builders
+com.moonsworth.lunar.client.util	InterpolationMode	com.moonsworth.lunar.client.config.option	InterpolationMode	easing enum implementing lighting.OptionEnumValue (linear/quad/.../catmull_rom, Easing fields); option value type
+com.moonsworth.lunar.client.util	KeyVersionPair	com.moonsworth.lunar.client.config.option	KeyVersionPair	keybind model (key name, KeyCode, legacyKeyCode, equals/hashCode); consumed by config.option.KeyBind
+com.moonsworth.lunar.client.util	TraitBuilder	com.moonsworth.lunar.client.config.option	TraitBuilder	T build() contract for option traits (config.option.trait.BuilderTraitType, ConditionalOption)
+com.moonsworth.lunar.client.util	MathUtils	com.moonsworth.lunar.client.util.math	MathUtils	static clamp/round/lerp helpers for byte..double; pure math
+com.moonsworth.lunar.client.util	FastMath	com.moonsworth.lunar.client.util.math	FastMath	LUT sin/cos + error self-test ("[LC Fast Math] ..."); pure math
+com.moonsworth.lunar.client.util	Easing	com.moonsworth.lunar.client.util.math	Easing	easing function catalogue (612 lines: linear/quad/cubic/elastic/back/smooth/catmull-rom); used by animations/HUD
+com.moonsworth.lunar.client.util	LineMath	com.moonsworth.lunar.client.util.math	LineMath	static line/vector math (nearest point, distance between segments); pure math
+com.moonsworth.lunar.client.util	ColorMath	com.moonsworth.lunar.client.util.math	ColorMath	sRGB<->linear/XYZ/Lab colour-space conversion constants and methods; pure math
+com.moonsworth.lunar.client.util	ColorUtils	com.moonsworth.lunar.client.util.math	ColorUtils	ARGB pack/unpack + hex/named-colour parsing ("Invalid hex string: ", NamedTextColor table); colour math utility used by mod/render+hud
+com.moonsworth.lunar.client.util	NumberUtils	com.moonsworth.lunar.client.util.math	NumberUtils	number parse/convert helpers (toLong/toInt, char->float, DecimalFormat/NumberFormat); numeric utility
+com.moonsworth.lunar.client.util	RandomImpl	com.moonsworth.lunar.client.util.math	RandomImpl	java.util.Random subclass delegating to ThreadLocalRandom until seeded; numeric/random utility
+com.moonsworth.lunar.client.util	BinarySearchState	com.moonsworth.lunar.client.util.math	BinarySearchState	float-range binary search state machine with per-name instance cache; math helper for interactive resizing
+com.moonsworth.lunar.client.util	MatrixConversion	com.moonsworth.lunar.client.util.math	MatrixConversion	javax.vecmath <-> joml Matrix3f/Matrix4f conversion; linear algebra
+com.moonsworth.lunar.client.util	Vector2f	com.moonsworth.lunar.client.util.math	Vector2f	mutable float x/y vector (+ scale/add); math
+com.moonsworth.lunar.client.util	Vector2dPair	com.moonsworth.lunar.client.util.math	Vector2dPair	Vector2d position + generic value pair; math/geometry
+com.moonsworth.lunar.client.util	DoubleRectangle	com.moonsworth.lunar.client.util.math	DoubleRectangle	double x/y/width/height rect with left/top/right/bottom accessors; geometry
+com.moonsworth.lunar.client.util	IntRectangle	com.moonsworth.lunar.client.util.math	IntRectangle	int rect with validation ("Invalid rectangle dimensions: left=, top=, right=, bottom="); geometry
+com.moonsworth.lunar.client.util	RectangleQuadtree	com.moonsworth.lunar.client.util.math	RectangleQuadtree	spatial quadtree over IntRectangle nodes; geometry/collections
+com.moonsworth.lunar.client.util	WeightedQuadtree	com.moonsworth.lunar.client.util.math	WeightedQuadtree	quadtree with float weights for marker/overlay culling; geometry
+com.moonsworth.lunar.client.util	WeightedValue	com.moonsworth.lunar.client.util.math	WeightedValue	Comparable value+cost pair (used by weighted spatial lookups); math
+com.moonsworth.lunar.client.util	LineSegment	com.moonsworth.lunar.client.util.math	LineSegment	immutable pair of Vector3dc endpoints; geometry
+com.moonsworth.lunar.client.util	Fishing	com.moonsworth.lunar.client.util.math	Fishing	Vector3dc endpoint pair identical to LineSegment (misnamed duplicate; both live) - naming pass should merge, move-only for now
+com.moonsworth.lunar.client.util	TextUtils	com.moonsworth.lunar.client.util.text	TextUtils	case conversion (UPPER_SNAKE/CamelCase/kebab-case) + text list helpers; text utility
+com.moonsworth.lunar.client.util	TextSanitizer	com.moonsworth.lunar.client.util.text	TextSanitizer	illegal-filename-char stripping; text utility
+com.moonsworth.lunar.client.util	StringCursor	com.moonsworth.lunar.client.util.text	StringCursor	string + cursor reader with advance/peek; parser utility
+com.moonsworth.lunar.client.util	FormattingCodes	com.moonsworth.lunar.client.util.text	FormattingCodes	legacy section-sign formatting code table (colour/format -> code, strip); text utility
+com.moonsworth.lunar.client.util	RegexPatterns	com.moonsworth.lunar.client.util.text	RegexPatterns	shared regex constants (constant-name/camelCase/class-name patterns); text utility
+com.moonsworth.lunar.client.util	UuidUtils	com.moonsworth.lunar.client.util.text	UuidUtils	UUID <-> string/int[4] conversion and dash insertion; text/format utility
+com.moonsworth.lunar.client.util	TimeFormatting	com.moonsworth.lunar.client.util.text	TimeFormatting	duration/relative time formatting ("now", "d'd 'H'h 'm'm 's's'"); text utility used by HUD/replay
+com.moonsworth.lunar.client.util	DateUtils	com.moonsworth.lunar.client.util.text	DateUtils	date formatting (d MMMM uuuu, today/tomorrow/yesterday, inDays/daysAgo); text utility
+com.moonsworth.lunar.client.util	RomanNumeralParser	com.moonsworth.lunar.client.util.text	RomanNumeralParser	roman-numeral parser ("Expected valid Roman numeral, received "); text utility
+com.moonsworth.lunar.client.util	RomanNumeralUtils	com.moonsworth.lunar.client.util.text	RomanNumeralUtils	roman-numeral <-> int caches (guava Int2ObjectMap/Object2IntMap); text utility
+com.moonsworth.lunar.client.util	ArrayUtils	com.moonsworth.lunar.client.util.collection	ArrayUtils	array contains/concat/toString helpers; collection utility
+com.moonsworth.lunar.client.util	CollectionUtils	com.moonsworth.lunar.client.util.collection	CollectionUtils	collection->list/int[]/long[] conversion with type errors; collection utility
+com.moonsworth.lunar.client.util	ListUtils	com.moonsworth.lunar.client.util.collection	ListUtils	list index/insert helpers; collection utility
+com.moonsworth.lunar.client.util	RingBuffer	com.moonsworth.lunar.client.util.collection	RingBuffer	synchronized byte ring buffer ("RingBuffer overflow! Dropping N bytes"); collection/buffer utility
+com.moonsworth.lunar.client.util	ExpiringWeightedCache	com.moonsworth.lunar.client.util.collection	ExpiringWeightedCache	LinkedHashMap cache with TTL + weight eviction callbacks; collection utility
+com.moonsworth.lunar.client.util	UnorderedPair	com.moonsworth.lunar.client.util.collection	UnorderedPair	order-insensitive pair with equals/hashCode; collection utility
+com.moonsworth.lunar.client.util	ValueHolder	com.moonsworth.lunar.client.util.collection	ValueHolder	single mutable value holder; collection utility
+com.moonsworth.lunar.client.util	MutableValue	com.moonsworth.lunar.client.util.collection	MutableValue	mutable generic value holder; collection utility
+com.moonsworth.lunar.client.util	MapIterator	com.moonsworth.lunar.client.util.collection	MapIterator	Map<Integer,T> backed by array + overflow consumer; collection utility
+com.moonsworth.lunar.client.util	MapRemoval	com.moonsworth.lunar.client.util.collection	MapRemoval	removeIfKey/removeIfValue/retainIf map helpers; collection utility
+com.moonsworth.lunar.client.util	FilteringIterator	com.moonsworth.lunar.client.util.collection	FilteringIterator	predicate-filtered iterator ("remove() cannot be called"); collection utility
+com.moonsworth.lunar.client.util	EmptyIterator	com.moonsworth.lunar.client.util.collection	EmptyIterator	empty Iterator singleton; collection utility
+com.moonsworth.lunar.client.util	IterableImpl	com.moonsworth.lunar.client.util.collection	IterableImpl	Iterable wrapper with predicate filtering; collection utility
+com.moonsworth.lunar.client.util	AbstractQueueImpl	com.moonsworth.lunar.client.util.collection	AbstractQueueImpl	AbstractQueue over a capacity-limited LinkedList; collection utility
+com.moonsworth.lunar.client.util	TickQueue	com.moonsworth.lunar.client.util.collection	TickQueue	tick-delayed ArrayDeque queue (add/poll after N ticks); collection/scheduler utility
+com.moonsworth.lunar.client.util	KImpl	com.moonsworth.lunar.client.util.collection	KImpl	fluent Map wrapper (put/putAll/putIfAbsent return this); collection utility
+com.moonsworth.lunar.client.util	AtomicFileWriter	com.moonsworth.lunar.client.util.io	AtomicFileWriter	atomic text write via .tmp + Files.move(ATOMIC_MOVE) with fallback; file utility
+com.moonsworth.lunar.client.util	CompressionUtils	com.moonsworth.lunar.client.util.io	CompressionUtils	GZIP compress/decompress to String; file utility
+com.moonsworth.lunar.client.util	DirectoryWatcher	com.moonsworth.lunar.client.util.io	DirectoryWatcher	Closeable WatchService wrapper (CREATE/DELETE/MODIFY, BackgroundExecutor poll loop); file utility
+com.moonsworth.lunar.client.util	FileExplorer	com.moonsworth.lunar.client.util.io	FileExplorer	reveal file in OS explorer (explorer.exe/open/xdg-open); file utility
+com.moonsworth.lunar.client.util	FileExtensionFilter	com.moonsworth.lunar.client.util.io	FileExtensionFilter	FilenameFilter matching extensions against a Set; file utility
+com.moonsworth.lunar.client.util	InputStreamLoader	com.moonsworth.lunar.client.util.io	InputStreamLoader	ring-buffer InputStream with low-watermark and writer/reader lifecycle errors; stream utility
+com.moonsworth.lunar.client.util	RewindableInputStream	com.moonsworth.lunar.client.util.io	RewindableInputStream	InputStream that buffers read bytes for mark/reset rewind; stream utility
+com.moonsworth.lunar.client.util	ImageUtils	com.moonsworth.lunar.client.util.io	ImageUtils	image decode/convert helper (webp, ImageReader, "Unknown data buffer type"); image IO utility
+com.moonsworth.lunar.client.util	MimeTypeUtils	com.moonsworth.lunar.client.util.io	MimeTypeUtils	extension/URL -> MIME type mapper (png/jpeg/image/*, application/octet-stream); IO utility
+com.moonsworth.lunar.client.util	ResourcePackUtils	com.moonsworth.lunar.client.util.io	ResourcePackUtils	resource-pack file handling (pack.mcmeta probing, .zip, folder icons); file utility
+com.moonsworth.lunar.client.util	JsonAdapters	com.moonsworth.lunar.client.util.io	JsonAdapters	Gson adapters/serializers (String/Set/Map/IntegerRange, SerializedNameExclusionStrategy); serialization utility
+com.moonsworth.lunar.client.util	JsonDateAdapter	com.moonsworth.lunar.client.util.io	JsonDateAdapter	Gson date TypeAdapter; serialization utility
+com.moonsworth.lunar.client.util	ExtraCodecs	com.moonsworth.lunar.client.util.io	ExtraCodecs	DataFixerUpper codec library (JsonElement/Vector/Matrix/Pattern/UUID codecs, withLifecycle); serialization utility
+com.moonsworth.lunar.client.util	NotNullSerialized	com.moonsworth.lunar.client.util.io	NotNullSerialized	@NotNullSerialized + nested Gson TypeAdapterFactory keeping field defaults; serialization utility
+com.moonsworth.lunar.client.util	SerializedNameOnly	com.moonsworth.lunar.client.util.io	SerializedNameOnly	class marker annotation for Gson SerializedName-only DTOs (replay/config); serialization utility
+com.moonsworth.lunar.client.util	ClipboardUtils	com.moonsworth.lunar.client.util.io	ClipboardUtils	clipboard text/image copy with osascript fallback ("Couldn't copy image to the clipboard"); OS-integration IO utility
+com.moonsworth.lunar.client.util	ThreadModuleDump9	com.moonsworth.lunar.client.util.io	ThreadModuleDump9	rescue-added JsonObject getters (getBoolean/getByte/getInt/getLong with defaults), unique name-placeholder class - rename in naming pass
+com.moonsworth.lunar.client.util	BackgroundExecutor	com.moonsworth.lunar.client.util.concurrent	BackgroundExecutor	shared scheduled executor + worker pool ("lunar-background-scheduler-task-%d") with shutdown; concurrency utility
+com.moonsworth.lunar.client.util	AsyncResource	com.moonsworth.lunar.client.util.concurrent	AsyncResource	interface for async GPU resources + thread-count heuristic; concurrency utility
+com.moonsworth.lunar.client.util	AsyncResourceManager	com.moonsworth.lunar.client.util.concurrent	AsyncResourceManager	singleton tracking WeakHashMap<AsyncResource,Object> resident/full-quality sizes ("[LC Async Resources] Absent/Low Quality/Full Quality"); concurrency/memory utility
+com.moonsworth.lunar.client.util	AsyncCacheLoader	com.moonsworth.lunar.client.util.concurrent	AsyncCacheLoader	threaded fetch queue with per-key Data and "Starting fetch thread %s" logging; concurrency utility
+com.moonsworth.lunar.client.util	ResourceUsageCounter	com.moonsworth.lunar.client.util.concurrent	ResourceUsageCounter	resource byte counter ("N resources, M bytes"); concurrency/memory utility (used by AsyncResourceManager)
+com.moonsworth.lunar.client.util	ResourceUsageTracker	com.moonsworth.lunar.client.util.concurrent	ResourceUsageTracker	resource/staging-buffer usage tally with human-readable KMGTPE formatting; concurrency/memory utility
+com.moonsworth.lunar.client.util	SupplierExtension	com.moonsworth.lunar.client.util.concurrent	SupplierExtension	thread-safe lazily-memoizing Supplier (instance + lock); concurrency utility
+com.moonsworth.lunar.client.util	UncheckedFunctional	com.moonsworth.lunar.client.util.concurrent	UncheckedFunctional	wraps throwing Runnable/Supplier/Consumer into RuntimeException; functional utility for async code
+com.moonsworth.lunar.client.util	ConsumerExtension	com.moonsworth.lunar.client.util.concurrent	ConsumerExtension	Consumer that accepts checked exceptions (acceptWithException); functional utility
+com.moonsworth.lunar.client.util	RunnableHolder	com.moonsworth.lunar.client.util.concurrent	RunnableHolder	onOpen/onClose Runnable pair; callback utility
+com.moonsworth.lunar.client.util	ServerUtils	com.moonsworth.lunar.client.util.net	ServerUtils	server brand parsing (BRAND_PATTERN "(.+) (?:<- .+)?", skyblock co-op, SKYBLOCK); network utility
+com.moonsworth.lunar.client.util	PortUtils	com.moonsworth.lunar.client.util.net	PortUtils	port probing/validation helpers (localhost, 25564); network utility
+com.moonsworth.lunar.client.util	ServiceEndpoints	com.moonsworth.lunar.client.util.net	ServiceEndpoints	service URL registry (textures/launcher/store CDN + serviceOverride/devServices flags); network utility
+com.moonsworth.lunar.client.util	BrowserUtils	com.moonsworth.lunar.client.util.net	BrowserUtils	URL allowlist + OS browser open ("Refusing to open a URL with an unsupported protocol"); network utility used by gui external links/driver
+com.moonsworth.lunar.client.util	DisconnectUtils	com.moonsworth.lunar.client.util.net	DisconnectUtils	world/server disconnect + integrated-server halt wrapper; network session utility
+com.moonsworth.lunar.client.util	ThreadModuleDump74	com.moonsworth.lunar.client.util.net	ThreadModuleDump74	rescue-added async JSON HTTP helper (HttpClient, 10s timeouts, multipart/json bodies), unique name-placeholder class - rename in naming pass; used by fog.fishing
+com.moonsworth.lunar.client.util	EntityLookup	com.moonsworth.lunar.client.util.game	EntityLookup	world entity search around a Vec3i within radius with predicate; vanilla-game helper
+com.moonsworth.lunar.client.util	BlockSearch	com.moonsworth.lunar.client.util.game	BlockSearch	block position spiral search around origin with predicate; vanilla-game helper
+com.moonsworth.lunar.client.util	PredicateEntitySelector	com.moonsworth.lunar.client.util.game	PredicateEntitySelector	IEntitySelector wrapping a Predicate<Entity>; vanilla-game helper
+com.moonsworth.lunar.client.util	NpcUtils	com.moonsworth.lunar.client.util.game	NpcUtils	NPC detection (uuid version, "CIT-", nametag heuristics); game/player helper used by markers/tiertagger/fishing
+com.moonsworth.lunar.client.util	PotionUtils	com.moonsworth.lunar.client.util.game	PotionUtils	potion id<->registry-name table and effect matching; game helper (item counter)
+com.moonsworth.lunar.client.util	ItemTypeLookup	com.moonsworth.lunar.client.util.game	ItemTypeLookup	item registry lookup returning ItemBridge; game helper
+com.moonsworth.lunar.client.util	ItemTagUtils	com.moonsworth.lunar.client.util.game	ItemTagUtils	lunar NBT/custom item tag helpers; game/skyblock item helper
+com.moonsworth.lunar.client.util	TranslationKey	com.moonsworth.lunar.client.translation	TranslationKey	annotation for translation keys (features.$MOD$.info, settings.labels, gui.components); translation subsystem metadata
+com.moonsworth.lunar.client.util	TranslationEntry	com.moonsworth.lunar.client.translation	TranslationEntry	translation entry annotation (key + default + optional flag); translation subsystem metadata
+com.moonsworth.lunar.client.util	TranslationFormatter	com.moonsworth.lunar.client.translation	TranslationFormatter	template formatter for translation strings (raw/name/i18n, CachedReplacement, TranslationVariable); translation subsystem
+com.moonsworth.lunar.client.util	AuthUtil	com.moonsworth.lunar.client.account	AuthUtil	Microsoft auth + launcher session refresh ("Refreshing account: %s", launcher version, "No launcher open"); account subsystem
+com.moonsworth.lunar.client.util	LunarSoundPlayer	com.moonsworth.lunar.client.audio	LunarSoundPlayer	Lunar sound playback (sounds dir, mp3/wav/ogg, "Could not play Lunar sound!"); audio subsystem
+com.moonsworth.lunar.client.util	Wasapi	com.moonsworth.lunar.client.audio	Wasapi	JNA WASAPI loopback capture interface (CLSID_MMDeviceEnumerator/IAudioClient GUIDs); audio subsystem (replay audio export)
+com.moonsworth.lunar.client.util.lotusfish	AudioFileReader	com.moonsworth.lunar.client.audio.ogg	AudioFileReader	javax.sound.sampled.spi.AudioFileReader for Ogg/Opus ("OGG_OPUS", OggS, OggOpusDecodingThread); audio.ogg alongside OggPageReader
+com.moonsworth.lunar.client.util	CheckoutUtils	com.moonsworth.lunar.client.network.ipc	CheckoutUtils	Tebex checkout over launcher IPC ("Ignoring open request as we have no launcher IPC connection"); network.ipc subsystem
+com.moonsworth.lunar.client.util	FriendStatusUtils	com.moonsworth.lunar.client.network.friend	FriendStatusUtils	friend status JSON (onlineFriendStatus/location/serverName/serverMappingsId); network.friend subsystem
+com.moonsworth.lunar.client.util	ProtoConverter	com.moonsworth.lunar.client.network.apollo	ProtoConverter	protobuf<->Gson converters for common.v1 types (Uuid/UuidAndUsername/Duration/Timestamp/Struct); Apollo network protocol
+com.moonsworth.lunar.client.util	HostedWorldJoinHandler	com.moonsworth.lunar.client.network.hostedworld	HostedWorldJoinHandler	hosted-world join event handler ("hostedWorldJoin", "Failed to join hosted world"); used by driver/markers mixins; network.hostedworld subsystem
+com.moonsworth.lunar.client.util	ScreenProjection	com.moonsworth.lunar.client.render	ScreenProjection	world<->screen matrix projection helper (projection/modelView/inverse matrices, FloatBuffers); render helper
+com.moonsworth.lunar.client.util	CubeGeometry	com.moonsworth.lunar.client.render	CubeGeometry	cube vertex/index arrays + GL15 VBO setup for overlays; render helper
+com.moonsworth.lunar.client.util.rewindhandlers	RewindhandlersExtension	com.moonsworth.lunar.client.render.color	RewindhandlersExtension	colour mutation getter side (implements TextColorSource, used by fishing/holograms nameplate renderers); the only live member of the util.rewindhandlers family not already placed under render.color by moves-namesA
+com.moonsworth.lunar.client.util.click	Click7	com.moonsworth.lunar.client.render	Click7	framebuffer readback to ByteBuffer with TexturePixelFormat switch ("Unsupported readback format "); render/GPU helper
+com.moonsworth.lunar.client.util	OpaqueTextureFix	com.moonsworth.lunar.client.render.texture	OpaqueTextureFix	block-texture opacity fixes (stone/andesite/... atlas names); render.texture
+com.moonsworth.lunar.client.util	HeadTextureCache	com.moonsworth.lunar.client.render.texture	HeadTextureCache	UUID -> head/wrapped skin texture cache (download/heads, /face/); render.texture cache
+com.moonsworth.lunar.client.util	DownloadedImageCache	com.moonsworth.lunar.client.render.texture	DownloadedImageCache	on-disk downloaded image cache (downloaded-images dir, jpeg/png -> Identifier); render.texture cache
+com.moonsworth.lunar.client.util.alert	Alert4	com.moonsworth.lunar.client.render.texture	Alert4	async texture load Callable (texture manager, ResourceLocation, ColorChannelOrder, TextureQuality; "Failed to find texture"); render.texture (twin of Util2Handler - dedupe candidate)
+com.moonsworth.lunar.client.util	Util2Handler	com.moonsworth.lunar.client.render.texture	Util2Handler	async texture loader (Util2.Bridge3Extension_7/Bridge8Extension3/Alert5; "Failed to load texture %s asynchronously"); render.texture
+com.moonsworth.lunar.client.util	ShaderPreprocessor	com.moonsworth.lunar.client.render.shader	ShaderPreprocessor	shader source rewriter (LUNAR-SHADER-DEFINITION-MARKER, LUNAR_IN/OUT, uniform injection); render.shader
+com.moonsworth.lunar.client.util	CursorManager	com.moonsworth.lunar.client.ui	CursorManager	GLFW cursor registry (lunar/cursors/*.png, win_move/win_ibeam/win_link_select); UI resource manager
+com.moonsworth.lunar.client.util	GuiClipState	com.moonsworth.lunar.client.ui	GuiClipState	scissor/clip state (enabled + IntRectangle) shared by GUI rendering; UI helper
+com.moonsworth.lunar.client.util	GuiResolution	com.moonsworth.lunar.client.ui	GuiResolution	scaled-resolution model (width/height/scaledWidth/scaledHeight/factor); UI helper
+com.moonsworth.lunar.client.util	MousePosition	com.moonsworth.lunar.client.ui	MousePosition	GLFW mouse position accessor (logicalHeight flip); UI helper
+com.moonsworth.lunar.client.util.click	Click2Base	com.moonsworth.lunar.client.ui	Click2Base	base class wrapping Component/MixinHelper$Extension for clickable text width/height; UI text helper (no other users - dead, candidate for deletion)
+com.moonsworth.lunar.client.util	DesktopNotifier	com.moonsworth.lunar.client.ui.notification	DesktopNotifier	OS desktop notifications (notify-send/osascript/nil, lunar logo, urgency levels); ui.notification subsystem
+com.moonsworth.lunar.client.util	DummyPlayer	com.moonsworth.lunar.client.cosmetics	DummyPlayer	dummy/mannequin player contract (incrementTicksExisted, Type SELF/MANNEQUIN, GameProfile, nametag flag); implemented by hologram/cosmetic dummy players
+com.moonsworth.lunar.client.util	ThreadModuleDump91	com.moonsworth.lunar.client.cosmetics	ThreadModuleDump91	render-transform API (combine/rotate/rotateOnAxis/translate/scale + Rotate/Scale/Translate/Data/Type) imported by cosmetics/holograms/markers; cosmetics subsystem - rename in naming pass
+com.moonsworth.lunar.client.util	MarkerPredicate	com.moonsworth.lunar.client.driver	MarkerPredicate	@FunctionalInterface accept(Data2,int) filter for the marker overlay (markers now live under driver); driver subsystem
+com.moonsworth.lunar.client.util	NameTagUpdateListener	com.moonsworth.lunar.client.mixin	NameTagUpdateListener	mixin duck interface lunar$onNameTagUpdate() implemented by Scoreboard/Entity mixins; belongs with client.mixin
+com.moonsworth.lunar.client.util	FoodUtils	com.moonsworth.lunar.client.mod.render.saturation	FoodUtils	food/saturation values (REGEN_EXHAUSTION, canEat, SaturationModule override); helper of the saturation mod (mod/render/Saturation, framework/feature/saturation)
+com.moonsworth.lunar.client.util	FoodValues	com.moonsworth.lunar.client.mod.render.saturation	FoodValues	food level + saturation modifier pair returned by FoodUtils; helper of the saturation mod
+com.moonsworth.lunar.client.util.chest	Chest2	com.moonsworth.lunar.client.util.raytrace	Chest2	ray-trace traversal core (traverseBlocks/rayTraceBlocks + spray/cosmetic hit paths); unique class of the raytrace engine (already in util.raytrace)

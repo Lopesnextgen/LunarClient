@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.mod.mixin
+com.moonsworth.lunar.client.framework.feature.mod.rewindhandlers
+com.moonsworth.lunar.client.framework.feature.mod.rewindhandlers.mixin
+com.moonsworth.lunar.client.framework.feature.momentum
+com.moonsworth.lunar.client.framework.feature.motionblur
+com.moonsworth.lunar.client.framework.feature.nickhider
+com.moonsworth.lunar.client.framework.feature.onesevenvisuals
+com.moonsworth.lunar.client.framework.feature.onesevenvisuals.legacy

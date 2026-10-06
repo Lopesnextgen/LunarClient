@@ -1,0 +1,45 @@
+package	old	new	evidence
+com.moonsworth.lunar.bridge	BridgeExtension_9	AbstractRenderContext	abstract render context (translate/scale/rotate/push/pop/color); base of BridgeExtension2_11 (modern) and BridgeExtension3_5 (RenderContextLegacyTransform base)
+com.moonsworth.lunar.bridge	BridgeHandler2	ObjectAllocationEmitter	emits NEW+DUP and pushes the type, building the receiver of an <init> path; twin NewInstanceEmitter
+com.moonsworth.lunar.bridge	BridgeHandler3	FieldReadEmitter	emits GETSTATIC/GETFIELD after pushing the receiver path; twin FieldGetEmitter
+com.moonsworth.lunar.bridge	BridgeHandler4	FieldWriteEmitter	emits PUTSTATIC/PUTFIELD after receiver+value; twin FieldSetEmitter
+com.moonsworth.lunar.bridge	BridgeHandler5	ParameterDefaultEmitter	loads a queued parameter and emits the null-checked lens conversion when the bridge param annotation is present; twin ParameterConversionEmitter
+com.moonsworth.lunar.bridge	BridgeHandler6	MethodReturnEmitter	emits RETURN for void or Type.getOpcode(IRETURN) for the return value; twin ReturnEmitter
+com.moonsworth.lunar.bridge	BridgeHandler_2	ReceiverEmitter	emits ALOAD 0 and pushes the target class type as the chain receiver; twin ThisEmitter
+com.moonsworth.lunar.bridge	BridgeIterator2	SignatureEmitter	root emitter: parses the method signature, queues parameters, installs lens children plus composite/return emitters; twin InvocationEmitter
+com.moonsworth.lunar.bridge	BridgeIterator3	ChainEmitter	walks the List<Bridge_13> path and nests new-instance/field/default handlers into one emitter chain; twin PathEmitter
+com.moonsworth.lunar.bridge	BridgeIterator4	SequenceEmitter	runs each child emitter and emits POP/POP2 when a value is left on the stack; twin CompositeEmitter
+com.moonsworth.lunar.bridge	BridgeIterator5	GroupingEmitter	picks a signature-compatible grouping of child emitters via GroupingUtil statics ("Could not find a valid grouping"); unique
+com.moonsworth.lunar.bridge	BridgeType2	ShaderStage	GL shader stage enum VERTEX(35633)/FRAGMENT(35632)/GEOMETRY(36313)/CONTROL/EVALUATION/COMPUTE; twin ShaderStageType
+com.moonsworth.lunar.bridge	BridgeType3	PolygonDrawMode	GL polygon mode GL_POINT/GL_LINE/GL_FILL (6912-6914) plus isSupported; twin PolygonMode
+com.moonsworth.lunar.bridge	BridgeType4	ShadingModel	GL shade model GL_FLAT(7424)/GL_SMOOTH(7425) plus fromId; twin ShadeModel
+com.moonsworth.lunar.bridge	BridgeType5	TextureSlot	GL texture unit enum GL_TEXTURE_0..31, getId()=33984+ordinal; twin TextureUnit
+com.moonsworth.lunar.bridge	BridgeType6	VertexAttributeType	vertex element/GL data type enum BYTE..DOUBLE, id()=5120+ordinal; twin VertexElementType
+com.moonsworth.lunar.bridge	BridgeType_10	DepthComparison	GL depth function GL_NEVER..GL_ALWAYS (512-519) plus fromId/getId; twin DepthFunction
+com.moonsworth.lunar.bridge	BridgeType_11	TexturePixelFormat	pixel format RGBA8/RED8/DEPTH32 with pixelSize/hasColorAspect/hasDepthAspect; twin TextureFormat
+com.moonsworth.lunar.bridge	BridgeType_12	DepthTestMode	depth test enum LESS_DEPTH_TEST..GEQUAL_DEPTH_TEST implements Bridge_23, glIds 512-519; twin DepthTestFunction
+com.moonsworth.lunar.bridge	BridgeType_13	ContainerClickType	window click action enum PICKUP..PICKUP_ALL with fromVanilla/toVanilla(ordinal); twin ClickTypeBridge
+com.moonsworth.lunar.bridge	BridgeType_14	BufferUsageHint	GL buffer usage enum (35040-35050) with isReadable/isWritable; twin BufferUsage
+com.moonsworth.lunar.bridge	BridgeType_15	GlslUniformType	GLSL uniform type enum (vec/mat/dvec) with count/name/scalarType plus asGlslType/asMojangType; unique
+com.moonsworth.lunar.bridge	BridgeType_16	BufferBindingTarget	buffer binding target STORAGE_BUFFER/UNIFORM_BUFFER; twin BufferTarget
+com.moonsworth.lunar.bridge	BridgeType_17	BufferBuildMode	vertex buffer build mode IMMEDIATE/BATCHED passed to Bridge2_32.method17; twin BufferMode
+com.moonsworth.lunar.bridge	BridgeType_2	PackFormatVersion	resource pack format by MC version range (v1_6$1_8..v1_17) with format id; twin ResourcePackFormat
+com.moonsworth.lunar.bridge	BridgeType_3	SoundAttenuationType	sound attenuation NONE/LINEAR, passed to the bridge$play(...) positional-sound bridge; twin AttenuationTypeBridge
+com.moonsworth.lunar.bridge	BridgeType_4	PacketDirection	packet flow SERVERBOUND/CLIENTBOUND; twin PacketDirectionBridge
+com.moonsworth.lunar.bridge	BridgeType_5	ItemTransformType	item display transform NONE/THIRD_PERSON_*/HEAD/GUI/GROUND/FIXED with serialized name; twin ItemTransformTypeBridge
+com.moonsworth.lunar.bridge	BridgeType_6	DrawMode	GL draw mode enum POINTS..QUADS with mc/real GL modes, primitive length/stride plus fromGlMode; unique
+com.moonsworth.lunar.bridge	BridgeType_7	TransparencyMode	render-layer transparency OPAQUE/OPAQUE_DECAL/GENERAL_TRANSPARENT/DECAL/WATER_MASK/LINES; twin TransparencyType
+com.moonsworth.lunar.bridge	BridgeType_8	KeyCode	keyboard/mouse key code enum KEY_0..KEY_MOUSE16 with VK ids, getShortName/isMouse/fromMouseButton; unique (drives KeyboardBridge)
+com.moonsworth.lunar.bridge	BridgeType_9	ColorChannelOrder	pixel channel order ABGR/ARGB; twin PixelFormat
+com.moonsworth.lunar.bridge	Bridge_10	NativeImageBridge	native image buffer: getWidth/getHeight/checkAllocated/getPixels/size/close/writeToFile/getFormat; returned by bridge$getNativeImage; unique
+com.moonsworth.lunar.bridge	Bridge_11	GLSyncBridge	GL fence sync: glFenceSync/glDeleteSync/glClientWaitSync with GL32 impl in legacy/wrapper/BridgeHandler; twin GlFenceSyncBridge
+com.moonsworth.lunar.bridge	Bridge_12	ContainerMarker	empty marker returned by bridge$getOpenContainer, extended by the chest bridge copy (BridgeExtension_5) and the anvil bridge copy (BridgeExtension2_8); twin ContainerBridge
+com.moonsworth.lunar.bridge	Bridge_13	TargetPathMember	resolved target path element: ClassNode + owner type + FieldNode/MethodNode + signature + isInterface; twin MixinTargetMember
+com.moonsworth.lunar.bridge	Bridge_14	WitherSkeletonBridge	entity skeleton extension @Annotation2(max=1) bridge$isWitherSkeleton(); twin EntitySkeletonBridge
+com.moonsworth.lunar.bridge	Bridge_15	BytecodeEmitter	emitter SPI method1(context, Queue<MethodParameter>, Stack<TypeSignature>, InsnList); prior name reverted as jar-coupled
+com.moonsworth.lunar.bridge	Bridge_16	PacketFactoryBridge	packet factory plus bridge accessor registry (36 methods); Bridge.method59() returns it; twin PacketFactory
+com.moonsworth.lunar.bridge	Bridge_17	TileEntityRendererBridge	tile-entity renderer bridge shouldRenderOffScreen/getViewDistance/shouldRender (1.8 MCP name); twin BlockEntityRendererBridge
+com.moonsworth.lunar.bridge	Bridge_19	LevelRendererBridge	render-global visibility bridge isVisible(Horsestats12)/isBlockVisible/getPartialTicks; twin LevelRendererVisibilityBridge
+com.moonsworth.lunar.bridge	Bridge_2	CustomBufferSourceProvider	custom buffer-source override get/set (type min 33, methods min 39); twin CustomBufferSourceHolder
+com.moonsworth.lunar.bridge	Bridge_20	NetworkConnectionBridge	network manager bridge: clientPacketListener/protocol info/enteredHostName/remoteAddress/channelInactive; impl NetworkManager_v1_7/v1_12 mixins; twin NetworkManagerBridge
+com.moonsworth.lunar.bridge	Bridge_21	MovementStateBridge	movement input state strafe/forward/jump/sneak with setters; twin MovementInputBridge

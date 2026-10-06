@@ -1,0 +1,19 @@
+[
+  {
+    "name": "MINECRAFT_DEFAULTS",
+    "patterns": [
+      "^<target> was (killed|slain|shot|squashed|smashed|fireballed|impaled|skewered|pummelled|blown up|doomed to fall|stung to death|frozen to death|fell too far and was finished|roasted in dragon's breath) by \\b<username>\\b",
+      "^<target> .* (whilst fighting|whilst trying to escape|whilst trying to hurt) \\b<username>\\b",
+      "^<target> (died because of|walked into the danger zone due to|didn't want to live in the same world as|tried to swim in lava to escape|was shot by a skull from|fell too far and was finished by) \\b<username>\\b",
+      "^<target> went off with a bang due to a firework fired from .{1,50} by \\b<username>\\b"
+    ],
+    "type": "ALL",
+    "gameTypes": []
+  },
+  {
+    "name": "HYPIXEL_GAMEMODES",
+    "patterns": ["^<target>.* (was|by|of|to|on|for|with|from|while) .*\\b<username>\\b"],
+    "type": "HYPIXEL",
+    "gameTypes": ["BEDWARS", "SKYWARS", "DUELS"]
+  }
+]

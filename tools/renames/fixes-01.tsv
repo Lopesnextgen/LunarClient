@@ -1,0 +1,3 @@
+package	old	new	evidence
+com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms	DungeonRoomType	MapRoomType	avoid clash with the imported websocket proto com.lunarclient.websocket.skyblock.v1.DungeonRoomType
+com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms	RoomDetection	RoomTemplateDetector	avoid clash with the websocket proto RoomDetection imported by holograms/HologramsType25; this class detects room template hash + rotation from world blocks

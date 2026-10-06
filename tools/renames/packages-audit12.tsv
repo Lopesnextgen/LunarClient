@@ -1,0 +1,15 @@
+# Package audit 12 — wrong / misplaced packages
+# Format: old.package<TAB>new.package[<TAB>evidence]
+# Prefix semantics: `old` and every `old.*` subtree move under `new`.
+# Apply with: tools/apply_package_renames.py --map tools/renames/packages-audit12.tsv
+#
+# These are decompiler `.mixin` buckets that hold NO mixin classes. The classes
+# in each are ordinary helpers that belong to the feature root package. Move the
+# class rename map (classes-audit12.tsv) FIRST: the moves merge two packages that
+# both declare a same-named class (Keystrokes, Killsounds), and the aware class
+# renamer must disambiguate them by package before the directories merge.
+
+com.moonsworth.lunar.client.framework.feature.keystrokes.mixin	com.moonsworth.lunar.client.framework.feature.keystrokes	holds KeystrokeLayout + DefaultKeystrokeKey; no @Mixin annotation, referenced only from mod/hud/Keystrokes and feature.keystrokes.KeystrokeKey
+com.moonsworth.lunar.client.framework.feature.killsounds.mixin	com.moonsworth.lunar.client.framework.feature.killsounds	holds the kill-detection engine + chat parsers/filter; no @Mixin, constructed by mod/combat/KillSounds
+com.moonsworth.lunar.client.framework.feature.knockbacktrainer.mixin	com.moonsworth.lunar.client.framework.feature.knockbacktrainer	single Highlight event published by guiRewindhandlers/KnockbackListener; no @Mixin
+com.moonsworth.lunar.client.framework.feature.markers.mixin	com.moonsworth.lunar.client.framework.feature.markers	marker team/source detection (MarkerTeam, MarkerSource, MarkerDetectionFunction); no @Mixin

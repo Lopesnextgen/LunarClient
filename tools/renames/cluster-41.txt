@@ -1,0 +1,15 @@
+com/moonsworth/lunar/bridge/MixinHelper_15.java	MixinHelper_15
+com/moonsworth/lunar/bridge/MixinHelper_16.java	MixinHelper_16
+com/moonsworth/lunar/bridge/MixinHelper_17.java	MixinHelper_17
+com/moonsworth/lunar/bridge/MixinHelper_18.java	MixinHelper_18
+com/moonsworth/lunar/bridge/MixinHelper_19.java	MixinHelper_19
+com/moonsworth/lunar/bridge/MixinHelper_2.java	MixinHelper_2
+com/moonsworth/lunar/bridge/MixinHelper_20.java	MixinHelper_20
+com/moonsworth/lunar/bridge/MixinHelper_21.java	MixinHelper_21
+com/moonsworth/lunar/bridge/MixinHelper_3.java	MixinHelper_3
+com/moonsworth/lunar/bridge/MixinHelper_4.java	MixinHelper_4
+com/moonsworth/lunar/bridge/MixinHelper_5.java	MixinHelper_5
+com/moonsworth/lunar/bridge/MixinHelper_6.java	MixinHelper_6
+com/moonsworth/lunar/bridge/MixinHelper_7.java	MixinHelper_7
+com/moonsworth/lunar/bridge/MixinHelper_8.java	MixinHelper_8
+com/moonsworth/lunar/bridge/MixinHelper_9.java	MixinHelper_9

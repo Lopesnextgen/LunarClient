@@ -1,0 +1,8 @@
+com.moonsworth.lunar.bridge.optifine
+com.moonsworth.lunar.bridge.particle
+com.moonsworth.lunar.bridge.potion
+com.moonsworth.lunar.bridge.resourcepack
+com.moonsworth.lunar.bridge.scoreboard
+com.moonsworth.lunar.bridge.server
+com.moonsworth.lunar.bridge.slayer
+com.moonsworth.lunar.bridge.stats

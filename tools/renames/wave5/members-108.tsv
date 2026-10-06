@@ -1,0 +1,399 @@
+# owner.fqn	M|F	oldName	newName	evidence
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.EntityFinder	M	method1	findNearest	default predicate = NPC (NpcUtils.method2) or EntityMobBridge; delegates with Float.MAX_VALUE; callers SkyblockDianaMobHud/StarredMobHighlight "nearest mob"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.EntityFinder	M	method2	findNearest	predicate overload of method1, delegates to method3 with Float.MAX_VALUE
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.EntityFinder	M	method3	findNearest	nearest entity within predicate, keeps lowest method4 distance; loop over entities
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.EntityFinder	M	method4	distanceSquared	dx^2 + (dy+2)^2 + dz^2 between two entities (eye offset); VoidgloomBoss.isValid uses > 4.0F
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	F	field1	QUANTIZE_SCALE	10000.0 quantization factor for edge/face keys; used by quantize (method8)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	M	method1	mergeEdges	merges coincident box edges: addBlockEdges per box then MaskedMap.valuesMatching(isExposed)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	M	method2	mergeFaces	merges coincident box faces: addBlockFaces per box then valuesMatching(mask != 3)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	M	method3	isExposed	Predicate: drops internal edge masks 3/12/5/10/15 (both side bits set)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	M	method4	addBlockEdges	emits the 12 edges of BlockBox into MaskedMap<EdgeKey,Data> (method6 x12)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	M	method5	addBlockFaces	emits the 6 faces of BlockBox into MaskedMap<FaceKey,BlockFace> (method7 x6)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	M	method6	addEdge	builds EdgeKey.of(...) + new Data(...) with mask 1<<(bit0|bit1) into the map
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	M	method7	addFace	builds FaceKey.of(type,...) + new BlockFace(...) with mask facing?1:2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger	M	method8	quantize	Math.round(value * 10000.0) - quantizes coordinates for key hashing
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	F	field1	x1	edge value stored by addEdge: endpoint 1; getter method1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	F	field2	y1	edge value stored by addEdge: endpoint 1; getter method2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	F	field3	z1	edge value stored by addEdge: endpoint 1; getter method3
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	F	field4	x2	edge value stored by addEdge: endpoint 2; getter method4
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	F	field5	y2	edge value stored by addEdge: endpoint 2; getter method5
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	F	field6	z2	edge value stored by addEdge: endpoint 2; getter method6
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	F	field7	color	edge value stored by addEdge: endpoint 2; getter method7
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	M	method1	getX1	plain getter for field1 (edge endpoint/color)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	M	method2	getY1	plain getter for field2 (edge endpoint/color)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	M	method3	getZ1	plain getter for field3 (edge endpoint/color)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	M	method4	getX2	plain getter for field4 (edge endpoint/color)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	M	method5	getY2	plain getter for field5 (edge endpoint/color)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	M	method6	getZ2	plain getter for field6 (edge endpoint/color)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$Data	M	method7	getColor	plain getter for field7 (edge endpoint/color)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	F	field1	minX	axis-aligned block box minX; sibling getters minX()/minZ()/maxX()/maxZ() already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	F	field2	minY	axis-aligned block box minY; sibling getters minX()/minZ()/maxX()/maxZ() already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	F	field3	minZ	axis-aligned block box minZ; sibling getters minX()/minZ()/maxX()/maxZ() already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	F	field4	maxX	axis-aligned block box maxX; sibling getters minX()/minZ()/maxX()/maxZ() already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	F	field5	maxY	axis-aligned block box maxY; sibling getters minX()/minZ()/maxX()/maxZ() already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	F	field6	maxZ	axis-aligned block box maxZ; sibling getters minX()/minZ()/maxX()/maxZ() already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	F	field7	color	axis-aligned block box color; sibling getters minX()/minZ()/maxX()/maxZ() already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	M	method1	of	static factory BlockBox.from(double[6], int color); used by hologram/waypoint code
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	M	method2	getMinY	returns field2 (minY)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	M	method3	getMaxY	returns field5 (maxY)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockBox	M	method4	getColor	returns field7 (argb color)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	F	field1	x1	quantized edge key component x1; getter method2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	F	field2	y1	quantized edge key component y1; getter method3
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	F	field3	z1	quantized edge key component z1; getter method4
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	F	field4	x2	quantized edge key component x2; getter method5
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	F	field5	y2	quantized edge key component y2; getter method6
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	F	field6	z2	quantized edge key component z2; getter method7
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	F	field7	color	quantized edge key component color; getter method8
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	M	method1	of	quantizes 6 coords (quantize) and orders the two endpoints lexicographically
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	M	method2	getX1	plain getter for field1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	M	method3	getY1	plain getter for field2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	M	method4	getZ1	plain getter for field3
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	M	method5	getX2	plain getter for field4
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	M	method6	getY2	plain getter for field5
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	M	method7	getZ2	plain getter for field6
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$EdgeKey	M	method8	getColor	plain getter for field7
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	F	field1	type	face quad type; constructor normalises the two axis spans
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	F	field2	plane	face quad plane; constructor normalises the two axis spans
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	F	field3	minU	face quad minU; constructor normalises the two axis spans
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	F	field4	minV	face quad minV; constructor normalises the two axis spans
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	F	field5	maxU	face quad maxU; constructor normalises the two axis spans
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	F	field6	maxV	face quad maxV; constructor normalises the two axis spans
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	F	field7	color	face quad color; constructor normalises the two axis spans
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	F	field8	facing	face quad facing; constructor normalises the two axis spans
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method1	render	switch on Type -> renderY/renderZ/renderX into DrawBufferBridge
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method2	renderY	renders the Y-facing quad (4 vertices, winding depends on facing)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method3	renderZ	renders the Z-facing quad
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method4	renderX	renders the X-facing quad
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method5	getType	plain getter for field1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method6	getPlane	plain getter for field2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method7	getMinU	plain getter for field3
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method8	getMinV	plain getter for field4
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method9	getMaxU	plain getter for field5
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method10	getMaxV	plain getter for field6
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method11	getColor	plain getter for field7
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$BlockFace	M	method12	isFacing	plain getter for field8
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	F	field1	type	quantized face key type (v0/v1 already carry minV/maxV and are left untouched)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	F	field2	plane	quantized face key plane (v0/v1 already carry minV/maxV and are left untouched)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	F	field3	minU	quantized face key minU (v0/v1 already carry minV/maxV and are left untouched)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	F	field4	maxU	quantized face key maxU (v0/v1 already carry minV/maxV and are left untouched)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	F	field5	color	quantized face key color (v0/v1 already carry minV/maxV and are left untouched)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	M	method1	of	quantizes plane coord and spans, builds a canonical FaceKey
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	M	method2	getType	plain getter for the face key component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	M	method3	getPlane	plain getter for the face key component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	M	method4	getMinU	plain getter for the face key component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	M	method5	getMinV	plain getter for the face key component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	M	method6	getMaxU	plain getter for the face key component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	M	method7	getMaxV	plain getter for the face key component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$FaceKey	M	method8	getColor	plain getter for the face key component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$MaskedMap	F	field1	entries	LinkedHashMap of key -> MaskedMap.Data holding the OR-ed mask
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$MaskedMap	M	method1	put	computeIfAbsent(value) then |= mask; used by addEdge/addFace
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$MaskedMap	M	method2	valuesMatching	collects Data.value where the IntPredicate accepts Data.mask
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FaceMerger$MaskedMap$Data	F	field1	value	payload value; mask field is already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field1	GLYPH_HASH	U+E000 -> emoji shortcode 'hash' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field2	GLYPH_ASTERISK	U+E001 -> emoji shortcode 'asterisk' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field3	GLYPH_ZERO	U+E002 -> emoji shortcode 'zero' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field4	GLYPH_ONE	U+E003 -> emoji shortcode 'one' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field5	GLYPH_TWO	U+E004 -> emoji shortcode 'two' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field6	GLYPH_THREE	U+E005 -> emoji shortcode 'three' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field7	GLYPH_FOUR	U+E006 -> emoji shortcode 'four' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field8	GLYPH_FIVE	U+E007 -> emoji shortcode 'five' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field9	GLYPH_SIX	U+E008 -> emoji shortcode 'six' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field10	GLYPH_SEVEN	U+E009 -> emoji shortcode 'seven' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field11	GLYPH_EIGHT	U+E00A -> emoji shortcode 'eight' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field12	GLYPH_NINE	U+E00B -> emoji shortcode 'nine' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field13	GLYPH_COPYRIGHT	U+E00C -> emoji shortcode 'copyright' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field14	GLYPH_REGISTERED	U+E00D -> emoji shortcode 'registered' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field15	GLYPH_MAHJONG	U+E00E -> emoji shortcode 'mahjong' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field16	GLYPH_BLACK_JOKER	U+E00F -> emoji shortcode 'black_joker' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field17	GLYPH_A	U+E010 -> emoji shortcode 'a' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field18	GLYPH_B	U+E011 -> emoji shortcode 'b' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field19	GLYPH_O2	U+E012 -> emoji shortcode 'o2' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field20	GLYPH_PARKING	U+E013 -> emoji shortcode 'parking' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field21	GLYPH_AB	U+E014 -> emoji shortcode 'ab' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field22	GLYPH_CL	U+E015 -> emoji shortcode 'cl' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field23	GLYPH_COOL	U+E016 -> emoji shortcode 'cool' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field24	GLYPH_FREE	U+E017 -> emoji shortcode 'free' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field25	GLYPH_ID	U+E018 -> emoji shortcode 'id' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field26	GLYPH_NEW	U+E019 -> emoji shortcode 'new' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field27	GLYPH_NG	U+E01A -> emoji shortcode 'ng' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field28	GLYPH_OK	U+E01B -> emoji shortcode 'ok' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field29	GLYPH_SOS	U+E01C -> emoji shortcode 'sos' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field30	GLYPH_UP	U+E01D -> emoji shortcode 'up' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field31	GLYPH_VS	U+E01E -> emoji shortcode 'vs' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field32	GLYPH_ASCENSION_ISLAND	U+E01F -> emoji shortcode 'ascension_island' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field33	GLYPH_ANDORRA	U+E020 -> emoji shortcode 'andorra' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field34	GLYPH_UNITED_ARAB_EMIRATES	U+E021 -> emoji shortcode 'united_arab_emirates' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field35	GLYPH_AFGHANISTAN	U+E022 -> emoji shortcode 'afghanistan' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field36	GLYPH_ANTIGUA_BARBUDA	U+E023 -> emoji shortcode 'antigua_barbuda' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field37	GLYPH_ANGUILLA	U+E024 -> emoji shortcode 'anguilla' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field38	GLYPH_ALBANIA	U+E025 -> emoji shortcode 'albania' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field39	GLYPH_ARMENIA	U+E026 -> emoji shortcode 'armenia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field40	GLYPH_ANGOLA	U+E027 -> emoji shortcode 'angola' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field41	GLYPH_ANTARCTICA	U+E028 -> emoji shortcode 'antarctica' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field42	GLYPH_ARGENTINA	U+E029 -> emoji shortcode 'argentina' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field43	GLYPH_AMERICAN_SAMOA	U+E02A -> emoji shortcode 'american_samoa' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field44	GLYPH_AUSTRIA	U+E02B -> emoji shortcode 'austria' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field45	GLYPH_AUSTRALIA	U+E02C -> emoji shortcode 'australia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field46	GLYPH_ARUBA	U+E02D -> emoji shortcode 'aruba' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field47	GLYPH_COLOMBIA	U+E050 -> emoji shortcode 'colombia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field48	GLYPH_CLIPPERTON_ISLAND	U+E051 -> emoji shortcode 'clipperton_island' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field49	GLYPH_COSTA_RICA	U+E052 -> emoji shortcode 'costa_rica' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field50	GLYPH_CUBA	U+E053 -> emoji shortcode 'cuba' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field51	GLYPH_CAPE_VERDE	U+E054 -> emoji shortcode 'cape_verde' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field52	GLYPH_CURACAO	U+E055 -> emoji shortcode 'curacao' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field53	GLYPH_CHRISTMAS_ISLAND	U+E056 -> emoji shortcode 'christmas_island' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field54	GLYPH_CYPRUS	U+E057 -> emoji shortcode 'cyprus' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field55	GLYPH_CZECH_REPUBLIC	U+E058 -> emoji shortcode 'czech_republic' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field56	GLYPH_DE	U+E059 -> emoji shortcode 'de' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field57	GLYPH_DIEGO_GARCIA	U+E05A -> emoji shortcode 'diego_garcia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field58	GLYPH_DJIBOUTI	U+E05B -> emoji shortcode 'djibouti' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field59	GLYPH_UK	U+E070 -> emoji shortcode 'uk' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field60	GLYPH_GRENADA	U+E071 -> emoji shortcode 'grenada' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field61	GLYPH_GEORGIA	U+E072 -> emoji shortcode 'georgia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field62	GLYPH_FRENCH_GUIANA	U+E073 -> emoji shortcode 'french_guiana' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field63	GLYPH_GUERNSEY	U+E074 -> emoji shortcode 'guernsey' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field64	GLYPH_GHANA	U+E075 -> emoji shortcode 'ghana' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field65	GLYPH_GIBRALTAR	U+E076 -> emoji shortcode 'gibraltar' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field66	GLYPH_GREENLAND	U+E077 -> emoji shortcode 'greenland' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field67	GLYPH_GAMBIA	U+E078 -> emoji shortcode 'gambia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field68	GLYPH_GUINEA	U+E079 -> emoji shortcode 'guinea' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field69	GLYPH_GUADELOUPE	U+E07A -> emoji shortcode 'guadeloupe' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field70	GLYPH_EQUATORIAL_GUINEA	U+E07B -> emoji shortcode 'equatorial_guinea' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field71	GLYPH_GREECE	U+E07C -> emoji shortcode 'greece' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field72	GLYPH_SOUTH_GEORGIA_SOUTH_SANDWICH_ISLANDS	U+E07D -> emoji shortcode 'south_georgia_south_sandwich_islands' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field73	GLYPH_GUATEMALA	U+E07E -> emoji shortcode 'guatemala' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field74	GLYPH_GUAM	U+E07F -> emoji shortcode 'guam' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field75	GLYPH_GUINEA_BISSAU	U+E080 -> emoji shortcode 'guinea_bissau' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field76	GLYPH_GUYANA	U+E081 -> emoji shortcode 'guyana' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field77	GLYPH_HONG_KONG	U+E082 -> emoji shortcode 'hong_kong' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field78	GLYPH_HEARD_MCDONALD_ISLANDS	U+E083 -> emoji shortcode 'heard_mcdonald_islands' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field79	GLYPH_HONDURAS	U+E084 -> emoji shortcode 'honduras' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field80	GLYPH_CROATIA	U+E085 -> emoji shortcode 'croatia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field81	GLYPH_HAITI	U+E086 -> emoji shortcode 'haiti' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field82	GLYPH_HUNGARY	U+E087 -> emoji shortcode 'hungary' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field83	GLYPH_CEUTA_MELILLA	U+E060 -> emoji shortcode 'ceuta_melilla' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field84	GLYPH_ECUADOR	U+E061 -> emoji shortcode 'ecuador' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field85	GLYPH_ESTONIA	U+E062 -> emoji shortcode 'estonia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field86	GLYPH_EGYPT	U+E063 -> emoji shortcode 'egypt' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field87	GLYPH_WESTERN_SAHARA	U+E064 -> emoji shortcode 'western_sahara' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field88	GLYPH_ERITREA	U+E065 -> emoji shortcode 'eritrea' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field89	GLYPH_ES	U+E066 -> emoji shortcode 'es' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field90	GLYPH_ETHIOPIA	U+E067 -> emoji shortcode 'ethiopia' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.FontGlyphs	F	field91	GLYPH_EUROPEAN_UNION	U+E068 -> emoji shortcode 'european_union' per assets/lunar/emoji/shortcodes.json (same PUA code points)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.IslandUtils	M	method1	isOnIsland	getIsland() != SkyblockIsland.NONE; predicate of ~100 feature/setting enable gates (HudVisibilityWrapper)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.IslandUtils	M	method2	getIsland	HypixelLocationListener.currentLocation.getIsland()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.IslandUtils	M	method3	hasPowderSources	island != null && SkyblockIsland.containsPowderSources() (Dwarven Mines/CH)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.IslandUtils	M	method4	isMiningIsland	island != null && SkyblockIsland.isMiningIsland()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.IslandUtils	M	method5	getEyeHeight	1.54 while sneaking else 1.62; BurrowTrailLocator/SkyblockTreasureChestHelper add it to player pos
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.IslandUtils	M	method6	playSound	LunarSoundPlayer.method2(skyblock.getSoundOption(), skyblock) in alert HUDs
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.JsonDeserializerImpl	M	method1	deserialize	@Override JsonDeserializer<Vector3iBridge>: parses "x,y,z" string; exception text "Expected 3 comma separated integers"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.Vec3iDeserializer	M	method1	deserialize	@Override JsonDeserializer<Vec3iBridge>: same "x,y,z" parser as JsonDeserializerImpl
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.JsonDeserializerIterator	M	method1	deserialize	implements com.google.gson.JsonDeserializer<T> (external @Override)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.MinionDataDeserializer	M	method1	deserialize	implements com.google.gson.JsonDeserializer<T> (external @Override)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.JsonDeserializerIterator	M	method1	deserialize	implements com.google.gson.JsonDeserializer<T> (external @Override)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.LineFitter	M	method1	fitLine	RANSAC fit with defaults (100 samples, 0.1 tolerance); null when too few points
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.LineFitter	M	method2	fitLine	RANSAC: random pairs, inliers within threshold; SkyblockMageBeam calls fitLine(set,100,1e-5,10)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.LineFitter	M	method3	distanceToLine	cross(point-origin, direction).length()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.LineFitter	M	method4	createLineSegment	fits a LineSegment through the inlier points (mean + min/max projection)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	F	field1	EMPTY_SLOTS	sentinel empty IntOpenHashSet returned for unknown containers (constant)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	F	field2	exactMatches	exact container-name -> slot set (registerExact)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	F	field3	prefixMatches	startsWith container-name -> slots
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	F	field4	suffixMatches	endsWith container-name -> slots
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	F	field5	containsMatches	contains container-name -> slots
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	F	field6	cache	LoadingCache<String,IntOpenHashSet> max 50 built from this::load
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	M	method1	find	@Nullable cache lookup; CrashReporter tag "SkyBlockMiddleClickGuis"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	M	method2	load	CacheLoader: exact map, then prefix, suffix, contains lists; EMPTY_SLOTS fallback
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	M	method3	registerPrefix	adds Data to prefixMatches
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	M	method4	registerSuffix	adds Data to suffixMatches
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	M	method5	registerContains	adds Data to containsMatches
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry	M	method6	registerExact	puts into exactMatches
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry$Data	F	field1	name	container name; accessor name() already named
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry$Data	F	field2	slots	IntOpenHashSet of middle-click slots
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.MiddleClickGuiRegistry$Data	M	method1	getSlots	returns the slot set
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.ParticleSample	F	field1	position	Vec2D(x,z) of the spawned particle (EventSpawnParticle)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.ParticleSample	F	field2	y	particle y level, float
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.ParticleSample	F	field3	timestamp	SystemTime at capture (Ref.method3().getSystemTime())
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.ParticleSample	M	method1	getPosition	CircleFitter uses the Vec2D for fitting
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.ParticleSample	M	method2	getY	CircleFitter averages method2()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.ParticleSample	M	method3	getTimestamp	capture time getter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.RollingWindow	F	field1	windows	Deque of per-tick collections; add() appends to getLast()
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.RollingWindow	F	field2	current	collection handed out by the next rotation
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.RollingWindow	M	method1	advance	clears current, appends it, polls the oldest and returns it
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	F	field1	FIRST_YEAR_START	1560275700L = Skyblock year 1 epoch (11 Jun 2019 00:00 UTC, seconds)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	F	field2	YEAR_SECONDS	446400L = one Skyblock year (5d4h real time); used by getSeason
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	F	field3	DAY_SECONDS	1200L = one Skyblock day (20 min); used by getElapsedDaySeconds
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method1	now	System.currentTimeMillis()/1000
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method2	getYear	(now - FIRST_YEAR_START)/YEAR_SECONDS + 1
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method3	getElapsedYearSeconds	(now - FIRST_YEAR_START) % YEAR_SECONDS; season fraction
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method4	getElapsedDaySeconds	getElapsedSeconds(1)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method5	getElapsedSeconds	(now - FIRST_YEAR_START) % (DAY_SECONDS * days)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method6	getSeason	floor(yearFraction * SkyblockSeason.values().length)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method7	isSeasonBetween	current season ordinal within [start..end]
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method8	isSpring	EARLY_SPRING..LATE_SPRING; SkyblockHoppityEggHud (spring event)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.SkyblockCalendar	M	method9	isAutumn	EARLY_AUTUMN..LATE_AUTUMN; SkyblockHarvestFeastTrackerHud ("Grand Feast")
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory	M	method1	styleOf	Style from an EnumOption<Gui2Extension> color (RESET -> WHITE); DungeonSplit splits
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory	M	method2	builder	new Data(); followed by label/value/color/showLabel/build in ~20 HUDs
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory	M	method3	colorForRatio	green >0.5, yellow >0.25 else red; SkyblockTickTimerHud/SkyblockStormHud
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory	M	method4	itemLine	"- <name> x<count>" gold/white line; SkyblockVisitorShoppingListHud
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory	M	method5	itemLine	itemLine with explicit label/value colors
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory	M	method6	clickable	Component -> ClickableText via Bridge.method89
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory	M	method7	clickable	ClickableText wrapper; SkyblockStackingEnchants/TrophyFish/BazaarHelper
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	F	field1	label	left component (default Component.empty())
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	F	field2	value	right component (default Component.empty())
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	F	field3	labelColor	from Skyblock.color option (method21)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	F	field4	valueColor	from Skyblock.color option (method23)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	F	field5	separatorColor	color of the ": " separator (Skyblock.method22)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	F	field6	showLabel	when false build() returns only the value component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method1	label	sets label component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method2	label	sets label from String with labelColor
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method3	value	sets value component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method4	value	sets value from String with valueColor
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method5	labelColor	sets labelColor and recolors label
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method6	labelColor	labelColor(int rgb)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method7	valueColor	sets valueColor and recolors value
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method8	valueColor	valueColor(int rgb)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method9	separatorColor	sets the ": " color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method10	colors	colors(int rgb)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method11	colors	applies one TextColor to label, value and separator
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method12	showLabel	withLabel/shouldShowLabel flag
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method13	decorateLabel	decorates the label component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method14	decorateValue	decorates the value component
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method15	hoverLabel	hover event on the label
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.TextComponentFactory$Data	M	method16	hoverValue	hover event on the value
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field1	boss	the Voidgloom Seraph enderman found by EntityFinder (getter method2)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field2	nameTag	armor stand whose custom name matches "☠ Voidgloom Seraph" and carries the Hit phase (isValid/update)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field3	marker	companion armor stand, position must track nameTag and stay within 4 blocks of boss
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field4	type	current Type (SHIELD/RADIATION/NONE) rendered in SkyblockEndermanSlayer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field5	skulls	armor stands with the Enderman skull helmet (SkyblockEndermanSlayer.method8)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field6	endermen	spawned Bridge11_5 minions owned by this boss (EventEntitySpawn/EventRenderEntity)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field7	beaconTimer	HudTimer for the radiation/beacon phase (8s countdown)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field8	beaconData	last beacon armor-stand placement (Data)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	F	field9	beaconBlockPos	block pos of the placed/held beacon, cleared in method15
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method1	update	reads nameTag custom name, regex field10, sets SHIELD/RADIATION/NONE and starts beaconTimer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method2	getBoss	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method3	getNameTag	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method4	getMarker	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method5	getType	@Generated getter; switch in renderer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method6	getSkulls	@Generated getter; add() in SkyblockEndermanSlayer.method8
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method7	getEndermen	@Generated getter; contains() in EventEntitySpawn/EventRenderEntity
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method8	getBeaconTimer	@Generated getter; formatted by method17(HudTimer)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method9	getBeaconData	@Generated getter; method14 block-place logic
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method10	getBeaconBlockPos	@Generated getter; beacon beam rendering
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method11	setBoss	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method12	setNameTag	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method13	setMarker	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method14	setType	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method15	setSkulls	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method16	setEndermen	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method17	setBeaconTimer	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method18	setBeaconData	@Generated setter; new Data(beacon) on beacon-item spawn
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss	M	method19	setBeaconBlockPos	@Generated setter; null on beacon break
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	F	field1	beacon	the beacon armor stand entity
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	F	field2	pos	last position of the beacon stand
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	F	field3	timestamp	SystemTime when the beacon was seen (-1 = never)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	M	method1	getBeacon	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	M	method2	getPos	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	M	method3	getTimestamp	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	M	method4	setBeacon	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	M	method5	setPos	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.VoidgloomBoss$Data	M	method6	setTimestamp	@Generated setter
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WidgetFactory	M	method1	withBackground	PaddedHudComponent(4px) wrapped in BackgroundHudComponent; used by debug HUDs + settings panels
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WidgetFactory	M	method2	withBackground	withBackground + Consumer<HudComponentStyle> tweaks (ScathaTracker/DungeonWaypoint settings)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WidgetFactory	M	method3	withBackground	withBackground + Supplier<Boolean> visibility gate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WidgetFactory	M	method4	withBackground	withBackground + visibility supplier + style consumer; BackgroundHudComponent.method6(supplier)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WidgetFactory	M	method5	createItem	ItemBridge -> ItemStackHudComponent (sets foil on 1.20+); SkyblockGemstoneProfit
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WidgetFactory	M	method6	createLore	title + label:value lines as TextComponents (bold title + ValuePair list); SkyblockChocolateShopHelper
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method1	drawBoxAtCoordinate	block-coordinate box; default ARGB 0x2200FF00 (570490624); SkyblockRenderDebugUtilities label "drawBoxAtCoordinate"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method2	drawBoxAtCoordinate	block-coordinate box; default ARGB 0x2200FF00 (570490624); SkyblockRenderDebugUtilities label "drawBoxAtCoordinate"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method3	drawBoxAtCoordinate	block-coordinate box; default ARGB 0x2200FF00 (570490624); SkyblockRenderDebugUtilities label "drawBoxAtCoordinate"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method4	drawFancyBox	outline + translucent fill with the configured line width; debug label "drawFancyBox"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method5	drawFancyBox	drawFancyBox with explicit line width (used by SkyblockRenderDebugUtilities + SkyblockEndermanSlayer)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method6	drawFilledBox	AABB fill with render type; debug label "drawFilledBox"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method7	drawFilledBox	AABB fill with explicit RenderTypeBridge
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method8	highlightBlockFace	single block face quad (NORTH/SOUTH/EAST/WEST/UP/DOWN); debug label "highlightBlockFace"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method9	drawString	billboarded world string centered at pos (SkyblockKeyGuardianTimer/FragmentDebugChildMod)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method10	drawComponent	billboarded adventure Component, optional scale/depth; Burrow/SkyblockFireFreezeTimer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method11	drawComponent	billboarded adventure Component, optional scale/depth; Burrow/SkyblockFireFreezeTimer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method12	drawComponent	billboarded adventure Component, optional scale/depth; Burrow/SkyblockFireFreezeTimer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method13	applyBillboardTransform	push + rotate by player view + scale 1.6/60 for billboard text
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method14	highlightBlockAt	block AABB outline+fill at a Vector3i; debug label "highlightBlockAt"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method15	renderDebugLine	single 3D line from Vector3dc pair into a BufferBuilder
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method16	renderDebugLine	same as method15 with raw doubles; debug label "renderDebugLine"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method17	renderLines	Collection<Line3D> as GL lines; debug label "renderLines"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method18	renderLinesJoml	Set<LineSegment> as GL lines; debug label "renderLinesJoml"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method19	renderLineToBuffer	private: subdivides a Line3D into 2-block segments via addLineVertices
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method20	renderLine	float-coordinate single line; debug label "renderLine"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method21	renderThickLines	Set<Line3D> with width/depth flags; debug label "renderLines (thick)"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method22	addLineVertices	private: adds the subdivided vertices of one Line3D
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method23	drawBoxOutline	BufferBuilder outline of an AABB into an existing buffer
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method24	drawBoxOutline	12 box edges into a BufferBuilder; used by hologram nameplates
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method25	fillBox	DrawBuffer filled box of an AABB
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method26	fillBox	double-sided 6-face quad fill into a DrawBuffer; debug label "drawFilledBox" path
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method27	fillBoxSingleSided	single-sided 6-face quad fill (24 vertices)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method28	draw3DCircle	circle outline from createCirclePoints; debug label "draw3DCircle"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method29	drawFilled3DCircle	filled circle (triangle fan); debug label "drawFilled3DCircle"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method30	getLookVector	view vector from player pitch/yaw (cos/sin), method6().normalize used as beam direction
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method31	drawBillboardText	billboard text with distance-based scaling + color (default RED)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method32	drawBillboardText	billboard text variant; RouteRenderer waypoint names
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method33	drawBillboardText	billboard text at Vector3d
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method34	drawBillboardText	delegates to method35 with default red RewindhandlersExtension color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method35	drawBillboardText	takes a RewindhandlersExtension color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method36	drawBillboardText	implementation: see-through fade >50 blocks, 5x scale, clamped to 50m
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method37	drawBoxAt	box at Vec3iBridge with default 1x1x1 size
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method38	drawBoxAt	box at Vec3iBridge with line width
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method39	drawBoxAtEntity	box centred on an entity (interpolated position)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method40	drawBoxAtEntity	entity box with explicit width/height/line width
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method41	drawBoxAt	box at Vector3ic; debug label "drawBoxAt"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method42	drawBoxAt	box at Vector3ic with line width
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method43	drawBoxAt	box at Vector3dc
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method44	drawBoxAt	box at Vec3iBridge with line width and default depth flags
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method45	drawBoxAt	box at raw coordinates with RewindhandlersExtension color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method46	drawBoxAt	box implementation (filled or outline); RouteRenderer waypoint boxes
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method47	drawLine	line between two Vector3dc
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method48	drawLine	line between raw coordinates
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method49	drawLine	raw coordinates + RewindhandlersExtension color
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method50	drawLine	Vector3dc pair with depth flag
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method51	drawLine	line implementation (width + depth flags); debug label "drawLine"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method52	drawLineEndArrow	private: 0.3/0.2 arrow head at the line end when flag16 is set
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method53	drawLineFromCamera	line drawn from the camera position; debug label "drawLineFromCamera"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method54	draw3DCylinder	cylinder between two heights from createCirclePoints; debug label "draw3DCylinder"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method55	createCirclePoints	64-point circle vertex list + closing point
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method56	getAABB	block AABB via World.getBlockState(...).getAABB; debug label "getAABB"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method57	fadingBoxBeam	distance-faded box at block pos; debug label "fadingBoxBeam" (Burrow/BurrowLocating)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method58	drawBeaconBeam	beacon beam at x/z up to build limit; debug label "drawBeaconBeam"
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method59	drawBeaconBeam	beam implementation with shader program + Fishing2Extension.beginBeacon/endBeacon
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method60	prepareComponentScale	applies HUD scale + sets viewport size for a HUD component; returns scale
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method61	getHudScale	Bridge7Iterator.getScale() unless FOV setting is ALL/MODS
+com.moonsworth.lunar.client.framework.feature.mod.fishing.click.WorldRenderUtils	M	method62	renderTooltip	renders TextComponent lines for a container slot, returns the viewport Vector4f
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.Coordinates	F	field1	xpCache	cache of summed XP to reach the max level per CoordinatesType
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.Coordinates	M	method1	getLevel	level from cumulative XP + skills JSON (method7 table, max-levels getInt)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.Coordinates	M	method2	getXpForLevel	XP at (level + progress) from the cumulative table
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.Coordinates	M	method3	getCatacombsLevel	"catacombs" table; level + progress, clamped 50..100 above the table
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.Coordinates	M	method4	getPetLevel	"pet100" table offset by rarity (GuiType3: uncommon 6, rare 11, epic 16, legendary/mythic 20)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.Coordinates	M	method5	getPetLevel200	"pet200" table variant (levels up to 200)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.Coordinates	M	method6	getMaxLevelXp	sums the first maxLevels.getMaxLevels(type) entries and caches the total
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.Coordinates	M	method7	getXpTable	skills map: "runecrafting" / "social" / "skill" IntArrayList
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.SkillLevelCalculator	F	field1	xpCache	cache of summed XP to reach the max level per CoordinatesType
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.SkillLevelCalculator	M	method1	getLevel	level from cumulative XP + skills JSON (method7 table, max-levels getInt)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.SkillLevelCalculator	M	method2	getXpForLevel	XP at (level + progress) from the cumulative table
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.SkillLevelCalculator	M	method3	getCatacombsLevel	"catacombs" table; level + progress, clamped 50..100 above the table
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.SkillLevelCalculator	M	method4	getPetLevel	"pet100" table offset by rarity (ItemRarity: uncommon 6, rare 11, epic 16, legendary/mythic 20)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.SkillLevelCalculator	M	method5	getPetLevel200	"pet200" table variant (levels up to 200)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.SkillLevelCalculator	M	method6	getMaxLevelXp	sums the first maxLevels.getMaxLevels(type) entries and caches the total
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.SkillLevelCalculator	M	method7	getXpTable	skills map: "runecrafting" / "social" / "skill" IntArrayList
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin.Coordinates	F	field1	maxLevels	Object2IntOpenHashMap<CoordinatesType> read from the "skills" JSON object (coordinates JsonDeserializerIterator)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin.Coordinates	F	field2	maxLevelsByName	raw String -> int map of the same "skills" object (legacy duplicate kept)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin.Coordinates	M	method1	getMaxLevels	returns field1; SkillLevelCalculator/Coordinates call getInt(type)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin.Coordinates	M	method2	getMaxLevelsByName	returns field2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin.MaxLevels	F	field1	maxLevels	Object2IntOpenHashMap<CoordinatesType> read from the "skills" JSON object (MaxLevelsDeserializer)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin.MaxLevels	F	field2	maxLevelsByName	raw String -> int map of the same "skills" object (legacy duplicate kept)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin.MaxLevels	M	method1	getMaxLevels	returns field1; SkillLevelCalculator/Coordinates call getInt(type)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.coordinates.mixin.MaxLevels	M	method2	getMaxLevelsByName	returns field2
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.Colorsaturation	F	field1	categories	JSON "categories" (String -> String)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.Colorsaturation	F	field2	xp	JSON "xp" (String -> Double)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.Colorsaturation	M	method1	getCategories	returns the categories map
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.Colorsaturation	M	method2	getXp	returns the xp map
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.MinionXpData	F	field1	categories	JSON "categories" (String -> String)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.MinionXpData	F	field2	xp	JSON "xp" (String -> Double)
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.MinionXpData	M	method1	getCategories	returns the categories map
+com.moonsworth.lunar.client.framework.feature.mod.fishing.colorsaturation.MinionXpData	M	method2	getXp	returns the xp map

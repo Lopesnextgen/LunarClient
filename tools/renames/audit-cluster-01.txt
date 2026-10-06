@@ -1,0 +1,8 @@
+com.moonsworth.lunar
+com.moonsworth.lunar.altmanager
+com.moonsworth.lunar.annotations
+com.moonsworth.lunar.bridge
+com.moonsworth.lunar.bridge.fog
+com.moonsworth.lunar.bridge.glintcolorizer
+com.moonsworth.lunar.bridge.glintcolorizer.mixin
+com.moonsworth.lunar.bridge.hitbox

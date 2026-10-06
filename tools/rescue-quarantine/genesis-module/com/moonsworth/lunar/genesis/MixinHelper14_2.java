@@ -1,0 +1,8 @@
+package com.moonsworth.lunar.genesis;
+import com.google.common.annotations.GwtCompatible;
+
+@GwtCompatible(emulated = true)
+abstract class MixinHelper14_2<E> {
+   private MixinHelper14_2() {
+   }
+}

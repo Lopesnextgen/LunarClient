@@ -1,0 +1,251 @@
+# owner.fqn	M|F	oldName	newName	evidence
+# NOTE: files containing nested classes (SExtension$*, WeightedQuadtree$*, Alert4$Data,
+# GuiRewindhandlersHandler2$*) have same-named members in the outer and nested class bodies.
+# apply_member_renames.py renames *every* declaration line matching an old name in the owner
+# file, so the outer-class rows also rewrite the nested declarations (verified: Data2.method1
+# got refresh instead of context, Data6.method1 got getConnectedTexture instead of getMethod,
+# WeightedQuadtree$Data.method1 got getWeight instead of add). Use a scope-aware applier for
+# these files; the nested rows below are the intended per-class mapping and cannot be applied
+# with the current file-scoped tool. See notes-members-232.md section 4.
+com.moonsworth.lunar.client.util.Vector2dPair	F	field1	position	Vector2d field of the (position,value) pair; Waypoints.method8 does method1().x/.y as screen coords; class-map row ThreadModuleDump81 -> Vector2dPair "generic Vector2d + value pair (waypoint screen position)"
+com.moonsworth.lunar.client.util.Vector2dPair	F	field2	value	payload T of the pair; Waypoints.method8 casts method2() to Waypoint
+com.moonsworth.lunar.client.util.Vector2dPair	M	method1	getPosition	@NotNull getter of field1 (position); paired with method2 getter
+com.moonsworth.lunar.client.util.Vector2dPair	M	method2	getValue	@NotNull getter of field2 (value)
+com.moonsworth.lunar.client.util.Vector2f	M	method1	normalize	class-map ThreadModuleDump60: "mutable float x/y vector with set() and normalize() (returns this)"; computes 1/sqrt(x^2+y^2) and scales x/y, returns this
+com.moonsworth.lunar.client.util.WeightedQuadtree	F	field1	entry	QuadTreeEntry(bounds,weight) of this node, built in ctor from IntRectangle.method3; all queries read entry.field1/method1
+com.moonsworth.lunar.client.util.WeightedQuadtree	F	field2	weight	max weight of this node's own entry; updated by method2/insert via Math.max
+com.moonsworth.lunar.client.util.WeightedQuadtree	F	field3	children	4 child WeightedQuadtree nodes created in method3/split along the half-width/half-height grid
+com.moonsworth.lunar.client.util.WeightedQuadtree	M	method1	getWeight	max weight covering the query IntRectangle: contained -> this.weight, else max over pending entries (intersects) and children; Float.MIN_VALUE when disjoint (method4=intersects, method5=contains)
+com.moonsworth.lunar.client.util.WeightedQuadtree	M	method2	insert	adds a QuadTreeEntry: raises weight, appends to pending list and splits when >5 entries on an axis, else routes into children
+com.moonsworth.lunar.client.util.WeightedQuadtree	M	method3	split	halves the node bounds into 4 children (ceil half sizes) and redistributes the pending entries
+com.moonsworth.lunar.client.util.WeightedQuadtree	M	method4	insertIntoChild	routes an entry to every intersecting child, or keeps it pending when it overlaps >=2 children
+com.moonsworth.lunar.client.util.WeightedQuadtree$Data	F	field1	root	root WeightedQuadtree over (0,0,scaledWidth,scaledHeight) or 1920x1080 fallback via Bridge7Iterator.method151() (GuiResolution)
+com.moonsworth.lunar.client.util.WeightedQuadtree$Data	F	field2	overflow	entries not fully contained in the root bounds, kept as a fallback list scanned by method2
+com.moonsworth.lunar.client.util.WeightedQuadtree$Data	F	field3	defaultWeight	weight floor passed to the ctor and used as baseline in getWeight
+com.moonsworth.lunar.client.util.WeightedQuadtree$Data	F	field4	maxWeight	running maximum weight of all added entries; returned by max()
+com.moonsworth.lunar.client.util.WeightedQuadtree$Data	M	method1	add	creates a QuadTreeEntry and inserts it into root when inside bounds, otherwise stores it in overflow; updates maxWeight
+com.moonsworth.lunar.client.util.WeightedQuadtree$Data	M	method2	getWeight	max(defaultWeight, root.getWeight(query), matching overflow entries when the query is not contained in the root)
+com.moonsworth.lunar.client.util.WeightedQuadtree$QuadTreeEntry	F	field1	bounds	IntRectangle of the entry
+com.moonsworth.lunar.client.util.WeightedQuadtree$QuadTreeEntry	F	field2	weight	priority/weight of the entry (used by Math.max in getWeight)
+com.moonsworth.lunar.client.util.WeightedQuadtree$QuadTreeEntry	M	method1	getBounds	getter of field1 (paired with the already-named value() weight getter)
+com.moonsworth.lunar.client.util.WeightedValue	F	field1	value	payload T; method2() is its getter and is the value polled by SkyblockGlaciteCommissions Dijkstra queue
+com.moonsworth.lunar.client.util.WeightedValue	F	field2	cost	float sorting key; compareTo does Float.compare(this.field2, other.field2); already-named value() returns it
+com.moonsworth.lunar.client.util.WeightedValue	M	method1	compareTo	Comparable<WeightedValue<T>> override; compares field2 (cost) only -> Dijkstra priority queue ordering
+com.moonsworth.lunar.client.util.WeightedValue	M	method2	getValue	getter of field1 (payload)
+com.moonsworth.lunar.client.util.alert.Alert	F	field1	MAX_IDLE_MILLIS	60000L ms mirror of field3; texture downgrade idle threshold
+com.moonsworth.lunar.client.util.alert.Alert	F	field2	MIN_IDLE_MILLIS	15000 ms mirror of field4; ramp start for the downgrade factor
+com.moonsworth.lunar.client.util.alert.Alert	F	field3	MAX_IDLE_NANOS	60000000000L ns: Util_2.method7 downgrades a texture once now()-field6 exceeds this
+com.moonsworth.lunar.client.util.alert.Alert	F	field4	MIN_IDLE_NANOS	15000000000L ns: below this the downgrade factor is 0
+com.moonsworth.lunar.client.util.alert.Alert	F	field5	residentSize	resident byte size of the tracked texture; lombok getter method5()/setter method4(int); Util_2.method4 reads it before replacing
+com.moonsworth.lunar.client.util.alert.Alert	F	field6	lastUseNanos	System.nanoTime() of the last use/completion; reset by method1() from ctor and Util_2.method5
+com.moonsworth.lunar.client.util.alert.Alert	M	method1	reset	stamps lastUseNanos = System.nanoTime(); called from the ctor and when a texture completes loading (Util_2.method5)
+com.moonsworth.lunar.client.util.alert.Alert	M	method2	isIdle	now - lastUseNanos >= 60s; Util_2.method7 schedules the texture for LOW quality when true
+com.moonsworth.lunar.client.util.alert.Alert	M	method3	getIdleFactor	1.0 when idle >60s, 0.0 when <15s, else elapsedMinutes/45000; sort key for downgrade candidates (Util_2.method7 Comparator.reversed)
+com.moonsworth.lunar.client.util.alert.Alert	M	method4	setResidentSize	lombok @Setter for field5 (residentSize)
+com.moonsworth.lunar.client.util.alert.Alert	M	method5	getResidentSize	lombok @Getter for field5; also summed when a downgrade batch is collected
+com.moonsworth.lunar.client.util.alert.Alert2	F	field1	DEFAULT_SCALE	=8: default sprite scale used by the cloak slicer (17*scale/22*scale); Alert4.getScaleFactor returns the same 8
+com.moonsworth.lunar.client.util.alert.Alert2	M	method1	sliceTexture	entry point(BufferedImage,quality,slicedCloak,scale): sliced -> resizeSliced, LOW -> resizeLowQuality, else identity; called by TextureLoadTask.processImage
+com.moonsworth.lunar.client.util.alert.Alert2	M	method2	isCloakTexture	ResourceLocation membership in CosmeticManager.method70() cloak set; SimpleTextureMixin.lunar$sliceCloakTexture_v1_7/v1_8 redirects
+com.moonsworth.lunar.client.util.alert.Alert2	M	method3	sliceCloakTexture	SimpleTextureMixin call: resizeSliced(img,false,8) for cloak imports (class-map row CloakTextureSlicer)
+com.moonsworth.lunar.client.util.alert.Alert2	M	method4	sliceCloakTextureLowQuality	resizeSliced(img,true,scale) variant
+com.moonsworth.lunar.client.util.alert.Alert2	M	method5	resizeSliced	rescales a 2:1 image: caps height at 32*scale when low, then draws into ceilDiv-sized (2h, 17/22*scale) canvas
+com.moonsworth.lunar.client.util.alert.Alert2	M	method6	resizeLowQuality	downscales wide images to 22*scale width preserving aspect
+com.moonsworth.lunar.client.util.alert.Alert2	M	method7	ceilDiv	integer ceil(a*b/c) (adds c-1 before dividing)
+com.moonsworth.lunar.client.util.alert.Alert3	M	method1	loadModuleTexture	resolves the texture Identifier for a ModuleType3 (dynamic modules prefer the handler texture when it has an extension) then delegates to loadTexture
+com.moonsworth.lunar.client.util.alert.Alert3	M	method2	loadTexture	loads through the texture manager, sets blur from the flag, returns loaded||absent; Util2Handler.method4(quality) uses it as the availability check
+com.moonsworth.lunar.client.util.alert.Alert4	F	field1	resourceManager	Bridge11_2 (Minecraft resource manager); builder/toString literally "resourceManager"
+com.moonsworth.lunar.client.util.alert.Alert4	F	field2	textureLocation	ResourceLocationBridge to load; toString "textureLocation"
+com.moonsworth.lunar.client.util.alert.Alert4	F	field3	format	ColorChannelOrder for the pixel upload; toString "format"
+com.moonsworth.lunar.client.util.alert.Alert4	F	field4	quality	BridgeType2_5 LOW/FULL; toString "quality"
+com.moonsworth.lunar.client.util.alert.Alert4	F	field5	isSlicedCloak	boolean cloak-slicing request; toString "isSlicedCloak"
+com.moonsworth.lunar.client.util.alert.Alert4	M	method1	call	Callable<Optional<Bridge6_9>> override (runs on the texture load executor); loads bytes, optional animation/lunar metadata, then processImage/createDecodedTexture
+com.moonsworth.lunar.client.util.alert.Alert4	M	method2	getScaleFactor	protected hook: default 8, cloak override returns 32; passed to CloakTextureSlicer.sliceTexture
+com.moonsworth.lunar.client.util.alert.Alert4	M	method3	processImage	protected hook(BufferedImage,quality): identity in the base; subclasses build the composed cloak/elytra image
+com.moonsworth.lunar.client.util.alert.Alert4	M	method4	processAnimationMetadata	protected hook for the "animation" resource metadata; default identity, elytra override returns its captured Bridge3Extension
+com.moonsworth.lunar.client.util.alert.Alert4	M	method5	getTextureHeight	protected hook: default returns the passed height; elytra override returns the stitched frame height (Bridge6_9.method5 is used as totalHeight/frameHeight)
+com.moonsworth.lunar.client.util.alert.Alert4	M	method6	createDecodedTexture	static factory: ARGB/ABGR pixel conversion then new Bridge6_9(clamp,blur,animation,lunar,w,h,totalHeight,format,data,name)
+com.moonsworth.lunar.client.util.alert.Alert4	M	method7	builder	lombok @Builder entry point returning Alert4.Data; NameplateUpdater method8 chains builder().resourceManager(...).textureLocation(...).format(...).quality(...).isSlicedCloak(...).build()
+com.moonsworth.lunar.client.util.alert.Alert4$Data	F	field1	resourceManager	@Builder field; toString "resourceManager"
+com.moonsworth.lunar.client.util.alert.Alert4$Data	F	field2	textureLocation	@Builder field; toString "textureLocation"
+com.moonsworth.lunar.client.util.alert.Alert4$Data	F	field3	format	@Builder field; toString "format"
+com.moonsworth.lunar.client.util.alert.Alert4$Data	F	field4	quality	@Builder field; toString "quality"
+com.moonsworth.lunar.client.util.alert.Alert4$Data	F	field5	isSlicedCloak	@Builder field; toString "isSlicedCloak"
+com.moonsworth.lunar.client.util.alert.Alert4$Data	M	method1	resourceManager	@Builder setter for field1 (returns this)
+com.moonsworth.lunar.client.util.alert.Alert4$Data	M	method2	textureLocation	@Builder setter for field2
+com.moonsworth.lunar.client.util.alert.Alert4$Data	M	method3	format	@Builder setter for field3
+com.moonsworth.lunar.client.util.alert.Alert4$Data	M	method4	quality	@Builder setter for field4
+com.moonsworth.lunar.client.util.alert.Alert4$Data	M	method5	isSlicedCloak	@Builder setter for field5
+com.moonsworth.lunar.client.util.alert.Alert4$Data	M	method6	build	@Builder terminal: new Alert4(field1..field5)
+com.moonsworth.lunar.client.util.alert.Alert5	M	method7	getAnimation	AnimatedTexture interface: nullable SpriteAnimationBridge (Bridge_58); read by Util2Impl.Data.method3 and NameplateUpdater.method3 to derive frame counts
+com.moonsworth.lunar.client.util.alert.Alert5	M	method12	restartAnimation	AnimatedTexture restart hook; called via Alert5::method12 in HologramsIterator/HologramsIterator2 when a cosmetic sprite is rebound
+com.moonsworth.lunar.client.util.alert.Alert6	F	field1	texture	ResourceLocationBridge passed as first ctor arg / method4 getter; ShaderDebugMod looks up definitions by this location
+com.moonsworth.lunar.client.util.alert.Alert6	F	field2	fragmentShader	Colorsaturation2 fragment key (JSON "fragment"); method5 getter, FogIterator.method2(definition) resolves it with NameplateBase5.Type.FRAGMENT
+com.moonsworth.lunar.client.util.alert.Alert6	F	field3	vertexShader	Colorsaturation2 vertex key (JSON "vertex"); method6 getter, FogIterator.method3(definition) resolves it with VERTEX; method2/getPipeline switches on its Colorsaturation constants
+com.moonsworth.lunar.client.util.alert.Alert6	F	field4	uniforms	List<ColorsaturationType2> from JSON "uniforms"; method7 getter, iterated in FovIterator.method5 to declare uniforms
+com.moonsworth.lunar.client.util.alert.Alert6	F	field5	samplers	List<Colorsaturation5> from JSON "samplers"; method8 getter, FovIterator.method6 emits their names
+com.moonsworth.lunar.client.util.alert.Alert6	F	field6	renderOnTick	boolean from JSON "renderOnTick"; method9 getter
+com.moonsworth.lunar.client.util.alert.Alert6	F	field7	renderWidth	int from JSON "renderWidth"; method10 getter
+com.moonsworth.lunar.client.util.alert.Alert6	F	field8	renderHeight	int from JSON "renderHeight"; method11 getter
+com.moonsworth.lunar.client.util.alert.Alert6	F	field9	vertexSource	preprocessed VSH source; loaded lazily in Fov3.method6 (method12()==null -> method14(var2)); set by method14
+com.moonsworth.lunar.client.util.alert.Alert6	F	field10	fragmentSource	preprocessed FSH source; set by method15 in Fov3.method6 when method13()==null
+com.moonsworth.lunar.client.util.alert.Alert6	M	method1	isPerPlayer	true when the pipeline is per-player (Colorsaturation4.method3) or any uniform isDifferentPerPlayer; class-map ShaderDefinition "method1() = per-player flag"
+com.moonsworth.lunar.client.util.alert.Alert6	M	method2	getPipeline	maps vertexShader key to Colorsaturation4 pipeline (field3==Colorsaturation.field5 -> field3-of-pipeline, else field2/field1)
+com.moonsworth.lunar.client.util.alert.Alert6	M	method3	declareUniforms	static: for modern pipelines declares LunarModelViewMat/LunarNormalMat/LunarProjectionMat (>=1.21) or LunarLegacyUISize
+com.moonsworth.lunar.client.util.alert.Alert6	M	method4	getTexture	getter of field1 (texture)
+com.moonsworth.lunar.client.util.alert.Alert6	M	method5	getFragmentShader	getter of field2
+com.moonsworth.lunar.client.util.alert.Alert6	M	method6	getVertexShader	getter of field3
+com.moonsworth.lunar.client.util.alert.Alert6	M	method7	getUniforms	getter of field4
+com.moonsworth.lunar.client.util.alert.Alert6	M	method8	getSamplers	getter of field5
+com.moonsworth.lunar.client.util.alert.Alert6	M	method9	isRenderOnTick	getter of field6
+com.moonsworth.lunar.client.util.alert.Alert6	M	method10	getRenderWidth	getter of field7
+com.moonsworth.lunar.client.util.alert.Alert6	M	method11	getRenderHeight	getter of field8
+com.moonsworth.lunar.client.util.alert.Alert6	M	method12	getVertexSource	getter of field9 (loaded VSH); FovIterator.method1/ShaderPass.method1 return it as the pass source
+com.moonsworth.lunar.client.util.alert.Alert6	M	method13	getFragmentSource	getter of field10 (loaded FSH); FovIterator.method2/ShaderPass.method2 return it
+com.moonsworth.lunar.client.util.alert.Alert6	M	method14	setVertexSource	fluent setter for field9 (returns this); Fov3.method6 stores the compiled VSH
+com.moonsworth.lunar.client.util.alert.Alert6	M	method15	setFragmentSource	fluent setter for field10 (returns this); Fov3.method6 stores the compiled FSH
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2	F	field7	connectedTextures	map block-state name -> ConnectedTexture (Data6) rebuilt in update() from OptifineBridge.getConnectedTextures()
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2	M	method1	getConnectedTexture	lookup by Bridge4_8 block state (bridge$getName) in connectedTextures; class-map row ConnectedTexturesListener
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2	M	method2	getConnectedTexture	lookup by texture/block name; GuiUpdater.method10 calls it before contains/getMethod/getIndex
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2	M	method3	addConnectedProperties	collects TileVariants per ConnectedProperties from tile/block property arrays (getMethod + index per tile)
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2	M	method4	addTextureNames	normalizes texture paths (strips textures//.png, adds block/ or blocks/, domain prefix) into the destination set
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data5	F	field1	tileNames	LinkedHashSet of normalized optifine/mcpatcher ctm tile names for the material
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data5	F	field2	matchKeys	Set of matched tile/block keys used to find the texture rows
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6	F	field1	connectedTextures	Map tile name -> Data(method,index); class-map row ConnectedTexture
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6	M	method1	getMethod	tile -> ConnectedTextureMethod/SlayerType (NONE when absent)
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6	M	method2	contains	whether the tile name is mapped
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6	M	method3	getIndex	tile -> ctm index, -1 when absent
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6	M	method4	getNames	keyset of mapped tile names
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6$Data	F	field1	method	ConnectedTextureMethod/SlayerType of the tile
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6$Data	F	field2	index	ctm index of the tile
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6$Data	M	method1	getMethod	getter of field1
+com.moonsworth.lunar.client.util.alert.GuiRewindhandlersHandler2$Data6$Data	M	method2	getIndex	getter of field2
+com.moonsworth.lunar.client.util.chest.Chest	F	field1	start	first Vec3Bridge endpoint; method1 getter, read by SExtension.* and RaySegment twin
+com.moonsworth.lunar.client.util.chest.Chest	F	field2	end	second Vec3Bridge endpoint; method2 getter
+com.moonsworth.lunar.client.util.chest.Chest	M	method1	getStart	getter of field1 (ray start); SExtension/SBase getStart family
+com.moonsworth.lunar.client.util.chest.Chest	M	method2	getEnd	getter of field2 (ray end)
+com.moonsworth.lunar.client.util.chest.Chest	M	method3	of	static factory new Chest(start,end); used by RayBuilder.entitySegmentSupplier/entityOffsetSegmentSupplier
+com.moonsworth.lunar.client.util.chest.Chest2	F	field1	CHUNK_SIZE	16.0 chunk size constant (method3 uses the same 16.0 literal); currently unreferenced
+com.moonsworth.lunar.client.util.chest.Chest2	M	method1	traverseBlocks	generic voxel DDA over the world: step through grid cells (shortest-lambda walk), optional axis-swap retries when the BlockRaycastContext says so, callback (world,Vector3i)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method2	rayTraceBlocks	block raycast: calls traverseBlocks with SImpl.BLOCK functions; SImpl.Type.BLOCK entry point
+com.moonsworth.lunar.client.util.chest.Chest2	M	method3	traverseChunks	2.5D 16-block grid walk over chunks; callback (world, ChunkBridge)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method4	rayTraceChunks	chunk raycast wrapper (SImpl.Type.CHUNK)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method5	rayTraceEntities0	internal entity trace: walks chunks, tests each entity AABB (with optional expansion) and keeps the nearest valid hit
+com.moonsworth.lunar.client.util.chest.Chest2	M	method6	expandBoundingBox	expands a zero-size entity box by max(0.5, context expansion) or by the context expansion when set
+com.moonsworth.lunar.client.util.chest.Chest2	M	method7	rayTraceEntities	entity raycast wrapper (SImpl.Type.ENTITY); Marker/Waila/RewindHandlers entry point
+com.moonsworth.lunar.client.util.chest.Chest2	M	method8	rayTraceCosmetics0	internal cosmetic trace: iterates Gui2Handler cosmetics, transforms each part and tests model-space boxes
+com.moonsworth.lunar.client.util.chest.Chest2	M	method9	rayTraceCosmetics	cosmetic raycast wrapper (SImpl.Type.COSMETIC)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method10	rayTraceSprays0	internal spray trace: nearest SprayHitResult over the spray list
+com.moonsworth.lunar.client.util.chest.Chest2	M	method11	rayTraceSprays	spray raycast wrapper (SImpl.Type.SPRAY)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method12	rayTraceClientEntities0	internal client-entity trace: nearest ClientEntityHitResult over entity AABBs inflated by 0.2
+com.moonsworth.lunar.client.util.chest.Chest2	M	method13	rayTraceClientEntities	client-entity raycast wrapper (SImpl.Type.CLIENT_ENTITY)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method14	getEntityMatrix	entity model-view matrix: translate pos (+0.2 for crouching pre-1.21), rotate 180-bodyRot, flip scale, translate -1.501
+com.moonsworth.lunar.client.util.chest.Chest2	M	getProvider	rayTraceCosmeticModel	was Chest2.method15; members-align3 wrongly claimed this class is a GuiIterator$Extension implementer and renamed it getProvider. util.chest.Chest2 has no interfaces; the method transforms model/part matrices for a cosmetic and intersects the model boxes
+com.moonsworth.lunar.client.util.chest.Chest2	M	method16	rayTraceHologram	applies Fov11 to a Rewindhandlers2_2 hologram render context and intersects its boxes (frame-by-frame when per-part)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method17	rayTraceSpray	intersects a single fog.holograms.click.Click spray billboard via its SprayManager matrix
+com.moonsworth.lunar.client.util.chest.Chest2	M	method18	length	sqrt(dx^2+dy^2+dz^2)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method19	normalize	normalized direction Vec3Bridge between two points
+com.moonsworth.lunar.client.util.chest.Chest2	M	method20	extrapolate	start + direction*scale (Vector3d)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method21	intersectRayBox	float-vector overload of the slab test (delegates to method23)
+com.moonsworth.lunar.client.util.chest.Chest2	M	method22	intersectRayBox	Vector3d overload of the slab test
+com.moonsworth.lunar.client.util.chest.Chest2	M	method23	intersectRayBox	slab ray/AABB intersection returning the nearest positive t or -1.0F
+com.moonsworth.lunar.client.util.chest.Chest2	M	method24	intersectRayModel	Vec3Bridge overload: normalizes the ray, inverse-transforms it by the model matrix and intersects
+com.moonsworth.lunar.client.util.chest.Chest2	M	method25	intersectRayModel	Vector3d+Matrix4f overload returning the world-space hit point or null
+com.moonsworth.lunar.client.util.chest.Chest2	M	method26	traverseGrid	generic 3D grid walk with a configurable cell size (used for point searches); Function<Vector3i,H> callback + miss supplier
+com.moonsworth.lunar.client.util.chest.Chest2	M	method27	traverseGrid2d	2D variant over Vector2d/Vector2i cells
+com.moonsworth.lunar.client.util.chest.SBase	F	field1	config	SImpl ray-trace config (Type + factory functions); method2 getter, SBase2 twin uses the same field
+com.moonsworth.lunar.client.util.chest.SBase	F	field2	segmentSupplier	Supplier<Chest> refreshed by method1/refresh before each trace (Chest = RaySegment)
+com.moonsworth.lunar.client.util.chest.SBase	F	field3	start	cached start Vec3Bridge from the last refresh
+com.moonsworth.lunar.client.util.chest.SBase	F	field4	end	cached end Vec3Bridge from the last refresh
+com.moonsworth.lunar.client.util.chest.SBase	M	method1	refresh	re-pulls the Chest segment from segmentSupplier and caches start/end (Ray interface hook)
+com.moonsworth.lunar.client.util.chest.SBase	M	method2	getConfig	getter of field1 (SImpl)
+com.moonsworth.lunar.client.util.chest.SBase	M	method4	getStart	getter of field3 (cached start)
+com.moonsworth.lunar.client.util.chest.SBase	M	method5	getEnd	getter of field4 (cached end)
+com.moonsworth.lunar.client.util.chest.SBase	M	method8	getSegmentSupplier	getter of field2; overloads Ray.method8(T) trace
+com.moonsworth.lunar.client.util.chest.SBase2	F	field1	config	SImpl ray-trace config (shared field name with SBase)
+com.moonsworth.lunar.client.util.chest.SBase2	F	field2	start	fixed start Vec3Bridge
+com.moonsworth.lunar.client.util.chest.SBase2	F	field3	end	fixed end Vec3Bridge
+com.moonsworth.lunar.client.util.chest.SBase2	M	method2	getConfig	getter of field1
+com.moonsworth.lunar.client.util.chest.SBase2	M	method4	getStart	getter of field2
+com.moonsworth.lunar.client.util.chest.SBase2	M	method5	getEnd	getter of field3
+com.moonsworth.lunar.client.util.chest.SExtension	M	method1	refresh	default no-op hook re-reading positions before a trace (SBase override recomputes from the supplier)
+com.moonsworth.lunar.client.util.chest.SExtension	M	method2	getConfig	the SImpl config that knows how to traverse (types BLOCK/ENTITY/CHUNK/COSMETIC/SPRAY/CLIENT_ENTITY)
+com.moonsworth.lunar.client.util.chest.SExtension	M	method3	getContext	the S raycast context (null for generic traces)
+com.moonsworth.lunar.client.util.chest.SExtension	M	method4	getStart	current start position
+com.moonsworth.lunar.client.util.chest.SExtension	M	method5	getEnd	current end position
+com.moonsworth.lunar.client.util.chest.SExtension	M	method6	getResultFunction	BiFunction<T,I,H> producing the hit result for a tested cell
+com.moonsworth.lunar.client.util.chest.SExtension	M	method7	getMissSupplier	default getter for the miss result supplier (delegates config.getMissSupplier)
+com.moonsworth.lunar.client.util.chest.SExtension	M	method8	trace	runs the trace: config.getType().traverse(world, this)
+com.moonsworth.lunar.client.util.chest.SExtension	M	method9	builder	static builder entry: new SExtension.Data2(config) (RayBuilder)
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	F	field1	start	ray start position (Vec3Bridge)
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	F	field2	end	ray end position
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	F	field3	context	@Nullable S raycast context
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	F	field4	predicate	BiPredicate<I,O> hit filter; method14/method15 set it
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	F	field5	resultFunction	@Nullable SImpl.Extension producing custom hit results
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	F	field6	config	the SImpl config being built for
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method1	context	fluent setter for the raycast context
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method2	positions	fluent setter for start/end Vec3Bridge; errors "Ray already has positions assigned!"
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method3	positions	Vector3dc overload of positions
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method4	ray	start + direction*distance (Vec3Bridge overload)
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method5	ray	Vector3dc + distance overload of ray
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method6	blockPositions	ray between two block positions (centered)
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method7	blockPositions	block positions with explicit center flag (adds 0.5 when true)
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method8	fromEntity	entity eye position + view vector * distance
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method9	fromEntityWithOffset	entity eye + offset + view vector * distance (Vec3Bridge offset)
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method10	fromEntityWithOffset	Vector3d offset overload
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method11	segmentSupplier	fluent setter producing a Chest (RaySegment) supplier via SExtension.Data
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method12	entitySegmentSupplier	segment supplier from an entity eye/view vector * distance
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method13	entityOffsetSegmentSupplier	segment supplier from entity eye + offset
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method14	predicate	fluent BiPredicate hit filter
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method15	predicate	Predicate<O> adapter (ignores the world arg)
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method16	resultFunction	fluent SImpl.Extension custom result factory
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method17	eachHit	fluent BiConsumer<S,SExtension> invoked for every created hit
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method18	trace	builds and runs the trace via config.create(start,end,context,predicate,resultFunction); errors "RayContext must have at least one trigger!" / "null predicate if a function is set!"
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method19	requireNoPositions	sanity check: throws "Ray already has positions assigned! - [...]"
+com.moonsworth.lunar.client.util.chest.SExtension$Data2	M	method20	requireNoResultFunction	sanity check: throws "Ray already has a function assigned! - [...]"
+com.moonsworth.lunar.client.util.chest.SExtension$Data	F	field7	segmentSupplier	Supplier<Chest> added on top of RayBuilder; method11 override validates it is unset
+com.moonsworth.lunar.client.util.chest.SExtension$Data	M	method11	segmentSupplier	override of RayBuilder.segmentSupplier storing the supplier (throws "Ray already has positions assigned! - RayPointSupplier" when already set)
+com.moonsworth.lunar.client.util.chest.SExtension$Data	M	method12	entitySegmentSupplier	override creating the entity segment supplier in the Data subtype
+com.moonsworth.lunar.client.util.chest.SExtension$Data	M	method13	entityOffsetSegmentSupplier	override creating the eye+offset segment supplier in the Data subtype
+com.moonsworth.lunar.client.util.chest.SExtension$Data	M	method18	trace	override of RayBuilder.trace applying the point supplier on the copied builder
+com.moonsworth.lunar.client.util.chest.SExtension$Data	M	method19	requireNoSegmentSupplier	extends requireNoPositions with the segment supplier check
+com.moonsworth.lunar.client.util.chest.SImpl	F	field1	BLOCK	block-state trace: MissResult::method9 + Itemcounter6::method2 (getBlockState) + clip
+com.moonsworth.lunar.client.util.chest.SImpl	F	field2	BLOCK_OR_MISS	same as BLOCK but replaces null/miss with a positional MissResult (point picking; F3display2_2, Dungeonwaypoints4)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field3	BLOCK_AT	legacy Block trace: Itemcounter6::method4 (getBlockAt) + clip
+com.moonsworth.lunar.client.util.chest.SImpl	F	field4	BLOCK_AT_OR_MISS	same as BLOCK_AT with positional miss fallback
+com.moonsworth.lunar.client.util.chest.SImpl	F	field5	PACKED_LIGHT	LightHitResult with Type.PACKED_LIGHT from Itemcounter6::bridge$getPackedLight
+com.moonsworth.lunar.client.util.chest.SImpl	F	field6	BLOCK_LIGHT	LightHitResult with Type.BLOCK_LIGHT (packed light block part /16)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field7	SKY_LIGHT	LightHitResult with Type.SKY_LIGHT (packed light sky part /16)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field8	BIOME	BiomeHitResult from Itemcounter6::method1 (getBiome)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field9	ENTITY	EntityHitResult over Itemcounter6 entities (Markers, RewindHandlers3Impl2)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field10	CHUNK	ChunkHitResult over chunk lookups (SImpl.Type.CHUNK)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field11	COSMETIC	CosmeticHitResult over Gui2Handler cosmetics (Waila, SprayManager)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field12	SPRAY	SprayHitResult over spray Click lists (Waila, SprayManager)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field13	CLIENT_ENTITY	ClientEntityHitResult over Bridge_61 client entities (Waila)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field14	type	SImpl.Type of this trace config (method3 getter)
+com.moonsworth.lunar.client.util.chest.SImpl	F	field15	missSupplier	Supplier<H> for the "nothing hit" result (MissResult::method9 etc.); method4 getter, Ray.getMissSupplier default
+com.moonsworth.lunar.client.util.chest.SImpl	F	field16	valueFunction	BiFunction<T,I,O> computing the tested value at a cell (block state, light level, entity); method5 getter
+com.moonsworth.lunar.client.util.chest.SImpl	F	field17	resultFactory	SImpl.Extension creating custom hit results; method6 getter, used by create(...)
+com.moonsworth.lunar.client.util.chest.SImpl	M	method1	create	creates a FixedRay (SBase2) bound to the start/end positions, context, predicate and extension
+com.moonsworth.lunar.client.util.chest.SImpl	M	method2	create	creates a DynamicRay (SBase) bound to a Chest supplier
+com.moonsworth.lunar.client.util.chest.SImpl	M	method3	getType	getter of field14
+com.moonsworth.lunar.client.util.chest.SImpl	M	method4	getMissSupplier	getter of field15
+com.moonsworth.lunar.client.util.chest.SImpl	M	method5	getValueFunction	getter of field16
+com.moonsworth.lunar.client.util.chest.SImpl	M	method6	getResultFactory	getter of field17
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler	F	field1	checkParts	cosmetic context flag: Waila builds ChestHandler(true) to test each Colorsaturation part instead of the whole model box (Chest2.method15)
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler	M	method1	isCheckParts	@Generated getter of checkParts
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler2	F	field1	retryAxisSwaps	block context flag: when true Chest2.traverseBlocks retries with axis-permuted positions (var44 bitmask)
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler2	M	method1	isRetryAxisSwaps	@Generated getter of retryAxisSwaps
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler3	F	field1	expandZeroWidth	entity context flag: expands zero-volume entity boxes before testing (Chest2.method6)
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler3	F	field2	expansion	extra AABB expansion (max(0.5, expansion) for zero-width boxes)
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler3	F	field3	partialTicks	partial ticks passed to entity.getBoundingBox(partialTicks) during the trace (Markers passes timer.method1())
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler3	M	method1	isExpandZeroWidth	@Generated getter of field1
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler3	M	method2	getExpansion	@Generated getter of field2
+com.moonsworth.lunar.client.util.chest.mixin.ChestHandler3	M	method3	getPartialTicks	@Generated getter of field3
+com.moonsworth.lunar.client.util.click.Click	F	field1	texture	ResourceLocationBridge texture of the render pass
+com.moonsworth.lunar.client.util.click.Click	F	field2	consumer	BiConsumer<Boolean,Bridge4_6> draw callback of the pass
+com.moonsworth.lunar.client.util.click.Click	F	field3	enabled	boolean pass flag, default true; method4 getter / method6 setter
+com.moonsworth.lunar.client.util.click.Click	M	method1	getTexture	getter of field1
+com.moonsworth.lunar.client.util.click.Click	M	method2	getConsumer	getter of field2
+com.moonsworth.lunar.client.util.click.Click	M	method4	isEnabled	getter of field3 (paired with setEnabled)
+com.moonsworth.lunar.client.util.click.Click	M	method6	setEnabled	setter of field3 (paired with renderType setter that is already named)
+com.moonsworth.lunar.client.util.click.BridgeExtension3	F	field6	poseStack	joml Matrix4fStack(10) backing translate/scale/rotate/push/pop; returned by method53 (Click8 PoseMatrixProvider)

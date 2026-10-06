@@ -1,0 +1,5 @@
+com/moonsworth/lunar/Annotation8.java	Type2
+com/moonsworth/lunar/MixinHelper27.java	Type2
+com/moonsworth/lunar/MixinHelper53.java	Type2
+com/moonsworth/lunar/Writer2.java	Writer2
+com/moonsworth/lunar/Writer_2.java	Writer_2

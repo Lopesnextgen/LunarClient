@@ -1,0 +1,204 @@
+# owner.fqn	M|F	oldName	newName	evidence
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap3	F	field1	height	terrain column value: Minimap4.method2 surfaces this as the y used for bridge$getMapColor(x, height, z); == vanilla heightmap surface
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap3	F	field2	depth	number of consecutive fluid blocks counted while descending; Minimap4 uses it as depth/30.0F shading factor
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap3	F	field3	fluidState	first fluid BlockStateBridge found; Minimap4 reads bridge$getBlock().bridge$isWater() on it
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap3	M	method2	getDepth	returns field2 (fluid depth)
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap3	M	method3	getFluidState	returns field3 (fluid state)
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.TerrainColumn	F	field1	height	same shape/semantics as Minimap3 (ChunkBridge variant used by ChunkColorMap)
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.TerrainColumn	F	field2	depth	same shape/semantics as Minimap3
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.TerrainColumn	F	field3	fluidState	same shape/semantics as Minimap3
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.TerrainColumn	M	method2	getDepth	returns field2
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.TerrainColumn	M	method3	getFluidState	returns field3
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap4	F	field1	colors	int[256] minimap chunk colours; read by getColors() in MinimapMap texture upload and by Minimap3 save code
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap4	M	method1	update	rebuilds the 16x16 colour array for a chunk and returns whether it changed; caller guards on isBuilt()
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap4	M	method2	getTerrainColumn	constructs the height/depth/fluid TerrainColumn for one column
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap4	M	method3	computeSurfaceHeight	private scan from maxBuildHeight for the first non-air block under air
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap4	M	method4	isAir	block at (x,y,z) is air (helper for computeSurfaceHeight)
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap4	M	method5	getColors	@Generated getter of the colours array (MinimapMap/Minimap3 save path)
+com.moonsworth.lunar.client.framework.feature.minimap.mixin.Minimap4	M	method6	setColors	@Generated setter of the colours array (Minimap3 load path)
+com.moonsworth.lunar.client.framework.feature.mobsize.mixin.TessellatorRenderer	F	field1	wrappedRenderer	delegate WorldRenderer flushed by draw(); not named worldRenderer because Tessellator has a private field of that name
+com.moonsworth.lunar.client.framework.feature.mobsize.mixin.WorldRenderer	F	field1	wrapped	parent net.minecraft WorldRenderer this delegate forwards begin/vertex data to
+com.moonsworth.lunar.client.framework.feature.mobsize.mixin.WorldRenderer	F	field2	builder	FloatArrayBuilder this subclass accumulates vertices in (field2 of FloatArrayBuilder is its buffer)
+com.moonsworth.lunar.client.framework.feature.mobsize.mixin.WorldRenderer	M	method1	getWrapped	getter of the wrapped vanilla WorldRenderer
+com.moonsworth.lunar.client.framework.feature.mod.GuiComponent	F	field1	renderer	the shared GuiRenderer facade every component delegates to
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field2	stateStack	Deque<GuiRenderState> pushed/popped by pushState/popState
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field3	widgetStateCache	WidgetStateCache component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field4	scissorStack	ScissorStack component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field5	tooltipRenderer	MixinHelper29, the deferred tooltip renderer
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field6	textRenderer	ScaledTextRenderer component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field7	rectRenderer	RectRenderer component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field8	textFieldRenderer	TextFieldRenderer component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field9	itemStackRenderer	ItemStackRenderer component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field10	slotRenderer	SlotRenderer component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field11	boxRenderer	BoxRenderer component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field12	panelRenderer	PanelRenderer component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field13	mouseInput	MouseInput component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field14	keyboardInput	KeyboardInput component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field15	scrollAnimator	ScrollAnimator component
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field16	components	all GuiComponent subsystems, started/ended per frame
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field17	screen	GuiScreenBridge currently being rendered
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field18	guiId	current gui id passed to start(); getCurrentGuiId() reads it
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field19	drawContext	MixinHelper_4 transform stack used for translate/scale/push/pop
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	F	field20	containerScreen	start() boolean: true for container screens; isContainerScreen() gates the mouse-direct handling
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method2	currentState	peek of the render-state stack (GuiComponent.renderState accessor delegates here)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method6	clearGui	delegates to WidgetStateCache.clearGui(guiId)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method7	removeWidget	delegates to WidgetStateCache.removeWidget(guiId, widgetId)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method8	isTextFieldSelected	TextFieldRenderer state check
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method9	selectTextField	TextFieldRenderer focus
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method14	setSearchText	stores lower-cased search string in the render state; item stacks match against it
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method15	setSearchTooltips	toggles searching item tooltips as well
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method17	setHighlightHoveredSlots	toggles the hovered-slot highlight in ItemStackRenderer
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method19	setScissor	sets the clip rect (ScissorStack.set)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method21	drawItemStack	draws an item stack without tooltip offset
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method24	drawCenteredText	draws centered scaled text (ScaledTextRenderer.method1)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method30	drawSlotList	draws a 9-wide slot list with no title
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method31	drawSlotGrid	draws a titled 9-wide slot grid (SlotRenderer.method1)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method32	drawSlotGridFlagged	titled slot grid with the quick-move flag (SlotRenderer.method2)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method34	drawPanelNoTitle	panel frame with no title
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method36	drawPanelLeftAligned	titled panel with an explicit left inset (PanelRenderer.method2)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method39	drawSeparator	one-pixel separator line (BoxRenderer.method4)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method46	translateScaled	rect-flushing translate through the draw context
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method47	beginWidget	WidgetStateCache begin: hover/scale animation + push state (widgetId, x, y, w, h)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method48	endWidget	WidgetStateCache end: pop state for the current widget
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method50	invalidateWidget	marks a widget state dirty within the current gui
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method54	showTooltip	defers a String tooltip until end()
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method55	showTooltipComponents	defers Component tooltips until end()
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method57	getCurrentGuiId	throws "Calling getCurrentGuiId when not in a render call"
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method58	getWidgetStateCache	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method59	getScissorStack	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method60	getTooltipRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method61	getTextRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method62	getRectRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method63	getTextFieldRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method64	getItemStackRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method65	getSlotRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method66	getBoxRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method67	getPanelRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method68	getMouseInput	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method69	getKeyboardInput	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method70	getScrollAnimator	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.GuiRenderer	M	method72	getDrawContext	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field2	stateStack	Deque<MixinHelper3> render-state stack
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field3	widgetStateCache	MixinHelper2 (old WidgetStateCache)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field4	scissorStack	MixinHelper211 (old ScissorStack)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field5	tooltipRenderer	MixinHelper29
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field6	textRenderer	MixinHelper27 (old ScaledTextRenderer)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field7	rectRenderer	MixinHelper210 (old RectRenderer)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field8	textFieldRenderer	MixinHelper28 (old TextFieldRenderer)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field9	itemStackRenderer	MixinHelper25 (old ItemStackRenderer)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field10	slotRenderer	MixinHelper23 (old SlotRenderer)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field11	boxRenderer	MixinHelper26 (old BoxRenderer)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field12	panelRenderer	MixinHelper24 (old PanelRenderer)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field13	mouseInput	MixinHelper2_2 (old MouseInput)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field14	keyboardInput	MixinHelper22 (old KeyboardInput)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field15	scrollAnimator	MixinHelper22_2 (old ScrollAnimator)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field16	components	all MixinHelper2_3 subsystems
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field17	screen	Bridge5Extension6 currently rendered
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field18	guiId	current gui id passed to start()
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field19	drawContext	MixinHelper_4 transform stack
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	F	field20	containerScreen	start() boolean (container screen)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method2	currentState	old-twin accessor (GuiComponent twin calls this.field1.method2())
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method7	removeWidget	old-twin WidgetStateCache.removeWidget
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method19	setScissor	old-twin ScissorStack.set
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method30	drawSlotList	old-twin slot list (no title)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method32	drawSlotGridFlagged	old-twin titled slot grid
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method36	drawPanelLeftAligned	old-twin left-aligned titled panel
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method39	drawSeparator	old-twin separator line
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method46	translateScaled	old-twin scaled translate
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method55	showTooltipComponents	old-twin deferred tooltips
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method57	getCurrentGuiId	old-twin getCurrentGuiId ("Calling getCurrentGuiId..." literal)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method58	getWidgetStateCache	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method59	getScissorStack	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method60	getTooltipRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method61	getTextRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method62	getRectRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method63	getTextFieldRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method64	getItemStackRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method65	getSlotRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method66	getBoxRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method67	getPanelRenderer	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method68	getMouseInput	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method69	getKeyboardInput	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method70	getScrollAnimator	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper	M	method72	getDrawContext	@Generated getter
+com.moonsworth.lunar.client.framework.feature.mod.BoxRenderer	M	method2	drawInsetBox	inset box with 1px border from GuiTheme.inset* colours
+com.moonsworth.lunar.client.framework.feature.mod.BoxRenderer	M	method3	drawInsetBoxFlat	inset box without the outer clip/flush dance
+com.moonsworth.lunar.client.framework.feature.mod.BoxRenderer	M	method4	drawSeparator	1px insetBorderLeft line
+com.moonsworth.lunar.client.framework.feature.mod.ItemStackRenderer	M	method2	drawItemStack	draws stack + size + durability + search overlay, returns hovered button
+com.moonsworth.lunar.client.framework.feature.mod.ItemStackRenderer	M	method17	drawCursorStack	draws the cursor-held stack over the screen (called by the facade)
+com.moonsworth.lunar.client.framework.feature.mod.KeyboardInput	F	field2	previousKeyEvents	Map<guiId, events> consumed in the previous frame (getPreviousKeyEvents)
+com.moonsworth.lunar.client.framework.feature.mod.KeyboardInput	F	field3	keyEvents	Map<guiId, events> collected this frame; start() rolls it into previousKeyEvents
+com.moonsworth.lunar.client.framework.feature.mod.KeyboardInput	M	method2	addKeyEvent	queues a KeyEventBridge for a gui id and returns whether the focused text field consumed it
+com.moonsworth.lunar.client.framework.feature.mod.KeyboardInput	M	method17	isShiftDown	Bridge7Iterator.isShiftKeyDown() wrapper
+com.moonsworth.lunar.client.framework.feature.mod.KeyboardInput	M	method18	getPreviousKeyEvents	events recorded for the current gui id in the previous frame
+com.moonsworth.lunar.client.framework.feature.mod.GuiEventDispatcher	F	field1	moduleManager	owning GuiModuleManager
+com.moonsworth.lunar.client.framework.feature.mod.GuiEventDispatcher	F	field2	deferredTasks	Runnables queued while a gui is active, flushed after render
+com.moonsworth.lunar.client.framework.feature.mod.GuiEventDispatcher	M	method3	render	renders the active module or all open overlays, then runs deferred tasks
+com.moonsworth.lunar.client.framework.feature.mod.GuiEventDispatcher	M	method9	runOrDefer	runs now when no gui is active, else queues for after render
+com.moonsworth.lunar.client.framework.feature.mod.GuiEventDispatcher	M	method10	isGuiActive	true while a screen module or overlay is open
+com.moonsworth.lunar.client.framework.feature.mod.GuiModule	F	field1	activeTicks	incremented once per tick by tick()
+com.moonsworth.lunar.client.framework.feature.mod.GuiModule	M	method9	onOpen	called when the module becomes the active screen or an overlay opens
+com.moonsworth.lunar.client.framework.feature.mod.impl.click.storageoverlay.Storageoverlay2	M	method9	onOpen	@Override of GuiModule.onOpen
+com.moonsworth.lunar.client.framework.feature.mod.debug.override.ModuleBase	M	method9	onOpen	@Override of GuiModule.onOpen
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	F	field8	dispatcher	GuiEventDispatcher
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	F	field9	modules	registered ModuleBase (screen) modules
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	F	field10	overlays	registered OverlayModule instances
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	F	field11	activeOverlays	overlays currently open on the screen
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	F	field12	activeModule	screen module currently handling the screen
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	M	method2	registerModule	adds/removes a screen module with the mod lifecycle
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	M	method3	registerOverlay	adds/removes an overlay with the mod lifecycle
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	M	method5	isMouseInputConsumed	static: dispatcher says a custom gui consumes mouse input
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	M	method6	updateActiveModule	picks/closes the active screen module for the current screen
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	M	method7	isScreenActive	active module != null and a screen is open
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	M	method10	updateActiveOverlays	syncs open overlays with the registered ones (open/close)
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	M	method12	getActiveOverlays	open overlays
+com.moonsworth.lunar.client.framework.feature.mod.GuiModuleManager	M	method13	isOverlayActive	whether the given overlay is currently open
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	F	field8	dispatcher	old-twin GuiEventDispatcher (Module2)
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	F	field9	modules	registered ModuleBase modules
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	F	field10	overlays	registered ModuleBase2 overlays
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	F	field11	activeOverlays	open overlays
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	F	field12	activeModule	active screen module
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	M	method2	registerModule	old-twin registerModule
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	M	method3	registerOverlay	old-twin registerOverlay
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	M	method5	isMouseInputConsumed	old-twin static input check
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	M	method6	updateActiveModule	old-twin active-module selection
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	M	method7	isScreenActive	old-twin screen-active check
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	M	method10	updateActiveOverlays	old-twin overlay sync
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	M	method12	getActiveOverlays	old-twin open overlays
+com.moonsworth.lunar.client.framework.feature.mod.GuiRewindhandlersHandler2	M	method13	isOverlayActive	old-twin overlay check
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	F	field2	widgetStates	Map<guiId, Map<widgetId, WidgetState>>
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	F	field3	openWidgetCount	open beginWidget depth; getOpenWidgetCount()
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	F	field4	updatedWidgets	widget ids touched this frame; end() deletes the rest
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	F	field5	activeWidget	last widget passed to beginWidget
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	M	method1	clearGui	deletes all widget states of a gui id
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	M	method2	removeWidget	deletes one widget state
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	M	method4	getOrCreateWidget	creates the WidgetState for a widget id on first use
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	M	method5	beginWidget	push state, update animation, draw dirty widget
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	M	method6	endWidget	pop state and clear dirty flag
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	M	method7	invalidateWidget	mark widget dirty by (guiId, widgetId)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	M	method8	invalidateWidget	mark widget dirty by widgetId
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper2	M	method17	getRenderState	delegates to the GuiRenderState accessor
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper210	F	field2	batchRegistered	true after the batch callback has been registered this frame
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper210	F	field3	dirtyRect	union of rects drawn for pre-1.20 versions
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper211	F	field3	scissorApplied	whether the gl scissor was actually enabled and needs resetting
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper211	M	method17	apply	sets/resets the gl scissor from the stored clip rect
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper22	F	field2	previousKeyEvents	previous-frame key events per gui id
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper22	F	field3	keyEvents	this-frame key events per gui id
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper22	M	method2	addKeyEvent	queue a key event and report text-field consumption
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper22_2	F	field2	offsets	per-rect float scroll offset (ThreadModuleDump47.Data)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	F	field2	quickCraftSlots	slots selected for the quick-craft click
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	F	field3	quickCrafting	quick-craft selection is active
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	F	field4	quickCraftRemaining	remaining stack size left while distributing
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	F	field5	quickCraftButton	mouse button starting the quick-craft (0/1)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	F	field6	quickCraftPending	end() must flush the quick-craft clicks
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	F	field7	lastClickedStack	stack of the last clicked slot (double-click collect)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	F	field8	lastClickedSlot	slot of the last click (double-click collect)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	F	field9	lastClickTime	system time of the last click
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	M	method2	drawSlots	draws the 9-wide slot grid (quick-move flag)
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	M	method4	canStackInto	whether one stack can be merged into the other
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	M	method5	matchesItemData	compares tag compounds of two stacks
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	M	method7	distributeCraftSize	sets the distributed stack size for quick-craft button 0/1
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper23	M	method17	recalculateQuickCraft	updates quickCraftRemaining from the cursor stack
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper24	M	method2	drawPanelLeftAligned	titled panel with explicit left inset and smaller text scale
+com.moonsworth.lunar.client.framework.feature.mod.MixinHelper25	M	method17	drawCursorStack	old-twin cursor stack draw
+com.moonsworth.lunar.client.framework.feature.mod.debug.testcustomguioverlay.TestOverlayModule	M	method9	onOpen	@Override of GuiModule.onOpen

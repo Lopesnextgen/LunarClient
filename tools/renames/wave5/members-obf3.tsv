@@ -1,0 +1,945 @@
+# wave5 members-obf3 map — prepared by the "obf members" subagent
+# scope: bridge, ichor, legacy, network, files, forge, mixin, replaymod, v1_7/v1_8/v1_12, loader, altmanager, webosr
+# format: owner.fqn<TAB>M|F<TAB>old<TAB>new<TAB>evidence
+# note: rows are keyed by the owner FQN as of 2026-09-16 18:xx worktree; class-rename wave 0d0cca2ea renamed some bridge/horsestats owners,
+#       stale owners were dropped from this map — see notes-members-obf3.md
+com.moonsworth.lunar.network.BaseGameEvent	F	field2	SERIALIZED_NAME_PLAYER_UUID	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "player_uuid" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field4	SERIALIZED_NAME_INSTALLATION_ID	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "installation_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field6	SERIALIZED_NAME_OVERWOLF_MUID	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "overwolf_muid" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field8	SERIALIZED_NAME_TIMESTAMP	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "timestamp" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field10	SERIALIZED_NAME_EVENT_ID	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "event_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field12	SERIALIZED_NAME_ASSETSERVER_SESSION_ID	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "assetserver_session_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field14	SERIALIZED_NAME_LAUNCH_ID	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "launch_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field16	SERIALIZED_NAME_INBOUND_LOCATION	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "inbound_location" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field18	SERIALIZED_NAME_LOCATION	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "location" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field20	SERIALIZED_NAME_MINECRAFT_VERSION	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "minecraft_version" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field22	SERIALIZED_NAME_LUNAR_CLIENT_GIT_COMMIT	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "lunar_client_git_commit" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field24	SERIALIZED_NAME_LUNAR_CLIENT_GIT_BRANCH	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "lunar_client_git_branch" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field26	SERIALIZED_NAME_LUNAR_CLIENT_SEMVER	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "lunar_client_semver" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field28	SERIALIZED_NAME_LUNAR_CLIENT_UI_GIT_COMMIT	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "lunar_client_ui_git_commit" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field30	SERIALIZED_NAME_LUNAR_CLIENT_UI_GIT_BRANCH	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "lunar_client_ui_git_branch" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field32	SERIALIZED_NAME_OPERATING_SYSTEM	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "operating_system" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field33	SERIALIZED_NAME_OPERATING_SYSTEM_RELEASE	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "operating_system_release" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field34	SERIALIZED_NAME_CPU_ARCHITECTURE	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "cpu_architecture" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field35	SERIALIZED_NAME_LAUNCHER_VERSION	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "launcher_version" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field37	SERIALIZED_NAME_CANARY_TOKEN	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "canary_token" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field39	SERIALIZED_NAME_ICHOR_MODULES	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "ichor_modules" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field41	SERIALIZED_NAME_GL_EXTENSIONS	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "gl_extensions" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field43	SERIALIZED_NAME_INSTALLED_MODS	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "installed_mods" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field44	SERIALIZED_NAME_WEARER_UUID	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "wearer_uuid" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field46	SERIALIZED_NAME_WEARER_COSMETIC_IDS	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "wearer_cosmetic_ids" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field48	SERIALIZED_NAME_WEARER_OUTFIT_ID	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "wearer_outfit_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field50	SERIALIZED_NAME_TRIGGER	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "trigger" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field52	SERIALIZED_NAME_GEO_LOCATION	com/moonsworth/lunar/network/BaseGameEvent.java: JSON key constant for "geo_location" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEvent	F	field3	playerUuid	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("player_uuid") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field5	installationId	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("installation_id") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field7	overwolfMuid	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("overwolf_muid") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field9	timestamp	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("timestamp") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field11	eventId	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("event_id") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field13	assetserverSessionId	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("assetserver_session_id") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field15	launchId	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("launch_id") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field17	inboundLocation	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("inbound_location") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field19	location	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("location") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field21	minecraftVersion	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("minecraft_version") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field23	lunarClientGitCommit	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("lunar_client_git_commit") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field25	lunarClientGitBranch	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("lunar_client_git_branch") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field27	lunarClientSemver	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("lunar_client_semver") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field29	lunarClientUiGitCommit	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("lunar_client_ui_git_commit") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field31	lunarClientUiGitBranch	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("lunar_client_ui_git_branch") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field36	launcherVersion	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("launcher_version") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field38	canaryToken	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("canary_token") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field40	ichorModules	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("ichor_modules") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field42	glExtensions	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("gl_extensions") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field45	wearerUuid	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("wearer_uuid") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field47	wearerCosmeticIds	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("wearer_cosmetic_ids") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field49	wearerOutfitId	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("wearer_outfit_id") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field51	trigger	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("trigger") model property
+com.moonsworth.lunar.network.BaseGameEvent	F	field53	geoLocation	com/moonsworth/lunar/network/BaseGameEvent.java: @SerializedName("geo_location") model property
+com.moonsworth.lunar.network.BaseGameEvent	M	method1	playerUuid	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for playerUuid
+com.moonsworth.lunar.network.BaseGameEvent	M	method2	getPlayerUuid	com/moonsworth/lunar/network/BaseGameEvent.java: getter for playerUuid
+com.moonsworth.lunar.network.BaseGameEvent	M	method3	setPlayerUuid	com/moonsworth/lunar/network/BaseGameEvent.java: setter for playerUuid
+com.moonsworth.lunar.network.BaseGameEvent	M	method4	installationId	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for installationId
+com.moonsworth.lunar.network.BaseGameEvent	M	method5	setInstallationId	com/moonsworth/lunar/network/BaseGameEvent.java: setter for installationId
+com.moonsworth.lunar.network.BaseGameEvent	M	method6	overwolfMuid	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for overwolfMuid
+com.moonsworth.lunar.network.BaseGameEvent	M	method7	setOverwolfMuid	com/moonsworth/lunar/network/BaseGameEvent.java: setter for overwolfMuid
+com.moonsworth.lunar.network.BaseGameEvent	M	method8	timestamp	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for timestamp
+com.moonsworth.lunar.network.BaseGameEvent	M	method9	getTimestamp	com/moonsworth/lunar/network/BaseGameEvent.java: getter for timestamp
+com.moonsworth.lunar.network.BaseGameEvent	M	method10	setTimestamp	com/moonsworth/lunar/network/BaseGameEvent.java: setter for timestamp
+com.moonsworth.lunar.network.BaseGameEvent	M	method11	eventId	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for eventId
+com.moonsworth.lunar.network.BaseGameEvent	M	method12	getEventId	com/moonsworth/lunar/network/BaseGameEvent.java: getter for eventId
+com.moonsworth.lunar.network.BaseGameEvent	M	method13	setEventId	com/moonsworth/lunar/network/BaseGameEvent.java: setter for eventId
+com.moonsworth.lunar.network.BaseGameEvent	M	method14	assetserverSessionId	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for assetserverSessionId
+com.moonsworth.lunar.network.BaseGameEvent	M	method15	getAssetserverSessionId	com/moonsworth/lunar/network/BaseGameEvent.java: getter for assetserverSessionId
+com.moonsworth.lunar.network.BaseGameEvent	M	method16	setAssetserverSessionId	com/moonsworth/lunar/network/BaseGameEvent.java: setter for assetserverSessionId
+com.moonsworth.lunar.network.BaseGameEvent	M	method17	launchId	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for launchId
+com.moonsworth.lunar.network.BaseGameEvent	M	method18	setLaunchId	com/moonsworth/lunar/network/BaseGameEvent.java: setter for launchId
+com.moonsworth.lunar.network.BaseGameEvent	M	method19	inboundLocation	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for inboundLocation
+com.moonsworth.lunar.network.BaseGameEvent	M	method20	getInboundLocation	com/moonsworth/lunar/network/BaseGameEvent.java: getter for inboundLocation
+com.moonsworth.lunar.network.BaseGameEvent	M	method21	setInboundLocation	com/moonsworth/lunar/network/BaseGameEvent.java: setter for inboundLocation
+com.moonsworth.lunar.network.BaseGameEvent	M	method22	location	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for location
+com.moonsworth.lunar.network.BaseGameEvent	M	method23	getLocation	com/moonsworth/lunar/network/BaseGameEvent.java: getter for location
+com.moonsworth.lunar.network.BaseGameEvent	M	method24	setLocation	com/moonsworth/lunar/network/BaseGameEvent.java: setter for location
+com.moonsworth.lunar.network.BaseGameEvent	M	method25	minecraftVersion	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for minecraftVersion
+com.moonsworth.lunar.network.BaseGameEvent	M	method26	getMinecraftVersion	com/moonsworth/lunar/network/BaseGameEvent.java: getter for minecraftVersion
+com.moonsworth.lunar.network.BaseGameEvent	M	method27	setMinecraftVersion	com/moonsworth/lunar/network/BaseGameEvent.java: setter for minecraftVersion
+com.moonsworth.lunar.network.BaseGameEvent	M	method28	lunarClientGitCommit	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for lunarClientGitCommit
+com.moonsworth.lunar.network.BaseGameEvent	M	method29	getLunarClientGitCommit	com/moonsworth/lunar/network/BaseGameEvent.java: getter for lunarClientGitCommit
+com.moonsworth.lunar.network.BaseGameEvent	M	method30	setLunarClientGitCommit	com/moonsworth/lunar/network/BaseGameEvent.java: setter for lunarClientGitCommit
+com.moonsworth.lunar.network.BaseGameEvent	M	method31	lunarClientGitBranch	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for lunarClientGitBranch
+com.moonsworth.lunar.network.BaseGameEvent	M	method32	getLunarClientGitBranch	com/moonsworth/lunar/network/BaseGameEvent.java: getter for lunarClientGitBranch
+com.moonsworth.lunar.network.BaseGameEvent	M	method33	setLunarClientGitBranch	com/moonsworth/lunar/network/BaseGameEvent.java: setter for lunarClientGitBranch
+com.moonsworth.lunar.network.BaseGameEvent	M	method34	lunarClientSemver	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for lunarClientSemver
+com.moonsworth.lunar.network.BaseGameEvent	M	method35	getLunarClientSemver	com/moonsworth/lunar/network/BaseGameEvent.java: getter for lunarClientSemver
+com.moonsworth.lunar.network.BaseGameEvent	M	method36	setLunarClientSemver	com/moonsworth/lunar/network/BaseGameEvent.java: setter for lunarClientSemver
+com.moonsworth.lunar.network.BaseGameEvent	M	method37	lunarClientUiGitCommit	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for lunarClientUiGitCommit
+com.moonsworth.lunar.network.BaseGameEvent	M	method38	getLunarClientUiGitCommit	com/moonsworth/lunar/network/BaseGameEvent.java: getter for lunarClientUiGitCommit
+com.moonsworth.lunar.network.BaseGameEvent	M	method39	setLunarClientUiGitCommit	com/moonsworth/lunar/network/BaseGameEvent.java: setter for lunarClientUiGitCommit
+com.moonsworth.lunar.network.BaseGameEvent	M	method40	lunarClientUiGitBranch	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for lunarClientUiGitBranch
+com.moonsworth.lunar.network.BaseGameEvent	M	method41	getLunarClientUiGitBranch	com/moonsworth/lunar/network/BaseGameEvent.java: getter for lunarClientUiGitBranch
+com.moonsworth.lunar.network.BaseGameEvent	M	method42	setLunarClientUiGitBranch	com/moonsworth/lunar/network/BaseGameEvent.java: setter for lunarClientUiGitBranch
+com.moonsworth.lunar.network.BaseGameEvent	M	method43	operatingSystem	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for operatingSystem
+com.moonsworth.lunar.network.BaseGameEvent	M	method45	operatingSystemRelease	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for operatingSystemRelease
+com.moonsworth.lunar.network.BaseGameEvent	M	method47	cpuArchitecture	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for cpuArchitecture
+com.moonsworth.lunar.network.BaseGameEvent	M	method48	launcherVersion	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for launcherVersion
+com.moonsworth.lunar.network.BaseGameEvent	M	method49	getLauncherVersion	com/moonsworth/lunar/network/BaseGameEvent.java: getter for launcherVersion
+com.moonsworth.lunar.network.BaseGameEvent	M	method50	setLauncherVersion	com/moonsworth/lunar/network/BaseGameEvent.java: setter for launcherVersion
+com.moonsworth.lunar.network.BaseGameEvent	M	method51	canaryToken	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for canaryToken
+com.moonsworth.lunar.network.BaseGameEvent	M	method52	setCanaryToken	com/moonsworth/lunar/network/BaseGameEvent.java: setter for canaryToken
+com.moonsworth.lunar.network.BaseGameEvent	M	method53	ichorModules	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for ichorModules
+com.moonsworth.lunar.network.BaseGameEvent	M	method54	addIchorModulesItem	com/moonsworth/lunar/network/BaseGameEvent.java: append item to ichorModules list
+com.moonsworth.lunar.network.BaseGameEvent	M	method55	getIchorModules	com/moonsworth/lunar/network/BaseGameEvent.java: getter for ichorModules
+com.moonsworth.lunar.network.BaseGameEvent	M	method56	setIchorModules	com/moonsworth/lunar/network/BaseGameEvent.java: setter for ichorModules
+com.moonsworth.lunar.network.BaseGameEvent	M	method57	glExtensions	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for glExtensions
+com.moonsworth.lunar.network.BaseGameEvent	M	method58	addGlExtensionsItem	com/moonsworth/lunar/network/BaseGameEvent.java: append item to glExtensions list
+com.moonsworth.lunar.network.BaseGameEvent	M	method59	getGlExtensions	com/moonsworth/lunar/network/BaseGameEvent.java: getter for glExtensions
+com.moonsworth.lunar.network.BaseGameEvent	M	method60	setGlExtensions	com/moonsworth/lunar/network/BaseGameEvent.java: setter for glExtensions
+com.moonsworth.lunar.network.BaseGameEvent	M	method61	installedMods	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for installedMods
+com.moonsworth.lunar.network.BaseGameEvent	M	method62	addInstalledModsItem	com/moonsworth/lunar/network/BaseGameEvent.java: append item to installedMods list
+com.moonsworth.lunar.network.BaseGameEvent	M	method63	wearerUuid	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for wearerUuid
+com.moonsworth.lunar.network.BaseGameEvent	M	method64	getWearerUuid	com/moonsworth/lunar/network/BaseGameEvent.java: getter for wearerUuid
+com.moonsworth.lunar.network.BaseGameEvent	M	method65	setWearerUuid	com/moonsworth/lunar/network/BaseGameEvent.java: setter for wearerUuid
+com.moonsworth.lunar.network.BaseGameEvent	M	method66	wearerCosmeticIds	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for wearerCosmeticIds
+com.moonsworth.lunar.network.BaseGameEvent	M	method67	addWearerCosmeticIdsItem	com/moonsworth/lunar/network/BaseGameEvent.java: append item to wearerCosmeticIds list
+com.moonsworth.lunar.network.BaseGameEvent	M	method68	getWearerCosmeticIds	com/moonsworth/lunar/network/BaseGameEvent.java: getter for wearerCosmeticIds
+com.moonsworth.lunar.network.BaseGameEvent	M	method69	setWearerCosmeticIds	com/moonsworth/lunar/network/BaseGameEvent.java: setter for wearerCosmeticIds
+com.moonsworth.lunar.network.BaseGameEvent	M	method70	wearerOutfitId	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for wearerOutfitId
+com.moonsworth.lunar.network.BaseGameEvent	M	method71	getWearerOutfitId	com/moonsworth/lunar/network/BaseGameEvent.java: getter for wearerOutfitId
+com.moonsworth.lunar.network.BaseGameEvent	M	method72	setWearerOutfitId	com/moonsworth/lunar/network/BaseGameEvent.java: setter for wearerOutfitId
+com.moonsworth.lunar.network.BaseGameEvent	M	method73	trigger	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for trigger
+com.moonsworth.lunar.network.BaseGameEvent	M	method74	getTrigger	com/moonsworth/lunar/network/BaseGameEvent.java: getter for trigger
+com.moonsworth.lunar.network.BaseGameEvent	M	method75	setTrigger	com/moonsworth/lunar/network/BaseGameEvent.java: setter for trigger
+com.moonsworth.lunar.network.BaseGameEvent	M	method76	geoLocation	com/moonsworth/lunar/network/BaseGameEvent.java: fluent setter for geoLocation
+com.moonsworth.lunar.network.BaseGameEvent	M	method77	getGeoLocation	com/moonsworth/lunar/network/BaseGameEvent.java: getter for geoLocation
+com.moonsworth.lunar.network.BaseGameEvent	M	method78	setGeoLocation	com/moonsworth/lunar/network/BaseGameEvent.java: setter for geoLocation
+com.moonsworth.lunar.network.BaseGameEvent	M	method79	toIndentedString	com/moonsworth/lunar/network/BaseGameEvent.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.BaseGameEvent	M	method81	toJson	com/moonsworth/lunar/network/BaseGameEvent.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field2	SERIALIZED_NAME_CITY	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: JSON key constant for "city" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field3	SERIALIZED_NAME_CONTINENT	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: JSON key constant for "continent" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field5	SERIALIZED_NAME_COUNTRY	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: JSON key constant for "country" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field7	SERIALIZED_NAME_REGION	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: JSON key constant for "region" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field8	SERIALIZED_NAME_REGION_CODE	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: JSON key constant for "region_code" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field10	SERIALIZED_NAME_POSTAL_CODE	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: JSON key constant for "postal_code" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field12	SERIALIZED_NAME_METRO_CODE	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: JSON key constant for "metro_code" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field14	SERIALIZED_NAME_TIMEZONE	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: JSON key constant for "timezone" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field4	continent	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: @SerializedName("continent") model property
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field6	country	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: @SerializedName("country") model property
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field9	regionCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: @SerializedName("region_code") model property
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field11	postalCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: @SerializedName("postal_code") model property
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	F	field13	metroCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: @SerializedName("metro_code") model property
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method1	city	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: fluent setter for city
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method2	continent	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: fluent setter for continent
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method3	getContinent	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: getter for continent
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method4	setContinent	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: setter for continent
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method5	country	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: fluent setter for country
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method6	getCountry	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: getter for country
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method7	setCountry	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: setter for country
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method8	region	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: fluent setter for region
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method9	regionCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: fluent setter for regionCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method10	getRegionCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: getter for regionCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method11	setRegionCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: setter for regionCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method12	postalCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: fluent setter for postalCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method13	getPostalCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: getter for postalCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method14	setPostalCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: setter for postalCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method15	metroCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: fluent setter for metroCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method16	getMetroCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: getter for metroCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method17	setMetroCode	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: setter for metroCode
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method18	timezone	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: fluent setter for timezone
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method19	toIndentedString	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.BaseGameEventGeoLocation	M	method21	toJson	com/moonsworth/lunar/network/BaseGameEventGeoLocation.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.BaseGameEventInboundLocation	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/BaseGameEventInboundLocation.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventInboundLocation	F	field3	SERIALIZED_NAME_SERVER_IP	com/moonsworth/lunar/network/BaseGameEventInboundLocation.java: JSON key constant for "server_ip" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventInboundLocation	M	method1	type	com/moonsworth/lunar/network/BaseGameEventInboundLocation.java: fluent setter for type
+com.moonsworth.lunar.network.BaseGameEventInboundLocation	M	method2	serverIp	com/moonsworth/lunar/network/BaseGameEventInboundLocation.java: fluent setter for serverIp
+com.moonsworth.lunar.network.BaseGameEventInboundLocation	M	method4	toIndentedString	com/moonsworth/lunar/network/BaseGameEventInboundLocation.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.BaseGameEventInboundLocation	M	method6	toJson	com/moonsworth/lunar/network/BaseGameEventInboundLocation.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	F	field2	SERIALIZED_NAME_ID	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: JSON key constant for "id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	F	field3	SERIALIZED_NAME_NAME	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: JSON key constant for "name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	F	field4	SERIALIZED_NAME_VERSION	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: JSON key constant for "version" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	F	field5	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	M	method1	id	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: fluent setter for id
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	M	method2	name	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: fluent setter for name
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	M	method3	version	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: fluent setter for version
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	M	method4	type	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: fluent setter for type
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	M	method5	toIndentedString	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.BaseGameEventInstalledModsInner	M	method7	toJson	com/moonsworth/lunar/network/BaseGameEventInstalledModsInner.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.BaseGameEventLocation	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/BaseGameEventLocation.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocation	F	field3	SERIALIZED_NAME_PUBLIC_SERVER	com/moonsworth/lunar/network/BaseGameEventLocation.java: JSON key constant for "public_server" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocation	F	field5	SERIALIZED_NAME_HOSTED_WORLD	com/moonsworth/lunar/network/BaseGameEventLocation.java: JSON key constant for "hosted_world" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocation	F	field4	publicServer	com/moonsworth/lunar/network/BaseGameEventLocation.java: @SerializedName("public_server") model property
+com.moonsworth.lunar.network.BaseGameEventLocation	F	field6	hostedWorld	com/moonsworth/lunar/network/BaseGameEventLocation.java: @SerializedName("hosted_world") model property
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method1	type	com/moonsworth/lunar/network/BaseGameEventLocation.java: fluent setter for type
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method2	publicServer	com/moonsworth/lunar/network/BaseGameEventLocation.java: fluent setter for publicServer
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method3	getPublicServer	com/moonsworth/lunar/network/BaseGameEventLocation.java: getter for publicServer
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method4	setPublicServer	com/moonsworth/lunar/network/BaseGameEventLocation.java: setter for publicServer
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method5	hostedWorld	com/moonsworth/lunar/network/BaseGameEventLocation.java: fluent setter for hostedWorld
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method6	getHostedWorld	com/moonsworth/lunar/network/BaseGameEventLocation.java: getter for hostedWorld
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method7	setHostedWorld	com/moonsworth/lunar/network/BaseGameEventLocation.java: setter for hostedWorld
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method8	toIndentedString	com/moonsworth/lunar/network/BaseGameEventLocation.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.BaseGameEventLocation	M	method10	toJson	com/moonsworth/lunar/network/BaseGameEventLocation.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	F	field2	SERIALIZED_NAME_HOST_UUID	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: JSON key constant for "host_uuid" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	F	field4	SERIALIZED_NAME_HOST_USERNAME	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: JSON key constant for "host_username" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	F	field3	hostUuid	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: @SerializedName("host_uuid") model property
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	F	field5	hostUsername	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: @SerializedName("host_username") model property
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	M	method1	hostUuid	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: fluent setter for hostUuid
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	M	method2	getHostUuid	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: getter for hostUuid
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	M	method3	setHostUuid	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: setter for hostUuid
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	M	method4	hostUsername	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: fluent setter for hostUsername
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	M	method5	getHostUsername	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: getter for hostUsername
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	M	method6	setHostUsername	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: setter for hostUsername
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	M	method7	toIndentedString	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.BaseGameEventLocationHostedWorld	M	method9	toJson	com/moonsworth/lunar/network/BaseGameEventLocationHostedWorld.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field2	SERIALIZED_NAME_SERVER_MAPPINGS_ID	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: JSON key constant for "server_mappings_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field4	SERIALIZED_NAME_RICH_STATUS_SOURCE	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: JSON key constant for "rich_status_source" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field6	SERIALIZED_NAME_RICH_STATUS_GAME_NAME	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: JSON key constant for "rich_status_game_name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field8	SERIALIZED_NAME_RICH_STATUS_GAME_VARIANT_NAME	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: JSON key constant for "rich_status_game_variant_name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field10	SERIALIZED_NAME_RICH_STATUS_GAME_STATE	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: JSON key constant for "rich_status_game_state" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field12	SERIALIZED_NAME_RICH_STATUS_PLAYER_STATE	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: JSON key constant for "rich_status_player_state" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field14	SERIALIZED_NAME_RICH_STATUS_MAP_NAME	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: JSON key constant for "rich_status_map_name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field16	SERIALIZED_NAME_RICH_STATUS_SUB_SERVER	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: JSON key constant for "rich_status_sub_server" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field3	serverMappingsId	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: @SerializedName("server_mappings_id") model property
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field5	richStatusSource	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: @SerializedName("rich_status_source") model property
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field7	richStatusGameName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: @SerializedName("rich_status_game_name") model property
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field9	richStatusGameVariantName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: @SerializedName("rich_status_game_variant_name") model property
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field11	richStatusGameState	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: @SerializedName("rich_status_game_state") model property
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field13	richStatusPlayerState	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: @SerializedName("rich_status_player_state") model property
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field15	richStatusMapName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: @SerializedName("rich_status_map_name") model property
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	F	field17	richStatusSubServer	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: @SerializedName("rich_status_sub_server") model property
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method1	serverMappingsId	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: fluent setter for serverMappingsId
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method2	setServerMappingsId	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: setter for serverMappingsId
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method3	richStatusSource	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: fluent setter for richStatusSource
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method4	getRichStatusSource	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: getter for richStatusSource
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method5	setRichStatusSource	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: setter for richStatusSource
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method6	richStatusGameName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: fluent setter for richStatusGameName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method7	getRichStatusGameName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: getter for richStatusGameName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method8	setRichStatusGameName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: setter for richStatusGameName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method9	richStatusGameVariantName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: fluent setter for richStatusGameVariantName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method10	getRichStatusGameVariantName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: getter for richStatusGameVariantName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method11	setRichStatusGameVariantName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: setter for richStatusGameVariantName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method12	richStatusGameState	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: fluent setter for richStatusGameState
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method13	getRichStatusGameState	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: getter for richStatusGameState
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method14	setRichStatusGameState	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: setter for richStatusGameState
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method15	richStatusPlayerState	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: fluent setter for richStatusPlayerState
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method16	getRichStatusPlayerState	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: getter for richStatusPlayerState
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method17	setRichStatusPlayerState	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: setter for richStatusPlayerState
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method18	richStatusMapName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: fluent setter for richStatusMapName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method19	getRichStatusMapName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: getter for richStatusMapName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method20	setRichStatusMapName	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: setter for richStatusMapName
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method21	richStatusSubServer	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: fluent setter for richStatusSubServer
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method22	getRichStatusSubServer	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: getter for richStatusSubServer
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method23	setRichStatusSubServer	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: setter for richStatusSubServer
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method24	toIndentedString	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.BaseGameEventLocationPublicServer	M	method26	toJson	com/moonsworth/lunar/network/BaseGameEventLocationPublicServer.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameEventBatchPostRequest	F	field2	SERIALIZED_NAME_EVENTS	com/moonsworth/lunar/network/GameEventBatchPostRequest.java: JSON key constant for "events" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameEventBatchPostRequest	F	field3	events	com/moonsworth/lunar/network/GameEventBatchPostRequest.java: @SerializedName("events") model property
+com.moonsworth.lunar.network.GameEventBatchPostRequest	M	method1	events	com/moonsworth/lunar/network/GameEventBatchPostRequest.java: fluent setter for events
+com.moonsworth.lunar.network.GameEventBatchPostRequest	M	method2	addEventsItem	com/moonsworth/lunar/network/GameEventBatchPostRequest.java: append item to events list
+com.moonsworth.lunar.network.GameEventBatchPostRequest	M	method3	setEvents	com/moonsworth/lunar/network/GameEventBatchPostRequest.java: setter for events
+com.moonsworth.lunar.network.GameEventBatchPostRequest	M	method4	toIndentedString	com/moonsworth/lunar/network/GameEventBatchPostRequest.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameEventBatchPostRequest	M	method6	toJson	com/moonsworth/lunar/network/GameEventBatchPostRequest.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameFailedParseEvent	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/GameFailedParseEvent.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameFailedParseEvent	F	field3	SERIALIZED_NAME_DATA	com/moonsworth/lunar/network/GameFailedParseEvent.java: JSON key constant for "data" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameFailedParseEvent	F	field5	SERIALIZED_NAME__FAILED_PARSE	com/moonsworth/lunar/network/GameFailedParseEvent.java: JSON key constant for "__failed_parse" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameFailedParseEvent	F	field4	data	com/moonsworth/lunar/network/GameFailedParseEvent.java: @SerializedName("data") model property
+com.moonsworth.lunar.network.GameFailedParseEvent	F	field6	FailedParse	com/moonsworth/lunar/network/GameFailedParseEvent.java: @SerializedName("__failed_parse") model property
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method1	type	com/moonsworth/lunar/network/GameFailedParseEvent.java: fluent setter for type
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method2	data	com/moonsworth/lunar/network/GameFailedParseEvent.java: fluent setter for data
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method3	getData	com/moonsworth/lunar/network/GameFailedParseEvent.java: getter for data
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method4	setData	com/moonsworth/lunar/network/GameFailedParseEvent.java: setter for data
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method5	FailedParse	com/moonsworth/lunar/network/GameFailedParseEvent.java: fluent setter for FailedParse
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method6	getFailedParse	com/moonsworth/lunar/network/GameFailedParseEvent.java: getter for FailedParse
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method7	setFailedParse	com/moonsworth/lunar/network/GameFailedParseEvent.java: setter for FailedParse
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method8	toIndentedString	com/moonsworth/lunar/network/GameFailedParseEvent.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameFailedParseEvent	M	method10	toJson	com/moonsworth/lunar/network/GameFailedParseEvent.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameFailedParseEventData	F	field2	SERIALIZED_NAME_TIMESTAMP	com/moonsworth/lunar/network/GameFailedParseEventData.java: JSON key constant for "timestamp" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameFailedParseEventData	F	field3	timestamp	com/moonsworth/lunar/network/GameFailedParseEventData.java: @SerializedName("timestamp") model property
+com.moonsworth.lunar.network.GameFailedParseEventData	M	method1	timestamp	com/moonsworth/lunar/network/GameFailedParseEventData.java: fluent setter for timestamp
+com.moonsworth.lunar.network.GameFailedParseEventData	M	method2	getTimestamp	com/moonsworth/lunar/network/GameFailedParseEventData.java: getter for timestamp
+com.moonsworth.lunar.network.GameFailedParseEventData	M	method3	setTimestamp	com/moonsworth/lunar/network/GameFailedParseEventData.java: setter for timestamp
+com.moonsworth.lunar.network.GameFailedParseEventData	M	method7	toIndentedString	com/moonsworth/lunar/network/GameFailedParseEventData.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameFailedParseEventData	M	method9	toJson	com/moonsworth/lunar/network/GameFailedParseEventData.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameRewindBaseLayer	F	field2	SERIALIZED_NAME_DURATION_MS	com/moonsworth/lunar/network/GameRewindBaseLayer.java: JSON key constant for "duration_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindBaseLayer	F	field4	SERIALIZED_NAME_PROPERTIES	com/moonsworth/lunar/network/GameRewindBaseLayer.java: JSON key constant for "properties" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindBaseLayer	F	field3	durationMs	com/moonsworth/lunar/network/GameRewindBaseLayer.java: @SerializedName("duration_ms") model property
+com.moonsworth.lunar.network.GameRewindBaseLayer	F	field5	properties	com/moonsworth/lunar/network/GameRewindBaseLayer.java: @SerializedName("properties") model property
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method1	durationMs	com/moonsworth/lunar/network/GameRewindBaseLayer.java: fluent setter for durationMs
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method2	getDurationMs	com/moonsworth/lunar/network/GameRewindBaseLayer.java: getter for durationMs
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method3	setDurationMs	com/moonsworth/lunar/network/GameRewindBaseLayer.java: setter for durationMs
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method4	properties	com/moonsworth/lunar/network/GameRewindBaseLayer.java: fluent setter for properties
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method5	addPropertiesItem	com/moonsworth/lunar/network/GameRewindBaseLayer.java: append item to properties list
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method6	getProperties	com/moonsworth/lunar/network/GameRewindBaseLayer.java: getter for properties
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method7	setProperties	com/moonsworth/lunar/network/GameRewindBaseLayer.java: setter for properties
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method8	toIndentedString	com/moonsworth/lunar/network/GameRewindBaseLayer.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameRewindBaseLayer	M	method10	toJson	com/moonsworth/lunar/network/GameRewindBaseLayer.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameRewindEditorTimeline	F	field2	SERIALIZED_NAME_DURATION_MS	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: JSON key constant for "duration_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindEditorTimeline	F	field4	SERIALIZED_NAME_LAYERS	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: JSON key constant for "layers" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindEditorTimeline	F	field3	durationMs	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: @SerializedName("duration_ms") model property
+com.moonsworth.lunar.network.GameRewindEditorTimeline	M	method1	durationMs	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: fluent setter for durationMs
+com.moonsworth.lunar.network.GameRewindEditorTimeline	M	method2	getDurationMs	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: getter for durationMs
+com.moonsworth.lunar.network.GameRewindEditorTimeline	M	method3	setDurationMs	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: setter for durationMs
+com.moonsworth.lunar.network.GameRewindEditorTimeline	M	method4	layers	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: fluent setter for layers
+com.moonsworth.lunar.network.GameRewindEditorTimeline	M	method5	addLayersItem	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: append item to layers list
+com.moonsworth.lunar.network.GameRewindEditorTimeline	M	method7	toIndentedString	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameRewindEditorTimeline	M	method9	toJson	com/moonsworth/lunar/network/GameRewindEditorTimeline.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameRewindExportResolution	F	field2	SERIALIZED_NAME_WIDTH	com/moonsworth/lunar/network/GameRewindExportResolution.java: JSON key constant for "width" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindExportResolution	F	field4	SERIALIZED_NAME_HEIGHT	com/moonsworth/lunar/network/GameRewindExportResolution.java: JSON key constant for "height" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindExportResolution	F	field3	width	com/moonsworth/lunar/network/GameRewindExportResolution.java: @SerializedName("width") model property
+com.moonsworth.lunar.network.GameRewindExportResolution	F	field5	height	com/moonsworth/lunar/network/GameRewindExportResolution.java: @SerializedName("height") model property
+com.moonsworth.lunar.network.GameRewindExportResolution	M	method1	width	com/moonsworth/lunar/network/GameRewindExportResolution.java: fluent setter for width
+com.moonsworth.lunar.network.GameRewindExportResolution	M	method2	getWidth	com/moonsworth/lunar/network/GameRewindExportResolution.java: getter for width
+com.moonsworth.lunar.network.GameRewindExportResolution	M	method3	setWidth	com/moonsworth/lunar/network/GameRewindExportResolution.java: setter for width
+com.moonsworth.lunar.network.GameRewindExportResolution	M	method4	height	com/moonsworth/lunar/network/GameRewindExportResolution.java: fluent setter for height
+com.moonsworth.lunar.network.GameRewindExportResolution	M	method5	getHeight	com/moonsworth/lunar/network/GameRewindExportResolution.java: getter for height
+com.moonsworth.lunar.network.GameRewindExportResolution	M	method6	setHeight	com/moonsworth/lunar/network/GameRewindExportResolution.java: setter for height
+com.moonsworth.lunar.network.GameRewindExportResolution	M	method7	toIndentedString	com/moonsworth/lunar/network/GameRewindExportResolution.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameRewindExportResolution	M	method9	toJson	com/moonsworth/lunar/network/GameRewindExportResolution.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameRewindLayerAddEventData	F	field57	SERIALIZED_NAME_LAYER	com/moonsworth/lunar/network/GameRewindLayerAddEventData.java: JSON key constant for "layer" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindLayerAddEventData	F	field58	layer	com/moonsworth/lunar/network/GameRewindLayerAddEventData.java: @SerializedName("layer") model property
+com.moonsworth.lunar.network.GameRewindLayerAddEventData	M	method1	layer	com/moonsworth/lunar/network/GameRewindLayerAddEventData.java: fluent setter for layer
+com.moonsworth.lunar.network.GameRewindLayerAddEventData	M	method4	toIndentedString	com/moonsworth/lunar/network/GameRewindLayerAddEventData.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameRewindLayerAddEventData	M	method81	toJson	com/moonsworth/lunar/network/GameRewindLayerAddEventData.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field57	SERIALIZED_NAME_LENGTH_MS	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "length_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field59	SERIALIZED_NAME_PATH	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "path" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field60	SERIALIZED_NAME_FORMAT	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "format" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field61	SERIALIZED_NAME_CODEC	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "codec" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field63	SERIALIZED_NAME_ENCODER	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "encoder" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field65	SERIALIZED_NAME_RESOLUTION	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "resolution" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field67	SERIALIZED_NAME_FRAMERATE	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "framerate" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field69	SERIALIZED_NAME_BITRATE	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "bitrate" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field71	SERIALIZED_NAME_AUDIO	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: JSON key constant for "audio" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field58	lengthMs	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: @SerializedName("length_ms") model property
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field62	codec	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: @SerializedName("codec") model property
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field64	encoder	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: @SerializedName("encoder") model property
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field66	resolution	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: @SerializedName("resolution") model property
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field68	framerate	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: @SerializedName("framerate") model property
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field70	bitrate	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: @SerializedName("bitrate") model property
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	F	field72	audio	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: @SerializedName("audio") model property
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method1	lengthMs	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: fluent setter for lengthMs
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method8	path	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: fluent setter for path
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method9	format	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: fluent setter for format
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method12	setCodec	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: setter for codec
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method13	getEncoder	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: getter for encoder
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method15	setEncoder	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: setter for encoder
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method17	framerate	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: fluent setter for framerate
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method18	getFramerate	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: getter for framerate
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method19	setFramerate	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: setter for framerate
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method20	bitrate	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: fluent setter for bitrate
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method21	getBitrate	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: getter for bitrate
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method22	setBitrate	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: setter for bitrate
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method23	audio	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: fluent setter for audio
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method24	getAudio	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: getter for audio
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method25	setAudio	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: setter for audio
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method26	toIndentedString	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameRewindProjectExportEventData	M	method81	toJson	com/moonsworth/lunar/network/GameRewindProjectExportEventData.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field57	SERIALIZED_NAME_DURATION_MS	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: JSON key constant for "duration_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field59	SERIALIZED_NAME_LOCATIONS	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: JSON key constant for "locations" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field61	SERIALIZED_NAME_SHADOW_REWIND	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: JSON key constant for "shadow_rewind" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field63	SERIALIZED_NAME_MIC_RECORDING	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: JSON key constant for "mic_recording" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field65	SERIALIZED_NAME_SYSTEM_AUDIO_RECORDING	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: JSON key constant for "system_audio_recording" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field58	durationMs	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: @SerializedName("duration_ms") model property
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field60	locations	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: @SerializedName("locations") model property
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field62	shadowRewind	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: @SerializedName("shadow_rewind") model property
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field64	micRecording	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: @SerializedName("mic_recording") model property
+com.moonsworth.lunar.network.GameRewindRecordingEventData	F	field66	systemAudioRecording	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: @SerializedName("system_audio_recording") model property
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method1	durationMs	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: fluent setter for durationMs
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method4	locations	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: fluent setter for locations
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method5	addLocationsItem	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: append item to locations list
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method6	getLocations	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: getter for locations
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method7	setLocations	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: setter for locations
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method8	shadowRewind	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: fluent setter for shadowRewind
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method11	micRecording	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: fluent setter for micRecording
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method14	systemAudioRecording	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: fluent setter for systemAudioRecording
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method17	toIndentedString	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.GameRewindRecordingEventData	M	method81	toJson	com/moonsworth/lunar/network/GameRewindRecordingEventData.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper	F	field2	SERIALIZED_NAME_WIDTH	com/moonsworth/lunar/network/MixinHelper.java: JSON key constant for "width" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper	F	field4	SERIALIZED_NAME_HEIGHT	com/moonsworth/lunar/network/MixinHelper.java: JSON key constant for "height" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper	F	field3	width	com/moonsworth/lunar/network/MixinHelper.java: @SerializedName("width") model property
+com.moonsworth.lunar.network.MixinHelper	F	field5	height	com/moonsworth/lunar/network/MixinHelper.java: @SerializedName("height") model property
+com.moonsworth.lunar.network.MixinHelper	M	method3	setWidth	com/moonsworth/lunar/network/MixinHelper.java: setter for width
+com.moonsworth.lunar.network.MixinHelper	M	method4	height	com/moonsworth/lunar/network/MixinHelper.java: fluent setter for height
+com.moonsworth.lunar.network.MixinHelper	M	method5	getHeight	com/moonsworth/lunar/network/MixinHelper.java: getter for height
+com.moonsworth.lunar.network.MixinHelper	M	method6	setHeight	com/moonsworth/lunar/network/MixinHelper.java: setter for height
+com.moonsworth.lunar.network.MixinHelper	M	method7	toIndentedString	com/moonsworth/lunar/network/MixinHelper.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper	M	method9	toJson	com/moonsworth/lunar/network/MixinHelper.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper10	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/MixinHelper10.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper10	F	field3	SERIALIZED_NAME_PUBLIC_SERVER	com/moonsworth/lunar/network/MixinHelper10.java: JSON key constant for "public_server" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper10	F	field5	SERIALIZED_NAME_HOSTED_WORLD	com/moonsworth/lunar/network/MixinHelper10.java: JSON key constant for "hosted_world" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper10	F	field4	publicServer	com/moonsworth/lunar/network/MixinHelper10.java: @SerializedName("public_server") model property
+com.moonsworth.lunar.network.MixinHelper10	F	field6	hostedWorld	com/moonsworth/lunar/network/MixinHelper10.java: @SerializedName("hosted_world") model property
+com.moonsworth.lunar.network.MixinHelper10	M	method3	getPublicServer	com/moonsworth/lunar/network/MixinHelper10.java: getter for publicServer
+com.moonsworth.lunar.network.MixinHelper10	M	method4	setPublicServer	com/moonsworth/lunar/network/MixinHelper10.java: setter for publicServer
+com.moonsworth.lunar.network.MixinHelper10	M	method5	hostedWorld	com/moonsworth/lunar/network/MixinHelper10.java: fluent setter for hostedWorld
+com.moonsworth.lunar.network.MixinHelper10	M	method6	getHostedWorld	com/moonsworth/lunar/network/MixinHelper10.java: getter for hostedWorld
+com.moonsworth.lunar.network.MixinHelper10	M	method7	setHostedWorld	com/moonsworth/lunar/network/MixinHelper10.java: setter for hostedWorld
+com.moonsworth.lunar.network.MixinHelper10	M	method8	toIndentedString	com/moonsworth/lunar/network/MixinHelper10.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper10	M	method10	toJson	com/moonsworth/lunar/network/MixinHelper10.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper11	F	field2	SERIALIZED_NAME_EVENTS	com/moonsworth/lunar/network/MixinHelper11.java: JSON key constant for "events" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper11	F	field3	events	com/moonsworth/lunar/network/MixinHelper11.java: @SerializedName("events") model property
+com.moonsworth.lunar.network.MixinHelper11	M	method3	setEvents	com/moonsworth/lunar/network/MixinHelper11.java: setter for events
+com.moonsworth.lunar.network.MixinHelper11	M	method4	toIndentedString	com/moonsworth/lunar/network/MixinHelper11.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper11	M	method6	toJson	com/moonsworth/lunar/network/MixinHelper11.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper12	F	field2	SERIALIZED_NAME_HOST_UUID	com/moonsworth/lunar/network/MixinHelper12.java: JSON key constant for "host_uuid" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper12	F	field4	SERIALIZED_NAME_HOST_USERNAME	com/moonsworth/lunar/network/MixinHelper12.java: JSON key constant for "host_username" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper12	F	field3	hostUuid	com/moonsworth/lunar/network/MixinHelper12.java: @SerializedName("host_uuid") model property
+com.moonsworth.lunar.network.MixinHelper12	F	field5	hostUsername	com/moonsworth/lunar/network/MixinHelper12.java: @SerializedName("host_username") model property
+com.moonsworth.lunar.network.MixinHelper12	M	method3	setHostUuid	com/moonsworth/lunar/network/MixinHelper12.java: setter for hostUuid
+com.moonsworth.lunar.network.MixinHelper12	M	method4	hostUsername	com/moonsworth/lunar/network/MixinHelper12.java: fluent setter for hostUsername
+com.moonsworth.lunar.network.MixinHelper12	M	method5	getHostUsername	com/moonsworth/lunar/network/MixinHelper12.java: getter for hostUsername
+com.moonsworth.lunar.network.MixinHelper12	M	method6	setHostUsername	com/moonsworth/lunar/network/MixinHelper12.java: setter for hostUsername
+com.moonsworth.lunar.network.MixinHelper12	M	method7	toIndentedString	com/moonsworth/lunar/network/MixinHelper12.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper12	M	method9	toJson	com/moonsworth/lunar/network/MixinHelper12.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper13	F	field2	SERIALIZED_NAME_SERVER_MAPPINGS_ID	com/moonsworth/lunar/network/MixinHelper13.java: JSON key constant for "server_mappings_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper13	F	field4	SERIALIZED_NAME_RICH_STATUS_SOURCE	com/moonsworth/lunar/network/MixinHelper13.java: JSON key constant for "rich_status_source" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper13	F	field6	SERIALIZED_NAME_RICH_STATUS_GAME_NAME	com/moonsworth/lunar/network/MixinHelper13.java: JSON key constant for "rich_status_game_name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper13	F	field8	SERIALIZED_NAME_RICH_STATUS_GAME_VARIANT_NAME	com/moonsworth/lunar/network/MixinHelper13.java: JSON key constant for "rich_status_game_variant_name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper13	F	field10	SERIALIZED_NAME_RICH_STATUS_GAME_STATE	com/moonsworth/lunar/network/MixinHelper13.java: JSON key constant for "rich_status_game_state" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper13	F	field12	SERIALIZED_NAME_RICH_STATUS_PLAYER_STATE	com/moonsworth/lunar/network/MixinHelper13.java: JSON key constant for "rich_status_player_state" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper13	F	field14	SERIALIZED_NAME_RICH_STATUS_MAP_NAME	com/moonsworth/lunar/network/MixinHelper13.java: JSON key constant for "rich_status_map_name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper13	F	field16	SERIALIZED_NAME_RICH_STATUS_SUB_SERVER	com/moonsworth/lunar/network/MixinHelper13.java: JSON key constant for "rich_status_sub_server" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper13	F	field3	serverMappingsId	com/moonsworth/lunar/network/MixinHelper13.java: @SerializedName("server_mappings_id") model property
+com.moonsworth.lunar.network.MixinHelper13	F	field5	richStatusSource	com/moonsworth/lunar/network/MixinHelper13.java: @SerializedName("rich_status_source") model property
+com.moonsworth.lunar.network.MixinHelper13	F	field7	richStatusGameName	com/moonsworth/lunar/network/MixinHelper13.java: @SerializedName("rich_status_game_name") model property
+com.moonsworth.lunar.network.MixinHelper13	F	field9	richStatusGameVariantName	com/moonsworth/lunar/network/MixinHelper13.java: @SerializedName("rich_status_game_variant_name") model property
+com.moonsworth.lunar.network.MixinHelper13	F	field11	richStatusGameState	com/moonsworth/lunar/network/MixinHelper13.java: @SerializedName("rich_status_game_state") model property
+com.moonsworth.lunar.network.MixinHelper13	F	field13	richStatusPlayerState	com/moonsworth/lunar/network/MixinHelper13.java: @SerializedName("rich_status_player_state") model property
+com.moonsworth.lunar.network.MixinHelper13	F	field15	richStatusMapName	com/moonsworth/lunar/network/MixinHelper13.java: @SerializedName("rich_status_map_name") model property
+com.moonsworth.lunar.network.MixinHelper13	F	field17	richStatusSubServer	com/moonsworth/lunar/network/MixinHelper13.java: @SerializedName("rich_status_sub_server") model property
+com.moonsworth.lunar.network.MixinHelper13	M	method3	richStatusSource	com/moonsworth/lunar/network/MixinHelper13.java: fluent setter for richStatusSource
+com.moonsworth.lunar.network.MixinHelper13	M	method4	getRichStatusSource	com/moonsworth/lunar/network/MixinHelper13.java: getter for richStatusSource
+com.moonsworth.lunar.network.MixinHelper13	M	method5	setRichStatusSource	com/moonsworth/lunar/network/MixinHelper13.java: setter for richStatusSource
+com.moonsworth.lunar.network.MixinHelper13	M	method6	richStatusGameName	com/moonsworth/lunar/network/MixinHelper13.java: fluent setter for richStatusGameName
+com.moonsworth.lunar.network.MixinHelper13	M	method7	getRichStatusGameName	com/moonsworth/lunar/network/MixinHelper13.java: getter for richStatusGameName
+com.moonsworth.lunar.network.MixinHelper13	M	method8	setRichStatusGameName	com/moonsworth/lunar/network/MixinHelper13.java: setter for richStatusGameName
+com.moonsworth.lunar.network.MixinHelper13	M	method9	richStatusGameVariantName	com/moonsworth/lunar/network/MixinHelper13.java: fluent setter for richStatusGameVariantName
+com.moonsworth.lunar.network.MixinHelper13	M	method10	getRichStatusGameVariantName	com/moonsworth/lunar/network/MixinHelper13.java: getter for richStatusGameVariantName
+com.moonsworth.lunar.network.MixinHelper13	M	method11	setRichStatusGameVariantName	com/moonsworth/lunar/network/MixinHelper13.java: setter for richStatusGameVariantName
+com.moonsworth.lunar.network.MixinHelper13	M	method12	richStatusGameState	com/moonsworth/lunar/network/MixinHelper13.java: fluent setter for richStatusGameState
+com.moonsworth.lunar.network.MixinHelper13	M	method13	getRichStatusGameState	com/moonsworth/lunar/network/MixinHelper13.java: getter for richStatusGameState
+com.moonsworth.lunar.network.MixinHelper13	M	method14	setRichStatusGameState	com/moonsworth/lunar/network/MixinHelper13.java: setter for richStatusGameState
+com.moonsworth.lunar.network.MixinHelper13	M	method15	richStatusPlayerState	com/moonsworth/lunar/network/MixinHelper13.java: fluent setter for richStatusPlayerState
+com.moonsworth.lunar.network.MixinHelper13	M	method16	getRichStatusPlayerState	com/moonsworth/lunar/network/MixinHelper13.java: getter for richStatusPlayerState
+com.moonsworth.lunar.network.MixinHelper13	M	method17	setRichStatusPlayerState	com/moonsworth/lunar/network/MixinHelper13.java: setter for richStatusPlayerState
+com.moonsworth.lunar.network.MixinHelper13	M	method18	richStatusMapName	com/moonsworth/lunar/network/MixinHelper13.java: fluent setter for richStatusMapName
+com.moonsworth.lunar.network.MixinHelper13	M	method19	getRichStatusMapName	com/moonsworth/lunar/network/MixinHelper13.java: getter for richStatusMapName
+com.moonsworth.lunar.network.MixinHelper13	M	method20	setRichStatusMapName	com/moonsworth/lunar/network/MixinHelper13.java: setter for richStatusMapName
+com.moonsworth.lunar.network.MixinHelper13	M	method21	richStatusSubServer	com/moonsworth/lunar/network/MixinHelper13.java: fluent setter for richStatusSubServer
+com.moonsworth.lunar.network.MixinHelper13	M	method22	getRichStatusSubServer	com/moonsworth/lunar/network/MixinHelper13.java: getter for richStatusSubServer
+com.moonsworth.lunar.network.MixinHelper13	M	method23	setRichStatusSubServer	com/moonsworth/lunar/network/MixinHelper13.java: setter for richStatusSubServer
+com.moonsworth.lunar.network.MixinHelper13	M	method24	toIndentedString	com/moonsworth/lunar/network/MixinHelper13.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper13	M	method26	toJson	com/moonsworth/lunar/network/MixinHelper13.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper14	F	field2	SERIALIZED_NAME_ID	com/moonsworth/lunar/network/MixinHelper14.java: JSON key constant for "id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper14	F	field3	SERIALIZED_NAME_NAME	com/moonsworth/lunar/network/MixinHelper14.java: JSON key constant for "name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper14	F	field4	SERIALIZED_NAME_VERSION	com/moonsworth/lunar/network/MixinHelper14.java: JSON key constant for "version" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper14	F	field5	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/MixinHelper14.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper14	M	method3	version	com/moonsworth/lunar/network/MixinHelper14.java: fluent setter for version
+com.moonsworth.lunar.network.MixinHelper14	M	method4	type	com/moonsworth/lunar/network/MixinHelper14.java: fluent setter for type
+com.moonsworth.lunar.network.MixinHelper14	M	method5	toIndentedString	com/moonsworth/lunar/network/MixinHelper14.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper14	M	method7	toJson	com/moonsworth/lunar/network/MixinHelper14.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper15	F	field2	SERIALIZED_NAME_TIMESTAMP	com/moonsworth/lunar/network/MixinHelper15.java: JSON key constant for "timestamp" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper15	F	field3	timestamp	com/moonsworth/lunar/network/MixinHelper15.java: @SerializedName("timestamp") model property
+com.moonsworth.lunar.network.MixinHelper15	M	method3	setTimestamp	com/moonsworth/lunar/network/MixinHelper15.java: setter for timestamp
+com.moonsworth.lunar.network.MixinHelper15	M	method7	toIndentedString	com/moonsworth/lunar/network/MixinHelper15.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper15	M	method9	toJson	com/moonsworth/lunar/network/MixinHelper15.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper16	F	field2	SERIALIZED_NAME_DURATION_MS	com/moonsworth/lunar/network/MixinHelper16.java: JSON key constant for "duration_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper16	F	field4	SERIALIZED_NAME_PROPERTIES	com/moonsworth/lunar/network/MixinHelper16.java: JSON key constant for "properties" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper16	F	field3	durationMs	com/moonsworth/lunar/network/MixinHelper16.java: @SerializedName("duration_ms") model property
+com.moonsworth.lunar.network.MixinHelper16	F	field5	properties	com/moonsworth/lunar/network/MixinHelper16.java: @SerializedName("properties") model property
+com.moonsworth.lunar.network.MixinHelper16	M	method1	durationMs	com/moonsworth/lunar/network/MixinHelper16.java: fluent setter for durationMs
+com.moonsworth.lunar.network.MixinHelper16	M	method2	getDurationMs	com/moonsworth/lunar/network/MixinHelper16.java: getter for durationMs
+com.moonsworth.lunar.network.MixinHelper16	M	method3	setDurationMs	com/moonsworth/lunar/network/MixinHelper16.java: setter for durationMs
+com.moonsworth.lunar.network.MixinHelper16	M	method4	properties	com/moonsworth/lunar/network/MixinHelper16.java: fluent setter for properties
+com.moonsworth.lunar.network.MixinHelper16	M	method5	addPropertiesItem	com/moonsworth/lunar/network/MixinHelper16.java: append item to properties list
+com.moonsworth.lunar.network.MixinHelper16	M	method6	getProperties	com/moonsworth/lunar/network/MixinHelper16.java: getter for properties
+com.moonsworth.lunar.network.MixinHelper16	M	method7	setProperties	com/moonsworth/lunar/network/MixinHelper16.java: setter for properties
+com.moonsworth.lunar.network.MixinHelper16	M	method8	toIndentedString	com/moonsworth/lunar/network/MixinHelper16.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper16	M	method10	toJson	com/moonsworth/lunar/network/MixinHelper16.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper162	F	field9	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/MixinHelper162.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper162	F	field10	type	com/moonsworth/lunar/network/MixinHelper162.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.MixinHelper162	M	method4	toIndentedString	com/moonsworth/lunar/network/MixinHelper162.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper162	M	method10	toJson	com/moonsworth/lunar/network/MixinHelper162.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper163	F	field9	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/MixinHelper163.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper163	F	field11	SERIALIZED_NAME_NAME	com/moonsworth/lunar/network/MixinHelper163.java: JSON key constant for "name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper163	F	field10	type	com/moonsworth/lunar/network/MixinHelper163.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.MixinHelper163	M	method4	name	com/moonsworth/lunar/network/MixinHelper163.java: fluent setter for name
+com.moonsworth.lunar.network.MixinHelper163	M	method5	toIndentedString	com/moonsworth/lunar/network/MixinHelper163.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper163	M	method10	toJson	com/moonsworth/lunar/network/MixinHelper163.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper164	F	field9	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/MixinHelper164.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper164	F	field11	SERIALIZED_NAME_SUB_TYPE	com/moonsworth/lunar/network/MixinHelper164.java: JSON key constant for "sub_type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper164	F	field10	type	com/moonsworth/lunar/network/MixinHelper164.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.MixinHelper164	F	field12	subType	com/moonsworth/lunar/network/MixinHelper164.java: @SerializedName("sub_type") model property
+com.moonsworth.lunar.network.MixinHelper164	M	method4	subType	com/moonsworth/lunar/network/MixinHelper164.java: fluent setter for subType
+com.moonsworth.lunar.network.MixinHelper164	M	method10	toJson	com/moonsworth/lunar/network/MixinHelper164.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper2	F	field2	SERIALIZED_NAME_PLAYER_UUID	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "player_uuid" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field4	SERIALIZED_NAME_INSTALLATION_ID	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "installation_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field6	SERIALIZED_NAME_OVERWOLF_MUID	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "overwolf_muid" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field8	SERIALIZED_NAME_TIMESTAMP	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "timestamp" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field10	SERIALIZED_NAME_EVENT_ID	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "event_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field12	SERIALIZED_NAME_ASSETSERVER_SESSION_ID	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "assetserver_session_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field14	SERIALIZED_NAME_LAUNCH_ID	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "launch_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field16	SERIALIZED_NAME_INBOUND_LOCATION	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "inbound_location" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field18	SERIALIZED_NAME_LOCATION	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "location" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field20	SERIALIZED_NAME_MINECRAFT_VERSION	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "minecraft_version" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field22	SERIALIZED_NAME_LUNAR_CLIENT_GIT_COMMIT	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "lunar_client_git_commit" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field24	SERIALIZED_NAME_LUNAR_CLIENT_GIT_BRANCH	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "lunar_client_git_branch" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field26	SERIALIZED_NAME_LUNAR_CLIENT_SEMVER	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "lunar_client_semver" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field28	SERIALIZED_NAME_LUNAR_CLIENT_UI_GIT_COMMIT	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "lunar_client_ui_git_commit" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field30	SERIALIZED_NAME_LUNAR_CLIENT_UI_GIT_BRANCH	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "lunar_client_ui_git_branch" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field32	SERIALIZED_NAME_OPERATING_SYSTEM	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "operating_system" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field33	SERIALIZED_NAME_OPERATING_SYSTEM_RELEASE	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "operating_system_release" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field34	SERIALIZED_NAME_CPU_ARCHITECTURE	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "cpu_architecture" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field35	SERIALIZED_NAME_LAUNCHER_VERSION	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "launcher_version" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field37	SERIALIZED_NAME_CANARY_TOKEN	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "canary_token" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field39	SERIALIZED_NAME_ICHOR_MODULES	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "ichor_modules" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field41	SERIALIZED_NAME_GL_EXTENSIONS	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "gl_extensions" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field43	SERIALIZED_NAME_INSTALLED_MODS	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "installed_mods" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field44	SERIALIZED_NAME_WEARER_UUID	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "wearer_uuid" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field46	SERIALIZED_NAME_WEARER_COSMETIC_IDS	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "wearer_cosmetic_ids" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field48	SERIALIZED_NAME_WEARER_OUTFIT_ID	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "wearer_outfit_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field50	SERIALIZED_NAME_TRIGGER	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "trigger" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field52	SERIALIZED_NAME_GEO_LOCATION	com/moonsworth/lunar/network/MixinHelper2.java: JSON key constant for "geo_location" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper2	F	field3	playerUuid	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("player_uuid") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field5	installationId	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("installation_id") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field7	overwolfMuid	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("overwolf_muid") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field9	timestamp	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("timestamp") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field11	eventId	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("event_id") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field13	assetserverSessionId	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("assetserver_session_id") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field15	launchId	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("launch_id") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field17	inboundLocation	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("inbound_location") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field19	location	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("location") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field21	minecraftVersion	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("minecraft_version") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field23	lunarClientGitCommit	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("lunar_client_git_commit") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field25	lunarClientGitBranch	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("lunar_client_git_branch") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field27	lunarClientSemver	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("lunar_client_semver") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field29	lunarClientUiGitCommit	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("lunar_client_ui_git_commit") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field31	lunarClientUiGitBranch	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("lunar_client_ui_git_branch") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field36	launcherVersion	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("launcher_version") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field38	canaryToken	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("canary_token") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field40	ichorModules	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("ichor_modules") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field42	glExtensions	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("gl_extensions") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field45	wearerUuid	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("wearer_uuid") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field47	wearerCosmeticIds	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("wearer_cosmetic_ids") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field49	wearerOutfitId	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("wearer_outfit_id") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field51	trigger	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("trigger") model property
+com.moonsworth.lunar.network.MixinHelper2	F	field53	geoLocation	com/moonsworth/lunar/network/MixinHelper2.java: @SerializedName("geo_location") model property
+com.moonsworth.lunar.network.MixinHelper2	M	method1	playerUuid	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for playerUuid
+com.moonsworth.lunar.network.MixinHelper2	M	method2	getPlayerUuid	com/moonsworth/lunar/network/MixinHelper2.java: getter for playerUuid
+com.moonsworth.lunar.network.MixinHelper2	M	method3	setPlayerUuid	com/moonsworth/lunar/network/MixinHelper2.java: setter for playerUuid
+com.moonsworth.lunar.network.MixinHelper2	M	method4	installationId	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for installationId
+com.moonsworth.lunar.network.MixinHelper2	M	method5	setInstallationId	com/moonsworth/lunar/network/MixinHelper2.java: setter for installationId
+com.moonsworth.lunar.network.MixinHelper2	M	method6	overwolfMuid	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for overwolfMuid
+com.moonsworth.lunar.network.MixinHelper2	M	method7	setOverwolfMuid	com/moonsworth/lunar/network/MixinHelper2.java: setter for overwolfMuid
+com.moonsworth.lunar.network.MixinHelper2	M	method8	timestamp	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for timestamp
+com.moonsworth.lunar.network.MixinHelper2	M	method9	getTimestamp	com/moonsworth/lunar/network/MixinHelper2.java: getter for timestamp
+com.moonsworth.lunar.network.MixinHelper2	M	method10	setTimestamp	com/moonsworth/lunar/network/MixinHelper2.java: setter for timestamp
+com.moonsworth.lunar.network.MixinHelper2	M	method11	eventId	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for eventId
+com.moonsworth.lunar.network.MixinHelper2	M	method12	getEventId	com/moonsworth/lunar/network/MixinHelper2.java: getter for eventId
+com.moonsworth.lunar.network.MixinHelper2	M	method13	setEventId	com/moonsworth/lunar/network/MixinHelper2.java: setter for eventId
+com.moonsworth.lunar.network.MixinHelper2	M	method14	assetserverSessionId	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for assetserverSessionId
+com.moonsworth.lunar.network.MixinHelper2	M	method15	getAssetserverSessionId	com/moonsworth/lunar/network/MixinHelper2.java: getter for assetserverSessionId
+com.moonsworth.lunar.network.MixinHelper2	M	method16	setAssetserverSessionId	com/moonsworth/lunar/network/MixinHelper2.java: setter for assetserverSessionId
+com.moonsworth.lunar.network.MixinHelper2	M	method17	launchId	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for launchId
+com.moonsworth.lunar.network.MixinHelper2	M	method18	setLaunchId	com/moonsworth/lunar/network/MixinHelper2.java: setter for launchId
+com.moonsworth.lunar.network.MixinHelper2	M	method19	inboundLocation	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for inboundLocation
+com.moonsworth.lunar.network.MixinHelper2	M	method20	getInboundLocation	com/moonsworth/lunar/network/MixinHelper2.java: getter for inboundLocation
+com.moonsworth.lunar.network.MixinHelper2	M	method21	setInboundLocation	com/moonsworth/lunar/network/MixinHelper2.java: setter for inboundLocation
+com.moonsworth.lunar.network.MixinHelper2	M	method22	location	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for location
+com.moonsworth.lunar.network.MixinHelper2	M	method23	getLocation	com/moonsworth/lunar/network/MixinHelper2.java: getter for location
+com.moonsworth.lunar.network.MixinHelper2	M	method24	setLocation	com/moonsworth/lunar/network/MixinHelper2.java: setter for location
+com.moonsworth.lunar.network.MixinHelper2	M	method25	minecraftVersion	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for minecraftVersion
+com.moonsworth.lunar.network.MixinHelper2	M	method26	getMinecraftVersion	com/moonsworth/lunar/network/MixinHelper2.java: getter for minecraftVersion
+com.moonsworth.lunar.network.MixinHelper2	M	method27	setMinecraftVersion	com/moonsworth/lunar/network/MixinHelper2.java: setter for minecraftVersion
+com.moonsworth.lunar.network.MixinHelper2	M	method28	lunarClientGitCommit	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for lunarClientGitCommit
+com.moonsworth.lunar.network.MixinHelper2	M	method29	getLunarClientGitCommit	com/moonsworth/lunar/network/MixinHelper2.java: getter for lunarClientGitCommit
+com.moonsworth.lunar.network.MixinHelper2	M	method30	setLunarClientGitCommit	com/moonsworth/lunar/network/MixinHelper2.java: setter for lunarClientGitCommit
+com.moonsworth.lunar.network.MixinHelper2	M	method31	lunarClientGitBranch	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for lunarClientGitBranch
+com.moonsworth.lunar.network.MixinHelper2	M	method32	getLunarClientGitBranch	com/moonsworth/lunar/network/MixinHelper2.java: getter for lunarClientGitBranch
+com.moonsworth.lunar.network.MixinHelper2	M	method33	setLunarClientGitBranch	com/moonsworth/lunar/network/MixinHelper2.java: setter for lunarClientGitBranch
+com.moonsworth.lunar.network.MixinHelper2	M	method34	lunarClientSemver	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for lunarClientSemver
+com.moonsworth.lunar.network.MixinHelper2	M	method35	getLunarClientSemver	com/moonsworth/lunar/network/MixinHelper2.java: getter for lunarClientSemver
+com.moonsworth.lunar.network.MixinHelper2	M	method36	setLunarClientSemver	com/moonsworth/lunar/network/MixinHelper2.java: setter for lunarClientSemver
+com.moonsworth.lunar.network.MixinHelper2	M	method37	lunarClientUiGitCommit	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for lunarClientUiGitCommit
+com.moonsworth.lunar.network.MixinHelper2	M	method38	getLunarClientUiGitCommit	com/moonsworth/lunar/network/MixinHelper2.java: getter for lunarClientUiGitCommit
+com.moonsworth.lunar.network.MixinHelper2	M	method39	setLunarClientUiGitCommit	com/moonsworth/lunar/network/MixinHelper2.java: setter for lunarClientUiGitCommit
+com.moonsworth.lunar.network.MixinHelper2	M	method40	lunarClientUiGitBranch	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for lunarClientUiGitBranch
+com.moonsworth.lunar.network.MixinHelper2	M	method41	getLunarClientUiGitBranch	com/moonsworth/lunar/network/MixinHelper2.java: getter for lunarClientUiGitBranch
+com.moonsworth.lunar.network.MixinHelper2	M	method42	setLunarClientUiGitBranch	com/moonsworth/lunar/network/MixinHelper2.java: setter for lunarClientUiGitBranch
+com.moonsworth.lunar.network.MixinHelper2	M	method43	operatingSystem	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for operatingSystem
+com.moonsworth.lunar.network.MixinHelper2	M	method45	operatingSystemRelease	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for operatingSystemRelease
+com.moonsworth.lunar.network.MixinHelper2	M	method47	cpuArchitecture	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for cpuArchitecture
+com.moonsworth.lunar.network.MixinHelper2	M	method48	launcherVersion	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for launcherVersion
+com.moonsworth.lunar.network.MixinHelper2	M	method49	getLauncherVersion	com/moonsworth/lunar/network/MixinHelper2.java: getter for launcherVersion
+com.moonsworth.lunar.network.MixinHelper2	M	method50	setLauncherVersion	com/moonsworth/lunar/network/MixinHelper2.java: setter for launcherVersion
+com.moonsworth.lunar.network.MixinHelper2	M	method51	canaryToken	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for canaryToken
+com.moonsworth.lunar.network.MixinHelper2	M	method52	setCanaryToken	com/moonsworth/lunar/network/MixinHelper2.java: setter for canaryToken
+com.moonsworth.lunar.network.MixinHelper2	M	method53	ichorModules	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for ichorModules
+com.moonsworth.lunar.network.MixinHelper2	M	method54	addIchorModulesItem	com/moonsworth/lunar/network/MixinHelper2.java: append item to ichorModules list
+com.moonsworth.lunar.network.MixinHelper2	M	method55	getIchorModules	com/moonsworth/lunar/network/MixinHelper2.java: getter for ichorModules
+com.moonsworth.lunar.network.MixinHelper2	M	method56	setIchorModules	com/moonsworth/lunar/network/MixinHelper2.java: setter for ichorModules
+com.moonsworth.lunar.network.MixinHelper2	M	method57	glExtensions	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for glExtensions
+com.moonsworth.lunar.network.MixinHelper2	M	method58	addGlExtensionsItem	com/moonsworth/lunar/network/MixinHelper2.java: append item to glExtensions list
+com.moonsworth.lunar.network.MixinHelper2	M	method59	getGlExtensions	com/moonsworth/lunar/network/MixinHelper2.java: getter for glExtensions
+com.moonsworth.lunar.network.MixinHelper2	M	method60	setGlExtensions	com/moonsworth/lunar/network/MixinHelper2.java: setter for glExtensions
+com.moonsworth.lunar.network.MixinHelper2	M	method61	installedMods	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for installedMods
+com.moonsworth.lunar.network.MixinHelper2	M	method62	addInstalledModsItem	com/moonsworth/lunar/network/MixinHelper2.java: append item to installedMods list
+com.moonsworth.lunar.network.MixinHelper2	M	method63	wearerUuid	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for wearerUuid
+com.moonsworth.lunar.network.MixinHelper2	M	method64	getWearerUuid	com/moonsworth/lunar/network/MixinHelper2.java: getter for wearerUuid
+com.moonsworth.lunar.network.MixinHelper2	M	method65	setWearerUuid	com/moonsworth/lunar/network/MixinHelper2.java: setter for wearerUuid
+com.moonsworth.lunar.network.MixinHelper2	M	method66	wearerCosmeticIds	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for wearerCosmeticIds
+com.moonsworth.lunar.network.MixinHelper2	M	method67	addWearerCosmeticIdsItem	com/moonsworth/lunar/network/MixinHelper2.java: append item to wearerCosmeticIds list
+com.moonsworth.lunar.network.MixinHelper2	M	method68	getWearerCosmeticIds	com/moonsworth/lunar/network/MixinHelper2.java: getter for wearerCosmeticIds
+com.moonsworth.lunar.network.MixinHelper2	M	method69	setWearerCosmeticIds	com/moonsworth/lunar/network/MixinHelper2.java: setter for wearerCosmeticIds
+com.moonsworth.lunar.network.MixinHelper2	M	method70	wearerOutfitId	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for wearerOutfitId
+com.moonsworth.lunar.network.MixinHelper2	M	method71	getWearerOutfitId	com/moonsworth/lunar/network/MixinHelper2.java: getter for wearerOutfitId
+com.moonsworth.lunar.network.MixinHelper2	M	method72	setWearerOutfitId	com/moonsworth/lunar/network/MixinHelper2.java: setter for wearerOutfitId
+com.moonsworth.lunar.network.MixinHelper2	M	method73	trigger	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for trigger
+com.moonsworth.lunar.network.MixinHelper2	M	method74	getTrigger	com/moonsworth/lunar/network/MixinHelper2.java: getter for trigger
+com.moonsworth.lunar.network.MixinHelper2	M	method75	setTrigger	com/moonsworth/lunar/network/MixinHelper2.java: setter for trigger
+com.moonsworth.lunar.network.MixinHelper2	M	method76	geoLocation	com/moonsworth/lunar/network/MixinHelper2.java: fluent setter for geoLocation
+com.moonsworth.lunar.network.MixinHelper2	M	method77	getGeoLocation	com/moonsworth/lunar/network/MixinHelper2.java: getter for geoLocation
+com.moonsworth.lunar.network.MixinHelper2	M	method78	setGeoLocation	com/moonsworth/lunar/network/MixinHelper2.java: setter for geoLocation
+com.moonsworth.lunar.network.MixinHelper2	M	method79	toIndentedString	com/moonsworth/lunar/network/MixinHelper2.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper2	M	method81	toJson	com/moonsworth/lunar/network/MixinHelper2.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper22	F	field57	SERIALIZED_NAME_LENGTH_MS	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "length_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field59	SERIALIZED_NAME_PATH	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "path" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field60	SERIALIZED_NAME_FORMAT	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "format" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field61	SERIALIZED_NAME_CODEC	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "codec" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field63	SERIALIZED_NAME_ENCODER	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "encoder" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field65	SERIALIZED_NAME_RESOLUTION	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "resolution" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field67	SERIALIZED_NAME_FRAMERATE	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "framerate" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field69	SERIALIZED_NAME_BITRATE	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "bitrate" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field71	SERIALIZED_NAME_AUDIO	com/moonsworth/lunar/network/MixinHelper22.java: JSON key constant for "audio" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper22	F	field58	lengthMs	com/moonsworth/lunar/network/MixinHelper22.java: @SerializedName("length_ms") model property
+com.moonsworth.lunar.network.MixinHelper22	F	field62	codec	com/moonsworth/lunar/network/MixinHelper22.java: @SerializedName("codec") model property
+com.moonsworth.lunar.network.MixinHelper22	F	field64	encoder	com/moonsworth/lunar/network/MixinHelper22.java: @SerializedName("encoder") model property
+com.moonsworth.lunar.network.MixinHelper22	F	field66	resolution	com/moonsworth/lunar/network/MixinHelper22.java: @SerializedName("resolution") model property
+com.moonsworth.lunar.network.MixinHelper22	F	field68	framerate	com/moonsworth/lunar/network/MixinHelper22.java: @SerializedName("framerate") model property
+com.moonsworth.lunar.network.MixinHelper22	F	field70	bitrate	com/moonsworth/lunar/network/MixinHelper22.java: @SerializedName("bitrate") model property
+com.moonsworth.lunar.network.MixinHelper22	F	field72	audio	com/moonsworth/lunar/network/MixinHelper22.java: @SerializedName("audio") model property
+com.moonsworth.lunar.network.MixinHelper22	M	method8	path	com/moonsworth/lunar/network/MixinHelper22.java: fluent setter for path
+com.moonsworth.lunar.network.MixinHelper22	M	method9	format	com/moonsworth/lunar/network/MixinHelper22.java: fluent setter for format
+com.moonsworth.lunar.network.MixinHelper22	M	method12	setCodec	com/moonsworth/lunar/network/MixinHelper22.java: setter for codec
+com.moonsworth.lunar.network.MixinHelper22	M	method13	getEncoder	com/moonsworth/lunar/network/MixinHelper22.java: getter for encoder
+com.moonsworth.lunar.network.MixinHelper22	M	method15	setEncoder	com/moonsworth/lunar/network/MixinHelper22.java: setter for encoder
+com.moonsworth.lunar.network.MixinHelper22	M	method17	framerate	com/moonsworth/lunar/network/MixinHelper22.java: fluent setter for framerate
+com.moonsworth.lunar.network.MixinHelper22	M	method18	getFramerate	com/moonsworth/lunar/network/MixinHelper22.java: getter for framerate
+com.moonsworth.lunar.network.MixinHelper22	M	method19	setFramerate	com/moonsworth/lunar/network/MixinHelper22.java: setter for framerate
+com.moonsworth.lunar.network.MixinHelper22	M	method20	bitrate	com/moonsworth/lunar/network/MixinHelper22.java: fluent setter for bitrate
+com.moonsworth.lunar.network.MixinHelper22	M	method21	getBitrate	com/moonsworth/lunar/network/MixinHelper22.java: getter for bitrate
+com.moonsworth.lunar.network.MixinHelper22	M	method22	setBitrate	com/moonsworth/lunar/network/MixinHelper22.java: setter for bitrate
+com.moonsworth.lunar.network.MixinHelper22	M	method23	audio	com/moonsworth/lunar/network/MixinHelper22.java: fluent setter for audio
+com.moonsworth.lunar.network.MixinHelper22	M	method24	getAudio	com/moonsworth/lunar/network/MixinHelper22.java: getter for audio
+com.moonsworth.lunar.network.MixinHelper22	M	method25	setAudio	com/moonsworth/lunar/network/MixinHelper22.java: setter for audio
+com.moonsworth.lunar.network.MixinHelper22	M	method26	toIndentedString	com/moonsworth/lunar/network/MixinHelper22.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper22	M	method81	toJson	com/moonsworth/lunar/network/MixinHelper22.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper23	F	field57	SERIALIZED_NAME_LAYER	com/moonsworth/lunar/network/MixinHelper23.java: JSON key constant for "layer" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper23	F	field58	layer	com/moonsworth/lunar/network/MixinHelper23.java: @SerializedName("layer") model property
+com.moonsworth.lunar.network.MixinHelper23	M	method4	toIndentedString	com/moonsworth/lunar/network/MixinHelper23.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper23	M	method81	toJson	com/moonsworth/lunar/network/MixinHelper23.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper24	F	field57	SERIALIZED_NAME_INTERACTION_TYPE	com/moonsworth/lunar/network/MixinHelper24.java: JSON key constant for "interaction_type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper24	F	field59	SERIALIZED_NAME_PROMOTION_TYPE	com/moonsworth/lunar/network/MixinHelper24.java: JSON key constant for "promotion_type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper24	F	field58	interactionType	com/moonsworth/lunar/network/MixinHelper24.java: @SerializedName("interaction_type") model property
+com.moonsworth.lunar.network.MixinHelper24	F	field60	promotionType	com/moonsworth/lunar/network/MixinHelper24.java: @SerializedName("promotion_type") model property
+com.moonsworth.lunar.network.MixinHelper24	M	method8	promotionType	com/moonsworth/lunar/network/MixinHelper24.java: fluent setter for promotionType
+com.moonsworth.lunar.network.MixinHelper24	M	method5	getPromotionType	com/moonsworth/lunar/network/MixinHelper24.java: getter for promotionType
+com.moonsworth.lunar.network.MixinHelper24	M	method9	setPromotionType	com/moonsworth/lunar/network/MixinHelper24.java: setter for promotionType
+com.moonsworth.lunar.network.MixinHelper24	M	method7	toIndentedString	com/moonsworth/lunar/network/MixinHelper24.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper24	M	method81	toJson	com/moonsworth/lunar/network/MixinHelper24.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper25	F	field57	SERIALIZED_NAME_POST_ID	com/moonsworth/lunar/network/MixinHelper25.java: JSON key constant for "post_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper25	F	field59	SERIALIZED_NAME_INTERACTION_TYPE	com/moonsworth/lunar/network/MixinHelper25.java: JSON key constant for "interaction_type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper25	F	field58	postId	com/moonsworth/lunar/network/MixinHelper25.java: @SerializedName("post_id") model property
+com.moonsworth.lunar.network.MixinHelper25	F	field60	interactionType	com/moonsworth/lunar/network/MixinHelper25.java: @SerializedName("interaction_type") model property
+com.moonsworth.lunar.network.MixinHelper25	M	method3	getPostId	com/moonsworth/lunar/network/MixinHelper25.java: getter for postId
+com.moonsworth.lunar.network.MixinHelper25	M	method8	setPostId	com/moonsworth/lunar/network/MixinHelper25.java: setter for postId
+com.moonsworth.lunar.network.MixinHelper25	M	method4	interactionType	com/moonsworth/lunar/network/MixinHelper25.java: fluent setter for interactionType
+com.moonsworth.lunar.network.MixinHelper25	M	method5	getInteractionType	com/moonsworth/lunar/network/MixinHelper25.java: getter for interactionType
+com.moonsworth.lunar.network.MixinHelper25	M	method6	setInteractionType	com/moonsworth/lunar/network/MixinHelper25.java: setter for interactionType
+com.moonsworth.lunar.network.MixinHelper25	M	method7	toIndentedString	com/moonsworth/lunar/network/MixinHelper25.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper25	M	method81	toJson	com/moonsworth/lunar/network/MixinHelper25.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper26	F	field57	SERIALIZED_NAME_DURATION_MS	com/moonsworth/lunar/network/MixinHelper26.java: JSON key constant for "duration_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper26	F	field59	SERIALIZED_NAME_LOCATIONS	com/moonsworth/lunar/network/MixinHelper26.java: JSON key constant for "locations" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper26	F	field61	SERIALIZED_NAME_SHADOW_REWIND	com/moonsworth/lunar/network/MixinHelper26.java: JSON key constant for "shadow_rewind" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper26	F	field63	SERIALIZED_NAME_MIC_RECORDING	com/moonsworth/lunar/network/MixinHelper26.java: JSON key constant for "mic_recording" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper26	F	field65	SERIALIZED_NAME_SYSTEM_AUDIO_RECORDING	com/moonsworth/lunar/network/MixinHelper26.java: JSON key constant for "system_audio_recording" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper26	F	field58	durationMs	com/moonsworth/lunar/network/MixinHelper26.java: @SerializedName("duration_ms") model property
+com.moonsworth.lunar.network.MixinHelper26	F	field60	locations	com/moonsworth/lunar/network/MixinHelper26.java: @SerializedName("locations") model property
+com.moonsworth.lunar.network.MixinHelper26	F	field62	shadowRewind	com/moonsworth/lunar/network/MixinHelper26.java: @SerializedName("shadow_rewind") model property
+com.moonsworth.lunar.network.MixinHelper26	F	field64	micRecording	com/moonsworth/lunar/network/MixinHelper26.java: @SerializedName("mic_recording") model property
+com.moonsworth.lunar.network.MixinHelper26	F	field66	systemAudioRecording	com/moonsworth/lunar/network/MixinHelper26.java: @SerializedName("system_audio_recording") model property
+com.moonsworth.lunar.network.MixinHelper26	M	method4	locations	com/moonsworth/lunar/network/MixinHelper26.java: fluent setter for locations
+com.moonsworth.lunar.network.MixinHelper26	M	method5	addLocationsItem	com/moonsworth/lunar/network/MixinHelper26.java: append item to locations list
+com.moonsworth.lunar.network.MixinHelper26	M	method6	getLocations	com/moonsworth/lunar/network/MixinHelper26.java: getter for locations
+com.moonsworth.lunar.network.MixinHelper26	M	method7	setLocations	com/moonsworth/lunar/network/MixinHelper26.java: setter for locations
+com.moonsworth.lunar.network.MixinHelper26	M	method8	shadowRewind	com/moonsworth/lunar/network/MixinHelper26.java: fluent setter for shadowRewind
+com.moonsworth.lunar.network.MixinHelper26	M	method11	micRecording	com/moonsworth/lunar/network/MixinHelper26.java: fluent setter for micRecording
+com.moonsworth.lunar.network.MixinHelper26	M	method14	systemAudioRecording	com/moonsworth/lunar/network/MixinHelper26.java: fluent setter for systemAudioRecording
+com.moonsworth.lunar.network.MixinHelper26	M	method17	toIndentedString	com/moonsworth/lunar/network/MixinHelper26.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper26	M	method81	toJson	com/moonsworth/lunar/network/MixinHelper26.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper27	F	field57	SERIALIZED_NAME_SESSION_TYPE	com/moonsworth/lunar/network/MixinHelper27.java: JSON key constant for "session_type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper27	F	field59	SERIALIZED_NAME_DURATION_MS	com/moonsworth/lunar/network/MixinHelper27.java: JSON key constant for "duration_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper27	F	field61	SERIALIZED_NAME_TIMELINES	com/moonsworth/lunar/network/MixinHelper27.java: JSON key constant for "timelines" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper27	F	field63	SERIALIZED_NAME_FAST_REWIND	com/moonsworth/lunar/network/MixinHelper27.java: JSON key constant for "fast_rewind" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper27	F	field58	sessionType	com/moonsworth/lunar/network/MixinHelper27.java: @SerializedName("session_type") model property
+com.moonsworth.lunar.network.MixinHelper27	F	field60	durationMs	com/moonsworth/lunar/network/MixinHelper27.java: @SerializedName("duration_ms") model property
+com.moonsworth.lunar.network.MixinHelper27	F	field62	timelines	com/moonsworth/lunar/network/MixinHelper27.java: @SerializedName("timelines") model property
+com.moonsworth.lunar.network.MixinHelper27	F	field64	fastRewind	com/moonsworth/lunar/network/MixinHelper27.java: @SerializedName("fast_rewind") model property
+com.moonsworth.lunar.network.MixinHelper27	M	method4	durationMs	com/moonsworth/lunar/network/MixinHelper27.java: fluent setter for durationMs
+com.moonsworth.lunar.network.MixinHelper27	M	method5	getDurationMs	com/moonsworth/lunar/network/MixinHelper27.java: getter for durationMs
+com.moonsworth.lunar.network.MixinHelper27	M	method6	setDurationMs	com/moonsworth/lunar/network/MixinHelper27.java: setter for durationMs
+com.moonsworth.lunar.network.MixinHelper27	M	method7	timelines	com/moonsworth/lunar/network/MixinHelper27.java: fluent setter for timelines
+com.moonsworth.lunar.network.MixinHelper27	M	method8	addTimelinesItem	com/moonsworth/lunar/network/MixinHelper27.java: append item to timelines list
+com.moonsworth.lunar.network.MixinHelper27	M	method11	fastRewind	com/moonsworth/lunar/network/MixinHelper27.java: fluent setter for fastRewind
+com.moonsworth.lunar.network.MixinHelper27	M	method14	toIndentedString	com/moonsworth/lunar/network/MixinHelper27.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper27	M	method81	toJson	com/moonsworth/lunar/network/MixinHelper27.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper3	F	field2	SERIALIZED_NAME_CHANNELS	com/moonsworth/lunar/network/MixinHelper3.java: JSON key constant for "channels" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper3	F	field4	SERIALIZED_NAME_FREQUENCY	com/moonsworth/lunar/network/MixinHelper3.java: JSON key constant for "frequency" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper3	F	field3	channels	com/moonsworth/lunar/network/MixinHelper3.java: @SerializedName("channels") model property
+com.moonsworth.lunar.network.MixinHelper3	F	field5	frequency	com/moonsworth/lunar/network/MixinHelper3.java: @SerializedName("frequency") model property
+com.moonsworth.lunar.network.MixinHelper3	M	method3	setChannels	com/moonsworth/lunar/network/MixinHelper3.java: setter for channels
+com.moonsworth.lunar.network.MixinHelper3	M	method4	frequency	com/moonsworth/lunar/network/MixinHelper3.java: fluent setter for frequency
+com.moonsworth.lunar.network.MixinHelper3	M	method5	getFrequency	com/moonsworth/lunar/network/MixinHelper3.java: getter for frequency
+com.moonsworth.lunar.network.MixinHelper3	M	method6	setFrequency	com/moonsworth/lunar/network/MixinHelper3.java: setter for frequency
+com.moonsworth.lunar.network.MixinHelper3	M	method7	toIndentedString	com/moonsworth/lunar/network/MixinHelper3.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper3	M	method9	toJson	com/moonsworth/lunar/network/MixinHelper3.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper4	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/MixinHelper4.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper4	F	field3	SERIALIZED_NAME_DATA	com/moonsworth/lunar/network/MixinHelper4.java: JSON key constant for "data" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper4	F	field5	SERIALIZED_NAME__FAILED_PARSE	com/moonsworth/lunar/network/MixinHelper4.java: JSON key constant for "__failed_parse" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper4	F	field4	data	com/moonsworth/lunar/network/MixinHelper4.java: @SerializedName("data") model property
+com.moonsworth.lunar.network.MixinHelper4	F	field6	FailedParse	com/moonsworth/lunar/network/MixinHelper4.java: @SerializedName("__failed_parse") model property
+com.moonsworth.lunar.network.MixinHelper4	M	method3	getData	com/moonsworth/lunar/network/MixinHelper4.java: getter for data
+com.moonsworth.lunar.network.MixinHelper4	M	method4	setData	com/moonsworth/lunar/network/MixinHelper4.java: setter for data
+com.moonsworth.lunar.network.MixinHelper4	M	method5	FailedParse	com/moonsworth/lunar/network/MixinHelper4.java: fluent setter for FailedParse
+com.moonsworth.lunar.network.MixinHelper4	M	method6	getFailedParse	com/moonsworth/lunar/network/MixinHelper4.java: getter for FailedParse
+com.moonsworth.lunar.network.MixinHelper4	M	method7	setFailedParse	com/moonsworth/lunar/network/MixinHelper4.java: setter for FailedParse
+com.moonsworth.lunar.network.MixinHelper4	M	method8	toIndentedString	com/moonsworth/lunar/network/MixinHelper4.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper4	M	method10	toJson	com/moonsworth/lunar/network/MixinHelper4.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper5	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/MixinHelper5.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper5	F	field4	SERIALIZED_NAME_NAME	com/moonsworth/lunar/network/MixinHelper5.java: JSON key constant for "name" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper5	F	field5	SERIALIZED_NAME_IP	com/moonsworth/lunar/network/MixinHelper5.java: JSON key constant for "ip" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper5	F	field6	SERIALIZED_NAME_SERVER_MAPPINGS_ID	com/moonsworth/lunar/network/MixinHelper5.java: JSON key constant for "server_mappings_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper5	F	field8	SERIALIZED_NAME_LIVE_EXPERIENCE_ID	com/moonsworth/lunar/network/MixinHelper5.java: JSON key constant for "live_experience_id" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper5	F	field3	type	com/moonsworth/lunar/network/MixinHelper5.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.MixinHelper5	F	field7	serverMappingsId	com/moonsworth/lunar/network/MixinHelper5.java: @SerializedName("server_mappings_id") model property
+com.moonsworth.lunar.network.MixinHelper5	F	field9	liveExperienceId	com/moonsworth/lunar/network/MixinHelper5.java: @SerializedName("live_experience_id") model property
+com.moonsworth.lunar.network.MixinHelper5	M	method3	setType	com/moonsworth/lunar/network/MixinHelper5.java: setter for type
+com.moonsworth.lunar.network.MixinHelper5	M	method4	name	com/moonsworth/lunar/network/MixinHelper5.java: fluent setter for name
+com.moonsworth.lunar.network.MixinHelper5	M	method5	ip	com/moonsworth/lunar/network/MixinHelper5.java: fluent setter for ip
+com.moonsworth.lunar.network.MixinHelper5	M	method8	serverMappingsId	com/moonsworth/lunar/network/MixinHelper5.java: fluent setter for serverMappingsId
+com.moonsworth.lunar.network.MixinHelper5	M	method9	setServerMappingsId	com/moonsworth/lunar/network/MixinHelper5.java: setter for serverMappingsId
+com.moonsworth.lunar.network.MixinHelper5	M	method10	liveExperienceId	com/moonsworth/lunar/network/MixinHelper5.java: fluent setter for liveExperienceId
+com.moonsworth.lunar.network.MixinHelper5	M	method11	getLiveExperienceId	com/moonsworth/lunar/network/MixinHelper5.java: getter for liveExperienceId
+com.moonsworth.lunar.network.MixinHelper5	M	method12	setLiveExperienceId	com/moonsworth/lunar/network/MixinHelper5.java: setter for liveExperienceId
+com.moonsworth.lunar.network.MixinHelper5	M	method13	toIndentedString	com/moonsworth/lunar/network/MixinHelper5.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper5	M	method15	toJson	com/moonsworth/lunar/network/MixinHelper5.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper7	F	field2	SERIALIZED_NAME_CITY	com/moonsworth/lunar/network/MixinHelper7.java: JSON key constant for "city" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper7	F	field3	SERIALIZED_NAME_CONTINENT	com/moonsworth/lunar/network/MixinHelper7.java: JSON key constant for "continent" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper7	F	field5	SERIALIZED_NAME_COUNTRY	com/moonsworth/lunar/network/MixinHelper7.java: JSON key constant for "country" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper7	F	field7	SERIALIZED_NAME_REGION	com/moonsworth/lunar/network/MixinHelper7.java: JSON key constant for "region" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper7	F	field8	SERIALIZED_NAME_REGION_CODE	com/moonsworth/lunar/network/MixinHelper7.java: JSON key constant for "region_code" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper7	F	field10	SERIALIZED_NAME_POSTAL_CODE	com/moonsworth/lunar/network/MixinHelper7.java: JSON key constant for "postal_code" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper7	F	field12	SERIALIZED_NAME_METRO_CODE	com/moonsworth/lunar/network/MixinHelper7.java: JSON key constant for "metro_code" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper7	F	field14	SERIALIZED_NAME_TIMEZONE	com/moonsworth/lunar/network/MixinHelper7.java: JSON key constant for "timezone" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper7	F	field4	continent	com/moonsworth/lunar/network/MixinHelper7.java: @SerializedName("continent") model property
+com.moonsworth.lunar.network.MixinHelper7	F	field6	country	com/moonsworth/lunar/network/MixinHelper7.java: @SerializedName("country") model property
+com.moonsworth.lunar.network.MixinHelper7	F	field9	regionCode	com/moonsworth/lunar/network/MixinHelper7.java: @SerializedName("region_code") model property
+com.moonsworth.lunar.network.MixinHelper7	F	field11	postalCode	com/moonsworth/lunar/network/MixinHelper7.java: @SerializedName("postal_code") model property
+com.moonsworth.lunar.network.MixinHelper7	F	field13	metroCode	com/moonsworth/lunar/network/MixinHelper7.java: @SerializedName("metro_code") model property
+com.moonsworth.lunar.network.MixinHelper7	M	method3	getContinent	com/moonsworth/lunar/network/MixinHelper7.java: getter for continent
+com.moonsworth.lunar.network.MixinHelper7	M	method4	setContinent	com/moonsworth/lunar/network/MixinHelper7.java: setter for continent
+com.moonsworth.lunar.network.MixinHelper7	M	method5	country	com/moonsworth/lunar/network/MixinHelper7.java: fluent setter for country
+com.moonsworth.lunar.network.MixinHelper7	M	method6	getCountry	com/moonsworth/lunar/network/MixinHelper7.java: getter for country
+com.moonsworth.lunar.network.MixinHelper7	M	method7	setCountry	com/moonsworth/lunar/network/MixinHelper7.java: setter for country
+com.moonsworth.lunar.network.MixinHelper7	M	method8	region	com/moonsworth/lunar/network/MixinHelper7.java: fluent setter for region
+com.moonsworth.lunar.network.MixinHelper7	M	method9	regionCode	com/moonsworth/lunar/network/MixinHelper7.java: fluent setter for regionCode
+com.moonsworth.lunar.network.MixinHelper7	M	method10	getRegionCode	com/moonsworth/lunar/network/MixinHelper7.java: getter for regionCode
+com.moonsworth.lunar.network.MixinHelper7	M	method11	setRegionCode	com/moonsworth/lunar/network/MixinHelper7.java: setter for regionCode
+com.moonsworth.lunar.network.MixinHelper7	M	method12	postalCode	com/moonsworth/lunar/network/MixinHelper7.java: fluent setter for postalCode
+com.moonsworth.lunar.network.MixinHelper7	M	method13	getPostalCode	com/moonsworth/lunar/network/MixinHelper7.java: getter for postalCode
+com.moonsworth.lunar.network.MixinHelper7	M	method14	setPostalCode	com/moonsworth/lunar/network/MixinHelper7.java: setter for postalCode
+com.moonsworth.lunar.network.MixinHelper7	M	method15	metroCode	com/moonsworth/lunar/network/MixinHelper7.java: fluent setter for metroCode
+com.moonsworth.lunar.network.MixinHelper7	M	method16	getMetroCode	com/moonsworth/lunar/network/MixinHelper7.java: getter for metroCode
+com.moonsworth.lunar.network.MixinHelper7	M	method17	setMetroCode	com/moonsworth/lunar/network/MixinHelper7.java: setter for metroCode
+com.moonsworth.lunar.network.MixinHelper7	M	method18	timezone	com/moonsworth/lunar/network/MixinHelper7.java: fluent setter for timezone
+com.moonsworth.lunar.network.MixinHelper7	M	method19	toIndentedString	com/moonsworth/lunar/network/MixinHelper7.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper7	M	method21	toJson	com/moonsworth/lunar/network/MixinHelper7.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper8	F	field2	SERIALIZED_NAME_DURATION_MS	com/moonsworth/lunar/network/MixinHelper8.java: JSON key constant for "duration_ms" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper8	F	field4	SERIALIZED_NAME_LAYERS	com/moonsworth/lunar/network/MixinHelper8.java: JSON key constant for "layers" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper8	F	field3	durationMs	com/moonsworth/lunar/network/MixinHelper8.java: @SerializedName("duration_ms") model property
+com.moonsworth.lunar.network.MixinHelper8	M	method3	setDurationMs	com/moonsworth/lunar/network/MixinHelper8.java: setter for durationMs
+com.moonsworth.lunar.network.MixinHelper8	M	method4	layers	com/moonsworth/lunar/network/MixinHelper8.java: fluent setter for layers
+com.moonsworth.lunar.network.MixinHelper8	M	method5	addLayersItem	com/moonsworth/lunar/network/MixinHelper8.java: append item to layers list
+com.moonsworth.lunar.network.MixinHelper8	M	method7	toIndentedString	com/moonsworth/lunar/network/MixinHelper8.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper8	M	method9	toJson	com/moonsworth/lunar/network/MixinHelper8.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.MixinHelper9	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/MixinHelper9.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper9	F	field3	SERIALIZED_NAME_SERVER_IP	com/moonsworth/lunar/network/MixinHelper9.java: JSON key constant for "server_ip" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.MixinHelper9	M	method4	toIndentedString	com/moonsworth/lunar/network/MixinHelper9.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.MixinHelper9	M	method6	toJson	com/moonsworth/lunar/network/MixinHelper9.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.NetworkIterator	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/NetworkIterator.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator	F	field4	SERIALIZED_NAME_DATA	com/moonsworth/lunar/network/NetworkIterator.java: JSON key constant for "data" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator	F	field3	type	com/moonsworth/lunar/network/NetworkIterator.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.NetworkIterator	F	field5	data	com/moonsworth/lunar/network/NetworkIterator.java: @SerializedName("data") model property
+com.moonsworth.lunar.network.NetworkIterator	M	method3	setType	com/moonsworth/lunar/network/NetworkIterator.java: setter for type
+com.moonsworth.lunar.network.NetworkIterator	M	method4	data	com/moonsworth/lunar/network/NetworkIterator.java: fluent setter for data
+com.moonsworth.lunar.network.NetworkIterator	M	method5	getData	com/moonsworth/lunar/network/NetworkIterator.java: getter for data
+com.moonsworth.lunar.network.NetworkIterator	M	method6	setData	com/moonsworth/lunar/network/NetworkIterator.java: setter for data
+com.moonsworth.lunar.network.NetworkIterator	M	method7	toIndentedString	com/moonsworth/lunar/network/NetworkIterator.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.NetworkIterator	M	method9	toJson	com/moonsworth/lunar/network/NetworkIterator.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.NetworkIterator2	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/NetworkIterator2.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator2	F	field4	SERIALIZED_NAME_DATA	com/moonsworth/lunar/network/NetworkIterator2.java: JSON key constant for "data" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator2	F	field3	type	com/moonsworth/lunar/network/NetworkIterator2.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.NetworkIterator2	F	field5	data	com/moonsworth/lunar/network/NetworkIterator2.java: @SerializedName("data") model property
+com.moonsworth.lunar.network.NetworkIterator2	M	method3	setType	com/moonsworth/lunar/network/NetworkIterator2.java: setter for type
+com.moonsworth.lunar.network.NetworkIterator2	M	method4	data	com/moonsworth/lunar/network/NetworkIterator2.java: fluent setter for data
+com.moonsworth.lunar.network.NetworkIterator2	M	method5	getData	com/moonsworth/lunar/network/NetworkIterator2.java: getter for data
+com.moonsworth.lunar.network.NetworkIterator2	M	method6	setData	com/moonsworth/lunar/network/NetworkIterator2.java: setter for data
+com.moonsworth.lunar.network.NetworkIterator2	M	method7	toIndentedString	com/moonsworth/lunar/network/NetworkIterator2.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.NetworkIterator2	M	method9	toJson	com/moonsworth/lunar/network/NetworkIterator2.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.NetworkIterator3	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/NetworkIterator3.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator3	F	field4	SERIALIZED_NAME_DATA	com/moonsworth/lunar/network/NetworkIterator3.java: JSON key constant for "data" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator3	F	field3	type	com/moonsworth/lunar/network/NetworkIterator3.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.NetworkIterator3	F	field5	data	com/moonsworth/lunar/network/NetworkIterator3.java: @SerializedName("data") model property
+com.moonsworth.lunar.network.NetworkIterator3	M	method3	setType	com/moonsworth/lunar/network/NetworkIterator3.java: setter for type
+com.moonsworth.lunar.network.NetworkIterator3	M	method4	data	com/moonsworth/lunar/network/NetworkIterator3.java: fluent setter for data
+com.moonsworth.lunar.network.NetworkIterator3	M	method5	getData	com/moonsworth/lunar/network/NetworkIterator3.java: getter for data
+com.moonsworth.lunar.network.NetworkIterator3	M	method6	setData	com/moonsworth/lunar/network/NetworkIterator3.java: setter for data
+com.moonsworth.lunar.network.NetworkIterator3	M	method7	toIndentedString	com/moonsworth/lunar/network/NetworkIterator3.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.NetworkIterator3	M	method9	toJson	com/moonsworth/lunar/network/NetworkIterator3.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.NetworkIterator4	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/NetworkIterator4.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator4	F	field4	SERIALIZED_NAME_DATA	com/moonsworth/lunar/network/NetworkIterator4.java: JSON key constant for "data" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator4	F	field3	type	com/moonsworth/lunar/network/NetworkIterator4.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.NetworkIterator4	F	field5	data	com/moonsworth/lunar/network/NetworkIterator4.java: @SerializedName("data") model property
+com.moonsworth.lunar.network.NetworkIterator4	M	method3	setType	com/moonsworth/lunar/network/NetworkIterator4.java: setter for type
+com.moonsworth.lunar.network.NetworkIterator4	M	method4	data	com/moonsworth/lunar/network/NetworkIterator4.java: fluent setter for data
+com.moonsworth.lunar.network.NetworkIterator4	M	method5	getData	com/moonsworth/lunar/network/NetworkIterator4.java: getter for data
+com.moonsworth.lunar.network.NetworkIterator4	M	method6	setData	com/moonsworth/lunar/network/NetworkIterator4.java: setter for data
+com.moonsworth.lunar.network.NetworkIterator4	M	method7	toIndentedString	com/moonsworth/lunar/network/NetworkIterator4.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.NetworkIterator4	M	method9	toJson	com/moonsworth/lunar/network/NetworkIterator4.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.NetworkIterator5	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/NetworkIterator5.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator5	F	field4	SERIALIZED_NAME_DATA	com/moonsworth/lunar/network/NetworkIterator5.java: JSON key constant for "data" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator5	F	field3	type	com/moonsworth/lunar/network/NetworkIterator5.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.NetworkIterator5	F	field5	data	com/moonsworth/lunar/network/NetworkIterator5.java: @SerializedName("data") model property
+com.moonsworth.lunar.network.NetworkIterator5	M	method3	setType	com/moonsworth/lunar/network/NetworkIterator5.java: setter for type
+com.moonsworth.lunar.network.NetworkIterator5	M	method4	data	com/moonsworth/lunar/network/NetworkIterator5.java: fluent setter for data
+com.moonsworth.lunar.network.NetworkIterator5	M	method5	getData	com/moonsworth/lunar/network/NetworkIterator5.java: getter for data
+com.moonsworth.lunar.network.NetworkIterator5	M	method6	setData	com/moonsworth/lunar/network/NetworkIterator5.java: setter for data
+com.moonsworth.lunar.network.NetworkIterator5	M	method7	toIndentedString	com/moonsworth/lunar/network/NetworkIterator5.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.NetworkIterator5	M	method9	toJson	com/moonsworth/lunar/network/NetworkIterator5.java: Gson.toJson serialization helper
+com.moonsworth.lunar.network.NetworkIterator6	F	field2	SERIALIZED_NAME_TYPE	com/moonsworth/lunar/network/NetworkIterator6.java: JSON key constant for "type" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator6	F	field4	SERIALIZED_NAME_DATA	com/moonsworth/lunar/network/NetworkIterator6.java: JSON key constant for "data" (OpenAPI generator public static final String)
+com.moonsworth.lunar.network.NetworkIterator6	F	field3	type	com/moonsworth/lunar/network/NetworkIterator6.java: @SerializedName("type") model property
+com.moonsworth.lunar.network.NetworkIterator6	F	field5	data	com/moonsworth/lunar/network/NetworkIterator6.java: @SerializedName("data") model property
+com.moonsworth.lunar.network.NetworkIterator6	M	method3	setType	com/moonsworth/lunar/network/NetworkIterator6.java: setter for type
+com.moonsworth.lunar.network.NetworkIterator6	M	method4	data	com/moonsworth/lunar/network/NetworkIterator6.java: fluent setter for data
+com.moonsworth.lunar.network.NetworkIterator6	M	method5	getData	com/moonsworth/lunar/network/NetworkIterator6.java: getter for data
+com.moonsworth.lunar.network.NetworkIterator6	M	method6	setData	com/moonsworth/lunar/network/NetworkIterator6.java: setter for data
+com.moonsworth.lunar.network.NetworkIterator6	M	method7	toIndentedString	com/moonsworth/lunar/network/NetworkIterator6.java: OpenAPI generator helper: null-check + toString().replace("\n", ...)
+com.moonsworth.lunar.network.NetworkIterator6	M	method9	toJson	com/moonsworth/lunar/network/NetworkIterator6.java: Gson.toJson serialization helper
+com.moonsworth.lunar.files.mixin.AssetIndex	F	field1	sha1	com/moonsworth/lunar/files/mixin/AssetIndex.java: @SerializedName("sha1") model property
+com.moonsworth.lunar.files.mixin.AssetIndex	M	method1	getSha1	com/moonsworth/lunar/files/mixin/AssetIndex.java: getter for sha1
+com.moonsworth.lunar.files.mixin.AssetIndex	M	method2	setSha1	com/moonsworth/lunar/files/mixin/AssetIndex.java: setter for sha1
+com.moonsworth.lunar.files.mixin.VersionInfo	F	field2	time	com/moonsworth/lunar/files/mixin/VersionInfo.java: @SerializedName("time") model property
+com.moonsworth.lunar.files.mixin.VersionInfo	F	field3	releaseTime	com/moonsworth/lunar/files/mixin/VersionInfo.java: @SerializedName("releaseTime") model property
+com.moonsworth.lunar.files.mixin.VersionInfo	M	method4	getTime	com/moonsworth/lunar/files/mixin/VersionInfo.java: getter for time
+com.moonsworth.lunar.files.mixin.VersionInfo	M	method5	getReleaseTime	com/moonsworth/lunar/files/mixin/VersionInfo.java: getter for releaseTime
+com.moonsworth.lunar.files.mixin.VersionInfo	M	method6	setTime	com/moonsworth/lunar/files/mixin/VersionInfo.java: setter for time
+com.moonsworth.lunar.files.mixin.VersionInfo	M	method7	setReleaseTime	com/moonsworth/lunar/files/mixin/VersionInfo.java: setter for releaseTime
+com.moonsworth.lunar.files.mixin.ResolvedVersion	F	field2	javaVersion	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: @SerializedName("javaVersion") model property
+com.moonsworth.lunar.files.mixin.ResolvedVersion	F	field3	assetIndex	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: @SerializedName("assetIndex") model property
+com.moonsworth.lunar.files.mixin.ResolvedVersion	F	field4	time	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: @SerializedName("time") model property
+com.moonsworth.lunar.files.mixin.ResolvedVersion	F	field5	releaseTime	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: @SerializedName("releaseTime") model property
+com.moonsworth.lunar.files.mixin.ResolvedVersion	F	field6	downloads	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: @SerializedName("downloads") model property
+com.moonsworth.lunar.files.mixin.ResolvedVersion	M	method3	getAssetIndex	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: getter for assetIndex
+com.moonsworth.lunar.files.mixin.ResolvedVersion	M	method5	getTime	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: getter for time
+com.moonsworth.lunar.files.mixin.ResolvedVersion	M	method6	getReleaseTime	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: getter for releaseTime
+com.moonsworth.lunar.files.mixin.ResolvedVersion	M	method9	setJavaVersion	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: setter for javaVersion
+com.moonsworth.lunar.files.mixin.ResolvedVersion	M	method10	setAssetIndex	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: setter for assetIndex
+com.moonsworth.lunar.files.mixin.ResolvedVersion	M	method12	setTime	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: setter for time
+com.moonsworth.lunar.files.mixin.ResolvedVersion	M	method13	setReleaseTime	com/moonsworth/lunar/files/mixin/ResolvedVersion.java: setter for releaseTime
+com.moonsworth.lunar.files.mixin.Files	F	field2	javaVersion	com/moonsworth/lunar/files/mixin/Files.java: @SerializedName("javaVersion") model property
+com.moonsworth.lunar.files.mixin.Files	F	field3	assetIndex	com/moonsworth/lunar/files/mixin/Files.java: @SerializedName("assetIndex") model property
+com.moonsworth.lunar.files.mixin.Files	F	field4	time	com/moonsworth/lunar/files/mixin/Files.java: @SerializedName("time") model property
+com.moonsworth.lunar.files.mixin.Files	F	field5	releaseTime	com/moonsworth/lunar/files/mixin/Files.java: @SerializedName("releaseTime") model property
+com.moonsworth.lunar.files.mixin.Files	F	field6	downloads	com/moonsworth/lunar/files/mixin/Files.java: @SerializedName("downloads") model property
+com.moonsworth.lunar.files.mixin.Files	M	method3	getAssetIndex	com/moonsworth/lunar/files/mixin/Files.java: getter for assetIndex
+com.moonsworth.lunar.files.mixin.Files	M	method5	getTime	com/moonsworth/lunar/files/mixin/Files.java: getter for time
+com.moonsworth.lunar.files.mixin.Files	M	method6	getReleaseTime	com/moonsworth/lunar/files/mixin/Files.java: getter for releaseTime
+com.moonsworth.lunar.files.mixin.Files	M	method9	setJavaVersion	com/moonsworth/lunar/files/mixin/Files.java: setter for javaVersion
+com.moonsworth.lunar.files.mixin.Files	M	method10	setAssetIndex	com/moonsworth/lunar/files/mixin/Files.java: setter for assetIndex
+com.moonsworth.lunar.files.mixin.Files	M	method12	setTime	com/moonsworth/lunar/files/mixin/Files.java: setter for time
+com.moonsworth.lunar.files.mixin.Files	M	method13	setReleaseTime	com/moonsworth/lunar/files/mixin/Files.java: setter for releaseTime
+com.moonsworth.lunar.files.mixin.Files2	F	field1	sha1	com/moonsworth/lunar/files/mixin/Files2.java: @SerializedName("sha1") model property
+com.moonsworth.lunar.files.mixin.Files2	M	method1	getSha1	com/moonsworth/lunar/files/mixin/Files2.java: getter for sha1
+com.moonsworth.lunar.files.mixin.Files2	M	method2	setSha1	com/moonsworth/lunar/files/mixin/Files2.java: setter for sha1
+com.moonsworth.lunar.files.mixin.Files3	F	field2	time	com/moonsworth/lunar/files/mixin/Files3.java: @SerializedName("time") model property
+com.moonsworth.lunar.files.mixin.Files3	F	field3	releaseTime	com/moonsworth/lunar/files/mixin/Files3.java: @SerializedName("releaseTime") model property
+com.moonsworth.lunar.files.mixin.Files3	M	method4	getTime	com/moonsworth/lunar/files/mixin/Files3.java: getter for time
+com.moonsworth.lunar.files.mixin.Files3	M	method5	getReleaseTime	com/moonsworth/lunar/files/mixin/Files3.java: getter for releaseTime
+com.moonsworth.lunar.files.mixin.Files3	M	method6	setTime	com/moonsworth/lunar/files/mixin/Files3.java: setter for time
+com.moonsworth.lunar.files.mixin.Files3	M	method7	setReleaseTime	com/moonsworth/lunar/files/mixin/Files3.java: setter for releaseTime
+com.moonsworth.lunar.files.mixin.Files4	F	field1	SERIALIZED_NAME_HTTPS_LAUNCHERMETA_MOJANG_COM_MC_GAME_VERSION_MANIFEST_JSON	com/moonsworth/lunar/files/mixin/Files4.java: JSON key constant for "https://launchermeta.mojang.com/mc/game/version_manifest.json" (OpenAPI generator public static final String)
+com.moonsworth.lunar.files.mixin.Files4	F	field3	latest	com/moonsworth/lunar/files/mixin/Files4.java: @SerializedName("latest") model property
+com.moonsworth.lunar.files.mixin.Files4	F	field4	versions	com/moonsworth/lunar/files/mixin/Files4.java: @SerializedName("versions") model property
+com.moonsworth.lunar.files.mixin.Files4	M	method10	getLatest	com/moonsworth/lunar/files/mixin/Files4.java: getter for latest
+com.moonsworth.lunar.files.mixin.Files4	M	method11	getVersions	com/moonsworth/lunar/files/mixin/Files4.java: getter for versions
+com.moonsworth.lunar.files.mixin.Files4	M	method12	setLatest	com/moonsworth/lunar/files/mixin/Files4.java: setter for latest
+com.moonsworth.lunar.files.mixin.Files4	M	method13	setVersions	com/moonsworth/lunar/files/mixin/Files4.java: setter for versions
+com.moonsworth.lunar.files.mixin.VersionManifest	F	field1	SERIALIZED_NAME_HTTPS_LAUNCHERMETA_MOJANG_COM_MC_GAME_VERSION_MANIFEST_JSON	com/moonsworth/lunar/files/mixin/VersionManifest.java: JSON key constant for "https://launchermeta.mojang.com/mc/game/version_manifest.json" (OpenAPI generator public static final String)
+com.moonsworth.lunar.files.mixin.VersionManifest	F	field3	latest	com/moonsworth/lunar/files/mixin/VersionManifest.java: @SerializedName("latest") model property
+com.moonsworth.lunar.files.mixin.VersionManifest	F	field4	versions	com/moonsworth/lunar/files/mixin/VersionManifest.java: @SerializedName("versions") model property
+com.moonsworth.lunar.files.mixin.VersionManifest	M	method10	getLatest	com/moonsworth/lunar/files/mixin/VersionManifest.java: getter for latest
+com.moonsworth.lunar.files.mixin.VersionManifest	M	method11	getVersions	com/moonsworth/lunar/files/mixin/VersionManifest.java: getter for versions
+com.moonsworth.lunar.files.mixin.VersionManifest	M	method12	setLatest	com/moonsworth/lunar/files/mixin/VersionManifest.java: setter for latest
+com.moonsworth.lunar.files.mixin.VersionManifest	M	method13	setVersions	com/moonsworth/lunar/files/mixin/VersionManifest.java: setter for versions
+com.moonsworth.lunar.bridge.Annotation	M	method1	mappings	meta-annotation element BridgeVersionMapping[] method1(); obf call sites in 48 files write OIRHICCHORIRORCCOOCRRRHRRCRCCI = {@BridgeVersionMapping(...)} — needs the token rewrite below
+com.moonsworth.lunar.bridge.BridgeVersionMapping	M	method1	targets	element BridgeTargetMapping[] method1() default {}; obf call sites in 48 files write IHCHIIICCCHCCIROHOHROHOOHRCHRC = @BridgeTargetMapping("worldObj") etc. — needs the token rewrite below
+com.moonsworth.lunar.bridge.BridgeVersionTarget	M	method1	targets	duplicate annotation (Annotation3 twin): BridgeTarget[] method1() default {}; same element purpose, kept name-consistent with BridgeVersionMapping
+com.moonsworth.lunar.files.BinaryMappingsFormat	F	field1	MAGIC	Kin format magic marker 99151942; identical to Lorenz org.cadixdev.lorenz.io.kin.KinConstants.MAGIC (reference/Lorenz)
+com.moonsworth.lunar.files.BinaryMappingsFormat	F	field2	VERSION_ONE	Kin v1 marker (byte 1); Lorenz KinConstants.VERSION_ONE
+com.moonsworth.lunar.files.BinaryMappingsFormat	F	field3	STANDARD_EXTENSION	"kin" extension; Lorenz KinConstants.STANDARD_EXTENSION
+com.moonsworth.lunar.files.BinaryMappingsFormat	M	method1	toHexString	"0x" + Integer.toHexString(n); Lorenz KinConstants.toHexString(int)
+com.moonsworth.lunar.files.Files2	F	field1	MAGIC	duplicate KinConstants class (twin of BinaryMappingsFormat): magic 99151942
+com.moonsworth.lunar.files.Files2	F	field2	VERSION_ONE	duplicate KinConstants: version marker byte 1
+com.moonsworth.lunar.files.Files2	F	field3	STANDARD_EXTENSION	duplicate KinConstants: "kin" extension
+com.moonsworth.lunar.files.Files2	M	method1	toHexString	duplicate KinConstants: "0x" + Integer.toHexString(n)
+com.moonsworth.lunar.files.BinaryMappingsReader	M	method1	readClass	private recursive class reader (setDeobfuscatedName + inner/field/method loops); Lorenz io.kin.KinReader.readClass
+com.moonsworth.lunar.files.BinaryMappingsWriter	M	method1	writeClass	private recursive class writer (writeUTF obf/deobf + loops); Lorenz io.kin.KinWriter.writeClass
+com.moonsworth.lunar.files.BinaryMappingsWriter	M	method2	getSortedAndFilteredList	Lorenz io.kin.KinWriter.getSortedAndFilteredList(Collection, Comparator, Predicate)
+com.moonsworth.lunar.files.MappingBundle	M	method1	getArtifacts	resolves the bundle's artifacts from a resolution context (List.copyOf(files61.getData().values())); pair of abstract Files_3.method1
+com.moonsworth.lunar.files.MappingBundle	M	method2	of	static factory (String namespace, MappingArtifact... artifacts) -> PredefinedMappingBundle; sibling of getId()/getNamespace()
+com.moonsworth.lunar.files.MappingFormats	F	field1	KIN	default Kin MappingFormat instance (new KinMappingFormat()); twin constant used by the mapping providers
+com.moonsworth.lunar.files.MappingArtifacts	F	field1	MANIFEST_ARTIFACT	"mojang"/"version_manifest.json" artifact (https://launchermeta.mojang.com/mc/game/version_manifest.json)
+com.moonsworth.lunar.files.MappingArtifacts	F	field2	MANIFEST_BUNDLE	bundle "mx" containing MANIFEST_ARTIFACT
+com.moonsworth.lunar.files.MappingArtifacts	F	field4	LUNAR_NAMED_ARTIFACT	"lunar"/"lunar_named_b5_${mcVer}.kin" artifact
+com.moonsworth.lunar.files.MappingArtifacts	F	field5	LUNAR_NAMED_BUNDLE	bundle "mx" containing LUNAR_NAMED_ARTIFACT
+com.moonsworth.lunar.files.MappingArtifacts	F	field6	OPTIFINE_ARTIFACT	"lunar"/"optifine_b3_${mcVer}.csrg" artifact
+com.moonsworth.lunar.files.MappingArtifacts	F	field7	OPTIFINE_BUNDLE	bundle "mx" containing OPTIFINE_ARTIFACT
+com.moonsworth.lunar.files.MappingArtifacts	F	field8	FORGE_ARTIFACT	"forge"/"mcp_searge_${mcVer}.kin" artifact
+com.moonsworth.lunar.files.MappingArtifacts	F	field9	FORGE_BUNDLE	bundle "mx" containing FORGE_ARTIFACT
+com.moonsworth.lunar.files.MappingArtifacts	F	field10	INTERMEDIARY_ARTIFACT	"fabric"/"intermediary_${mcVer}.kin" artifact
+com.moonsworth.lunar.files.MappingArtifacts	F	field11	INTERMEDIARY_BUNDLE	bundle "mx" containing INTERMEDIARY_ARTIFACT
+com.moonsworth.lunar.files.MappingArtifacts	F	field12	INTERMEDIARY_TO_LUNAR_ARTIFACT	"lunar"/"intermediary2lunar_${mcVer}.kin" artifact
+com.moonsworth.lunar.files.MappingArtifacts	F	field13	INTERMEDIARY_TO_LUNAR_BUNDLE	bundle "mx" containing INTERMEDIARY_TO_LUNAR_ARTIFACT
+com.moonsworth.lunar.files.MappingArtifacts	F	field14	LUNAR_TO_INTERMEDIARY_ARTIFACT	"lunar"/"lunar2intermediary_${mcVer}.kin" artifact
+com.moonsworth.lunar.files.MappingArtifacts	F	field15	LUNAR_TO_INTERMEDIARY_BUNDLE	bundle "mx" containing LUNAR_TO_INTERMEDIARY_ARTIFACT
+com.moonsworth.lunar.files.MappingArtifacts	F	field16	SEARGE_TO_LUNAR_ARTIFACT	"lunar"/"searge2lunar_${mcVer}.kin" artifact
+com.moonsworth.lunar.files.MappingArtifacts	F	field17	SEARGE_TO_LUNAR_BUNDLE	bundle "mx" containing SEARGE_TO_LUNAR_ARTIFACT
+com.moonsworth.lunar.files.MappingArtifacts	F	field18	PARCHMENT_ARTIFACT	"parchment"/"parchment_${mcVer}.json" artifact
+com.moonsworth.lunar.files.MappingArtifacts	F	field19	PARCHMENT_BUNDLE	bundle "mx" containing PARCHMENT_ARTIFACT

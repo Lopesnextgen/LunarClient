@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.mod.impl.beeheemoth.mixin
+com.moonsworth.lunar.client.framework.feature.mod.impl.burrow
+com.moonsworth.lunar.client.framework.feature.mod.impl.burrow.mixin
+com.moonsworth.lunar.client.framework.feature.mod.impl.calculator
+com.moonsworth.lunar.client.framework.feature.mod.impl.calculator.mixin
+com.moonsworth.lunar.client.framework.feature.mod.impl.chest.dungeon.dungeonwaypoints
+com.moonsworth.lunar.client.framework.feature.mod.impl.chest.dungeon.dungeonwaypoints.mixin
+com.moonsworth.lunar.client.framework.feature.mod.impl.chest.dungeon.ice

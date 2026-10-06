@@ -1,0 +1,4 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.bridge	BytecodeEmitter	Bridge_15	jar-coupled: the stale jar's Bridge_67/other classes type against bridge.Bridge_15; source twin must keep the FQN for javac unification	com/moonsworth/lunar/bridge/BytecodeEmitter.java
+com.moonsworth.lunar.bridge	MethodParameter	Bridge3	jar-coupled: Bridge_15.method1 (jar) takes Queue<bridge.Bridge3>	com/moonsworth/lunar/bridge/MethodParameter.java
+com.moonsworth.lunar.ichor.mixin	TypeSignature	MixinHelper3	jar-coupled: Bridge_15.method1 (jar) takes Stack<ichor.mixin.MixinHelper3>	com/moonsworth/lunar/ichor/mixin/TypeSignature.java

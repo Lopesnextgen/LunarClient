@@ -1,0 +1,14 @@
+com/moonsworth/lunar/client/fog/holograms/Holograms7.java	Holograms7
+com/moonsworth/lunar/client/fog/holograms/Holograms8.java	Holograms8
+com/moonsworth/lunar/client/fog/holograms/Holograms9.java	Holograms9
+com/moonsworth/lunar/client/fog/holograms/HologramsHandler2.java	HologramsHandler2
+com/moonsworth/lunar/client/fog/holograms/HologramsIterator2.java	HologramsIterator2
+com/moonsworth/lunar/client/fog/holograms/Holograms_2.java	Holograms_2
+com/moonsworth/lunar/client/fog/holograms/Holograms_3.java	Holograms_3
+com/moonsworth/lunar/client/fog/holograms/Holograms_4.java	Holograms_4
+com/moonsworth/lunar/client/fog/holograms/Holograms_5.java	Holograms_5
+com/moonsworth/lunar/client/fog/holograms/Holograms_6.java	Holograms_6
+com/moonsworth/lunar/client/fog/holograms/Holograms_7.java	Holograms_7
+com/moonsworth/lunar/client/fog/holograms/FogLoader22.java	Type2
+com/moonsworth/lunar/client/fog/holograms/FogLoader22.java	Type3
+com/moonsworth/lunar/client/fog/holograms/FogLoader22.java	Type4

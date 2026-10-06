@@ -1,0 +1,13 @@
+# Bucket batch D: client.mixin junk drawer + client.rewindhandlers
+# client.mixin keeps only actual *Mixin classes; websocket/auth/friend classes move out
+com.moonsworth.lunar.client.mixin	AssetServerClient	com.moonsworth.lunar.client.network.websocket	AssetServerClient	Lunar AssetServer websocket client (EventBusAccess), used by Ref/screens/driver
+com.moonsworth.lunar.client.mixin	ConnectionState	com.moonsworth.lunar.client.network.websocket	ConnectionState	websocket connection enum DISCONNECTED/READY used by BrowserUtils/HomeButtonBridge
+com.moonsworth.lunar.client.mixin	ReconnectBackoff	com.moonsworth.lunar.client.network.websocket	ReconnectBackoff	websocket reconnect backoff
+com.moonsworth.lunar.client.mixin	WebSocketClientHandler	com.moonsworth.lunar.client.network.websocket	WebSocketClientHandler	websocket client base
+com.moonsworth.lunar.client.mixin	RpcChannelImpl	com.moonsworth.lunar.client.network.websocket	WebSocketRpcChannel	protobuf RpcChannel over ServerboundWebSocketMessage/WebSocketRpcResponse (distinct from the game-IPC one)
+com.moonsworth.lunar.client.mixin	YggdrasilAuthServiceFactory	com.moonsworth.lunar.client.account	YggdrasilAuthServiceFactory	Mojang Yggdrasil auth service factory
+com.moonsworth.lunar.client.mixin	FriendChatMessage	com.moonsworth.lunar.client.chat	FriendChatMessage	friend chat message JsonProvider
+com.moonsworth.lunar.client.mixin	EntityRendererType	com.moonsworth.lunar.client.network.friend	FriendStatus	Online/Away/Busy/Invisible friend presence (OnlineFriendStatus); nothing to do with entity rendering
+com.moonsworth.lunar.client.rewindhandlers	ApolloPacketUtils	com.moonsworth.lunar.client.network.apollo	ApolloPacketUtils	Apollo packet/component helpers (ItemStackIcon -> BridgeExtension_4)
+com.moonsworth.lunar.client.rewindhandlers	ChatActionHandler	com.moonsworth.lunar.client.chat	ChatActionHandler	chat click-action matching/replacement
+com.moonsworth.lunar.client.rewindhandlers	Rewindhandlers	com.moonsworth.lunar.client.util	ItemTagUtils	CompoundTag/item-stack tag read/write helpers; class name was a junk-drawer leftover

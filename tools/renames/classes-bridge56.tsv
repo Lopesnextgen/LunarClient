@@ -1,0 +1,58 @@
+package	old	new	evidence
+com.moonsworth.lunar.bridge	Bridge5$Data	PoseStackDataBridge	implements PoseStackBridge by delegating translate/scale/rotateDegrees; compiled as nested "Data" of the PoseStack bridge (InnerClasses Data of Bridge5_16, NestHost Bridge5_16)
+com.moonsworth.lunar.bridge	Bridge5_2	NbtIoBridge	single member method1(InputStream)=CompoundTagBridge (NBT read); legacy/wrapper/mixin Bridge5Handler delegates to CompressedStreamTools.readCompressed
+com.moonsworth.lunar.bridge	Bridge5_3	AlcBridge	OpenAL ALC facade: alcCaptureOpenDevice/alcCaptureStart/alcGetInteger/alcGetString/alcCreateContext/alcLoopbackOpenDeviceSOFT/alcRenderSamplesSOFT; legacy/wrapper Bridge5Handler implements it over JNA OpenALNative
+com.moonsworth.lunar.bridge	Bridge5_4	ItemMapBridge	bridge$getMapData(ItemStack,World) + bridge$getMapId; ItemMapMixin @Mixin(ItemMap) implements it via getMapData
+com.moonsworth.lunar.bridge	Bridge5_5	LightOverlayTrackerBridge	relative block coords packed as (x&15)<<8|(y&15)<<4|z&15 into ShortArrayList/ByteArrayList; returned by LightOverlayTrackerProvider.bridge$lightOverlayTracker(); implemented by WorldRendererMixin/RenderChunkMixin
+com.moonsworth.lunar.bridge	Bridge5_6	EnumPlayerModelPartsBridge	bridge$getMask()/bridge$getId() over vanilla partMask/partName; EnumPlayerModelPartsMixin @Mixin(EnumPlayerModelParts)
+com.moonsworth.lunar.bridge	Bridge5_7	TextureUtilBridge	glGenTextures/uploadTextureImage/deleteTexture; legacy/wrapper Bridge5Handler_2 implements it over net.minecraft.client.renderer.texture.TextureUtil
+com.moonsworth.lunar.bridge	Bridge5_10	TypeConversionUtilBridge	static widening coercions float<->double, int->long/float, int[]->float[]; TypeConversionCoercion looks it up and complains "Both %s and %s in TypeConversionUtil share the signature %s"
+com.moonsworth.lunar.bridge	Bridge5_12	MinecraftBridge	Minecraft client facade (~160 members): bridge$getPlayer/bridge$getWorld/bridge$getTextureManager/bridge$getSessionService/bridge$displayScreen/bridge$joinWorld; Ref.method3() returns it
+com.moonsworth.lunar.bridge	Bridge5_14	MixinTargetVersionBridge	version() + Bridge6_6[] mixin-member resolvers, one entry per game version; Bridge4_2.method3(Config) picks the matching entry for the current Config
+com.moonsworth.lunar.bridge	Bridge5_15	GuiBridge	root of the 1.8 Gui hierarchy: GuiScreen (Bridge5Extension6), GuiIngame (Bridge5Extension9), GuiNewChat (Bridge5Extension4) and GuiPlayerTabOverlay (Bridge5Extension) all extend it; default method1()=Optional<String> screen title
+com.moonsworth.lunar.bridge	Bridge5_19	RenderItemBridge	bridge$renderItemAndEffectIntoGUI/bridge$renderItem/bridge$renderModel/bridge$getItemModelShaper/bridge$setZLevel; RenderItemBridgeMixin @Mixin(RenderItem) implements it
+com.moonsworth.lunar.bridge	Bridge5_20	EntityAgeableBridge	bridge$isBaby() over vanilla isChild(); EntityAgeableMixin @Mixin(EntityAgeable)
+com.moonsworth.lunar.bridge	Bridge5Extension	GuiPlayerTabOverlayBridge	bridge$getHeader()/bridge$getFooter() + returned by bridge$getTabList(); GuiPlayerTabOverlayMixin @Mixin(GuiPlayerTabOverlay) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension10	GuiScreenResourcePacksBridge	bridge$handlePackSwapList() + title "Resource Packs"; GuiScreenResourcePacksMixin extends GuiScreen implements it
+com.moonsworth.lunar.bridge	Bridge5Extension2_3	GuiControlsBridge	title "Controls"; GuiControlsMixin @Mixin(GuiControls) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension_2	ServerLinksScreenBridge	sole member default method1() returns Optional.of("Server Links") (driver screen label)
+com.moonsworth.lunar.bridge	Bridge5Extension3	EntityMagmaCubeBridge	bridge$getSize() over getSlimeSize(); EntityMagmaCubeMixin @Mixin(EntityMagmaCube) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension3_2	GuiEditSignBridge	bridge$getEditLine()/bridge$getLine(int) + title "Edit Sign"; GuiEditSignMixin @Mixin(GuiEditSign)
+com.moonsworth.lunar.bridge	Bridge5Extension_3	GuiContainerBridge	bridge$inventorySlots/bridge$title/bridge$getSlotAtPosition/bridge$clickSlot + title "GuiContainer"; GuiContainerMixin extends GuiContainer implements it
+com.moonsworth.lunar.bridge	Bridge5Extension4	GuiNewChatBridge	bridge$addMessage/bridge$clearChatMessages/bridge$getChatOpen/bridge$rescaleChat + title "New Chat"; GuiNewChatMessageMixin @Mixin(GuiNewChat)
+com.moonsworth.lunar.bridge	Bridge5Extension42	EntityWitherSkeletonBridge	EntityWitherSkeletonMixin implements it (@VersionGate(min=5)); paired with the PigZombie variant for Inferno Demonlord mob tracking in SkyblockBlazeSlayer
+com.moonsworth.lunar.bridge	Bridge5Extension43	EntityPigZombieBridge	EntityPigZombieMixin @Mixin(EntityPigZombie) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension4_2	EntityMobBridge	EntityMobMixin @Mixin(EntityMob) implements it, supplying bridge$isHostile() from EntityPigZombie.angerLevel
+com.moonsworth.lunar.bridge	Bridge5Extension5	GuiAchievementBridge	title "Achievement"; GuiAchievementMixin @Mixin(GuiAchievement) implements it (achievement toast)
+com.moonsworth.lunar.bridge	Bridge5Extension6	GuiScreenBridge	bridge$drawScreen/bridge$setWorldAndResolution/bridge$mouseClicked/bridge$keyTyped/bridge$isShiftKeyDown; GuiScreenMixin2 @Mixin(GuiScreen) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension62	GuiScreenWrapperBridge	extends the GuiScreen bridge and exposes method2()=Bridge7_8 wrapped driver gui; legacy/wrapper GuiScreenImpl extends GuiScreen wrapping a Bridge7_8, Ref.method31 unwraps it
+com.moonsworth.lunar.bridge	Bridge5Extension63	GuiLanguageBridge	title "Language"; GuiLanguageMixin @Mixin(GuiLanguage) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension64	GuiOptionsBridge	title "Options"; GuiOptionsMixin @Mixin(GuiOptions) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension65	GuiMultiplayerBridge	title "Server Selector"; GuiMultiplayerMixin @Mixin(GuiMultiplayer) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension662	GuiConfirmOpenLinkBridge	title "Confirm Open Link", extends the GuiYesNo bridge; GuiConfirmOpenLinkMixin @Mixin(GuiConfirmOpenLink)
+com.moonsworth.lunar.bridge	Bridge5Extension66	GuiYesNoBridge	title "Yes No" + bridge$getYesNoCallback()/bridge$getParentButtonClickedId(); GuiYesNoMixin @Mixin(GuiYesNo)
+com.moonsworth.lunar.bridge	Bridge5Extension67	GuiSelectWorldBridge	title "Select World"; GuiSelectWorldMixin @Mixin(GuiSelectWorld) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension68	GuiErrorScreenBridge	title "Alert"; GuiErrorScreenMixin @Mixin(GuiErrorScreen) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension69	GuiConnectingBridge	bridge$getClientPacketListener(); GuiConnectingMixin @Mixin(GuiConnecting) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension7	GuiAchievementsBridge	title "Achievements"; GuiAchievementsMixin @Mixin(GuiAchievements) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension8	GuiScreenBookBridge	bridge$getPageCount/bridge$getCurrentPage/bridge$getPageContents + title "Book"; GuiScreenBookMixin @Mixin(GuiScreenBook)
+com.moonsworth.lunar.bridge	Bridge5Extension9	GuiIngameBridge	bridge$renderGameOverlay/bridge$showCrosshair/bridge$getChatGUI/bridge$getTabList/title API; GuiIngameMixin @Mixin(GuiIngame) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension610	GuiMainMenuBridge	title "Main Menu"; GuiMainMenuMixin @Mixin(GuiMainMenu) implements it
+com.moonsworth.lunar.bridge	Bridge5Extension611	GuiIngameMenuBridge	title "Pause Screen"; GuiIngameMenuMixin @Mixin(GuiIngameMenu) implements it
+com.moonsworth.lunar.bridge	Bridge6_2	RenderBlocksBridge	legacy/wrapper Bridge6Handler implements it holding a net.minecraft.client.renderer.RenderBlocks; method1(pose, Block, meta, packedLight) renders one block, method2() flushes
+com.moonsworth.lunar.bridge	Bridge6_3	EntityLightningBoltBridge	bridge$setAddedByWeatherChanger(boolean) forcing lightningState=3 in onUpdate; EntityLightningBoltMixin @Mixin(EntityLightningBolt)
+com.moonsworth.lunar.bridge	Bridge6_4	ItemBridge	item property API: bridge$isItemPotion/Skull/Block/sword/bow/..., bridge$hasEffect(ItemStack), bridge$getRegistryName(), bridge$getBlockFromItem(); ItemMixin @Mixin(Item) implements it
+com.moonsworth.lunar.bridge	Bridge6_5	ServerStatusResponseBridge	getLunarServer/setLunarServer over a @Unique lunar$lunarServer field; ServerStatusResponseMixin @Mixin(ServerStatusResponse)
+com.moonsworth.lunar.bridge	Bridge6_6	MixinTargetMemberResolverBridge	holds String[] member paths and resolves each through mapping sets to MixinTargetMember, following return-type chains for nested paths; used by the ichor mixin generation (Bridge4_2/Bridge2_35)
+com.moonsworth.lunar.bridge	Bridge6_7	MapItemRendererBridge	bridge$renderMap/bridge$getMapTexture(MapDataBridge,int); EntityRendererMixin exposes its mapItemRenderer field through it
+com.moonsworth.lunar.bridge	Bridge6_8	ShaderManagerBridge	bridge$getShaderUniform(String)/bridge$getProgram()/bridge$apply()(useShader)/bridge$clear()(endShader)/bridge$bindSampler; ShaderManagerMixin @Mixin(ShaderManager) implements it and Shader mixin returns getShaderManager() as it
+com.moonsworth.lunar.bridge	Bridge6_9	DecodedTextureDataBridge	lombok value class self-named "DecodedTextureData" in toString: clamp/blur/animationMetadata/lunarMetadata/width/height/originalHeight/PixelFormat/data/name; consumed by Bridge7_3 texture loader
+com.moonsworth.lunar.bridge	Bridge6Extension_2	ItemHoeBridge	ItemHoeMixin @Mixin(ItemHoe) implements it
+com.moonsworth.lunar.bridge	Bridge6Extension2	ItemPotionBridge	adds bridge$getEffects(ItemStack) to the Item bridge; cast on bridge$getItem() results in PotionCounter/PotionUtils for potion stacks
+com.moonsworth.lunar.bridge	Bridge6Extension3$Type	ArmorMaterialBridge	armor material enum LEATHER/CHAIN/IRON/GOLD/DIAMOND/TURTLE/NETHERITE/ARMADILLO/TURTLE_SCUTE/COPPER with fromMaterial+getMaterial; returned by the ItemArmor bridge's bridge$getArmorMaterial()
+com.moonsworth.lunar.bridge	Bridge6Extension4	ItemAxeBridge	ItemAxeMixin @Mixin(ItemAxe) implements it
+com.moonsworth.lunar.bridge	Bridge6Extension5	ItemSpadeBridge	ItemSpadeMixin @Mixin(ItemSpade) implements it
+com.moonsworth.lunar.bridge	Bridge6Extension6	ItemBowBridge	ItemBowMixin @Mixin(ItemBow) implements it
+com.moonsworth.lunar.bridge	Bridge6Extension7	ItemPickaxeBridge	ItemPickaxeMixin @Mixin(ItemPickaxe) implements it
+com.moonsworth.lunar.bridge	Bridge6Extension8	ItemBlockBridge	ItemBlockMixin @Mixin(ItemBlock) implements it; bridge$getBlockFromItem() consumers are ShulkerPreview and the attack indicator
+com.moonsworth.lunar.bridge	Bridge6Extension9	ItemSwordBridge	ItemSwordMixin @Mixin(ItemSword) implements it

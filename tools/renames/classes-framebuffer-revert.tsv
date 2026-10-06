@@ -1,0 +1,2 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.bridge	FramebufferBridge	Bridge3_24	jar-coupled: Bridge.method56/method58 (jar) return bridge.Bridge3_24 and Bridge7_10.method1 takes it; source twin must keep the FQN until the jar side is rescued	com/moonsworth/lunar/bridge/FramebufferBridge.java

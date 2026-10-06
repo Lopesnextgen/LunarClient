@@ -1,0 +1,8 @@
+com.moonsworth.lunar.files
+com.moonsworth.lunar.files.mixin
+com.moonsworth.lunar.forge
+com.moonsworth.lunar.forge.lib
+com.moonsworth.lunar.forge.lib.guava.annotations
+com.moonsworth.lunar.forge.lib.guava.base
+com.moonsworth.lunar.forge.lib.guava.base.internal
+com.moonsworth.lunar.forge.lib.guava.cache

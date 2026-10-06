@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.replay.nameplate.mixin.rewindhandlers
+com.moonsworth.lunar.client.replay.rewindhandlers
+com.moonsworth.lunar.client.replay.rewindhandlers.chest
+com.moonsworth.lunar.client.replay.rewindhandlers.click
+com.moonsworth.lunar.client.replay.rewindhandlers.colorsaturation
+com.moonsworth.lunar.client.replay.rewindhandlers.coordinates
+com.moonsworth.lunar.client.replay.rewindhandlers.fishing
+com.moonsworth.lunar.client.replay.rewindhandlers.highlight

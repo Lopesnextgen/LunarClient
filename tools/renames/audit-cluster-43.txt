@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.toggle
+com.moonsworth.lunar.client.framework.feature.tps
+com.moonsworth.lunar.client.framework.feature.waila
+com.moonsworth.lunar.client.framework.feature.waila.mixin
+com.moonsworth.lunar.client.framework.feature.waypoints
+com.moonsworth.lunar.client.framework.feature.waypoints.mixin
+com.moonsworth.lunar.client.framework.feature.waypoints.mixin.holograms
+com.moonsworth.lunar.client.framework.feature.waypoints.mixin.nameplate

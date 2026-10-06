@@ -1,0 +1,940 @@
+{
+	"HUB": {
+		"1": {
+			"pos": "160,89,34",
+			"message": "atop a tree in the Colosseum"
+		},
+		"2": {
+			"pos": "149,69,-41",
+			"message": "at the Fisherman's Hut"
+		},
+		"3": {
+			"pos": "147,113,117",
+			"message": "within the red roof treehouse"
+		},
+		"4": {
+			"pos": "161,71,157",
+			"message": "within the wither cage"
+		},
+		"5": {
+			"pos": "125,74,168",
+			"message": "near the Dark Auction"
+		},
+		"6": {
+			"pos": "46,73,106",
+			"message": "at the base of the Wizard Tower"
+		},
+		"7": {
+			"pos": "-1,144,81",
+			"message": "on the Mountain path"
+		},
+		"8": {
+			"pos": "-39,190,69",
+			"message": "on the second highest Mountain peak"
+		},
+		"9": {
+			"pos": "-7,84,156",
+			"message": "in Unincorporated Territory"
+		},
+		"10": {
+			"pos": "-186,87,81",
+			"message": "within the Ruins"
+		},
+		"11": {
+			"pos": "-138,73,-14",
+			"message": "near the lumber piles"
+		},
+		"12": {
+			"pos": "-14,88,-52",
+			"message": "on the crane"
+		},
+		"13": {
+			"pos": "-122,75,-179",
+			"message": "on the emerald altar"
+		},
+		"14": {
+			"pos": "42,73,-125",
+			"message": "next to the Farmhouse"
+		},
+		"15": {
+			"pos": "-40,73,-22",
+			"message": "in the Bazaar Alley"
+		},
+		"16": {
+			"pos": "20,63,-122",
+			"message": "next to the Blacksmith building"
+		},
+		"17": {
+			"pos": "49,72,-108",
+			"message": "near the Wheat Minion"
+		}
+	},
+	"FARMING_ISLANDS": {
+		"1": {
+			"pos": "116,87,-222",
+			"message": "at the end of the aqueduct"
+		},
+		"2": {
+			"pos": "95,83,-284",
+			"message": "within the windmill"
+		},
+		"3": {
+			"pos": "168,92,-319",
+			"message": "behind the tallest hill"
+		},
+		"4": {
+			"pos": "142,90,-300",
+			"message": "among the path through carrots"
+		},
+		"5": {
+			"pos": "146,81,-242",
+			"message": "on the second floor of The Barn"
+		},
+		"6": {
+			"pos": "152,72,-217",
+			"message": "in the pasture"
+		},
+		"7": {
+			"pos": "174,78,-357",
+			"message": "in Mason's house"
+		},
+		"8": {
+			"pos": "136,74,-215",
+			"message": "on top of a scarecrow"
+		},
+		"9": {
+			"pos": "175,77,-373",
+			"message": "beside the well"
+		},
+		"10": {
+			"pos": "143,77,-404",
+			"message": "beside an animal skull"
+		},
+		"11": {
+			"pos": "142,71,-453",
+			"message": "beneath an oasis bridge"
+		},
+		"12": {
+			"pos": "163,92,-599",
+			"message": "on Farmer Jon's table"
+		},
+		"13": {
+			"pos": "284,102,-573",
+			"message": "outside the Trapper's Den"
+		},
+		"14": {
+			"pos": "256,184,-564",
+			"message": "overlooking the oasis from above"
+		},
+		"15": {
+			"pos": "204,54,-503",
+			"message": "in Moby's attic"
+		}
+	},
+	"PARK": {
+		"1": {
+			"pos": "-303,81,4",
+			"message": "behind the flower pot"
+		},
+		"2": {
+			"pos": "-264,84,-21",
+			"message": "on the Hub launch pad"
+		},
+		"3": {
+			"pos": "-316,75,-51",
+			"message": "next to the waterfall"
+		},
+		"4": {
+			"pos": "-305,76,-82",
+			"message": "within the Rainmaker shrine"
+		},
+		"5": {
+			"pos": "-366,102,-94",
+			"message": "within the cultist's tent"
+		},
+		"6": {
+			"pos": "-336,90,77",
+			"message": "behind the Viking Longhouse"
+		},
+		"7": {
+			"pos": "-411,109,74",
+			"message": "behind Melody ♫"
+		},
+		"8": {
+			"pos": "-454,111,30",
+			"message": "behind Master Tactician Funk"
+		},
+		"9": {
+			"pos": "-435,107,43",
+			"message": "within a gold mine"
+		},
+		"10": {
+			"pos": "-364,89,42",
+			"message": "at the start of the race"
+		},
+		"11": {
+			"pos": "-488,116,-35",
+			"message": "near the Galatea launch pad"
+		},
+		"12": {
+			"pos": "-416,128,-112",
+			"message": "at the race checkpoint"
+		},
+		"13": {
+			"pos": "-424,118,-103",
+			"message": "between islands tethered by leaves"
+		},
+		"14": {
+			"pos": "-460,119,-83",
+			"message": "near cracked stone bricks in the Jungle"
+		},
+		"15": {
+			"pos": "-373,84,-64",
+			"message": "in front of Old Shaman Nyko"
+		}
+	},
+	"SPIDERS_DEN": {
+		"1": {
+			"pos": "-299,97,-167",
+			"message": "on top of the pond boulder"
+		},
+		"2": {
+			"pos": "-280,115,-181",
+			"message": "near slain spiders"
+		},
+		"3": {
+			"pos": "-283,129,-185",
+			"message": "on top of the house"
+		},
+		"4": {
+			"pos": "-353,124,-250",
+			"message": "on top of the dragon skeleton's horn"
+		},
+		"5": {
+			"pos": "-398,139,-250",
+			"message": "near the stray Fairy Soul"
+		},
+		"6": {
+			"pos": "-355,111,-293",
+			"message": "within the Archaeologist's Camp"
+		},
+		"7": {
+			"pos": "-360,85,-356",
+			"message": "behind the Crimson Isle launch pad"
+		},
+		"8": {
+			"pos": "-209,74,-322",
+			"message": "within a Gravel Mines fossil"
+		},
+		"9": {
+			"pos": "-200,174,-313",
+			"message": "at the top of the Spider's Den"
+		},
+		"10": {
+			"pos": "-202,83,-238",
+			"message": "beside Haymitch"
+		},
+		"11": {
+			"pos": "-155,86,-351",
+			"message": "behind the Spider's Den"
+		},
+		"12": {
+			"pos": "-293,36,-271",
+			"message": "near a Fairy Soul and Relic"
+		},
+		"13": {
+			"pos": "-303,65,-182",
+			"message": "higher up in Arachne's Sanctuary"
+		},
+		"14": {
+			"pos": "-266,72,-191",
+			"message": "behind an egg in Arachne's Sanctuary"
+		},
+		"15": {
+			"pos": "-165,70,-306",
+			"message": "atop a mushroom in the Gravel Mines"
+		}
+	},
+	"END": {
+		"1": {
+			"pos": "-502,103,-299",
+			"message": "in the Pearl Dealer's shop"
+		},
+		"2": {
+			"pos": "-510,110,-250",
+			"message": "on the stairs up to the race"
+		},
+		"3": {
+			"pos": "-451,50,-274",
+			"message": "atop a obsidian spike near the entrance"
+		},
+		"4": {
+			"pos": "-584,211,-272",
+			"message": "at the highest point"
+		},
+		"5": {
+			"pos": "-539,102,-271",
+			"message": "overlooking the drop down"
+		},
+		"6": {
+			"pos": "-566,7,-316",
+			"message": "by the warp to Void Sepulture"
+		},
+		"7": {
+			"pos": "-591,5,-276",
+			"message": "behind the Draconic Altar"
+		},
+		"8": {
+			"pos": "-714,41,-315",
+			"message": "at the Dragon's View"
+		},
+		"9": {
+			"pos": "-672,77,-276",
+			"message": "on top of the Dragon Egg"
+		},
+		"10": {
+			"pos": "-722,56,-232",
+			"message": "on the End Spire"
+		},
+		"11": {
+			"pos": "-667,33,-210",
+			"message": "atop The Peak"
+		},
+		"12": {
+			"pos": "-600,21,-255",
+			"message": "at the start of the parkour"
+		},
+		"13": {
+			"pos": "-661,5,-248",
+			"message": "near Zealots and Seers"
+		},
+		"14": {
+			"pos": "-551,56,-239",
+			"message": "in the Bruiser Hideout chokepoint"
+		},
+		"15": {
+			"pos": "-778,101,-300",
+			"message": "behind the race checkpoint"
+		}
+	},
+	"CRIMSON_ISLES": {
+		"1": {
+			"pos": "-358,80,-442",
+			"message": "on the entrance bridge"
+		},
+		"2": {
+			"pos": "-270,83,-496",
+			"message": "in the corner of Bladesoul's room"
+		},
+		"3": {
+			"pos": "-237,108,-605",
+			"message": "behind Master Tao"
+		},
+		"4": {
+			"pos": "-295,93,-689",
+			"message": "on the path through the Mage Outpost"
+		},
+		"5": {
+			"pos": "-376,207,-809",
+			"message": "in Odger's Hut"
+		},
+		"6": {
+			"pos": "-375,121,-1009",
+			"message": "on the Forgotten Skull's tooth"
+		},
+		"7": {
+			"pos": "-289,127,-985",
+			"message": "beside the Desperate Engineer"
+		},
+		"8": {
+			"pos": "-469,135,-1020",
+			"message": "in the Ruins of Ashfang"
+		},
+		"9": {
+			"pos": "-631,141,-926",
+			"message": "on the snout of The Bastion skeleton"
+		},
+		"10": {
+			"pos": "-641,101,-822",
+			"message": "in the Dragontail Minion Shop"
+		},
+		"11": {
+			"pos": "-695,98,-795",
+			"message": "within the Dragontail colosseum"
+		},
+		"12": {
+			"pos": "-62,107,-811",
+			"message": "in front of the Statue of the Hero"
+		},
+		"13": {
+			"pos": "-33,114,-937",
+			"message": "in front row seats of the Cathedral"
+		},
+		"14": {
+			"pos": "-375,83,-709",
+			"message": "in the Plhlegblast Pool"
+		},
+		"15": {
+			"pos": "-376,63,-802",
+			"message": "the middle of the Magma Chamber"
+		}
+	},
+	"GOLD_MINE": {
+		"1": {
+			"pos": "-30,74,-293",
+			"message": "behind the Gold Forger"
+		},
+		"2": {
+			"pos": "-2,82,-309",
+			"message": "above the Iron Forger"
+		},
+		"3": {
+			"pos": "-44,77,-303",
+			"message": "in the Blacksmith's forge"
+		},
+		"4": {
+			"pos": "-25,78,-328",
+			"message": "near Rusty"
+		},
+		"5": {
+			"pos": "-18,62,-353",
+			"message": "at the bottom of the stairs"
+		},
+		"6": {
+			"pos": "-11,68,-397",
+			"message": "behind the Deep Caverns launch pad"
+		},
+		"7": {
+			"pos": "17,57,-340",
+			"message": "on top of platforms near a Fairy Soul"
+		},
+		"8": {
+			"pos": "-22,37,-336",
+			"message": "next to a hot fire underground"
+		},
+		"9": {
+			"pos": "-19,25,-305",
+			"message": "next to the Lazy Miner's pickaxe"
+		},
+		"10": {
+			"pos": "-15,104,-313",
+			"message": "on top of the entrance"
+		},
+		"11": {
+			"pos": "-25,79,-282",
+			"message": "on top of a giant crate"
+		},
+		"12": {
+			"pos": "15,75,-290",
+			"message": "beside a pile of coal"
+		},
+		"13": {
+			"pos": "-19,143,-361",
+			"message": "on the top of the mountain"
+		},
+		"14": {
+			"pos": "41,80,-311",
+			"message": "looking towards the windmill"
+		},
+		"15": {
+			"pos": "-49,94,-335",
+			"message": "near a fork in the lava"
+		}
+	},
+	"DEEP_CAVERNS": {
+		"1": {
+			"pos": "7,157,63",
+			"message": "beside the entrance steps"
+		},
+		"2": {
+			"pos": "11,176,58",
+			"message": "on top of the entrnace"
+		},
+		"3": {
+			"pos": "-34,207,38",
+			"message": "atop the shortest mountain peak"
+		},
+		"4": {
+			"pos": "4,148,88",
+			"message": "beneath the launch portal"
+		},
+		"5": {
+			"pos": "1,153,37",
+			"message": "beside a fire at the entrance to the mines"
+		},
+		"6": {
+			"pos": "24,156,-38",
+			"message": "beside Walter"
+		},
+		"7": {
+			"pos": "56,151,23",
+			"message": "beside the Gunpowder Mines lift"
+		},
+		"8": {
+			"pos": "-11,120,37",
+			"message": "next to the Lapis Miner"
+		},
+		"9": {
+			"pos": "1,110,45",
+			"message": "in front of the Pigmen sign"
+		},
+		"10": {
+			"pos": "21,104,17",
+			"message": "near the Redstone Miner"
+		},
+		"11": {
+			"pos": "20,68,43",
+			"message": "next to a lily pad pond in Slimehill"
+		},
+		"12": {
+			"pos": "46,38,22",
+			"message": "beside the Diamond Reserve lift"
+		},
+		"13": {
+			"pos": "31,12,13",
+			"message": "next to Rhys"
+		},
+		"14": {
+			"pos": "38,12,20",
+			"message": "adjacent to a fossil"
+		},
+		"15": {
+			"pos": "22,159,27",
+			"message": "atop a platform"
+		}
+	},
+	"DWARVEN_MINES": {
+		"1": {
+			"pos": "-93,200,-122",
+			"message": "behind the Lift"
+		},
+		"2": {
+			"pos": "-73,222,-139",
+			"message": "in the Ironman's Guild"
+		},
+		"3": {
+			"pos": "13,201,-150",
+			"message": "behind Banker Broadjaw"
+		},
+		"4": {
+			"pos": "91,199,-123",
+			"message": "near Geo"
+		},
+		"5": {
+			"pos": "87,193,-44",
+			"message": "underneath the gold gate"
+		},
+		"6": {
+			"pos": "126,197,187",
+			"message": "on the Royal Palace table"
+		},
+		"7": {
+			"pos": "78,188,126",
+			"message": "looking off the Hanging Court"
+		},
+		"8": {
+			"pos": "32,179,103",
+			"message": "atop the right massive dwarf statue"
+		},
+		"9": {
+			"pos": "-17,128,177",
+			"message": "under Divan's Gateway"
+		},
+		"10": {
+			"pos": "-146,144,148",
+			"message": "in the Goblin Burrows gold room"
+		},
+		"11": {
+			"pos": "104,151,142",
+			"message": "beside the Aristocrat Passage station"
+		},
+		"12": {
+			"pos": "36,128,50",
+			"message": "overlooking The Mist"
+		},
+		"13": {
+			"pos": "-1,183,26",
+			"message": "underneath a massive crystal"
+		},
+		"14": {
+			"pos": "-2,147,-52",
+			"message": "near lava in The Forge"
+		},
+		"15": {
+			"pos": "-134,174,-51",
+			"message": "behind Emissary Fraiser"
+		}
+	},
+	"CRYSTAL_HOLLOWS": {
+		"1": {
+			"pos": "553,106,513",
+			"message": "in between Jade and Sapphire crystals"
+		},
+		"2": {
+			"pos": "494,106,556",
+			"message": "behind Emissary Sisko"
+		},
+		"3": {
+			"pos": "472,106,518",
+			"message": "near the Diamond Essence Shop"
+		},
+		"4": {
+			"pos": "510,93,470",
+			"message": "on a ledge next to the stairwell"
+		},
+		"5": {
+			"pos": "485,65,479",
+			"message": "at an entrance to the Magma Fields near Amethyst"
+		},
+		"6": {
+			"pos": "463,127,505",
+			"message": "on the arms of the Amethyst statue"
+		},
+		"7": {
+			"pos": "508,115,564",
+			"message": "on top of the Crystal Nucleus"
+		},
+		"8": {
+			"pos": "477,82,532",
+			"message": "on a lower platform"
+		},
+		"9": {
+			"pos": "533,108,556",
+			"message": "near Geonathan Greatforge"
+		},
+		"10": {
+			"pos": "557,117,463",
+			"message": "near the Mithril Deposits entrance"
+		},
+		"11": {
+			"pos": "513,70,513",
+			"message": "in the middle of the Crystal Nucleus"
+		},
+		"12": {
+			"pos": "509,71,480",
+			"message": "underneath the stairwell"
+		},
+		"13": {
+			"pos": "532,69,528",
+			"message": "at the base of the Sapphire pillar"
+		},
+		"14": {
+			"pos": "553,100,489",
+			"message": "on top of some Gold Ore"
+		},
+		"15": {
+			"pos": "530,71,465",
+			"message": "next to a lava waterfall"
+		}
+	}, 
+	"DUNGEON_HUB": {
+		"1": {
+			"pos": "-53,120,8",
+			"message": "near Malik"
+		},
+		"2": {
+			"pos": "-52,120,-10",
+			"message": "behind Ophelia's desk"
+		},
+		"3": {
+			"pos": "-51,125,20",
+			"message": "near something that will never arrive"
+		},
+		"4": {
+			"pos": "-31,126,44",
+			"message": "next to Croesus"
+		},
+		"5": {
+			"pos": "-34,119,9",
+			"message": "near the Hub Selector"
+		},
+		"6": {
+			"pos": "-23,86,-3",
+			"message": "by the race start"
+		},
+		"7": {
+			"pos": "-18,87,-27",
+			"message": "behind leaderboards"
+		},
+		"8": {
+			"pos": "0,146,-78",
+			"message": "atop a tall statue"
+		},
+		"9": {
+			"pos": "-5,23,98",
+			"message": "atop the Giant Mushroom"
+		},
+		"10": {
+			"pos": "5,11,-1",
+			"message": "at the Crystal Core"
+		},
+		"11": {
+			"pos": "-138,21,-7",
+			"message": "in the Precursor Ruins"
+		},
+		"12": {
+			"pos": "16,125,3",
+			"message": "beside the Hub Island portal"
+		},
+		"13": {
+			"pos": "0,108,0",
+			"message": "under the entrance bridge"
+		},
+		"14": {
+			"pos": "-61,123,4",
+			"message": "near Mort"
+		},
+		"15": {
+			"pos": "-52,156,0",
+			"message": "atop the Catacombs gate"
+		}
+	}, 
+	"BACKWATER_BAYOU": {
+		"1": {
+			"pos": "15,71,-16",
+			"message": "along the wooden path"
+		},
+		"2": {
+			"pos": "24,68,-10",
+			"message": "on a lily pad"
+		},
+		"3": {
+			"pos": "17,71,21",
+			"message": "near Hattie"
+		},
+		"4": {
+			"pos": "4,68,7",
+			"message": "in Junker Joel's basement"
+		},
+		"5": {
+			"pos": "74,89,-1",
+			"message": "on a big wheel"
+		},
+		"6": {
+			"pos": "70,81,-14",
+			"message": "near the smokestacks"
+		},
+		"7": {
+			"pos": "36,73,18",
+			"message": "on the bridge"
+		},
+		"8": {
+			"pos": "56,82,-7",
+			"message": "in some vines"
+		},
+		"9": {
+			"pos": "14,68,4",
+			"message": "under the dock"
+		},
+		"10": {
+			"pos": "26,79,-29",
+			"message": "in Roddy's house"
+		},
+		"11": {
+			"pos": "28,60,-35",
+			"message": "in the Bayou Cave"
+		},
+		"12": {
+			"pos": "38,73,-23",
+			"message": "by a waterfall"
+		},
+		"13": {
+			"pos": "-11,73,-5",
+			"message": "near the Ship"
+		},
+		"14": {
+			"pos": "59,80,3",
+			"message": "in a pipe"
+		},
+		"15": {
+			"pos": "61,87,23",
+			"message": "on a gear"
+		}
+	}, 
+	"GALATEA": {
+		"1": {
+			"pos": "-592,113,5",
+			"message": "next to the Gravity Condenser"
+		},
+		"2": {
+			"pos": "-627,117,48",
+			"message": "next to the cultist's soul campfire"
+		},
+		"3": {
+			"pos": "-688,88,12",
+			"message": "in a dripstone cave"
+		},
+		"4": {
+			"pos": "-581,113,-25",
+			"message": "beneath Swoop"
+		},
+		"5": {
+			"pos": "-704,171,1",
+			"message": "atop the Murkwater Outpost"
+		},
+		"6": {
+			"pos": "-678,132,-81",
+			"message": "beside the highest tree"
+		},
+		"7": {
+			"pos": "-692,113,-23",
+			"message": "along a spruce bridge"
+		},
+		"8": {
+			"pos": "-733,95,-44",
+			"message": "at the bottom of a long vine"
+		},
+		"9": {
+			"pos": "-698,126,80",
+			"message": "on Sawyer's bed"
+		},
+		"10": {
+			"pos": "-606,117,-8",
+			"message": "on David Hunterborough's porch"
+		},
+		"11": {
+			"pos": "-604,107,10",
+			"message": "in the middle of a basement library"
+		},
+		"12": {
+			"pos": "-539,115,-30",
+			"message": "atop the Galatea launch pad"
+		},
+		"13": {
+			"pos": "-692,120,5",
+			"message": "hidden under stone brick steps"
+		},
+		"14": {
+			"pos": "-599,113,-34",
+			"message": "in the Banker's basement"
+		},
+		"15": {
+			"pos": "-578,109,-1",
+			"message": "in Amaury's basement"
+		}
+	},
+	"LOTUS_ATOLL": {
+		"1": {
+			"pos": "23,66,-21",
+			"message": "under the bridge"
+		},
+		"2": {
+			"pos": "25,74,-39",
+			"message": "along the stairway"
+		},
+		"3": {
+			"pos": "62,66,24",
+			"message": "on a lily pad"
+		},
+		"4": {
+			"pos": "31,141,-66",
+			"message": "high up in a temple"
+		},
+		"5": {
+			"pos": "16,75,31",
+			"message": "near a pond"
+		},
+		"6": {
+			"pos": "84,97,18",
+			"message": "by a lovely cherry tree"
+		},
+		"7": {
+			"pos": "92,85,2",
+			"message": "near a waterfall"
+		},
+		"8": {
+			"pos": "58,67,-40",
+			"message": "on the beach"
+		},
+		"9": {
+			"pos": "21,83,-45",
+			"message": "near Kay"
+			},
+		"10": {
+			"pos": "32,67,1",
+			"message": "on a lotus flower"
+			},
+		"11": {
+			"pos": "90,69,-24",
+			"message": "in a cave"
+			},
+		"12": {
+			"pos": "8,71,-11",
+			"message": "on a lovely path"
+			},
+		"13": {
+			"pos": "77,72,-6",
+			"message": "in the treasure cave"
+			},
+		"14": {
+			"pos": "-7,71,-4",
+			"message": "near the entrance"
+			},
+		"15": {
+			"pos": "63,61,-6",
+			"message": "near Jessica"
+			}
+	},
+	"TORRHUS_CANYON": {
+		"1": {
+			"pos": "-718,96,139",
+			"message": "near the island entrance"
+		},
+		"2": {
+			"pos": "-702,137,149",
+			"message": "high up on a bridge"
+		},
+		"3": {
+			"pos": "-564,103,200",
+			"message": "in some honey"
+		},
+		"4": {
+			"pos": "-534,100,213",
+			"message": "among the amethyst"
+		},
+		"5": {
+			"pos": "-559,98,236",
+			"message": "within a mushroom cave"
+		},
+		"6": {
+			"pos": "-621,105,200",
+			"message": "near a waterfall"
+		},
+		"7": {
+			"pos": "-652,161,190",
+			"message": "near the Torrhus Springs"
+		},
+		"8": {
+			"pos": "-597,125,203",
+			"message": "by the beacon"
+		},
+		"9": {
+			"pos": "-533,110,275",
+			"message": "beneath the Great Helix Tree"
+		},
+		"10": {
+			"pos": "-740,98,180",
+			"message": "on the blimp dock"
+		},
+		"11": {
+			"pos": "-758,98,251",
+			"message": "amongst the prismarine"
+		},
+		"12": {
+			"pos": "-681,82,287",
+			"message": "at the campsite"
+		},
+		"13": {
+			"pos": "-601,173,235",
+			"message": "in a big nest"
+		},
+		"14": {
+			"pos": "-691,102,184",
+			"message": "atop a totem pole"
+		},
+		"15": {
+			"pos": "-629,100,229",
+			"message": "in Honey's honey stash"
+		}
+	}
+}

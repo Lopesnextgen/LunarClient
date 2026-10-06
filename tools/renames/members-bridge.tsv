@@ -1,0 +1,299 @@
+# owner.fqn	M|F	oldName	newName	evidence
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method1	fill	abstract quad-fill primitive (x1,y1,x2,y2,argb); MixinHelper5 draws 6 vertices with MixinHelper5_6.field19, MixinHelper6_5 impl bridge$fill$v1_20_0
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method2	fillFloat	float-coordinate fill: swap/clamp then push + translate(x1,y1) + scale(x2-x1,y2-y1) + method1(0,0,1,1)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method3	fillRect	fill(int x, y, width, height, argb) delegating to method1(x,y,x+w,y+h)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method4	fillRectFloat	float x,y,width,height fill delegating to method2
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method5	fillGradient	abstract gradient fill (argb top, argb bottom); MixinHelper6_5 impl bridge$fillGradient$v1_20_0
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method6	fillGradientFloat	float gradient fill delegating to method2 when both colours match, else method9 with per-vertex colours
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method7	fillGradientRect	int x,y,width,height gradient fill decider (method1 when equal else method8)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method8	fillGradientRectFloat	float gradient quad, 6 vertices with top/bottom colours
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method9	drawCustom	opens a vertex sink for a render type + optional texture and hands it to the consumer (draws lines/triangles/circles); MixinHelper6_5 impl submits a dynamic buffer
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method10	drawString	abstract drawString(Component, int x, int y, argb, shadow); MixinHelper5 delegates to Bridge10_2.bridge$drawString
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method11	drawStringFloat	float-coordinate Component drawString: push + translate + method10
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method12	drawText	abstract Bridge2_42 (formatted text) drawString variant; MixinHelper5 delegates to Bridge10_2.bridge$drawString
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method13	drawTextFloat	float-coordinate Bridge2_42 drawString variant
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method14	drawStringStyled	drawString(Component) with MixinHelper4_2 dynamic colour transform; MixinHelper6_5 pushes MixinHelper2_12 colour holder
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method15	drawStringStyledFloat	float-coordinate styled Component drawString
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method16	drawTextStyled	drawString(Bridge2_42) with dynamic colour transform
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method17	drawTextStyledFloat	float-coordinate styled Bridge2_42 drawString
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method18	drawStringRaw	abstract String drawString(int); MixinHelper6_5 wraps Component.text so bidi is applied
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method19	drawStringRawFloat	float-coordinate String drawString
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method20	drawStringRawStyled	String drawString with dynamic colour transform
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method21	drawStringRawStyledFloat	float-coordinate styled String drawString
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method22	drawStringNoBidi	String drawString duplicate path; MixinHelper6_5 impl uses bridge$drawStringNoBidi$v1_20_0 (method18 keeps bidi)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method23	drawStringNoBidiFloat	float-coordinate no-bidi String drawString
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method24	blit	blit whole texture at int x,y,width,height with tint; MixinHelper6_5 impl bridge$blit$v1_21_6, MixinHelper5 scale-uv quad of MixinHelper5_6.field33
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method25	blitRegion	textured rect (texture, x, y, u, v, width, height, texWidth, texHeight, tint); Bridge7Iterator.method46 forwards here
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method26	blitRegionGlint	same as method25 but routed through the glint render type (MixinHelper5_6.field32/MixinHelper_2.field36)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method27	drawCenteredString	centered Component: x -= bridge$getStringWidth(component)/2 then method11
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method28	drawCenteredStringRaw	centered String via method19
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method29	drawCenteredStringRawFloat	float-x centered String via method19
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method30	drawCenteredStringNoBidi	centered String via method23 (no-bidi path)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method31	drawLine	line between (x1,y1) and (x2,y2) with width; MixinHelper5 uses a width line buffer, MixinHelper6_5 rotates+method1
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method32	drawLines	line path: consumer receives MixinHelper3_2 LineSink emitting (x1,y1,x2,y2) segments; MixinHelper6_5 forwards each to method31
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method33	drawBars	bar chart: x, y, barWidth, height, tint, values[], maxValue; MixinHelper6_5 impl bridge$submitGraph$v1_21_6
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method34	renderItem	render ItemStack icon at int x,y (Bridge5_12 variant); default body calls method35(item,x,y,false)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method35	renderItemAndEffect	render item + enchant effect into GUI with lighting/GL state setup (RenderItemBridge.bridge$renderItemAndEffectIntoGUI)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method36	renderItemAndDecorations	item render with extra effect flag and explicit MinecraftBridge; MixinHelper6_5 adds bridge$drawItemDecorations
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method37	renderItemFloat	float-coordinate item render: push + translate + method34
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method38	translate	translate(x,y,z); MixinHelper5 -> BridgeExtension_9.translate, MixinHelper6_5 -> pose bridge$translate
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method39	translateXY	translate(x,y,0)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method40	scaleXY	scale(x,y,1)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method41	rotate	rotate by radians; MixinHelper5 -> BridgeExtension_9 quaternion method2, MixinHelper6_5 -> pose bridge$rotate(0,0,angle)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method42	rotateDegrees	rotate by degrees (Math.toRadians then method41)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method43	getPartialTicks	Bridge.method9().bridge$getTimer().method1() = Timer.renderPartialTicks
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method44	withLegacyGraphics	runs the consumer on the legacy graphics view (MixinHelper5 accepts itself, MixinHelper6_5 no-op)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method45	withModernGraphics	runs the consumer on the modern graphics view (MixinHelper6_5 accepts itself, MixinHelper5 no-op)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method46	asLegacyGraphics	legacy graphics view (MixinHelper5 returns this, MixinHelper6_5 throws)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method47	asModernGraphics	modern graphics view (MixinHelper6_5 returns this, MixinHelper5 throws)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method48	getGuiGraphics	raw classic GuiGraphics bridge (BridgeExtension_9 field1)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method49	getModernGuiGraphics	Optional<Bridge8_2> modern GuiGraphics bridge (MixinHelper6_5 Optional.of(field2), MixinHelper5 via render buffers)
+com.moonsworth.lunar.bridge.MixinHelper_4	M	method50	isLegacyGraphics	this instanceof MixinHelper5 (legacy implementation check)
+com.moonsworth.lunar.bridge.MixinHelper5	M	method1	fill	override of MixinHelper_4.method1 (fill); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method5	fillGradient	override of MixinHelper_4.method5 (fillGradient); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method9	drawCustom	override of MixinHelper_4.method9 (drawCustom); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method10	drawString	override of MixinHelper_4.method10 (drawString); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method12	drawText	override of MixinHelper_4.method12 (drawText); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method14	drawStringStyled	override of MixinHelper_4.method14 (drawStringStyled); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method16	drawTextStyled	override of MixinHelper_4.method16 (drawTextStyled); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method18	drawStringRaw	override of MixinHelper_4.method18 (drawStringRaw); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method20	drawStringRawStyled	override of MixinHelper_4.method20 (drawStringRawStyled); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method22	drawStringNoBidi	override of MixinHelper_4.method22 (drawStringNoBidi); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method24	blit	override of MixinHelper_4.method24 (blit); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method25	blitRegion	override of MixinHelper_4.method25 (blitRegion); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method26	blitRegionGlint	override of MixinHelper_4.method26 (blitRegionGlint); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method31	drawLine	override of MixinHelper_4.method31 (drawLine); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method32	drawLines	override of MixinHelper_4.method32 (drawLines); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method33	drawBars	override of MixinHelper_4.method33 (drawBars); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method35	renderItemAndEffect	override of MixinHelper_4.method35 (renderItemAndEffect); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method36	renderItemAndDecorations	override of MixinHelper_4.method36 (renderItemAndDecorations); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method38	translate	override of MixinHelper_4.method38 (translate); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method41	rotate	override of MixinHelper_4.method41 (rotate); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method44	withLegacyGraphics	override of MixinHelper_4.method44 (withLegacyGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method45	withModernGraphics	override of MixinHelper_4.method45 (withModernGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method46	asLegacyGraphics	override of MixinHelper_4.method46 (asLegacyGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method47	asModernGraphics	override of MixinHelper_4.method47 (asModernGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method48	getGuiGraphics	override of MixinHelper_4.method48 (getGuiGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper5	M	method49	getModernGuiGraphics	override of MixinHelper_4.method49 (getModernGuiGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method1	fill	override of MixinHelper_4.method1 (fill); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method5	fillGradient	override of MixinHelper_4.method5 (fillGradient); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method9	drawCustom	override of MixinHelper_4.method9 (drawCustom); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method10	drawString	override of MixinHelper_4.method10 (drawString); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method12	drawText	override of MixinHelper_4.method12 (drawText); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method14	drawStringStyled	override of MixinHelper_4.method14 (drawStringStyled); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method16	drawTextStyled	override of MixinHelper_4.method16 (drawTextStyled); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method18	drawStringRaw	override of MixinHelper_4.method18 (drawStringRaw); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method20	drawStringRawStyled	override of MixinHelper_4.method20 (drawStringRawStyled); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method22	drawStringNoBidi	override of MixinHelper_4.method22 (drawStringNoBidi); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method24	blit	override of MixinHelper_4.method24 (blit); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method25	blitRegion	override of MixinHelper_4.method25 (blitRegion); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method26	blitRegionGlint	override of MixinHelper_4.method26 (blitRegionGlint); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method31	drawLine	override of MixinHelper_4.method31 (drawLine); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method32	drawLines	override of MixinHelper_4.method32 (drawLines); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method33	drawBars	override of MixinHelper_4.method33 (drawBars); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method35	renderItemAndEffect	override of MixinHelper_4.method35 (renderItemAndEffect); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method36	renderItemAndDecorations	override of MixinHelper_4.method36 (renderItemAndDecorations); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method38	translate	override of MixinHelper_4.method38 (translate); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method41	rotate	override of MixinHelper_4.method41 (rotate); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method44	withLegacyGraphics	override of MixinHelper_4.method44 (withLegacyGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method45	withModernGraphics	override of MixinHelper_4.method45 (withModernGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method46	asLegacyGraphics	override of MixinHelper_4.method46 (asLegacyGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method47	asModernGraphics	override of MixinHelper_4.method47 (asModernGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method48	getGuiGraphics	override of MixinHelper_4.method48 (getGuiGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method49	getModernGuiGraphics	override of MixinHelper_4.method49 (getModernGuiGraphics); same rename
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method27	enableScissor	bridge$scissor$1_20_0(x,y,w,h) on the modern renderer
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method28	disableScissor	bridge$stopScissor$1_20_0 on the modern renderer
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method29	peekScissor	bridge$peekScissor$v1_21_6 -> int[] scissor stack
+com.moonsworth.lunar.bridge.MixinHelper6_5	M	method30	enableScissorAbsolute	bridge$scissorAbsolute$v1_21_6(x,y,w,h)
+com.moonsworth.lunar.bridge.Bridge10_2	M	method1	drawString	default Component drawString: picks the modern renderer Bridge8_2.method1 when the renderer exposes a font, else bridge$drawString
+com.moonsworth.lunar.bridge.Bridge10_2	M	method2	drawStringRaw	default String drawString with the same modern/legacy branch
+com.moonsworth.lunar.bridge.Bridge10_2	M	method3	drawText	default Bridge2_42 drawString; modern branch bridge$drawString$v1_20_0
+com.moonsworth.lunar.bridge.Bridge10_2	M	method4	drawStringShadowRaw	private shadow pass helper: bridge$drawShadow plus 0.5 z offset, returns width+1
+com.moonsworth.lunar.bridge.Bridge10_2	M	method5	drawStringShadowWithColorFunction	private shadow pass with Function<Float,Integer> colour source and IntFunction/IntConsumer draw callbacks
+com.moonsworth.lunar.bridge.Bridge10_2	M	method6	drawTextComponent	recursive TextComponent draw: component content + per-child colour, walks children
+com.moonsworth.lunar.bridge.Bridge10_2	M	method7	drawStringWithShadow	String draw with optional manual shadow pass (method4) returning width+1
+com.moonsworth.lunar.bridge.Bridge10_2	M	method8	drawStringWithShadowFunction	String draw with dynamic colour source and optional shadow pass (method5)
+com.moonsworth.lunar.bridge.Bridge10_2	M	method9	drawTextWithShadow	Bridge2_42 draw with optional shadow pass
+com.moonsworth.lunar.bridge.Bridge10_2	M	method10	drawTextWithShadowFunction	Bridge2_42 draw with dynamic colour source and shadow pass
+com.moonsworth.lunar.bridge.Bridge10_2	M	method11	drawComponentWithShadow	Component draw with optional shadow pass
+com.moonsworth.lunar.bridge.Bridge10_2	M	method12	drawComponentWithShadowFunction	Component draw with dynamic colour source and shadow pass
+com.moonsworth.lunar.bridge.Bridge10_2	M	method13	drawCenteredString	String draw with x already centered via method16
+com.moonsworth.lunar.bridge.Bridge10_2	M	method14	drawCenteredComponent	Component draw centered via method18
+com.moonsworth.lunar.bridge.Bridge10_2	M	method15	drawCenteredText	Bridge2_42 draw centered via method17
+com.moonsworth.lunar.bridge.Bridge10_2	M	method16	getCenteredX	x - bridge$getStringWidth(text)/2 for String
+com.moonsworth.lunar.bridge.Bridge10_2	M	method17	getCenteredTextX	x - bridge$getStringWidth(Bridge2_42)/2
+com.moonsworth.lunar.bridge.Bridge10_2	M	method18	getCenteredComponentX	x - bridge$getStringWidth(Component)/2
+com.moonsworth.lunar.bridge.Bridge10_2	M	method19	getFontHeight	default returns 9 (FontRenderer.FONT_HEIGHT); callers divide it for vertical centering and scale text
+com.moonsworth.lunar.bridge.Bridge10_2	M	method20	getCodepointData	per-character Bridge10$Data lookup via bridge$getCodepointCharData for each code point of the string
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field1	missingTexture	Horsestats14.create("") placeholder swapped in when a texture location is "lunar:empty" (method17)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field2	solidRenderType	direct RenderType "solid" (LIGHTMAP + Data7.method4, 4194304 buffer)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field3	cutoutMippedRenderType	direct RenderType "cutout_mipped"
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field4	cutoutRenderType	direct RenderType "cutout"
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field5	linesRenderType	direct RenderType "lines" (Data8 line format, ITEM_ENTITY_TARGET)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field6	entitySolid	texture->RenderType cache for "lunar_entity_solid" (method18)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field7	entityCutout	texture->RenderType cache for "lunar_entity_cutout" (method19)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field8	entityCutoutNoCull	texture->RenderType cache for "lunar_entity_cutout_no_cull" (method20, 256 buffer)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field9	entityCutoutNoCullLarge	second "lunar_entity_cutout_no_cull" cache (method21) with 1536 buffer and MixinHelper_2.field67 pipeline
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field10	entityTranslucent	texture->RenderType cache for "lunar_entity_translucent" (method24)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field11	vignette	texture->RenderType cache for "vignette" (method5)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field12	crosshair	texture->RenderType cache for "lunar_crosshair" (method32); NOTE AttackIndicator.java:377 currently says MixinHelper5_6.alwaysShow (batch-0 slip) and must use this name
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field13	crosshairBlur	texture->RenderType cache for "lunar_crosshair_blur" (method33)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field14	glintRenderType	direct "glint" RenderType over textures/misc/enchanted_item_glint.png
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field15	overlay	direct "lunar_overlay" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field16	overlayNoCull	direct "lunar_overlay_no_cull" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field17	overlayOffset	direct "lunar_overlay_offset" RenderType (VIEW_OFFSET_Z_LAYERING)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field18	guiTriangleStrip	direct "lunar_gui_triangle_strip" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field19	guiTriangles	direct "lunar_gui_triangles" (VIEW_OFFSET_Z_LAYERING + SMOOTH), the standard GUI triangle buffer
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field20	guiTrianglesInverted	direct "lunar_gui_triangles_inverted"
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field21	guiTrianglesStencil	direct "lunar_gui_triangles_stencil"
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field22	guiTrianglesNoWrite	direct "lunar_gui_triangles_no_write"
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field23	guiTrianglesDepth	direct "lunar_gui_triangles_depth"
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field24	guiTrianglesDepthWrite	direct "lunar_gui_triangles_depth_write"
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field25	selectionBox	direct "lunar_selection_box" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field26	blockOverlayGeneric	direct "lunar_block_overlay_generic" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field27	blockOverlayInverted	direct "lunar_block_overlay_inverted" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field28	blockOverlayDarken	direct "lunar_block_overlay_darken" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field29	guiQuads	direct "lunar_gui_quads" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field30	guiQuadsNoDepth	direct "lunar_gui_quads_no_depth" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field31	guiQuadsDepthWriteNoTest	direct "lunar_gui_quads_depth_write_no_test" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field32	guiTextureGlint	texture->RenderType cache for "lunar_gui_texture_glint" (method8); used by MixinHelper_4.method26
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field33	guiTextureColor	texture->RenderType cache for "lunar_gui_texture_color" (method6, SMOOTH), the most-used GUI texture RT
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field34	guiTextureColorDepth	texture->RenderType cache for "lunar_gui_texture_color_depth" (method7)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field35	guiTextureColorNoAlpha	texture->RenderType cache for "lunar_gui_texture_color_no_alpha" (method10)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field36	guiTextureColorBlur	texture->RenderType cache for "lunar_gui_texture_color_blur" (method9)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field37	guiTextureColorViewOffset	texture->RenderType cache for the VIEW_OFFSET_Z_LAYERING "lunar_gui_texture_color" (method11)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field38	guiTextureColorBlurViewOffset	texture->RenderType cache for the VIEW_OFFSET_Z_LAYERING "lunar_gui_texture_color_blur" (method12)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field39	particle	texture->RenderType cache for "lunar_particle" (method16)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field40	world3d	direct "lunar_3D" RenderType (NO_LAYERING, depth-write, no-cull)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field41	lines	float-width (MixinHelper2_4) cache for "lunar_lines" line renderer (method13)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field42	linesEsp	float-width cache for "lunar_lines_esp" (method14)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field43	clothCloak	texture->RenderType cache for "lunar_cloth_cloak" (method28)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field44	clothCloakOutline	texture->RenderType cache for "lunar_cloth_cloak_outline" (method29)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field45	cosmetic	texture->RenderType cache for "lunar_cosmetic" (method17)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field46	entityTranslucentNoCull	texture->RenderType cache for "lunar_entity_translucent_no_cull" (method26)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field47	entityTranslucentCull	texture->RenderType cache for "lunar_entity_translucent_cull" (method27)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field48	entityTranslucentNoDepthWrite	texture->RenderType cache for "lunar_entity_translucent_no_depth_write" (method25)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field49	waypointBeam	direct "lunar_waypoint_beam" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field50	border	direct "lunar_border" RenderType (forcefield.png, LIGHTMAP)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field51	hologram	direct "lunar_hologram" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field52	skyblockEsp	direct "lunar_skyblock_esp" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field53	translucentQuads	direct "lunar_translucent_quads" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field54	guiTexturedPremultiplied	texture->RenderType cache for "lunar_gui_textured_premultiplied" (method31)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field55	cloak	texture->RenderType cache for "lunar_cloak" (method30)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field56	guiTextureColorCached	direct "lunar_gui_texture_color" RenderType bound to the lunar:hud_caching_texture (HUD caching pass)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field57	stencilEmulation	direct "lunar_stencil_emulation" RenderType (stencil_emulator texture)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field58	stencilEmulationInverted	direct "lunar_stencil_emulation_inverted" RenderType
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field59	sprays	texture->RenderType cache for "lunar_sprays" (method34)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field60	armorCutoutNoCullTriangles	texture->RenderType cache for "lunar_armor_cutout_no_cull_triangles" (method22)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field61	armorDecalCutoutNoCullTriangles	texture->RenderType cache for "lunar_armor_decal_cutout_no_cull_triangles" (method23)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field62	lightOverlayText	direct "lunar_light_overlay_text" RenderType (ascii.png font atlas)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field63	heightLimitBarrier	direct "lunar_height_limit_barrier" RenderType (height_limit/barrier.png)
+com.moonsworth.lunar.bridge.MixinHelper5_6	F	field64	legacyDynamicQuads	Function<Bridge_63,RenderTypeBridge> building the synthetic "LUNAR_LEGACY_DYNAMIC_QUADS" quad type (max 5)
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method1	initGuiRenderTypes	static init for the GUI texture/triangle render types (field32/33/34/35/36/37/38/19/23/24/54); called by Legacy2.method1
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method2	initRenderTypes	static init for the world/entity/overlay render types (boolean gates the lightmap-enabled set); called by Legacy2.method2
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method3	memoizeByTexture	wraps a RenderTypeLookup in a per-Horsestats14 HashMap cache (used by every field6..13/39..48/54..61 lookup)
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method4	memoizeByFloat	wraps a float-keyed lookup in a Float2ObjectOpenHashMap cache (field41/42)
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method5	createVignette	RenderType factory "vignette"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method6	createGuiTextureColor	RenderType factory "lunar_gui_texture_color"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method7	createGuiTextureColorDepth	RenderType factory "lunar_gui_texture_color_depth"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method8	createGuiTextureGlint	RenderType factory "lunar_gui_texture_glint"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method9	createGuiTextureColorBlur	RenderType factory "lunar_gui_texture_color_blur"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method10	createGuiTextureColorNoAlpha	RenderType factory "lunar_gui_texture_color_no_alpha"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method11	createGuiTextureColorViewOffset	RenderType factory VIEW_OFFSET_Z_LAYERING "lunar_gui_texture_color"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method12	createGuiTextureColorBlurViewOffset	RenderType factory VIEW_OFFSET_Z_LAYERING "lunar_gui_texture_color_blur"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method13	createLines	RenderType factory "lunar_lines" (line format)
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method14	createLinesEsp	RenderType factory "lunar_lines_esp"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method15	createWorld3d	RenderType factory "lunar_3D"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method16	createParticle	RenderType factory "lunar_particle"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method17	createCosmetic	RenderType factory "lunar_cosmetic"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method18	createEntitySolid	RenderType factory "lunar_entity_solid"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method19	createEntityCutout	RenderType factory "lunar_entity_cutout"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method20	createEntityCutoutNoCull	RenderType factory "lunar_entity_cutout_no_cull"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method21	createEntityCutoutNoCullLarge	RenderType factory "lunar_entity_cutout_no_cull" (1536 buffer, field67 pipeline)
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method22	createArmorCutoutNoCullTriangles	RenderType factory "lunar_armor_cutout_no_cull_triangles"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method23	createArmorDecalCutoutNoCullTriangles	RenderType factory "lunar_armor_decal_cutout_no_cull_triangles"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method24	createEntityTranslucent	RenderType factory "lunar_entity_translucent"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method25	createEntityTranslucentNoDepthWrite	RenderType factory "lunar_entity_translucent_no_depth_write"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method26	createEntityTranslucentNoCull	RenderType factory "lunar_entity_translucent_no_cull"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method27	createEntityTranslucentCull	RenderType factory "lunar_entity_translucent_cull"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method28	createClothCloak	RenderType factory "lunar_cloth_cloak"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method29	createClothCloakOutline	RenderType factory "lunar_cloth_cloak_outline"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method30	createCloak	RenderType factory "lunar_cloak"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method31	createGuiTexturedPremultiplied	RenderType factory "lunar_gui_textured_premultiplied"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method32	createCrosshair	RenderType factory "lunar_crosshair"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method33	createCrosshairBlur	RenderType factory "lunar_crosshair_blur"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method34	createSprays	RenderType factory "lunar_sprays"
+com.moonsworth.lunar.bridge.MixinHelper5_6	M	method35	validateTexture	logs "Creating rendertype with null resource location" when the texture passed to a factory is null
+com.moonsworth.lunar.bridge.horsestats.Horsestats14	M	method1	createWithDefaultNamespace	create(var0) when var0 contains ":" else create(var1,var0): builds a ResourceLocation from a possibly-prefixed string with a fallback namespace (callers pass "lunar")
+com.moonsworth.lunar.bridge.horsestats.Horsestats14	M	method2	isValidResourceChar	char check accepting [a-z0-9_\-./:]; the colon-tolerant sibling of validPathChar, used for full resource strings
+com.moonsworth.lunar.bridge.horsestats.Horsestats14	M	method3	isValidNamespace	namespace char loop (validNamespaceChar) over the whole string
+com.moonsworth.lunar.bridge.horsestats.Horsestats14	M	method4	isValidResourceLocation	splits on ":" and validates both halves via method3 + isValidPath, defaulting the empty namespace to "minecraft"
+com.moonsworth.lunar.bridge.horsestats.Horsestats14	M	method5	split	private "minecraft"-defaulting split of a string on a char
+com.moonsworth.lunar.bridge.BridgeExtension_4	M	method1	getEnchantmentLevel	iterates bridge$getEnchantments() and returns the stored level for the Bridge2_26 enchantment (0 when absent) = ItemStack.getEnchantmentLevel
+com.moonsworth.lunar.bridge.Bridge	M	method14	getRenderHelper	static accessor for the RenderHelperBridge singleton (field5); call sites bracket item draws with getRenderHelper().enable/disableItemLighting and use it for nameplates/panorama
+com.moonsworth.lunar.bridge.Bridge	M	method15	setRenderHelper	static setter paired with method14/field5 (Generated)
+com.moonsworth.lunar.bridge.RenderHelperBridge	M	method1	enableStandardItemLighting	RenderHelperBridge singleton method1; RenderHelper.enableStandardItemLighting (classes-bridge34)
+com.moonsworth.lunar.bridge.RenderHelperBridge	M	method2	enableGuiItemLighting	RenderHelper.enableGUIStandardItemLighting; HUD item-icon renderers bracket their draws with method2()/method3()
+com.moonsworth.lunar.bridge.RenderHelperBridge	M	method3	disableItemLighting	RenderHelper.disableStandardItemLighting; paired with method2() after item draws
+com.moonsworth.lunar.bridge.RenderHelperBridge	M	method4	renderNameplates	world-space nameplate list variant: (font, List<Component>, x, y, z, partialTicks, flags, entity BridgeExtension)
+com.moonsworth.lunar.bridge.RenderHelperBridge	M	method5	renderNameplate	single-Component world-space nameplate (Skyblock*Hp HUDs call it with Ref.method10() font)
+com.moonsworth.lunar.bridge.RenderHelperBridge	M	method6	renderMenuPanorama	main-menu panorama/skybox draw; Bridge7Handler.method1 calls it behind the menu (MixinHelper_4 + legacy flag)
+com.moonsworth.lunar.bridge.RenderHelperBridge	M	method7	tickPanorama	per-frame panorama timer update called from the main menu updateScreen
+com.moonsworth.lunar.bridge.Bridge3_35	M	method1	enableStandardItemLighting	lazy-named twin of RenderHelperBridge declaring the same method1; rename with the family
+com.moonsworth.lunar.bridge.Bridge3_35	M	method2	enableGuiItemLighting	lazy-named twin of RenderHelperBridge declaring the same method2; rename with the family
+com.moonsworth.lunar.bridge.Bridge3_35	M	method3	disableItemLighting	lazy-named twin of RenderHelperBridge declaring the same method3; rename with the family
+com.moonsworth.lunar.bridge.Bridge3_35	M	method4	renderNameplates	lazy-named twin of RenderHelperBridge declaring the same method4; rename with the family
+com.moonsworth.lunar.bridge.Bridge3_35	M	method5	renderNameplate	lazy-named twin of RenderHelperBridge declaring the same method5; rename with the family
+com.moonsworth.lunar.bridge.Bridge3_35	M	method6	renderMenuPanorama	lazy-named twin of RenderHelperBridge declaring the same method6; rename with the family
+com.moonsworth.lunar.bridge.Bridge3_35	M	method7	tickPanorama	lazy-named twin of RenderHelperBridge declaring the same method7; rename with the family
+com.moonsworth.lunar.legacy.wrapper.Bridge3Iterator	M	method1	enableStandardItemLighting	Bridge3Iterator implements Bridge3_35; method1 is the RenderHelperBridge.method1 (enableStandardItemLighting) implementation
+com.moonsworth.lunar.legacy.wrapper.Bridge3Iterator	M	method2	enableGuiItemLighting	Bridge3Iterator implements Bridge3_35; method2 is the RenderHelperBridge.method2 (enableGuiItemLighting) implementation
+com.moonsworth.lunar.legacy.wrapper.Bridge3Iterator	M	method3	disableItemLighting	Bridge3Iterator implements Bridge3_35; method3 is the RenderHelperBridge.method3 (disableItemLighting) implementation
+com.moonsworth.lunar.legacy.wrapper.Bridge3Iterator	M	method4	renderNameplates	Bridge3Iterator implements Bridge3_35; method4 is the RenderHelperBridge.method4 (renderNameplates) implementation
+com.moonsworth.lunar.legacy.wrapper.Bridge3Iterator	M	method5	renderNameplate	Bridge3Iterator implements Bridge3_35; method5 is the RenderHelperBridge.method5 (renderNameplate) implementation
+com.moonsworth.lunar.legacy.wrapper.Bridge3Iterator	M	method6	renderMenuPanorama	Bridge3Iterator implements Bridge3_35; method6 is the RenderHelperBridge.method6 (renderMenuPanorama) implementation
+com.moonsworth.lunar.legacy.wrapper.Bridge3Iterator	M	method7	tickPanorama	Bridge3Iterator implements Bridge3_35; method7 is the RenderHelperBridge.method7 (tickPanorama) implementation
+com.moonsworth.lunar.bridge.GuiScreenBridge	M	method1	isInstanceOf	clazz.isInstance(this) OR the wrapped driver screen (Bridge5Extension62.method2) is an instance; used for "is this screen a X" checks
+com.moonsworth.lunar.bridge.Bridge5Extension6	M	method1	isInstanceOf	lazy-named twin of GuiScreenBridge declaring the same method1(Class) instance check
+com.moonsworth.lunar.bridge.Bridge5Extension10	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Resource Packs"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension2_3	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Controls"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension3_2	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Edit Sign"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension4	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "New Chat"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension5	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Achievement"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension610	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Main Menu"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension611	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Pause Screen"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension612	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "GUI"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension63	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Language"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension64	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Options"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension65	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Server Selector"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension66	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Yes No"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension662	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Confirm Open Link"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension67	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Select World"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension68	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Alert"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension7	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Achievements"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension8	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Book"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension_2	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Server Links"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5Extension_3	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "GuiContainer"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.Bridge5_15	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning empty; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiAchievementBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Achievement"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiAchievementsBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Achievements"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning empty; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiConfirmOpenLinkBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Confirm Open Link"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiContainerBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "GuiContainer"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiControlsBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Controls"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiEditSignBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Edit Sign"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiErrorScreenBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Alert"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiIngameMenuBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Pause Screen"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiLanguageBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Language"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiMainMenuBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Main Menu"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiMultiplayerBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Server Selector"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiNewChatBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "New Chat"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiOptionsBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Options"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiScreenBookBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Book"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiScreenResourcePacksBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Resource Packs"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiSelectWorldBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Select World"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.GuiYesNoBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Yes No"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.bridge.ServerLinksScreenBridge	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning "Server Links"; renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.legacy.wrapper.GuiScreenImpl	M	method1	getScreenTitle	driver-screen title override of GuiBridge.method1() returning wrapped screen title (field1.method8()); renamed as one family so the callers resolve at runtime
+com.moonsworth.lunar.client.click.holograms.Bridge7Iterator	M	method46	drawTexturedRect	static textured-rect helper forwarding to MixinHelper_4.method25(texture, x, y, u, v, w, h, texW, texH, tint)
+com.moonsworth.lunar.client.click.holograms.Bridge7Iterator	M	method94	drawRect	static rect fill forwarding to MixinHelper_4.method2(x, y, w, h, tint); used for health/durability bars and borders in the HUD renderers

@@ -1,0 +1,15 @@
+# Package audit 07 — wrong / misplaced packages
+# Format: old.package<TAB>new.package[<TAB>evidence]
+# Prefix semantics: `old` and every `old.*` subtree move under `new`.
+# Apply with: tools/apply_package_renames.py --map tools/renames/packages-audit07.tsv
+#
+# Apply the class rename map (classes-audit07.tsv) FIRST: the armorstatus
+# `.nameplate` and `.nameplate.mixin` packages both declare a class named
+# `Nameplate` and both target `...armorstatus.hud`, so the aware class renamer
+# must disambiguate them (ArmorStatusElement / ArmorStatusElementHud) before the
+# directories merge.
+
+com.moonsworth.lunar.client.fps.mixin	com.moonsworth.lunar.client.molang.ast	its only class is a Molang AST constant (implements com.eliotlash.molang.ast.Evaluatable); "fps" is the Molang JIT package (classes-19) and the class is not a mixin. The parent package `com.moonsworth.lunar.client.fps` should likewise become `...client.molang` (owned by cluster 06/19).
+com.moonsworth.lunar.client.framework.feature.armorstatus.mixin	com.moonsworth.lunar.client.framework.feature.armorstatus	contains no mixins: the armor-status config enums ArmorstatusType + DurabilityDisplayMode (plus the quarantined Gui2Extension/Gui2Extension2/Gui2Extension3); imported only by mod.render.Armorstatus, mod.hud.Coordinates, mod.combat.Cooldowns and horsestats.BadlionProfileConverter.
+com.moonsworth.lunar.client.framework.feature.armorstatus.nameplate	com.moonsworth.lunar.client.framework.feature.armorstatus.hud	contains no nameplates: the armor-status HUD element/renderer/provider classes (ArmorStatusHud, ArmorStatusPanelRenderer, ArmorStatusDurabilityRenderer, ArmorStatusElementProvider, ArmorStatusElement).
+com.moonsworth.lunar.client.framework.feature.armorstatus.nameplate.mixin	com.moonsworth.lunar.client.framework.feature.armorstatus.hud	contains no mixins/nameplates: the armor-slot child mod (ArmorStatusElementChildMod) and its HUD component (ArmorStatusElementHud); merges with the .nameplate package above.

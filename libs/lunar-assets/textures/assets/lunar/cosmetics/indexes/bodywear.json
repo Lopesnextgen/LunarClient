@@ -1,0 +1,5083 @@
+{
+	"tie": {
+		"animated": false,
+		"dynamic": true,
+		"name": "tie",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					}
+				}
+			}
+		]
+	},
+	"bowtie": {
+		"animated": false,
+		"dynamic": true,
+		"name": "bowtie",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.15,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"backpack1": {
+		"animated": false,
+		"dynamic": false,
+		"name": "backpack1",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.215,
+						"z": 0.35
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.25,
+						"y": 1.25,
+						"z": 1.25
+					},
+					"player": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"buckle_backpack": {
+		"animated": false,
+		"dynamic": true,
+		"name": "buckle_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.225,
+						"z": 0.345
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					},
+					"player": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"jetpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "jetpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.4,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"candycanebackpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "candycanebackpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.39,
+						"z": 0.29
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"gingerbreadbackpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "gingerbreadbackpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.39,
+						"z": 0.29
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"candycanenecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "candycanenecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"santabag": {
+		"animated": false,
+		"dynamic": false,
+		"name": "santabag",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.475,
+						"z": 0.325
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"giftnecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "giftnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"heartnecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "heartnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"xmaslightsnecklace": {
+		"animated": true,
+		"dynamic": false,
+		"name": "xmaslightsnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.615,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.125,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.75,
+						"y": 1.75,
+						"z": 1.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"stocking": {
+		"animated": false,
+		"dynamic": false,
+		"name": "stocking",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.46,
+						"z": 0.005
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.35,
+						"z": 0.25
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.05,
+						"y": 1.05,
+						"z": 1.05
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"clocktower": {
+		"animated": false,
+		"dynamic": false,
+		"name": "clocktower",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.005
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.375,
+						"z": 0.25
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.05,
+						"y": 1.05,
+						"z": 1.05
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"champagnenecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "champagnenecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.75,
+						"y": 1.75,
+						"z": 1.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"2022necklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "2022necklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"heartbackpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "heartbackpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.075
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.35,
+						"z": 0.125
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.2,
+						"y": 1.2,
+						"z": 1.2
+					}
+				}
+			}
+		]
+	},
+	"lovelocket": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lovelocket",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"solidheartnecklace": {
+		"animated": false,
+		"dynamic": true,
+		"name": "solidheartnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.8,
+						"y": 1.8,
+						"z": 1.8
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"small_backpack": {
+		"animated": false,
+		"dynamic": true,
+		"name": "small_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.39,
+						"z": 0.29
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"horseshoenecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "horseshoenecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"clovernecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "clovernecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.025,
+						"z": -0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"potofgoldbackpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "potofgoldbackpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.375,
+						"z": 0.35
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"duckfloatie": {
+		"animated": false,
+		"dynamic": false,
+		"name": "duckfloatie",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.675,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.975,
+						"y": 0.975,
+						"z": 0.975
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"flamingofloatie": {
+		"animated": false,
+		"dynamic": false,
+		"name": "flamingofloatie",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.675,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.975,
+						"y": 0.975,
+						"z": 0.975
+					}
+				}
+			}
+		]
+	},
+	"lcbelt": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lcbelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"wrestlingbelt": {
+		"animated": false,
+		"dynamic": false,
+		"name": "wrestlingbelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.6,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.675,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"diamondbelt": {
+		"animated": false,
+		"dynamic": true,
+		"name": "diamondbelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"moonbelt": {
+		"animated": false,
+		"dynamic": true,
+		"name": "moonbelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"leinecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "leinecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.25
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			}
+		]
+	},
+	"sharktooth": {
+		"animated": false,
+		"dynamic": false,
+		"name": "sharktooth",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.25
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.515,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"shellnecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "shellnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.25
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.515,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lcnecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lcnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.3,
+						"z": 0.25
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.515,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"pickaxenecklace": {
+		"animated": false,
+		"dynamic": true,
+		"name": "pickaxenecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.25
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.515,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"swordnecklace": {
+		"animated": false,
+		"dynamic": true,
+		"name": "swordnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.25
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.515,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"jetpack2022": {
+		"animated": false,
+		"dynamic": true,
+		"name": "jetpack2022",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.65,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"sword_backpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "sword_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.9,
+						"z": 0.15
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.2,
+						"y": 1.2,
+						"z": 1.2
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"doublesword": {
+		"animated": false,
+		"dynamic": false,
+		"name": "doublesword",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.625,
+						"z": 0.15
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.93,
+						"y": 0.93,
+						"z": 0.93
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"sheathedsword": {
+		"animated": false,
+		"dynamic": false,
+		"name": "sheathedsword",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.52,
+						"z": 0.15
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"doublesheathedsword": {
+		"animated": false,
+		"dynamic": false,
+		"name": "doublesheathedsword",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.525,
+						"z": 0.13
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.015
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.92,
+						"y": 0.92,
+						"z": 0.92
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"swordandbackpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "swordandbackpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.475,
+						"z": 0.16
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"astronautbackpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "astronautbackpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.675,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"cutlassbackpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "cutlassbackpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.65,
+						"z": 0.15
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.665,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.05,
+						"z": -0.03
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					},
+					"chestplate": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"karatebelt": {
+		"animated": false,
+		"dynamic": true,
+		"name": "karatebelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.575,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.25,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					},
+					"chestplate": {
+						"x": 1.33,
+						"y": 1.33,
+						"z": 1.33
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"fireworknecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "fireworknecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.25
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.515,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"fireworkbag": {
+		"animated": false,
+		"dynamic": false,
+		"name": "fireworkbag",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.475,
+						"z": 0.325
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"shield": {
+		"animated": false,
+		"dynamic": true,
+		"name": "shield",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.8,
+						"z": 0.175
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			}
+		]
+	},
+	"circularshield": {
+		"animated": false,
+		"dynamic": false,
+		"name": "circularshield",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.8,
+						"z": 0.175
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			}
+		]
+	},
+	"cubanchain": {
+		"animated": false,
+		"dynamic": true,
+		"name": "cubanchain",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.6,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.0675,
+						"z": -0.135
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"lunarchain": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunarchain",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.05,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.7,
+						"y": 1.7,
+						"z": 1.7
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"bitcoinchain": {
+		"animated": false,
+		"dynamic": false,
+		"name": "bitcoinchain",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.05,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.7,
+						"y": 1.7,
+						"z": 1.7
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"dollarchain": {
+		"animated": false,
+		"dynamic": false,
+		"name": "dollarchain",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.05,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.7,
+						"y": 1.7,
+						"z": 1.7
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"whistle": {
+		"animated": false,
+		"dynamic": true,
+		"name": "whistle",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.75,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": -0.125
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.7,
+						"y": 1.7,
+						"z": 1.7
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"jetpackplus": {
+		"animated": false,
+		"dynamic": false,
+		"name": "jetpackplus",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.675,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"school_brown_backpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "school_brown_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.675,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"skateboard": {
+		"animated": false,
+		"dynamic": true,
+		"name": "skateboard",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.675,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.035
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"stype": {
+		"animated": false,
+		"dynamic": true,
+		"name": "stype",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.43,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.5
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					},
+					"player": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"player": {
+						"x": 0.0,
+						"y": 0.1,
+						"z": -0.45
+					}
+				}
+			}
+		]
+	},
+	"tail": {
+		"animated": false,
+		"dynamic": true,
+		"name": "tail",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.475,
+						"z": 0.36
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"catglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "catglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"batglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "batglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"pitchfork": {
+		"animated": false,
+		"dynamic": false,
+		"name": "pitchfork",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.2,
+						"z": 0.1
+					},
+					"player": {
+						"x": -0.1,
+						"y": 1.3,
+						"z": 0.0
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.6,
+						"y": 0.6,
+						"z": 0.6
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"broom": {
+		"animated": false,
+		"dynamic": true,
+		"name": "broom",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.2,
+						"y": 0.4,
+						"z": 0.1
+					},
+					"player": {
+						"x": -0.1,
+						"y": 1.3,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.6,
+						"y": 0.6,
+						"z": 0.6
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"scythe": {
+		"animated": false,
+		"dynamic": true,
+		"name": "scythe",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.1,
+						"y": 0.3,
+						"z": 0.1
+					},
+					"player": {
+						"x": -0.1,
+						"y": 1.3,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.6,
+						"y": 0.6,
+						"z": 0.6
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"skull": {
+		"animated": false,
+		"dynamic": true,
+		"name": "skull",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"pumpkinbelt": {
+		"animated": false,
+		"dynamic": true,
+		"name": "pumpkinbelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"ghostbelt": {
+		"animated": false,
+		"dynamic": true,
+		"name": "ghostbelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"golem_necklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "golem_necklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.78,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.008,
+						"y": -0.01,
+						"z": -0.13
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"xmasnecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "xmasnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.008,
+						"y": 1.5,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"giftboxnecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "giftboxnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.008,
+						"y": 1.5,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"candyneckclace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "candyneckclace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.008,
+						"y": 1.5,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"scarf": {
+		"animated": false,
+		"dynamic": true,
+		"name": "scarf",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.9,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.008,
+						"y": 1.501,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_quiver": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_quiver",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.675,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_teddy_backpack": {
+		"animated": false,
+		"dynamic": true,
+		"name": "lunar_teddy_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.675,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_rose_neckalce": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_rose_neckalce",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.2,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.008,
+						"y": 1.5,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"phoodu_bunny": {
+		"animated": false,
+		"dynamic": true,
+		"name": "phoodu_bunny",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.675,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lcleprechaunnecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lcleprechaunnecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.2,
+						"y": 2.1,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"lcrainbowbelt": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lcrainbowbelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lcrainbownecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lcrainbownecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.2,
+						"y": 2.1,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"lcgoldbelt": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lcgoldbelt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			}
+		]
+	},
+	"toriigatenecklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "toriigatenecklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.2,
+						"y": 2.1,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"lunar_bunny_tail": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_bunny_tail",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.3,
+						"z": 0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_katana_sheathed": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_katana_sheathed",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.625,
+						"z": 0.15
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.7,
+						"y": 0.85,
+						"z": 0.6
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_katana": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_katana",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.625,
+						"z": 0.15
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.7,
+						"y": 0.85,
+						"z": 0.6
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_em_fox_tail": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_em_fox_tail",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.25,
+						"y": 0.1,
+						"z": 0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.05
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_kimono_obi": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_kimono_obi",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.9,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.02
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.3,
+						"z": 0.01
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.0,
+						"y": 1.3,
+						"z": 1.0
+					},
+					"chestplate": {
+						"x": 1.2,
+						"y": 1.3,
+						"z": 1.3
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"innertube": {
+		"animated": false,
+		"dynamic": true,
+		"name": "innertube",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.325,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.525,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.975,
+						"y": 0.975,
+						"z": 0.975
+					},
+					"gui": {
+						"x": 0.8,
+						"y": 0.8,
+						"z": 0.8
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"redshovel": {
+		"animated": false,
+		"dynamic": false,
+		"name": "redshovel",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.2,
+						"y": -1.32,
+						"z": 0.425
+					},
+					"player": {
+						"x": 0.05,
+						"y": 1.3,
+						"z": 0.03
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"surfboardback": {
+		"animated": false,
+		"dynamic": false,
+		"name": "surfboardback",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.2,
+						"y": -1.32,
+						"z": 0.425
+					},
+					"player": {
+						"x": 0.05,
+						"y": 1.325,
+						"z": 0.0
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 5.0,
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"tigerbackpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "tigerbackpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.35,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.325,
+						"z": 0.0
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"redbandanna": {
+		"animated": false,
+		"dynamic": false,
+		"name": "redbandanna",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.05,
+						"y": 1.525,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.499,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"safari_backpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "safari_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.0,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"turkey_leg_chain": {
+		"animated": false,
+		"dynamic": false,
+		"name": "turkey_leg_chain",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.15,
+						"y": 1.225,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.499,
+						"z": -0.02
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"backpack_old": {
+		"animated": false,
+		"dynamic": false,
+		"name": "backpack_old",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.675,
+						"z": 0.225
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.01
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"valentine_candies": {
+		"animated": false,
+		"dynamic": false,
+		"name": "valentine_candies",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.35,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.45,
+						"z": 0.0
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"mosesheart_backpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "mosesheart_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.0,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"katana_blue": {
+		"animated": false,
+		"dynamic": false,
+		"name": "katana_blue",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.5,
+						"z": 0.2
+					},
+					"player": {
+						"x": -0.1,
+						"y": 1.35,
+						"z": -0.15
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"purple_prison_necklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "purple_prison_necklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.1,
+						"y": -0.1,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.399,
+						"z": -0.13
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"space_necklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "space_necklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.2,
+						"y": 1.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"space_backpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "space_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.5,
+						"z": 0.2
+					},
+					"player": {
+						"x": -0.1,
+						"y": 1.35,
+						"z": -0.15
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"space_belt": {
+		"animated": false,
+		"dynamic": false,
+		"name": "space_belt",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.005,
+						"y": 1.005,
+						"z": 1.005
+					},
+					"gui": {
+						"x": 1.4,
+						"y": 1.4,
+						"z": 1.4
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lifeguard_backpack": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lifeguard_backpack",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.5,
+						"z": 0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.45,
+						"z": 0.0
+					},
+					"chestplate": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.04
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"values": {
+					"player": {
+						"angle": 180.0,
+						"x": 1.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"gui": {
+						"angle": 180.0,
+						"x": 0.0,
+						"y": 0.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"summer_necklace": {
+		"animated": false,
+		"dynamic": false,
+		"name": "summer_necklace",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.2,
+						"y": 1.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"ink_hands": {
+		"animated": true,
+		"dynamic": false,
+		"name": "ink_hands",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.2,
+						"y": 1.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"fabopenguin": {
+		"animated": false,
+		"dynamic": false,
+		"name": "fabopenguin",
+		"bodyPart": "BODY",
+		"cosmeticType": "BODYWEAR",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.0,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.7,
+						"z": -0.1
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.975,
+						"y": 0.975,
+						"z": 0.975
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			}
+		]
+	}
+}

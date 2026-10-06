@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.chest
+com.moonsworth.lunar.client.click
+com.moonsworth.lunar.client.click.chest
+com.moonsworth.lunar.client.click.colorsaturation
+com.moonsworth.lunar.client.click.coordinates
+com.moonsworth.lunar.client.click.fishing
+com.moonsworth.lunar.client.click.gui
+com.moonsworth.lunar.client.click.highlight

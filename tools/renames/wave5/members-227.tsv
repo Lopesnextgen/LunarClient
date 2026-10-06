@@ -1,0 +1,221 @@
+# owner.fqn	M|F	oldName	newName	evidence
+# Cluster 227 member map (client.util utilities). Twin-pair aware: several owners are
+# placeholder/named twins (see notes-members-227.md). Rows marked SIG-SENSITIVE must
+# not be applied with --allow-multi-decl (the same old name is reused by unrelated
+# nested-class members in the same file).
+com.moonsworth.lunar.client.util.RomanNumeralParser	M	method1	replaceRomanNumerals	rewrites every roman-numeral word in a text to its integer (builder1.replace with matcher3.start/end); no in-tree callers; ref Echo RomanNumeralUtils.generate / Kami Blue RomanNumerals.numberToRoman
+com.moonsworth.lunar.client.util.RomanNumeralParser	M	method2	isRomanNumeral	strict validation before parsing; callers RabbitLevel.java:46, SkyblockChocolateFactory.java:246
+com.moonsworth.lunar.client.util.RomanNumeralParser	M	method3	romanToInt	parses tier/level numerals; callers EnchantedBookItemValueParser.java:31, GuiHandler.java:25, PotionItemValueParser.java:27, DungeonPlayerTracker.java:210, RabbitLevel.java:47, SkillXpListener.java:175,227, SkyblockDungeonBlessingHud.java:99, SkyblockFarmingHud.java:265
+com.moonsworth.lunar.client.util.RomanNumeralUtils	M	method1	toRoman	int->numeral (cached; <=0 empty, >=5000 String.valueOf(number)); ref Echo RomanNumeralUtils.generate / Kami Blue numberToRoman; twin ThreadModuleDump75
+com.moonsworth.lunar.client.util.RomanNumeralUtils	M	method2	romanToInt	numeral->int (cached, invalid -> 0); ref Echo/Lithium/Star RomanNumeralUtils; twin ThreadModuleDump75
+com.moonsworth.lunar.client.util.RomanNumeralUtils	M	method3	isRomanNumeral	!text.isEmpty() && field3.matcher(text).matches(); twin ThreadModuleDump75
+com.moonsworth.lunar.client.util.RunnableHolder	F	field1	onOpen	open hook; identical class ThreadModuleDump20 whose field1.run() is called at the end of the click-hologram open (Bridge7Iterator.java:197) - same body, same field order
+com.moonsworth.lunar.client.util.RunnableHolder	F	field2	onClose	close hook; ThreadModuleDump20.field2.run() in Bridge7Iterator.close (Bridge7Iterator.java:239); twin ThreadModuleDump20
+com.moonsworth.lunar.client.util.ScreenProjection	F	field1	projectionMatrix	public Matrix4f read by ShaderStateHelper.java:58 as the base for LunarProjectionMat after UI scale/translate; twin ThreadModuleDump64.field1
+com.moonsworth.lunar.client.util.ScreenProjection	M	method1	update	captures camera origin + scaled viewport and fills both matrices from the provider, then builds inverses; no in-tree caller (called from the render hook of the twin ThreadModuleDump64); twin ThreadModuleDump64.method1
+com.moonsworth.lunar.client.util.ScreenProjection	M	method2	project	private clip->screen helper: applies modelView+world projection, divides by w, maps to scaled width/height; twin ThreadModuleDump64.method2
+com.moonsworth.lunar.client.util.ScreenProjection	M	method3	worldToScreen	world x/y/z -> Vector2d screen position; caller Waypoints.java:291; twin ThreadModuleDump64.method3
+com.moonsworth.lunar.client.util.ScreenProjection	M	method4	screenToRay	screen x/y -> normalized world direction (unproject near/far with field5+field4, Ref.MC_VERSION>=39 negate); caller SelectionHighlightHandler.java:89; twin ThreadModuleDump64.method4
+com.moonsworth.lunar.client.util.ScreenProjection	M	method5	getCameraPosition	Vector3d(field12,field13,field14); paired with screenToRay in SelectionHighlightHandler.java:92; twin ThreadModuleDump64.method5
+com.moonsworth.lunar.client.util.ServerUtils	M	method1	updateServer	refreshes the cached server name from the scoreboard sidebar; caller PlayerStatTracker.java:123; twin ThreadModuleDump3.method1
+com.moonsworth.lunar.client.util.ServerUtils	M	method2	normalizeServerName	strips colour codes and maps "skyblock co-op" -> "SKYBLOCK"; twin ThreadModuleDump3.method2
+com.moonsworth.lunar.client.util.ServerUtils	M	method3	getScoreboardServer	private: reads the sidebar objective (display slot 1 / 3+colour) and returns its text; twin ThreadModuleDump3.method3
+com.moonsworth.lunar.client.util.ServerUtils	M	method4	isServer	server != null && server.equalsIgnoreCase(text); caller Tab.java:248 ServerUtils.method4("skyblock"); twin ThreadModuleDump3.method4
+com.moonsworth.lunar.client.util.ServerUtils	M	method5	isClientBrand	matches the player's client brand against a prefix through BRAND_PATTERN; callers HypixelBedwars.java:258, ServerBrandWatcher.java:33; twin ThreadModuleDump3.method5
+com.moonsworth.lunar.client.util.ShaderPreprocessor	F	field1	DEFINITION_MARKER	"LUNAR-SHADER-DEFINITION-MARKER" split marker (extractBody, preprocess); twin ThreadModuleDump94.field1
+com.moonsworth.lunar.client.util.ShaderPreprocessor	M	method1	reportShaderSizeChange	private: reports the source line delta to ShaderDebugMod (Shaderdebugmod.method40); twin ThreadModuleDump94.method1
+com.moonsworth.lunar.client.util.ShaderPreprocessor	M	method2	countOccurrences	counts char occurrences (used for the newline delta); twin ThreadModuleDump94.method2
+com.moonsworth.lunar.client.util.ShaderPreprocessor	M	method3	extractBody	returns the text after DEFINITION_MARKER or null; twin ThreadModuleDump94.method3
+com.moonsworth.lunar.client.util.ShaderPreprocessor	M	method4	preprocess	(String, ShaderDefinition, Type): builds Data from the definition and rewrites the source; twin ThreadModuleDump94.method4
+com.moonsworth.lunar.client.util.ShaderPreprocessor	M	method5	preprocessWithData	(String, Type, Data): emits #version/#define/uniform/sampler/input/output prologue + body; caller CosmeticHighlightShader.java:35; twin ThreadModuleDump94.method5
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	F	field1	uniforms	List<ValuePair<GlslUniformType,String>> uniform block members; twin ThreadModuleDump94$Data.field1
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	F	field2	samplers	List<String> sampler2D names; twin ThreadModuleDump94$Data.field2
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	F	field3	inputs	List<ValuePair<...>> LUNAR_IN attributes; twin ThreadModuleDump94$Data.field3
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	F	field4	outputs	List<ValuePair<...>> LUNAR_OUT attributes; twin ThreadModuleDump94$Data.field4
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	F	field5	defines	List<ValuePair<String,String>> #define name/value pairs; twin ThreadModuleDump94$Data.field5
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method1	uniform	adds a uniform with (name, type) argument order (delegates to method2); twin ThreadModuleDump94$Data.method1
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method2	uniform	adds a uniform (type, name) to field1; used by method8 via ShaderDefinition.method3 callbacks; twin ThreadModuleDump94$Data.method2
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method3	sampler	adds a sampler name to field2; twin ThreadModuleDump94$Data.method3
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method4	input	adds a LUNAR_IN attribute (builder for the VERTEX pass, wired via Colorsaturation4.method1/2); twin ThreadModuleDump94$Data.method4
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method5	output	adds a LUNAR_OUT attribute; twin ThreadModuleDump94$Data.method5
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method6	define	adds a preprocessor #define (caller CosmeticHighlightShader.java:32 define("REVERSE_Z","1")); twin ThreadModuleDump94$Data.method6
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method7	create	empty builder factory; twin ThreadModuleDump94$Data.method7
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method8	createFromDefinition	(Type, ShaderDefinition) factory: uniforms/samplers + addColorsaturationIO/addBuiltinDefines; twin ThreadModuleDump94$Data.method8
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method9	createFromColorsaturation	(Colorsaturation_2) factory used with method10/method11; caller CosmeticHighlightShader.java:30; twin ThreadModuleDump94$Data.method9
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method10	addColorsaturationIO	maps Colorsaturation4 attribute lists onto vertex inputs/outputs and fragment inputs for a Type; twin ThreadModuleDump94$Data.method10
+com.moonsworth.lunar.client.util.ShaderPreprocessor$Data	M	method11	addBuiltinDefines	defines SAMPLE/OUT_COLOR/POS/UV/NORMAL and the MODEL_VIEW/NORMAL/PROJECTION matrix macros for the Type; twin ThreadModuleDump94$Data.method11
+com.moonsworth.lunar.client.util.SpecBuilder	F	field1	javadocs	Set<JavadocSpec> accumulator; JavaPoet SpecBuilder calls this field javadocs; twin MixinHelper25
+com.moonsworth.lunar.client.util.SpecBuilder	F	field2	annotations	Set<AnnotationSpec> accumulator; JavaPoet SpecBuilder calls this field annotations
+com.moonsworth.lunar.client.util.SpecBuilder	M	method1	addJavadoc	adds one JavadocSpec; JavaPoet SpecBuilder.addJavadoc
+com.moonsworth.lunar.client.util.SpecBuilder	M	method2	addJavadocs	adds JavadocSpec... varargs (List.of + addAll)
+com.moonsworth.lunar.client.util.SpecBuilder	M	method3	addJavadoc	adds a JavadocBuilder by materialising it (data21.method4())
+com.moonsworth.lunar.client.util.SpecBuilder	M	method4	addJavadocs	adds JavadocBuilder... varargs
+com.moonsworth.lunar.client.util.SpecBuilder	M	method5	addAnnotation	adds one AnnotationSpec; JavaPoet SpecBuilder.addAnnotation
+com.moonsworth.lunar.client.util.SpecBuilder	M	method6	addAnnotations	adds AnnotationSpec... varargs
+com.moonsworth.lunar.client.util.SpecBuilder	M	method7	addAnnotation	adds an AnnotationSpecBuilder (data31.method9())
+com.moonsworth.lunar.client.util.SpecBuilder	M	method8	addAnnotations	adds AnnotationSpecBuilder... varargs
+com.moonsworth.lunar.client.util.SpecBuilder	M	method9	javadocs	@Generated getter for field1; JavaPoet SpecBuilder.javadocs()
+com.moonsworth.lunar.client.util.SpecBuilder	M	method10	annotations	@Generated getter for field2; JavaPoet SpecBuilder.annotations()
+com.moonsworth.lunar.client.util.StringCursor	F	field1	string	backing input string (Brigadier StringReader.string, identical API); twin ThreadModuleDump27.field1
+com.moonsworth.lunar.client.util.StringCursor	M	method1	getRemainingLength	field1.length() - cursor; Brigadier com.mojang.brigadier.StringReader (ref Venus/com/mojang/brigadier/StringReader.java); twin ThreadModuleDump27
+com.moonsworth.lunar.client.util.StringCursor	M	method2	canRead	cursor < field1.length(); Brigadier StringReader.canRead; callers CommandParser/LiteralCommandNode/ArgumentCommandNode
+com.moonsworth.lunar.client.util.StringCursor	M	method3	canRead	cursor + n <= field1.length(); Brigadier StringReader.canRead(int) overload
+com.moonsworth.lunar.client.util.StringCursor	M	method4	read	charAt(cursor++); Brigadier StringReader.read
+com.moonsworth.lunar.client.util.StringCursor	M	method5	getRemaining	substring(cursor); Brigadier StringReader.getRemaining
+com.moonsworth.lunar.client.util.SupplierExtension	M	method1	lazy	eager-on-first-get memoizing SupplierExtension (nested Data); caller Holograms9.java:27, RouteRenderer.java:27, Storageoverlay2.java:37
+com.moonsworth.lunar.client.util.SupplierExtension	M	method2	concurrentLazy	thread-safe double-checked lazy variant (ConcurrentLazySupplier, volatile lock/supplier/instance); caller PersistentValuesListener.java:21
+com.moonsworth.lunar.client.util.TextSanitizer	F	field1	ILLEGAL_FILENAME_CHARS	char[]{'/','\n','\r','\t',0,'\f','`','?','*','\\','<','>','|','"',':'} - filename-illegal set (unreferenced in-tree); twin ThreadModuleDump58.field1
+com.moonsworth.lunar.client.util.TextSanitizer	M	method1	isAllowedCharacter	character != 167 && >= ' ' && != 127 (printable, no colour code); caller ApolloPacketUtils.java:110; twin ThreadModuleDump58.method1
+com.moonsworth.lunar.client.util.TextSanitizer	M	method2	sanitize	keeps only isAllowedCharacter chars; twin ThreadModuleDump58.method2
+com.moonsworth.lunar.client.util.TextUtils	M	method1	wrapText	wraps a string to a pixel width, 15.5 offset when boolean set, delegates to FontRegistry width; caller FriendChatMessage.java:29 (180.0F, true); twin ThreadModuleDump46.method1
+com.moonsworth.lunar.client.util.TextUtils	M	method2	isValidPlayerName	length<=16 && no chars outside 33..126; used as the player-name Codec validator in ExtraCodecs.field24 with message "Player name contained disallowed characters"; twin ThreadModuleDump46.method2
+com.moonsworth.lunar.client.util.TextUtils	M	method3	capitalizeFirstLetter	first char upper (empty -> " "); caller WaypointMinimapLayer.java:30; ref Zyth B1.1 Strings.capitalizeFirstLetter; twin ThreadModuleDump46.method3
+com.moonsworth.lunar.client.util.TextUtils	M	method4	capitalize	"_"->" " then WordUtils.capitalize; caller SoundChangerEntry.java:24; twin ThreadModuleDump46.method4
+com.moonsworth.lunar.client.util.TextUtils	M	method5	toUpperSnakeCase	camelCase -> UPPER_SNAKE for option keys ("COORDINATES_..._CHILD"); callers CoordinatesBiomeChildMod.java:46, CoordinatesDirectionChildMod.java:73, CoordinatesChildHudMod.java:106, ItemCounterElementChildMod.java:113, SkyBlockTabWidgetHud.java:60; twin ThreadModuleDump46.method5
+com.moonsworth.lunar.client.util.TextUtils	M	method6	toCamelCase	enum name -> camelCase, boolean = upperFirst ("ITEM_COUNTER",false -> itemCounter; true -> ItemCounter); callers DebugType.java:15, PathfindingDebug.java:303, SkyblockChestProfit.java:258,268, CustomDroppedItems.java:129; ref Echo/Tenacity CaseUtils.toCamelCase; twin ThreadModuleDump46.method6
+com.moonsworth.lunar.client.util.TextUtils	M	method7	toKebabCase	CaseFormat.LOWER_CAMEL -> LOWER_HYPHEN; twin ThreadModuleDump46.method7
+com.moonsworth.lunar.client.util.ThreadModuleDump$Data	F	field1	javaToOsThreadIds	Java TID -> OS TID map filled from JFR events (captureJavaToOsThreadIds); printed as "Java<->OS TID map ... threads mapped"
+com.moonsworth.lunar.client.util.ThreadModuleDump$Data	F	field2	osToJavaThreadIds	OS TID -> Java TID map (reverse lookup in writeThreads var4.field2)
+com.moonsworth.lunar.client.util.ThreadModuleDump$Data	F	field3	osToJavaThreadNames	OS TID -> thread name map (allowed thread names only, var4.field3 in writeThreads)
+com.moonsworth.lunar.client.util.ThreadModuleDump$Data	F	field4	error	JFR-unavailable reason printed as "unavailable (<error>)"; null on success
+com.moonsworth.lunar.client.util.ThreadModuleDump$Data	M	method1	ofError	builds an empty Data carrying the error message (jdk.jfr not available / exception text)
+com.moonsworth.lunar.client.util.ThreadModuleDump$ResolvedAddress	F	field1	address	raw pointer resolved by resolveAddress
+com.moonsworth.lunar.client.util.ThreadModuleDump$ResolvedAddress	F	field2	moduleName	short module name (formatAddress prints module!symbol)
+com.moonsworth.lunar.client.util.ThreadModuleDump$ResolvedAddress	F	field3	modulePath	full module path (resolveAddress var6)
+com.moonsworth.lunar.client.util.ThreadModuleDump$ResolvedAddress	F	field4	moduleBase	module base address, subtracted for module+0x offset
+com.moonsworth.lunar.client.util.ThreadModuleDump$ResolvedAddress	F	field5	symbol	symbol name from dbghelp SymFromAddr, or null
+com.moonsworth.lunar.client.util.ThreadModuleDump$LoadedModule	F	field1	name	szModule() short name (MODULEENTRY32W)
+com.moonsworth.lunar.client.util.ThreadModuleDump$LoadedModule	F	field2	path	szExePath() full path; filtered by WINDIR in writeModules
+com.moonsworth.lunar.client.util.ThreadModuleDump$LoadedModule	F	field3	size	modBaseSize; range check in findOwningModule (base + size)
+com.moonsworth.lunar.client.util.ThreadModuleDump$ThreadStartAddress	F	field1	address	NtQueryInformationThread(...,9,...) ThreadQuerySetWin32StartAddress
+com.moonsworth.lunar.client.util.ThreadModuleDump$ThreadStartAddress	F	field2	error	NTSTATUS/exception text or null
+com.moonsworth.lunar.client.util.ThreadModuleDump2	M	method1	canEat	item has Food and player.bridge$canEat(canEatWhenFull); callers Saturation.java:150; twin FoodUtils.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump2	M	method2	getSaturationOverride	private: reads the "hunger"/"saturation" NBT override from the SaturationModule and marks it "Override"; twin FoodUtils.method2
+com.moonsworth.lunar.client.util.ThreadModuleDump2	M	method3	getFoodValues	food values for an item: override or vanilla healing/saturation; callers Saturation3.java:23, Saturation.method4; twin FoodUtils.method3
+com.moonsworth.lunar.client.util.ThreadModuleDump2	M	method4	getPlayerFoodValues	player-aware variant (currently delegates to getFoodValues); callers Saturation3.java:24, Saturation.java:151; twin FoodUtils.method4
+com.moonsworth.lunar.client.util.ThreadModuleDump2	M	method5	givesBadEffect	vanilla Food.givesBadEffect / ItemDataComponentTypes.field22 givesBadEffect; callers Saturation3.java:52, Saturation.java:153; twin FoodUtils.method5
+com.moonsworth.lunar.client.util.ThreadModuleDump2	M	method6	countHeals	simulates vanilla FoodStats exhaustion (4/point, 6/heal) and returns the number of natural-regeneration heals left; no in-tree caller; twin FoodUtils.method6
+com.moonsworth.lunar.client.util.ThreadModuleDump10	M	method1	disconnect	disconnects the world and halts the integrated server; callers Highlight3Task.java:88,109, ServerDiscoveryManager.java:181, WebSocketClientIterator.java:161; twin DisconnectUtils.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump11	M	method1	formatDuration	DurationFormatUtils "d'd 'H'h 'm'm 's's'" with zero units trimmed ("now" when negative); callers Fishing3.java:113, Potioneffects3.java:78, SkyblockDungeonTimer.java:647,668, Gui2Handler.java:94; twin TimeFormatting.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump11	M	method2	formatClock	HH:MM:SS with optional days; caller GuiIterator.java:161 ("duration"); twin TimeFormatting.method2
+com.moonsworth.lunar.client.util.ThreadModuleDump11	M	method3	formatTimeAgo	translated "time.ago" units; caller GuiIterator.java:193 ("lastModified"); twin TimeFormatting.method3
+com.moonsworth.lunar.client.util.ThreadModuleDump11	M	method4	formatDateTime	SimpleDateFormat "d MMM HH:mm:ss" (year only when different); callers GuiIterator.java:192, Fov2_3.java:59; twin TimeFormatting.method4
+com.moonsworth.lunar.client.util.ThreadModuleDump11	M	method5	formatSeconds	rounded seconds with 2 decimals ("%.2f"); twin TimeFormatting.method5
+com.moonsworth.lunar.client.util.ThreadModuleDump11	M	method6	formatWithPattern	private String.format dispatcher honouring the Type flags; twin TimeFormatting.method6
+com.moonsworth.lunar.client.util.ThreadModuleDump11	M	method7	formatCompact	dynamic compact form "1m59s"/"1h2m"/"1d2h"; bound to Type.COMPACT_DYNAMIC (ThreadModuleDump11::method7); twin TimeFormatting.method7
+com.moonsworth.lunar.client.util.ThreadModuleDump11	M	method8	formatVerbose	dynamic spaced form "1d 2h 3m 4s" skipping leading zero units; bound to Type.EASY_DYNAMIC_1 (ThreadModuleDump11::method8); twin TimeFormatting.method8
+com.moonsworth.lunar.client.util.ThreadModuleDump12	F	field1	CONSTANT_NAME_PATTERN	"[A-Z0-9_]{2,}" - constant-name validation; twin RegexPatterns.field1
+com.moonsworth.lunar.client.util.ThreadModuleDump12	F	field2	IDENTIFIER_PATTERN	"^([a-z]+\\.)?[a-z0-9]+(([A-Z]{1,4}[a-z0-9]+)*...)$" - lowerCamel/qualified identifier validation; twin RegexPatterns.field2
+com.moonsworth.lunar.client.util.ThreadModuleDump12	F	field3	CLASS_NAME_PATTERN	"^([A-Z][a-z0-9]+)((\\d)|([A-Z0-9][a-z0-9]+))*([A-Z])?$" - UpperCamel class-name validation; twin RegexPatterns.field3
+com.moonsworth.lunar.client.util.ThreadModuleDump13	M	method1	runOnMainThread	runs a Consumer on the Minecraft main thread via Ref.method3().bridge$submit, logging errors with the "PacketUtil" tag; callers EntityRenderer4.java:345,360,794, WebSocketClientIterator.java:195; twin PacketUtil.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump13	M	method2	runCallbackOnMainThread	runs an RpcCallback on the main thread; caller RpcChannelImpl.java:79,81 (mixin + waypoints copies); twin PacketUtil.method2
+com.moonsworth.lunar.client.util.ThreadModuleDump14	M	method1	isNoErrorContextEnabled	initialises on first call and returns field2; twin EarlyOptions.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump14	M	method2	getActiveProfileName	reads profile_manager.json and returns the active profile name ("Default" fallback); twin EarlyOptions.method2
+com.moonsworth.lunar.client.util.ThreadModuleDump14	M	method3	isFastTextEnabled	OptimizationdebugmodType.FAST_TEXT.isEnabled(); twin EarlyOptions.method3
+com.moonsworth.lunar.client.util.ThreadModuleDump15	M	method1	getSlope	(y2-y1)/(x2-x1) for a Line2D; twin LineMath.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump15	M	method2	getYIntercept	y1 - slope*x1; twin LineMath.method2
+com.moonsworth.lunar.client.util.ThreadModuleDump15	M	method3	getIntersection	intersection point of two Line2D or Optional.empty; caller SkyblockTpMaze.java:146 (twin LineMath.method3); twin LineMath.method3
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field4	SRGB_LINEAR_THRESHOLD	0.04045 sRGB->linear cutoff; twin ColorMath.field4
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field5	SRGB_LINEAR_SCALE	12.92 sRGB->linear divisor; twin ColorMath.field5
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field6	GAMMA_OFFSET	0.055 sRGB gamma offset; twin ColorMath.field6
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field7	GAMMA_SCALE	1.055 sRGB gamma scale; twin ColorMath.field7
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field8	GAMMA	2.4 gamma exponent; twin ColorMath.field8
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field9	X_FROM_RED	0.4124 RGB->XYZ matrix row X col R; twin ColorMath.field9
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field10	X_FROM_GREEN	0.3576; twin ColorMath.field10
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field11	X_FROM_BLUE	0.1805; twin ColorMath.field11
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field12	Y_FROM_RED	0.2126; twin ColorMath.field12
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field13	Y_FROM_GREEN	0.7152; twin ColorMath.field13
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field14	Y_FROM_BLUE	0.0722; twin ColorMath.field14
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field15	Z_FROM_RED	0.0193; twin ColorMath.field15
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field16	Z_FROM_GREEN	0.1192; twin ColorMath.field16
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field17	Z_FROM_BLUE	0.9505; twin ColorMath.field17
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field18	WHITE_X	D65 Xn 95.047; twin ColorMath.field18
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field19	WHITE_Y	D65 Yn 100.0; twin ColorMath.field19
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field20	WHITE_Z	D65 Zn 108.883; twin ColorMath.field20
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field21	PERCENT_SCALE	100.0 used to scale XYZ to percent and back; twin ColorMath.field21
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field22	LAB_EPSILON	0.008856 CIE epsilon; twin ColorMath.field22
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field23	LAB_KAPPA	7.787 CIE kappa; twin ColorMath.field23
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field24	LAB_OFFSET	16/116 = 0.13793103448275862; twin ColorMath.field24
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field25	LAB_L_SCALE	116.0; twin ColorMath.field25
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field26	LAB_L_OFFSET	16.0; twin ColorMath.field26
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field27	LAB_A_SCALE	500.0; twin ColorMath.field27
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field28	LAB_B_SCALE	200.0; twin ColorMath.field28
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field29	RED_FROM_X	3.2406 XYZ->RGB matrix row R col X; twin ColorMath.field29
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field30	RED_FROM_Y	-1.5372; twin ColorMath.field30
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field31	RED_FROM_Z	-0.4986; twin ColorMath.field31
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field32	GREEN_FROM_X	-0.9689; twin ColorMath.field32
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field33	GREEN_FROM_Y	1.8758; twin ColorMath.field33
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field34	GREEN_FROM_Z	0.0415; twin ColorMath.field34
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field35	BLUE_FROM_X	0.0557; twin ColorMath.field35
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field36	BLUE_FROM_Y	-0.204; twin ColorMath.field36
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field37	BLUE_FROM_Z	1.057; twin ColorMath.field37
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field38	GAMMA_THRESHOLD	0.0031308 linear->sRGB cutoff; twin ColorMath.field38
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field1	MAX_HUE	360.0 degrees; SIG-SENSITIVE (Data/LabColor also declare field1); twin ColorMath.field1
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field2	HALF_HUE	180.0 degrees (hue wrap threshold); twin ColorMath.field2
+com.moonsworth.lunar.client.util.ThreadModuleDump17	F	field3	MAX_CHANNEL	255.0 8-bit channel max; twin ColorMath.field3
+com.moonsworth.lunar.client.util.ThreadModuleDump17	M	method1	interpolateHue	lerps hue with 180-degree wrap-around; SIG-SENSITIVE (nested Data/Data2 also declare method1); twin ColorMath.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump17	M	method2	rgbToLch	RGB -> (L, chroma=hypot(a,b), hue=atan2) LCH; SIG-SENSITIVE (nested getters named method2); twin ColorMath.method2
+com.moonsworth.lunar.client.util.ThreadModuleDump17	M	method3	lchToRgb	(L, chroma, hueDeg, alpha) -> RGB via Lab; SIG-SENSITIVE; twin ColorMath.method3
+com.moonsworth.lunar.client.util.ThreadModuleDump17	M	method4	rgbToLab	RGB -> CIE L*a*b* (D65); SIG-SENSITIVE; twin ColorMath.method4
+com.moonsworth.lunar.client.util.ThreadModuleDump17	M	method5	labToRgb	CIE L*a*b* -> RGB with alpha; SIG-SENSITIVE; twin ColorMath.method5
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data	F	field1	lightness	L component of the LCH result (method2 uses LabColor.field1 as L); class Data holds L,C,H
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data	F	field2	chroma	C component (hypot(a,b))
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data	F	field3	hue	H component in degrees (atan2)
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data	M	method1	getLightness	returns field1
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data	M	method2	getChroma	returns field2
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data	M	method3	getHue	returns field3
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data2	F	field1	lightness	L* component (LabColor twin class)
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data2	F	field2	a	a* green-red component
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data2	F	field3	b	b* blue-yellow component
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data2	M	method1	getLightness	returns field1
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data2	M	method2	getA	returns field2
+com.moonsworth.lunar.client.util.ThreadModuleDump17$Data2	M	method3	getB	returns field3
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field1	HALF_PI	(float)(Math.PI/2) used by the sine easings; twin Easing.field1
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field2	LINEAR	t->t identity easing (default map); twin Easing.field2
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field3	STEP_END	0 until t>=1 (getAverageValue 0.0); twin Easing.field3
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field4	STEP_START	1 for any t>0 (getAverageValue 1.0); twin Easing.field4
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field5	STEP_MIDDLE	1 for t>0.5; twin Easing.field5
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field6	SMOOTHSTEP	t*t*(3-2t); twin Easing.field6
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field7	SMOOTHSTEP_DOUBLED	smoothstep applied twice; twin Easing.field7
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field8	SMOOTHERSTEP	t^3(t(6t-15)+10); twin Easing.field8
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field9	QUADRATIC_IN	t*t (average 1/3); twin Easing.field9
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field10	QUADRATIC_OUT	1-(1-t)^2 (average 2/3); twin Easing.field10
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field11	QUADRATIC_IN_OUT	standard quad in-out; twin Easing.field11
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field12	CUBIC_IN	t^3 (average 1/4); twin Easing.field12
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field13	CUBIC_OUT	1-(1-t)^3 (average 3/4); twin Easing.field13
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field14	CUBIC_IN_OUT	standard cubic in-out; twin Easing.field14
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field15	SINE_IN	1-cos(t*PI/2) (average 2/pi-1); twin Easing.field15
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field16	SINE_OUT	sin(t*PI/2); twin Easing.field16
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field17	SINE_IN_OUT	(1-cos(t*PI))/2; twin Easing.field17
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field18	EXPONENTIAL_IN	2^(10t-10); twin Easing.field18
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field19	EXPONENTIAL_OUT	1-2^(-10t); twin Easing.field19
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field20	EXPONENTIAL_IN_OUT	standard expo in-out; twin Easing.field20
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field21	CIRCULAR_IN	1-sqrt(1-t^2) (average 1-pi/4); twin Easing.field21
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field22	CIRCULAR_OUT	sqrt(1-(t-1)^2) (average pi/4); twin Easing.field22
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field23	CIRCULAR_IN_OUT	standard circular in-out; twin Easing.field23
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field24	BACK_IN	2.70158t^3-1.70158t^2; twin Easing.field24
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field25	BACK_OUT	1+2.70158(t-1)^3+1.70158(t-1)^2; twin Easing.field25
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field26	BACK_IN_OUT	standard back in-out (s=3.5949095); twin Easing.field26
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field27	BEZIER	4-point cubic Bezier interpolate override (method3/method4); twin Easing.field27
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field28	ELASTIC_IN	Data(2,10,6,1) sine/exp elastic in; twin Easing.field28
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field29	ELASTIC_OUT	Data3(2,10,7,1); twin Easing.field29
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field30	ELASTIC_IN_OUT	Data2(2,10,7,1); twin Easing.field30
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field31	BACK_IN_OVERSHOOT	BackIn(2.0) parameterized overshoot variant; twin Easing.field31
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field32	BACK_OUT_OVERSHOOT	BackOut(2.0); twin Easing.field32
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field33	BACK_IN_OUT_OVERSHOOT	BackInOut(1.5); twin Easing.field33
+com.moonsworth.lunar.client.util.ThreadModuleDump18	F	field34	averageValue	mean of the easing curve (this.method5()), returned by getAverageValue (method6); twin Easing.field34
+com.moonsworth.lunar.client.util.ThreadModuleDump18	M	method1	map	float easing map(t); Java easing convention, overridden by every easing singleton; SIG-SENSITIVE (multi-decl) - correct for the whole family under a signature-aware pass; twin Easing.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump18	M	method2	map	double easing map(t) overload; SIG-SENSITIVE (multi-decl); twin Easing.method2
+com.moonsworth.lunar.client.util.ThreadModuleDump18	M	method3	interpolate	(a,b,c,d,t) cubic Bezier-style interpolation in float; SIG-SENSITIVE (multi-decl); twin Easing.method3
+com.moonsworth.lunar.client.util.ThreadModuleDump18	M	method4	interpolate	double interpolation overload; SIG-SENSITIVE (multi-decl); twin Easing.method4
+com.moonsworth.lunar.client.util.ThreadModuleDump18	M	method5	average	protected mean of the easing over [0,1] (0.333 for t^2, 0.25 for t^3, 1-2/pi for sine-in, ...); SIG-SENSITIVE (multi-decl); twin Easing.method5
+com.moonsworth.lunar.client.util.ThreadModuleDump18	M	method6	getAverageValue	@Generated getter for averageValue (field34); twin Easing.method6
+com.moonsworth.lunar.client.util.ThreadModuleDump18$Data2	F	field35	base	exponential base 2.0 in the elastic formulas; twin Easing$ElasticInOut.field35
+com.moonsworth.lunar.client.util.ThreadModuleDump18$Data2	F	field36	exponent	exponent factor 10.0; twin Easing$ElasticInOut.field36
+com.moonsworth.lunar.client.util.ThreadModuleDump18$Data2	F	field37	scale	amplitude scale (1.0); twin Easing$ElasticInOut.field37
+com.moonsworth.lunar.client.util.ThreadModuleDump18$Data2	F	field38	sinePeriod	(int period)*PI with sign = period%2==0 ? 1 : -1 (6 or 7); twin Easing$ElasticInOut.field38
+com.moonsworth.lunar.client.util.ThreadModuleDump18$Data4	F	field35	overshoot	2*parameter back overshoot (Data4(1.5) -> 3.0); twin Easing$BackInOut.field35
+com.moonsworth.lunar.client.util.ThreadModuleDump19	M	method1	arrayEquals	deep array equality: length, boolean[]/char[] special cases, element-wise Objects.equals fallback; caller Chest.java:323; twin ArrayUtils.method1
+com.moonsworth.lunar.client.util.ThreadModuleDump19	M	method2	arrayToString	"[a, b, ...]" array formatting; callers Chest.java:335,379; twin ArrayUtils.method2
+com.moonsworth.lunar.client.util.ThreadModuleDump20	F	field1	onOpen	hook run when the click hologram opens: Bridge7Iterator.java:197 ThreadModuleDump20.field1.run(); twin RunnableHolder.field1
+com.moonsworth.lunar.client.util.ThreadModuleDump20	F	field2	onClose	hook run in Bridge7Iterator.close (Bridge7Iterator.java:239); twin RunnableHolder.field2

@@ -1,0 +1,42 @@
+package	old	new	evidence
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper2	RouteSubcommand	interface with execute(String[]) + tab-complete(String[]) implemented by every /route subcommand; registry MixinHelper5 maps keys to it
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper5	RouteCommand	ClientCommand "/route": builds the arg tree, dispatches to subcommands via Map<String,RouteSubcommand> (help/save/start/clone/cancel/reset/info/show/delete/select/deselect/section/list/meta/sectionmeta/whitelist/blacklist); gated to dungeons
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper3	WarpCommand	ClientCommand "warp": sends "/warp <destination>", autocompletes from the server warp list, only on SkyBlock island
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper4	SendCoordsCommand	ClientCommand "sendcoords": broadcasts "x/y/z" to all/party/guild/officer/coop chat channels
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper6	RouteResetSubcommand	"/route reset": resets progress for the current room (RouteTracker.method15)
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper7	RouteCancelSubcommand	"/route cancel": cancels the active route recording ("recordingCancelled")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper8	RouteSectionMetaSubcommand	"/route sectionmeta": edits per-section meta swaponlocked + text holograms add/remove ("metaForCurrentSection")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper9	RouteBlacklistSubcommand	"/route blacklist": list/add/remove/clear rooms ("roomBlackList")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper10	RouteCloneSubcommand	"/route clone": clones the selected route under a new name ("successfullyClonedRoute")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper1010	RouteListSubcommand	"/route list": lists routes in the current room with [B]uiltin/[H]idden tags and click-to-select ("routesInCurrentRoom")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper1011	RouteDeselectSubcommand	"/route deselect": clears the active route section ("routeDeselected")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper1012	RouteSelectSubcommand	"/route select <name>": resolves name or routeName:section link and selects it ("selectedRoute")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper1013	RouteWhitelistSubcommand	"/route whitelist": list/add/remove/clear rooms ("roomWhitelist")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper102	RouteMetaSubcommand	"/route meta": edits route meta hidden + swaponcomplete ("metaForCurrent")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper103	RouteDeleteSubcommand	"/route delete <name>": warns about swapOnComplete/swapOnLocked dependents then deletes ("routeDeleteSuccess")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper104	RouteShowSubcommand	"/route show [name]": toggles showing all routes in the room or finds one ("showingAllRoutesInCurrentRoom")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper105	RouteStartSubcommand	"/route start": starts/resets route recording ("freeToStartRecording")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper106	RouteSaveSubcommand	"/route save <name>": saves the current recording to a route ("successfullySaved")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper107	RouteHelpSubcommand	"/route help": prints help for meta/sectionmeta/whitelist/blacklist
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper108	RouteSectionSubcommand	"/route section prev|next|<index>": switches the active route section ("currentRouteSection")
+com.moonsworth.lunar.client.framework.feature.mod.mixin	MixinHelper109	RouteInfoSubcommand	"/route info <name>": looks up a route by name/owner-name and prints it ("foundRoute")
+com.moonsworth.lunar.client.framework.feature.mod	GuiRewindhandlersHandler2	GuiModuleManager	event handler managing GUI modules: registers ScreenModule/OverlayModule lists, tracks the active screen (field12) and open overlays (field11), opens/closes on EventScreenUpdate
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper2	WidgetStateCache	per-GUI widget state cache: Map<guiId, Map<widgetId, WidgetState>>, hover/scale animation, marks states dirty; beginWidget/endWidget/isDirty
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper210	RectRenderer	filled-rectangle renderer: method1(x,y,w,h,color) batches draws and flushes (method17) with a dirty IntRectangle for old MC scissor
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper211	ScissorStack	clip-rectangle stack: push/intersect (method1/2), applies glScissor via Bridge7Iterator.method113, contains/outside tests (method4/5)
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper22	KeyboardInput	per-GUI key-event queue: method2 queues KeyEventBridge, method18 returns last frame's keys, shift-down check
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper22_2	ScrollAnimator	per-rect scroll offset animation: accumulates a float (ThreadModuleDump47.Data) and applies a z-translation around a render runnable
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper23	SlotRenderer	inventory slot-grid renderer: draws 9-wide item slots, quick-craft drag selection, shift-click, slot-lock and protect-item overlays
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper24	PanelRenderer	titled window/panel renderer: method1/2 draw panel borders/background from GuiTheme and centre a title
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper25	ItemStackRenderer	item-stack renderer: draws the stack, durability bar, stack-size overlay, rarity background and search-highlight, fires EventRenderItemStackSize
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper26	BoxRenderer	box/border renderer: panel box (method1), inset box (method2/3) and separator line (method4) using GuiTheme colours
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper27	ScaledTextRenderer	scaled text renderer: method1/2 draw text at a scale (with optional scissor), getStringWidth, method3 computes fit scale
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper28	TextFieldRenderer	text-input renderer/editor: placeholder, cursor blink, selection highlight, key handling, returns the edited text
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper2_2	MouseInput	mouse input handler: press/release tracking and a deferred click queue (List<MouseClick>) polled per rect for widget activation
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper2_3	GuiComponent	abstract base of every GUI subsystem: holds the GuiRenderer, exposes sibling accessors and theme, start()/end() lifecycle
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper3	GuiRenderState	pushed/popped GUI render state: visibility flags, clip rectangle, search text and x/y/z scale; copied on push (MixinHelper.method3/4)
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper_2	MouseClick	completed mouse click record (x, y, button): contains(rect) test and button getter, queued by MouseInput
+com.moonsworth.lunar.client.framework.feature.mod	MixinHelper_3	WidgetState	per-widget persistent state (id, x, y, w, h, scale, isDirty) with hover/update/delete hooks, owned by WidgetStateCache
+com.moonsworth.lunar.client.framework.feature.mod	Module2	GuiEventDispatcher	dispatches render/scroll/click/drag/key events to the active screen module or, failing that, to all open overlay modules; queues tasks until a module is active
+com.moonsworth.lunar.client.framework.feature.mod	ModuleBase2	OverlayModule	concrete GUI module shown as an overlay on top of the current screen (registered/activated via GuiModuleManager field10/field11)
+com.moonsworth.lunar.client.framework.feature.mod	Module_2	GuiModule	abstract GUI module base: render(screen,matrix,x,y,partialTicks), scroll/click/drag/key hooks and onClose; superclass of ScreenModule/OverlayModule

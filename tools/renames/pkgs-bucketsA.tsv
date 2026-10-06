@@ -1,0 +1,4 @@
+# Bucket batch A: junk-name packages
+com.moonsworth.lunar.client.lightoverlay	com.moonsworth.lunar.client.option.trait	not the light-overlay feature: TraitType/TraitBuilder trait registry for the options framework
+com.moonsworth.lunar.client.highlight	com.moonsworth.lunar.client.event	the event bus (ledger classes-23/26)
+com.moonsworth.lunar.client.guiRewindhandlers	com.moonsworth.lunar.client.framework.listener	dynamic-listener framework (CpsListener/TabListListener), not a GUI package

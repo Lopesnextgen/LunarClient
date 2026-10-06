@@ -1,0 +1,8 @@
+{
+    "vanilla": "^<(?<username>\\w{3,16})> (?<contents>.*)$",
+    "vanillaWhisper": "^(?<username>\\w{3,16}) whispers to you: (?<contents>.*)$",
+    "hypixel": "^(?<tag>Guild|Party|Co-op)?( > )?(?<lvl>[\\[{]\\d{1,5}.?[}\\]])? ?(?<rank>\\[[\\w\\+]{3,10}])? (?<username>\\w{3,16}) ?(?<guildRank>\\[\\w{1,10}])?: (?<contents>.*)$",
+    "hypixelWhisper": "^(?<direction>From|To) (?<rank>\\[[\\w\\+]{3,10}])? (?<username>\\w{3,16}): (?<contents>.*)$",
+    "hypixelSkyBlock": "^(?<lvl>\\[\\d{1,3}]) ?(?<emblem>.)? (?<rank>\\[[\\w\\+]{3,10}])? (?<username>\\w{3,16}): (?<contents>.*)$",
+    "hypixelPit": "^(?<lvl>\\[[IXVL]+-\\d{1,3}[}\\]])? ?(?<rank>\\[[\\w\\+]{3,10}])? (?<username>\\w{3,16}): (?<contents>.*)$"
+}

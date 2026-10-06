@@ -1,0 +1,40 @@
+com.moonsworth.lunar.client.util	ThreadModuleDump66	ProtoConverter	protobuf<->java conversions: Uuid, Timestamp/Instant, Duration, Vector3f/2i/3i, Struct/JsonObject, Direction
+com.moonsworth.lunar.client.util	ThreadModuleDump67	MathUtils	clamp/ceil/floor/lerp/angle-wrap/distance helpers
+com.moonsworth.lunar.client.util	ThreadModuleDump68	ClipboardUtils	clipboard get/set string and image (osascript path on macOS)
+com.moonsworth.lunar.client.util	ThreadModuleDump69	HeadTextureCache	download/heads + download/wrapped player head textures cache
+com.moonsworth.lunar.client.util	ThreadModuleDump7	RectangleQuadtree	quadtree spatial index of IntRectangle nodes, splits into 4 children, culls contained rects
+com.moonsworth.lunar.client.util	ThreadModuleDump70	IntRectangle	int left/top/right/bottom rect with intersects/contains/union/intersection
+com.moonsworth.lunar.client.util	ThreadModuleDump71	GuiResolution	scaled resolution: displayW/H, guiScale, scaledW/H (MCP ScaledResolution clone)
+com.moonsworth.lunar.client.util	ThreadModuleDump72	DownloadedImageCache	downloaded-images dir, base64 decode, md5 filename, texture load
+com.moonsworth.lunar.client.util	ThreadModuleDump73	EntityLookup	nearby entity search by AABB radius + entity type name by id
+com.moonsworth.lunar.client.util	ThreadModuleDump75	RomanNumeralUtils	int<->roman numeral conversion + validation regex
+com.moonsworth.lunar.client.util	ThreadModuleDump76	ResourcePackUtils	pack folder/zip filters, assets path, folder icons
+com.moonsworth.lunar.client.util	ThreadModuleDump77	UncheckedFunctional	wraps throwing runnable/supplier/consumer/function into unchecked variants
+com.moonsworth.lunar.client.util	ThreadModuleDump78	MapRemoval	remove map entries by key/value predicate
+com.moonsworth.lunar.client.util	ThreadModuleDump79	PortUtils	find free local port / test port
+com.moonsworth.lunar.client.util	ThreadModuleDump8	MatrixConversion	javax.vecmath <-> joml Matrix4f/Matrix3f conversion
+com.moonsworth.lunar.client.util	ThreadModuleDump80	LaunchOptions	static Lunar launch args: launcher version, installation id, sentry trace, modpack ids, dirs
+com.moonsworth.lunar.client.util	ThreadModuleDump81	Vector2dPair	generic Vector2d + value pair (waypoint screen position)
+com.moonsworth.lunar.client.util	ThreadModuleDump82	BlockSearch	spiral/BFS/random position searches around a block
+com.moonsworth.lunar.client.util	ThreadModuleDump83	RomanNumeralParser	parse/replace roman numerals inside text (fishing tier)
+com.moonsworth.lunar.client.util	ThreadModuleDump84	WeightedValue	comparable (value, float cost) pair for Dijkstra priority queue
+com.moonsworth.lunar.client.util	ThreadModuleDump85	MousePosition	current mouse position adjusted for GUI scale
+com.moonsworth.lunar.client.util	ThreadModuleDump86	FormattingCodes	strips section-sign formatting codes from text
+com.moonsworth.lunar.client.util	ThreadModuleDump87	Initializable	init-once interface with static supplier factory
+com.moonsworth.lunar.client.util	ThreadModuleDump88	NameTagUpdateListener	player name tag update callback (lunar$onNameTagUpdate)
+com.moonsworth.lunar.client.util	ThreadModuleDump89	ItemTypeLookup	item type by registry name/id -> BridgeExtension_4
+com.moonsworth.lunar.client.util	ThreadModuleDump90	FoodValues	hunger (int) + saturation (float) pair
+com.moonsworth.lunar.client.util	ThreadModuleDump92	CubeGeometry	cube vertices/indices/UV helpers for box rendering
+com.moonsworth.lunar.client.util	ThreadModuleDump93	DirtyFlag	deferred dirty flag triggering keybind/lighting refresh on event
+com.moonsworth.lunar.client.util	ThreadModuleDump94	ShaderPreprocessor	LUNAR-SHADER-DEFINITION-MARKER GLSL preprocessor (uniforms/in/out/version)
+com.moonsworth.lunar.client.util	ThreadModuleDump95	DoubleRectangle	double x/y/width/height rect with intersects/contains
+com.moonsworth.lunar.client.util	ThreadModuleDumpIterator2	FilteringIterator	predicate-filtering iterator
+com.moonsworth.lunar.client.util	ThreadModuleDumpType2	OperatingSystem	OS detection enum (MACOS/LINUX/WINDOWS/SOLARIS/UNKNOWN)
+com.moonsworth.lunar.client.util	ThreadModuleDumpType3	Flag	singleton marker enum (INSTANCE) for boolean nameplate attributes
+com.moonsworth.lunar.client.util	ThreadModuleDumpType4	Corner	TOP_LEFT/TOP_RIGHT/BOTTOM_LEFT/BOTTOM_RIGHT with rotate/opposite/offsets
+com.moonsworth.lunar.client.util	ThreadModuleDumpType5	ConditionState	ANY/TRUE/FALSE condition state with Condition subclasses
+com.moonsworth.lunar.client.util	Type2	JavadocTag	JavadocSpec$Type2	com/moonsworth/lunar/client/util/JavadocSpec.java
+com.moonsworth.lunar.client.util	Type2	TimeFormat	TimeFormatting$Type2	com/moonsworth/lunar/client/util/TimeFormatting.java
+com.moonsworth.lunar.client.util	Type3	JavadocElementType	JavadocSpec$Type3	com/moonsworth/lunar/client/util/JavadocSpec.java
+com.moonsworth.lunar.client.util	Util2	AsyncResource	async texture resource interface (ExecutorService, get, Optional, load)
+com.moonsworth.lunar.client.util	Util_2	AsyncResourceManager	[LC Async Resources] manager tracking resident sizes / quality downgrade

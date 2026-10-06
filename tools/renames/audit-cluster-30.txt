@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms.mixin
+com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms.nameplate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.holograms.rewindhandlers
+com.moonsworth.lunar.client.framework.feature.mod.fishing.lotusfish
+com.moonsworth.lunar.client.framework.feature.mod.fishing.lotusfish.mixin
+com.moonsworth.lunar.client.framework.feature.mod.fishing.mixin
+com.moonsworth.lunar.client.framework.feature.mod.fishing.nameplate
+com.moonsworth.lunar.client.framework.feature.mod.fishing.rewindhandlers

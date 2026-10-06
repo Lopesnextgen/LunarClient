@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.fog.chest
+com.moonsworth.lunar.client.fog.click
+com.moonsworth.lunar.client.fog.click.mixin
+com.moonsworth.lunar.client.fog.colorsaturation
+com.moonsworth.lunar.client.fog.fishing
+com.moonsworth.lunar.client.fog.gui
+com.moonsworth.lunar.client.fog.highlight
+com.moonsworth.lunar.client.fog.highlight.mixin

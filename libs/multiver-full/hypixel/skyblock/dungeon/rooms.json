@@ -1,0 +1,4531 @@
+[
+  {
+    "hashes": [
+      "961328073-99"
+    ],
+    "ids": [
+      "102,66"
+    ],
+    "communityName": "Entrance",
+    "roofHeight": 99,
+    "type": "SPAWN",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "-30183057-98",
+      "1571433190-98",
+      "-195372972-98",
+      "-1328533812-98"
+    ],
+    "ids": [
+      "282,66"
+    ],
+    "communityName": "Entrance",
+    "roofHeight": 98,
+    "type": "SPAWN",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "-1704965314-119"
+    ],
+    "ids": [
+      "710,-592"
+    ],
+    "communityName": "Mines",
+    "blcName": "Mithril-Cave-10",
+    "roofHeight": 119,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "56,78,58",
+        "levers": [
+          "34,79,59"
+        ]
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "1,89,57",
+        "entrance": "8,89,52",
+        "superboom": "6,90,57"
+      },
+      {
+        "type": "CHEST",
+        "pos": "31,99,58"
+      },
+      {
+        "type": "CHEST",
+        "pos": "9,108,17",
+        "entrance": "23,100,8"
+      },
+      {
+        "type": "CHEST",
+        "pos": "9,109,30",
+        "superboom": "13,111,21"
+      },
+      {
+        "type": "CHEST",
+        "pos": "41,80,12",
+        "levers": [
+          "52,79,9"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "9,82,21",
+        "entrance": "20,90,18",
+        "levers": [
+          "14,80,3"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "60,43,50",
+        "entrance": "58,44,45"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "53,48,8",
+        "entrance": "53,48,13"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "4,54,56",
+        "entrance": "7,55,46"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-54799622-99"
+    ],
+    "ids": [
+      "642,-96"
+    ],
+    "communityName": "Double Diamond",
+    "blcName": "Double-Diamond-2",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "6,69,6",
+        "superboom": "6,70,10"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "25,65,23"
+      },
+      {
+        "type": "CHEST",
+        "pos": "11,82,19",
+        "entrance": "26,81,13",
+        "levers": [
+          "24,88,26"
+        ]
+      }
+    ],
+    "blcRotOffset": 2
+  },
+  {
+    "hashes": [
+      "556479164-99"
+    ],
+    "ids": [
+      "1050,-524"
+    ],
+    "communityName": "Layers",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "35,59,51",
+        "entrance": "35,69,57"
+      },
+      {
+        "type": "CHEST",
+        "pos": "47,69,47",
+        "levers": [
+          "8,91,32"
+        ]
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "25,70,28"
+      },
+      {
+        "type": "CHEST",
+        "pos": "54,78,56",
+        "entrance": "42,78,56"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "47,79,34",
+        "superboom": "47,79,42"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "7,96,56"
+      },
+      {
+        "type": "CHEST",
+        "pos": "13,69,26",
+        "superboom": "9,70,26"
+      },
+      {
+        "type": "CHEST",
+        "pos": "5,69,2",
+        "levers": [
+          "5,76,2"
+        ]
+      }
+    ],
+    "blcName": "Layers-8"
+  },
+  {
+    "hashes": [
+      "-867967381-99"
+    ],
+    "ids": [
+      "102,-132"
+    ],
+    "communityName": "Blue Skulls",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "28,77,27",
+        "entrance": "4,77,21"
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Blue-Skulls-1"
+  },
+  {
+    "hashes": [
+      "-1412424546-100"
+    ],
+    "ids": [
+      "-312,30"
+    ],
+    "communityName": "Old Trap",
+    "blcName": "Trap-Hard-4",
+    "roofHeight": 100,
+    "type": "TRAP",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "26,83,4"
+      },
+      {
+        "type": "CHEST",
+        "pos": "23,90,17",
+        "levers": [
+          "28,83,3"
+        ]
+      },
+      {
+        "type": "BAT",
+        "pos": "22,89,8"
+      },
+      {
+        "type": "CHEST",
+        "pos": "4,71,9",
+        "levers": [
+          "4,90,8"
+        ]
+      }
+    ],
+    "blcRotOffset": 2
+  },
+  {
+    "hashes": [
+      "-713731101-103"
+    ],
+    "ids": [
+      "1526,-384"
+    ],
+    "communityName": "Grand Library",
+    "roofHeight": 103,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "31,58,15",
+        "entrance": "47,62,15",
+        "levers": [
+          "47,77,2",
+          "47,88,28",
+          "59,94,3"
+        ]
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "27,57,19",
+        "entrance": "47,62,15",
+        "levers": [
+          "47,77,2",
+          "47,88,28",
+          "59,94,3"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "23,93,2"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "6,80,3",
+        "entrance": "7,81,11",
+        "superboom": "11,81,5"
+      }
+    ],
+    "blcName": "Grand-Library-4"
+  },
+  {
+    "hashes": [
+      "-694337008-99"
+    ],
+    "ids": [
+      "914,-524"
+    ],
+    "communityName": "Pirate",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "46,84,57",
+        "entrance": "43,60,56"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "3,60,57"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "19,60,4",
+        "entrance": "5,60,20"
+      },
+      {
+        "type": "BAT",
+        "pos": "17,62,46",
+        "superboom": "16,61,41"
+      },
+      {
+        "type": "CHEST",
+        "pos": "15,60,46",
+        "superboom": "16,61,41"
+      },
+      {
+        "type": "CHEST",
+        "pos": "17,83,60",
+        "levers": [
+          "15,82,19"
+        ]
+      }
+    ],
+    "blcName": "Pirate-6"
+  },
+  {
+    "hashes": [
+      "452880897-99",
+      "-1213365209-99"
+    ],
+    "ids": [
+      "230,-420"
+    ],
+    "communityName": "Diagonal",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x3",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "11,60,9",
+        "entrance": "11,69,21"
+      },
+      {
+        "type": "BAT",
+        "pos": "31,70,2",
+        "entrance": "37,70,2"
+      },
+      {
+        "type": "CHEST",
+        "pos": "69,60,29",
+        "entrance": "69,70,14"
+      },
+      {
+        "type": "CHEST",
+        "pos": "90,77,14",
+        "entrance": "84,77,11"
+      },
+      {
+        "type": "FAIRY_SOUL",
+        "pos": "31,68,3",
+        "entrance": "37,70,2"
+      }
+    ],
+    "blcName": "Diagonal-4"
+  },
+  {
+    "hashes": [
+      "-587231245-99"
+    ],
+    "ids": [
+      "138,-132"
+    ],
+    "communityName": "Tomioka",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "FAIRY_SOUL",
+        "pos": "24,69,3",
+        "entrance": "12,70,5"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "1563421113-99",
+      "1925280088-99",
+      "-1059752444-99",
+      "1493388510-99",
+      "548956032-99"
+    ],
+    "ids": [
+      "174,66",
+      "210,66",
+      "246,102",
+      "210,102",
+      "318,66"
+    ],
+    "communityName": "Miniboss",
+    "roofHeight": 99,
+    "type": "MINIBOSS",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "1103309321-100"
+    ],
+    "ids": [
+      "-60,-96"
+    ],
+    "communityName": "Three Weirdos",
+    "roofHeight": 100,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "-1783655984-99"
+    ],
+    "ids": [
+      "606,-168"
+    ],
+    "communityName": "Small Stairs",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "24,63,2",
+        "entrance": "18,65,4"
+      },
+      {
+        "type": "CHEST",
+        "pos": "3,82,6",
+        "superboom": "3,82,13"
+      }
+    ],
+    "blcName": "Small-Stairs-2"
+  },
+  {
+    "hashes": [
+      "-112263651-99"
+    ],
+    "ids": [
+      "498,-132"
+    ],
+    "communityName": "Chains",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "27,69,10",
+        "superboom": "19,70,6"
+      },
+      {
+        "type": "CHEST",
+        "pos": "17,86,14",
+        "entrance": "8,76,5"
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Chains-2"
+  },
+  {
+    "hashes": [
+      "387790674-90"
+    ],
+    "ids": [
+      "-132,-492"
+    ],
+    "communityName": "Ice Fill",
+    "roofHeight": 90,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "1677472463-99"
+    ],
+    "ids": [
+      "954,-456"
+    ],
+    "communityName": "Pipes",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x4",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "63,55,26",
+        "levers": [
+          "52,94,15"
+        ]
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "49,32,6",
+        "superboom": "33,42,7"
+      },
+      {
+        "type": "CHEST",
+        "pos": "7,42,3",
+        "entrance": "15,48,24",
+        "superboom": "7,48,17"
+      },
+      {
+        "type": "CHEST",
+        "pos": "107,45,15",
+        "entrance": "106,43,6"
+      },
+      {
+        "type": "CHEST",
+        "pos": "119,54,5",
+        "superboom": "110,55,5"
+      },
+      {
+        "type": "BAT",
+        "pos": "123,56,18",
+        "superboom": "119,55,8"
+      },
+      {
+        "type": "CHEST",
+        "pos": "117,62,26",
+        "entrance": "104,61,3"
+      }
+    ],
+    "blcName": "Pipes-7"
+  },
+  {
+    "hashes": [
+      "1368824556-83"
+    ],
+    "ids": [
+      "-60,-204"
+    ],
+    "communityName": "Blaze",
+    "roofHeight": 83,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "2,68,27",
+        "entrance": "10,69,23"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-1193978626-99"
+    ],
+    "ids": [
+      "462,-312"
+    ],
+    "communityName": "Fairy",
+    "roofHeight": 99,
+    "type": "FAIRY",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "-1764824900-100",
+      "2760817-100",
+      "475964739-100",
+      "1730289541-100",
+      "-100482112-100",
+      "1612279556-100",
+      "453567007-100",
+      "1078645663-100",
+      "31424125-100",
+      "-1577384829-100",
+      "1737009281-100",
+      "1445055587-100"
+    ],
+    "ids": [
+      "-60,-636"
+    ],
+    "communityName": "Bomb Defuse",
+    "blcName": "Bomb-Defuse",
+    "roofHeight": 100,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "-1214312791-99"
+    ],
+    "ids": [
+      "30,-420"
+    ],
+    "communityName": "Gravel",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x3",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "35,69,11",
+        "levers": [
+          "63,69,26"
+        ]
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "66,87,14",
+        "entrance": "71,81,14"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "67,87,12",
+        "entrance": "71,81,14"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "92,69,3",
+        "entrance": "82,73,3"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "88,69,8",
+        "entrance": "82,73,3"
+      },
+      {
+        "type": "BAT",
+        "pos": "34,92,13",
+        "entrance": "35,83,8"
+      }
+    ],
+    "blcName": "Gravel-6"
+  },
+  {
+    "hashes": [
+      "-1354662048-99",
+      "1338441820-99"
+    ],
+    "ids": [
+      "138,30",
+      "354,66",
+      "138,66"
+    ],
+    "communityName": "Blood",
+    "roofHeight": 99,
+    "type": "BLOOD",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "1908244155-119"
+    ],
+    "ids": [
+      "1322,-384"
+    ],
+    "communityName": "Grass Ruin",
+    "roofHeight": 119,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "48,81,24",
+        "superboom": "46,81,24"
+      },
+      {
+        "type": "CHEST",
+        "pos": "11,107,10",
+        "entrance": "16,105,17"
+      },
+      {
+        "type": "CHEST",
+        "pos": "3,55,14",
+        "entrance": "34,58,14",
+        "levers": [
+          "31,82,28",
+          "31,53,24"
+        ]
+      }
+    ],
+    "blcName": "Grass-Ruin-3"
+  },
+  {
+    "hashes": [
+      "10267323-99"
+    ],
+    "ids": [
+      "66,-240"
+    ],
+    "communityName": "Leaves",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "14,81,27",
+        "entrance": "25,69,13",
+        "superboom": "15,82,15"
+      },
+      {
+        "type": "FAIRY_SOUL",
+        "pos": "2,74,28"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Leaves-1"
+  },
+  {
+    "hashes": [
+      "1892785898-99"
+    ],
+    "ids": [
+      "574,-524"
+    ],
+    "communityName": "Market",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "32,61,48",
+        "entrance": "32,67,34"
+      },
+      {
+        "type": "CHEST",
+        "pos": "46,79,48",
+        "entrance": "40,80,52"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "7,59,44",
+        "superboom": "6,67,52"
+      },
+      {
+        "type": "BAT",
+        "pos": "8,62,48",
+        "superboom": "6,67,52"
+      },
+      {
+        "type": "CHEST",
+        "pos": "16,86,56",
+        "entrance": "6,80,37"
+      }
+    ],
+    "blcName": "Market-5"
+  },
+  {
+    "hashes": [
+      "449336258-99"
+    ],
+    "ids": [
+      "102,-204"
+    ],
+    "communityName": "Jumping Skulls",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "26,62,23"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Jumping-Skulls-1"
+  },
+  {
+    "hashes": [
+      "693665690-100"
+    ],
+    "ids": [
+      "-96,-168"
+    ],
+    "communityName": "Tic Tac Toe",
+    "roofHeight": 100,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "9,69,25",
+        "entrance": "12,70,21",
+        "levers": [
+          "13,73,25"
+        ]
+      }
+    ],
+    "blcName": "Tic-Tac-Toe-1"
+  },
+  {
+    "hashes": [
+      "-1166839958-100"
+    ],
+    "ids": [
+      "-96,-168"
+    ],
+    "communityName": "Tic Tac Toe",
+    "roofHeight": 100,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,70,29",
+        "entrance": "15,69,24",
+        "levers": [
+          "7,69,13"
+        ]
+      }
+    ],
+    "blcName": "Tic-Tac-Toe-1"
+  },
+  {
+    "hashes": [
+      "1441388610-119"
+    ],
+    "ids": [
+      "574,-592"
+    ],
+    "communityName": "Flags",
+    "roofHeight": 119,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "56,69,36",
+        "entrance": "52,77,19"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "54,69,24",
+        "entrance": "52,77,19"
+      },
+      {
+        "type": "CHEST",
+        "pos": "59,87,41",
+        "entrance": "53,85,36"
+      },
+      {
+        "type": "CHEST",
+        "pos": "14,108,41",
+        "entrance": "20,108,34"
+      },
+      {
+        "type": "CHEST",
+        "pos": "14,108,27",
+        "entrance": "20,108,34"
+      },
+      {
+        "type": "CHEST",
+        "pos": "11,97,7",
+        "entrance": "19,96,7"
+      },
+      {
+        "type": "CHEST",
+        "pos": "37,67,58",
+        "entrance": "27,72,48"
+      }
+    ],
+    "blcName": "Flags-7"
+  },
+  {
+    "hashes": [
+      "329425210-99"
+    ],
+    "ids": [
+      "730,-420"
+    ],
+    "communityName": "Deathmite",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x3",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "88,69,6",
+        "superboom": "88,70,10"
+      },
+      {
+        "type": "CHEST",
+        "pos": "69,60,10",
+        "entrance": "69,69,2"
+      },
+      {
+        "type": "CHEST",
+        "pos": "12,69,15",
+        "levers": [
+          "53,70,15"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "67,82,15",
+        "entrance": "70,82,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "83,92,27",
+        "entrance": "83,89,24"
+      },
+      {
+        "type": "BAT",
+        "pos": "83,97,24",
+        "entrance": "83,89,24"
+      }
+    ],
+    "blcName": "Deathmite-6"
+  },
+  {
+    "hashes": [
+      "1341257216-99"
+    ],
+    "ids": [
+      "642,-168"
+    ],
+    "communityName": "Overgrown Chains",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "blcRotOffset": 4,
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "26,86,20",
+        "entrance": "3,85,11"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "3,82,2",
+        "entrance": "3,80,8"
+      }
+    ],
+    "blcName": "Overgrown-Chains-2"
+  },
+  {
+    "hashes": [
+      "198586639-99"
+    ],
+    "ids": [
+      "678,-240"
+    ],
+    "communityName": "Temple",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "3,63,27",
+        "entrance": "7,64,27"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "19,78,27"
+      },
+      {
+        "type": "CHEST",
+        "pos": "16,54,15",
+        "entrance": "26,64,19"
+      }
+    ],
+    "blcRotOffset": 2,
+    "blcName": "Temple-3"
+  },
+  {
+    "hashes": [
+      "-1945640473-114"
+    ],
+    "ids": [
+      "1118,-384"
+    ],
+    "communityName": "Redstone Warrior",
+    "blcName": "Redstone-Warrior-3",
+    "roofHeight": 114,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "24,58,15",
+        "levers": [
+          "4,62,15"
+        ]
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "58,78,28",
+        "superboom": "58,78,23"
+      },
+      {
+        "type": "CHEST",
+        "pos": "30,83,27",
+        "entrance": "22,79,24"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "1200481662-100"
+    ],
+    "ids": [
+      "-60,-456"
+    ],
+    "communityName": "Teleport Maze",
+    "roofHeight": 100,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "189291513-99"
+    ],
+    "ids": [
+      "530,-420"
+    ],
+    "communityName": "Wizard",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x3",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "3,76,21",
+        "superboom": "10,70,23"
+      },
+      {
+        "type": "CHEST",
+        "pos": "90,89,24",
+        "superboom": "74,82,24"
+      },
+      {
+        "type": "CHEST",
+        "pos": "17,92,26",
+        "entrance": "22,81,24",
+        "superboom": "6,92,20"
+      },
+      {
+        "type": "BAT",
+        "pos": "21,53,9",
+        "entrance": "32,52,5"
+      }
+    ],
+    "blcName": "Wizard-4"
+  },
+  {
+    "hashes": [
+      "-1752326860-100",
+      "-1824458832-100",
+      "-1904466828-100",
+      "-1976598800-100",
+      "-327121548-100",
+      "-605487660-100",
+      "2040002384-100",
+      "2112134356-100",
+      "462657104-100",
+      "741023216-100",
+      "893163184-100"
+    ],
+    "ids": [
+      "-384,30",
+      "-348,30"
+    ],
+    "communityName": "New Trap",
+    "blcName": "Trap-Very-Hard-3",
+    "roofHeight": 100,
+    "type": "TRAP",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "5,67,12",
+        "entrance": "11,69,26"
+      },
+      {
+        "type": "CHEST",
+        "pos": "26,90,14",
+        "entrance": "26,89,23",
+        "levers": [
+          "22,66,20",
+          "1,81,18"
+        ],
+        "superboom": "24,65,20"
+      },
+      {
+        "type": "BAT",
+        "pos": "21,92,21",
+        "entrance": "19,87,24"
+      }
+    ],
+    "blcRotOffset": 3
+  },
+  {
+    "hashes": [
+      "1042965601-105"
+    ],
+    "ids": [
+      "-60,-600"
+    ],
+    "communityName": "Quiz",
+    "roofHeight": 105,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "-1094031156-99"
+    ],
+    "ids": [
+      "506,-524"
+    ],
+    "communityName": "Chambers",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,83,2",
+        "superboom": "25,82,16"
+      },
+      {
+        "type": "BAT",
+        "pos": "34,83,57",
+        "entrance": "38,81,60"
+      },
+      {
+        "type": "CHEST",
+        "pos": "4,69,57",
+        "superboom": "11,70,56"
+      },
+      {
+        "type": "CHEST",
+        "pos": "53,57,47",
+        "entrance": "51,67,49"
+      },
+      {
+        "type": "CHEST",
+        "pos": "7,69,40",
+        "entrance": "4,69,27",
+        "levers": [
+          "55,71,37"
+        ]
+      }
+    ],
+    "blcName": "Chambers-5"
+  },
+  {
+    "hashes": [
+      "-613514868-99"
+    ],
+    "ids": [
+      "438,-592"
+    ],
+    "communityName": "Buttons",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "53,55,31",
+        "superboom": "16,68,31"
+      },
+      {
+        "type": "CHEST",
+        "pos": "57,69,60",
+        "superboom": "56,70,52"
+      },
+      {
+        "type": "CHEST",
+        "pos": "2,81,50",
+        "entrance": "11,80,50"
+      },
+      {
+        "type": "CHEST",
+        "pos": "31,73,13",
+        "entrance": "29,73,18",
+        "levers": [
+          "58,70,36"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "56,81,2",
+        "entrance": "56,69,19",
+        "levers": [
+          "42,81,57"
+        ],
+        "superboom": "38,80,57"
+      }
+    ],
+    "blcName": "Buttons-5"
+  },
+  {
+    "hashes": [
+      "1758854762-99"
+    ],
+    "ids": [
+      "30,-384"
+    ],
+    "communityName": "Pedestal",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "31,70,15"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "53,61,22",
+        "entrance": "56,69,20"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "50,61,18",
+        "entrance": "56,69,20"
+      },
+      {
+        "type": "CHEST",
+        "pos": "7,94,21"
+      },
+      {
+        "type": "CHEST",
+        "pos": "32,60,23",
+        "entrance": "31,70,29",
+        "superboom": "32,62,26"
+      }
+    ],
+    "blcName": "Pedestal-5"
+  },
+  {
+    "hashes": [
+      "622262671-100"
+    ],
+    "ids": [
+      "138,-204"
+    ],
+    "communityName": "Steps",
+    "roofHeight": 100,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "15,73,4",
+        "entrance": "20,69,10"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Steps-1"
+  },
+  {
+    "hashes": [
+      "-1540740277-99"
+    ],
+    "ids": [
+      "30,-168"
+    ],
+    "communityName": "Silvers Sword",
+    "blcName": "Silvers-Sword-1",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "18,69,13",
+        "superboom": "21,70,13"
+      }
+    ],
+    "blcRotOffset": 3
+  },
+  {
+    "hashes": [
+      "361762264-99"
+    ],
+    "ids": [
+      "174,-132"
+    ],
+    "communityName": "Mushroom",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "16,80,17",
+        "entrance": "20,69,21"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Mushroom-1"
+  },
+  {
+    "hashes": [
+      "-374840358-99"
+    ],
+    "ids": [
+      "66,-132"
+    ],
+    "communityName": "Prison Cell",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "10,76,23",
+        "entrance": "2,70,19"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Prison-Cell-1"
+  },
+  {
+    "hashes": [
+      "-1776881717-90",
+      "-406047759-90",
+      "-63698438-90",
+      "-739350735-90",
+      "1066811514-90",
+      "1299685728-90",
+      "1307135520-90",
+      "1399170155-90",
+      "1632044369-90",
+      "1986542464-90",
+      "312707851-90",
+      "913288759-90"
+    ],
+    "ids": [
+      "-60,-564"
+    ],
+    "communityName": "Boulder",
+    "roofHeight": 90,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "1154180261-99"
+    ],
+    "ids": [
+      "30,-456"
+    ],
+    "communityName": "Mossy",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x4",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "2,69,4",
+        "superboom": "5,70,8"
+      },
+      {
+        "type": "CHEST",
+        "pos": "63,95,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "47,89,4",
+        "superboom": "63,71,26",
+        "levers": [
+          "63,70,29"
+        ]
+      },
+      {
+        "type": "BAT",
+        "pos": "88,87,1"
+      },
+      {
+        "type": "FAIRY_SOUL",
+        "pos": "70,82,15",
+        "entrance": "67,82,15"
+      }
+    ],
+    "blcName": "Mossy-4"
+  },
+  {
+    "hashes": [
+      "-409877406-98"
+    ],
+    "ids": [
+      "234,-524"
+    ],
+    "communityName": "Spider",
+    "roofHeight": 98,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "22,28,40",
+        "entrance": "9,48,40"
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,50,4",
+        "entrance": "19,50,6"
+      },
+      {
+        "type": "CHEST",
+        "pos": "49,84,36",
+        "entrance": "57,84,43"
+      },
+      {
+        "type": "BAT",
+        "pos": "55,86,35",
+        "entrance": "57,84,43"
+      },
+      {
+        "type": "CHEST",
+        "pos": "10,83,56",
+        "superboom": "27,84,56"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "27,91,39",
+        "entrance": "24,92,38"
+      },
+      {
+        "type": "CHEST",
+        "pos": "15,92,31",
+        "entrance": "14,93,36"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "26,92,33",
+        "entrance": "19,93,31"
+      },
+      {
+        "type": "CHEST",
+        "pos": "27,84,32",
+        "entrance": "20,83,32",
+        "levers": [
+          "27,93,32"
+        ]
+      }
+    ],
+    "blcName": "Spider-9"
+  },
+  {
+    "hashes": [
+      "1584024842-99"
+    ],
+    "ids": [
+      "234,-592"
+    ],
+    "communityName": "Stairs",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "8,70,9",
+        "entrance": "4,72,11"
+      },
+      {
+        "type": "CHEST",
+        "pos": "44,88,28",
+        "superboom": "39,91,44"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "38,86,35"
+      },
+      {
+        "type": "CHEST",
+        "pos": "31,88,22"
+      },
+      {
+        "type": "FAIRY_SOUL",
+        "pos": "27,85,51",
+        "entrance": "22,85,51"
+      }
+    ],
+    "blcName": "Stairs-4"
+  },
+  {
+    "hashes": [
+      "562327542-99"
+    ],
+    "ids": [
+      "210,-96"
+    ],
+    "communityName": "Small Waterfall",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "6,77,26",
+        "entrance": "1,77,17"
+      },
+      {
+        "type": "BAT",
+        "pos": "3,82,22",
+        "entrance": "1,77,17"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Waterfall-2"
+  },
+  {
+    "hashes": [
+      "-4810128-99"
+    ],
+    "ids": [
+      "66,-168"
+    ],
+    "communityName": "Granite",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "13,62,25",
+        "entrance": "17,70,25"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "13,61,29",
+        "entrance": "17,70,25"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Granite-2"
+  },
+  {
+    "hashes": [
+      "314897115-99"
+    ],
+    "ids": [
+      "66,-96"
+    ],
+    "communityName": "Basement",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "5,66,25",
+        "entrance": "12,68,18"
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Basement-1"
+  },
+  {
+    "hashes": [
+      "-743255342-99"
+    ],
+    "ids": [
+      "462,-204"
+    ],
+    "communityName": "Sarcophagus",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,69,4",
+        "superboom": "15,70,8"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "18,68,27",
+        "entrance": "24,-71,20"
+      },
+      {
+        "type": "BAT",
+        "pos": "17,69,26",
+        "entrance": "24,-71,20"
+      }
+    ],
+    "blcRotOffset": 2,
+    "blcName": "Sarcophagus-3"
+  },
+  {
+    "hashes": [
+      "-1337984421-99"
+    ],
+    "ids": [
+      "162,-456"
+    ],
+    "communityName": "Hallway",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x4",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "85,85,6",
+        "entrance": "82,79,1"
+      },
+      {
+        "type": "CHEST",
+        "pos": "54,69,5",
+        "entrance": "74,69,3",
+        "levers": [
+          "92,76,20"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,69,3",
+        "superboom": "29,75,6"
+      }
+    ],
+    "blcName": "Hallway-3"
+  },
+  {
+    "hashes": [
+      "-1097169772-99"
+    ],
+    "ids": [
+      "630,-420"
+    ],
+    "communityName": "Catwalk",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x3",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "24,50,15",
+        "superboom": "24,51,20"
+      },
+      {
+        "type": "CHEST",
+        "pos": "24,63,27",
+        "entrance": "19,63,28"
+      },
+      {
+        "type": "CHEST",
+        "pos": "84,63,14",
+        "entrance": "85,64,20"
+      },
+      {
+        "type": "CHEST",
+        "pos": "89,49,18",
+        "entrance": "84,50,21"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "80,50,8",
+        "entrance": "90,57,7",
+        "superboom": "82,49,12"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "80,50,6",
+        "entrance": "90,57,7",
+        "superboom": "82,49,12"
+      }
+    ],
+    "blcName": "Catwalk-6"
+  },
+  {
+    "hashes": [
+      "-1884503987-100"
+    ],
+    "ids": [
+      "822,-168"
+    ],
+    "communityName": "Ritual",
+    "blcName": "Ritual-3",
+    "roofHeight": 100,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "27,69,2",
+        "entrance": "25,70,4"
+      },
+      {
+        "type": "CHEST",
+        "pos": "15,80,3",
+        "entrance": "27,70,11",
+        "levers": [
+          "15,65,5"
+        ]
+      },
+      {
+        "type": "BAT",
+        "pos": "15,86,26",
+        "entrance": "27,70,11",
+        "levers": [
+          "15,65,5"
+        ]
+      }
+    ],
+    "blcRotOffset": 3
+  },
+  {
+    "hashes": [
+      "-1669348863-98"
+    ],
+    "ids": [
+      "462,-132"
+    ],
+    "communityName": "Mural",
+    "roofHeight": 98,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "26,83,7",
+        "entrance": "18,83,9"
+      }
+    ],
+    "blcName": "Mural-1"
+  },
+  {
+    "hashes": [
+      "-199834429-99",
+      "102247555-99"
+    ],
+    "ids": [
+      "710,-384"
+    ],
+    "communityName": "Balcony",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "27,69,15",
+        "superboom": "26,72,15"
+      },
+      {
+        "type": "BAT",
+        "pos": "2,60,27",
+        "entrance": "5,58,20"
+      },
+      {
+        "type": "CHEST",
+        "pos": "20,42,28",
+        "entrance": "32,51,6"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "13,51,9",
+        "entrance": "15,49,6"
+      }
+    ],
+    "blcName": "Balcony-4"
+  },
+  {
+    "hashes": [
+      "-924537662-99"
+    ],
+    "ids": [
+      "166,-592"
+    ],
+    "communityName": "Rails",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "56,66,6",
+        "superboom": "56,68,6"
+      },
+      {
+        "type": "CHEST",
+        "pos": "30,72,34",
+        "entrance": "40,72,31"
+      },
+      {
+        "type": "BAT",
+        "pos": "53,52,13",
+        "entrance": "47,49,22"
+      },
+      {
+        "type": "CHEST",
+        "pos": "30,64,29",
+        "entrance": "23,62,25"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "6,49,10",
+        "entrance": "5,56,2"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "3,49,10",
+        "entrance": "5,56,2"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "27,70,28",
+        "entrance": "29,70,37"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "25,70,28",
+        "entrance": "29,70,37"
+      },
+      {
+        "type": "CHEST",
+        "pos": "8,49,60",
+        "entrance": "21,49,55",
+        "levers": [
+          "39,71,45"
+        ]
+      }
+    ],
+    "blcName": "Rail-Track-9"
+  },
+  {
+    "hashes": [
+      "2632518-109"
+    ],
+    "ids": [
+      "750,-168"
+    ],
+    "communityName": "Cages",
+    "roofHeight": 109,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "28,98,5",
+        "entrance": "20,97,5"
+      },
+      {
+        "type": "CHEST",
+        "pos": "7,58,11",
+        "entrance": "23,60,12",
+        "levers": [
+          "6,85,2"
+        ]
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Cages-2"
+  },
+  {
+    "hashes": [
+      "190784510-100"
+    ],
+    "ids": [
+      "-60,-60"
+    ],
+    "communityName": "Water Board",
+    "roofHeight": 100,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "427882360-99",
+      "535899002-99"
+    ],
+    "ids": [
+      "642,-384"
+    ],
+    "communityName": "Doors",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "5,87,28",
+        "entrance": "8,88,24"
+      },
+      {
+        "type": "CHEST",
+        "pos": "31,51,17",
+        "superboom": "39,58,25"
+      },
+      {
+        "type": "BAT",
+        "pos": "45,64,15",
+        "entrance": "51,58,15",
+        "levers": [
+          "61,59,15"
+        ],
+        "superboom": "57,59,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "8,58,17",
+        "entrance": "24,58,15",
+        "levers": [
+          "50,59,1",
+          "61,59,15",
+          "45,59,15",
+          "43,59,15"
+        ],
+        "superboom": "57,59,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "8,58,13",
+        "entrance": "24,58,15",
+        "levers": [
+          "50,59,1",
+          "61,59,15",
+          "45,59,15",
+          "43,59,15"
+        ],
+        "superboom": "57,59,15"
+      }
+    ],
+    "blcName": "Doors-5"
+  },
+  {
+    "hashes": [
+      "-1727678719-99"
+    ],
+    "ids": [
+      "30,-132"
+    ],
+    "communityName": "Andesite",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "6,69,22",
+        "superboom": "3,70,20"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "1,69,28",
+        "superboom": "3,70,20"
+      }
+    ],
+    "blcRotOffset": 2,
+    "blcName": "Andesite-2"
+  },
+  {
+    "hashes": [
+      "-2054665150-99"
+    ],
+    "ids": [
+      "210,-132"
+    ],
+    "communityName": "Scaffolding",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "5,82,28"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "18,82,8"
+      }
+    ],
+    "blcName": "Scaffolding-2"
+  },
+  {
+    "hashes": [
+      "-1285644229-109"
+    ],
+    "ids": [
+      "506,-384"
+    ],
+    "communityName": "Mage",
+    "roofHeight": 109,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "16,70,17",
+        "entrance": "10,77,14"
+      },
+      {
+        "type": "CHEST",
+        "pos": "42,62,15",
+        "entrance": "43,69,11"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "58,82,5",
+        "entrance": "53,75,8"
+      },
+      {
+        "type": "BAT",
+        "pos": "56,84,4",
+        "entrance": "53,75,8"
+      }
+    ],
+    "blcName": "Mage-4"
+  },
+  {
+    "hashes": [
+      "1183586158-99"
+    ],
+    "ids": [
+      "778,-592"
+    ],
+    "communityName": "Atlas",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "56,76,27",
+        "entrance": "54,78,41"
+      },
+      {
+        "type": "CHEST",
+        "pos": "11,82,31",
+        "entrance": "7,80,23",
+        "levers": [
+          "60,90,33"
+        ]
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "38,78,4",
+        "entrance": "41,79,6"
+      },
+      {
+        "type": "CHEST",
+        "pos": "36,57,15",
+        "entrance": "51,66,10"
+      },
+      {
+        "type": "CHEST",
+        "pos": "31,78,52",
+        "entrance": "11,74,55"
+      },
+      {
+        "type": "BAT",
+        "pos": "7,72,57",
+        "entrance": "6,69,51"
+      }
+    ],
+    "blcName": "Atlas-6"
+  },
+  {
+    "hashes": [
+      "1106720634-99"
+    ],
+    "ids": [
+      "558,-456"
+    ],
+    "communityName": "Quartz Knight",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x4",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "21,89,24",
+        "entrance": "23,89,24"
+      },
+      {
+        "type": "CHEST",
+        "pos": "18,90,24",
+        "entrance": "7,90,18"
+      },
+      {
+        "type": "CHEST",
+        "pos": "6,63,27",
+        "entrance": "10,68,21"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "67,84,6",
+        "entrance": "61,86,2"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "95,79,27"
+      },
+      {
+        "type": "CHEST",
+        "pos": "111,88,2",
+        "superboom": "117,88,3"
+      },
+      {
+        "type": "BAT",
+        "pos": "28,59,6"
+      }
+    ],
+    "blcName": "Quartz-Knight-7"
+  },
+  {
+    "hashes": [
+      "-464016874-129"
+    ],
+    "ids": [
+      "710,-524"
+    ],
+    "communityName": "Withermancer",
+    "roofHeight": 129,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,104,20"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "1,111,15",
+        "entrance": "5,111,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "29,111,15",
+        "entrance": "26,111,15",
+        "levers": [
+          "24,61,3"
+        ],
+        "superboom": "25,70,5"
+      },
+      {
+        "type": "CHEST",
+        "pos": "59,55,45",
+        "superboom": "27,71,34"
+      }
+    ],
+    "blcName": "Withermancers-4"
+  },
+  {
+    "hashes": [
+      "-1131081118-100"
+    ],
+    "ids": [
+      "-60,-528"
+    ],
+    "communityName": "Creeper Beams",
+    "roofHeight": 100,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "-1208101140-99"
+    ],
+    "ids": [
+      "506,-592"
+    ],
+    "communityName": "Cathedral",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "38,59,36",
+        "superboom": "45,60,42"
+      },
+      {
+        "type": "CHEST",
+        "pos": "19,60,7",
+        "superboom": "9,69,22"
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,82,3",
+        "entrance": "17,82,12",
+        "superboom": "31,82,9"
+      },
+      {
+        "type": "BAT",
+        "pos": "60,86,2",
+        "entrance": "17,82,12"
+      },
+      {
+        "type": "BAT",
+        "pos": "42,78,13",
+        "entrance": "45,74,11"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "48,59,23",
+        "entrance": "53,60,19"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "32,93,48",
+        "entrance": "33,93,52"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "21,90,44",
+        "entrance": "16,90,42"
+      }
+    ],
+    "blcName": "Cathedral-8"
+  },
+  {
+    "hashes": [
+      "1132075225-113"
+    ],
+    "ids": [
+      "1050,-384"
+    ],
+    "communityName": "Bridges",
+    "roofHeight": 113,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "53,53,13",
+        "entrance": "20,64,15"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "53,52,17",
+        "entrance": "20,64,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "41,52,21",
+        "entrance": "20,64,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "3,82,15",
+        "entrance": "10,81,15",
+        "levers": [
+          "54,59,28"
+        ]
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "55,81,17",
+        "entrance": "50,81,24"
+      },
+      {
+        "type": "BAT",
+        "pos": "48,94,3",
+        "entrance": "50,82,6",
+        "superboom": "48,94,11"
+      }
+    ],
+    "blcName": "Bridges-6"
+  },
+  {
+    "hashes": [
+      "1515041759-119"
+    ],
+    "ids": [
+      "438,-524"
+    ],
+    "communityName": "Well",
+    "roofHeight": 119,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "60,89,47"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "59,91,36",
+        "entrance": "53,91,34"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "2,95,59",
+        "entrance": "7,89,56"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "7,95,56",
+        "entrance": "7,89,56"
+      },
+      {
+        "type": "CHEST",
+        "pos": "11,88,50",
+        "entrance": "7,87,50"
+      },
+      {
+        "type": "CHEST",
+        "pos": "18,91,25",
+        "superboom": "4,88,33"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "15,57,16",
+        "entrance": "16,59,12"
+      }
+    ],
+    "blcName": "Well-7"
+  },
+  {
+    "hashes": [
+      "868474333-99"
+    ],
+    "ids": [
+      "166,-524"
+    ],
+    "communityName": "Melon",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "59,69,58",
+        "entrance": "51,71,60"
+      },
+      {
+        "type": "CHEST",
+        "pos": "41,85,56",
+        "entrance": "44,85,61"
+      },
+      {
+        "type": "CHEST",
+        "pos": "33,80,53",
+        "entrance": "32,81,49"
+      },
+      {
+        "type": "CHEST",
+        "pos": "15,69,35",
+        "superboom": "3,70,41"
+      },
+      {
+        "type": "BAT",
+        "pos": "7,76,27",
+        "superboom": "3,70,41"
+      },
+      {
+        "type": "CHEST",
+        "pos": "5,82,4",
+        "entrance": "11,82,4"
+      },
+      {
+        "type": "CHEST",
+        "pos": "26,79,1",
+        "entrance": "26,79,12"
+      }
+    ],
+    "blcName": "Melon-7"
+  },
+  {
+    "hashes": [
+      "-824901435-99"
+    ],
+    "ids": [
+      "30,-96"
+    ],
+    "communityName": "Painting",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "6,80,21",
+        "entrance": "10,80,25"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "24,69,22",
+        "entrance": "21,74,14"
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Painting-2"
+  },
+  {
+    "hashes": [
+      "984842231-99"
+    ],
+    "ids": [
+      "778,-384"
+    ],
+    "communityName": "Purple Flags",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "32,67,7",
+        "entrance": "32,63,1"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "6,57,28",
+        "entrance": "5,62,27"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "27,49,29",
+        "entrance": "13,51,8",
+        "superboom": "20,50,25"
+      },
+      {
+        "type": "CHEST",
+        "pos": "39,49,29",
+        "entrance": "13,51,8",
+        "superboom": "20,50,25"
+      },
+      {
+        "type": "CHEST",
+        "pos": "59,49,24",
+        "entrance": "13,51,8",
+        "levers": [
+          "35,55,29"
+        ],
+        "superboom": "20,50,25"
+      }
+    ],
+    "blcName": "Purple-Flags-5"
+  },
+  {
+    "hashes": [
+      "-1882195140-99"
+    ],
+    "ids": [
+      "66,-276"
+    ],
+    "communityName": "Sloth",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "8,69,22",
+        "superboom": "7,70,20"
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Sloth-1"
+  },
+  {
+    "hashes": [
+      "689708788-99"
+    ],
+    "ids": [
+      "534,-204"
+    ],
+    "communityName": "Arrow Trap",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "14,69,4",
+        "levers": [
+          "15,70,23"
+        ],
+        "superboom": "15,69,19"
+      }
+    ],
+    "blcName": "Arrow-Trap-1"
+  },
+  {
+    "hashes": [
+      "31164008-114"
+    ],
+    "ids": [
+      "1186,-384"
+    ],
+    "communityName": "Pressure Plates",
+    "blcName": "Pressure-Plates-6",
+    "roofHeight": 114,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "58,69,7",
+        "superboom": "51,70,7"
+      },
+      {
+        "type": "CHEST",
+        "pos": "20,70,15",
+        "entrance": "43,70,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "23,59,7",
+        "entrance": "29,68,13"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "4,70,24",
+        "entrance": "12,70,7",
+        "superboom": "6,80,23"
+      },
+      {
+        "type": "CHEST",
+        "pos": "59,94,15",
+        "entrance": "50,70,23",
+        "levers": [
+          "21,83,15"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "60,94,7",
+        "entrance": "50,70,23",
+        "superboom": "51,94,7"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-887251127-99"
+    ],
+    "ids": [
+      "30,-276"
+    ],
+    "communityName": "Banners",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "27,72,15",
+        "entrance": "22,71,15"
+      }
+    ],
+    "blcName": "Banners-1"
+  },
+  {
+    "hashes": [
+      "-1930829763-99"
+    ],
+    "ids": [
+      "30,-204"
+    ],
+    "communityName": "Hall",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "346170666-99"
+    ],
+    "ids": [
+      "138,-168"
+    ],
+    "communityName": "Dueces",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "2,78,15",
+        "entrance": "18,78,15",
+        "superboom": "11,80,15"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "10,70,6",
+        "superboom": "17,70,2"
+      },
+      {
+        "type": "BAT",
+        "pos": "3,74,2",
+        "superboom": "17,70,2"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Dueces-3"
+  },
+  {
+    "hashes": [
+      "-1057645748-99"
+    ],
+    "ids": [
+      "174,-312"
+    ],
+    "communityName": "Golden Oasis",
+    "blcName": "Golden-Oasis-3",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secretCount": 1,
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "13,63,25",
+        "entrance": "27,69,25",
+        "levers": [
+          "29,71,25"
+        ],
+        "redstoneKey": [
+          "12,71,8"
+        ],
+        "redstoneKeyPlacement": "10,71,3"
+      },
+      {
+        "type": "CHEST",
+        "pos": "12,63,23",
+        "entrance": "27,69,25",
+        "levers": [
+          "29,71,25"
+        ],
+        "redstoneKey": [
+          "12,71,8"
+        ],
+        "redstoneKeyPlacement": "10,71,3"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "1843463192-99"
+    ],
+    "ids": [
+      "822,-456"
+    ],
+    "communityName": "Waterfall",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x4",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "121,81,15",
+        "entrance": "95,81,22"
+      },
+      {
+        "type": "CHEST",
+        "pos": "82,78,3",
+        "entrance": "82,80,6"
+      },
+      {
+        "type": "BAT",
+        "pos": "71,60,3"
+      },
+      {
+        "type": "CHEST",
+        "pos": "42,82,21",
+        "entrance": "46,82,25"
+      },
+      {
+        "type": "CHEST",
+        "pos": "34,84,23",
+        "entrance": "21,79,13"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "8,44,28",
+        "entrance": "6,44,20"
+      },
+      {
+        "type": "CHEST",
+        "pos": "53,44,27",
+        "entrance": "42,44,25",
+        "superboom": "47,45,27"
+      },
+      {
+        "type": "BAT",
+        "pos": "88,45,27"
+      }
+    ],
+    "blcName": "Cavern-8"
+  },
+  {
+    "hashes": [
+      "1421830672-100"
+    ],
+    "ids": [
+      "-60,-276"
+    ],
+    "communityName": "Ice Path",
+    "roofHeight": 100,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "-888113784-99"
+    ],
+    "ids": [
+      "246,-132"
+    ],
+    "communityName": "Locked Away",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "26,75,29",
+        "entrance": "19,69,8"
+      }
+    ],
+    "blcName": "Locked-Away-1"
+  },
+  {
+    "hashes": [
+      "-470864258-99",
+      "-766351503-99",
+      "-39557998-99",
+      "1802161587-99"
+    ],
+    "ids": [
+      "642,-524"
+    ],
+    "communityName": "Lava Ravine",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "23,67,57",
+        "superboom": "27,68,57"
+      },
+      {
+        "type": "BAT",
+        "pos": "13,64,35",
+        "entrance": "8,68,34"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "14,51,32",
+        "entrance": "20,51,37"
+      },
+      {
+        "type": "CHEST",
+        "pos": "58,86,47",
+        "entrance": "41,86,47"
+      },
+      {
+        "type": "CHEST",
+        "pos": "29,88,7",
+        "entrance": "10,84,38",
+        "levers": [
+          "8,84,42"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "29,88,9",
+        "entrance": "10,84,38",
+        "levers": [
+          "8,84,42"
+        ]
+      }
+    ],
+    "blcName": "Lava-Ravine-6"
+  },
+  {
+    "hashes": [
+      "-615262790-99"
+    ],
+    "ids": [
+      "690,-456"
+    ],
+    "communityName": "Pit",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x4",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "20,91,9",
+        "entrance": "18,77,25"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "2,76,25",
+        "superboom": "9,77,23"
+      },
+      {
+        "type": "BAT",
+        "pos": "8,79,28",
+        "superboom": "9,77,23"
+      },
+      {
+        "type": "CHEST",
+        "pos": "7,65,7",
+        "entrance": "1,73,4"
+      },
+      {
+        "type": "CHEST",
+        "pos": "113,92,28",
+        "entrance": "113,92,24"
+      }
+    ],
+    "blcName": "Pit-5"
+  },
+  {
+    "hashes": [
+      "-1271547564-99"
+    ],
+    "ids": [
+      "570,-96"
+    ],
+    "communityName": "Staircase",
+    "blcName": "Staircase-3",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "22,75,2",
+        "entrance": "21,74,11"
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,66,3",
+        "superboom": "24,66,6"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "10,78,28",
+        "entrance": "14,78,22"
+      }
+    ],
+    "blcRotOffset": 2
+  },
+  {
+    "hashes": [
+      "-1314807254-99"
+    ],
+    "ids": [
+      "102,-96"
+    ],
+    "communityName": "Big Red Flag",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "26,75,25",
+        "entrance": "26,77,16"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "20,75,21",
+        "entrance": "26,77,16"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Big-Red-Flag-2"
+  },
+  {
+    "hashes": [
+      "463892817-99"
+    ],
+    "ids": [
+      "102,-348"
+    ],
+    "communityName": "Cobble Wall Pillar",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "blcRotOffset": 1,
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "12,61,17",
+        "entrance": "19,71,9"
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,60,12",
+        "entrance": "19,71,9",
+        "levers": [
+          "20,69,23"
+        ]
+      }
+    ],
+    "blcName": "Cobble-Wall-Pillar-2"
+  },
+  {
+    "hashes": [
+      "-1764662502-99"
+    ],
+    "ids": [
+      "678,-168"
+    ],
+    "communityName": "End",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "6,63,2",
+        "superboom": "6,63,18"
+      },
+      {
+        "type": "CHEST",
+        "pos": "15,69,6",
+        "entrance": "16,81,20",
+        "levers": [
+          "7,84,5"
+        ]
+      }
+    ],
+    "blcName": "End-2"
+  },
+  {
+    "hashes": [
+      "923126440-99"
+    ],
+    "ids": [
+      "498,-276"
+    ],
+    "communityName": "Cage",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "12,72,20",
+        "entrance": "4,70,23"
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Cage-1"
+  },
+  {
+    "hashes": [
+      "-587183039-99"
+    ],
+    "ids": [
+      "714,-240"
+    ],
+    "communityName": "Overgrown",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "4,70,2",
+        "superboom": "4,70,10"
+      },
+      {
+        "type": "CHEST",
+        "pos": "6,79,15",
+        "entrance": "6,79,24",
+        "levers": [
+          "27,81,15"
+        ]
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "5,87,19",
+        "entrance": "7,87,16"
+      }
+    ],
+    "blcRotOffset": 2,
+    "blcName": "Overgrown-3"
+  },
+  {
+    "hashes": [
+      "-1879912138-99"
+    ],
+    "ids": [
+      "98,-384"
+    ],
+    "communityName": "Skull",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "2,88,15",
+        "entrance": "1,94,14"
+      },
+      {
+        "type": "CHEST",
+        "pos": "52,91,7",
+        "entrance": "52,85,4"
+      }
+    ],
+    "blcName": "Skull-2"
+  },
+  {
+    "hashes": [
+      "129701297-101"
+    ],
+    "ids": [
+      "778,-524"
+    ],
+    "communityName": "Dino Site",
+    "roofHeight": 101,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "24,92,29",
+        "superboom": "24,93,35"
+      },
+      {
+        "type": "CHEST",
+        "pos": "54,52,51",
+        "entrance": "40,50,48"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "48,57,37",
+        "entrance": "42,57,37"
+      },
+      {
+        "type": "BAT",
+        "pos": "9,48,34",
+        "entrance": "6,47,42"
+      }
+    ],
+    "blcName": "Dino-Dig-Site-4"
+  },
+  {
+    "hashes": [
+      "-442031770-99"
+    ],
+    "ids": [
+      "166,-384"
+    ],
+    "communityName": "Gold",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "14,69,13",
+        "entrance": "50,73,18"
+      }
+    ],
+    "blcName": "Gold-1"
+  },
+  {
+    "hashes": [
+      "-1818448516-99"
+    ],
+    "ids": [
+      "130,-420"
+    ],
+    "communityName": "Red Blue",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x3",
+    "secrets": [
+      {
+        "type": "ESSENCE",
+        "pos": "79,83,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "57,70,5",
+        "entrance": "57,69,11",
+        "levers": [
+          "54,69,5"
+        ]
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "60,86,22",
+        "entrance": "55,86,22"
+      },
+      {
+        "type": "CHEST",
+        "pos": "39,90,26",
+        "entrance": "43,88,28"
+      }
+    ],
+    "blcName": "Red-Blue-4"
+  },
+  {
+    "hashes": [
+      "-1867837189-99"
+    ],
+    "ids": [
+      "570,-168"
+    ],
+    "communityName": "Slabs",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "22,85,3",
+        "entrance": "22,84,13"
+      },
+      {
+        "type": "CHEST",
+        "pos": "23,85,3",
+        "entrance": "22,84,13"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Slabs-2"
+  },
+  {
+    "hashes": [
+      "-810335945-97"
+    ],
+    "ids": [
+      "174,-96"
+    ],
+    "communityName": "Raccoon",
+    "roofHeight": 97,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "6,77,24"
+      },
+      {
+        "type": "CHEST",
+        "pos": "26,84,8",
+        "entrance": "26,84,4"
+      },
+      {
+        "type": "CHEST",
+        "pos": "27,69,24",
+        "entrance": "20,77,26",
+        "superboom": "24,74,22"
+      },
+      {
+        "type": "CHEST",
+        "pos": "21,69,24",
+        "entrance": "20,77,26",
+        "superboom": "24,74,22"
+      },
+      {
+        "type": "FAIRY_SOUL",
+        "pos": "19,83,8",
+        "entrance": "17,82,9"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Raccoon-4"
+  },
+  {
+    "hashes": [
+      "-32779675-101"
+    ],
+    "ids": [
+      "846,-524"
+    ],
+    "communityName": "Altar",
+    "roofHeight": 101,
+    "type": "CLEAR",
+    "size": "L",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "14,71,48"
+      },
+      {
+        "type": "CHEST",
+        "pos": "19,83,43"
+      },
+      {
+        "type": "CHEST",
+        "pos": "51,88,45",
+        "entrance": "50,84,45"
+      },
+      {
+        "type": "BAT",
+        "pos": "36,55,35",
+        "entrance": "30,57,38"
+      },
+      {
+        "type": "CHEST",
+        "pos": "11,44,39",
+        "entrance": "23,44,39"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "17,93,27",
+        "entrance": "24,93,18"
+      }
+    ],
+    "blcName": "Altar-6"
+  },
+  {
+    "hashes": [
+      "-1283105397-99"
+    ],
+    "ids": [
+      "498,-240"
+    ],
+    "communityName": "Dip",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "18,78,16",
+        "entrance": "17,78,9",
+        "levers": [
+          "19,79,26"
+        ],
+        "superboom": "23,78,26"
+      },
+      {
+        "type": "CHEST",
+        "pos": "2,78,24",
+        "entrance": "4,79,20"
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Dip-2"
+  },
+  {
+    "hashes": [
+      "-2009212418-99"
+    ],
+    "ids": [
+      "830,-420"
+    ],
+    "communityName": "Slime",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x3",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "29,87,14"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "4,86,10",
+        "superboom": "6,71,8"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "20,86,15",
+        "superboom": "6,71,8"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "90,57,15",
+        "entrance": "74,58,18"
+      },
+      {
+        "type": "BAT",
+        "pos": "15,53,14",
+        "entrance": "23,53,12"
+      }
+    ],
+    "blcName": "Slime-5"
+  },
+  {
+    "hashes": [
+      "726467486-99"
+    ],
+    "ids": [
+      "642,-240"
+    ],
+    "communityName": "Dome",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "25,73,25",
+        "entrance": "25,69,20"
+      },
+      {
+        "type": "CHEST",
+        "pos": "26,78,27",
+        "entrance": "24,73,9",
+        "levers": [
+          "24,75,21"
+        ]
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Dome-2"
+  },
+  {
+    "hashes": [
+      "594467115-99"
+    ],
+    "ids": [
+      "534,-168"
+    ],
+    "communityName": "Redstone Key",
+    "blcName": "Redstone-Key-3",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secretCount": 3,
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "26,69,5",
+        "entrance": "25,69,11",
+        "levers": [
+          "5,70,27"
+        ],
+        "superboom": "5,69,23"
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,62,23",
+        "entrance": "18,67,23",
+        "levers": [
+          "5,70,27"
+        ],
+        "superboom": "5,69,23",
+        "redstoneKey": [
+          "10,70,26",
+          "19,66,7"
+        ],
+        "redstoneKeyPlacement": "27,68,7"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "76002303-99"
+    ],
+    "ids": [
+      "714,-168"
+    ],
+    "communityName": "Criss Cross",
+    "blcName": "Cross-Cross-1",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "blcRotOffset": 3,
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,66,6",
+        "entrance": "20,67,25",
+        "levers": [
+          "15,75,29"
+        ],
+        "superboom": "15,74,25"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "1459048896-99"
+    ],
+    "ids": [
+      "462,-96"
+    ],
+    "communityName": "Perch",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "20,76,20"
+      },
+      {
+        "type": "CHEST",
+        "pos": "15,74,1",
+        "entrance": "14,74,9"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Perch-2"
+  },
+  {
+    "hashes": [
+      "-1334899123-99"
+    ],
+    "ids": [
+      "606,-96"
+    ],
+    "communityName": "Redstone Crypt",
+    "blcName": "Redstone-Crypt-3",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secretCount": 3,
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "9,69,3",
+        "superboom": "9,70,6"
+      },
+      {
+        "type": "CHEST",
+        "pos": "29,70,15",
+        "entrance": "24,69,15",
+        "levers": [
+          "15,68,15"
+        ],
+        "superboom": "6,70,3",
+        "redstoneKey": [
+          "4,71,4"
+        ],
+        "redstoneKeyPlacement": "26,72,6"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-1926089650-112"
+    ],
+    "ids": [
+      "102,-168"
+    ],
+    "communityName": "Admin",
+    "roofHeight": 112,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "FAIRY_SOUL",
+        "pos": "15,95,29",
+        "superboom": "15,95,25"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "349132140-133"
+    ],
+    "ids": [
+      "-96,-204"
+    ],
+    "communityName": "Blaze",
+    "roofHeight": 133,
+    "type": "PUZZLE",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "2,118,27",
+        "entrance": "10,119,23"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "1920046925-159"
+    ],
+    "ids": [
+      "642,-592"
+    ],
+    "communityName": "Supertall",
+    "roofHeight": 159,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "5,75,3",
+        "entrance": "11,72,5"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "31,102,53",
+        "entrance": "56,91,50",
+        "levers": [
+          "50,77,46"
+        ]
+      },
+      {
+        "type": "BAT",
+        "pos": "52,113,7",
+        "entrance": "45,111,15",
+        "levers": [
+          "50,77,46",
+          "9,98,24"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "36,142,51",
+        "entrance": "31,117,17",
+        "levers": [
+          "50,77,46",
+          "9,98,24",
+          "12,131,7"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "31,142,56",
+        "entrance": "31,117,17",
+        "levers": [
+          "50,77,46",
+          "9,98,24",
+          "12,131,7"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "26,142,51",
+        "entrance": "31,117,17",
+        "levers": [
+          "50,77,46",
+          "9,98,24",
+          "12,131,7"
+        ]
+      },
+      {
+        "type": "FAIRY_SOUL",
+        "pos": "43,119,42",
+        "entrance": "43,120,39",
+        "levers": [
+          "50,77,46",
+          "9,98,24"
+        ]
+      }
+    ],
+    "blcName": "Super-Tall-6"
+  },
+  {
+    "hashes": [
+      "1467943081-119"
+    ],
+    "ids": [
+      "846,-592"
+    ],
+    "communityName": "Museum",
+    "roofHeight": 119,
+    "type": "CLEAR",
+    "size": "2x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "31,70,60",
+        "superboom": "31,70,57"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "42,93,53"
+      },
+      {
+        "type": "CHEST",
+        "pos": "34,83,11",
+        "entrance": "53,82,31"
+      },
+      {
+        "type": "CHEST",
+        "pos": "31,70,9",
+        "entrance": "31,69,16",
+        "levers": [
+          "26,84,9"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "48,62,6",
+        "superboom": "43,68,6"
+      }
+    ],
+    "blcName": "Museum-5"
+  },
+  {
+    "hashes": [
+      "-639693638-99"
+    ],
+    "ids": [
+      "102,-312"
+    ],
+    "communityName": "Logs",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "1,70,24",
+        "entrance": "7,69,18",
+        "levers": [
+          "25,84,28"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "1,70,23",
+        "entrance": "7,69,18",
+        "levers": [
+          "25,84,28"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "9,78,23",
+        "entrance": "3,78,19"
+      },
+      {
+        "type": "CHEST",
+        "pos": "9,78,24",
+        "entrance": "3,78,19"
+      }
+    ],
+    "blcRotOffset": 2,
+    "blcName": "Logs-4"
+  },
+  {
+    "hashes": [
+      "-1978355434-99",
+      "722434935-99",
+      "1008233560-99"
+    ],
+    "ids": [
+      "534,-96"
+    ],
+    "communityName": "Long Hall",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "28,82,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "18,62,23",
+        "superboom": "8,69,25"
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,81,25",
+        "entrance": "10,84,19",
+        "levers": [
+          "10,70,3"
+        ],
+        "superboom": "15,70,5"
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Long-Hall-3"
+  },
+  {
+    "hashes": [
+      "-1522207817-99"
+    ],
+    "ids": [
+      "30,-240"
+    ],
+    "communityName": "Duncan",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "13,88,9",
+        "entrance": "25,85,12"
+      }
+    ],
+    "blcRotOffset": 2,
+    "blcName": "Duncan-1"
+  },
+  {
+    "hashes": [
+      "1705041005-99",
+      "-1130413973-99"
+    ],
+    "ids": [
+      "66,-204"
+    ],
+    "communityName": "Cell",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "12,69,24",
+        "superboom": "12,70,20"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Cell-1"
+  },
+  {
+    "hashes": [
+      "-2128683955-99"
+    ],
+    "ids": [
+      "574,-384"
+    ],
+    "communityName": "Archway",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "1,70,2",
+        "superboom": "11,70,6"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "8,83,28",
+        "entrance": "4,69,19"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "55,89,12",
+        "entrance": "37,88,17"
+      }
+    ],
+    "blcName": "Archway-3"
+  },
+  {
+    "hashes": [
+      "1385763298-99"
+    ],
+    "ids": [
+      "102,-240"
+    ],
+    "communityName": "Lots Of Floors",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "5,69,28",
+        "superboom": "5,70,21"
+      },
+      {
+        "type": "CHEST",
+        "pos": "25,84,7",
+        "entrance": "27,79,7"
+      },
+      {
+        "type": "CHEST",
+        "pos": "1,76,5",
+        "entrance": "5,75,5",
+        "levers": [
+          "12,62,14"
+        ]
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Lots-Of-Floors-3"
+  },
+  {
+    "hashes": [
+      "-2094572788-99"
+    ],
+    "ids": [
+      "498,-168"
+    ],
+    "communityName": "Spikes",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "1,55,7",
+        "entrance": "4,52,7"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "1,53,8",
+        "entrance": "4,52,7"
+      },
+      {
+        "type": "CHEST",
+        "pos": "4,91,11",
+        "entrance": "14,91,11"
+      }
+    ],
+    "blcName": "Spikes-3"
+  },
+  {
+    "hashes": [
+      "-809100507-99"
+    ],
+    "ids": [
+      "66,-348"
+    ],
+    "communityName": "Multicolored",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "blcRotOffset": 3,
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "25,70,4",
+        "superboom": "26,70,11"
+      }
+    ],
+    "blcName": "Multicolored-1"
+  },
+  {
+    "hashes": [
+      "145172808-99"
+    ],
+    "ids": [
+      "750,-240"
+    ],
+    "communityName": "Beams",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "7,81,2",
+        "entrance": "4,81,11"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "8,92,25",
+        "entrance": "12,92,25"
+      }
+    ],
+    "blcName": "Beams-2"
+  },
+  {
+    "hashes": [
+      "755198727-99"
+    ],
+    "ids": [
+      "174,-168"
+    ],
+    "communityName": "Mirror",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "3,55,17",
+        "entrance": "8,62,15",
+        "superboom": "11,55,17"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Mirror-1"
+  },
+  {
+    "hashes": [
+      "1967315434-99"
+    ],
+    "ids": [
+      "462,-168"
+    ],
+    "communityName": "Drop",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "25,77,2",
+        "entrance": "25,78,12"
+      },
+      {
+        "type": "CHEST",
+        "pos": "5,59,15",
+        "superboom": "9,60,15"
+      }
+    ],
+    "blcRotOffset": 3,
+    "blcName": "Drop-2"
+  },
+  {
+    "hashes": [
+      "f1"
+    ],
+    "ids": [
+      "30,30"
+    ],
+    "communityName": "Bonzo",
+    "roofHeight": 146,
+    "type": "BOSS",
+    "size": "boss",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "f2"
+    ],
+    "ids": [
+      "30,125"
+    ],
+    "communityName": "Scarf",
+    "roofHeight": 99,
+    "type": "BOSS",
+    "size": "boss",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "f3"
+    ],
+    "ids": [
+      "30,225"
+    ],
+    "communityName": "The Professor",
+    "roofHeight": 118,
+    "type": "BOSS",
+    "size": "boss",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "f4"
+    ],
+    "ids": [
+      "30,344"
+    ],
+    "communityName": "Thorn",
+    "roofHeight": 112,
+    "type": "BOSS",
+    "size": "boss",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "f5"
+    ],
+    "ids": [
+      "livid"
+    ],
+    "communityName": "Livid",
+    "roofHeight": 112,
+    "type": "BOSS",
+    "size": "boss",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "f6"
+    ],
+    "ids": [
+      "sadan"
+    ],
+    "communityName": "Sadan",
+    "roofHeight": 110,
+    "type": "BOSS",
+    "size": "boss",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "f7"
+    ],
+    "ids": [
+      "f7"
+    ],
+    "communityName": "The Wither Lords",
+    "roofHeight": 254,
+    "type": "BOSS",
+    "size": "boss",
+    "secrets": []
+  },
+  {
+    "hashes": [
+      "1072136346-99"
+    ],
+    "ids": [
+      "438,-384"
+    ],
+    "communityName": "Crypt",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x2",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "13,60,15",
+        "superboom": "33,67,15"
+      },
+      {
+        "type": "CHEST",
+        "pos": "44,86,26",
+        "entrance": "52,85,6"
+      },
+      {
+        "type": "CHEST",
+        "pos": "2,81,16",
+        "entrance": "39,81,3"
+      },
+      {
+        "type": "CHEST",
+        "pos": "19,89,2",
+        "entrance": "39,81,3",
+        "superboom": "15,89,6"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "46,88,16",
+        "entrance": "35,91,22"
+      }
+    ],
+    "blcName": "Crypt-5"
+  },
+  {
+    "hashes": [
+      "-1055178026-99"
+    ],
+    "ids": [
+      "498,-204"
+    ],
+    "communityName": "Water",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "2,69,5",
+        "entrance": "8,69,5",
+        "levers": [
+          "15,70,7"
+        ]
+      },
+      {
+        "type": "BAT",
+        "pos": "9,72,27"
+      }
+    ],
+    "blcName": "Water-2"
+  },
+  {
+    "hashes": [
+      "1547815468-99"
+    ],
+    "ids": [
+      "318,-60"
+    ],
+    "communityName": "Lava Pit",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "1,89,14",
+        "entrance": "23,71,23"
+      },
+      {
+        "type": "CHEST",
+        "pos": "15,63,13",
+        "entrance": "15,68,17"
+      },
+      {
+        "type": "CHEST",
+        "pos": "23,92,3",
+        "entrance": "24,92,8"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-793891768-99"
+    ],
+    "ids": [
+      "570,-312"
+    ],
+    "communityName": "Carpets",
+    "blcName": "Carpets-1",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,85,15"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-859866421-99"
+    ],
+    "ids": [
+      "570,-240"
+    ],
+    "communityName": "Red Green",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "13,77,28",
+        "superboom": "13,78,24"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "1,61,15",
+        "entrance": "5,69,10"
+      },
+      {
+        "type": "CHEST",
+        "pos": "29,75,15",
+        "entrance": "23,74,15",
+        "levers": [
+          "29,61,15"
+        ]
+      }
+    ],
+    "blcRotOffset": 1,
+    "blcName": "Red-Green-3"
+  },
+  {
+    "hashes": [
+      "-337844119-99"
+    ],
+    "ids": [
+      "66,-312"
+    ],
+    "communityName": "Knight",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "blcRotOffset": 2,
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "1,71,27",
+        "entrance": "6,69,19"
+      },
+      {
+        "type": "CHEST",
+        "pos": "25,69,29",
+        "entrance": "25,69,20",
+        "levers": [
+          "3,70,9"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "24,69,29",
+        "entrance": "25,69,20",
+        "levers": [
+          "3,70,9"
+        ]
+      }
+    ],
+    "blcName": "Knight-3"
+  },
+  {
+    "hashes": [
+      "-1487038267-97"
+    ],
+    "ids": [
+      "246,-60"
+    ],
+    "communityName": "Trinity",
+    "roofHeight": 97,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "6,74,27",
+        "entrance": "10,76,23"
+      },
+      {
+        "type": "CHEST",
+        "pos": "14,75,27",
+        "entrance": "19,75,29"
+      },
+      {
+        "type": "BAT",
+        "pos": "11,94,28",
+        "entrance": "23,80,24",
+        "superboom": "17,90,24"
+      },
+      {
+        "type": "BAT",
+        "pos": "11,93,28",
+        "entrance": "23,80,24",
+        "superboom": "17,90,24"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "1829480296-99"
+    ],
+    "ids": [
+      "174,-60"
+    ],
+    "communityName": "Lava Pit",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "ITEM_DROP",
+        "pos": "18,84,28",
+        "entrance": "15,84,23"
+      },
+      {
+        "type": "BAT",
+        "pos": "6,75,7",
+        "entrance": "12,69,6",
+        "levers": [
+          "15,85,2"
+        ]
+      },
+      {
+        "type": "CHEST",
+        "pos": "5,69,7",
+        "entrance": "12,69,6",
+        "levers": [
+          "15,85,2"
+        ]
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-1729752736-99"
+    ],
+    "ids": [
+      "534,-312"
+    ],
+    "communityName": "Black Flag",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "blcRotOffset": 3,
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "27,80,3",
+        "entrance": "23,80,3"
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,80,25",
+        "entrance": "18,79,25"
+      },
+      {
+        "type": "ITEM_DROP",
+        "pos": "22,60,27",
+        "entrance": "20,69,25"
+      }
+    ],
+    "blcName": "Black-Flag-3"
+  },
+  {
+    "hashes": [
+      "-1307666170-99"
+    ],
+    "ids": [
+      "30,-348"
+    ],
+    "communityName": "Quad Lava",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "blcRotOffset": 2,
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "5,70,25"
+      },
+      {
+        "type": "CHEST",
+        "pos": "19,60,10",
+        "entrance": "24,66,6"
+      }
+    ],
+    "blcName": "Quad-Lava-2"
+  },
+  {
+    "hashes": [
+      "-1321915423-99"
+    ],
+    "ids": [
+      "714,-96"
+    ],
+    "communityName": "Zodd",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "7,70,3",
+        "entrance": "10,69,7"
+      }
+    ],
+    "blcName": "Zodd-1"
+  },
+  {
+    "hashes": [
+      "-607260902-99"
+    ],
+    "ids": [
+      "138,-60"
+    ],
+    "communityName": "Hanging Vines",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "12,89,13",
+        "entrance": "8,81,5"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "417216585-99"
+    ],
+    "ids": [
+      "30,-60"
+    ],
+    "communityName": "Stone Window",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "22,79,8",
+        "entrance": "26,77,9"
+      },
+      {
+        "type": "BAT",
+        "pos": "5,72,18",
+        "superboom": "4,70,14"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-1836215498-99"
+    ],
+    "ids": [
+      "354,-60"
+    ],
+    "communityName": "Vinny 8 Ball",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "26,69,17",
+        "entrance": "22,69,17",
+        "levers": [
+          "17,80,1"
+        ]
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "1847671234-99",
+      "942604870-99",
+      "727207589-99"
+    ],
+    "ids": [
+      "282,-60"
+    ],
+    "communityName": "Pillars",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "24,69,19",
+        "entrance": "19,69,19",
+        "levers": [
+          "24,88,3"
+        ],
+        "superboom": "15,70,23"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-1798934638-99"
+    ],
+    "ids": [
+      "102,-60"
+    ],
+    "communityName": "Sand Dragon",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,86,26",
+        "entrance": "15,85,23"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "937752871-88"
+    ],
+    "ids": [
+      "210,-60"
+    ],
+    "communityName": "Mini Rail Track",
+    "roofHeight": 88,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "BAT",
+        "pos": "20,72,10",
+        "entrance": "22,69,3"
+      },
+      {
+        "type": "BAT",
+        "pos": "3,79,25",
+        "entrance": "9,76,20"
+      },
+      {
+        "type": "CHEST",
+        "pos": "28,63,7",
+        "entrance": "6,72,22"
+      }
+    ]
+  },
+  {
+    "hashes": [
+      "-969508853-99"
+    ],
+    "ids": [
+      "66,-60"
+    ],
+    "communityName": "Tombstone",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,70,26",
+        "entrance": "15,72,20"
+      },
+      {
+        "type": "ESSENCE",
+        "pos": "27,76,16",
+        "entrance": "26,77,13"
+      }
+    ],
+    "blcName": "Tombstone-2"
+  },
+  {
+    "hashes": [
+      "137737404-99"
+    ],
+    "ids": [
+      "570,-312"
+    ],
+    "communityName": "Carpets",
+    "roofHeight": 99,
+    "type": "CLEAR",
+    "size": "1x1",
+    "secrets": [
+      {
+        "type": "CHEST",
+        "pos": "15,85,15"
+      }
+    ],
+    "blcName": "Carpets-1"
+  }
+]

@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.framework.feature.knockbacktrainer.mixin
+com.moonsworth.lunar.client.framework.feature.lightoverlay
+com.moonsworth.lunar.client.framework.feature.markers
+com.moonsworth.lunar.client.framework.feature.markers.mixin
+com.moonsworth.lunar.client.framework.feature.menublur
+com.moonsworth.lunar.client.framework.feature.minimap
+com.moonsworth.lunar.client.framework.feature.minimap.mixin
+com.moonsworth.lunar.client.framework.feature.mobsize.mixin

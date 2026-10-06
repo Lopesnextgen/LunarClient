@@ -1,0 +1,181 @@
+{
+	"cosmetics/cloaks/testerplus_shader_rainbow.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "shaders/cloaks/testerplus_rainbow.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "simple"
+		},
+		"uniforms": [
+			"TimeSeconds"
+		],
+		"renderWidth": 176,
+		"renderHeight": 136
+	},
+	"cosmetics/cloaks/lunarplus_glow/lunarplus_glow.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/lunarplus_glow/lunarplus_glow.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "simple"
+		},
+		"uniforms": [
+			"OutSize",
+			"TimeSeconds",
+			"VelocitySmooth",
+			"LunarPlusColor"
+		],
+		"samplers": {
+			"LunarLogo": "lunar-jit:cosmetics/cloaks/lunarplus_glow/lunar_logo.webp"
+		},
+		"renderWidth": 660,
+		"renderHeight": 510
+	},
+	"cosmetics/cloaks/staff_dev/staff_dev.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/staff_dev/staff_dev.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "positioned"
+		},
+		"uniforms": [
+			"OutSize",
+			"TimeSeconds"
+		],
+		"samplers": {
+			"LunarLogo": "lunar-jit:cosmetics/cloaks/staff_dev/lunar_dev.webp"
+		},
+		"renderOnTick": false,
+		"renderWidth": 814,
+		"renderHeight": 629
+	},
+	"cosmetics/cloaks/staff_holographic/staff_holographic.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/staff_holographic/staff_holographic.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "positioned"
+		},
+		"uniforms": [
+			"OutSize",
+			"TimeSeconds"
+		],
+		"samplers": {
+			"LunarLogo": "lunar-jit:cosmetics/cloaks/lunarplus_glow/lunar_logo.webp"
+		},
+		"renderOnTick": false,
+		"renderWidth": 814,
+		"renderHeight": 629
+	},
+	"cosmetics/cloaks/ingame_debug/normal_debug.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/ingame_debug/normal_debug.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "positioned"
+		},
+		"uniforms": [],
+		"samplers": {},
+		"renderOnTick": false,
+		"renderWidth": 176,
+		"renderHeight": 136
+	},
+	"cosmetics/cloaks/ingame_debug/position_debug.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/ingame_debug/position_debug.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "positioned"
+		},
+		"uniforms": [],
+		"samplers": {},
+		"renderOnTick": false,
+		"renderWidth": 176,
+		"renderHeight": 136
+	},
+	"cosmetics/cloaks/dev_end_portal/dev_end_portal.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/dev_end_portal/dev_end_portal.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "positioned_proj"
+		},
+		"uniforms": [
+			"OutSize",
+			"TimeSeconds"
+		],
+		"samplers": {
+			"EndPortal": "lunar-jit:cosmetics/cloaks/dev_end_portal/end.webp",
+			"LunarLogo": "lunar-jit:cosmetics/cloaks/dev_end_portal/lunar.webp"
+		},
+		"renderOnTick": false,
+		"renderWidth": 1716,
+		"renderHeight": 1326
+	},
+	"cosmetics/cloaks/ingame_debug/screen_debug.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/ingame_debug/screen_debug.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "positioned_proj"
+		},
+		"uniforms": [],
+		"samplers": {},
+		"renderOnTick": false,
+		"renderWidth": 176,
+		"renderHeight": 136
+	},
+	"cosmetics/cloaks/staff_infinity/staff_infinity.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/staff_infinity/staff_infinity.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "positioned"
+		},
+		"uniforms": [
+			"OutSize",
+			"TimeSeconds"
+		],
+		"samplers": {},
+		"renderOnTick": false,
+		"renderWidth": 660,
+		"renderHeight": 510
+	},
+	"cosmetics/cloaks/leaves/leaves.webp": {
+		"fragment": {
+			"type": "custom",
+			"value": "lunar-jit:cosmetics/cloaks/leaves/leaves.fsh"
+		},
+		"vertex": {
+			"type": "static",
+			"value": "simple"
+		},
+		"uniforms": [
+			"BiomeColor"
+		],
+		"samplers": {
+			"Leaves": "lunar-jit:cosmetics/cloaks/leaves/leaves_gray.webp"
+		},
+		"renderOnTick": true,
+		"renderWidth": 176,
+		"renderHeight": 136
+	}
+}

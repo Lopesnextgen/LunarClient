@@ -1,0 +1,1 @@
+com.moonsworth.lunar.client.render.particle.nameplate	Random	RandomFunction	mclib.math.functions.utility.Random seeded/range random function; renamed to RandomFunction to avoid clashing with java.util.Random in the same file

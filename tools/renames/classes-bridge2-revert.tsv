@@ -1,0 +1,2 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.bridge	BridgeClassGeneratorBridge	Bridge2_35	jar-coupled: Bridge2_24.method4 (jar-only) returns Optional<bridge.Bridge2_35>; renaming the source twin breaks casts in AdventureComponentCoercion/RemappedTypeCoercion. Re-apply after Bridge2_24 is rescued	com/moonsworth/lunar/bridge/BridgeClassGeneratorBridge.java

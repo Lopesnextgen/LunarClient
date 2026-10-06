@@ -1,0 +1,3 @@
+package	old	new	evidence	file
+com.moonsworth.lunar.client.network.server	Data3	MojangBlocklist	sessionserver.mojang.com/blockedservers fetch result (blocked-server hashes + signature) consumed by the blocklist mixins	com/moonsworth/lunar/client/network/server/ServerBlocklist.java
+com.moonsworth.lunar.client.replay.highlight	Highlight_2	TimelineMarker	orphan value type (int,int,int,String); shape fits a replay-timeline marker (in/out frame + colour + label); zero references tree-wide — medium confidence, verify against runtime jar	com/moonsworth/lunar/client/replay/highlight/Highlight_2.java

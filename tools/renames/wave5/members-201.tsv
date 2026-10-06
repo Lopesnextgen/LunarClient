@@ -1,0 +1,681 @@
+# owner.fqn	M|F	oldName	newName	evidence
+com.moonsworth.lunar.client.mod.render.ServerHolograms	M	method3	renderHolograms	private HighlightImpl2/HighlightImpl4 handler (nameplate render event) dispatching both show-through-walls modes
+com.moonsworth.lunar.client.mod.render.ServerHolograms	M	method4	renderHologramLines	iterates Client.method57().method3().values() (Serverholograms) filtered by isShowThroughWalls and renders each line via method5
+com.moonsworth.lunar.client.mod.render.ServerHolograms	M	method5	renderHologramLine	renders one Component text line with shadow/background flags (draws quad background + drawString)
+com.moonsworth.lunar.client.mod.render.ServerBorders	M	method3	renderBorders	private HighlightImpl2 handler called from ctor; forwards context/camera/partialTicks to method6
+com.moonsworth.lunar.client.mod.render.ServerBorders	M	method4	addBorderCollisionBoxes	EventEntityCollisionBoxes handler; adds WorldBorderExtensionBridge.method8() boxes intersecting the player's swept AABB
+com.moonsworth.lunar.client.mod.render.ServerBorders	M	method6	renderWorldBorders	renders the glowing WorldBorder walls (4 sides, LunarRenderTypes.field50, pulsing alpha from system time)
+com.moonsworth.lunar.client.mod.render.MobSize	F	field8	entityClasses	HashMap<String, Class<BridgeExtension>> of spawn-egg/entity names to entity classes built in method13
+com.moonsworth.lunar.client.mod.render.MobSize	F	field9	entityDisplayNames	HashMap of vanilla entity names to their display aliases ("Entity Horse"->"Horse", "Pig Zombie"->"Zombie Pigman")
+com.moonsworth.lunar.client.mod.render.MobSize	F	field10	playerSize	FloatOption "playerSize" (0.5..1.0)
+com.moonsworth.lunar.client.mod.render.MobSize	F	field11	otherPlayerSize	FloatOption "otherPlayerSize" (0.5..1.0)
+com.moonsworth.lunar.client.mod.render.MobSize	F	field12	changeNpcSize	ToggleOption "changeNpcSize"
+com.moonsworth.lunar.client.mod.render.MobSize	F	field13	skyblockOnly	ToggleOption "playerSizeSkyblockOnly"
+com.moonsworth.lunar.client.mod.render.MobSize	F	field14	entitySizeOptions	HashMap<Class, FloatOption> of per-entity size options created in method2(RootSettingsBuilder)
+com.moonsworth.lunar.client.mod.render.MobSize	M	method13	loadEntityClasses	populates entityClasses from Bridge.method61().method5() excluding Mob/non-living classes
+com.moonsworth.lunar.client.mod.render.MobSize	M	method2	onEntityScale	EventEntityScale handler: applies player/other-player or per-entity FloatOption to the entity scale
+com.moonsworth.lunar.client.mod.render.MobSize	M	method3	adjustNameTagHeight	EventRenderNameTag handler: shifts the nametag down by height*(1-scale)
+com.moonsworth.lunar.client.mod.render.MobSize	M	method5	getEntitySizeLabel	builds the option label ("Horse Size") from the entity name and entityDisplayNames aliases
+com.moonsworth.lunar.client.mod.render.MotionBlur	F	field8	blurAmount	IntegerOption "value" (1..10 slider) - blur strength; label "Blur Amount" in reference clients
+com.moonsworth.lunar.client.mod.render.MotionBlur	F	field9	blurType	EnumOption "type" over MotionBlur.Type (V1/V2/V3)
+com.moonsworth.lunar.client.mod.render.MotionBlur	F	field10	previousFrameBuffer	framebuffer copy used as the previous-frame sampler target
+com.moonsworth.lunar.client.mod.render.MotionBlur	F	field11	motionBlurShader	Colorsaturation loaded with "motion_blur"/MotionBlurShader in the EventPostProcess handler
+com.moonsworth.lunar.client.mod.render.MotionBlur	M	method13	getAccumulationValue	computes the Phosphor blur amount from blurAmount (with Type.V1/V2 corrections)
+com.moonsworth.lunar.client.mod.render.MotionBlur	M	method14	getBlurAmount	@Generated getter for field8
+com.moonsworth.lunar.client.mod.render.MotionBlur	M	method15	getBlurTypeOption	@Generated getter for field9
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	F	field8	startAtTop	ToggleOption "startAtTop" (default true)
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	F	field9	verticalKeybind	ToggleOption "verticalKeybind"
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	F	field10	horizontalScrollingKey	ModifierKeybindOption "horizontalScrollingKey" (LSHIFT default)
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	F	field11	scaleScrollingKey	ModifierKeybindOption "scaleScrollingKey" (LCONTROL default)
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	F	field12	tooltipScale	FloatOption "tooltipScale" (0.25..2.5)
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	F	field13	tooltipController	ScrollableTooltipsController driving EventMouseScroll and the tooltip state
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	M	method3	onTooltipRender	private TooltipRender handler (registered this::method3, priority 99) applying the controller offsets/scale
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	M	method13	getScrollType	returns SCALE when scaleScrollingKey down, else VERTICAL/HORIZONTAL depending on verticalKeybind and horizontalScrollingKey
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	M	method15	getStartAtTop	@Generated getter for field8
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	M	method16	getTooltipScale	@Generated getter for field12
+com.moonsworth.lunar.client.mod.render.ScrollableTooltips	M	method17	getTooltipController	@Generated getter for field13
+com.moonsworth.lunar.client.mod.render.Lighting	F	field8	fullBright	ToggleOption "fullBright" (default true)
+com.moonsworth.lunar.client.mod.render.Lighting	F	field9	brightnessBoost	FloatOption "brightnessBoost" (1..10)
+com.moonsworth.lunar.client.mod.render.Lighting	F	field10	fullBrightToggle	ModifierKeybindOption "fullBrightToggle"
+com.moonsworth.lunar.client.mod.render.Lighting	F	field11	confirmingShaderWarning	flag set while the "gui.lightingConfirm" shader-disabling dialog is open
+com.moonsworth.lunar.client.mod.render.Lighting	M	method14	isFullBrightActive	EntityHooksMixin uses it to force block brightness; isEnabled() && fullBright.get()
+com.moonsworth.lunar.client.mod.render.Lighting	M	method15	applyGammaOverride	EventTick/option listener applying gamma override 100 (fullBright) or brightnessBoost
+com.moonsworth.lunar.client.mod.render.Lighting	M	method16	disableAutomatically	shows the "disabled_automatically" notification and disables the mod (used when shaders activate)
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	F	field8	LEGACY_CHILD_IDS	private static final Set of the @VersionGate(1) child ids so method24 can hide them on modern versions
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	F	field9	itemsLegacy	@VersionGate(1) OneSevenItemsLegacy child
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	F	field10	animationsLegacy	@VersionGate(1) OneSevenAnimationsLegacy child
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	F	field11	itemsModern	@VersionGate(min=5) OneSevenItemsModern child
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	F	field12	animationsModern	@VersionGate(min=5) OneSevenAnimationsModern child
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	F	field13	useItemWhileDigging	ToggleOption "useItemWhileDigging"
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	F	field14	alwaysSwing	ToggleOption "alwaysSwing" (default true)
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	M	method11	toggleOption	static ToggleOption factory used by the child mods (healthAnimation/glintAnimation/hurtCameraShake/sneakAnimation/sneakEyeHeight)
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	M	method13	isAlwaysSwingEnabled	isEnabled() && alwaysSwing.get()
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	M	method14	isUseItemWhileDiggingEnabled	isEnabled() && useItemWhileDigging.get()
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	M	method15	getItemsLegacy	@VersionGate(1) child getter
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	M	method16	getAnimationsLegacy	@VersionGate(1) child getter
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	M	method17	getItemsModern	@VersionGate(min=5) child getter
+com.moonsworth.lunar.client.mod.render.OneSevenVisuals	M	method19	getAnimationsModern	@VersionGate(min=5) child getter
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsLegacy	F	field8	healthAnimation	ToggleOption from OneSevenVisuals.method11("healthAnimation")
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsLegacy	F	field9	glintAnimation	ToggleOption "glintAnimation"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsLegacy	F	field10	hurtCameraShake	ToggleOption "hurtCameraShake"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsLegacy	F	field11	sneakAnimation	ToggleOption "sneakAnimation"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsLegacy	F	field12	sneakEyeHeight	ToggleOption "sneakEyeHeight"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsLegacy	F	field13	sneakSpeed	FloatOption "sneakSpeed" (0..2, default 1)
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsLegacy	F	field14	animationState	Onesevenvisuals delegate wired to EventEyeHeight/EventTick and sneakSpeed listener
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsLegacy	M	method13	isHealthAnimationEnabled	isEnabled() && healthAnimation.get() - Legacy-version gate
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	F	field8	healthAnimation	ToggleOption "healthAnimation"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	F	field9	glintAnimation	ToggleOption "glintAnimation"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	F	field10	hurtCameraShake	ToggleOption "hurtCameraShake"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	F	field11	sneakAnimation	ToggleOption "sneakAnimation"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	F	field12	sneakEyeHeight	ToggleOption "sneakEyeHeight"
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	F	field13	sneakSpeed	FloatOption "sneakSpeed" (0..2)
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	F	field14	animationState	Onesevenvisuals delegate wired to EventEyeHeight/EventTick and sneakSpeed listener
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	M	method13	isHealthAnimationEnabled	isEnabled() && healthAnimation.get()
+com.moonsworth.lunar.client.mod.render.OneSevenAnimationsModern	M	method15	isHurtCameraShakeEnabled	isEnabled() && hurtCameraShake.get()
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	F	field8	particleChanger	parent ParticleChanger passed to the protected ctor
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	F	field9	particleType	HorsestatsType2 this child handles; getDisplayName used for ModDetails.method4
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	F	field10	overlayColor	ToggleOption "overlayColor" (default true)
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	F	field11	colorMode	EnumOption "colorMode" (Gui2Extension.OVERLAY default)
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	F	field12	color	ColorOption "color" (default -1)
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	F	field13	scale	FloatOption "scale" (0.25..2)
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	F	field14	particleMultiplier	FloatOption "particleMultiplier" (0.25..10)
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	F	field15	hideParticle	ToggleOption "hideParticle"
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method5	getParticleCount	int(random) expanded with the fractional part of particleMultiplier
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method6	applyColorMode	private helper: returns the overlay color channel when overlayColor and colorMode==OVERLAY, the raw mode value, or the original
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method7	applyRed	applies the color option red channel (IROHICIOOHIRCOCHOOCROHROIIRRIC) to a particle red value
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method8	applyGreen	applies the color option green channel
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method9	applyBlue	applies the color option blue channel
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method10	applyAlpha	applies the color option alpha when overlayColor is on
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method11	applyScale	multiplies a size by the "scale" option
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method12	jitter	random +/-0.2 offset used when spawning particles
+com.moonsworth.lunar.client.mod.render.ParticleChildMod	M	method15	getParticleChanger	@Generated getter for field8
+com.moonsworth.lunar.client.mod.render.ParticleChanger	F	field8	children	EnumMap<HorsestatsType2, ParticleChildMod> built in method9()
+com.moonsworth.lunar.client.mod.render.ParticleChanger	F	field9	bloodChild	ParticleChangerBloodChild created in the field initialiser
+com.moonsworth.lunar.client.mod.render.ParticleChanger	F	field10	alwaysEnchantStrikes	ToggleOption "alwaysEnchantStrikes"
+com.moonsworth.lunar.client.mod.render.ParticleChanger	F	field11	hideFirstPersonParticles	ToggleOption "hideFirstPersonParticles"
+com.moonsworth.lunar.client.mod.render.ParticleChanger	F	field12	hideBlockBreakParticles	ToggleOption "hideBlockBreakParticles"
+com.moonsworth.lunar.client.mod.render.ParticleChanger	F	field13	hideAllParticles	ToggleOption "hideAllParticles"
+com.moonsworth.lunar.client.mod.render.ParticleChanger	M	method3	applyToAll	builds the "applyToAll" OptionAction copying the given options into every child mod
+com.moonsworth.lunar.client.mod.render.ParticleChanger	M	method4	toggleAllButton	builds the "enableAll"/"disableAll" ButtonOption enabling every child
+com.moonsworth.lunar.client.mod.render.ParticleChanger	M	method5	onEnchantedHit	HighlightImpl5_2 handler: emits extra ENCHANTED_HIT particles when alwaysEnchantStrikes is on
+com.moonsworth.lunar.client.mod.render.ParticleChanger	M	method6	onParticleSpawn	HighlightImpl26 handler: cancels spawns when hideAllParticles or the child's hideParticle is on
+com.moonsworth.lunar.client.mod.render.ParticleChanger	M	method13	isHideFirstPersonParticlesEnabled	isEnabled() && hideFirstPersonParticles.get()
+com.moonsworth.lunar.client.mod.render.ParticleChanger	M	method14	isHideBlockBreakParticlesEnabled	isEnabled() && hideBlockBreakParticles.get()
+com.moonsworth.lunar.client.mod.render.ParticleChanger	M	method15	getBloodChild	@Generated getter for field9
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	F	field16	playerBloodParticles	ToggleOption "playerBloodParticles" (default true)
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	F	field17	entityBloodParticles	ToggleOption "entityBloodParticles" (default true)
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	F	field18	selfBloodParticles	ToggleOption "selfBloodParticles" (default true)
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	F	field19	playBloodSound	ToggleOption "playBloodSound"
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	F	field20	lastAttackedEntity	entity stored by the EventPreAttackEntity handler for the next tick
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	F	field21	lastAttackPosition	Vec3Bridge attack position stored by the EventPreAttackEntity handler
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	M	method16	spawnBloodParticles	EventTick handler: spawns blood particles for hurt entities filtered by the blood options
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	M	method5	wasJustHurt	true for EntityLivingBridge.bridge$wasJustHurt()
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	M	method19	isPlayBloodSoundEnabled	isEnabled() && playBloodSound.get()
+com.moonsworth.lunar.client.mod.render.ParticleChangerBloodChild	M	method7	create	static factory returning the anonymous ParticleChangerBloodChild with id PARTICLE_CHANGER_BLOOD_CHILD
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field8	blockHitAnimation	ToggleOption "blockHitAnimation" (isBlockHitAnimationEnabled getter)
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field9	itemTransforms	ToggleOption "itemTransforms"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field10	thirdPersonHeldItems	ToggleOption "thirdPersonHeldItems"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field11	firstPersonCarpet	ToggleOption "firstPersonCarpet"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field12	firstPersonFishingRod	ToggleOption "firstPersonFishingRod"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field13	firstPersonSword	ToggleOption "firstPersonSword"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field14	firstPersonPotions	ToggleOption "firstPersonPotions"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field15	firstPersonFood	ToggleOption "firstPersonFood"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field16	firstPersonBow	ToggleOption "firstPersonBow"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field17	swinging	true while a 1.7 swing animation is being replayed
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field18	swingTicks	ticks into the replayed swing (-1 = restart requested)
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field19	swingProgress	current swing progress used for interpolation
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field20	previousSwingProgress	previous frame swing progress
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field21	swingResetPending	flag consumed by the block-hit swing starter
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field22	blockHitting	true while the local player is block-hitting (only replayed on 1.8); getter method14 / setter method11 used by MinecraftEventMixin
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field23	renderingFirstPersonItem	true while the old first-person item render path runs; getter method15 used by RenderItemEventMixin
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field24	EXCLUDED_HELD_ITEMS	private static final ImmutableSet of items that never get the third-person held-item transform (items 1-5 of ItemsBridge)
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field25	EXCLUDED_ITEM_CLASSES	private static final ImmutableSet of item classes excluded from the third-person transform
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	F	field26	THIRD_PERSON_HELD_ITEMS	private static final ImmutableSet of items that do get the third-person held-item transform
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method3	beginBlockHitSwing	restarts the swing state for the local player when a block hit starts
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method4	getSwingProgress	interpolates the replayed 1.7 swing progress between previousSwingProgress and swingProgress
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method5	isSpecialHeldItem	true for ItemsBridge.method1()/method2() (fishing rod group) which only get the 1.7 first-person path when firstPersonFishingRod is on
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method7	onRenderItemFirstPerson	HighlightImpl15 handler replaying the 1.7 first-person item transforms; cancels the vanilla render
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method8	applyThirdPersonItemTransform	HighlightImpl5 handler applying the 1.7 third-person held item offsets
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method13	isBlockHitAnimationEnabled	isEnabled() && blockHitAnimation.get()
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method14	isBlockHitting	@Generated getter for field22
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method11	setBlockHitting	@Generated setter for field22
+com.moonsworth.lunar.client.mod.render.OneSevenItemsLegacy	M	method15	isRenderingFirstPersonItem	@Generated getter for field23
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field8	ITEM_TRANSFORM	public static final ItemTransformVec3fBridge with the 1.7 (-110,15,75) position used by MinecraftEventMixin and the modern renderer
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field9	blockHitAnimation	ToggleOption "blockHitAnimation"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field10	itemTransforms	ToggleOption "itemTransforms"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field11	thirdPersonHeldItems	ToggleOption "thirdPersonHeldItems"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field12	firstPersonCarpet	ToggleOption "firstPersonCarpet"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field13	firstPersonFishingRod	ToggleOption "firstPersonFishingRod"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field14	firstPersonSword	ToggleOption "firstPersonSword"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field15	firstPersonPotions	ToggleOption "firstPersonPotions"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field16	firstPersonFood	ToggleOption "firstPersonFood"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field17	firstPersonBow	ToggleOption "firstPersonBow"
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	F	field18	attacking	previous keyBindAttack state latched by the tick handler
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	M	method13	onClientTick	HighlightImpl3 (tick) handler: replays sword swing animations while attacking and looking at a block
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	M	method3	applyItemTransform	HighlightImpl6 handler applying the 1.7 transforms for right-hand first/third person renders
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	M	method4	isFirstPersonItemEnabled	per-item gate over the firstPerson* options (carpet/rod/sword/potion/food/bow)
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	M	method5	shouldApplyFirstPersonTransform	isEnabled() && isFirstPersonItemEnabled(stack); used by lunar$cancelReEquip
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	M	method6	shouldForceLegacySwing	isEnabled() && isFirstPersonItemEnabled(stack); used by lunar$legacySwingHook to force cooled attack strength 1.0
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	M	method7	shouldRenderSplashPotion	splash potion && firstPersonPotions && isEnabled()
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	M	method8	shouldPlayBlockHitAnimation	gate for the block-hit swing replay (held item, no main-hand swap, blockHitAnimation, attack+use keys, no shield)
+com.moonsworth.lunar.client.mod.render.OneSevenItemsModern	M	method9	isSwordBlockHitting	isHoldingSword() && shouldPlayBlockHitAnimation
+com.moonsworth.lunar.client.mod.render.MenuBlur	F	field8	animationStarted	latch: true until the first open animation ran (getter method16)
+com.moonsworth.lunar.client.mod.render.MenuBlur	F	field9	blurAnimation	HologramsImpl3 125ms open animation driving the blur progress
+com.moonsworth.lunar.client.mod.render.MenuBlur	F	field10	blurStrength	IntegerOption "blurStrength" (0..20)
+com.moonsworth.lunar.client.mod.render.MenuBlur	F	field11	lunarScreen	Data for the Lunar menu ("Lunar" toggle/background)
+com.moonsworth.lunar.client.mod.render.MenuBlur	F	field12	inventoryScreen	Data for inventory screens ("Inventory")
+com.moonsworth.lunar.client.mod.render.MenuBlur	F	field13	pauseScreen	Data for the pause menu ("Pause")
+com.moonsworth.lunar.client.mod.render.MenuBlur	F	field14	shader	Colorsaturation created with "menu_blur"/MenuBlurShader
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method13	startBlurAnimation	starts the open animation once (field8 latch)
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method14	ensureBlurStarted	called when a screen opens; starts the animation on first show
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method15	stopBlurAnimation	stop()s the animation and re-arms the latch
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method7	applyFade	scales an ARGB colour's alpha by the animation progress (max 0.75)
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method8	getScreenBackgroundColor	Optional background colour for the matching blur Data
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method9	shouldBlurScreen	true when any of lunarScreen/inventoryScreen/pauseScreen matches the GuiScreen
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method16	isAnimationStarted	@Generated getter for field8
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method19	getBlurStrength	@Generated getter for field10
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method21	getLunarScreenData	@Generated getter for field11
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method22	getInventoryScreenData	@Generated getter for field12
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method23	getPauseScreenData	@Generated getter for field13 (GuiScreenMenuBlurMixin uses it for the screen set)
+com.moonsworth.lunar.client.mod.render.MenuBlur	M	method24	getShader	@Generated getter for field14
+com.moonsworth.lunar.client.mod.render.Markers	F	field8	guiIterator	GuiIterator publishing the marker "flags" list to the GUI data tree
+com.moonsworth.lunar.client.mod.render.Markers	F	field9	DEBUG	public static final debug flag (ThreadModuleDump48.field30 || !Nameplate.field4) gating the "[Markers] onMarkerAdded()" log
+com.moonsworth.lunar.client.mod.render.Markers	F	field10	settingsHandler	GuiRewindhandlersHandler2 fetched through method61(GuiRewindhandlersHandler2.class); getter method55
+com.moonsworth.lunar.client.mod.render.Markers	F	field11	markerKeybind	ModifierKeybindOption "markerKeybind"
+com.moonsworth.lunar.client.mod.render.Markers	F	field12	clearMarkersKeybind	ModifierKeybindOption "clearMarkersKeybind"
+com.moonsworth.lunar.client.mod.render.Markers	F	field13	dingVolumeSelf	FloatOption "dingVolumeSelf" (0..1)
+com.moonsworth.lunar.client.mod.render.Markers	F	field14	dingVolumeOthers	FloatOption "dingVolumeOthers" (0..1)
+com.moonsworth.lunar.client.mod.render.Markers	F	field15	middleClickRemove	ToggleOption "middleClickRemove" (default true)
+com.moonsworth.lunar.client.mod.render.Markers	F	field16	chatNotify	ToggleOption "chatNotify"
+com.moonsworth.lunar.client.mod.render.Markers	F	field17	lunarNotify	ToggleOption "lunarNotify"
+com.moonsworth.lunar.client.mod.render.Markers	F	field18	teamMembers	ToggleOption "teamMembers" (parent of the sharing sources)
+com.moonsworth.lunar.client.mod.render.Markers	F	field19	apolloMarkers	sharing ToggleOption for Gui2Extension.APOLLO (default true)
+com.moonsworth.lunar.client.mod.render.Markers	F	field20	scoreboardMarkers	sharing ToggleOption for Gui2Extension.SCOREBOARD
+com.moonsworth.lunar.client.mod.render.Markers	F	field21	nameColorMarkers	sharing ToggleOption for Gui2Extension.NAME_COLOR
+com.moonsworth.lunar.client.mod.render.Markers	F	field22	hypixelPartyMarkers	sharing ToggleOption for Gui2Extension.HYPIXEL_PARTY (default true)
+com.moonsworth.lunar.client.mod.render.Markers	F	field23	lunarFriendsMarkers	sharing ToggleOption for Gui2Extension.LUNAR_FRIENDS
+com.moonsworth.lunar.client.mod.render.Markers	F	field24	visibleDuration	IntegerOption "visibleDuration" (5..120, default 20)
+com.moonsworth.lunar.client.mod.render.Markers	F	field25	scale	FloatOption "scale" (0.5..2)
+com.moonsworth.lunar.client.mod.render.Markers	F	field26	animateMarker	ToggleOption "animateMarker" (default true)
+com.moonsworth.lunar.client.mod.render.Markers	F	field27	background	ToggleOption "background"
+com.moonsworth.lunar.client.mod.render.Markers	F	field28	showOwner	EnumOption "showOwner" (Visibility.ALWAYS)
+com.moonsworth.lunar.client.mod.render.Markers	F	field29	showDescription	EnumOption "showDescription" (Visibility.HOVER)
+com.moonsworth.lunar.client.mod.render.Markers	F	field30	ownerDisplay	EnumOption "ownerDisplay" (OwnerDisplay.HEAD)
+com.moonsworth.lunar.client.mod.render.Markers	F	field31	descriptionDisplay	EnumOption "descriptionDisplay" (DescriptionDisplay.ICON)
+com.moonsworth.lunar.client.mod.render.Markers	F	field32	showCoordinates	EnumOption "showCoordinates" (Visibility.NEVER)
+com.moonsworth.lunar.client.mod.render.Markers	F	field33	showDistance	EnumOption "showDistance" (Visibility.HOVER)
+com.moonsworth.lunar.client.mod.render.Markers	F	field34	compactMode	ToggleOption "compactMode"
+com.moonsworth.lunar.client.mod.render.Markers	F	field35	ownerSuffix	TextOption "ownerSuffix" (default "'s Marker")
+com.moonsworth.lunar.client.mod.render.Markers	F	field36	textShadow	ToggleOption "textShadow" (default true)
+com.moonsworth.lunar.client.mod.render.Markers	F	field37	markerColor	ColorOption "markerColor"
+com.moonsworth.lunar.client.mod.render.Markers	F	field38	dangerMarkerColor	ColorOption "dangerMarkerColor"
+com.moonsworth.lunar.client.mod.render.Markers	F	field39	infoMarkerColor	ColorOption "infoMarkerColor"
+com.moonsworth.lunar.client.mod.render.Markers	F	field40	interestMarkerColor	ColorOption "interestMarkerColor"
+com.moonsworth.lunar.client.mod.render.Markers	F	field41	backgroundColor	ColorOption "backgroundColor"
+com.moonsworth.lunar.client.mod.render.Markers	F	field42	markerManager	framework feature Markers instance created in the field initialiser; getter method51
+com.moonsworth.lunar.client.mod.render.Markers	F	field43	markerSettings	lazily created framework.feature.markers.Markers2; getter method13
+com.moonsworth.lunar.client.mod.render.Markers	F	field44	dingTimestamps	recent self-ding timestamps used for the 5s anti-spam window
+com.moonsworth.lunar.client.mod.render.Markers	F	field45	keybindPressTime	system time of the last markerKeybind press (-1 inactive)
+com.moonsworth.lunar.client.mod.render.Markers	F	field46	cooldownMessageId	chat message id of the "markerCooldown" notice so it can be replaced
+com.moonsworth.lunar.client.mod.render.Markers	F	field47	notifyingChat	true while method8 posts the chat notification; getter method56
+com.moonsworth.lunar.client.mod.render.Markers	M	method3	onMarkerUpdate	forwards HighlightImpl.Data4 events to every marker (marker.method6().method1(event))
+com.moonsworth.lunar.client.mod.render.Markers	M	method4	onMarkerRender	forwards HighlightImpl2 events to every marker (marker.method6().method2())
+com.moonsworth.lunar.client.mod.render.Markers	M	method5	onMarkersCleared	HighlightBase4.Data3 handler clearing markerManager.method10()
+com.moonsworth.lunar.client.mod.render.Markers	M	method6	onTick	fishing.HighlightImpl2 tick handler: prunes dingTimestamps and flushes the pending marker keybind
+com.moonsworth.lunar.client.mod.render.Markers	M	method7	onKeyPress	HighlightImpl3 handler handling middle-click removal of markers
+com.moonsworth.lunar.client.mod.render.Markers	M	method8	addMarker	adds a marker, plays the self/other ding and posts the chat/Lunar notification
+com.moonsworth.lunar.client.mod.render.Markers	M	method9	getOwnerComponent	owner name component (green "you" for own markers)
+com.moonsworth.lunar.client.mod.render.Markers	M	method10	getFlagComponent	danger/info/interest flag prefix component
+com.moonsworth.lunar.client.mod.render.Markers	M	method11	createSharingToggle	builds a sharing ToggleOption and links it to the parent teamMembers option
+com.moonsworth.lunar.client.mod.render.Markers	M	method13	getMarkerSettings	lazy getter creating the Markers2 instance
+com.moonsworth.lunar.client.mod.render.Markers	M	method16	getClearMarkersKeybind	@Generated getter for field12
+com.moonsworth.lunar.client.mod.render.Markers	M	method17	getDingVolumeSelf	@Generated getter for field13
+com.moonsworth.lunar.client.mod.render.Markers	M	method19	getDingVolumeOthers	@Generated getter for field14
+com.moonsworth.lunar.client.mod.render.Markers	M	method21	getMiddleClickRemove	@Generated getter for field15
+com.moonsworth.lunar.client.mod.render.Markers	M	method22	getChatNotify	@Generated getter for field16
+com.moonsworth.lunar.client.mod.render.Markers	M	method23	getLunarNotify	@Generated getter for field17
+com.moonsworth.lunar.client.mod.render.Markers	M	method24	getTeamMembers	@Generated getter for field18
+com.moonsworth.lunar.client.mod.render.Markers	M	method25	getApolloMarkers	@Generated getter for field19
+com.moonsworth.lunar.client.mod.render.Markers	M	method26	getScoreboardMarkers	@Generated getter for field20
+com.moonsworth.lunar.client.mod.render.Markers	M	method27	getNameColorMarkers	@Generated getter for field21
+com.moonsworth.lunar.client.mod.render.Markers	M	method28	getHypixelPartyMarkers	@Generated getter for field22
+com.moonsworth.lunar.client.mod.render.Markers	M	method29	getLunarFriendsMarkers	@Generated getter for field23
+com.moonsworth.lunar.client.mod.render.Markers	M	method30	getVisibleDuration	@Generated getter for field24
+com.moonsworth.lunar.client.mod.render.Markers	M	method34	getScale	@Generated getter for field25
+com.moonsworth.lunar.client.mod.render.Markers	M	method35	getAnimateMarker	@Generated getter for field26
+com.moonsworth.lunar.client.mod.render.Markers	M	method36	getBackground	@Generated getter for field27
+com.moonsworth.lunar.client.mod.render.Markers	M	method37	getShowOwner	@Generated getter for field28
+com.moonsworth.lunar.client.mod.render.Markers	M	method38	getShowDescription	@Generated getter for field29
+com.moonsworth.lunar.client.mod.render.Markers	M	method39	getOwnerDisplay	@Generated getter for field30
+com.moonsworth.lunar.client.mod.render.Markers	M	method40	getDescriptionDisplay	@Generated getter for field31
+com.moonsworth.lunar.client.mod.render.Markers	M	method41	getShowCoordinates	@Generated getter for field32
+com.moonsworth.lunar.client.mod.render.Markers	M	method42	getShowDistance	@Generated getter for field33
+com.moonsworth.lunar.client.mod.render.Markers	M	method43	getCompactMode	@Generated getter for field34
+com.moonsworth.lunar.client.mod.render.Markers	M	method44	getOwnerSuffix	@Generated getter for field35
+com.moonsworth.lunar.client.mod.render.Markers	M	method45	getTextShadow	@Generated getter for field36
+com.moonsworth.lunar.client.mod.render.Markers	M	method46	getMarkerColor	@Generated getter for field37
+com.moonsworth.lunar.client.mod.render.Markers	M	method47	getDangerMarkerColor	@Generated getter for field38
+com.moonsworth.lunar.client.mod.render.Markers	M	method48	getInfoMarkerColor	@Generated getter for field39
+com.moonsworth.lunar.client.mod.render.Markers	M	method49	getInterestMarkerColor	@Generated getter for field40
+com.moonsworth.lunar.client.mod.render.Markers	M	method50	getBackgroundColor	@Generated getter for field41
+com.moonsworth.lunar.client.mod.render.Markers	M	method51	getMarkerManager	@Generated getter for field42 (ServerCustomNameplate uses it)
+com.moonsworth.lunar.client.mod.render.Markers	M	method52	getDingTimestamps	@Generated getter for field44
+com.moonsworth.lunar.client.mod.render.Markers	M	method53	getKeybindPressTime	@Generated getter for field45
+com.moonsworth.lunar.client.mod.render.Markers	M	method54	getCooldownMessageId	@Generated getter for field46
+com.moonsworth.lunar.client.mod.render.Markers	M	method55	getSettingsHandler	@Generated getter for field10
+com.moonsworth.lunar.client.mod.render.Markers	M	method56	isNotifyingChat	@Generated getter for field47
+com.moonsworth.lunar.client.mod.render.Saturation	F	field8	showSaturationOverlay	ToggleOption "showSaturationOverlay" (default true)
+com.moonsworth.lunar.client.mod.render.Saturation	F	field9	showHeldItemHunger	ToggleOption "showHeldItemHunger" (default true)
+com.moonsworth.lunar.client.mod.render.Saturation	F	field10	showHeldItemSaturation	ToggleOption "showHeldItemSaturation" (default true)
+com.moonsworth.lunar.client.mod.render.Saturation	F	field11	showAppleskinTooltip	ToggleOption "showAppleskinTooltip" (default true)
+com.moonsworth.lunar.client.mod.render.Saturation	F	field12	useInverseColor	ToggleOption "useInverseColor"
+com.moonsworth.lunar.client.mod.render.Saturation	F	field13	saturationColor	ColorOption "saturationColor" (default -14848)
+com.moonsworth.lunar.client.mod.render.Saturation	F	field14	iconRenderer	framework Saturation2 helper rendering the hunger/saturation icons
+com.moonsworth.lunar.client.mod.render.Saturation	F	field15	tooltipProvider	framework Saturation3 helper building the AppleSkin tooltip line
+com.moonsworth.lunar.client.mod.render.Saturation	F	field16	flashProgress	oscillating progress of the starvation flash (0.125 steps, -0.5..1.5)
+com.moonsworth.lunar.client.mod.render.Saturation	F	field17	flashAlpha	clamped 0..0.85 flash alpha used as tint
+com.moonsworth.lunar.client.mod.render.Saturation	F	field18	flashDirection	direction (+1/-1) of the flash oscillation
+com.moonsworth.lunar.client.mod.render.Saturation	M	method4	updateFlash	HighlightImpl2 tick handler advancing flashProgress/flashAlpha
+com.moonsworth.lunar.client.mod.render.Saturation	M	method6	addAppleskinTooltipLine	HighlightImpl17.Data2 handler inserting the Saturation3 tooltip line at index 1
+com.moonsworth.lunar.client.mod.render.Saturation	M	method7	onHudRender	HighlightImpl19 handler drawing the vanilla/held-item saturation overlays
+com.moonsworth.lunar.client.mod.render.Saturation	M	method8	renderFoodOverlay	renders saturation icons on the hunger bar (extra saturation float, args x/y/tint)
+com.moonsworth.lunar.client.mod.render.Saturation	M	method9	renderHeldItemFoodIcons	renders the held item's predicted hunger/saturation icons
+com.moonsworth.lunar.client.mod.render.Saturation	M	method10	drawIcon	draws one Saturation.Data icon quad via Bridge7Iterator.method37
+com.moonsworth.lunar.client.mod.render.Saturation	M	method11	applyHungerJitter	adds -1..1 jitter while starving (food level 0) like AppleSkin
+com.moonsworth.lunar.client.mod.render.Saturation	M	method12	getSaturationColor	inverse per-half icon colour or the configured saturationColor
+com.moonsworth.lunar.client.mod.render.Saturation	M	method13	resetFlash	resets flashProgress/flashAlpha/flashDirection
+com.moonsworth.lunar.client.mod.render.Nametag	F	field8	nametagBackgroundOpacity	FloatOption "nametagBackgroundOpacity" (0..1)
+com.moonsworth.lunar.client.mod.render.Nametag	F	field9	toggleNametagsKeybind	ModifierKeybindOption "toggleNametagsKeybind"
+com.moonsworth.lunar.client.mod.render.Nametag	F	field10	togglePlayerNametagsKeybind	ModifierKeybindOption "togglePlayerNametagsKeybind"
+com.moonsworth.lunar.client.mod.render.Nametag	F	field11	nametag	ToggleOption "nametag" (default true)
+com.moonsworth.lunar.client.mod.render.Nametag	F	field12	nametagShadow	ToggleOption "nametagShadow"
+com.moonsworth.lunar.client.mod.render.Nametag	F	field13	toggleNametags	ToggleOption "toggleNametags" (default true) - chat feedback for the keybinds
+com.moonsworth.lunar.client.mod.render.Nametag	F	field14	hideNametagsInF1	ToggleOption "hideNametagsInF1"
+com.moonsworth.lunar.client.mod.render.Nametag	F	field15	replaceOwnNametagColor	ToggleOption "replaceOwnNametagColor"
+com.moonsworth.lunar.client.mod.render.Nametag	F	field16	ownNametagColor	ColorOption "ownNametagColor" (default -1)
+com.moonsworth.lunar.client.mod.render.Nametag	F	field17	hideNametagF5Passengers	ToggleOption "hideNametagF5Passengers"
+com.moonsworth.lunar.client.mod.render.Nametag	F	field18	allNametagsHidden	toggled by toggleNametagsKeybind
+com.moonsworth.lunar.client.mod.render.Nametag	F	field19	playerNametagsHidden	toggled by togglePlayerNametagsKeybind
+com.moonsworth.lunar.client.mod.render.Nametag	F	field20	ownNamePattern	Pattern of the local player name (reset on disconnect)
+com.moonsworth.lunar.client.mod.render.Nametag	F	field21	ownNameReplacer	TextReplacementConfig consumer colouring the local player name
+com.moonsworth.lunar.client.mod.render.Nametag	M	method4	shouldRenderPlayerNametag	own-player nametag gate (nametag option or rewind, visible, no passengers, not sleeping)
+com.moonsworth.lunar.client.mod.render.Nametag	M	method13	getBackgroundOpacity	nametagBackgroundOpacity scaled by the version factor
+com.moonsworth.lunar.client.mod.render.Nametag	M	method14	getNametagBackgroundOpacity	@Generated getter for field8
+com.moonsworth.lunar.client.mod.render.Nametag	M	method15	getToggleNametagsKeybind	@Generated getter for field9
+com.moonsworth.lunar.client.mod.render.Nametag	M	method16	getTogglePlayerNametagsKeybind	@Generated getter for field10
+com.moonsworth.lunar.client.mod.render.Nametag	M	method17	getNametag	@Generated getter for field11
+com.moonsworth.lunar.client.mod.render.Nametag	M	method19	getNametagShadow	@Generated getter for field12
+com.moonsworth.lunar.client.mod.render.Nametag	M	method21	getToggleNametags	@Generated getter for field13
+com.moonsworth.lunar.client.mod.render.Nametag	M	method22	getHideNametagsInF1	@Generated getter for field14
+com.moonsworth.lunar.client.mod.render.Nametag	M	method23	getReplaceOwnNametagColor	@Generated getter for field15
+com.moonsworth.lunar.client.mod.render.Nametag	M	method24	getOwnNametagColor	@Generated getter for field16
+com.moonsworth.lunar.client.mod.render.Nametag	M	method25	isAllNametagsHidden	@Generated getter for field18
+com.moonsworth.lunar.client.mod.render.Nametag	M	method26	isPlayerNametagsHidden	@Generated getter for field19
+com.moonsworth.lunar.client.mod.render.Nametag	M	method27	getOwnNamePattern	@Generated getter for field20
+com.moonsworth.lunar.client.mod.render.Nametag	M	method28	getOwnNameReplacer	@Generated getter for field21
+com.moonsworth.lunar.client.mod.render.Nametag	M	method29	getHideNametagF5Passengers	@Generated getter for field17
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field8	potionEffectsMode	EnumOption "potionEffectsMode" (DisplayMode.NORMAL)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field9	minimalModeHorizontal	ToggleOption "minimalModeHorizontal"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field10	minimalModeTilesPerLine	IntegerOption "minimalModeTilesPerLine" (1..10)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field11	vanillaGroupEffects	ToggleOption "vanillaGroupEffects" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field12	vanillaModeHorizontal	ToggleOption "vanillaModeHorizontal" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field13	vanillaModeTilesPerLine	IntegerOption "vanillaModeTilesPerLine" (1..10)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field14	vanillaSpacing	ToggleOption "vanillaSpacing"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field15	effectName	ToggleOption "effectName" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field16	effectDuration	ToggleOption "effectDuration" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field17	effectAmplifier	ToggleOption "effectAmplifier" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field18	showInInventory	ToggleOption "showInInventory" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field19	showWhileTyping	ToggleOption "showWhileTyping" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field20	potionBlink	ToggleOption "potionBlink" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field21	potionBlinkIcon	ToggleOption "potionBlinkIcon"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field22	blinkDuration	IntegerOption "blinkDuration" (2..20)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field23	uppercasePotionNames	ToggleOption "uppercasePotionNames"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field24	reversedText	ToggleOption "reversedText"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field25	formattedDurations	ToggleOption "formattedDurations"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field26	hideModernIcons	ToggleOption "hideModernIcons" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field27	hidePotionStatus	ToggleOption "hidePotionStatus"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field28	background	ToggleOption "background" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field29	backgroundColor	ColorOption "backgroundColor" (default 1862270976)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field30	border	ToggleOption "border"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field31	borderThickness	FloatOption "borderThickness" (0.5..3)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field32	borderColor	ColorOption "borderColor" (default -1627389952)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field33	textShadow	ToggleOption "textShadow" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field34	colorNameBasedOnEffect	ToggleOption "colorNameBasedOnEffect"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field35	colorInfoBasedOnEffect	ToggleOption "colorInfoBasedOnEffect"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field36	textColor	ColorOption "textColor" (default -1)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field37	infoColor	ColorOption "infoColor" (default -1)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field38	excludePerm	ToggleOption "excludePerm" (hide permanent effects)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field39	effectBars	ToggleOption "effectBars"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field40	effectBarPosition	EnumOption "effectBarPosition" (BarPosition.BOTTOM)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field41	effectBarVanillaHud	ToggleOption "effectBarVanillaHud" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field42	effectBarInventory	ToggleOption "effectBarInventory" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field43	effectBarLunarHud	ToggleOption "effectBarLunarHud"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field44	effectBarHideAmbient	ToggleOption "effectBarHideAmbient" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field45	effectBarGradient	ToggleOption "effectBarGradient" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field46	effectBarCustomColor	ToggleOption "effectBarCustomColor"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field47	effectBarColor	ColorOption "effectBarColor" (default -1)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field48	hideAmbientDuration	ToggleOption "hideAmbientDuration"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field49	showEffectBackground	ToggleOption "showEffectBackground" (default true)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field50	durationPosition	EnumOption "durationPosition" (Gui2Extension.BOTTOM_LEFT)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field51	amplifierPosition	EnumOption "amplifierPosition" (Gui2Extension.TOP_RIGHT)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field52	vanillaIconScale	FloatOption "vanillaIconScale" (0.5..1.25)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field53	vanillaTextScale	FloatOption "vanillaTextScale" (0.25..2)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field54	useMinecraftGUIScale	ToggleOption "useMinecraftGUIScale"
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field55	vanillaBlinkColor	ColorOption "vanillaBlinkColor" (default -1)
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field56	excludedPotionOptions	Int2ObjectMap of potion id -> "exclude<Effect>" ToggleOption built by method13
+com.moonsworth.lunar.client.mod.render.PotionEffects	F	field57	renderer	Potioneffects2 rendering the HUD/inventory/effect-bar layout
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method13	createExcludeOptions	registers the per-effect "exclude<Name>" toggles and returns them sorted by name
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method3	addExclusion	puts one "exclude<Name>" ToggleOption into excludedPotionOptions
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method14	isEffectBarEnabledOnVanillaHud	isEnabled() && effectBars && effectBarVanillaHud
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method15	isEffectBarEnabledInInventory	isEnabled() && effectBars && effectBarInventory
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method16	isEffectBarEnabledOnLunarHud	effectBars && effectBarLunarHud
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method17	isUsingMinecraftGuiScale	potionEffectsMode == VANILLA && useMinecraftGUIScale
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method8	renderWithContext	renders via renderer using the AbstractRenderContext (method42())
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method10	isEffectExcluded	true when excludePerm matches a permanent effect or the per-potion exclude toggle is on
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method11	isPermanentEffect	static: duration -1/>72000 or max-duration on 1.8
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method19	getShowInInventory	@Generated getter for field18
+com.moonsworth.lunar.client.mod.render.PotionEffects	M	method21	getHideModernIcons	@Generated getter for field26
+com.moonsworth.lunar.client.mod.render.NickHider	F	field8	STEVE_SKIN	private static final ResourceLocationBridge for the default wide skin
+com.moonsworth.lunar.client.mod.render.NickHider	F	field9	ALEX_SKIN	private static final ResourceLocationBridge for the default slim skin
+com.moonsworth.lunar.client.mod.render.NickHider	F	field10	LOBBY_MESSAGE_PATTERN	private static final "Sending to server <lobby>" chat pattern hidden as lobby id
+com.moonsworth.lunar.client.mod.render.NickHider	F	field11	HUB_JOIN_PATTERN	private static final "Request join for Hub" pattern
+com.moonsworth.lunar.client.mod.render.NickHider	F	field12	SENDING_PATTERN	private static final "Sending you to mini/mega" pattern
+com.moonsworth.lunar.client.mod.render.NickHider	F	field13	hideName	ToggleOption "hideName" (default true)
+com.moonsworth.lunar.client.mod.render.NickHider	F	field14	hideRealName	ToggleOption "hideRealName" (default true)
+com.moonsworth.lunar.client.mod.render.NickHider	F	field15	hideOthersNames	ToggleOption "hideOthersNames"
+com.moonsworth.lunar.client.mod.render.NickHider	F	field16	hideOwnSkin	ToggleOption "hideOwnSkin" (default true)
+com.moonsworth.lunar.client.mod.render.NickHider	F	field17	useRealSkin	ToggleOption "useRealSkin" (default true)
+com.moonsworth.lunar.client.mod.render.NickHider	F	field18	hideOthersSkin	ToggleOption "hideOthersSkin"
+com.moonsworth.lunar.client.mod.render.NickHider	F	field19	hideLobbyID	ToggleOption "hideLobbyID"
+com.moonsworth.lunar.client.mod.render.NickHider	F	field20	ownNameInput	last accepted "ownName" text (restored when validation fails)
+com.moonsworth.lunar.client.mod.render.NickHider	F	field21	prefixInput	last accepted "hiddenPrefix" text
+com.moonsworth.lunar.client.mod.render.NickHider	F	field22	suffixInput	last accepted "hiddenSuffix" text
+com.moonsworth.lunar.client.mod.render.NickHider	F	field23	ownName	TextOption "ownName" (default "You")
+com.moonsworth.lunar.client.mod.render.NickHider	F	field24	hiddenPrefix	TextOption "hiddenPrefix" (default "Player")
+com.moonsworth.lunar.client.mod.render.NickHider	F	field25	customSuffix	ToggleOption "customSuffix"
+com.moonsworth.lunar.client.mod.render.NickHider	F	field26	hiddenSuffix	TextOption "hiddenSuffix"
+com.moonsworth.lunar.client.mod.render.NickHider	F	field27	NAME_PATTERN	private static final Pattern ([a-zA-Z0-9_]{3,16}) validating player names
+com.moonsworth.lunar.client.mod.render.NickHider	F	field28	nicknames	ImmutableList of active Nickhider replacements, longest-first
+com.moonsworth.lunar.client.mod.render.NickHider	F	field29	nicknameCounter	AtomicInteger numbering anonymous "Player-<n>" replacements
+com.moonsworth.lunar.client.mod.render.NickHider	F	field30	nicknameCache	NicknameTransformerCache<String,String> caching name -> replacement
+com.moonsworth.lunar.client.mod.render.NickHider	F	field31	componentCache	LoadingCache<Component,Component> (max 5000) for transformed chat components
+com.moonsworth.lunar.client.mod.render.NickHider	F	field32	realSkinLocation	public static String with the local player's real skin location (Apollo/bridge sets it)
+com.moonsworth.lunar.client.mod.render.NickHider	F	field33	nicknameListener	NicknameListener tracking the real Hypixel nickname
+com.moonsworth.lunar.client.mod.render.NickHider	F	field34	currentNickname	name currently being hidden ("" when none)
+com.moonsworth.lunar.client.mod.render.NickHider	M	method4	hideProfileName	creates a Nickhider entry for a GameProfile name when it should be hidden
+com.moonsworth.lunar.client.mod.render.NickHider	M	method5	setNickname	sets currentNickname ("" clears it)
+com.moonsworth.lunar.client.mod.render.NickHider	M	method8	removeNickname	removes the Nickhider entry for a name
+com.moonsworth.lunar.client.mod.render.NickHider	M	method9	transformTextCached	name -> replacement using nicknameCache (passthrough when disabled)
+com.moonsworth.lunar.client.mod.render.NickHider	M	method10	transformComponentCached	Component -> Component using componentCache
+com.moonsworth.lunar.client.mod.render.NickHider	M	method16	getPlayerSkin	skin for a player UUID/name (own real skin, steve/alex fallback)
+com.moonsworth.lunar.client.mod.render.NickHider	M	method17	getPlayerName	own name when useRealSkin (realSkinLocation) else the given name
+com.moonsworth.lunar.client.mod.render.NickHider	M	method18	isDefaultSkin	true for steve/alex skins
+com.moonsworth.lunar.client.mod.render.NickHider	M	method19	getDefaultSkin	slim (alex) for non-"default" models, wide (steve) otherwise
+com.moonsworth.lunar.client.mod.render.NickHider	M	method21	addNickname	creates and stores a Nickhider replacement for a name
+com.moonsworth.lunar.client.mod.render.NickHider	M	method22	onTypedChatMessage	EventChatMessage.TypedChatMessage handler cancelling lobby-id chat lines
+com.moonsworth.lunar.client.mod.render.NickHider	M	method23	onServerPing	EventServerPing handler resetting the nickname state
+com.moonsworth.lunar.client.mod.render.NickHider	M	method24	onPlayerJoinWorld	EventPlayerJoinWorld handler hiding the joined player
+com.moonsworth.lunar.client.mod.render.NickHider	M	method25	onPlayerListAdd	EventPlayerListAdd handler hiding the added player
+com.moonsworth.lunar.client.mod.render.NickHider	M	method26	refreshSelfNickname	re-applies hideName/hideRealName to the session username
+com.moonsworth.lunar.client.mod.render.NickHider	M	method27	removeSelfNickname	removes the self replacement and disables the listener tracking
+com.moonsworth.lunar.client.mod.render.NickHider	M	method28	hideAllPlayerNames	hides every other player in the player info map
+com.moonsworth.lunar.client.mod.render.NickHider	M	method30	transformName	string replacement walk over every active Nickhider entry
+com.moonsworth.lunar.client.mod.render.NickHider	M	method31	transformComponent	Component transform walk over every active Nickhider entry
+com.moonsworth.lunar.client.mod.render.NickHider	M	method35	getHideLobbyID	@Generated getter for field19
+com.moonsworth.lunar.client.mod.render.NickHider	M	method36	setOwnNameInput	@Generated setter for field20 (TextOption ownName value callback)
+com.moonsworth.lunar.client.mod.render.NickHider	M	method37	setPrefixInput	@Generated setter for field21
+com.moonsworth.lunar.client.mod.render.NickHider	M	method38	setSuffixInput	@Generated setter for field22
+com.moonsworth.lunar.client.mod.render.NickHider	M	method40	getCurrentNickname	@Generated getter for field34
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field8	renderRangeLimit	IntegerOption "renderRangeLimit" (1..12, default 2)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field9	toggleKeybind	ModifierKeybindOption "toggleKeybind"
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field10	fastUpdates	ToggleOption "fastUpdates"
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field11	culling	ToggleOption "culling" (default true)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field12	includeSkyLight	ToggleOption "includeSkyLight" (default true)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field13	hideUnspawnableLight	ToggleOption "hideUnspawnableLight"
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field14	customLightThreshold	ToggleOption "customLightThreshold"
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field15	threshold	IntegerOption "threshold" (0..15, default 15)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field16	lightOverlayMode	EnumOption "lightOverlayMode" (Type.CROSS)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field17	showLightValue	ToggleOption "showLightValue"
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field18	crossThickness	FloatOption "crossThickness" (0.5..10)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field19	dynamicColor	ToggleOption "lightOverlayDynamicColor"
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field20	brightColor	ColorOption "brightColor" (default -16711936)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field21	darkColor	ColorOption "darkColor" (default -65536)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field22	textColor	ColorOption "textColor" (default -1)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field23	state	framework Lightoverlay2 holding the chunk light data (nulled to free memory)
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field24	chunkUpdateInProgress	AtomicBoolean guarding the async Lightoverlay2.method2 chunk update
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field25	blockScanInProgress	AtomicBoolean guarding the async Lightoverlay2.method3 block scan
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field26	executor	2-thread daemon pool named "Light Overlay Executor %d"
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field27	overlayEnabled	state persisted as "enabledToggle" and toggled by toggleKeybind
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field28	worldTime	last world time (abs) used for skylight subtraction
+com.moonsworth.lunar.client.mod.render.LightOverlay	F	field29	skylightSubtract	cached skylight subtract for the current dimension (getter method21)
+com.moonsworth.lunar.client.mod.render.LightOverlay	M	method7	onWorldTime	HighlightImpl10 handler storing Math.abs(worldTime)
+com.moonsworth.lunar.client.mod.render.LightOverlay	M	method11	onRenderNameplate	nameplate.HighlightImpl2 handler forwarding the render context to the Lightoverlay2 state
+com.moonsworth.lunar.client.mod.render.LightOverlay	M	method12	canMonstersSpawn	world.bridge$canMonstersSpawn(pos) when the block is not a spawner/glass
+com.moonsworth.lunar.client.mod.render.LightOverlay	M	method18	getSkylight	max(blockLight, skyLight - skylightSubtract)
+com.moonsworth.lunar.client.mod.render.LightOverlay	M	method21	getSkylightSubtract	@Generated getter for field29
+com.moonsworth.lunar.client.mod.render.Minimap	F	field8	RECORD_ICON	private static final ResourceLocationBridge recording badge icon "lunar:icons/rewind/record.png"
+com.moonsworth.lunar.client.mod.render.Minimap	F	field9	MAX_RENDER_DISTANCE	public static final int 14 - render distance cap used in method11
+com.moonsworth.lunar.client.mod.render.Minimap	F	field10	CROSS_LINES	private static final float[] cross-marker line offsets {-5,0,5,0,0,-5,0,5}
+com.moonsworth.lunar.client.mod.render.Minimap	F	field11	biomeHandler	framework biome listener returning the biome at the player for the showBiome line
+com.moonsworth.lunar.client.mod.render.Minimap	F	field12	saveAsPictureFile	ToggleOption "minimapSaveAsPictureFile"
+com.moonsworth.lunar.client.mod.render.Minimap	F	field13	mapWidth	IntegerOption "mapWidth" (1..16, default 8)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field14	mapHeight	IntegerOption "mapHeight" (1..16, default 8)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field15	mapZoom	FloatOption "mapZoom" (1..2)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field16	mapShape	EnumOption "mapShape" (SQUARE/CIRCLE)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field17	rotateWithPlayer	ToggleOption "rotateWithPlayer" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field18	fitTextToWidth	ToggleOption "fitTextToWidth" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field19	border	ToggleOption "border" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field20	borderColor	ColorOption "borderColor" (default -1627389952)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field21	borderThickness	FloatOption "borderThickness" (1..5)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field22	compass	ToggleOption "compass" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field23	compassColor	ColorOption "compassColor" (default -1)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field24	compassShadow	ToggleOption "compassShadow" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field25	playerMarkerType	EnumOption "playerMarkerType"
+com.moonsworth.lunar.client.mod.render.Minimap	F	field26	playerMarkerColor	ColorOption "playerMarkerColor" (default -16776961)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field27	playerMarkerSize	FloatOption "playerMarkerSize" (1..10)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field28	entityMarkerType	EnumOption "entityMarkerType"
+com.moonsworth.lunar.client.mod.render.Minimap	F	field29	entityMarkerOpacity	FloatOption "entityMarkerOpacity" (0..1)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field30	entityMarkerSize	FloatOption "entityMarkerSize" (1..10)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field31	entityMarkerShadow	ToggleOption "entityMarkerShadow" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field32	showCoordinates	ToggleOption "showCoordinates" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field33	showBiome	ToggleOption "showBiome"
+com.moonsworth.lunar.client.mod.render.Minimap	F	field34	presetBiomeColor	ToggleOption "presetBiomeColor" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field35	showClock	ToggleOption "showClock"
+com.moonsworth.lunar.client.mod.render.Minimap	F	field36	showAmPm	ToggleOption "showAmPm" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field37	militaryTime	ToggleOption "militaryTime"
+com.moonsworth.lunar.client.mod.render.Minimap	F	field38	fullViewKeybind	ModifierKeybindOption "fullView"
+com.moonsworth.lunar.client.mod.render.Minimap	F	field39	showDistantWaypoints	ToggleOption "showDistantWaypoints" (default true)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field40	minimapManager	framework minimap state (texture/chunk data) created in the field initialiser
+com.moonsworth.lunar.client.mod.render.Minimap	F	field41	chunkQueue	Queue of chunks waiting to be written to the minimap
+com.moonsworth.lunar.client.mod.render.Minimap	F	field42	markerProviders	marker layer list registered in the constructor
+com.moonsworth.lunar.client.mod.render.Minimap	F	field43	lastDimensionId	dimension id captured on world change until the region file is saved (Integer.MIN_VALUE = none)
+com.moonsworth.lunar.client.mod.render.Minimap	F	field44	clockText	formatted clock string shown under the map ("worldTime" translation)
+com.moonsworth.lunar.client.mod.render.Minimap	M	method10	resetManager	LunarEvent/Highlight handler calling minimapManager.reset()
+com.moonsworth.lunar.client.mod.render.Minimap	M	method11	calculateScale	computes the minimap scale from zoom, shape, render distance and element size
+com.moonsworth.lunar.client.mod.render.Minimap	M	method12	renderOverlays	runs every marker provider and returns the layer under the mouse position
+com.moonsworth.lunar.client.mod.render.Minimap	M	method14	renderPlayerMarker	draws the player marker with the configured size
+com.moonsworth.lunar.client.mod.render.Minimap	M	method15	renderPlayerMarkerSized	draws the player marker for a given size; handles CIRCLE/TRIANGLE/CROSS/HEAD
+com.moonsworth.lunar.client.mod.render.Minimap	M	method17	openSaveFolder	opens the save folder and shows "minimapPopupOpenFolderFailed" on failure
+com.moonsworth.lunar.client.mod.render.Minimap	M	method21	getSaveAsPictureFile	@Generated getter for field12
+com.moonsworth.lunar.client.mod.render.Minimap	M	method22	getRotateWithPlayer	@Generated getter for field17
+com.moonsworth.lunar.client.mod.render.Minimap	M	method23	getCompassShadow	@Generated getter for field24
+com.moonsworth.lunar.client.mod.render.Minimap	M	method25	getEntityMarkerOpacity	@Generated getter for field29
+com.moonsworth.lunar.client.mod.render.Minimap	M	method27	getEntityMarkerShadow	@Generated getter for field31
+com.moonsworth.lunar.client.mod.render.Minimap	M	method28	getFullViewKeybind	@Generated getter for field38
+com.moonsworth.lunar.client.mod.render.Minimap	M	method29	getMinimapManager	@Generated getter for field40
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field8	RECORD_ICON	private static final ResourceLocationBridge recording badge icon "lunar:icons/rewind/record.png" [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field9	MAX_RENDER_DISTANCE	public static final int 14 - render distance cap used in method11 [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field10	CROSS_LINES	private static final float[] cross-marker line offsets {-5,0,5,0,0,-5,0,5} [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field11	biomeHandler	framework biome listener returning the biome at the player for the showBiome line [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field12	saveAsPictureFile	ToggleOption "minimapSaveAsPictureFile" [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field13	mapWidth	IntegerOption "mapWidth" (1..16, default 8) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field14	mapHeight	IntegerOption "mapHeight" (1..16, default 8) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field15	mapZoom	FloatOption "mapZoom" (1..2) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field16	mapShape	EnumOption "mapShape" (SQUARE/CIRCLE) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field17	rotateWithPlayer	ToggleOption "rotateWithPlayer" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field18	fitTextToWidth	ToggleOption "fitTextToWidth" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field19	border	ToggleOption "border" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field20	borderColor	ColorOption "borderColor" (default -1627389952) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field21	borderThickness	FloatOption "borderThickness" (1..5) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field22	compass	ToggleOption "compass" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field23	compassColor	ColorOption "compassColor" (default -1) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field24	compassShadow	ToggleOption "compassShadow" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field25	playerMarkerType	EnumOption "playerMarkerType" [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field26	playerMarkerColor	ColorOption "playerMarkerColor" (default -16776961) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field27	playerMarkerSize	FloatOption "playerMarkerSize" (1..10) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field28	entityMarkerType	EnumOption "entityMarkerType" [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field29	entityMarkerOpacity	FloatOption "entityMarkerOpacity" (0..1) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field30	entityMarkerSize	FloatOption "entityMarkerSize" (1..10) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field31	entityMarkerShadow	ToggleOption "entityMarkerShadow" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field32	showCoordinates	ToggleOption "showCoordinates" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field33	showBiome	ToggleOption "showBiome" [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field34	presetBiomeColor	ToggleOption "presetBiomeColor" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field35	showClock	ToggleOption "showClock" [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field36	showAmPm	ToggleOption "showAmPm" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field37	militaryTime	ToggleOption "militaryTime" [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field38	fullViewKeybind	ModifierKeybindOption "fullView" [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field39	showDistantWaypoints	ToggleOption "showDistantWaypoints" (default true) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field40	minimapManager	framework minimap state (texture/chunk data) created in the field initialiser [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field41	chunkQueue	Queue of chunks waiting to be written to the minimap [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field42	markerProviders	marker layer list registered in the constructor [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field43	lastDimensionId	dimension id captured on world change until the region file is saved (Integer.MIN_VALUE = none) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	F	field44	clockText	formatted clock string shown under the map ("worldTime" translation) [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method10	resetManager	LunarEvent/Highlight handler calling minimapManager.reset() [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method11	calculateScale	computes the minimap scale from zoom, shape, render distance and element size [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method12	renderOverlays	runs every marker provider and returns the layer under the mouse position [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method14	renderPlayerMarker	draws the player marker with the configured size [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method15	renderPlayerMarkerSized	draws the player marker for a given size; handles CIRCLE/TRIANGLE/CROSS/HEAD [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method17	openSaveFolder	opens the save folder and shows "minimapPopupOpenFolderFailed" on failure [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method21	getSaveAsPictureFile	@Generated getter for field12 [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method22	getRotateWithPlayer	@Generated getter for field17 [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method23	getCompassShadow	@Generated getter for field24 [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method25	getEntityMarkerOpacity	@Generated getter for field29 [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method27	getEntityMarkerShadow	@Generated getter for field31 [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method28	getFullViewKeybind	@Generated getter for field38 [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method29	getMinimapManager	@Generated getter for field40 [twin of Minimap]
+com.moonsworth.lunar.client.mod.render.MinimapMod	M	method19	isSingleplayer	mc.bridge$getCurrentServerData() == null; safe here because this variant fetches the biome listener with method63(Class) not method19(Class)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field8	BARRIER_TEXTURE_SIZE	public static final int 64 (texture size constant; no in-tree readers found)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field9	BARRIER_OUTLINE_TEXTURE	public static final ResourceLocationBridge "lunar:barrier_outline"; TextureMapMixin2 creates the atlas sprite from it
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field10	POWDER_SNOW_OUTLINE_COLOR	private static final -3608326 used by the powderedSnowOutline updater
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field11	barrierModel	public static volatile Object baked model set by TextureMapMixin2 and read by BlockRendererDispatcherMixin
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field12	clearGlass	GuiUpdater2 for the "clearGlass" option
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field13	clearColoredGlass	ToggleOption "clearColoredGlass"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field14	clearGlassTransparency	FloatOption "clearGlassTransparency" (0..1)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field15	clearGlassOutline	ToggleOption "clearGlassOutline"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field16	clearGlassOutlineThickness	IntegerOption "clearGlassOutlineThickness" (1..3)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field17	clearGlassOutlineTransparency	FloatOption "clearGlassOutlineTransparency" (0..1)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field18	glintMode	EnumOption "glint" (Type.ALL default)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field19	hideFoliage	ToggleOption "hideFoliage"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field20	stringColor	ColorOption "stringColor" (default -65536)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field21	boldString	ToggleOption "boldString"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field22	coloredString	GuiUpdater for "coloredString" (tripwire string recolour)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field23	fireHeight	FloatOption "fireHeight" (0..2)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field24	fireBlockHeight	FloatOption "fireBlockHeight" (0..2)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field25	shieldHeight	FloatOption "shieldHeight" (0..2)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field26	minimalViewBobbing	ToggleOption "minimalViewBobbing"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field27	groundArrows	ToggleOption "groundArrows" (default true)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field28	stuckArrows	ToggleOption "stuckArrows" (default true)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field29	hideSkulls	ToggleOption "hideSkulls"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field30	hideHelmet	ToggleOption "hideHelmet"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field31	hideChest	ToggleOption "hideChest"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field32	hideLeggings	ToggleOption "hideLeggings"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field33	hideBoots	ToggleOption "hideBoots"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field34	selfOnly	ToggleOption "selfOnly" (default true)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field35	hideEndportals	EnumOption "hideEndportals" (Gui2Extension2.NEVER)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field36	entityShadow	ToggleOption "entityShadow" (default true)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field37	pumpkinOverlay	FloatOption "pumpkinOverlay" (0..1)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field38	spyglassOverlay	FloatOption "spyglassOverlay" (0..1)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field39	frostOverlay	FloatOption "frostOverlay" (0..1)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field40	fishingBobberOverlay	FloatOption "fishingBobberOverlay" (0..1)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field41	powderedSnowOutline	@Annotation2(min=8) GuiUpdater for "powderedSnowOutline"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field42	oreOutlines	ToggleOption "oreOutlines"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field43	smartOutlineColors	ToggleOption "smartOutlineColors" (default true)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field44	shinyOreOutlines	ToggleOption "shinyOreOutlines" (default true)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field45	oreOutlineThickness	IntegerOption "oreOutlineThickness" (1..3)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field46	diamondOreOutline	GuiUpdater3 "diamondOreOutline" (#FF68D2E4-ish -9898524)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field47	goldOreOutline	GuiUpdater3 "goldOreOutline" (-596911)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field48	ironOreOutline	GuiUpdater3 "ironOreOutline" (-2511472)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field49	lapisOreOutline	GuiUpdater3 "lapisOreOutline" (-10911263)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field50	redstoneOreOutline	GuiUpdater3 "redstoneOreOutline" (-261888)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field51	emeraldOreOutline	GuiUpdater3 "emeraldOreOutline" (-14353558)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field52	coalOreOutline	GuiUpdater3 "coalOreOutline" (-13224394)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field53	copperOreOutline	@Annotation2(min=8) GuiUpdater3 "copperOreOutline" (-3905962)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field54	netherQuartzOreOutline	GuiUpdater3 "netherQuartzOreOutline" (-3160651, quartz_ore/nether_quartz_ore)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field55	netherGoldOreOutline	@Annotation2(min=6) GuiUpdater3 "netherGoldOreOutline" (-596911)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field56	ancientDebrisOutline	@Annotation2(min=6) GuiUpdater3 "ancientDebrisOutline" (-5599611)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field57	overrideXpOrbColor	ToggleOption "overrideXpOrbColor"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field58	xpOrbColor	ColorOption "xpOrbColor" (default -2139029728)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field59	xpHotbarTextColor	ColorOption "xpHotbarTextColor" (default -8323296, hidden)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field60	headlessHorses	ToggleOption "headlessHorses"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field61	headlessCamels	ToggleOption "headlessCamels"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field62	headlessLlamas	ToggleOption "headlessLLamas" (option id keeps the typo)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field63	customFishingLine	ToggleOption "customFishingLine"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field64	fishingLineThickness	FloatOption "fishingLineThickness" (0.5..3)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field65	fishingLineColor	ColorOption "fishingLineColor" (default -16777216)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field66	disableDeathAnimation	ToggleOption "disableDeathAnimation"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field67	disableDamageOverlay	ToggleOption "disableDamageOverlay"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field68	disableFireOverlay	ToggleOption "disableFireOverlay"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field69	barrierOutlineColor	ColorOption "barrierOutlineColor" (default -1073807360)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field70	barrierOutlineThickness	IntegerOption "barrierOutlineThickness" (1..3)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field71	barrierOutlines	GuiUpdater for "barrierOutlines" using BARRIER_OUTLINE_TEXTURE
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field72	customGuiColors	ToggleOption "customGuiColors"
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field73	containerTint	ColorOption "containerTint" (default -11842741)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field74	hotbarTint	ColorOption "hotbarTint" (default -11842741)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field75	menuTint	ColorOption "menuTint" (default -11842741)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field76	guiTextColor	ColorOption "guiTextColor" (default -2631721, hidden)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field77	menuTextColor	ColorOption "menuTextColor" (default -2631721, hidden)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field78	totemAnimationOverlay	TotemAnimationOverlayChild registered as a child mod
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field79	guiHandler	framework GuiRewindhandlersHandler2 used to push updater sets to the GUI
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field80	updaters	all GuiUpdater instances created through method61
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field81	oreUpdaters	GuiUpdater3 instances created through method59
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field83	updateTicks	countdown before the queued updater set is applied (1..10)
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field84	needsChunkReload	set when queued updaters require a chunk/block model reload
+com.moonsworth.lunar.client.mod.render.OverlayMod	F	field85	pendingUpdaters	Set<GuiUpdater> waiting for the next update tick
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method10	queueUpdate	queues updaters with a minimum 1 tick delay
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method11	queueDelayedUpdate	queues updaters with the 10 tick delay
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method12	refreshUpdaters	reloads GUI state and calls updateState() on every updater
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method13	bindOptionListeners	registers every option -> updater/refresh callback used by the mod
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method14	clearChunkCache	@Annotation2(min=8) clears the TurboEngineManager chunk cache
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method17	onGuiTextColor	HighlightImpl15.Data4 handler recolouring the menu text
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method18	isGuiScreen	true for screens that are not in-game GUIs (not Bridge5Extension_3/62/612)
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method21	getGlintMode	Type.ALL when disabled, else the "glint" option
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method22	isHideFoliageEnabled	isEnabled() && hideFoliage.get()
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method26	isHeadlessHorsesEnabled	headlessHorses && first person
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method27	isHeadlessLlamasEnabled	headlessLLamas && first person
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method28	isHeadlessCamelsEnabled	headlessCamels && first person
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method29	isCustomFishingLineEnabled	isEnabled() && customFishingLine.get()
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method30	getFishingBobberOverlayOpacity	fishingBobberOverlay in first person
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method32	getFishingLineColor	fishingLineColor at the given alpha
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method34	getFishingLineThickness	fishing line thickness scaled by the display width
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method35	isDamageOverlayDisabled	isEnabled() && disableDamageOverlay.get()
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method36	isFireOverlayDisabled	isEnabled() && disableFireOverlay.get()
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method37	shouldRenderEntityShadow	true when disabled or entityShadow is on
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method38	isClearGlassEnabled	isEnabled() && clearGlass.option.get()
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method39	isClearColoredGlassEnabled	clearGlass && clearColoredGlass
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method42	isHideChestEnabled	isEnabled() && hideChest (selfOnly gate)
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method43	isHideLeggingsEnabled	isEnabled() && hideLeggings (selfOnly gate)
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method44	isHideBootsEnabled	isEnabled() && hideBoots (selfOnly gate)
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method46	shouldRenderGroundArrows	true when disabled or groundArrows is on
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method47	isMinimalViewBobbingEnabled	isEnabled() && minimalViewBobbing.get()
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method49	isContainerTintEnabled	customGuiColors && containerTint applied
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method50	isHotbarTintEnabled	customGuiColors && hotbarTint applied (ArmorStatusPanelRenderer/Nameplate4)
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method51	isMenuTintEnabled	customGuiColors && menuTint applied on a GUI screen
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method52	isCustomGuiColorsEnabled	isEnabled() && customGuiColors.get()
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method53	getContainerTint	containerTint ARGB
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method54	getHotbarTint	hotbarTint ARGB (ArmorStatusPanelRenderer/Nameplate4)
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method55	getMenuTint	menuTint ARGB
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method56	getGuiTextColor	guiTextColor ARGB
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method57	getColoredStringOption	coloredString updater option
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method58	getClearGlassOption	clearGlass updater option
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method59	createOreUpdater	creates a GuiUpdater3, adds it to oreUpdaters and registers it
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method60	createUpdater	creates a GuiUpdater with a Click processor delegate and registers it
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method61	registerUpdater	adds an updater to updaters
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method62	getColoredStringUpdater	@Generated getter for field22
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method63	getFireBlockHeight	@Generated getter for field24
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method64	getPumpkinOverlayOpacity	@Generated getter for field37
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method65	getSpyglassOverlayOpacity	@Generated getter for field38
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method66	getFrostOverlayOpacity	@Generated getter for field39
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method67	getXpOrbColor	@Generated getter for field58
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method68	getXpHotbarTextColor	@Generated getter for field59
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method69	getFishingLineColorOption	@Generated getter for field65
+com.moonsworth.lunar.client.mod.render.OverlayMod	M	method70	getTotemAnimationOverlay	@Generated getter for field78 (EntityRendererMixin)

@@ -1,0 +1,52 @@
+{
+    "position": {
+        "top_left": "topLeft",
+        "top_center": "topCenter",
+        "top_right": "topRight",
+        "middle_left": "middleLeft",
+        "middle_center": "middleCenter",
+        "middle_right": "middleRight",
+        "bottom_left": "bottomLeft",
+        "bottom_center_left": "bottomCenterLeft",
+        "bottom_center_right": "bottomCenterRight",
+        "bottom_right": "bottomRight"
+    },
+    "sortingOptions": {
+        "last_modified": "lastModified"
+    },
+    "lazyChunkLoading": {
+        "off_van": "offVanilla"
+    },
+    "entities": {
+        "off_van": "offVanilla"
+    },
+    "tileEntities": {
+        "off_van": "offVanilla"
+    },
+    "alignment": {
+        "align_left": "alignLeft",
+        "align_center": "alignCenter",
+        "align_right": "alignRight"
+    },
+    "adjustForBedwars": {
+        "hypixel_only": "hypixelOnly"
+    },
+    "timePeriod": {
+        "all_time": "allTime"
+    },
+    "rounding": {
+        "1_decimal": "1Decimal",
+        "2_decimal": "2Decimal",
+        "3_decimal": "3Decimal"
+    },
+    "crosshairMode": {
+        "crosshair_mode_simple": "crosshairModeSimple",
+        "crosshair_mode_preset": "crosshairModePreset",
+        "crosshair_mode_custom": "crosshairModeCustom"
+    },
+    "crosshairColor": {
+        "crosshair_color_vanilla_blending": "crosshairColorVanilla",
+        "crosshair_color_static": "crosshairColorStatic",
+        "crosshair_color_dynamic": "crosshairColorDynamic"
+    }
+}

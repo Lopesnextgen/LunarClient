@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.markers.mixin.fishing
+com.moonsworth.lunar.client.markers.mixin.gui
+com.moonsworth.lunar.client.markers.mixin.gui.mixin
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.nameplate
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.rewindhandlers
+com.moonsworth.lunar.client.markers.mixin.highlight
+com.moonsworth.lunar.client.markers.mixin.holograms
+com.moonsworth.lunar.client.markers.mixin.holograms.mixin

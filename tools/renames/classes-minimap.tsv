@@ -1,0 +1,45 @@
+com.moonsworth.lunar.client.framework.feature.minimap.mixin	Minimap2	MapCoord	chunk/region coordinate key helper: method2(x,z) packs two ints, method3(Vector3ic) >>4 chunk, method4(x,z) >>5 region, method5/6 unpack
+com.moonsworth.lunar.client.framework.feature.minimap.mixin	Minimap3	TerrainColumn	per-column surface sample: method1 height, method2 fluid depth, method3 fluid block; returned by ChunkColorMap.method2
+com.moonsworth.lunar.client.framework.feature.minimap.mixin	Minimap4	ChunkColorMap	16x16 chunk colour map (int[256] + built flag); method1 builds from Itemcounter2, method2 samples a TerrainColumn
+com.moonsworth.lunar.client.framework.feature.mod.gui.nameplate	Data2	StatBarOptions	Nameplate3$Data2 option holder: showValue/showMax/showSuffix/showBar/barBackground/alignment/combine	com/moonsworth/lunar/client/framework/feature/mod/gui/nameplate/Nameplate3.java
+com.moonsworth.lunar.client.framework.feature.mod.gui.nameplate	Nameplate2	NameplateComponent	HUD component drawing player name or a Supplier<List<TextComponent>>; ALWAYS/RECENT/NEVER display mode
+com.moonsworth.lunar.client.framework.feature.mod.gui.nameplate	Nameplate3	StatBarComponent	HUD component drawing stat lines (value/max + colour + suffix char) plus a 100x8 progress bar
+com.moonsworth.lunar.client.framework.feature.rewind.fishing	Fishing2	Sliceable	functional interface T method1(Nameplate2, Range<K>, Range<K>); bound V extends Sliceable<Integer,V> & Fishing<UUID> in the rewind Layer
+com.moonsworth.lunar.client.framework.feature.rewind.fishing	Fishing3	NumberInterpolator	static lerp for Double/Float/Integer/Long via Easing.method3/method4
+com.moonsworth.lunar.client.framework.feature.rewind.fishing	Fishing4	RewindSettingKeys	rewind settings path constants (gameplay/audio/effect/camera/entityOverrides/...) + join helpers method1("/") method2("#")
+com.moonsworth.lunar.client.framework.feature.rewind.holograms	Holograms2	EntityOverrideRegistry	registry of entity-override loaders: hide/name/skin -> Supplier<Fishing2Loader> + allowed entity types
+com.moonsworth.lunar.client.framework.feature.rewind.holograms	Holograms3	SegmentRegistry	type-string -> RewindIterator class registry (effect/image/audio); used by Highlight layer deserializer
+com.moonsworth.lunar.client.framework.feature.rewind.holograms	Holograms4	TrackRegistry	type-string -> Track class registry (GuiImpl/"effect"); used by Gui2$Data TrackCollection deserializer
+com.moonsworth.lunar.client.framework.feature.rewind.nameplate	Nameplate2	ReplayPacket	abstract replay packet: method1/method2 (ByteBufLoader) read/write, method3 handler, name()/data()
+com.moonsworth.lunar.client.framework.feature.rewind.nameplate	Nameplate3	DynamicCategory	Fishing2Iterator3 subclass whose children are computed lazily from Function<RewindHandlers,List<SettingOption>>
+com.moonsworth.lunar.client.framework.feature.rewind.nameplate	Nameplate_2	SettingOption	(type, display name, optional UUID) leaf option in the rewind settings tree (e.g. player#<uuid>)
+com.moonsworth.lunar.client.framework.feature.saturation	Data2	OutlineTexture	Saturation2$Data2: cached outline texture + resolution + static flag; method2 maps saturation to 0..3	com/moonsworth/lunar/client/framework/feature/saturation/Saturation2.java
+com.moonsworth.lunar.client.framework.feature.saturation	Data3	OutlinePoint	Saturation2$Data3: (x,y) pixel of an outline edge	com/moonsworth/lunar/client/framework/feature/saturation/Saturation2.java
+com.moonsworth.lunar.client.framework.feature.saturation	Saturation2	SaturationRenderer	builds/draws the saturation outline over the hunger bar (textures saturation_outline / saturation_outline_hunger)
+com.moonsworth.lunar.client.framework.feature.tiertagger.mixin	Gui2Extension2	TierFallbackMode	enum SELECTED_ONLY/HIGHEST_FALLBACK/HIGHEST_ALWAYS for tier-source fallback
+com.moonsworth.lunar.client.framework.feature.tiertagger.mixin	LightingExtension4952	TierSourceOption	option selecting a Tiertagger_2 tier provider (apiName/niceName), default = first provider
+com.moonsworth.lunar.client.framework.feature.tiertagger.mixin	LightingExtension49522	TierSourceModeOption	tier-source option with per-source mode maps modeBySource/secondaryModeBySource
+com.moonsworth.lunar.client.framework.feature.waypoints	Gui2Loader_2	JourneyMapWaypointImporter	Gui2Loader subclass importing journeymap/data/**/waypoints/*.json (name/x/y/z/dimensions)
+com.moonsworth.lunar.client.framework.feature.waypoints	GuiHandler2	Waypoint	waypoint model + builder (method18 builder, name/pos/world/dimension/colour/enabled)
+com.moonsworth.lunar.client.framework.feature.waypoints	Waypoints2	WaypointStringPool	decodes the compressed BLCWP string table (SkyBlock boss/phase names) and slices substrings
+com.moonsworth.lunar.client.guiRewindhandlers.nameplate	Data9	EventSubscription	Nameplate$Data9: (Consumer, priority, event class) subscription registered on LunarEventBus	com/moonsworth/lunar/client/guiRewindhandlers/nameplate/Nameplate.java
+com.moonsworth.lunar.client.guiRewindhandlers.nameplate	Nameplate2	DynamicListenerEvent	marker interface for @TriggeredBy dynamic-listener events (LunarEventBus error text "does not extend DynamicListenerEvent")
+com.moonsworth.lunar.client.guiRewindhandlers.nameplate	Nameplate3	ThreadedEvent	marker interface for events allowed to fire off the main thread (LunarEventBus error text "make it implement ThreadedEvent")
+com.moonsworth.lunar.client.highlight.mixin.nameplate	Data4	EventRenderHudFocused	HighlightImpl$Data4: HUD render event for the focused/selected component pass (MixinCore9 instanceof check; ChatImagePreview)	com/moonsworth/lunar/client/highlight/mixin/nameplate/HighlightImpl.java
+com.moonsworth.lunar.client.highlight.mixin.nameplate	HighlightImpl3	EventRenderTabList	cancellable event fired before GuiPlayerTabOverlay.renderPlayerlist (GuiIngameForgeMixin)
+com.moonsworth.lunar.client.highlight.mixin.nameplate	HighlightImpl5	EventRenderHud	HUD render event carrying entity + pose + marker; consumed by MixinCore9.method20, fired in the rewind preview
+com.moonsworth.lunar.client.inactive.mixin.highlight	Data5	BoneQuery	Highlight$Data5: per-IBone query.* position/rotation/scale variable handles	com/moonsworth/lunar/client/inactive/mixin/highlight/Highlight.java
+com.moonsworth.lunar.client.inactive.mixin.highlight	Highlight2	QueryDefaults	static Object2DoubleMap of default query.* values for the Molang query context
+com.moonsworth.lunar.client.inactive.mixin.highlight	Highlight3	QueryTransition	eased boolean query transition over a time window (EasingManager + Interpolations.lerp)
+com.moonsworth.lunar.client.itemcounter	Data2	MaliciousServer	Itemcounter$Data2: maliciousServers entry (pattern string + SafetyAction)	com/moonsworth/lunar/client/itemcounter/Itemcounter.java
+com.moonsworth.lunar.client.itemcounter	Data3	MaliciousUrl	Itemcounter$Data3: maliciousUrls entry (compiled Pattern + SafetyAction)	com/moonsworth/lunar/client/itemcounter/Itemcounter.java
+com.moonsworth.lunar.client.itemcounter	Type4	SafetyAction	Itemcounter$Type4 enum PROMPT/BLOCK for the safety (malicious server/url) checker	com/moonsworth/lunar/client/itemcounter/Itemcounter.java
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.nameplate	Data7	PendingImage	Nameplate$Data7: pending conversation icon/chat image (bytes + contentType)	com/moonsworth/lunar/client/markers/mixin/gui/mixin/nameplate/Nameplate.java
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.nameplate	Nameplate3	FriendsGuiExtension	GuiExtension_2 returning the friends-list GuiIterator (Client.method35().method111())
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.nameplate	Nameplate4	FriendApi	@CallbackJS friends API: addFriend/removeFriend/accept/deny/setVisibility/join/setPinnedFriend
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.rewindhandlers	GuiExtension3	MinimapJsApi	@CallbackJS minimap API: setMapDimensions/mapDrag/mapZoomBy/showMap/resetMapInteraction
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.rewindhandlers	GuiExtension5	WaypointJsApi	@CallbackJS waypoint API: requestColor/showAddWaypoint
+com.moonsworth.lunar.client.markers.mixin.gui.mixin.rewindhandlers	GuiExtension6	WaypointImportJsApi	@CallbackJS waypoint import API: searchForWaypoints/importWaypoints over the Gui2Loader decoders
+com.moonsworth.lunar.client.markers.mixin.holograms	Holograms3	HologramElement	JSON model: position (HologramBounds), id, scrollAmount
+com.moonsworth.lunar.client.markers.mixin.holograms	Holograms4	HologramRenderer	renders/queues marker holograms (field5 map, processQueue, HologramsIterator2/HologramsIterator)
+com.moonsworth.lunar.client.markers.mixin.holograms	Holograms5	HologramBounds	@SerializedName x/y/width/height rectangle + transient float; method1 hit test vs Markers.Data5

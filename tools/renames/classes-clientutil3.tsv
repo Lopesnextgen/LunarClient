@@ -1,0 +1,45 @@
+com.moonsworth.lunar.client.util	ThreadModuleDump3	ServerUtils	current server/gamemode detection: `server` field + getServer(), method4("skyblock") compare, method5 client-brand startsWith (Hypixel)
+com.moonsworth.lunar.client.util	ThreadModuleDump4	TickQueue	ArrayDeque of (value,tick) entries, evicts entries older than N ticks, peekAll/expire; used by KnockbackTrainer
+com.moonsworth.lunar.client.util	ThreadModuleDump5	UnorderedPair	two-field generic pair whose equals()/hashCode() ignore order (a,b == b,a)
+com.moonsworth.lunar.client.util	ThreadModuleDump6	ValueHolder	generic holder (private value) with get()/set(T) + lombok constructors; passed as mutable ref in rewind code
+com.moonsworth.lunar.client.util	ThreadModuleDump23	ColorUtils	ARGB pack/unpack, HSV/HSB conversions, hex parse/format, blend/lerp, NamedTextColor by code char
+com.moonsworth.lunar.client.util	ThreadModuleDump24	ExpiringWeightedCache	LinkedHashMap cache with per-entry weight Function<V,Long>, time-based + total-weight eviction, onRemove BiConsumer
+com.moonsworth.lunar.client.util	ThreadModuleDump25	BinarySearchState	min/max/current binary-search step with undo/redo stacks and per-name cached instances
+com.moonsworth.lunar.client.util	ThreadModuleDump26	MutableValue	generic box with a public mutable `value` field; used as incrementing/decrementing counter in Shields
+com.moonsworth.lunar.client.util	ThreadModuleDump27	StringCursor	cursor over a String: remaining(), hasNext(), peek(), next(), skip(), skipWhitespace(), rest(); command parser
+com.moonsworth.lunar.client.util	ThreadModuleDump28	FileExplorer	opens a directory in the OS file manager (explorer.exe / open / xdg-open)
+com.moonsworth.lunar.client.util	ThreadModuleDump29	DesktopNotifier	desktop notifications via notify-send / SystemTray / osascript, with OS capability enum
+com.moonsworth.lunar.client.util	ThreadModuleDump30	KeyVersionPair	immutable (keyCode:String, key:BridgeType_8, legacyKeyCode:int) triple; toString() literally "KeyVersionPair(...)"
+com.moonsworth.lunar.client.util	ThreadModuleDump31	ReflectionUtils	class-hierarchy walk + annotation scans (static/final checks, annotated methods/fields, EventHandler parameter type)
+com.moonsworth.lunar.client.util	ThreadModuleDump32	DevFeatureList	stub static List<String> provider; second method is a no-op gated on Nameplate.field4 (production); no callers
+com.moonsworth.lunar.client.util	ThreadModuleDump33	PotionUtils	potion damage id -> registry name table plus ambient/extended/upgradable flag-bit helpers
+com.moonsworth.lunar.client.util	ThreadModuleDump34	DateUtils	relative date strings (today/tomorrow/inDays/daysAgo) + localized DateTimeFormatter constants
+com.moonsworth.lunar.client.util	ThreadModuleDump36	UuidUtils	UUID <-> dashed/undashed String and int[4]/two-long conversions (MCP UUID codec)
+com.moonsworth.lunar.client.util	ThreadModuleDump37	BackgroundExecutor	"lunar-background-task-%d" pool + "lunar-background-scheduler" + tick-driven delayed Future queue
+com.moonsworth.lunar.client.util	ThreadModuleDump38	FastMath	lookup-table sin/cos; self-test prints "[LC Fast Math] Average error" / "Maximum error"
+com.moonsworth.lunar.client.util	ThreadModuleDump40	NumberUtils	parse long/double/int (with fallbacks, optional variants), roman/compact/b/k/m shorthand, compact + grouped formatting
+com.moonsworth.lunar.client.util	ThreadModuleDump41	RingBuffer	thread-safe circular byte buffer; write() prints "RingBuffer overflow! Dropping N bytes."
+com.moonsworth.lunar.client.util	ThreadModuleDump42	CheckoutUtils	opens Tebex/PayNow JS checkout via launcher IPC (openTebexJsCheckout / openPayNowJsCheckout)
+com.moonsworth.lunar.client.util	ThreadModuleDump43	ConfigRangeBuilder	self-typed fluent builder adding Config enum ranges/ranges of ordinals/strings to a settings group
+com.moonsworth.lunar.client.util	ThreadModuleDump44	TraitBuilder	single-method `T build()` builder interface; the Builder type of Lightoverlay9 traits
+com.moonsworth.lunar.client.util	ThreadModuleDump45	HudTimer	pausable/steppable elapsed timer for HUD mods (fire-freeze, invincibility, dungeon timers); formats "%.2fs"
+com.moonsworth.lunar.client.util	ThreadModuleDump46	TextUtils	word-wrap by pixel width, valid Minecraft-username check, capitalize, UPPER_SNAKE/CamelCase/kebab conversion
+com.moonsworth.lunar.client.util	ThreadModuleDump47	WeightedQuadtree	quadtree over IntRectangle with a max-weight query/split into 4 children; Data facade used by MixinHelper22_2
+com.moonsworth.lunar.client.util	ThreadModuleDump48	LunarConstants	global constant/paths holder: os.name/version, .lunarclient data dir tree, Gson instances, master/dev/beta flags, bootstrap()
+com.moonsworth.lunar.client.util	ThreadModuleDump49	CursorManager	custom GL cursor manager (cursors/*.png, HIDDEN/CROSSHAIR/IBEAM/HAND/HRESIZE/VRESIZE) with tick()
+com.moonsworth.lunar.client.util	ThreadModuleDump50	OpaqueTextureFix	forces transparent pixels of opaque block textures (stone, dirt, grass, logs, ...) opaque; used by TextureMapMixin
+com.moonsworth.lunar.client.util	ThreadModuleDump51	MarkerPredicate	@FunctionalInterface boolean accept(Markers.Data2, int); marker click/hit callback
+com.moonsworth.lunar.client.util	ThreadModuleDump52	CompressionUtils	GZIP + Base64 encode/decode helpers for waypoint share strings ("lcdwp1:")
+com.moonsworth.lunar.client.util	ThreadModuleDump53	ListUtils	remove-and-swap-with-last list element helper (order-independent removal)
+com.moonsworth.lunar.client.util	ThreadModuleDump54	DummyPlayer	mannequin/self dummy-player interface (incrementTicksExisted, getDummyPlayerType SELF/MANNEQUIN, nametag, game profile)
+com.moonsworth.lunar.client.util	ThreadModuleDump55	MimeTypeUtils	extension/URL -> MIME type (png, jpeg, gif, webp, html, js, css, svg, ttf)
+com.moonsworth.lunar.client.util	ThreadModuleDump56	TranslationFormatter	resolves Lunar lang placeholders ($1, ${name}, $s/$d/$f) into a Calculator/text; stripping sanitizer
+com.moonsworth.lunar.client.util	ThreadModuleDump57	KeyBindingOrder	keeps a list of registered keybinds and reorders a keybind array so registered ones sort last
+com.moonsworth.lunar.client.util	ThreadModuleDump58	TextSanitizer	keeps printable non-section-sign chars (drops control chars); used to sanitize Apollo payload text
+com.moonsworth.lunar.client.util	ThreadModuleDump59	ImageUtils	image loading incl. WebP (luciad) decode and BufferedImage -> packed int[]/ARGB conversion
+com.moonsworth.lunar.client.util	ThreadModuleDump60	Vector2f	mutable float x/y vector with set() and normalize() (returns this); hitbox vertex
+com.moonsworth.lunar.client.util	ThreadModuleDump61	BrowserUtils	validates http/https/lunarclient schemes and opens URLs in the embedded browser via launcher IPC
+com.moonsworth.lunar.client.util	ThreadModuleDump62	GuiClipState	static GUI clip state: boolean ready flag + IntRectangle clip bounds + flag, reset(); written around panel render
+com.moonsworth.lunar.client.util	ThreadModuleDump63	Ref	global client reference: MC_VERSION, hasModule, bridge getters, keybind-clash bookkeeping, resource IO; error text says "use Ref.isMcLoaded()"
+com.moonsworth.lunar.client.util	ThreadModuleDump64	ScreenProjection	world<->screen projection using model/projection matrices; worldToScreen, screenToRay, camera pos, scaled W/H
+com.moonsworth.lunar.client.util	ThreadModuleDump65	CollectionUtils	make()/firstNonNull/isNullOrEmpty, getLast/getNext/getPrevious, DataResult int/long/list validators, ToIntFunction index lookup

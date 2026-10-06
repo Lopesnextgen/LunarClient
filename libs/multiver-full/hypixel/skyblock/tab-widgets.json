@@ -1,0 +1,201 @@
+[
+  {
+    "id": "general_info",
+    "title": "Area"
+  },
+  {
+    "id": "profile",
+    "title": "Profile"
+  },
+  {
+    "id": "pet",
+    "title": "Pet"
+  },
+  {
+    "id": "fire_sales",
+    "title": "Fire Sales"
+  },
+  {
+    "id": "election",
+    "title": "Election"
+  },
+  {
+    "id": "events",
+    "title": "Event"
+  },
+  {
+    "id": "minions",
+    "title": "Minions",
+    "exclusivelyOn": ["ISLAND"]
+  },
+  {
+    "id": "bestiary",
+    "title": "Bestiary"
+  },
+  {
+    "id": "collection",
+    "title": "Collection"
+  },
+  {
+    "id": "daily_quests",
+    "title": "Daily Quests"
+  },
+  {
+    "id": "effects",
+    "title": "Active Effects"
+  },
+  {
+    "id": "forge",
+    "title": "Forges"
+  },
+  {
+    "id": "skills",
+    "title": "Skills"
+  },
+  {
+    "id": "stats",
+    "title": "Stats"
+  },
+  {
+    "id": "timers",
+    "title": "Timers"
+  },
+  {
+    "id": "trackers",
+    "title": "Event Trackers"
+  },
+  {
+    "id": "composter",
+    "title": "Composter",
+    "exclusivelyOn": ["GARDEN"]
+  },
+  {
+    "id": "pests",
+    "title": "Pests",
+    "exclusivelyOn": ["GARDEN"]
+  },
+  {
+    "id": "pest_traps",
+    "title": "Pest Traps",
+    "exclusivelyOn": ["GARDEN"]
+  },
+  {
+    "id": "visitors",
+    "title": "Visitors",
+    "exclusivelyOn": ["GARDEN"]
+  },
+  {
+    "id": "jacobs_contest",
+    "title": "Jacob's Contest"
+  },
+  {
+    "id": "crop_milestones",
+    "title": "Crop Milestones",
+    "exclusivelyOn": ["GARDEN"]
+  },
+  {
+    "id": "crystals",
+    "title": "Crystals"
+  },
+  {
+    "id": "commissions",
+    "title": "Commissions",
+    "exclusivelyOn": ["DWARVEN_MINES", "CRYSTAL_HOLLOWS", "MINESHAFT"]
+  },
+  {
+    "id": "powder",
+    "title": "Powders"
+  },
+  {
+    "id": "essence",
+    "title": "Essence"
+  },
+  {
+    "id": "frozen_corpses",
+    "title": "Frozen Corpses",
+    "exclusivelyOn": ["MINESHAFT"]
+  },
+  {
+    "id": "slayer",
+    "title": "Slayer"
+  },
+  {
+    "id": "trophy_fish",
+    "title": "Trophy Fish",
+    "exclusivelyOn": ["CRIMSON_ISLES"]
+  },
+  {
+    "id": "rift",
+    "title": "Good To Know",
+    "exclusivelyOn": ["RIFT"]
+  },
+  {
+    "id": "barry",
+    "title": "Advertisement",
+    "exclusivelyOn": ["RIFT"]
+  },
+  {
+    "id": "pity",
+    "title": "Pity"
+  },
+  {
+    "id": "pickaxe_ability",
+    "title": "Pickaxe Ability",
+    "exclusivelyOn": ["DWARVEN_MINES", "CRYSTAL_HOLLOWS", "MINESHAFT"]
+  },
+  {
+    "id": "trapper",
+    "title": "Trapper",
+    "exclusivelyOn": ["FARMING_ISLANDS"]
+  },
+  {
+    "id": "trophy_frog",
+    "title": "Trophy Frogs",
+    "exclusivelyOn": ["LOTUS_ATOLL"]
+  },
+  {
+    "id": "agathas_contest",
+    "title": "Agatha's Contest",
+    "exclusivelyOn": ["GALATEA"]
+  },
+  {
+    "id": "forest_whispers",
+    "title": "Forest Whispers",
+    "exclusivelyOn": ["GALATEA"]
+  },
+  {
+    "id": "desert_whispers",
+    "title": "Desert Whispers",
+    "exclusivelyOn": ["TORRHUS_CANYON"]
+  },
+  {
+    "id": "starborn_temple",
+    "title": "Starborn Temple",
+    "exclusivelyOn": ["GALATEA", "TORRHUS_CANYON"]
+  },
+  {
+    "id": "salts",
+    "title": "Salts",
+    "exclusivelyOn": ["GALATEA", "TORRHUS_CANYON"]
+  },
+  {
+    "id": "shard_traps",
+    "title": "Shard Traps",
+    "exclusivelyOn": ["GALATEA", "TORRHUS_CANYON"]
+  },
+  {
+    "id": "moonglade_beacon",
+    "title": "Moonglade Beacon",
+    "exclusivelyOn": ["GALATEA"]
+  },
+  {
+    "id": "torrhus_beacon",
+    "title": "Torrhus Beacon",
+    "exclusivelyOn": ["TORRHUS_CANYON"]
+  },
+  {
+    "id": "puzzles",
+    "title": "Puzzles",
+    "exclusivelyOn": ["DUNGEON"]
+  }
+]

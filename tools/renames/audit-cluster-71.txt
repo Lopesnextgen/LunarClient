@@ -1,0 +1,8 @@
+com.moonsworth.lunar.framework
+com.moonsworth.lunar.framework.mixin
+com.moonsworth.lunar.genesis
+com.moonsworth.lunar.genesis.mixin
+com.moonsworth.lunar.ichor
+com.moonsworth.lunar.ichor.api
+com.moonsworth.lunar.ichor.mixin
+com.moonsworth.lunar.ichor.util

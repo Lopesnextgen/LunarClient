@@ -1,0 +1,8 @@
+com.moonsworth.lunar.forge.lib.guava.collect
+com.moonsworth.lunar.forge.lib.guava.escape
+com.moonsworth.lunar.forge.lib.guava.eventbus
+com.moonsworth.lunar.forge.lib.guava.graph
+com.moonsworth.lunar.forge.lib.guava.hash
+com.moonsworth.lunar.forge.lib.guava.html
+com.moonsworth.lunar.forge.lib.guava.io
+com.moonsworth.lunar.forge.lib.guava.math

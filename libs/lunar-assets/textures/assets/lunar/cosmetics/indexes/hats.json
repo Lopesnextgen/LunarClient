@@ -1,0 +1,7768 @@
+{
+	"panda": {
+		"animated": true,
+		"dynamic": false,
+		"name": "panda",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": 0.1,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"frog": {
+		"animated": false,
+		"dynamic": false,
+		"name": "frog",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": 0.1,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"pig": {
+		"animated": false,
+		"dynamic": false,
+		"name": "pig",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": 0.1,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"koala": {
+		"animated": false,
+		"dynamic": false,
+		"name": "koala",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": 0.15,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"lion": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lion",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": 0.135,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"penguin": {
+		"animated": false,
+		"dynamic": false,
+		"name": "penguin",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0475,
+					"y": 0.125,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 1.035,
+					"y": 1.035,
+					"z": 1.035
+				}
+			}
+		]
+	},
+	"bandanna": {
+		"animated": false,
+		"dynamic": true,
+		"name": "bandanna",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-1.0, 0.5],
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"skin_layer": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					},
+					"helmet": {
+						"x": 1.2,
+						"y": 1.2,
+						"z": 1.2
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"fox": {
+		"animated": false,
+		"dynamic": false,
+		"name": "fox",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": -0.4,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"dog": {
+		"animated": false,
+		"dynamic": false,
+		"name": "dog",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.015
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			}
+		]
+	},
+	"bunnyears": {
+		"animated": false,
+		"dynamic": true,
+		"name": "bunnyears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.15,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.2825,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 1.0245,
+					"y": 1.0245,
+					"z": 1.0245
+				}
+			}
+		]
+	},
+	"mask": {
+		"animated": false,
+		"dynamic": true,
+		"name": "mask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.0],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.1,
+						"y": 0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.125,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.25,
+						"y": 1.25,
+						"z": 1.25
+					}
+				}
+			}
+		],
+		"compatible": ["any"],
+		"exclude": ["beard", "beard_stpatrick", "dragon", "astronauthelmet"]
+	},
+	"dragon": {
+		"animated": false,
+		"dynamic": false,
+		"name": "dragon",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					},
+					"player": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.48,
+						"z": 0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.325,
+						"z": 0.06
+					}
+				}
+			}
+		]
+	},
+	"halloween_mask": {
+		"animated": false,
+		"dynamic": true,
+		"name": "halloween_mask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					}
+				}
+			}
+		],
+		"compatible": [
+			"knife",
+			"top_hat",
+			"top_hat_newyears",
+			"devil_horns",
+			"black_devil_horns",
+			"curvedhorns",
+			"witch",
+			"tophats",
+			"halo",
+			"spider"
+		],
+		"exclude": ["beard", "beard_stpatrick", "mask"]
+	},
+	"pumpkin": {
+		"animated": false,
+		"dynamic": false,
+		"name": "pumpkin",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.425,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"witch": {
+		"animated": false,
+		"dynamic": false,
+		"name": "witch",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.36,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					},
+					"player": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			}
+		]
+	},
+	"devil_horns": {
+		"animated": false,
+		"dynamic": true,
+		"name": "devil_horns",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": -0.5,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"black_devil_horns": {
+		"animated": false,
+		"dynamic": false,
+		"name": "black_devil_horns",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": -0.5,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"spider": {
+		"animated": false,
+		"dynamic": false,
+		"name": "spider",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"top_hat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "top_hat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.36,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					}
+				}
+			}
+		]
+	},
+	"knife": {
+		"animated": false,
+		"dynamic": false,
+		"name": "knife",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.48,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"paperbag": {
+		"animated": false,
+		"dynamic": false,
+		"name": "paperbag",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					},
+					"player": {
+						"x": 1.15,
+						"y": 1.15,
+						"z": 1.15
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.525,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"chef": {
+		"animated": false,
+		"dynamic": false,
+		"name": "chef",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.425,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.7,
+						"y": 0.7,
+						"z": 0.7
+					}
+				}
+			}
+		]
+	},
+	"legomaestro": {
+		"animated": false,
+		"dynamic": false,
+		"name": "legomaestro",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.7,
+						"y": 0.7,
+						"z": 0.7
+					}
+				}
+			}
+		]
+	},
+	"enderman": {
+		"animated": false,
+		"dynamic": false,
+		"name": "enderman",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"cowboy": {
+		"animated": false,
+		"dynamic": false,
+		"name": "cowboy",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.15,
+						"y": 1.15,
+						"z": 1.15
+					}
+				}
+			}
+		]
+	},
+	"crown": {
+		"animated": false,
+		"dynamic": false,
+		"name": "crown",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"wolf": {
+		"animated": false,
+		"dynamic": false,
+		"name": "wolf",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"sombrero": {
+		"animated": false,
+		"dynamic": false,
+		"name": "sombrero",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.7,
+						"y": 0.7,
+						"z": 0.7
+					},
+					"player": {
+						"x": 0.935,
+						"y": 0.935,
+						"z": 0.935
+					}
+				}
+			}
+		]
+	},
+	"pilgrim": {
+		"animated": false,
+		"dynamic": true,
+		"name": "pilgrim",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.36,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					}
+				}
+			}
+		]
+	},
+	"antlers": {
+		"animated": false,
+		"dynamic": false,
+		"name": "antlers",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					}
+				}
+			}
+		]
+	},
+	"beard": {
+		"animated": false,
+		"dynamic": false,
+		"name": "beard",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.295,
+						"y": -0.6,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.05,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		],
+		"compatible": ["any"],
+		"exclude": ["beard_stpatrick", "dragon", "astronauthelmet", "halloween_mask", "mask"]
+	},
+	"bee": {
+		"animated": false,
+		"dynamic": false,
+		"name": "bee",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.15,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"elf": {
+		"animated": false,
+		"dynamic": false,
+		"name": "elf",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.1,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			}
+		]
+	},
+	"ghast": {
+		"animated": false,
+		"dynamic": false,
+		"name": "ghast",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"kitten": {
+		"animated": false,
+		"dynamic": true,
+		"name": "kitten",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"santa": {
+		"animated": false,
+		"dynamic": false,
+		"name": "santa",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.275,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			}
+		],
+		"compatible": ["beard"]
+	},
+	"chimney": {
+		"animated": false,
+		"dynamic": false,
+		"name": "chimney",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.8,
+						"y": 0.8,
+						"z": 0.8
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.15,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"xmaslights": {
+		"animated": true,
+		"dynamic": false,
+		"name": "xmaslights",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"nutcracker": {
+		"animated": false,
+		"dynamic": false,
+		"name": "nutcracker",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.8,
+						"y": 0.8,
+						"z": 0.8
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"top_hat_newyears": {
+		"animated": false,
+		"dynamic": true,
+		"name": "top_hat_newyears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					}
+				}
+			}
+		]
+	},
+	"halo": {
+		"animated": true,
+		"dynamic": true,
+		"name": "halo",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.425,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.6,
+						"z": 0.0
+					}
+				}
+			}
+		],
+		"compatible": ["bandanna"]
+	},
+	"cat_ears": {
+		"animated": false,
+		"dynamic": false,
+		"name": "cat_ears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"gaming_headset": {
+		"animated": false,
+		"dynamic": true,
+		"name": "gaming_headset",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.15
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.15
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					},
+					"skin_layer": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"cat_ear_headset": {
+		"animated": false,
+		"dynamic": true,
+		"name": "cat_ear_headset",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.2,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"heartband": {
+		"animated": false,
+		"dynamic": false,
+		"name": "heartband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"cute_cat_ears": {
+		"animated": false,
+		"dynamic": true,
+		"name": "cute_cat_ears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4215,
+						"z": 0.1
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					},
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"tophats": {
+		"animated": false,
+		"dynamic": true,
+		"name": "tophats",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.36,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					}
+				}
+			}
+		]
+	},
+	"beard_stpatrick": {
+		"animated": false,
+		"dynamic": false,
+		"name": "beard_stpatrick",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.125,
+						"z": 0.2
+					}
+				}
+			}
+		],
+		"compatible": ["any"],
+		"exclude": ["beard", "dragon", "astronauthelmet", "halloween_mask", "mask"]
+	},
+	"potofgold": {
+		"animated": false,
+		"dynamic": false,
+		"name": "potofgold",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"cloverheadband": {
+		"animated": false,
+		"dynamic": false,
+		"name": "cloverheadband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 0.95,
+					"y": 0.95,
+					"z": 0.95
+				}
+			}
+		]
+	},
+	"lunarbunnyears": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunarbunnyears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.405,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 0.925,
+					"y": 0.925,
+					"z": 0.925
+				}
+			}
+		]
+	},
+	"bunnyhat": {
+		"animated": false,
+		"dynamic": true,
+		"name": "bunnyhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.875,
+						"y": 0.875,
+						"z": 0.875
+					}
+				}
+			}
+		]
+	},
+	"pirate": {
+		"animated": false,
+		"dynamic": false,
+		"name": "pirate",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 0.98,
+					"y": 0.98,
+					"z": 0.98
+				}
+			}
+		]
+	},
+	"rose_crown": {
+		"animated": false,
+		"dynamic": false,
+		"name": "rose_crown",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.225,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.05,
+						"y": 1.05,
+						"z": 1.05
+					},
+					"helmet": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			}
+		]
+	},
+	"graduation": {
+		"animated": false,
+		"dynamic": false,
+		"name": "graduation",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.7,
+						"y": 0.7,
+						"z": 0.7
+					},
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"lunarcrown": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunarcrown",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					},
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"astronauthelmet": {
+		"animated": false,
+		"dynamic": false,
+		"name": "astronauthelmet",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"browndogears": {
+		"animated": false,
+		"dynamic": false,
+		"name": "browndogears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.6,
+						"z": -0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.65,
+						"z": 0.05
+					}
+				}
+			}
+		]
+	},
+	"newdragon": {
+		"animated": false,
+		"dynamic": true,
+		"name": "newdragon",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.375,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.1,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"footballhelmet": {
+		"animated": false,
+		"dynamic": true,
+		"name": "footballhelmet",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.7,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.415,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"mushroom": {
+		"animated": false,
+		"dynamic": false,
+		"name": "mushroom",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.45,
+						"y": 0.45,
+						"z": 0.45
+					},
+					"player": {
+						"x": 0.55,
+						"y": 0.55,
+						"z": 0.55
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.1,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.1,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"buckethat": {
+		"animated": false,
+		"dynamic": true,
+		"name": "buckethat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.6,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.325,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"4thofjulyheadband": {
+		"animated": false,
+		"dynamic": false,
+		"name": "4thofjulyheadband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 0.95,
+					"y": 0.95,
+					"z": 0.95
+				}
+			}
+		]
+	},
+	"axolotl_mask": {
+		"animated": false,
+		"dynamic": true,
+		"name": "axolotl_mask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.285,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"axolotl_hat": {
+		"animated": false,
+		"dynamic": true,
+		"name": "axolotl_hat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					},
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"lion_mask": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lion_mask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.295,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					},
+					"player": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"pinkrosecrown": {
+		"animated": false,
+		"dynamic": false,
+		"name": "pinkrosecrown",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.225,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.05,
+						"y": 1.05,
+						"z": 1.05
+					},
+					"helmet": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			}
+		]
+	},
+	"cowboyhat": {
+		"animated": false,
+		"dynamic": true,
+		"name": "cowboyhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"pirate_hat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "pirate_hat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"strawhat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "strawhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.65,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.525,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.7,
+						"y": 0.7,
+						"z": 0.7
+					}
+				}
+			}
+		]
+	},
+	"lunarbunnyears_pink": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunarbunnyears_pink",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.405,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 0.925,
+					"y": 0.925,
+					"z": 0.925
+				}
+			}
+		]
+	},
+	"boomerfrog": {
+		"animated": false,
+		"dynamic": false,
+		"name": "boomerfrog",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			}
+		]
+	},
+	"facebandanna": {
+		"animated": false,
+		"dynamic": true,
+		"name": "facebandanna",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.1,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.9525,
+						"y": 0.9525,
+						"z": 0.9525
+					},
+					"player": {
+						"x": 0.9525,
+						"y": 0.9525,
+						"z": 0.9525
+					}
+				}
+			}
+		],
+		"compatible": ["any"],
+		"exclude": ["beard", "beard_stpatrick", "dragon", "astronauthelmet"]
+	},
+	"ramhorns": {
+		"animated": false,
+		"dynamic": false,
+		"name": "ramhorns",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					},
+					"player": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"cleaver": {
+		"animated": false,
+		"dynamic": false,
+		"name": "cleaver",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.2,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"bolts": {
+		"animated": false,
+		"dynamic": false,
+		"name": "bolts",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.15,
+						"y": -0.5,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.375,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					}
+				}
+			}
+		]
+	},
+	"arrowinhead": {
+		"animated": false,
+		"dynamic": false,
+		"name": "arrowinhead",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.375,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"gasmask": {
+		"animated": false,
+		"dynamic": false,
+		"name": "gasmask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.275,
+						"z": 0.01275
+					}
+				}
+			}
+		]
+	},
+	"jasonmask": {
+		"animated": false,
+		"dynamic": false,
+		"name": "jasonmask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"curvedhorns": {
+		"animated": false,
+		"dynamic": true,
+		"name": "curvedhorns",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					},
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"fronthorns": {
+		"animated": false,
+		"dynamic": true,
+		"name": "fronthorns",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.5,
+						"y": 1.5,
+						"z": 1.5
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.3
+					}
+				}
+			}
+		]
+	},
+	"pumpkin_creeper": {
+		"animated": true,
+		"dynamic": false,
+		"name": "pumpkin_creeper",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.285,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"pumpkin_smile": {
+		"animated": true,
+		"dynamic": false,
+		"name": "pumpkin_smile",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.285,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"pumpkin_happy": {
+		"animated": true,
+		"dynamic": false,
+		"name": "pumpkin_happy",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.285,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"pumpkin_sad": {
+		"animated": true,
+		"dynamic": false,
+		"name": "pumpkin_sad",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.285,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"pumpkin_evil": {
+		"animated": true,
+		"dynamic": false,
+		"name": "pumpkin_evil",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.285,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"turkeyheadband": {
+		"animated": false,
+		"dynamic": false,
+		"name": "turkeyheadband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.415,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"turkeylegband": {
+		"animated": false,
+		"dynamic": false,
+		"name": "turkeylegband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.375,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"turkeyhat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "turkeyhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"batears": {
+		"animated": false,
+		"dynamic": false,
+		"name": "batears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"top_hat_gift": {
+		"animated": false,
+		"dynamic": false,
+		"name": "top_hat_gift",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.565,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					}
+				}
+			}
+		]
+	},
+	"cowboyhat_xmas": {
+		"animated": false,
+		"dynamic": false,
+		"name": "cowboyhat_xmas",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"presentwrapper": {
+		"animated": false,
+		"dynamic": true,
+		"name": "presentwrapper",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.265,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"rudolph_nose": {
+		"animated": false,
+		"dynamic": false,
+		"name": "rudolph_nose",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.2,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.005,
+						"y": -0.2,
+						"z": -0.0075
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.6,
+						"y": 0.6,
+						"z": 0.6
+					}
+				}
+			}
+		]
+	},
+	"xmaslightsheadband": {
+		"animated": true,
+		"dynamic": false,
+		"name": "xmaslightsheadband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"elfears": {
+		"animated": false,
+		"dynamic": true,
+		"name": "elfears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.935,
+						"y": 0.935,
+						"z": 0.935
+					}
+				}
+			}
+		]
+	},
+	"elfhat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "elfhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.1,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.285,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.8,
+						"y": 0.8,
+						"z": 0.8
+					}
+				}
+			}
+		]
+	},
+	"champagneheadband": {
+		"animated": false,
+		"dynamic": false,
+		"name": "champagneheadband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.375,
+						"z": -0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"2022headband": {
+		"animated": false,
+		"dynamic": false,
+		"name": "2022headband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.375,
+						"z": -0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					},
+					"gui": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					}
+				}
+			}
+		]
+	},
+	"2022crown": {
+		"animated": false,
+		"dynamic": false,
+		"name": "2022crown",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"xoxoheadband": {
+		"animated": false,
+		"dynamic": false,
+		"name": "xoxoheadband",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.2,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 0.95,
+					"y": 0.95,
+					"z": 0.95
+				}
+			}
+		]
+	},
+	"heartarrow": {
+		"animated": false,
+		"dynamic": false,
+		"name": "heartarrow",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 0.95,
+					"y": 0.95,
+					"z": 0.95
+				}
+			}
+		]
+	},
+	"heartbow": {
+		"animated": false,
+		"dynamic": false,
+		"name": "heartbow",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 25.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": -0.2
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.415,
+						"z": 0.3
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					},
+					"gui": {
+						"x": 1.2,
+						"y": 1.2,
+						"z": 1.2
+					}
+				}
+			}
+		]
+	},
+	"cowboyhat_valentines": {
+		"animated": false,
+		"dynamic": false,
+		"name": "cowboyhat_valentines",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"zyphhat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "zyphhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"top_hat_clover": {
+		"animated": false,
+		"dynamic": false,
+		"name": "top_hat_clover",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.325,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.65,
+						"y": 0.65,
+						"z": 0.65
+					}
+				}
+			}
+		]
+	},
+	"bunnymask": {
+		"animated": false,
+		"dynamic": true,
+		"name": "bunnymask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.3,
+						"z": 0.28
+					}
+				}
+			}
+		]
+	},
+	"bunnyears2022": {
+		"animated": false,
+		"dynamic": false,
+		"name": "bunnyears2022",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.45,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.75,
+						"z": 0.075
+					}
+				}
+			}
+		]
+	},
+	"strawhat2022": {
+		"animated": false,
+		"dynamic": false,
+		"name": "strawhat2022",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.65,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.05,
+						"y": 1.05,
+						"z": 1.05
+					},
+					"gui": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					}
+				}
+			}
+		]
+	},
+	"featherhat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "featherhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.375,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.75,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					},
+					"gui": {
+						"x": 0.9,
+						"y": 0.9,
+						"z": 0.9
+					}
+				}
+			}
+		]
+	},
+	"snorkel": {
+		"animated": false,
+		"dynamic": true,
+		"name": "snorkel",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		]
+	},
+	"sunglasses": {
+		"animated": false,
+		"dynamic": true,
+		"name": "sunglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"eyepatch": {
+		"animated": false,
+		"dynamic": false,
+		"name": "eyepatch",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.35,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"snowgoggles": {
+		"animated": false,
+		"dynamic": true,
+		"name": "snowgoggles",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.35,
+						"z": -0.05
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		]
+	},
+	"heartglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "heartglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"regularmagehat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "regularmagehat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.2,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					},
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"dealwithitglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "dealwithitglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"3dglasses": {
+		"animated": false,
+		"dynamic": true,
+		"name": "3dglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"piratehat2022": {
+		"animated": false,
+		"dynamic": false,
+		"name": "piratehat2022",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.05,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"forrestseal": {
+		"animated": false,
+		"dynamic": false,
+		"name": "forrestseal",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.1,
+						"z": 0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.499,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"romanhelmet": {
+		"animated": false,
+		"dynamic": true,
+		"name": "romanhelmet",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": false,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.325,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.25,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					}
+				}
+			}
+		]
+	},
+	"vikinghelmet": {
+		"animated": false,
+		"dynamic": false,
+		"name": "vikinghelmet",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.325,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -0.375,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"knighthelmet": {
+		"animated": false,
+		"dynamic": true,
+		"name": "knighthelmet",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.05,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.8,
+						"y": 0.8,
+						"z": 0.8
+					}
+				}
+			}
+		]
+	},
+	"pixel_devil_horns": {
+		"animated": false,
+		"dynamic": true,
+		"name": "pixel_devil_horns",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"x": 0.0,
+					"y": 1.5,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"lunar_ears_pointy": {
+		"animated": false,
+		"dynamic": true,
+		"name": "lunar_ears_pointy",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.05,
+						"y": 1.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"square_ears": {
+		"animated": false,
+		"dynamic": true,
+		"name": "square_ears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.05,
+						"y": 1.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"pixel_ram_horns": {
+		"animated": false,
+		"dynamic": true,
+		"name": "pixel_ram_horns",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.2,
+						"z": -0.03
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": -0.1
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.95,
+						"y": 0.95,
+						"z": 0.95
+					},
+					"player": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"pixel_small_horns": {
+		"animated": false,
+		"dynamic": true,
+		"name": "pixel_small_horns",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.05,
+						"y": 1.55,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"school_brown_sunglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "school_brown_sunglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"samuraimask": {
+		"animated": false,
+		"dynamic": true,
+		"name": "samuraimask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.05,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.8,
+						"y": 0.8,
+						"z": 0.8
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"samuraihat": {
+		"animated": false,
+		"dynamic": true,
+		"name": "samuraihat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.05,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.8,
+						"y": 0.8,
+						"z": 0.8
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"snapback": {
+		"animated": false,
+		"dynamic": true,
+		"name": "snapback",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.4,
+						"z": 0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.475,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"batglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "batglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"catglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "catglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"frankenstien": {
+		"animated": false,
+		"dynamic": false,
+		"name": "frankenstien",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"poppingeye": {
+		"animated": false,
+		"dynamic": false,
+		"name": "poppingeye",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"golemhat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "golemhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 0.85
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.4,
+						"z": 0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.475,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"blushisnowflakecrown": {
+		"animated": true,
+		"dynamic": false,
+		"name": "blushisnowflakecrown",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.6,
+						"z": 0.0
+					},
+					"skin_layer": {
+						"x": 0.0,
+						"y": 0.3,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.05,
+						"y": 1.05,
+						"z": 1.05
+					},
+					"skin_layer": {
+						"x": 1.15,
+						"y": 1.15,
+						"z": 1.15
+					}
+				}
+			}
+		]
+	},
+	"turkeylegglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "turkeylegglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"turkeyglasses": {
+		"animated": false,
+		"dynamic": false,
+		"name": "turkeyglasses",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"beaniehat": {
+		"animated": false,
+		"dynamic": true,
+		"name": "beaniehat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					},
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.6,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.45,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"christmastophat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "christmastophat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.8,
+						"y": 1.0,
+						"z": 0.8
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.6,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.45,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"xmasglass": {
+		"animated": false,
+		"dynamic": false,
+		"name": "xmasglass",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": -0.1
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.575,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"lunar_bucket_hat_v2": {
+		"animated": false,
+		"dynamic": true,
+		"name": "lunar_bucket_hat_v2",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.3,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.425,
+						"z": 0.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_heart_crown": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_heart_crown",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.525,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.05,
+						"y": 1.05,
+						"z": 1.05
+					}
+				}
+			}
+		]
+	},
+	"krtzyybeanie": {
+		"animated": false,
+		"dynamic": false,
+		"name": "krtzyybeanie",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					},
+					"skin_layer": {
+						"x": 0.0,
+						"y": 0.175,
+						"z": 0.0
+					},
+					"gui": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"skin_layer": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			}
+		]
+	},
+	"leprechaun_hat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "leprechaun_hat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.1,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"lunar_oni_mask": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_oni_mask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.3,
+						"y": 1.15,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_kitsune_mask": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_kitsune_mask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": -0.3,
+						"y": 1.15,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 1.0,
+						"y": 1.0,
+						"z": 1.0
+					}
+				}
+			}
+		]
+	},
+	"lunar_easter_bunny_ears": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_easter_bunny_ears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.355,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"x": 0.925,
+					"y": 0.925,
+					"z": 0.925
+				}
+			}
+		]
+	},
+	"lunar_bunny_snout": {
+		"animated": false,
+		"dynamic": false,
+		"name": "lunar_bunny_snout",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 2.775,
+						"z": -0.525
+					},
+					"player": {
+						"x": 0.0,
+						"y": 1.525,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 2.0,
+						"y": 2.0,
+						"z": 2.0
+					}
+				}
+			}
+		],
+		"compatible": [
+			"bunnyears",
+			"lunarbunnyears",
+			"bunnyhat",
+			"bunnyears2022",
+			"lunarbunnyears_pink",
+			"lunar_easter_bunny_ears"
+		]
+	},
+	"sunglasses_4thofjuly": {
+		"animated": false,
+		"dynamic": false,
+		"name": "sunglasses_4thofjuly",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.35,
+						"z": -0.17
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.58,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"4thofjuly_tophat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "4thofjuly_tophat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.175,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.58,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					},
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"4thofjuly_tophat_sparklers": {
+		"animated": true,
+		"dynamic": false,
+		"name": "4thofjuly_tophat_sparklers",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.175,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.58,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					},
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					}
+				}
+			}
+		]
+	},
+	"divinghelmet": {
+		"animated": false,
+		"dynamic": false,
+		"name": "divinghelmet",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"player": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					},
+					"gui": {
+						"x": 0.0,
+						"y": 1.0,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.85,
+						"y": 0.85,
+						"z": 0.85
+					}
+				}
+			}
+		]
+	},
+	"sandbucket_hat": {
+		"animated": false,
+		"dynamic": true,
+		"name": "sandbucket_hat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					},
+					"skin_layer": {
+						"x": 0.0,
+						"y": 0.175,
+						"z": 0.0
+					},
+					"gui": {
+						"x": 0.0,
+						"y": 1.25,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"skin_layer": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			}
+		]
+	},
+	"sandcastlehat": {
+		"animated": true,
+		"dynamic": false,
+		"name": "sandcastlehat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "translate",
+				"values": {
+					"player": {
+						"x": 0.0,
+						"y": 1.5,
+						"z": 0.0
+					},
+					"skin_layer": {
+						"x": 0.0,
+						"y": 0.175,
+						"z": 0.0
+					},
+					"gui": {
+						"x": 0.0,
+						"y": 1.55,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"skin_layer": {
+						"x": 1.1,
+						"y": 1.1,
+						"z": 1.1
+					}
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			}
+		]
+	},
+	"captainshat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "captainshat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.0,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.58,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"tigerhat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "tigerhat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.0,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"showercap": {
+		"animated": false,
+		"dynamic": false,
+		"name": "showercap",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.0,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"elephant_hat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "elephant_hat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": 0.4,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": 0.4,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"clown_mask": {
+		"animated": false,
+		"dynamic": false,
+		"name": "clown_mask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.0,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"gas_mask": {
+		"animated": false,
+		"dynamic": false,
+		"name": "gas_mask",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.0,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"banana_hat": {
+		"animated": false,
+		"dynamic": false,
+		"name": "banana_hat",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"bear_ears": {
+		"animated": false,
+		"dynamic": false,
+		"name": "bear_ears",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"space_visor": {
+		"animated": false,
+		"dynamic": false,
+		"name": "space_visor",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.35,
+						"z": -0.17
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.58,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		]
+	},
+	"bear_ears_blue": {
+		"animated": false,
+		"dynamic": false,
+		"name": "bear_ears_blue",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"bear_ears_black": {
+		"animated": false,
+		"dynamic": false,
+		"name": "bear_ears_black",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -0.8,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	},
+	"sunglasses_green": {
+		"animated": false,
+		"dynamic": false,
+		"name": "sunglasses_green",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"heightOffsetRange": [-0.5, 0.75],
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 180.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.35,
+						"z": -0.17
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.58,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"player": {
+						"x": 1.01,
+						"y": 1.01,
+						"z": 1.01
+					}
+				}
+			}
+		],
+		"compatible": ["any"]
+	},
+	"summer_straw_hat_dark": {
+		"animated": false,
+		"dynamic": false,
+		"name": "summer_straw_hat_dark",
+		"bodyPart": "HEAD",
+		"cosmeticType": "HATS",
+		"showWithArmor": true,
+		"transformations": [
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 1.0,
+					"y": 0.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 1.0,
+					"z": 0.0
+				}
+			},
+			{
+				"transformType": "rotate",
+				"condition": "none",
+				"values": {
+					"angle": 90.0,
+					"x": 0.0,
+					"y": 0.0,
+					"z": 1.0
+				}
+			},
+			{
+				"transformType": "translate",
+				"values": {
+					"gui": {
+						"x": 0.0,
+						"y": -1.0,
+						"z": 0.0
+					},
+					"player": {
+						"x": 0.0,
+						"y": -1.5,
+						"z": 0.0
+					}
+				}
+			},
+			{
+				"transformType": "scale",
+				"values": {
+					"gui": {
+						"x": 0.75,
+						"y": 0.75,
+						"z": 0.75
+					},
+					"player": {
+						"x": 1.001,
+						"y": 1.001,
+						"z": 1.001
+					}
+				}
+			}
+		]
+	}
+}

@@ -1,0 +1,19 @@
+package	old	new	evidence
+com.moonsworth.lunar.client.framework.feature.debug	Gui2Extension	DebugType	enum ALL/MOVEMENT_UI/ASSET_SERVER/IPC bound to the "debugType" option; consumed by BasicDebugMod, Ref, WebSocketClientHandler, RpcChannelImpl, AssetServerClient
+com.moonsworth.lunar.client.framework.feature.crosshair.mixin	Gui2Extension	CrosshairMode	enum SIMPLE/PRESET/CUSTOM ("crosshairMode*" ids); consumed by mod/render/CrosshairChildMod + CrosshairElytra
+com.moonsworth.lunar.client.framework.feature.crosshair.crosshairelytra	Crosshairelytra	CrosshairShapeDrawer	textured-shape drawing helper (circle/triangle/ui textures) taking a buffer builder; passed through the CrosshairChildMod/CrosshairElytra render pipeline alongside CrosshairShapeRenderer/CrosshairTextureRenderer
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod	Fpsdebugmod	DebugArchive	debug-report archive builder: collects named byte payloads + errors into errors.txt and writes the zip; consumed by mod/misc/FpsDebugMod + ProfilerDebugMod
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod	FpsdebugmodType	FpsDebugPhase	collection phases PRE_COLLECT/PROFILER/THREAD_DUMP returned by each FpsDebugTask.method3()
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin	Fpsdebugmod	ThreadDumpTask	FpsDebugTask named "thread-dump" producing thread-dump.txt via ThreadModuleDump
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin	Fpsdebugmod4Impl	ProfileDataTask	FpsDebugTask named "profile-data"
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin	Fpsdebugmod4Impl2	FeatureFlagsTask	FpsDebugTask named "feature-flags"
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin	Fpsdebugmod4Impl3	McSettingsTask	FpsDebugTask named "mc-settings" (options.txt/optionsof.txt)
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin	Fpsdebugmod4Impl4	GpuObjectsTask	FpsDebugTask named "gpu-objects"
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin	Fpsdebugmod4Iterator	MiscDataTask	FpsDebugTask named "misc-data"
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.mixin	Fpsdebugmod4Iterator2	ModsEnabledTask	FpsDebugTask named "mods-enabled"
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod	Profilerdebugmod	ProfilerEngine	GC-notification listener + static frame-timing state driving the soopy.dev profiler; consumed by mod/misc/ProfilerDebugMod (method1/stop/nextFrame/method7)
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod	Profilerdebugmod2$Data	ProfileUploadThrottle	reactive-streams Subscription throttling ByteBuffer upload on a "ProfileUpload-Throttle" daemon thread
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod	Profilerdebugmod2_2	ProfileEncoder	gzip .lcprofile encoder: version int + Gson metadata + StringPool + profile bodies
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod	Profilerdebugmod2_3	ProfileUploader	soopy.dev profile uploader (POST uploadProfile with branch/hash/mcVersion/uuid)
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod.mixin	Profilerdebugmod	ThreadProfiler	per-thread stack sampler (takes a Thread, samples getStackTrace into the current Profile); not a mixin despite the path segment
+com.moonsworth.lunar.client.framework.feature.debug.fpsdebugmod.profilerdebugmod.mixin	ProfilerdebugmodIterator	AllThreadsProfiler	extends ThreadProfiler with super(null): samples all threads via Thread.getAllStackTraces

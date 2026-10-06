@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.network.apollo
+com.moonsworth.lunar.client.network.friend
+com.moonsworth.lunar.client.network.hostedworld
+com.moonsworth.lunar.client.network.ipc
+com.moonsworth.lunar.client.network.mumble
+com.moonsworth.lunar.client.network.safety
+com.moonsworth.lunar.client.network.server
+com.moonsworth.lunar.client.network.transfer

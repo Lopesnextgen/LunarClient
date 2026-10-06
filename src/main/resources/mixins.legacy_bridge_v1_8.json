@@ -1,0 +1,15 @@
+{
+  "minVersion": "0.8",
+  "package": "com.moonsworth.lunar.legacy.HRICOROOOCCOCOROCRHHCRRIRCOICO",
+  "target": "CLIENT",
+  "required": false,
+  "compatibilityLevel": "JAVA_17",
+  "mixinPriority": 200,
+  "mixins": [
+    "HORHROIOIOICIRHIOCOICHHHIHCIIO",
+    "HHRROIIHRRICIIHIIHICRHHRHOHHOO"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

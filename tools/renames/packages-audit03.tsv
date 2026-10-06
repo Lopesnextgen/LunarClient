@@ -1,0 +1,11 @@
+# Package audit 03 — wrong / misplaced packages
+# Format: old.package<TAB>new.package[<TAB>evidence]
+# Prefix semantics: `old` and every `old.*` subtree move under `new`.
+# Apply with: tools/apply_package_renames.py --map tools/renames/packages-audit03.tsv
+#
+# Apply the class rename map (classes-audit03.tsv) FIRST.
+
+com.moonsworth.lunar.client.animations	com.moonsworth.lunar.client.prompt	holder + choice actions of the Apollo confirmation-prompt system; zero animation code
+com.moonsworth.lunar.client.animations.mixin	com.moonsworth.lunar.client.prompt	choice-prompt actions (RunCommandPrompt/OpenUrlPrompt/...), zero @Mixin classes; merges with the holder above
+com.moonsworth.lunar.client.alert.mixin	com.moonsworth.lunar.client.alert	setting-override entries + intercept conditions, zero @Mixin classes; merges with the ChildContainer base
+com.moonsworth.lunar.client.calculator.mixin	com.moonsworth.lunar.client.calculator	CachedReplacement translation family, zero @Mixin classes; merges with SharedInfo/ClientLanguage/Translatable

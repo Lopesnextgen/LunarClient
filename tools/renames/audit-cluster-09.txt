@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.cosmetics.emote
+com.moonsworth.lunar.client.cosmetics.holograms
+com.moonsworth.lunar.client.cosmetics.inactive
+com.moonsworth.lunar.client.cosmetics.inactive.gui
+com.moonsworth.lunar.client.cosmetics.inactive.mixin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.colorsaturation
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.colorsaturation.mixin
+com.moonsworth.lunar.client.cosmetics.inactive.mixin.fishing

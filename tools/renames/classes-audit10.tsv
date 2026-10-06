@@ -1,0 +1,27 @@
+package	old	new	evidence
+com.moonsworth.lunar.client.framework.feature.f3display	Gui2Extension	F3DebugLine	28 F3 debug-line ids (MINECRAFT_VERSION/FPS/POSITION/BIOME/ENTITIES/PIE_CHART/PING_CHART/...) with display names + allowedInReducedInfo; consumed by mod/hud/F3Display + F3ModuleChildMod
+com.moonsworth.lunar.client.framework.feature.f3display	F3display	F3DebugInfo	static F3 debug-info utility: per-line string providers (biome/position/chunk/fps/gpu/memory), TargetInfoRegistry field1, pie-chart handling; referenced by F3display2/F3display2_2/F3DataDebugTask
+com.moonsworth.lunar.client.framework.feature.f3display	F3display2	F3DebugRenderer	per-frame F3 screen layout+renderer: tracks y position, draws lines/charts/pie legend, reduced-info mode via field4
+com.moonsworth.lunar.client.framework.feature.f3display	F3display2_2	TargetInfoProvider	extends F3DebugEntry: provides "Target Block"/"Target Fluid" lines from block/fluid ray-trace state
+com.moonsworth.lunar.client.framework.feature.f3display	F3display_2	TargetInfoRegistry	EnumMap<F3DebugLine,F3DebugEntry> holding the TARGET_BLOCK/TARGET_FLUID providers; owned as F3DebugInfo.field1
+com.moonsworth.lunar.client.framework.feature.f3display	F3display_3	F3DebugWriter	F3 debug-line sink interface (method3 text lines, method4 pie entries, method5 charts, method6 conditional append); implemented by F3DataDebugTask to capture lines
+com.moonsworth.lunar.client.framework.feature.f3display	F3display3	F3PieSlice	pie-chart slice (value/value2/name) implementing MixinHelper_11; default profiler entries built from it in F3DebugRenderer.field2
+com.moonsworth.lunar.client.framework.feature.f3display	F3display$Data	F3DebugEntry	abstract per-line info entry base (method1/method2 render into F3DebugWriter); extended by TargetInfoProvider
+com.moonsworth.lunar.client.framework.feature.f3display	F3display$Data2	F3DebugRendererWriter	F3DebugWriter impl that forwards lines/charts/pie entries immediately to the F3DebugRenderer (F3display_3.method8 factory)
+com.moonsworth.lunar.client.framework.feature.f3display	F3display$Data3	F3DebugConditionalWriter	F3DebugWriter impl that only writes when renderer.method12() allows (F3display_3.method10 factory)
+com.moonsworth.lunar.client.framework.feature.f3display	F3display$Data4	F3DebugMeasurer	F3DebugWriter impl that measures only (accumulates width/height, no drawing) for layout (F3display_3.method9 factory)
+com.moonsworth.lunar.client.framework.feature.f3display.mixin	F3display	F3Chart	abstract F3 overlay chart base (240-sample history, label, method11 value formatter, method13 render); extended by the five metric charts; not a mixin despite the path segment
+com.moonsworth.lunar.client.framework.feature.f3display.mixin	F3displayImpl	BandwidthChart	F3Chart with empty label formatting B/s/KiB/s/MiB/s; method5(int) feeds bytes; bandwidth chart
+com.moonsworth.lunar.client.framework.feature.f3display.mixin	F3displayImpl2	FpsChart	F3Chart with label "FPS"
+com.moonsworth.lunar.client.framework.feature.f3display.mixin	F3displayImpl3	GpuChart	F3Chart with label "GPU"
+com.moonsworth.lunar.client.framework.feature.f3display.mixin	F3displayImpl4	RamChart	F3Chart with label "RAM"
+com.moonsworth.lunar.client.framework.feature.f3display.mixin	F3displayImpl5	PingChart	F3Chart with label "Ping"
+com.moonsworth.lunar.client.framework.feature.freelook	Gui2Extension	FreelookMode	enum THIRD/FORWARD/FIRST with getPerspective(); bound to the mod's "mode" option; drives gameSettings.setThirdPersonView
+com.moonsworth.lunar.client.framework.feature.directionhud	Gui2Extension	DirectionHudPosition	package-private enum ABOVE/BELOW/NONE: vertical placement of player/marker icons relative to the direction-hud compass
+com.moonsworth.lunar.client.framework.feature.debug.shaderdebugmod	Markers3Handler	ShaderCloakEditorContext	DriverViewContext impl delegating to ShaderDebugMod's Shaderdebugmod.method34: the shader-cloak editor view context (sibling ShaderCloakExporter/ShaderDirectoryWatcher/ShaderPreviewRenderer)
+com.moonsworth.lunar.client.framework.feature.debug.optimizationdebugmod	OptimizationdebugmodType	OptimizationDebugOption	17 optimization toggles (SKIP_UNBIND_FRAME_BUFFER/BETTER_TEXT_BATCHING/FAST_TEXT/FRUSTUM_IMPROVEMENTS/...) with enabledByDefault/canChangeAtRuntime
+com.moonsworth.lunar.client.framework.feature.debug.optimizationdebugmod	OptimizationDebugRenderTarget	OptimizationDebugCategory	render-disable categories ENTITY/BLOCK_ENTITY/LEVEL with shouldRender/shouldCancel; "RenderTarget" is graphics-misleading (not a framebuffer)
+com.moonsworth.lunar.client.framework.feature.heightlimit	Heightlimit	HeightLimitOverride	record limit+displayName built from the Apollo OverrideHeightLimitMessage per world; consumed by Highlight3Iterator23
+com.moonsworth.lunar.client.framework.feature.heightlimit	HeightlimitType	HeightLimitVariant	variant BEDWARS/BRIDGE/VANILLA/SERVER with featureId + HeightLimit.Type filter; selects the height-limit child mod
+com.moonsworth.lunar.client.framework.feature.gui	Gui	TextureAnimationCache	static UV-animation cache keyed by vertex data storing original UVs and lerping toward min/max by OverlayMod.method63(); drives fire-height/texture smoothing via BlockModelRendererMixin
+com.moonsworth.lunar.client.framework.feature.gui	GuiUpdater	OverlayTextureProcessor	abstract base of GlassTextureProcessor/OreTextureProcessor: registers texture names with the overlay manager and recolors pixels; implements Click

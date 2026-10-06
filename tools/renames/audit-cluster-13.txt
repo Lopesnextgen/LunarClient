@@ -1,0 +1,8 @@
+com.moonsworth.lunar.client.driver.holograms
+com.moonsworth.lunar.client.driver.nameplate
+com.moonsworth.lunar.client.driver.nameplate.mixin
+com.moonsworth.lunar.client.driver.rewindhandlers
+com.moonsworth.lunar.client.event
+com.moonsworth.lunar.client.event.fishing
+com.moonsworth.lunar.client.event.mixin
+com.moonsworth.lunar.client.event.mixin.fishing

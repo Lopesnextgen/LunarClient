@@ -1,0 +1,8 @@
+com.moonsworth.lunar.bridge.hitcolor
+com.moonsworth.lunar.bridge.horsestats
+com.moonsworth.lunar.bridge.horsestats.mixin
+com.moonsworth.lunar.bridge.itemcounter
+com.moonsworth.lunar.bridge.itemcounter.mixin
+com.moonsworth.lunar.bridge.lighting
+com.moonsworth.lunar.bridge.minecraft
+com.moonsworth.lunar.bridge.mixin

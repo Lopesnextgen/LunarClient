@@ -1,0 +1,514 @@
+{
+  "Lobby": {
+    "command": "lobby"
+  },
+  "Warp": {
+    "command": "warp",
+    "allowsArguments": true,
+    "subCommands": {
+      "Hub": {
+        "command": "warp hub"
+      },
+      "Castle": {
+        "command": "warp castle"
+      },
+      "Museum": {
+        "command": "warp museum"
+      },
+      "Wizard Tower": {
+        "command": "warp wizard"
+      },
+      "Dark Auction": {
+        "command": "warp da"
+      },
+      "Crypts": {
+        "command": "warp crypts"
+      },
+      "Farming Islands": {
+        "command": "warp barn"
+      },
+      "Desert Settlement": {
+        "command": "warp desert"
+      },
+      "Glowing Mushroom Cave": {
+        "command": "warp glowing"
+      },
+      "Trapper's Den": {
+        "command": "warp trapper"
+      },
+      "Park": {
+        "command": "warp park"
+      },
+      "Jungle": {
+        "command": "warp jungle"
+      },
+      "Howling Cave": {
+        "command": "warp howl"
+      },
+      "Galatea": {
+        "command": "warp galatea"
+      },
+      "Murkwater Losh": {
+        "command": "warp murkwater"
+      },
+      "Gold Mine": {
+        "command": "warp gold"
+      },
+      "Deep Caverns": {
+        "command": "warp deep"
+      },
+      "Dwarven Mines": {
+        "command": "warp mines"
+      },
+      "The Forge": {
+        "command": "warp forge"
+      },
+      "Crystal Hollows": {
+        "command": "warp hollows"
+      },
+      "Crystal Nucleus": {
+        "command": "warp nucleus"
+      },
+      "Spider's Den": {
+        "command": "warp spider"
+      },
+      "Broodmother's Nest": {
+        "command": "warp nest"
+      },
+      "Arachne's Sanctuary": {
+        "command": "warp arachne"
+      },
+      "The End": {
+        "command": "warp end"
+      },
+      "Dragon's Nest": {
+        "command": "warp drag"
+      },
+      "Void Sepulture": {
+        "command": "warp void"
+      },
+      "Dungeon Hub": {
+        "command": "warp dungeon_hub"
+      },
+      "Crimson Isle": {
+        "command": "warp nether"
+      },
+      "Smoldering Tomb": {
+        "command": "warp smold"
+      },
+      "Kuudra": {
+        "command": "warp kuudra"
+      },
+      "Dwarven Base Camp": {
+        "command": "warp glacite"
+      },
+      "Jerry's Workshop": {
+        "command": "warp winter"
+      },
+      "The Rift": {
+        "command": "warp rift"
+      },
+      "Backwater Bayou": {
+        "command": "warp bayou"
+      },
+      "Lotus Atoll": {
+        "command": "warp lotus"
+      },
+      "Community Center": {
+        "command": "warp elizabeth"
+      },
+      "Trade Center": {
+        "command": "warp stonks"
+      },
+      "Carnival": {
+        "command": "warp carnival"
+      },
+      "Taylor's Shop": {
+        "command": "warp taylor"
+      },
+      "Garden": {
+        "command": "warp garden"
+      },
+      "Private Island": {
+        "command": "warp home"
+      },
+      "Torrhus Canyon": {
+        "command": "warp torrhus"
+      },
+      "Torrhus Springs": {
+        "command": "warp springs"
+      },
+      "Safari Zone Entrance": {
+        "command": "warp safari"
+      }
+    }
+  },
+  "Craft": {
+    "command": "craft"
+  },
+  "Skyblock Menu": {
+    "command": "sbmenu"
+  },
+  "Wardrobe": {
+    "command": "wd"
+  },
+  "Storage": {
+    "command": "storage"
+  },
+  "Ender Chest": {
+    "command": "enderchest",
+    "allowsArguments": true,
+    "subCommands": {
+      "Page 1": {
+        "command": "enderchest 1"
+      },
+      "Page 2": {
+        "command": "enderchest 2"
+      },
+      "Page 3": {
+        "command": "enderchest 3"
+      },
+      "Page 4": {
+        "command": "enderchest 4"
+      },
+      "Page 5": {
+        "command": "enderchest 5"
+      },
+      "Page 6": {
+        "command": "enderchest 6"
+      },
+      "Page 7": {
+        "command": "enderchest 7"
+      },
+      "Page 8": {
+        "command": "enderchest 8"
+      },
+      "Page 9": {
+        "command": "enderchest 9"
+      }
+    }
+  },
+  "Backpack": {
+    "command": "backpack",
+    "allowsArguments": true,
+    "subCommands": {
+      "Backpack 1": {
+        "command": "backpack 1"
+      },
+      "Backpack 2": {
+        "command": "backpack 2"
+      },
+      "Backpack 3": {
+        "command": "backpack 3"
+      },
+      "Backpack 4": {
+        "command": "backpack 4"
+      },
+      "Backpack 5": {
+        "command": "backpack 5"
+      },
+      "Backpack 6": {
+        "command": "backpack 6"
+      },
+      "Backpack 7": {
+        "command": "backpack 7"
+      },
+      "Backpack 8": {
+        "command": "backpack 8"
+      },
+      "Backpack 9": {
+        "command": "backpack 9"
+      },
+      "Backpack 10": {
+        "command": "backpack 10"
+      },
+      "Backpack 11": {
+        "command": "backpack 11"
+      },
+      "Backpack 12": {
+        "command": "backpack 12"
+      },
+      "Backpack 13": {
+        "command": "backpack 13"
+      },
+      "Backpack 14": {
+        "command": "backpack 14"
+      },
+      "Backpack 15": {
+        "command": "backpack 15"
+      },
+      "Backpack 16": {
+        "command": "backpack 16"
+      },
+      "Backpack 17": {
+        "command": "backpack 17"
+      },
+      "Backpack 18": {
+        "command": "backpack 18"
+      }
+    }
+  },
+  "Equipment": {
+    "command": "equipment"
+  },
+  "Loadouts": {
+    "command": "loadouts"
+  },
+  "Bazaar": {
+    "command": "bz"
+  },
+  "Auction House": {
+    "command": "ah"
+  },
+  "Chocolate Factory": {
+    "command": "cf"
+  },
+  "Set Max Speed": {
+    "command": "setmaxspeed",
+    "allowsArguments": true,
+    "anySubCommand": true
+  },
+  "Bank": {
+    "command": "bank"
+  },
+  "Trade Menu": {
+    "command": "trades"
+  },
+  "Pets": {
+    "command": "pets"
+  },
+  "Sacks": {
+    "command": "sacks"
+  },
+  "Get From Sacks": {
+    "command": "getFromSacks",
+    "allowsArguments": true,
+    "anySubCommand": true
+  },
+  "Hex": {
+    "command": "hex"
+  },
+  "Accessory Bag": {
+    "command": "accessories"
+  },
+  "Fishing Bag": {
+    "command": "fishingbag"
+  },
+  "Potion Bag": {
+    "command": "potionbag"
+  },
+  "Quiver": {
+    "command": "quiver"
+  },
+  "Bingo": {
+    "command": "bingo"
+  },
+  "Enchantment Table": {
+    "command": "etable"
+  },
+  "Join Instance": {
+    "command": "joininstance",
+    "allowsArguments": true,
+    "numArguments": 1,
+    "subCommands": {
+      "Catacombs Entrance": {
+        "command": "joininstance CATACOMBS_ENTRANCE"
+      },
+      "Catacombs F1": {
+        "command": "joininstance CATACOMBS_FLOOR_ONE"
+      },
+      "Catacombs F2": {
+        "command": "joininstance CATACOMBS_FLOOR_TWO"
+      },
+      "Catacombs F3": {
+        "command": "joininstance CATACOMBS_FLOOR_THREE"
+      },
+      "Catacombs F4": {
+        "command": "joininstance CATACOMBS_FLOOR_FOUR"
+      },
+      "Catacombs F5": {
+        "command": "joininstance CATACOMBS_FLOOR_FIVE"
+      },
+      "Catacombs F6": {
+        "command": "joininstance CATACOMBS_FLOOR_SIX"
+      },
+      "Catacombs F7": {
+        "command": "joininstance CATACOMBS_FLOOR_SEVEN"
+      },
+      "Catacombs M1": {
+        "command": "joininstance MASTER_CATACOMBS_FLOOR_ONE"
+      },
+      "Catacombs M2": {
+        "command": "joininstance MASTER_CATACOMBS_FLOOR_TWO"
+      },
+      "Catacombs M3": {
+        "command": "joininstance MASTER_CATACOMBS_FLOOR_THREE"
+      },
+      "Catacombs M4": {
+        "command": "joininstance MASTER_CATACOMBS_FLOOR_FOUR"
+      },
+      "Catacombs M5": {
+        "command": "joininstance MASTER_CATACOMBS_FLOOR_FIVE"
+      },
+      "Catacombs M6": {
+        "command": "joininstance MASTER_CATACOMBS_FLOOR_SIX"
+      },
+      "Catacombs M7": {
+        "command": "joininstance MASTER_CATACOMBS_FLOOR_SEVEN"
+      },
+      "Kuudra T1": {
+        "command": "joininstance KUUDRA_NORMAL"
+      },
+      "Kuudra T2": {
+        "command": "joininstance KUUDRA_HOT"
+      },
+      "Kuudra T3": {
+        "command": "joininstance KUUDRA_BURNING"
+      },
+      "Kuudra T4": {
+        "command": "joininstance KUUDRA_FIERY"
+      },
+      "Kuudra T5": {
+        "command": "joininstance KUUDRA_INFERNAL"
+      }
+    }
+  },
+  "Party Commands": {
+    "command": "party",
+    "allowsArguments": true,
+    "subCommands": {
+      "Warp": {
+        "command": "party warp"
+      },
+      "All Invite": {
+        "command": "party settings allinvite"
+      },
+      "Transfer": {
+        "command": "party transfer",
+        "allowsArguments": true,
+        "anySubCommand": true
+      }
+    }
+  },
+  "Plot Teleports": {
+    "command": "tptoplot",
+    "allowsArguments": true,
+    "subCommands": {
+      "Barn": {
+        "command": "tptoplot barn"
+      },
+      "Plot 1": {
+        "command": "tptoplot 1"
+      },
+      "Plot 2": {
+        "command": "tptoplot 2"
+      },
+      "Plot 3": {
+        "command": "tptoplot 3"
+      },
+      "Plot 4": {
+        "command": "tptoplot 4"
+      },
+      "Plot 5": {
+        "command": "tptoplot 5"
+      },
+      "Plot 6": {
+        "command": "tptoplot 6"
+      },
+      "Plot 7": {
+        "command": "tptoplot 7"
+      },
+      "Plot 8": {
+        "command": "tptoplot 8"
+      },
+      "Plot 9": {
+        "command": "tptoplot 9"
+      },
+      "Plot 10": {
+        "command": "tptoplot 10"
+      },
+      "Plot 11": {
+        "command": "tptoplot 11"
+      },
+      "Plot 12": {
+        "command": "tptoplot 12"
+      },
+      "Plot 13": {
+        "command": "tptoplot 13"
+      },
+      "Plot 14": {
+        "command": "tptoplot 14"
+      },
+      "Plot 15": {
+        "command": "tptoplot 15"
+      },
+      "Plot 16": {
+        "command": "tptoplot 16"
+      },
+      "Plot 17": {
+        "command": "tptoplot 17"
+      },
+      "Plot 18": {
+        "command": "tptoplot 18"
+      },
+      "Plot 19": {
+        "command": "tptoplot 19"
+      },
+      "Plot 20": {
+        "command": "tptoplot 20"
+      },
+      "Plot 21": {
+        "command": "tptoplot 21"
+      },
+      "Plot 22": {
+        "command": "tptoplot 22"
+      },
+      "Plot 23": {
+        "command": "tptoplot 23"
+      },
+      "Plot 24": {
+        "command": "tptoplot 24"
+      },
+      "Set Spawn" :{
+        "command": "setspawn"
+      }
+    }
+  },
+  "Hunting Box": {
+    "command": "huntingbox"
+  },
+  "Attribute Menu": {
+    "command": "attributes"
+  },
+  "Hunting Toolkit": {
+    "command": "huntingtoolkit"
+  },
+  "Farming Toolkit": {
+    "command": "farmingtoolkit"
+  },
+  "Chapters": {
+    "command": "chapters",
+    "allowsArguments": true,
+    "numArguments": 1,
+    "subCommands": {
+      "Moonglade Marsh": {
+        "command": "chapter moonglade"
+      },
+      "Backwater Bayou": {
+        "command": "chapters bayou"
+      },
+      "Lotus Atoll": {
+        "command": "chapters lotus"
+      },
+      "Torrhus Canyon": {
+        "command": "chapters torrhus"
+      }
+    }
+  },
+  "Stats": {
+    "command": "stats"
+  },
+  "Desk": {
+    "command": "deskmenu"
+  }
+}

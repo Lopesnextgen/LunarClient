@@ -1,0 +1,4 @@
+com/moonsworth/lunar/bridge/horsestats/HorsestatsType_2.java	HorsestatsType_2
+com/moonsworth/lunar/bridge/horsestats/Horsestats_2.java	Horsestats_2
+com/moonsworth/lunar/bridge/horsestats/Horsestats_3.java	Horsestats_3
+com/moonsworth/lunar/bridge/horsestats/Horsestats_4.java	Horsestats_4
